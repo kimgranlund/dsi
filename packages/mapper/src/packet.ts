@@ -36,7 +36,7 @@ export function inScope(scope: Scope, product: string, set: NativeSet): string[]
 /** Facet values with labels and definitions, read from the ontology quads already loaded by @dsi/schema. */
 function ontologySummary(root: string, o: Ontology) {
   const facets = JSON.parse(fs.readFileSync(path.join(root, 'ontology/schemes/facets.jsonld'), 'utf8'))['@graph'] as Record<string, unknown>[];
-  const values = (scheme: string) => facets.filter((c) => c.inScheme === `dsi:scheme/${scheme}`).map((c) => ({ value: String(c.id).split('/').pop(), label: c.prefLabel, definition: c.definition, example: c.example })).filter((v) => o.defined.has(DSI + `${scheme}/${v.value}`));
+  const values = (scheme: string) => facets.filter((c) => c.inScheme === `dsi:scheme/${scheme}`).map((c) => ({ value: String(c.id).split('/').pop(), label: c.prefLabel, definition: c.definition, example: c.example })).filter((v) => o.defined.has(DSI + `${scheme}/${v.value}`) && !o.deprecated.has(DSI + `${scheme}/${v.value}`));
   const facetOrder = CONCEPT_FACETS.filter((f) => f !== 'component' && f !== 'part');
   return {
     grammar: 'dsi:concept/<domain>/<facet>-<value>/... with facets in this order: ' + facetOrder.join(', '),

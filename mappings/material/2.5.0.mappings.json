@@ -1,0 +1,1096 @@
+{
+  "product": "material",
+  "implementation": "material-web",
+  "sourceVersion": "2.5.0",
+  "mappings": [
+    {
+      "id": "m-4776df5a88f6",
+      "token": "md.sys.color.background",
+      "concept": "dsi:concept/color/usage-page/property-background",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Outermost app background; ontology cites Material background as the Page example.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-473ab6bf1842",
+      "token": "md.sys.color.error",
+      "concept": "dsi:concept/color/intent-danger",
+      "match": "narrow",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Used for error status and also destructive actions, across fills, text and icons; Danger is narrower.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-0bdc8b8c2249",
+      "token": "md.sys.color.error-container",
+      "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.9,
+      "status": "approved",
+      "rationale": "Tonal (subtle) error fill; matches the instruction example. Nuance: also used for destructive emphasis.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-0ef8404a88f1",
+      "token": "md.sys.color.inverse-on-surface",
+      "concept": "dsi:concept/color/usage-inverse/property-foreground",
+      "match": "exact",
+      "confidence": 0.88,
+      "status": "proposed",
+      "rationale": "Text and icons on inverse-surface (snackbars, tooltips); one token for both.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-60de8309c306",
+      "token": "md.sys.color.inverse-primary",
+      "concept": "dsi:concept/color/intent-accent/usage-inverse",
+      "match": "close",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Accent for actionable elements on inverse surfaces (snackbar action). Nuance: used mainly as text/icon color for actions on the inverse surface.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-ca98d0cd079f",
+      "token": "md.sys.color.inverse-primary",
+      "concept": "dsi:concept/color/intent-accent/usage-inverse",
+      "match": "broad",
+      "confidence": 0.65,
+      "status": "proposed",
+      "rationale": "Accent color used on inverse surfaces (e.g. snackbar action); one specific case.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:46:35.304673+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-8e598eba8f2f",
+      "token": "md.sys.color.inverse-surface",
+      "concept": "dsi:concept/color/usage-inverse/property-background",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Contrasting surface of opposite lightness; ontology cites it as the Inverse example.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-ea886d36e616",
+      "token": "md.sys.color.on-background",
+      "concept": "dsi:concept/color/usage-page/property-foreground",
+      "match": "exact",
+      "confidence": 0.88,
+      "status": "approved",
+      "rationale": "Text and icons on the page background.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:47:52.558Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-c8171c5a2243",
+      "token": "md.sys.color.on-error",
+      "concept": "dsi:concept/color/intent-danger/usage-on-fill/property-foreground",
+      "match": "exact",
+      "confidence": 0.9,
+      "status": "approved",
+      "rationale": "Content on the strong error fill; per instruction example.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:47:52.558Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-80c692a22d88",
+      "token": "md.sys.color.on-error-container",
+      "concept": "dsi:concept/color/intent-danger/property-foreground",
+      "match": "broad",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Danger-colored text and icons, but only the case placed on error-container; one specific case of danger foreground.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-e31b2bada0be",
+      "token": "md.sys.color.on-error-container",
+      "concept": "dsi:concept/color/intent-danger/property-foreground",
+      "match": "close",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Content on the subtle error container; emphasis left unbound.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:46:35.304673+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-baee9c077bfc",
+      "token": "md.sys.color.on-primary",
+      "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground",
+      "match": "exact",
+      "confidence": 0.88,
+      "status": "approved",
+      "rationale": "Text and icons on the primary fill.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:47:52.558Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-6cbb8c41763e",
+      "token": "md.sys.color.on-primary-container",
+      "concept": "dsi:concept/color/intent-accent/property-foreground",
+      "match": "close",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Content on the subtle primary container.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:46:35.304673+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-7b2a0b1145f9",
+      "token": "md.sys.color.on-primary-container",
+      "concept": "dsi:concept/color/intent-accent/property-foreground",
+      "match": "broad",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Accent text and icons, only the case on primary-container.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-0807c44cc542",
+      "token": "md.sys.color.on-primary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-foreground",
+      "match": "close",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Like on-primary-container, fixed across themes.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-d46bdd9dee91",
+      "token": "md.sys.color.on-secondary",
+      "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground",
+      "match": "broad",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Content on the secondary fill; secondary is one of several accents.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-d5c106d3772d",
+      "token": "md.sys.color.on-secondary-container",
+      "concept": "dsi:concept/color/intent-accent/property-foreground",
+      "match": "broad",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Content on secondary-container; secondary accent case.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-61439638d0db",
+      "token": "md.sys.color.on-secondary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-foreground",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Like on-secondary-container, fixed across themes.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-943dac00e244",
+      "token": "md.sys.color.on-secondary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-foreground",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Fixed across themes; secondary accent content on fixed container.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:46:35.304673+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-cb6f7cde7ee0",
+      "token": "md.sys.color.on-surface",
+      "concept": "dsi:concept/color/usage-surface/property-foreground",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Default text and icons on surfaces.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:47:52.558Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-65d65531e2d4",
+      "token": "md.sys.color.on-surface-variant",
+      "concept": "dsi:concept/color/usage-surface/property-foreground/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.82,
+      "status": "proposed",
+      "rationale": "Lower-emphasis text and icons on surfaces. Nuance: 'variant' naming rather than explicit secondary.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-a2d236eaa35b",
+      "token": "md.sys.color.on-tertiary",
+      "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground",
+      "match": "broad",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Content on the tertiary fill; tertiary is one of several accents.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-1d3227376a5f",
+      "token": "md.sys.color.on-tertiary-container",
+      "concept": "dsi:concept/color/intent-accent/property-foreground",
+      "match": "broad",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Content on tertiary-container; tertiary accent case.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-61b4ec5eddb9",
+      "token": "md.sys.color.on-tertiary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-foreground",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Fixed across themes; tertiary accent content on fixed container.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:46:35.304673+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-bcfeaa306df5",
+      "token": "md.sys.color.on-tertiary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-foreground",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Like on-tertiary-container, fixed across themes.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-886578c44286",
+      "token": "md.sys.color.outline",
+      "concept": "dsi:concept/color/property-border",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "The standard outline border; one case of borders.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:46:35.304673+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-b39f31f4e928",
+      "token": "md.sys.color.outline",
+      "concept": "dsi:concept/color/property-border",
+      "match": "close",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Important boundaries such as text field outlines. Nuance: the higher-emphasis outline, not decorative dividers.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-dc0914b38197",
+      "token": "md.sys.color.outline-variant",
+      "concept": "dsi:concept/color/property-border/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Decorative dividers and low-emphasis boundaries; subtle border.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-efb4dedfa6d9",
+      "token": "md.sys.color.primary",
+      "concept": "dsi:concept/color/intent-accent",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "The primary brand accent used for fills, text and icons across components.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-b156d2c10008",
+      "token": "md.sys.color.primary-container",
+      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Tonal (subtle) accent fill for containers like FABs and tonal elements.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-f11698c89b4c",
+      "token": "md.sys.color.primary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Like primary-container (subtle accent background), fixed across themes.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-271f1668787f",
+      "token": "md.sys.color.scrim",
+      "concept": "dsi:concept/color/usage-scrim",
+      "match": "exact",
+      "confidence": 0.9,
+      "status": "approved",
+      "rationale": "Dimming layer behind modals; ontology cites Material scrim as the example.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-685d34c8f253",
+      "token": "md.sys.color.secondary",
+      "concept": "dsi:concept/color/intent-accent",
+      "match": "broad",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Secondary accent; one of several accent colors.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:47:52.558Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-72207d09589f",
+      "token": "md.sys.color.secondary-container",
+      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+      "match": "broad",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Subtle secondary-accent container fill; one accent case.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-44f1467e7e6a",
+      "token": "md.sys.color.secondary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Like secondary-container, fixed across themes.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-b734017d3b3b",
+      "token": "md.sys.color.secondary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Fixed across themes; subtle secondary container.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:46:35.304673+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-c107c1843ec0",
+      "token": "md.sys.color.shadow",
+      "concept": "dsi:concept/color/property-shadow",
+      "match": "exact",
+      "confidence": 0.9,
+      "status": "approved",
+      "rationale": "Shadow color for elevation.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-86cb28c1b538",
+      "token": "md.sys.color.surface",
+      "concept": "dsi:concept/color/usage-surface/property-background",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Base surface background.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:46:35.304673+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-b13a2ab02e83",
+      "token": "md.sys.color.surface",
+      "concept": "dsi:concept/color/usage-surface/property-background",
+      "match": "narrow",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Base surface color; in M3 it also serves as the page background (background is deprecated), so it covers more than the surface concept.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-7186012b183c",
+      "token": "md.sys.color.surface-bright",
+      "concept": "dsi:concept/color/usage-surface/property-background",
+      "match": "broad",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "One specific surface variant (brightest in dark theme) the concept does not distinguish.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-6c3df2fe091a",
+      "token": "md.sys.color.surface-container",
+      "concept": "dsi:concept/color/usage-surface/property-background",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Base of the surface-container family; default container fill. Emphasis unbound for the base.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-ffce9d42b5be",
+      "token": "md.sys.color.surface-container-high",
+      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong",
+      "match": "close",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Strong step of the 5-step container family.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:47:52.558Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-14b5afe8969d",
+      "token": "md.sys.color.surface-container-highest",
+      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strongest",
+      "match": "close",
+      "confidence": 0.9,
+      "status": "approved",
+      "rationale": "Strongest step of the container family; per instruction example.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:47:52.558Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-9af1e50f7b53",
+      "token": "md.sys.color.surface-container-low",
+      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Subtle step of the 5-step container family.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:47:52.558Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-981c5f6f96d9",
+      "token": "md.sys.color.surface-container-lowest",
+      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest",
+      "match": "close",
+      "confidence": 0.9,
+      "status": "approved",
+      "rationale": "Weakest step of the container family.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:47:52.558Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-d75da7202dab",
+      "token": "md.sys.color.surface-dim",
+      "concept": "dsi:concept/color/usage-surface/property-background",
+      "match": "broad",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "One specific surface variant (dimmest in light theme) the concept does not distinguish.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-eb401777db1d",
+      "token": "md.sys.color.surface-variant",
+      "concept": "dsi:concept/color/usage-surface/property-background",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Alternative surface fill (legacy, close to container-highest); one surface case without a clear emphasis step.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-fb6b139cf36b",
+      "token": "md.sys.color.surface-variant",
+      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Tinted alternative surface, slightly stronger than surface.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:46:35.304673+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-8c6cd4ad6136",
+      "token": "md.sys.color.tertiary",
+      "concept": "dsi:concept/color/intent-accent",
+      "match": "broad",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Tertiary accent; one of several accent colors.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:47:52.558Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-771ebb4ccf63",
+      "token": "md.sys.color.tertiary-container",
+      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+      "match": "broad",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Subtle tertiary-accent container fill; one accent case.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-243b911c2955",
+      "token": "md.sys.color.tertiary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Like tertiary-container, fixed across themes.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:46:46Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-64878212e317",
+      "token": "md.sys.color.tertiary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Fixed across themes; subtle tertiary container.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:46:35.304673+00:00",
+        "method": "color-v1"
+      }
+    }
+  ],
+  "unmapped": [
+    {
+      "token": "md.sys.color.on-error",
+      "status": "proposed",
+      "rationale": "Contrast foreground (text and icons) placed on the solid error fill; the ontology has no \"on-fill/contrast foreground\" concept, and intent-error/property-text means status-colored text, a different role. Missing concept: foreground-on-fill.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "token": "md.sys.color.on-primary",
+      "status": "proposed",
+      "rationale": "Contrast foreground (text and icons) placed on the solid primary fill; the ontology has no \"on-fill/contrast foreground\" concept, and intent-primary/property-text means status-colored text, a different role. Missing concept: foreground-on-fill.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "token": "md.sys.color.on-primary-fixed",
+      "status": "proposed",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "token": "md.sys.color.on-primary-fixed-variant",
+      "status": "approved",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fixed (theme-invariant) color roles have no concept (and a lower-emphasis fixed text variant)."
+      }
+    },
+    {
+      "token": "md.sys.color.on-secondary",
+      "status": "proposed",
+      "rationale": "Contrast foreground (text and icons) placed on the solid secondary fill; the ontology has no \"on-fill/contrast foreground\" concept, and intent-secondary/property-text means status-colored text, a different role. Missing concept: foreground-on-fill.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "token": "md.sys.color.on-secondary-fixed",
+      "status": "proposed",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "token": "md.sys.color.on-secondary-fixed-variant",
+      "status": "approved",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fixed (theme-invariant) color roles have no concept; also no secondary-accent concept."
+      }
+    },
+    {
+      "token": "md.sys.color.on-tertiary",
+      "status": "proposed",
+      "rationale": "Contrast foreground (text and icons) placed on the solid tertiary fill; the ontology has no \"on-fill/contrast foreground\" concept, and intent-tertiary/property-text means status-colored text, a different role. Missing concept: foreground-on-fill.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "token": "md.sys.color.on-tertiary-fixed",
+      "status": "proposed",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "token": "md.sys.color.on-tertiary-fixed-variant",
+      "status": "approved",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fixed (theme-invariant) color roles have no concept; also no tertiary-accent concept."
+      }
+    },
+    {
+      "token": "md.sys.color.primary-fixed",
+      "status": "proposed",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "token": "md.sys.color.primary-fixed-dim",
+      "status": "approved",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fixed (theme-invariant) color roles have no concept (dimmer fixed variant)."
+      }
+    },
+    {
+      "token": "md.sys.color.secondary-fixed",
+      "status": "proposed",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "token": "md.sys.color.secondary-fixed-dim",
+      "status": "approved",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fixed (theme-invariant) color roles have no concept (dimmer fixed variant)."
+      }
+    },
+    {
+      "token": "md.sys.color.surface-tint",
+      "status": "approved",
+      "rationale": "Primary-colored tint overlaid on surfaces to express elevation; neither background nor accent intent captures it. Missing concept: elevation tint/overlay.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Elevation tint overlay color (equals primary); no concept for elevation tint."
+      }
+    },
+    {
+      "token": "md.sys.color.tertiary-fixed",
+      "status": "proposed",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "token": "md.sys.color.tertiary-fixed-dim",
+      "status": "approved",
+      "rationale": "Theme-invariant (\"fixed\") accent role that keeps the same value in light and dark; no facet expresses theme invariance. Missing concept: fixed/theme-invariant color.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:37:31.391Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:38:32.166Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fixed (theme-invariant) color roles have no concept (dimmer fixed variant)."
+      }
+    }
+  ]
+}

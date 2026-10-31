@@ -15,6 +15,8 @@ export interface Ontology {
   schemes: Map<string, Set<string>>;
   /** Concept IRI -> literal values of dsi:ingested, for categories. */
   ingested: Map<string, boolean>;
+  /** Concepts marked owl:deprecated: still defined (old records stay readable), never valid for new references. */
+  deprecated: Set<string>;
   issues: Issue[];
 }
 
@@ -46,7 +48,9 @@ export async function loadOntology(dir: string): Promise<Ontology> {
   const defined = new Set(quads.map((q) => q.s));
   const schemes = new Map<string, Set<string>>();
   const ingested = new Map<string, boolean>();
+  const deprecated = new Set<string>();
   for (const q of quads) {
+    if (q.p === 'http://www.w3.org/2002/07/owl#deprecated' && q.o === 'true') deprecated.add(q.s);
     if (q.p === SKOS + 'inScheme') (schemes.get(q.s) ?? schemes.set(q.s, new Set()).get(q.s)!).add(q.o);
     if (q.p === DSI + 'ingested') ingested.set(q.s, q.o === 'true');
   }
@@ -72,7 +76,7 @@ export async function loadOntology(dir: string): Promise<Ontology> {
   }
   for (const q of quads.filter((q) => q.p === SKOS + 'related'))
     if (!quads.some((r) => r.p === SKOS + 'related' && r.s === q.o && r.o === q.s)) issues.push({ file: 'ontology', message: `skos:related ${where(q.s)} -> ${where(q.o)} is not symmetric` });
-  return { defined, schemes, ingested, issues };
+  return { defined, schemes, ingested, deprecated, issues };
 }
 
 function listConceptFiles(dir: string): string[] {

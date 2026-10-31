@@ -38,7 +38,9 @@ Layers in a stack. Classify products, not organizations.
 | Mapping | A typed SKOS link between a native token and a concept |
 | Match type | `match/exact`, `close`, `broad`, `narrow`, `related` (SKOS mapping properties; subject is always the native token) |
 | Intent | Hue-independent meaning, e.g. `intent/danger` (status) vs `intent/destructive` (action), linked as related; `intent/ai` marks AI content |
-| Usage | Where a token applies across components: `usage/page`, `surface`, `overlay`, `scrim`, `inverse`, `field`, `link`, `navigation`, `skeleton`, `code` |
+| Usage | Where a token applies across components: `usage/page`, `surface`, `overlay`, `scrim`, `inverse`, `on-fill`, `field`, `link`, `navigation`, `skeleton` (`code` deprecated) |
+| Foreground | `property/foreground`: one token coloring both text and icons; `property/text` and `property/icon` are for one only |
+| Emphasis | `subtlest`, `subtle`, `default`, `strong`, `strongest`: relative strength within a family |
 | Alias graph | References between tokens inside one product (vertical) |
 | Mapping graph | Links from native tokens to concepts, across products (horizontal) |
 | Canonical token set | The concept layer emitted as DTCG; each product resolves it as a theme |

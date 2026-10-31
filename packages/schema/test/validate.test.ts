@@ -81,6 +81,7 @@ const negatives: [string, (f: Record<string, any>) => void, RegExp][] = [
   ['concept with unknown facet value', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/intent-critical'), /intent "critical" is not in dsi:scheme\/intent/],
   ['concept facets out of order', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/property-background/intent-danger'), /out of order/],
   ['concept with unknown domain', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/colour/intent-danger'), /domain "colour"/],
+  ['concept with deprecated facet value', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/usage-code'), /usage "code" is deprecated/],
   ['concept with reserved facet', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/component-button'), /reserved/],
   ['concept with no facets', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color'), /at least one facet/],
   ['approved unmapped token that also has a mapping', (f) => { const u = f['mappings/material/2.4.0.mappings.json'].unmapped[0]; Object.assign(u, { token: 'md.sys.color.error', status: 'approved', review }); }, /approved as unmapped but also has a live mapping/],

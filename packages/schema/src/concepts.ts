@@ -1,4 +1,4 @@
-import { inScheme, type Ontology } from './ontology.ts';
+import { expand, inScheme, type Ontology } from './ontology.ts';
 
 /** Fixed facet order of compositional concept IRIs. component and part are reserved until their vocabularies exist. */
 export const CONCEPT_FACETS = ['intent', 'usage', 'component', 'part', 'property', 'emphasis', 'state'] as const;
@@ -28,6 +28,7 @@ export function parseConcept(o: Ontology, ref: string): ParsedConcept | string {
     last = i;
     const value = seg.slice(facet.length + 1);
     if (!inScheme(o, `dsi:${facet}/${value}`, `dsi:scheme/${facet}`)) return `${facet} "${value}" is not in dsi:scheme/${facet}`;
+    if (o.deprecated.has(expand(`dsi:${facet}/${value}`))) return `${facet} "${value}" is deprecated`;
     facets[facet] = value;
   }
   return { domain, facets };
