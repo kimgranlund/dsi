@@ -39,6 +39,8 @@ Decisions:
 - **Faceted concepts**: intent x property x emphasis x state x mode (e.g. Danger / bg / strong / hover / dark).
 - **Typed matches**: SKOS-style `exact`, `close`, `broader`, `narrower`, `related`.
 - Primitives (e.g. `red-60`) map to scales, not intents, unless a system has only primitives.
+- **Danger and Destructive are two intents**, linked as related. Danger views list Destructive tokens as related, not equal.
+- Schemes are modeled in `ontology/` (categories, targets, tiers, facets, match types, review status).
 
 ### 3a. Tier ladder (decided)
 
@@ -81,6 +83,9 @@ Show a consistent canonical label (e.g. "Danger") and how each design system rep
 - **v1 done when**: a searchable website is live.
 
 ## 7. Open questions
+
+- Site domain: the `dsi:` base IRI is a placeholder (`https://dsi.example/ontology/`) until chosen.
+- Canonical hue names (scale facet) and usage values: deferred to the color concepts work.
 
 - Unmatched canonical tokens: leave unresolved, fall back to the broader match with a flag, or derive a value.
 - Approval gate for AI-written mappings (confidence threshold, validator, human spot check).

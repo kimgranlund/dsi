@@ -1,0 +1,72 @@
+{
+  "@context": "./context.jsonld",
+  "@graph": [
+    {
+      "id": "dsi:category", "type": "Property", "label": "category", "range": "skos:Concept",
+      "comment": "A catalog product's one primary category, a concept in scheme/categories.",
+      "permitsInference": "Nothing beyond classification. Two products in one category are not related by that fact."
+    },
+    {
+      "id": "dsi:implements", "type": "Property", "label": "implements",
+      "comment": "An implementation or component library ships code for a design system (Material Web implements Material; MUI implements Material).",
+      "permitsInference": "The subject's tokens are expected to correspond to the design system's, and divergence is reportable. Not equivalence: shipped values may differ."
+    },
+    {
+      "id": "dsi:builtOn", "type": "Property", "label": "built on",
+      "comment": "The subject uses the object at run or build time (shadcn/ui built on Radix Primitives and Tailwind CSS).",
+      "permitsInference": "A dependency only. Implies nothing about tokens or category."
+    },
+    {
+      "id": "dsi:consumesTokensFrom", "type": "Property", "label": "consumes tokens from",
+      "comment": "Some of the subject's tokens alias the object's tokens.",
+      "permitsInference": "Alias chains may cross into the object's native tokens. Not that every subject token comes from the object."
+    },
+    {
+      "id": "dsi:usesFormat", "type": "Property", "label": "uses format",
+      "comment": "The subject publishes or reads tokens in the object Token Format.",
+      "permitsInference": "Ingestion can use a reader for that format."
+    },
+    {
+      "id": "dsi:providesTokenSet", "type": "Property", "label": "provides token set",
+      "comment": "A Styling Engine ships the object Token Set as its default theme (Tailwind CSS provides the Tailwind default palette).",
+      "permitsInference": "The token set is ingested as its own product; the engine is not."
+    },
+    {
+      "id": "dsi:targets", "type": "Property", "label": "targets", "range": "skos:Concept",
+      "comment": "A platform the subject ships for, a concept in scheme/targets.",
+      "permitsInference": "Nothing about tokens; tokens are compared across targets."
+    },
+
+    { "id": "dsi:hasDomain", "type": "Property", "label": "has domain", "comment": "Binds facet/domain." },
+    { "id": "dsi:hasScale", "type": "Property", "label": "has scale", "comment": "Binds facet/scale." },
+    { "id": "dsi:hasStep", "type": "Property", "label": "has step", "comment": "Binds facet/step. Literal value." },
+    { "id": "dsi:hasEmphasis", "type": "Property", "label": "has emphasis", "comment": "Binds facet/emphasis." },
+    { "id": "dsi:hasIntent", "type": "Property", "label": "has intent", "comment": "Binds facet/intent." },
+    { "id": "dsi:hasProperty", "type": "Property", "label": "has property", "comment": "Binds facet/property (the visual property painted), not an RDF property." },
+    { "id": "dsi:hasUsage", "type": "Property", "label": "has usage", "comment": "Binds facet/usage." },
+    { "id": "dsi:hasComponent", "type": "Property", "label": "has component", "comment": "Binds facet/component." },
+    { "id": "dsi:hasPart", "type": "Property", "label": "has part", "comment": "Binds facet/part. Requires hasComponent on the same resource." },
+    { "id": "dsi:hasState", "type": "Property", "label": "has state", "comment": "Binds facet/state." },
+    { "id": "dsi:inMode", "type": "Property", "label": "in mode", "comment": "Context facet: scopes a value or alias edge to a mode. Never part of a token's identity." },
+
+    {
+      "id": "dsi:tier", "type": "Property", "label": "tier", "range": "skos:Concept",
+      "comment": "A tier a token holds. Derived from its facet bindings by the rule in scheme/tiers; never authored by hand."
+    },
+    {
+      "id": "dsi:noEquivalent", "type": "Property", "label": "no equivalent",
+      "comment": "Asserts, for a product version, that the product has no token for a concept. Distinct from having no mapping record, which means unknown.",
+      "permitsInference": "Canonical resolution for that product may report the concept as absent instead of unmapped."
+    },
+    { "id": "dsi:reviewStatus", "type": "Property", "label": "review status", "range": "skos:Concept", "comment": "A concept in scheme/review-status." },
+    { "id": "dsi:confidence", "type": "Property", "label": "confidence", "comment": "The proposing agent's confidence, 0 to 1. Evidence for review, not approval." },
+
+    { "id": "dsi:rank", "type": "Property", "label": "rank", "comment": "Order of a tier in the progression, 1 = Source." },
+    { "id": "dsi:definingFacet", "type": "Property", "label": "defining facet", "comment": "A facet whose binding places a token in this tier. All defining facets must be bound." },
+    { "id": "dsi:facetKind", "type": "Property", "label": "facet kind", "comment": "Identity or context." },
+    { "id": "dsi:valueScheme", "type": "Property", "label": "value scheme", "comment": "The concept scheme holding a facet's canonical values, when it has one." },
+    { "id": "dsi:bindingProperty", "type": "Property", "label": "binding property", "comment": "The property used to bind this facet on a concept or token." },
+    { "id": "dsi:ingested", "type": "Property", "label": "ingested", "comment": "Whether products in a category get token ingestion (true) or a catalog entry only (false)." },
+    { "id": "dsi:permitsInference", "type": "Property", "label": "permits inference", "comment": "What a consumer may conclude from a relation or match type, and what it may not." }
+  ]
+}

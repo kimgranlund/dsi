@@ -1,0 +1,27 @@
+{
+  "@context": "../context.jsonld",
+  "@graph": [
+    {
+      "id": "dsi:scheme/targets",
+      "type": "ConceptScheme",
+      "prefLabel": "Implementation targets",
+      "definition": "Platforms an implementation or library ships for. Values of dsi:targets only.",
+      "scopeNote": "UI frameworks are out of scope as products: they never get catalog entries, categories or ingestion."
+    },
+    { "id": "dsi:target/react", "type": "Concept", "inScheme": "dsi:scheme/targets", "topConceptOf": "dsi:scheme/targets", "prefLabel": "React" },
+    { "id": "dsi:target/vue", "type": "Concept", "inScheme": "dsi:scheme/targets", "topConceptOf": "dsi:scheme/targets", "prefLabel": "Vue" },
+    { "id": "dsi:target/svelte", "type": "Concept", "inScheme": "dsi:scheme/targets", "topConceptOf": "dsi:scheme/targets", "prefLabel": "Svelte" },
+    { "id": "dsi:target/solid", "type": "Concept", "inScheme": "dsi:scheme/targets", "topConceptOf": "dsi:scheme/targets", "prefLabel": "SolidJS" },
+    { "id": "dsi:target/angular", "type": "Concept", "inScheme": "dsi:scheme/targets", "topConceptOf": "dsi:scheme/targets", "prefLabel": "Angular" },
+    { "id": "dsi:target/web-components", "type": "Concept", "inScheme": "dsi:scheme/targets", "topConceptOf": "dsi:scheme/targets", "prefLabel": "Web Components" },
+    {
+      "id": "dsi:target/css",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/targets",
+      "topConceptOf": "dsi:scheme/targets",
+      "prefLabel": "Framework-agnostic CSS",
+      "definition": "Ships as CSS (classes or custom properties) usable without a UI framework.",
+      "example": "DaisyUI, Open Props"
+    }
+  ]
+}

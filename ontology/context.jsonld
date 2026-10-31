@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "dsi": "https://dsi.example/ontology/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "id": "@id",
+    "type": "@type",
+
+    "Concept": "skos:Concept",
+    "ConceptScheme": "skos:ConceptScheme",
+    "Property": "rdf:Property",
+
+    "prefLabel": { "@id": "skos:prefLabel", "@language": "en" },
+    "definition": { "@id": "skos:definition", "@language": "en" },
+    "scopeNote": { "@id": "skos:scopeNote", "@language": "en" },
+    "editorialNote": { "@id": "skos:editorialNote", "@language": "en" },
+    "example": { "@id": "skos:example", "@language": "en" },
+    "notation": "skos:notation",
+
+    "inScheme": { "@id": "skos:inScheme", "@type": "@id" },
+    "topConceptOf": { "@id": "skos:topConceptOf", "@type": "@id" },
+    "broader": { "@id": "skos:broader", "@type": "@id" },
+    "related": { "@id": "skos:related", "@type": "@id", "@container": "@set" },
+
+    "label": { "@id": "rdfs:label", "@language": "en" },
+    "comment": { "@id": "rdfs:comment", "@language": "en" },
+    "subPropertyOf": { "@id": "rdfs:subPropertyOf", "@type": "@id" },
+    "domain": { "@id": "rdfs:domain", "@type": "@id" },
+    "range": { "@id": "rdfs:range", "@type": "@id" },
+
+    "rank": { "@id": "dsi:rank", "@type": "xsd:integer" },
+    "definingFacet": { "@id": "dsi:definingFacet", "@type": "@id", "@container": "@set" },
+    "facetKind": { "@id": "dsi:facetKind", "@type": "@id" },
+    "valueScheme": { "@id": "dsi:valueScheme", "@type": "@id" },
+    "bindingProperty": { "@id": "dsi:bindingProperty", "@type": "@id" },
+    "ingested": { "@id": "dsi:ingested", "@type": "xsd:boolean" },
+    "permitsInference": { "@id": "dsi:permitsInference", "@language": "en" }
+  }
+}

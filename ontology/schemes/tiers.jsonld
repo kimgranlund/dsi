@@ -1,0 +1,68 @@
+{
+  "@context": "../context.jsonld",
+  "@graph": [
+    {
+      "id": "dsi:scheme/tiers",
+      "type": "ConceptScheme",
+      "prefLabel": "Token tiers",
+      "definition": "The canonical progression a token's meaning moves through, from raw value to component part. Ordered by dsi:rank.",
+      "scopeNote": "A tier is derived, never hand-labeled. A token holds every tier whose defining facets it binds (all of them); Source is held only when no other tier is. Its primary tier is the held tier with the highest rank. Tiers are only derived for tokens whose facet bindings have been assessed; an unassessed token's tier is unknown, not Source. Tier is independent of alias position: a token with a literal $value can still be Semantic.",
+      "example": "--plum-12 (Source) -> --plum-strong (Scale) -> --danger-strong (Semantic) -> --system-heading-text (System) -> --button-danger-bg (Component)"
+    },
+    {
+      "id": "dsi:tier/source",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/tiers",
+      "topConceptOf": "dsi:scheme/tiers",
+      "prefLabel": "Source",
+      "rank": 1,
+      "definingFacet": [],
+      "definition": "A raw value named by its position in a scale or by its literal, carrying no relative emphasis, intent, usage or component meaning.",
+      "example": "--plum-12, md.ref.palette.error40, Carbon $red-60, space-4"
+    },
+    {
+      "id": "dsi:tier/scale",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/tiers",
+      "topConceptOf": "dsi:scheme/tiers",
+      "prefLabel": "Scale",
+      "rank": 2,
+      "definingFacet": ["dsi:facet/scale", "dsi:facet/emphasis"],
+      "definition": "A step of a named scale expressed as relative emphasis rather than absolute position. Optional: most systems skip it.",
+      "example": "--plum-strong"
+    },
+    {
+      "id": "dsi:tier/semantic",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/tiers",
+      "topConceptOf": "dsi:scheme/tiers",
+      "prefLabel": "Semantic",
+      "rank": 3,
+      "definingFacet": ["dsi:facet/intent"],
+      "definition": "A token that binds an intent (danger, success, accent, ...), independent of hue.",
+      "example": "--danger-strong, md.sys.color.error, Carbon support-error, Polaris color-bg-fill-critical"
+    },
+    {
+      "id": "dsi:tier/system",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/tiers",
+      "topConceptOf": "dsi:scheme/tiers",
+      "prefLabel": "System",
+      "rank": 4,
+      "definingFacet": ["dsi:facet/usage"],
+      "definition": "A token that binds where in the interface it is used (heading text, raised surface, ...), across components.",
+      "example": "--system-heading-text, Carbon text-primary, md.sys.color.on-surface"
+    },
+    {
+      "id": "dsi:tier/component",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/tiers",
+      "topConceptOf": "dsi:scheme/tiers",
+      "prefLabel": "Component",
+      "rank": 5,
+      "definingFacet": ["dsi:facet/component"],
+      "definition": "A token that binds a specific component, usually with a part.",
+      "example": "--button-danger-bg, md.comp.filled-button.container.color, Carbon button-danger-primary"
+    }
+  ]
+}

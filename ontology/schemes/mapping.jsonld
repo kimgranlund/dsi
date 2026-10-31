@@ -1,0 +1,57 @@
+{
+  "@context": "../context.jsonld",
+  "@graph": [
+    {
+      "id": "dsi:scheme/match-types",
+      "type": "ConceptScheme",
+      "prefLabel": "Mapping match types",
+      "definition": "The SKOS mapping properties a mapping may assert between a native token and a canonical concept.",
+      "scopeNote": "Direction is fixed: the subject is always the native token, the object is always the canonical concept. SKOS reads `A skos:broadMatch B` as 'B is broader than A', so `native broadMatch concept` means the native token is more specific than the concept. Match type says how meanings correspond; whether a mapping may feed canonical token resolution is a separate eligibility rule (open, see PLAN.md).",
+      "editorialNote": "Native tokens are given IRIs per product and version and typed skos:Concept in that product's native scheme, so SKOS mapping properties apply across schemes."
+    },
+    {
+      "id": "dsi:match/exact", "type": "Concept", "inScheme": "dsi:scheme/match-types", "topConceptOf": "dsi:scheme/match-types",
+      "prefLabel": "Exact", "rdfs:seeAlso": { "id": "skos:exactMatch" },
+      "definition": "The native token and the concept mean the same thing for every use in the index.",
+      "permitsInference": "Interchangeable in both directions. Transitive: two native tokens with exact matches to one concept are exact matches of each other."
+    },
+    {
+      "id": "dsi:match/close", "type": "Concept", "inScheme": "dsi:scheme/match-types", "topConceptOf": "dsi:scheme/match-types",
+      "prefLabel": "Close", "rdfs:seeAlso": { "id": "skos:closeMatch" },
+      "definition": "Same meaning for comparison and display, with a known difference in scope or nuance.",
+      "permitsInference": "Shown side by side as equivalent with a note. Not transitive: two close matches to one concept are not asserted close to each other."
+    },
+    {
+      "id": "dsi:match/broad", "type": "Concept", "inScheme": "dsi:scheme/match-types", "topConceptOf": "dsi:scheme/match-types",
+      "prefLabel": "Broader concept", "rdfs:seeAlso": { "id": "skos:broadMatch" },
+      "definition": "The concept is broader than the native token; the native token covers only part of it.",
+      "example": "Carbon button-danger-primary broadMatch a canonical Destructive background: the native token is limited to buttons.",
+      "permitsInference": "The native token may be listed under the concept as a more specific instance. The concept may not be resolved to it as if equal."
+    },
+    {
+      "id": "dsi:match/narrow", "type": "Concept", "inScheme": "dsi:scheme/match-types", "topConceptOf": "dsi:scheme/match-types",
+      "prefLabel": "Narrower concept", "rdfs:seeAlso": { "id": "skos:narrowMatch" },
+      "definition": "The concept is narrower than the native token; the native token also covers other meanings.",
+      "example": "md.sys.color.error narrowMatch Danger: Material's error also serves destructive actions.",
+      "permitsInference": "The native token may be shown as the product's nearest representation of the concept, flagged as broader. Not interchangeable."
+    },
+    {
+      "id": "dsi:match/related", "type": "Concept", "inScheme": "dsi:scheme/match-types", "topConceptOf": "dsi:scheme/match-types",
+      "prefLabel": "Related", "rdfs:seeAlso": { "id": "skos:relatedMatch" },
+      "definition": "Associated meaning that is neither equal nor in a broader/narrower relation.",
+      "example": "A Destructive token related to Danger.",
+      "permitsInference": "Listed as 'see also' only. Never used for resolution or equivalence."
+    },
+
+    {
+      "id": "dsi:scheme/review-status",
+      "type": "ConceptScheme",
+      "prefLabel": "Mapping review status",
+      "scopeNote": "What has to be true to reach Approved is open (PLAN.md). The mapper may create Proposed records and may never modify Approved ones."
+    },
+    { "id": "dsi:review/proposed", "type": "Concept", "inScheme": "dsi:scheme/review-status", "topConceptOf": "dsi:scheme/review-status", "prefLabel": "Proposed", "definition": "Written by an agent; not yet accepted. A candidate correspondence only." },
+    { "id": "dsi:review/approved", "type": "Concept", "inScheme": "dsi:scheme/review-status", "topConceptOf": "dsi:scheme/review-status", "prefLabel": "Approved", "definition": "Accepted as an adopted correspondence for the source version it names." },
+    { "id": "dsi:review/rejected", "type": "Concept", "inScheme": "dsi:scheme/review-status", "topConceptOf": "dsi:scheme/review-status", "prefLabel": "Rejected", "definition": "Reviewed and judged wrong. Kept so the mapper does not propose it again." },
+    { "id": "dsi:review/superseded", "type": "Concept", "inScheme": "dsi:scheme/review-status", "topConceptOf": "dsi:scheme/review-status", "prefLabel": "Superseded", "definition": "Replaced by a later mapping (new source version or changed concept). Kept for history." }
+  ]
+}

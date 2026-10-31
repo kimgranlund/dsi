@@ -1,0 +1,149 @@
+{
+  "@context": "../context.jsonld",
+  "@graph": [
+    {
+      "id": "dsi:scheme/facets",
+      "type": "ConceptScheme",
+      "prefLabel": "Facets",
+      "definition": "The dimensions a canonical concept or native token can bind. A canonical concept is a combination of facet values, e.g. Danger = intent/danger; Danger background, strong, on hover = intent/danger + property/background + emphasis/strong + state/hover.",
+      "scopeNote": "An unbound facet means the token is not specific to that dimension. It does not mean the default value: a token with no state facet is not the same as one bound to a rest state."
+    },
+
+    {
+      "id": "dsi:scheme/facet-kinds",
+      "type": "ConceptScheme",
+      "prefLabel": "Facet kinds"
+    },
+    {
+      "id": "dsi:facet-kind/identity",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/facet-kinds",
+      "topConceptOf": "dsi:scheme/facet-kinds",
+      "prefLabel": "Identity facet",
+      "definition": "Part of what a token means. Two tokens that differ in an identity facet are different tokens and may map to different concepts."
+    },
+    {
+      "id": "dsi:facet-kind/context",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/facet-kinds",
+      "topConceptOf": "dsi:scheme/facet-kinds",
+      "prefLabel": "Context facet",
+      "definition": "Selects which value a token resolves to without changing what it means. Scopes alias edges and values, never token identity or tier."
+    },
+
+    {
+      "id": "dsi:facet/domain", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Domain", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/domain", "bindingProperty": "dsi:hasDomain",
+      "definition": "The design concern a token belongs to.",
+      "scopeNote": "Not the DTCG $type: a shadow token has $type shadow and domain elevation. DTCG owns value types."
+    },
+    {
+      "id": "dsi:facet/scale", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Scale", "facetKind": "dsi:facet-kind/identity", "bindingProperty": "dsi:hasScale",
+      "definition": "The named family of values a token is a step of: a hue (plum, red, neutral) or a dimension scale (space, radius).",
+      "editorialNote": "No canonical value scheme yet. Scale names are product-specific; whether to canonicalize hues is deferred to the color concepts work."
+    },
+    {
+      "id": "dsi:facet/step", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Step", "facetKind": "dsi:facet-kind/identity", "bindingProperty": "dsi:hasStep",
+      "definition": "Absolute position within a scale, as the product numbers it (12, 40, 600). A literal, not a concept; steps are only comparable within one scale of one product."
+    },
+    {
+      "id": "dsi:facet/emphasis", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Emphasis", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/emphasis", "bindingProperty": "dsi:hasEmphasis",
+      "definition": "Relative strength within a scale or intent (subtle, strong), as opposed to an absolute step."
+    },
+    {
+      "id": "dsi:facet/intent", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Intent", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/intent", "bindingProperty": "dsi:hasIntent",
+      "definition": "What the token communicates, independent of hue: status, brand emphasis or action consequence."
+    },
+    {
+      "id": "dsi:facet/property", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Property", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/property", "bindingProperty": "dsi:hasProperty",
+      "definition": "Which visual property the token is meant to paint or size (background, text, border, ...).",
+      "scopeNote": "Does not define a tier: Polaris color-bg-fill-critical binds property and intent and is Semantic."
+    },
+    {
+      "id": "dsi:facet/usage", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Usage", "facetKind": "dsi:facet-kind/identity", "bindingProperty": "dsi:hasUsage",
+      "definition": "Where in the interface the token applies across components (heading, body, surface, layer, overlay, link).",
+      "editorialNote": "Value scheme deferred to the concepts work, built from the three v1 systems."
+    },
+    {
+      "id": "dsi:facet/component", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Component", "facetKind": "dsi:facet-kind/identity", "bindingProperty": "dsi:hasComponent",
+      "definition": "The component a token is scoped to (button, text field, ...).",
+      "editorialNote": "Component and part vocabularies are open (PLAN.md open question: whose part names become canonical)."
+    },
+    {
+      "id": "dsi:facet/part", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Part", "facetKind": "dsi:facet-kind/identity", "bindingProperty": "dsi:hasPart",
+      "definition": "An anatomical part of a component (container, label, icon, track, handle). Only meaningful together with a component."
+    },
+    {
+      "id": "dsi:facet/state", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "State", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/state", "bindingProperty": "dsi:hasState",
+      "definition": "The interaction or selection state the token applies to."
+    },
+    {
+      "id": "dsi:facet/mode", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Mode", "facetKind": "dsi:facet-kind/context", "valueScheme": "dsi:scheme/mode", "bindingProperty": "dsi:inMode",
+      "definition": "The theme context a value or alias edge holds in (light, dark, increased contrast).",
+      "scopeNote": "Product themes map to canonical modes with typed matches: Carbon g10 and g100 are product themes, not modes."
+    },
+
+    { "id": "dsi:scheme/domain", "type": "ConceptScheme", "prefLabel": "Domain values" },
+    { "id": "dsi:domain/color", "type": "Concept", "inScheme": "dsi:scheme/domain", "topConceptOf": "dsi:scheme/domain", "prefLabel": "Color" },
+    { "id": "dsi:domain/space", "type": "Concept", "inScheme": "dsi:scheme/domain", "topConceptOf": "dsi:scheme/domain", "prefLabel": "Space", "definition": "Gaps, padding and margins between elements." },
+    { "id": "dsi:domain/size", "type": "Concept", "inScheme": "dsi:scheme/domain", "topConceptOf": "dsi:scheme/domain", "prefLabel": "Size", "definition": "Dimensions of elements themselves (icon size, control height)." },
+    { "id": "dsi:domain/shape", "type": "Concept", "inScheme": "dsi:scheme/domain", "topConceptOf": "dsi:scheme/domain", "prefLabel": "Shape", "definition": "Corner radius and border width." },
+    { "id": "dsi:domain/typography", "type": "Concept", "inScheme": "dsi:scheme/domain", "topConceptOf": "dsi:scheme/domain", "prefLabel": "Typography" },
+    { "id": "dsi:domain/elevation", "type": "Concept", "inScheme": "dsi:scheme/domain", "topConceptOf": "dsi:scheme/domain", "prefLabel": "Elevation", "definition": "Shadows and depth layering." },
+    { "id": "dsi:domain/motion", "type": "Concept", "inScheme": "dsi:scheme/domain", "topConceptOf": "dsi:scheme/domain", "prefLabel": "Motion", "definition": "Durations and easing." },
+    { "id": "dsi:domain/opacity", "type": "Concept", "inScheme": "dsi:scheme/domain", "topConceptOf": "dsi:scheme/domain", "prefLabel": "Opacity" },
+
+    { "id": "dsi:scheme/emphasis", "type": "ConceptScheme", "prefLabel": "Emphasis values", "editorialNote": "Starter set. Add finer steps only with evidence from ingested systems." },
+    { "id": "dsi:emphasis/subtle", "type": "Concept", "inScheme": "dsi:scheme/emphasis", "topConceptOf": "dsi:scheme/emphasis", "prefLabel": "Subtle", "notation": "1" },
+    { "id": "dsi:emphasis/default", "type": "Concept", "inScheme": "dsi:scheme/emphasis", "topConceptOf": "dsi:scheme/emphasis", "prefLabel": "Default", "notation": "2", "definition": "Explicitly the middle emphasis, where the product names it (e.g. a 'base' or 'default' variant). Not implied by an unbound facet." },
+    { "id": "dsi:emphasis/strong", "type": "Concept", "inScheme": "dsi:scheme/emphasis", "topConceptOf": "dsi:scheme/emphasis", "prefLabel": "Strong", "notation": "3" },
+
+    { "id": "dsi:scheme/intent", "type": "ConceptScheme", "prefLabel": "Intent values", "scopeNote": "Native names (Critical, Error, Destructive) are not labels here. They belong in mappings with a match type, because they are rarely exact synonyms." },
+    { "id": "dsi:intent/accent", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Accent", "definition": "Brand or primary emphasis that draws attention without signaling status." },
+    { "id": "dsi:intent/neutral", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Neutral", "definition": "Deliberately carries no status or brand meaning." },
+    { "id": "dsi:intent/info", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Info", "definition": "Status: informational, no action required." },
+    { "id": "dsi:intent/success", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Success", "definition": "Status: completed or positive outcome." },
+    { "id": "dsi:intent/warning", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Warning", "definition": "Status: needs attention; something may go wrong." },
+    {
+      "id": "dsi:intent/danger", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Danger",
+      "definition": "Status: something is wrong, failed or at risk.",
+      "related": ["dsi:intent/destructive"],
+      "scopeNote": "Explorer Danger views also list Destructive tokens, marked as related, not equal."
+    },
+    {
+      "id": "dsi:intent/destructive", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Destructive",
+      "definition": "Action consequence: the action deletes data or cannot be undone. Describes an action, not a status.",
+      "related": ["dsi:intent/danger"]
+    },
+
+    { "id": "dsi:scheme/property", "type": "ConceptScheme", "prefLabel": "Property values" },
+    { "id": "dsi:property/background", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Background", "definition": "Fill behind content: surfaces, containers, fills." },
+    { "id": "dsi:property/text", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Text", "definition": "Foreground text color. Material's on-* tokens bind this." },
+    { "id": "dsi:property/icon", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Icon" },
+    { "id": "dsi:property/border", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Border", "definition": "Borders, dividers and outlines that are part of layout." },
+    { "id": "dsi:property/focus-ring", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Focus ring" },
+    { "id": "dsi:property/shadow", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Shadow" },
+
+    { "id": "dsi:scheme/state", "type": "ConceptScheme", "prefLabel": "State values" },
+    { "id": "dsi:state/hover", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Hover" },
+    { "id": "dsi:state/active", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Active", "definition": "Being pressed. Material calls this pressed." },
+    { "id": "dsi:state/focus", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Focus" },
+    { "id": "dsi:state/disabled", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Disabled" },
+    { "id": "dsi:state/selected", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Selected" },
+
+    { "id": "dsi:scheme/mode", "type": "ConceptScheme", "prefLabel": "Mode values" },
+    { "id": "dsi:mode/light", "type": "Concept", "inScheme": "dsi:scheme/mode", "topConceptOf": "dsi:scheme/mode", "prefLabel": "Light" },
+    { "id": "dsi:mode/dark", "type": "Concept", "inScheme": "dsi:scheme/mode", "topConceptOf": "dsi:scheme/mode", "prefLabel": "Dark" },
+    { "id": "dsi:mode/increased-contrast", "type": "Concept", "inScheme": "dsi:scheme/mode", "topConceptOf": "dsi:scheme/mode", "prefLabel": "Increased contrast", "scopeNote": "Combines with light or dark; a product's high-contrast-dark theme binds both." }
+  ]
+}

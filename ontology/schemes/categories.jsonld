@@ -1,0 +1,92 @@
+{
+  "@context": "../context.jsonld",
+  "@graph": [
+    {
+      "id": "dsi:scheme/categories",
+      "type": "ConceptScheme",
+      "prefLabel": "Product categories",
+      "definition": "Layers of the design-token stack. Each catalog product has exactly one primary category; products in different layers connect through catalog relations (see ../vocab.jsonld).",
+      "scopeNote": "Classifies products, not organizations: Radix Primitives, Radix Themes and Radix Colors are three products in three categories. UI frameworks are not a category; they are values of dsi:targets (scheme/targets)."
+    },
+    {
+      "id": "dsi:category/token-format",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/categories",
+      "topConceptOf": "dsi:scheme/categories",
+      "prefLabel": "Token Format",
+      "notation": "1",
+      "definition": "A specification for expressing design tokens as data.",
+      "example": "W3C Design Tokens Community Group format (DTCG)",
+      "ingested": false
+    },
+    {
+      "id": "dsi:category/token-tooling",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/categories",
+      "topConceptOf": "dsi:scheme/categories",
+      "prefLabel": "Token Tooling",
+      "notation": "2",
+      "definition": "Software that transforms, syncs or builds tokens and ships no token values of its own.",
+      "example": "Style Dictionary, Terrazzo, Tokens Studio",
+      "ingested": false
+    },
+    {
+      "id": "dsi:category/token-set",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/categories",
+      "topConceptOf": "dsi:scheme/categories",
+      "prefLabel": "Token Set",
+      "notation": "3",
+      "definition": "A published set of token values with no components and no governing design language.",
+      "example": "Open Props, Radix Colors",
+      "ingested": true
+    },
+    {
+      "id": "dsi:category/styling-engine",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/categories",
+      "topConceptOf": "dsi:scheme/categories",
+      "prefLabel": "Styling Engine",
+      "notation": "4",
+      "definition": "Software that turns tokens into styles at build or run time.",
+      "scopeNote": "A default theme an engine ships (e.g. Tailwind's palette) is cataloged as a separate Token Set product linked by dsi:providesTokenSet; the engine itself is not ingested.",
+      "example": "PandaCSS, Tailwind CSS, StyleX, Vanilla Extract",
+      "ingested": false
+    },
+    {
+      "id": "dsi:category/headless-primitives",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/categories",
+      "topConceptOf": "dsi:scheme/categories",
+      "prefLabel": "Headless Primitives",
+      "notation": "5",
+      "definition": "Components or state machines that provide behavior and accessibility with no visual styling.",
+      "example": "Radix Primitives, Melt UI, Zag, React Aria",
+      "ingested": false
+    },
+    {
+      "id": "dsi:category/component-library",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/categories",
+      "topConceptOf": "dsi:scheme/categories",
+      "prefLabel": "Component Library",
+      "notation": "6",
+      "definition": "Styled components with their own tokens but without a governing design language (no published principles, guidance or design-side source of truth).",
+      "scopeNote": "A library that implements someone else's design system (MUI implements Material) is still a Component Library, linked by dsi:implements.",
+      "example": "shadcn/ui, Chakra UI, Mantine, MUI",
+      "ingested": true
+    },
+    {
+      "id": "dsi:category/design-system",
+      "type": "Concept",
+      "inScheme": "dsi:scheme/categories",
+      "topConceptOf": "dsi:scheme/categories",
+      "prefLabel": "Design System",
+      "notation": "7",
+      "definition": "A governed design language: tokens, usage guidance and components maintained as a source of truth by an owning organization.",
+      "scopeNote": "Its shipped codebases are Implementations (catalog entity, not a category), each linked by dsi:implements. Tokens are ingested from implementations, because shipped code is the source of truth.",
+      "example": "Material Design, Carbon, Polaris",
+      "ingested": true
+    }
+  ]
+}
