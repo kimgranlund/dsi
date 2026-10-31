@@ -29,6 +29,7 @@ dsi:concept/color/intent-danger/property-background/emphasis-strong/state-hover
 ```
 
 - `<domain>` is a value of `dsi:scheme/domain`. Facet segments follow the fixed order **intent, usage, component, part, property, emphasis, state**; each value must exist in that facet's scheme (`dsi:scheme/<facet>`). At least one facet segment is required.
+- **usage** and **state** may combine values with `+`, sorted alphabetically: `usage-inverse+link`, `state-hover+selected`. Other facets take one value.
 - Component and part segments are reserved until their vocabularies exist.
 - Mode is never a segment: it is context, not identity.
 - The validator (`@dsi/schema`) checks grammar, order and every value. A compositional IRI does not need an entry in `concepts/`; add one only to give it a curated label or definition.

@@ -1,0 +1,300 @@
+<title>DSI Mapping Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one review column; each card pairs the token's real colors per theme with both agents' answers side by side. */
+:root {
+  --bg: #f3f4f6;
+  --panel: #ffffff;
+  --ink: #161a22;
+  --muted: #5b6474;
+  --line: #d9dde5;
+  --accent: #2f4fd8;
+  --accent-ink: #ffffff;
+  --accent-soft: #e6eafc;
+  --ok: #1f7a4d;
+  --ok-soft: #e2f3ea;
+  --warn: #9a5b00;
+  --warn-soft: #fbefd9;
+  --bad: #b3261e;
+  --bad-soft: #fbe5e3;
+  --check: #c9ced8;
+  --font-display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --font-body: "Geist", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1218; --panel: #171b23; --ink: #e8ebf1; --muted: #9aa3b4; --line: #2a303c;
+    --accent: #8fa4ff; --accent-ink: #0f1218; --accent-soft: #1f2744;
+    --ok: #6fd3a0; --ok-soft: #14301f; --warn: #f0b75a; --warn-soft: #33260f; --bad: #ff8a80; --bad-soft: #3a1a18; --check: #3a4150;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1218; --panel: #171b23; --ink: #e8ebf1; --muted: #9aa3b4; --line: #2a303c;
+  --accent: #8fa4ff; --accent-ink: #0f1218; --accent-soft: #1f2744;
+  --ok: #6fd3a0; --ok-soft: #14301f; --warn: #f0b75a; --warn-soft: #33260f; --bad: #ff8a80; --bad-soft: #3a1a18; --check: #3a4150;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--font-body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--panel); }
+.wrap { max-width: 1040px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line); }
+header.top .wrap { padding-block: 14px; display: grid; gap: 12px; }
+.title-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+h1 { font: 700 1.5rem/1.15 var(--font-display); margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+.sub { color: var(--muted); font-size: 0.85rem; }
+.progress { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.prog { display: grid; gap: 4px; min-width: 150px; flex: 1; }
+.prog-label { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.prog-label b { color: var(--ink); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; }
+.bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .25s; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.filters select, .filters input { font: inherit; font-size: 0.85rem; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); }
+.filters input { flex: 1; min-width: 160px; }
+.notice { font-size: 0.85rem; padding: 8px 12px; border-radius: 6px; background: var(--warn-soft); color: var(--warn); }
+main .wrap { padding-block: 20px 60px; display: grid; gap: 14px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); }
+.card.decided { border-color: var(--ok); }
+@media (max-width: 720px) { .card { grid-template-columns: minmax(0, 1fr); } }
+.tok { padding: 14px 16px; border-right: 1px solid var(--line); display: grid; gap: 10px; align-content: start; min-width: 0; }
+@media (max-width: 720px) { .tok { border-right: 0; border-bottom: 1px solid var(--line); } }
+.tok-name { font: 500 0.92rem/1.3 var(--font-mono); word-break: break-word; }
+.tok-meta { font: 0.75rem/1.4 var(--font-mono); color: var(--muted); word-break: break-word; }
+.product { display: inline-block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+.desc { font-size: 0.85rem; color: var(--muted); margin: 0; }
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(4.5rem, 1fr)); gap: 6px; }
+.sw { display: grid; gap: 3px; min-width: 0; }
+.chip { height: 2.2rem; border-radius: 6px; border: 1px solid var(--line); position: relative; overflow: hidden;
+  background-image: linear-gradient(45deg, var(--check) 25%, transparent 25%, transparent 75%, var(--check) 75%), linear-gradient(45deg, var(--check) 25%, transparent 25%, transparent 75%, var(--check) 75%);
+  background-size: 10px 10px; background-position: 0 0, 5px 5px; }
+.chip > i { position: absolute; inset: 0; }
+.sw span { font: 0.66rem/1.25 var(--font-mono); color: var(--muted); word-break: break-all; }
+.sw span b { color: var(--ink); font-weight: 500; font-family: var(--font-body); }
+.answers { padding: 14px 16px; display: grid; gap: 10px; min-width: 0; }
+.cand { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; display: grid; gap: 6px; }
+.cand.chosen { border-color: var(--ok); background: var(--ok-soft); }
+.cand-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+.model { font: 500 0.72rem var(--font-mono); color: var(--muted); }
+.facets { display: flex; flex-wrap: wrap; gap: 4px; }
+.facet { font-size: 0.8rem; padding: 1px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--ink); }
+.facet small { color: var(--muted); margin-right: 4px; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.pill { font-size: 0.72rem; font-weight: 600; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); text-transform: uppercase; letter-spacing: 0.05em; }
+.pill.exact { color: var(--ok); border-color: var(--ok); }
+.pill.close { color: var(--accent); border-color: var(--accent); }
+.pill.broad, .pill.narrow { color: var(--warn); border-color: var(--warn); }
+.pill.related, .pill.none { color: var(--muted); }
+.conf { font: 0.75rem var(--font-mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.why { font-size: 0.85rem; margin: 0; color: var(--ink); }
+.actions { display: flex; flex-wrap: wrap; gap: 6px; }
+button { font: 500 0.82rem var(--font-body); padding: 6px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; }
+button:hover:not(:disabled) { border-color: var(--accent); }
+button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+.decision { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 0.85rem; padding: 8px 12px; border-radius: 8px; background: var(--ok-soft); color: var(--ok); }
+.decision.reject { background: var(--bad-soft); color: var(--bad); }
+.custom { display: grid; gap: 8px; border: 1px dashed var(--line); border-radius: 8px; padding: 10px 12px; }
+.custom-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: 6px; }
+.custom label { display: grid; gap: 2px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.custom select, .custom input { font: inherit; font-size: 0.85rem; text-transform: none; letter-spacing: 0; padding: 5px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); width: 100%; }
+.custom code { font: 0.75rem var(--font-mono); word-break: break-all; color: var(--muted); }
+.empty { text-align: center; color: var(--muted); padding: 40px 0; }
+@media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="title-row">
+      <h1>Mapping review</h1>
+      <span class="sub" id="generated"></span>
+    </div>
+    <div class="progress" id="progress"></div>
+    <div class="filters">
+      <select id="f-product" aria-label="Product"><option value="">All systems</option></select>
+      <select id="f-status" aria-label="Status">
+        <option value="open">Needs a decision</option>
+        <option value="decided">Decided</option>
+        <option value="all">All</option>
+      </select>
+      <input id="f-search" type="search" placeholder="Filter by token name" aria-label="Filter by token name">
+    </div>
+    <div class="notice" id="notice" hidden></div>
+  </div>
+</header>
+<main><div class="wrap" id="list"></div></main>
+
+<script>
+const DATA = /*__DATA__*/null;
+const ONT = DATA.ontology;
+const FACET_ORDER = ['intent', 'usage', 'property', 'emphasis', 'state'];
+const LABEL = {};
+for (const f of FACET_ORDER) for (const v of ONT.facets[f] || []) LABEL[f + ':' + v.value] = v.label;
+const MATCHES = ['exact', 'close', 'broad', 'narrow', 'related'];
+const MATCH_HINT = { exact: 'same meaning', close: 'same, with a nuance', broad: 'token is a narrower case', narrow: 'token covers more', related: 'associated only' };
+
+let decisions = new Map();
+let db = null;
+let canWrite = false;
+const openCustom = new Set();
+
+const $ = (s) => document.querySelector(s);
+const el = (tag, attrs = {}, ...kids) => {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === 'class') n.className = v; else if (k === 'text') n.textContent = v;
+    else if (k.startsWith('on')) n.addEventListener(k.slice(2), v); else if (v !== false && v != null) n.setAttribute(k, v);
+  }
+  for (const k of kids.flat()) if (k != null) n.append(k);
+  return n;
+};
+
+function parseConcept(c) {
+  const segs = c.replace(/^dsi:concept\//, '').split('/');
+  const out = [];
+  for (const seg of segs.slice(1)) {
+    const f = FACET_ORDER.find((x) => seg.startsWith(x + '-'));
+    if (!f) continue;
+    const vals = seg.slice(f.length + 1).split('+');
+    out.push({ facet: f, text: vals.map((v) => LABEL[f + ':' + v] || v).join(' + ') });
+  }
+  return out;
+}
+
+function facetChips(concept) {
+  return el('div', { class: 'facets' }, parseConcept(concept).map((p) => el('span', { class: 'facet' }, el('small', { text: p.facet }), p.text)));
+}
+
+function swatch(theme, t) {
+  const m = /^(#[0-9a-f]{6})(?: @ ([\d.]+))?$/i.exec(t.value || '');
+  const fill = el('i');
+  if (m) { fill.style.background = m[1]; if (m[2]) fill.style.opacity = m[2]; }
+  return el('div', { class: 'sw' },
+    el('div', { class: 'chip', title: (t.aliases || []).join(' → ') || t.value }, fill),
+    el('span', {}, el('b', { text: theme }), ' ', t.value));
+}
+
+function decide(item, body) {
+  if (!db || !canWrite) return;
+  const doc = { key: item.key, product: item.product, token: item.token, at: new Date().toISOString(), ...body };
+  db.collection('decisions').doc(item.key).set(doc).catch((e) => showNotice('Could not save the decision: ' + (e && e.message || 'unknown error') + '. Try again.'));
+}
+
+function undo(item) {
+  if (!db || !canWrite) return;
+  db.collection('decisions').doc(item.key).delete().catch((e) => showNotice('Could not undo: ' + (e && e.message || 'unknown error') + '.'));
+}
+
+function customBuilder(item) {
+  const id = (f) => 'c-' + item.key.replace(/[^a-z0-9]/gi, '-') + '-' + f;
+  const box = el('div', { class: 'custom' });
+  const grid = el('div', { class: 'custom-grid' });
+  const sels = {};
+  for (const f of FACET_ORDER) {
+    const s = el('select', { id: id(f) }, el('option', { value: '', text: '(unbound)' }), (ONT.facets[f] || []).map((v) => el('option', { value: v.value, text: v.label })));
+    sels[f] = s;
+    grid.append(el('label', { for: id(f) }, f, s));
+  }
+  const match = el('select', { id: id('match') }, MATCHES.map((m) => el('option', { value: m, text: m + ' (' + MATCH_HINT[m] + ')' })));
+  grid.append(el('label', { for: id('match') }, 'match', match));
+  const note = el('input', { id: id('note'), type: 'text', placeholder: 'Why (optional)' });
+  const preview = el('code');
+  const save = el('button', { class: 'primary', text: 'Save custom mapping', disabled: !canWrite });
+  const build = () => {
+    const segs = FACET_ORDER.filter((f) => sels[f].value).map((f) => f + '-' + sels[f].value);
+    return segs.length ? 'dsi:concept/color/' + segs.join('/') : '';
+  };
+  const refresh = () => { const c = build(); preview.textContent = c || 'Pick at least one facet.'; save.disabled = !canWrite || !c; };
+  for (const s of Object.values(sels)) s.addEventListener('change', refresh);
+  save.addEventListener('click', () => { const c = build(); if (c) { decide(item, { action: 'custom', concept: c, match: match.value, note: note.value.trim() || undefined }); openCustom.delete(item.key); } });
+  refresh();
+  box.append(grid, el('label', { for: id('note') }, 'note', note), preview, el('div', { class: 'actions' }, save, el('button', { text: 'Cancel', onclick: () => { openCustom.delete(item.key); render(); } })));
+  return box;
+}
+
+function card(item) {
+  const d = decisions.get(item.key);
+  const themes = Object.entries(item.themes);
+  const left = el('div', { class: 'tok' },
+    el('span', { class: 'product', text: item.product + ' ' + item.version }),
+    el('div', { class: 'tok-name', text: item.token }),
+    item.nativeName && item.nativeName !== item.token ? el('div', { class: 'tok-meta', text: item.nativeName }) : null,
+    item.description ? el('p', { class: 'desc', text: item.description }) : null,
+    el('div', { class: 'swatches' }, themes.map(([th, t]) => swatch(th, t))));
+
+  const right = el('div', { class: 'answers' });
+  if (d) {
+    const label = d.action === 'accept' ? 'Accepted ' + (item.candidates.find((c) => c.id === d.candidateId)?.model || 'an answer')
+      : d.action === 'custom' ? 'Custom mapping saved' : d.action === 'unmapped' ? 'Marked as no concept fits' : 'Rejected both answers';
+    right.append(el('div', { class: 'decision' + (d.action === 'reject' ? ' reject' : '') }, el('span', { text: label }),
+      d.action === 'custom' ? el('span', {}, facetChips(d.concept), ' ', el('span', { class: 'pill ' + d.match, text: d.match })) : null,
+      el('button', { text: 'Undo', disabled: !canWrite, onclick: () => undo(item) })));
+  }
+  for (const c of item.candidates) {
+    const chosen = d && d.action === 'accept' && d.candidateId === c.id;
+    right.append(el('div', { class: 'cand' + (chosen ? ' chosen' : '') },
+      el('div', { class: 'cand-head' },
+        el('span', { class: 'model', text: c.model }),
+        c.kind === 'mapping' ? el('span', { class: 'pill ' + c.match, text: c.match }) : el('span', { class: 'pill none', text: 'no concept fits' }),
+        c.confidence != null ? el('span', { class: 'conf', text: c.confidence.toFixed(2) }) : null),
+      c.kind === 'mapping' ? facetChips(c.concept) : null,
+      el('p', { class: 'why', text: c.rationale }),
+      !d ? el('div', { class: 'actions' }, el('button', { class: 'primary', text: 'Accept this', disabled: !canWrite, onclick: () => decide(item, { action: 'accept', candidateId: c.id }) })) : null));
+  }
+  if (!d) {
+    if (openCustom.has(item.key)) right.append(customBuilder(item));
+    right.append(el('div', { class: 'actions' },
+      el('button', { text: 'Write my own', disabled: !canWrite, onclick: () => { openCustom.add(item.key); render(); } }),
+      el('button', { text: 'No concept fits', disabled: !canWrite, onclick: () => decide(item, { action: 'unmapped' }) }),
+      el('button', { text: 'Reject both', disabled: !canWrite, onclick: () => decide(item, { action: 'reject' }) })));
+  }
+  return el('article', { class: 'card' + (d ? ' decided' : ''), id: 'card-' + item.key.replace(/[^a-z0-9]/gi, '-') }, left, right);
+}
+
+function render() {
+  const product = $('#f-product').value, status = $('#f-status').value, q = $('#f-search').value.trim().toLowerCase();
+  const list = $('#list');
+  const shown = DATA.items.filter((i) => (!product || i.product === product) && (status === 'all' || (status === 'open') !== decisions.has(i.key)) && (!q || i.token.toLowerCase().includes(q)));
+  list.replaceChildren(...(shown.length ? shown.map(card) : [el('p', { class: 'empty', text: status === 'open' ? 'Nothing left to decide here.' : 'No tokens match these filters.' })]));
+  const prog = $('#progress');
+  const products = [...new Set(DATA.items.map((i) => i.product))];
+  prog.replaceChildren(...products.map((p) => {
+    const all = DATA.items.filter((i) => i.product === p), done = all.filter((i) => decisions.has(i.key)).length;
+    const fill = el('i'); fill.style.width = (all.length ? (100 * done) / all.length : 0) + '%';
+    return el('div', { class: 'prog' }, el('div', { class: 'prog-label' }, el('b', { text: p }), el('span', { text: done + ' / ' + all.length })), el('div', { class: 'bar' }, fill));
+  }));
+}
+
+function showNotice(text) { const n = $('#notice'); n.textContent = text; n.hidden = !text; }
+
+for (const p of [...new Set(DATA.items.map((i) => i.product))]) $('#f-product').append(el('option', { value: p, text: p }));
+for (const s of ['#f-product', '#f-status']) $(s).addEventListener('change', render);
+$('#f-search').addEventListener('input', render);
+$('#generated').textContent = DATA.items.length + ' tokens from the color-v1 queue · ' + new Date(DATA.generatedAt).toLocaleString();
+render();
+
+(async () => {
+  const timer = setTimeout(() => showNotice('Saved decisions are taking long to load. Your choices still save once it connects.'), 10000);
+  try {
+    db = window.claude ? await window.claude.use('db') : null;
+    const user = window.claude ? await window.claude.use('user') : null;
+    canWrite = !!db && (user ? user.can('data.write') !== false : true);
+    if (!db) { clearTimeout(timer); showNotice('Decisions cannot be saved in this view. Open the page on claude.ai to review.'); render(); return; }
+    db.collection('decisions').onSnapshot((snap) => {
+      clearTimeout(timer);
+      showNotice(canWrite ? '' : 'You can read decisions here but not change them.');
+      decisions = new Map(snap.docs.map((d) => [d.id, d.data()]));
+      render();
+    }, (e) => { clearTimeout(timer); showNotice('Lost the connection to saved decisions (' + (e && e.code || 'error') + '). Reload the page to reconnect.'); });
+    render();
+  } catch (e) {
+    clearTimeout(timer);
+    showNotice('Decisions cannot be saved in this view.');
+  }
+})();
+</script>

@@ -123,6 +123,17 @@
       "scopeNote": "Explorer Danger views also list Destructive tokens, marked as related, not equal."
     },
     {
+      "id": "dsi:intent/caution", "type": "Concept", "inScheme": "dsi:scheme/intent", "prefLabel": "Caution",
+      "broader": "dsi:intent/warning",
+      "definition": "Status: a milder level of warning; worth noticing, unlikely to cause harm.",
+      "example": "Polaris caution tokens (below its warning), Carbon support-caution-minor"
+    },
+    {
+      "id": "dsi:intent/highlight", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Highlight",
+      "definition": "Marks a region the user is focusing on, editing or has selected as text, without status or brand meaning.",
+      "example": "Polaris emphasis tokens (editor focus areas), Carbon highlight (text selection)"
+    },
+    {
       "id": "dsi:intent/ai", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "AI",
       "definition": "Marks content or actions generated or assisted by AI.",
       "example": "Carbon ai-* tokens, Polaris magic tokens"
@@ -144,7 +155,7 @@
     { "id": "dsi:usage/navigation", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Navigation", "definition": "Application navigation chrome: side nav, top bar.", "example": "Polaris color-nav-bg" },
     { "id": "dsi:usage/skeleton", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Skeleton", "definition": "Loading placeholders.", "example": "Carbon skeleton-background" },
     { "id": "dsi:usage/code", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Code", "definition": "Code display and syntax highlighting.", "deprecated": true, "editorialNote": "Deprecated 2026-10-31 after color-v1 round 1: too coarse for syntax-highlighting roles, which stay unmapped until a syntax-role vocabulary exists." },
-    { "id": "dsi:usage/on-fill", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "On fill", "definition": "Content placed on a strong filled background of an intent or accent, where it must contrast with that fill.", "example": "Material on-error, Polaris color-text-critical-on-bg-fill, Carbon text-on-color" },
+    { "id": "dsi:usage/on-fill", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "On fill", "definition": "Content placed on a filled background of an intent or accent, where it must contrast with that fill. Combine with emphasis: subtle for content on a light container (Material on-error-container), unbound or strong for content on the solid fill (Material on-error).", "example": "Material on-error, Polaris color-text-critical-on-bg-fill, Carbon text-on-color" },
 
     { "id": "dsi:scheme/property", "type": "ConceptScheme", "prefLabel": "Property values" },
     { "id": "dsi:property/background", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Background", "definition": "Fill behind content: surfaces, containers, fills." },
@@ -161,6 +172,7 @@
     { "id": "dsi:state/focus", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Focus" },
     { "id": "dsi:state/disabled", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Disabled" },
     { "id": "dsi:state/selected", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Selected" },
+    { "id": "dsi:state/visited", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Visited", "definition": "A link the user has already followed." },
 
     { "id": "dsi:scheme/mode", "type": "ConceptScheme", "prefLabel": "Mode values" },
     { "id": "dsi:mode/light", "type": "Concept", "inScheme": "dsi:scheme/mode", "topConceptOf": "dsi:scheme/mode", "prefLabel": "Light" },

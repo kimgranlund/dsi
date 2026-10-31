@@ -48,13 +48,13 @@
       "token": "color-bg-fill",
       "concept": "dsi:concept/color/property-background",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.72,
       "status": "proposed",
-      "rationale": "The background color of contained elements with a smaller surface area, like a button. Nuance: fill for small contained elements like buttons, one case of background.",
+      "rationale": "Background of small contained elements like buttons; one specific case of a background (controls), no intent.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -63,13 +63,28 @@
       "token": "color-bg-fill-active",
       "concept": "dsi:concept/color/property-background/state-active",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.72,
       "status": "proposed",
-      "rationale": "The active state (on press) color of contained elements with a smaller surface area, like a button. Nuance: fill for small contained elements like buttons, one case of background.",
+      "rationale": "Background of small contained elements like buttons; one specific case of a background (controls), no intent. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-9a3fdace7965",
+      "token": "color-bg-fill-brand",
+      "concept": "dsi:concept/color/intent-accent/property-background",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Polaris bg-fill-brand: The background color of main actions, like primary buttons.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -78,13 +93,28 @@
       "token": "color-bg-fill-brand",
       "concept": "dsi:concept/color/intent-accent/property-background",
       "match": "exact",
-      "confidence": 0.8,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "The background color of main actions, like primary buttons.",
+      "rationale": "Background fill communicating accent (Polaris brand), as in the bg-fill-critical example.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-301128c1bc00",
+      "token": "color-bg-fill-brand-active",
+      "concept": "dsi:concept/color/intent-accent/property-background/state-active",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Polaris bg-fill-brand (active): The active state (on press) color of main actions, like primary buttons.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -93,13 +123,28 @@
       "token": "color-bg-fill-brand-active",
       "concept": "dsi:concept/color/intent-accent/property-background/state-active",
       "match": "exact",
-      "confidence": 0.8,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "The active state (on press) color of main actions, like primary buttons.",
+      "rationale": "Background fill communicating accent (Polaris brand), as in the bg-fill-critical example. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-00f9486b1d6f",
+      "token": "color-bg-fill-brand-disabled",
+      "concept": "dsi:concept/color/intent-accent/property-background/state-disabled",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Polaris bg-fill-brand (disabled): The disabled state color of main actions, like primary buttons.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -108,13 +153,28 @@
       "token": "color-bg-fill-brand-disabled",
       "concept": "dsi:concept/color/intent-accent/property-background/state-disabled",
       "match": "exact",
-      "confidence": 0.8,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "The disabled state color of main actions, like primary buttons.",
+      "rationale": "Background fill communicating accent (Polaris brand), as in the bg-fill-critical example. disabled state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-6779de360e17",
+      "token": "color-bg-fill-brand-hover",
+      "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Polaris bg-fill-brand (hover): The hover state color of main actions, like primary buttons.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -123,13 +183,13 @@
       "token": "color-bg-fill-brand-hover",
       "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
       "match": "exact",
-      "confidence": 0.8,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "The hover state color of main actions, like primary buttons.",
+      "rationale": "Background fill communicating accent (Polaris brand), as in the bg-fill-critical example. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -138,118 +198,118 @@
       "token": "color-bg-fill-brand-selected",
       "concept": "dsi:concept/color/intent-accent/property-background/state-selected",
       "match": "exact",
-      "confidence": 0.8,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "The selected state color of main actions, like primary buttons.",
+      "rationale": "Background fill communicating accent (Polaris brand), as in the bg-fill-critical example. selected state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-d50415e72203",
+      "id": "m-dbba0ba7a46a",
+      "token": "color-bg-fill-brand-selected",
+      "concept": "dsi:concept/color/intent-accent/property-background/state-selected",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Polaris bg-fill-brand (selected): The selected state color of main actions, like primary buttons.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-d2aca4721e4b",
       "token": "color-bg-fill-caution",
-      "concept": "dsi:concept/color/intent-warning/property-background",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Use for backgrounds communicating caution on elements with a smaller surface area, like a badge or a banner. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
+      "concept": "dsi:concept/color/intent-caution/property-background",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Background fill communicating caution (Polaris caution), as in the bg-fill-critical example.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-f8e7c41796a9",
-      "token": "color-bg-fill-caution",
-      "concept": "dsi:concept/color/intent-warning/property-background",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-a2f1e0f8b761",
+      "id": "m-ee58a32360b3",
       "token": "color-bg-fill-caution-active",
-      "concept": "dsi:concept/color/intent-warning/property-background/state-active",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "The active state (on press) color for communicating caution on elements with a smaller surface area. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
+      "concept": "dsi:concept/color/intent-caution/property-background/state-active",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Background fill communicating caution (Polaris caution), as in the bg-fill-critical example. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-bc753fad96ed",
-      "token": "color-bg-fill-caution-active",
-      "concept": "dsi:concept/color/intent-warning/property-background/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-7e238689fdf3",
+      "id": "m-774a92f2324f",
       "token": "color-bg-fill-caution-hover",
-      "concept": "dsi:concept/color/intent-warning/property-background/state-hover",
+      "concept": "dsi:concept/color/intent-caution/property-background/state-hover",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-ba48cca691da",
-      "token": "color-bg-fill-caution-hover",
-      "concept": "dsi:concept/color/intent-warning/property-background/state-hover",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "The hover state color for communicating caution on elements with a smaller surface area. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Background fill communicating caution (Polaris caution), as in the bg-fill-critical example. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-338e86c93734",
+      "id": "m-22006655fac7",
       "token": "color-bg-fill-caution-secondary",
-      "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
+      "concept": "dsi:concept/color/intent-caution/property-background/emphasis-subtle",
       "match": "close",
-      "confidence": 0.7,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Use for backgrounds communicating caution on elements with a smaller surface area, with a secondary level of prominence. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
+      "rationale": "Polaris bg-fill-caution-secondary: Use for backgrounds communicating caution on elements with a smaller surface area, with a secondary level of p",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-9d0e100aaefc",
+      "token": "color-bg-fill-caution-secondary",
+      "concept": "dsi:concept/color/intent-caution/property-background/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.86,
+      "status": "proposed",
+      "rationale": "Background fill communicating caution (Polaris caution) at secondary prominence, as in the bg-fill-critical example.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -318,13 +378,13 @@
       "token": "color-bg-fill-critical-secondary",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle.",
+      "rationale": "Polaris bg-fill-critical-secondary: Use for backgrounds communicating critical information on elements with a smaller surface area, with a seconda",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -333,13 +393,13 @@
       "token": "color-bg-fill-critical-secondary",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "Use for backgrounds communicating critical information on elements with a smaller surface area, with a secondary level of prominence.",
+      "rationale": "Background fill communicating danger (Polaris critical) at secondary prominence, as in the bg-fill-critical example.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -368,59 +428,74 @@
       "token": "color-bg-fill-disabled",
       "concept": "dsi:concept/color/property-background/state-disabled",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.72,
       "status": "proposed",
-      "rationale": "The disabled state color of contained elements with a smaller surface area, like a button. Nuance: fill for small contained elements like buttons, one case of background.",
+      "rationale": "Background of small contained elements like buttons; one specific case of a background (controls), no intent. disabled state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-101742a399d8",
+      "id": "m-cbc425af95de",
       "token": "color-bg-fill-emphasis",
-      "concept": "dsi:concept/color/intent-accent/property-background",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Use for backgrounds indicating areas of focus in editors on elements with a smaller surface area, like a button or a badge. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-background",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Background fill communicating highlight (Polaris emphasis), as in the bg-fill-critical example.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-a4a292a950d1",
+      "id": "m-1f2b21e80690",
       "token": "color-bg-fill-emphasis-active",
-      "concept": "dsi:concept/color/intent-accent/property-background/state-active",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "The active state (on press) color for indicating areas of focus in editors on elements with a smaller surface area. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-background/state-active",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Background fill communicating highlight (Polaris emphasis), as in the bg-fill-critical example. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-1e0bf63dc405",
+      "id": "m-e2304b2c2be1",
       "token": "color-bg-fill-emphasis-hover",
-      "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "The hover state color for indicating areas of focus in editors on elements with a smaller surface area. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-background/state-hover",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Background fill communicating highlight (Polaris emphasis), as in the bg-fill-critical example. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -428,13 +503,13 @@
       "token": "color-bg-fill-hover",
       "concept": "dsi:concept/color/property-background/state-hover",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.72,
       "status": "proposed",
-      "rationale": "The hover state color of contained elements with a smaller surface area, like a button. Nuance: fill for small contained elements like buttons, one case of background.",
+      "rationale": "Background of small contained elements like buttons; one specific case of a background (controls), no intent. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -503,13 +578,13 @@
       "token": "color-bg-fill-info-secondary",
       "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle.",
+      "rationale": "Polaris bg-fill-info-secondary: Use for backgrounds communicating important information on elements with a smaller surface area, with a second",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -518,13 +593,13 @@
       "token": "color-bg-fill-info-secondary",
       "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "Use for backgrounds communicating important information on elements with a smaller surface area, with a secondary level of prominence.",
+      "rationale": "Background fill communicating info (Polaris info) at secondary prominence, as in the bg-fill-critical example.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -533,13 +608,13 @@
       "token": "color-bg-fill-inverse",
       "concept": "dsi:concept/color/usage-inverse/property-background",
       "match": "broad",
-      "confidence": 0.6,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "The background color of elements with a smaller surface area on an inverse background. Nuance: element on an inverse background; the concept does not distinguish layers on inverse.",
+      "rationale": "Fill for small elements placed on an inverse background; one specific case of inverse background.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -550,11 +625,11 @@
       "match": "close",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Inverse background.",
+      "rationale": "Polaris bg-fill-inverse: The background color of elements with a smaller surface area on an inverse background.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -565,11 +640,11 @@
       "match": "close",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Inverse background. State: active.",
+      "rationale": "Polaris bg-fill-inverse (active): The active state (on press) color of elements with a smaller surface area on an inverse background.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -578,13 +653,13 @@
       "token": "color-bg-fill-inverse-active",
       "concept": "dsi:concept/color/usage-inverse/property-background/state-active",
       "match": "broad",
-      "confidence": 0.6,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "The active state (on press) color of elements with a smaller surface area on an inverse background. Nuance: element on an inverse background; the concept does not distinguish layers on inverse.",
+      "rationale": "Fill for small elements placed on an inverse background; one specific case of inverse background. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -593,13 +668,13 @@
       "token": "color-bg-fill-inverse-hover",
       "concept": "dsi:concept/color/usage-inverse/property-background/state-hover",
       "match": "broad",
-      "confidence": 0.6,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "The hover state color of elements with a smaller surface area on an inverse background. Nuance: element on an inverse background; the concept does not distinguish layers on inverse.",
+      "rationale": "Fill for small elements placed on an inverse background; one specific case of inverse background. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -610,11 +685,11 @@
       "match": "close",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Inverse background. State: hover.",
+      "rationale": "Polaris bg-fill-inverse (hover): The hover state color of elements with a smaller surface area on an inverse background.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -643,13 +718,13 @@
       "token": "color-bg-fill-magic-secondary",
       "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "The background color of elements suggested by magic AI, with a secondary level of prominence.",
+      "rationale": "Background fill communicating ai (Polaris magic) at secondary prominence, as in the bg-fill-critical example.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -658,13 +733,13 @@
       "token": "color-bg-fill-magic-secondary",
       "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle.",
+      "rationale": "Polaris bg-fill-magic-secondary: The background color of elements suggested by magic AI, with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -673,13 +748,13 @@
       "token": "color-bg-fill-magic-secondary-active",
       "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle/state-active",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle. State: active.",
+      "rationale": "Polaris bg-fill-magic-secondary (active): The active state (on press) color of elements suggested by magic AI, with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -688,13 +763,13 @@
       "token": "color-bg-fill-magic-secondary-active",
       "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle/state-active",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "The active state (on press) color of elements suggested by magic AI, with a secondary level of prominence.",
+      "rationale": "Background fill communicating ai (Polaris magic) at secondary prominence, as in the bg-fill-critical example. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -703,13 +778,13 @@
       "token": "color-bg-fill-magic-secondary-hover",
       "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle/state-hover",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "The hover state color of elements suggested by magic AI, with a secondary level of prominence.",
+      "rationale": "Background fill communicating ai (Polaris magic) at secondary prominence, as in the bg-fill-critical example. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -718,28 +793,13 @@
       "token": "color-bg-fill-magic-secondary-hover",
       "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle/state-hover",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle. State: hover.",
+      "rationale": "Polaris bg-fill-magic-secondary (hover): The hover state color of elements suggested by magic AI, with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-8aeea2222d16",
-      "token": "color-bg-fill-secondary",
-      "concept": "dsi:concept/color/property-background/emphasis-subtle",
-      "match": "close",
-      "confidence": 0.78,
-      "status": "proposed",
-      "rationale": "Direct name/description match.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -748,13 +808,13 @@
       "token": "color-bg-fill-secondary",
       "concept": "dsi:concept/color/property-background/emphasis-subtle",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "The background color of elements with a smaller surface area and a secondary level of prominence. Nuance: fill for small contained elements like buttons, one case of background.",
+      "rationale": "Secondary-prominence fill for small elements; a control-level case of a subtle background.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -763,43 +823,13 @@
       "token": "color-bg-fill-secondary-active",
       "concept": "dsi:concept/color/property-background/emphasis-subtle/state-active",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "The active state (on press) color of elements with a smaller surface area and a secondary level of prominence. Nuance: fill for small contained elements like buttons, one case of background.",
+      "rationale": "Secondary-prominence fill for small elements; a control-level case of a subtle background. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-727c5218c91f",
-      "token": "color-bg-fill-secondary-active",
-      "concept": "dsi:concept/color/property-background/emphasis-subtle/state-active",
-      "match": "close",
-      "confidence": 0.78,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-4f5430cf555d",
-      "token": "color-bg-fill-secondary-hover",
-      "concept": "dsi:concept/color/property-background/emphasis-subtle/state-hover",
-      "match": "close",
-      "confidence": 0.78,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -808,13 +838,13 @@
       "token": "color-bg-fill-secondary-hover",
       "concept": "dsi:concept/color/property-background/emphasis-subtle/state-hover",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "The hover state color of elements with a smaller surface area and a secondary level of prominence. Nuance: fill for small contained elements like buttons, one case of background.",
+      "rationale": "Secondary-prominence fill for small elements; a control-level case of a subtle background. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -823,28 +853,13 @@
       "token": "color-bg-fill-secondary-selected",
       "concept": "dsi:concept/color/property-background/emphasis-subtle/state-selected",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "The selected state (on press) color of elements with a smaller surface area and a secondary level of prominence. Nuance: fill for small contained elements like buttons, one case of background.",
+      "rationale": "Secondary-prominence fill for small elements; a control-level case of a subtle background. selected state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-a6e38738b8f0",
-      "token": "color-bg-fill-secondary-selected",
-      "concept": "dsi:concept/color/property-background/emphasis-subtle/state-selected",
-      "match": "close",
-      "confidence": 0.78,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: selected.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -853,13 +868,13 @@
       "token": "color-bg-fill-selected",
       "concept": "dsi:concept/color/property-background/state-selected",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.72,
       "status": "proposed",
-      "rationale": "The selected state color of contained elements with a smaller surface area, like a button or checkbox. Nuance: fill for small contained elements like buttons, one case of background.",
+      "rationale": "Background of small contained elements like buttons; one specific case of a background (controls), no intent. selected state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -928,13 +943,13 @@
       "token": "color-bg-fill-success-secondary",
       "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "Use for backgrounds communicating success on elements with a smaller surface area, with a secondary level of prominence.",
+      "rationale": "Background fill communicating success (Polaris success) at secondary prominence, as in the bg-fill-critical example.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -943,13 +958,28 @@
       "token": "color-bg-fill-success-secondary",
       "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle.",
+      "rationale": "Polaris bg-fill-success-secondary: Use for backgrounds communicating success on elements with a smaller surface area, with a secondary level of p",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-9f68fb9655ab",
+      "token": "color-bg-fill-tertiary",
+      "concept": "dsi:concept/color/property-background/emphasis-subtlest",
+      "match": "broad",
+      "confidence": 0.55,
+      "status": "proposed",
+      "rationale": "Polaris bg-fill-tertiary: The background color of elements with a smaller surface area and a third level of prominence.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -958,43 +988,28 @@
       "token": "color-bg-fill-tertiary",
       "concept": "dsi:concept/color/property-background/emphasis-subtle",
       "match": "broad",
-      "confidence": 0.55,
+      "confidence": 0.6,
       "status": "proposed",
-      "rationale": "The background color of elements with a smaller surface area and a third level of prominence. Nuance: third prominence level; three-step family so subtlest is not used, subtle does not distinguish secondary from tertiary.",
+      "rationale": "Third-prominence fill for small elements; family has only three steps so subtlest is not allowed; a narrower case of subtle background.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-f012cfe8ae42",
-      "token": "color-bg-fill-tertiary",
-      "concept": "dsi:concept/color/property-background/emphasis-strong",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "proposed",
-      "rationale": "Tertiary (third prominence) mapped to strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-5b6b89afa817",
+      "id": "m-cdf20206b1cf",
       "token": "color-bg-fill-tertiary-active",
-      "concept": "dsi:concept/color/property-background/emphasis-strong/state-active",
-      "match": "close",
-      "confidence": 0.65,
+      "concept": "dsi:concept/color/property-background/emphasis-subtlest/state-active",
+      "match": "broad",
+      "confidence": 0.55,
       "status": "proposed",
-      "rationale": "Tertiary (third prominence) mapped to strong. State: active.",
+      "rationale": "Polaris bg-fill-tertiary (active): The active state (on press) color of elements with a smaller surface area and a third level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1003,28 +1018,13 @@
       "token": "color-bg-fill-tertiary-active",
       "concept": "dsi:concept/color/property-background/emphasis-subtle/state-active",
       "match": "broad",
-      "confidence": 0.55,
+      "confidence": 0.6,
       "status": "proposed",
-      "rationale": "The active state (on press) color of elements with a smaller surface area and a third level of prominence. Nuance: third prominence level; three-step family so subtlest is not used, subtle does not distinguish secondary from tertiary.",
+      "rationale": "Third-prominence fill for small elements; family has only three steps so subtlest is not allowed; a narrower case of subtle background. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-360cefab67ca",
-      "token": "color-bg-fill-tertiary-hover",
-      "concept": "dsi:concept/color/property-background/emphasis-strong/state-hover",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "proposed",
-      "rationale": "Tertiary (third prominence) mapped to strong. State: hover.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -1033,13 +1033,28 @@
       "token": "color-bg-fill-tertiary-hover",
       "concept": "dsi:concept/color/property-background/emphasis-subtle/state-hover",
       "match": "broad",
-      "confidence": 0.55,
+      "confidence": 0.6,
       "status": "proposed",
-      "rationale": "The hover state color of elements with a smaller surface area and a third level of prominence. Nuance: third prominence level; three-step family so subtlest is not used, subtle does not distinguish secondary from tertiary.",
+      "rationale": "Third-prominence fill for small elements; family has only three steps so subtlest is not allowed; a narrower case of subtle background. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-dce49fad99fd",
+      "token": "color-bg-fill-tertiary-hover",
+      "concept": "dsi:concept/color/property-background/emphasis-subtlest/state-hover",
+      "match": "broad",
+      "confidence": 0.55,
+      "status": "proposed",
+      "rationale": "Polaris bg-fill-tertiary (hover): The hover state color of elements with a smaller surface area and a third level of prominence.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1108,13 +1123,13 @@
       "token": "color-bg-fill-warning-secondary",
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "Use for backgrounds communicating warning on elements with a smaller surface area, with a secondary level of prominence.",
+      "rationale": "Background fill communicating warning (Polaris warning) at secondary prominence, as in the bg-fill-critical example.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -1123,13 +1138,13 @@
       "token": "color-bg-fill-warning-secondary",
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle.",
+      "rationale": "Polaris bg-fill-warning-secondary: Use for backgrounds communicating warning on elements with a smaller surface area, with a secondary level of p",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1139,28 +1154,18 @@
       "concept": "dsi:concept/color/usage-inverse/property-background",
       "match": "exact",
       "confidence": 0.85,
-      "status": "proposed",
-      "rationale": "Use for high contrast page or component backgrounds.",
+      "status": "approved",
+      "rationale": "High-contrast inverse page/component background, the ontology example for usage inverse.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-eb1408f56156",
-      "token": "color-bg-inverse",
-      "concept": "dsi:concept/color/usage-inverse/property-background",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Inverse background.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -1204,302 +1209,302 @@
       }
     },
     {
-      "id": "m-7778b53f33d9",
-      "token": "color-bg-surface-brand",
-      "concept": "dsi:concept/color/intent-accent/usage-surface/property-background",
-      "match": "exact",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Use to apply the key color to elements. Nuance: intent background on surfaces like banners.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-e99c4ab4fac3",
+      "id": "m-039c5f7c2b41",
       "token": "color-bg-surface-brand",
       "concept": "dsi:concept/color/intent-accent/property-background",
-      "match": "exact",
-      "confidence": 0.88,
+      "match": "close",
+      "confidence": 0.65,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris bg-surface-brand: Use to apply the key color to elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-079ee768ce94",
+      "id": "m-85c0c878b172",
+      "token": "color-bg-surface-brand",
+      "concept": "dsi:concept/color/intent-accent/usage-surface/property-background",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Surface background applying the key (brand) color; Polaris brand is near-neutral gray, nuance noted.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-2afd67005020",
       "token": "color-bg-surface-brand-active",
       "concept": "dsi:concept/color/intent-accent/usage-surface/property-background/state-active",
-      "match": "exact",
-      "confidence": 0.75,
+      "match": "close",
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "The active state (on press) color for key elements. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface background applying the key (brand) color; Polaris brand is near-neutral gray, nuance noted. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-5fd3c0b732ee",
+      "id": "m-a99f89cfe7c1",
       "token": "color-bg-surface-brand-active",
       "concept": "dsi:concept/color/intent-accent/property-background/state-active",
-      "match": "exact",
-      "confidence": 0.88,
+      "match": "close",
+      "confidence": 0.65,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
+      "rationale": "Polaris bg-surface-brand (active): The active state (on press) color for key elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-c1c730128d9d",
+      "id": "m-2885ff6bedea",
       "token": "color-bg-surface-brand-hover",
       "concept": "dsi:concept/color/intent-accent/usage-surface/property-background/state-hover",
-      "match": "exact",
-      "confidence": 0.75,
+      "match": "close",
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "The hover state color for key elements. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface background applying the key (brand) color; Polaris brand is near-neutral gray, nuance noted. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-f488ac3c9a05",
+      "id": "m-861c0fa8bc24",
       "token": "color-bg-surface-brand-hover",
       "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
+      "match": "close",
+      "confidence": 0.65,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
+      "rationale": "Polaris bg-surface-brand (hover): The hover state color for key elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-3e0bb2b7dda5",
+      "id": "m-537c6ef98f05",
       "token": "color-bg-surface-brand-selected",
       "concept": "dsi:concept/color/intent-accent/usage-surface/property-background/state-selected",
-      "match": "exact",
-      "confidence": 0.75,
+      "match": "close",
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "The selected state color for key elements. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface background applying the key (brand) color; Polaris brand is near-neutral gray, nuance noted. selected state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-f6547cd9199f",
+      "id": "m-f71f20c68252",
       "token": "color-bg-surface-brand-selected",
       "concept": "dsi:concept/color/intent-accent/property-background/state-selected",
-      "match": "exact",
-      "confidence": 0.88,
+      "match": "close",
+      "confidence": 0.65,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: selected.",
+      "rationale": "Polaris bg-surface-brand (selected): The selected state color for key elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-7b7292408260",
+      "id": "m-06b5edec605c",
       "token": "color-bg-surface-caution",
-      "concept": "dsi:concept/color/intent-warning/property-background",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-caution/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris bg-surface-caution: Use for backgrounds communicating caution, like banners.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-e083dbab6b48",
+      "id": "m-66d067ded68f",
       "token": "color-bg-surface-caution",
-      "concept": "dsi:concept/color/intent-warning/usage-surface/property-background",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Use for backgrounds communicating caution, like banners. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-4d8f54e7a841",
-      "token": "color-bg-surface-caution-active",
-      "concept": "dsi:concept/color/intent-warning/usage-surface/property-background/state-active",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "The active state (on press) color for communicating caution. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-83097a079808",
-      "token": "color-bg-surface-caution-active",
-      "concept": "dsi:concept/color/intent-warning/property-background/state-active",
+      "concept": "dsi:concept/color/intent-caution/usage-surface/property-background",
       "match": "exact",
-      "confidence": 0.88,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
+      "rationale": "Surface-level background (banners, panels) communicating caution (Polaris caution).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-439dee802b5d",
+      "token": "color-bg-surface-caution-active",
+      "concept": "dsi:concept/color/intent-caution/usage-surface/property-background/state-active",
+      "match": "exact",
+      "confidence": 0.82,
+      "status": "proposed",
+      "rationale": "Surface-level background (banners, panels) communicating caution (Polaris caution). active state.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-456b4892e892",
+      "token": "color-bg-surface-caution-active",
+      "concept": "dsi:concept/color/intent-caution/property-background/emphasis-subtle/state-active",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Polaris bg-surface-caution (active): The active state (on press) color for communicating caution.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-6fd7c6f29aff",
+      "id": "m-83b48680820a",
       "token": "color-bg-surface-caution-hover",
-      "concept": "dsi:concept/color/intent-warning/usage-surface/property-background/state-hover",
+      "concept": "dsi:concept/color/intent-caution/property-background/emphasis-subtle/state-hover",
       "match": "close",
-      "confidence": 0.7,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "The hover state for communicating caution. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-cde3cbd2c75e",
-      "token": "color-bg-surface-caution-hover",
-      "concept": "dsi:concept/color/intent-warning/property-background/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
+      "rationale": "Polaris bg-surface-caution (hover): The hover state for communicating caution.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-14646d6ea280",
+      "id": "m-cd30c058bbd1",
+      "token": "color-bg-surface-caution-hover",
+      "concept": "dsi:concept/color/intent-caution/usage-surface/property-background/state-hover",
+      "match": "exact",
+      "confidence": 0.82,
+      "status": "proposed",
+      "rationale": "Surface-level background (banners, panels) communicating caution (Polaris caution). hover state.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-e952df5c47c4",
       "token": "color-bg-surface-critical",
-      "concept": "dsi:concept/color/intent-danger/property-background",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris bg-surface-critical: Use for backgrounds communicating critical information, like banners or input errors.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-51d0be24092a",
+      "id": "m-f182f5bbfbd4",
       "token": "color-bg-surface-critical",
       "concept": "dsi:concept/color/intent-danger/usage-surface/property-background",
-      "match": "exact",
-      "confidence": 0.75,
+      "match": "close",
+      "confidence": 0.78,
       "status": "proposed",
-      "rationale": "Use for backgrounds communicating critical information, like banners or input errors. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface background communicating danger (banners), but also used for input errors, not only surfaces.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-6a2fc5264094",
+      "id": "m-7737661643f3",
       "token": "color-bg-surface-critical-active",
       "concept": "dsi:concept/color/intent-danger/usage-surface/property-background/state-active",
-      "match": "exact",
-      "confidence": 0.75,
+      "match": "close",
+      "confidence": 0.78,
       "status": "proposed",
-      "rationale": "The active state (on press) color for communicating critical information. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface background communicating danger (banners), but also used for input errors, not only surfaces. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-71ffe1f8f663",
+      "id": "m-fc591c3e7355",
       "token": "color-bg-surface-critical-active",
-      "concept": "dsi:concept/color/intent-danger/property-background/state-active",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-active",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
+      "rationale": "Polaris bg-surface-critical (active): The active state (on press) color for communicating critical information.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-246c03a2b7d7",
+      "id": "m-07799003db34",
+      "token": "color-bg-surface-critical-hover",
+      "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Polaris bg-surface-critical (hover): The hover state color for communicating critical information.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-cc0e60d0f717",
       "token": "color-bg-surface-critical-hover",
       "concept": "dsi:concept/color/intent-danger/usage-surface/property-background/state-hover",
-      "match": "exact",
-      "confidence": 0.75,
+      "match": "close",
+      "confidence": 0.78,
       "status": "proposed",
-      "rationale": "The hover state color for communicating critical information. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface background communicating danger (banners), but also used for input errors, not only surfaces. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-bf80c74d5142",
-      "token": "color-bg-surface-critical-hover",
-      "concept": "dsi:concept/color/intent-danger/property-background/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -1524,47 +1529,92 @@
       }
     },
     {
-      "id": "m-b1d3a2b81e80",
+      "id": "m-7e02ced77252",
       "token": "color-bg-surface-emphasis",
-      "concept": "dsi:concept/color/intent-accent/usage-surface/property-background",
-      "match": "broad",
-      "confidence": 0.55,
+      "concept": "dsi:concept/color/intent-highlight/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Use for backgrounds indicating areas of focus in editors, such as the theme editor. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "rationale": "Polaris bg-surface-emphasis: Use for backgrounds indicating areas of focus in editors, such as the theme editor.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-69bc62df1fdd",
+      "id": "m-7edf56adc30c",
+      "token": "color-bg-surface-emphasis",
+      "concept": "dsi:concept/color/intent-highlight/usage-surface/property-background",
+      "match": "exact",
+      "confidence": 0.82,
+      "status": "proposed",
+      "rationale": "Surface-level background (banners, panels) communicating highlight (Polaris emphasis).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-3d940473a64e",
       "token": "color-bg-surface-emphasis-active",
-      "concept": "dsi:concept/color/intent-accent/usage-surface/property-background/state-active",
-      "match": "broad",
-      "confidence": 0.55,
+      "concept": "dsi:concept/color/intent-highlight/usage-surface/property-background/state-active",
+      "match": "exact",
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "The active state (on press) color for elements indicating areas of focus in editors. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "rationale": "Surface-level background (banners, panels) communicating highlight (Polaris emphasis). active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-b148b43195f2",
-      "token": "color-bg-surface-emphasis-hover",
-      "concept": "dsi:concept/color/intent-accent/usage-surface/property-background/state-hover",
-      "match": "broad",
-      "confidence": 0.55,
+      "id": "m-f0673156b713",
+      "token": "color-bg-surface-emphasis-active",
+      "concept": "dsi:concept/color/intent-highlight/property-background/emphasis-subtle/state-active",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "The hover state color for elements indicating areas of focus in editors. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "rationale": "Polaris bg-surface-emphasis (active): The active state (on press) color for elements indicating areas of focus in editors.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-2088c82e1e4f",
+      "token": "color-bg-surface-emphasis-hover",
+      "concept": "dsi:concept/color/intent-highlight/usage-surface/property-background/state-hover",
+      "match": "exact",
+      "confidence": 0.82,
+      "status": "proposed",
+      "rationale": "Surface-level background (banners, panels) communicating highlight (Polaris emphasis). hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-4ae9f3ad1b20",
+      "token": "color-bg-surface-emphasis-hover",
+      "concept": "dsi:concept/color/intent-highlight/property-background/emphasis-subtle/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Polaris bg-surface-emphasis (hover): The hover state color for elements indicating areas of focus in editors.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1589,17 +1639,17 @@
       }
     },
     {
-      "id": "m-16d025c90f12",
+      "id": "m-412d621c4ae4",
       "token": "color-bg-surface-info",
-      "concept": "dsi:concept/color/intent-info/property-background",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris bg-surface-info: Use for backgrounds communicating important information, like banners.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1608,13 +1658,13 @@
       "token": "color-bg-surface-info",
       "concept": "dsi:concept/color/intent-info/usage-surface/property-background",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "Use for backgrounds communicating important information, like banners. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating info (Polaris info).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -1623,43 +1673,43 @@
       "token": "color-bg-surface-info-active",
       "concept": "dsi:concept/color/intent-info/usage-surface/property-background/state-active",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "The active state (on press) color for communicating important information. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating info (Polaris info). active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-668f5c61d095",
+      "id": "m-94409ec7e39b",
       "token": "color-bg-surface-info-active",
-      "concept": "dsi:concept/color/intent-info/property-background/state-active",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle/state-active",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
+      "rationale": "Polaris bg-surface-info (active): The active state (on press) color for communicating important information.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-be01904bb828",
+      "id": "m-7904cd2066e8",
       "token": "color-bg-surface-info-hover",
-      "concept": "dsi:concept/color/intent-info/property-background/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle/state-hover",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
+      "rationale": "Polaris bg-surface-info (hover): The hover state color for communicating important information.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1668,28 +1718,13 @@
       "token": "color-bg-surface-info-hover",
       "concept": "dsi:concept/color/intent-info/usage-surface/property-background/state-hover",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "The hover state color for communicating important information. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating info (Polaris info). hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-152e10885eb8",
-      "token": "color-bg-surface-inverse",
-      "concept": "dsi:concept/color/usage-inverse/property-background",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Use for elements on bg-inverse. Nuance: element on an inverse background; the concept does not distinguish layers on inverse.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -1698,13 +1733,28 @@
       "token": "color-bg-surface-inverse",
       "concept": "dsi:concept/color/usage-inverse/property-background",
       "match": "close",
-      "confidence": 0.8,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Inverse background.",
+      "rationale": "Polaris bg-surface-inverse: Use for elements on bg-inverse.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-b1a7427cf4e8",
+      "token": "color-bg-surface-inverse",
+      "concept": "dsi:concept/color/usage-inverse+surface/property-background",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Surface for elements placed on bg-inverse: a surface on an inverse background.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -1713,43 +1763,43 @@
       "token": "color-bg-surface-magic",
       "concept": "dsi:concept/color/intent-ai/usage-surface/property-background",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "Use for backgrounds of elements suggested by magic AI. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating ai (Polaris magic).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-7c979cd9bc8e",
+      "id": "m-97cbf91e8980",
       "token": "color-bg-surface-magic",
-      "concept": "dsi:concept/color/intent-ai/property-background",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris bg-surface-magic: Use for backgrounds of elements suggested by magic AI.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-2a04e5049a1d",
+      "id": "m-a05e90d8e524",
       "token": "color-bg-surface-magic-active",
-      "concept": "dsi:concept/color/intent-ai/property-background/state-active",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle/state-active",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
+      "rationale": "Polaris bg-surface-magic (active): The active state (on press) color for elements suggested by magic AI.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1758,28 +1808,13 @@
       "token": "color-bg-surface-magic-active",
       "concept": "dsi:concept/color/intent-ai/usage-surface/property-background/state-active",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "The active state (on press) color for elements suggested by magic AI. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating ai (Polaris magic). active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-02d7e359d423",
-      "token": "color-bg-surface-magic-hover",
-      "concept": "dsi:concept/color/intent-ai/property-background/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -1788,13 +1823,28 @@
       "token": "color-bg-surface-magic-hover",
       "concept": "dsi:concept/color/intent-ai/usage-surface/property-background/state-hover",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "The hover state color for elements suggested by magic AI. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating ai (Polaris magic). hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-b75b21ad888c",
+      "token": "color-bg-surface-magic-hover",
+      "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Polaris bg-surface-magic (hover): The hover state color for elements suggested by magic AI.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1803,13 +1853,13 @@
       "token": "color-bg-surface-secondary",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "The background color for elements with a secondary level of prominence.",
+      "rationale": "Surface background at secondary prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -1818,13 +1868,13 @@
       "token": "color-bg-surface-secondary",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle",
       "match": "close",
-      "confidence": 0.78,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris bg-surface-secondary: The background color for elements with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1833,13 +1883,13 @@
       "token": "color-bg-surface-secondary-active",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "The active state (on press) color for elements with a secondary level of prominence.",
+      "rationale": "Surface background at secondary prominence. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -1848,13 +1898,13 @@
       "token": "color-bg-surface-secondary-active",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active",
       "match": "close",
-      "confidence": 0.78,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
+      "rationale": "Polaris bg-surface-secondary (active): The active state (on press) color for elements with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1863,13 +1913,13 @@
       "token": "color-bg-surface-secondary-hover",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover",
       "match": "close",
-      "confidence": 0.78,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
+      "rationale": "Polaris bg-surface-secondary (hover): The hover state color for elements with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1878,13 +1928,13 @@
       "token": "color-bg-surface-secondary-hover",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "The hover state color for elements with a secondary level of prominence.",
+      "rationale": "Surface background at secondary prominence. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -1893,13 +1943,13 @@
       "token": "color-bg-surface-secondary-selected",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-selected",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "The selected state color for elements with a secondary level of prominence.",
+      "rationale": "Surface background at secondary prominence. selected state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -1908,13 +1958,13 @@
       "token": "color-bg-surface-secondary-selected",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-selected",
       "match": "close",
-      "confidence": 0.78,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: selected.",
+      "rationale": "Polaris bg-surface-secondary (selected): The selected state color for elements with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1943,43 +1993,28 @@
       "token": "color-bg-surface-success",
       "concept": "dsi:concept/color/intent-success/usage-surface/property-background",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "Use for backgrounds communicating success, like banners. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating success (Polaris success).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-ba335d87eaea",
+      "id": "m-a7405d46fe2a",
       "token": "color-bg-surface-success",
-      "concept": "dsi:concept/color/intent-success/property-background",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris bg-surface-success: Use for backgrounds communicating success, like banners.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-31d73356f394",
-      "token": "color-bg-surface-success-active",
-      "concept": "dsi:concept/color/intent-success/property-background/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -1988,13 +2023,28 @@
       "token": "color-bg-surface-success-active",
       "concept": "dsi:concept/color/intent-success/usage-surface/property-background/state-active",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "The active state (on press) color for communicating success. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating success (Polaris success). active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-c268008bdbb8",
+      "token": "color-bg-surface-success-active",
+      "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle/state-active",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Polaris bg-surface-success (active): The active state (on press) color for communicating success.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -2003,28 +2053,43 @@
       "token": "color-bg-surface-success-hover",
       "concept": "dsi:concept/color/intent-success/usage-surface/property-background/state-hover",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "The hover state color for communicating success. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating success (Polaris success). hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-7d98513c6d2b",
+      "id": "m-c9987c9bd5a7",
       "token": "color-bg-surface-success-hover",
-      "concept": "dsi:concept/color/intent-success/property-background/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle/state-hover",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
+      "rationale": "Polaris bg-surface-success (hover): The hover state color for communicating success.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-17a3aea46e40",
+      "token": "color-bg-surface-tertiary",
+      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest",
+      "match": "close",
+      "confidence": 0.55,
+      "status": "proposed",
+      "rationale": "Polaris bg-surface-tertiary: The background color for elements with a third level of prominence.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -2033,43 +2098,28 @@
       "token": "color-bg-surface-tertiary",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle",
       "match": "broad",
-      "confidence": 0.55,
+      "confidence": 0.6,
       "status": "proposed",
-      "rationale": "The background color for elements with a third level of prominence. Nuance: third prominence level; three-step family so subtlest is not used, subtle does not distinguish secondary from tertiary.",
+      "rationale": "Surface background at third prominence; three-step family so subtlest not allowed; a narrower case of subtle surface.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-e0b0e72b2be1",
-      "token": "color-bg-surface-tertiary",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "proposed",
-      "rationale": "Tertiary (third prominence) mapped to strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-4d645b2dc133",
+      "id": "m-53f8b07773a5",
       "token": "color-bg-surface-tertiary-active",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-active",
+      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest/state-active",
       "match": "close",
-      "confidence": 0.65,
+      "confidence": 0.55,
       "status": "proposed",
-      "rationale": "Tertiary (third prominence) mapped to strong. State: active.",
+      "rationale": "Polaris bg-surface-tertiary (active): The active state (on press) color for elements with a third level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -2078,13 +2128,28 @@
       "token": "color-bg-surface-tertiary-active",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active",
       "match": "broad",
-      "confidence": 0.55,
+      "confidence": 0.6,
       "status": "proposed",
-      "rationale": "The active state (on press) color for elements with a third level of prominence. Nuance: third prominence level; three-step family so subtlest is not used, subtle does not distinguish secondary from tertiary.",
+      "rationale": "Surface background at third prominence; three-step family so subtlest not allowed; a narrower case of subtle surface. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-4804d22753d9",
+      "token": "color-bg-surface-tertiary-hover",
+      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest/state-hover",
+      "match": "close",
+      "confidence": 0.55,
+      "status": "proposed",
+      "rationale": "Polaris bg-surface-tertiary (hover): The hover state color for elements with a third level of prominence.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -2093,43 +2158,28 @@
       "token": "color-bg-surface-tertiary-hover",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover",
       "match": "broad",
-      "confidence": 0.55,
+      "confidence": 0.6,
       "status": "proposed",
-      "rationale": "The hover state color for elements with a third level of prominence. Nuance: third prominence level; three-step family so subtlest is not used, subtle does not distinguish secondary from tertiary.",
+      "rationale": "Surface background at third prominence; three-step family so subtlest not allowed; a narrower case of subtle surface. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-a43aa61edbd0",
-      "token": "color-bg-surface-tertiary-hover",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "proposed",
-      "rationale": "Tertiary (third prominence) mapped to strong. State: hover.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-87dc6dcb96cf",
+      "id": "m-471fdbb6fb65",
       "token": "color-bg-surface-warning",
-      "concept": "dsi:concept/color/intent-warning/property-background",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris bg-surface-warning: Use for backgrounds communicating warning, like banners.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -2138,13 +2188,28 @@
       "token": "color-bg-surface-warning",
       "concept": "dsi:concept/color/intent-warning/usage-surface/property-background",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "Use for backgrounds communicating warning, like banners. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating warning (Polaris warning).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-2eeb20573a35",
+      "token": "color-bg-surface-warning-active",
+      "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle/state-active",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Polaris bg-surface-warning (active): The active state (on press) color for communicating warning.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -2153,43 +2218,28 @@
       "token": "color-bg-surface-warning-active",
       "concept": "dsi:concept/color/intent-warning/usage-surface/property-background/state-active",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "The active state (on press) color for communicating warning. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating warning (Polaris warning). active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-96932c28c510",
-      "token": "color-bg-surface-warning-active",
-      "concept": "dsi:concept/color/intent-warning/property-background/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-8956201c05c8",
+      "id": "m-bb13f1928335",
       "token": "color-bg-surface-warning-hover",
-      "concept": "dsi:concept/color/intent-warning/property-background/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
+      "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle/state-hover",
+      "match": "close",
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
+      "rationale": "Polaris bg-surface-warning (hover): The hover state color for communicating warning.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -2198,13 +2248,13 @@
       "token": "color-bg-surface-warning-hover",
       "concept": "dsi:concept/color/intent-warning/usage-surface/property-background/state-hover",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.82,
       "status": "proposed",
-      "rationale": "The hover state color for communicating warning. Nuance: intent background on surfaces like banners.",
+      "rationale": "Surface-level background (banners, panels) communicating warning (Polaris warning). hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -2229,48 +2279,53 @@
       }
     },
     {
+      "id": "m-541cbb91cfdd",
+      "token": "color-border-brand",
+      "concept": "dsi:concept/color/intent-accent/property-border",
+      "match": "close",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Border paired with brand colors; accent border, nuance: used alongside brand fills rather than carrying brand color itself.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
       "id": "m-e68d38655230",
       "token": "color-border-brand",
       "concept": "dsi:concept/color/intent-accent/property-border",
       "match": "exact",
-      "confidence": 0.8,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Use for borders paired with brand colors.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-92fb2a222b46",
-      "token": "color-border-caution",
-      "concept": "dsi:concept/color/intent-warning/property-border",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris border-brand: Use for borders paired with brand colors.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-b098a3127465",
+      "id": "m-7d4368eb77c8",
       "token": "color-border-caution",
-      "concept": "dsi:concept/color/intent-warning/property-border",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Use for borders communicating caution. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
+      "concept": "dsi:concept/color/intent-caution/property-border",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Border communicating caution.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -2298,13 +2353,13 @@
       "token": "color-border-critical-secondary",
       "concept": "dsi:concept/color/intent-danger/property-border/emphasis-subtle",
       "match": "close",
-      "confidence": 0.6,
+      "confidence": 0.72,
       "status": "proposed",
-      "rationale": "Use for borders communicating critical information, such as borders on invalid text fields. Nuance: named secondary but resolves to a dark red; used on invalid text fields.",
+      "rationale": "Border communicating danger at secondary prominence; used on invalid fields and resolves to a dark red, nuance noted.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -2329,48 +2384,63 @@
       }
     },
     {
-      "id": "m-a25ac5810b8d",
+      "id": "m-8ee403f3b5ef",
       "token": "color-border-emphasis",
-      "concept": "dsi:concept/color/intent-accent/property-border",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Use for borders indicating areas of focus. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-border",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Border communicating highlight.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-d9eb42468eee",
+      "id": "m-4c3390754b3d",
       "token": "color-border-emphasis-active",
-      "concept": "dsi:concept/color/intent-accent/property-border/state-active",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "The active state (on press) color for borders indicating areas of focus. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-border/state-active",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Border communicating highlight. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-3efb8a49ca91",
+      "id": "m-42a79a240ac6",
       "token": "color-border-emphasis-hover",
-      "concept": "dsi:concept/color/intent-accent/property-border/state-hover",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "The hover state color for borders indicating areas of focus. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-border/state-hover",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Border communicating highlight. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -2520,11 +2590,11 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Use for borders suggested by magic AI, such as borders on text fields.",
+      "rationale": "Border communicating ai at secondary prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -2533,13 +2603,13 @@
       "token": "color-border-magic-secondary",
       "concept": "dsi:concept/color/intent-ai/property-border/emphasis-subtle",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle.",
+      "rationale": "Polaris border-magic-secondary: Use for borders suggested by magic AI, such as borders on text fields.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -2548,13 +2618,13 @@
       "token": "color-border-magic-secondary-hover",
       "concept": "dsi:concept/color/intent-ai/property-border/emphasis-subtle/state-hover",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle. State: hover.",
+      "rationale": "Polaris border-magic-secondary (hover): Use for borders suggested by magic AI, such as borders on text fields.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -2565,11 +2635,11 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Use for borders suggested by magic AI, such as borders on text fields.",
+      "rationale": "Border communicating ai at secondary prominence. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -2578,13 +2648,28 @@
       "token": "color-border-secondary",
       "concept": "dsi:concept/color/property-border/emphasis-subtle",
       "match": "close",
-      "confidence": 0.7,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "The color for hr elements or any visual dividers. Nuance: dividers and hr elements.",
+      "rationale": "Secondary border for hr and dividers; subtle border with a divider-specific nuance.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-9e99abc34704",
+      "token": "color-border-secondary",
+      "concept": "dsi:concept/color/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Polaris border-secondary: The color for hr elements or any visual dividers.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -2609,17 +2694,17 @@
       }
     },
     {
-      "id": "m-acfe46285ec4",
+      "id": "m-af9abc504f4f",
       "token": "color-border-tertiary",
-      "concept": "dsi:concept/color/property-border/emphasis-strong",
+      "concept": "dsi:concept/color/property-border/emphasis-subtlest",
       "match": "close",
       "confidence": 0.55,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris border-tertiary: The border color on any element. Pair with bg-surface-tertiary or bg-fill-tertiary.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -2628,13 +2713,13 @@
       "token": "color-border-tertiary",
       "concept": "dsi:concept/color/property-border",
       "match": "broad",
-      "confidence": 0.55,
+      "confidence": 0.6,
       "status": "proposed",
-      "rationale": "The border color on any element. Pair with bg-surface-tertiary or bg-fill-tertiary. Nuance: third prominence level; three-step family so subtlest is not used, subtle does not distinguish secondary from tertiary; border paired with tertiary surfaces, one of several border levels.",
+      "rationale": "Border for elements on tertiary backgrounds; one specific case of a border.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -2699,48 +2784,53 @@
       }
     },
     {
+      "id": "m-0cd74110086b",
+      "token": "color-icon-brand",
+      "concept": "dsi:concept/color/intent-accent/property-icon",
+      "match": "close",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Icons that need to pull more focus (brand); Polaris brand is near-black, nuance noted.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
       "id": "m-99a2c86c8862",
       "token": "color-icon-brand",
       "concept": "dsi:concept/color/intent-accent/property-icon",
       "match": "exact",
-      "confidence": 0.8,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Use for icons that need to pull more focus.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-3bd4ef98a59a",
-      "token": "color-icon-caution",
-      "concept": "dsi:concept/color/intent-warning/property-icon",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Use for icons communicating caution. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-6e6f6502b77a",
-      "token": "color-icon-caution",
-      "concept": "dsi:concept/color/intent-warning/property-icon",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris icon-brand: Use for icons that need to pull more focus.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-dc0d06c0c021",
+      "token": "color-icon-caution",
+      "concept": "dsi:concept/color/intent-caution/property-icon",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Icon color communicating caution (Polaris caution).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -2784,48 +2874,63 @@
       }
     },
     {
-      "id": "m-a58e3ab70602",
+      "id": "m-b68c6c1e7a5c",
       "token": "color-icon-emphasis",
-      "concept": "dsi:concept/color/intent-accent/property-icon",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Use for icons indicating areas of focus in editors, like the theme editor. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-icon",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Icon color communicating highlight (Polaris emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-c118f1f1d188",
+      "id": "m-afb6b44b46b7",
       "token": "color-icon-emphasis-active",
-      "concept": "dsi:concept/color/intent-accent/property-icon/state-active",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "The active state (on press) color for icons indicating areas of focus in editors. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-icon/state-active",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Icon color communicating highlight (Polaris emphasis). active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-5ef9d882f0d0",
+      "id": "m-0f23ca4a4f61",
       "token": "color-icon-emphasis-hover",
-      "concept": "dsi:concept/color/intent-accent/property-icon/state-hover",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "The hover color for icons indicating areas of focus in editors. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-icon/state-hover",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Icon color communicating highlight (Polaris emphasis). hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -2909,47 +3014,17 @@
       }
     },
     {
-      "id": "m-13cbcf780ed5",
-      "token": "color-icon-secondary",
-      "concept": "dsi:concept/color/property-icon/emphasis-subtle",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Direct name/description match.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
       "id": "m-5aac9ac31fb9",
       "token": "color-icon-secondary",
       "concept": "dsi:concept/color/property-icon/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "status": "proposed",
-      "rationale": "Use for secondary icons.",
+      "rationale": "Secondary icon color.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-ee395260e2f6",
-      "token": "color-icon-secondary-active",
-      "concept": "dsi:concept/color/property-icon/emphasis-subtle/state-active",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -2958,28 +3033,13 @@
       "token": "color-icon-secondary-active",
       "concept": "dsi:concept/color/property-icon/emphasis-subtle/state-active",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "status": "proposed",
-      "rationale": "The active state (on press) color for secondary icons.",
+      "rationale": "Secondary icon color. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-7a7b21dcde9e",
-      "token": "color-icon-secondary-hover",
-      "concept": "dsi:concept/color/property-icon/emphasis-subtle/state-hover",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -2988,13 +3048,13 @@
       "token": "color-icon-secondary-hover",
       "concept": "dsi:concept/color/property-icon/emphasis-subtle/state-hover",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "status": "proposed",
-      "rationale": "The hover state color for secondary icons.",
+      "rationale": "Secondary icon color. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3043,13 +3103,13 @@
       "token": "color-input-bg-surface",
       "concept": "dsi:concept/color/usage-field/property-background",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "status": "proposed",
-      "rationale": "No description; inferred from name.",
+      "rationale": "Form input background, the ontology example for usage field.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3058,13 +3118,13 @@
       "token": "color-input-bg-surface",
       "concept": "dsi:concept/color/usage-field/property-background",
       "match": "close",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris input-bg-surface: no description; inferred from name",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3073,13 +3133,13 @@
       "token": "color-input-bg-surface-active",
       "concept": "dsi:concept/color/usage-field/property-background/state-active",
       "match": "close",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
+      "rationale": "Polaris input-bg-surface (active): no description; inferred from name",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3088,13 +3148,13 @@
       "token": "color-input-bg-surface-active",
       "concept": "dsi:concept/color/usage-field/property-background/state-active",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "status": "proposed",
-      "rationale": "No description; inferred from name.",
+      "rationale": "Form input background, the ontology example for usage field. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3103,13 +3163,13 @@
       "token": "color-input-bg-surface-hover",
       "concept": "dsi:concept/color/usage-field/property-background/state-hover",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "status": "proposed",
-      "rationale": "No description; inferred from name.",
+      "rationale": "Form input background, the ontology example for usage field. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3118,13 +3178,13 @@
       "token": "color-input-bg-surface-hover",
       "concept": "dsi:concept/color/usage-field/property-background/state-hover",
       "match": "close",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
+      "rationale": "Polaris input-bg-surface (hover): no description; inferred from name",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3133,13 +3193,13 @@
       "token": "color-input-border",
       "concept": "dsi:concept/color/usage-field/property-border",
       "match": "close",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris input-border: no description; inferred from name",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3148,13 +3208,13 @@
       "token": "color-input-border",
       "concept": "dsi:concept/color/usage-field/property-border",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "status": "proposed",
-      "rationale": "No description; inferred from name.",
+      "rationale": "Form input border.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3163,13 +3223,13 @@
       "token": "color-input-border-active",
       "concept": "dsi:concept/color/usage-field/property-border/state-active",
       "match": "close",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
+      "rationale": "Polaris input-border (active): no description; inferred from name",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3178,13 +3238,13 @@
       "token": "color-input-border-active",
       "concept": "dsi:concept/color/usage-field/property-border/state-active",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "status": "proposed",
-      "rationale": "No description; inferred from name.",
+      "rationale": "Form input border. active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3193,13 +3253,13 @@
       "token": "color-input-border-hover",
       "concept": "dsi:concept/color/usage-field/property-border/state-hover",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "status": "proposed",
-      "rationale": "No description; inferred from name.",
+      "rationale": "Form input border. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3208,13 +3268,13 @@
       "token": "color-input-border-hover",
       "concept": "dsi:concept/color/usage-field/property-border/state-hover",
       "match": "close",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
+      "rationale": "Polaris input-border (hover): no description; inferred from name",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3223,13 +3283,13 @@
       "token": "color-nav-bg",
       "concept": "dsi:concept/color/usage-navigation/property-background",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "status": "proposed",
-      "rationale": "No description; inferred from name.",
+      "rationale": "Navigation chrome background, the ontology example for usage navigation.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3238,13 +3298,13 @@
       "token": "color-nav-bg",
       "concept": "dsi:concept/color/usage-navigation/property-background",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris nav-bg: no description; inferred from name",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3253,43 +3313,28 @@
       "token": "color-nav-bg-surface",
       "concept": "dsi:concept/color/usage-navigation/property-background",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris nav-bg-surface: no description; inferred from name",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
     {
-      "id": "m-21787da8a8ad",
+      "id": "m-dc51772d36bd",
       "token": "color-nav-bg-surface",
-      "concept": "dsi:concept/color/usage-navigation/property-background",
-      "match": "broad",
-      "confidence": 0.65,
+      "concept": "dsi:concept/color/usage-navigation+surface/property-background",
+      "match": "close",
+      "confidence": 0.68,
       "status": "proposed",
-      "rationale": "No description; inferred from name. Nuance: nav item surface inside the nav; the concept does not distinguish nav bar from nav items.",
+      "rationale": "Surface (item) background inside the navigation; nuance: nav items rather than cards.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-013b1e7478a9",
-      "token": "color-nav-bg-surface-active",
-      "concept": "dsi:concept/color/usage-navigation/property-background/state-active",
-      "match": "broad",
-      "confidence": 0.65,
-      "status": "proposed",
-      "rationale": "No description; inferred from name. Nuance: nav item surface inside the nav; the concept does not distinguish nav bar from nav items.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3298,13 +3343,43 @@
       "token": "color-nav-bg-surface-active",
       "concept": "dsi:concept/color/usage-navigation/property-background/state-active",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
+      "rationale": "Polaris nav-bg-surface (active): no description; inferred from name",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-7e058d8b0612",
+      "token": "color-nav-bg-surface-active",
+      "concept": "dsi:concept/color/usage-navigation+surface/property-background/state-active",
+      "match": "close",
+      "confidence": 0.68,
+      "status": "proposed",
+      "rationale": "Surface (item) background inside the navigation; nuance: nav items rather than cards. active state.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-0b625dc3db6e",
+      "token": "color-nav-bg-surface-hover",
+      "concept": "dsi:concept/color/usage-navigation+surface/property-background/state-hover",
+      "match": "close",
+      "confidence": 0.68,
+      "status": "proposed",
+      "rationale": "Surface (item) background inside the navigation; nuance: nav items rather than cards. hover state.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3313,43 +3388,13 @@
       "token": "color-nav-bg-surface-hover",
       "concept": "dsi:concept/color/usage-navigation/property-background/state-hover",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
+      "rationale": "Polaris nav-bg-surface (hover): no description; inferred from name",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-4515f7ae495f",
-      "token": "color-nav-bg-surface-hover",
-      "concept": "dsi:concept/color/usage-navigation/property-background/state-hover",
-      "match": "broad",
-      "confidence": 0.65,
-      "status": "proposed",
-      "rationale": "No description; inferred from name. Nuance: nav item surface inside the nav; the concept does not distinguish nav bar from nav items.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-6eba1e0092b5",
-      "token": "color-nav-bg-surface-selected",
-      "concept": "dsi:concept/color/usage-navigation/property-background/state-selected",
-      "match": "broad",
-      "confidence": 0.65,
-      "status": "proposed",
-      "rationale": "No description; inferred from name. Nuance: nav item surface inside the nav; the concept does not distinguish nav bar from nav items.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3358,13 +3403,28 @@
       "token": "color-nav-bg-surface-selected",
       "concept": "dsi:concept/color/usage-navigation/property-background/state-selected",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match. State: selected.",
+      "rationale": "Polaris nav-bg-surface (selected): no description; inferred from name",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-f2958de9cd5b",
+      "token": "color-nav-bg-surface-selected",
+      "concept": "dsi:concept/color/usage-navigation+surface/property-background/state-selected",
+      "match": "close",
+      "confidence": 0.68,
+      "status": "proposed",
+      "rationale": "Surface (item) background inside the navigation; nuance: nav items rather than cards. selected state.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3389,17 +3449,32 @@
       }
     },
     {
+      "id": "m-08ff9061d505",
+      "token": "color-text-brand",
+      "concept": "dsi:concept/color/intent-accent/property-text",
+      "match": "close",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Text that needs to pull attention (brand); near-neutral in Polaris, nuance noted.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:18.375Z",
+        "method": "color-v1"
+      }
+    },
+    {
       "id": "m-82cd6e4a60bf",
       "token": "color-text-brand",
       "concept": "dsi:concept/color/intent-accent/property-text",
       "match": "exact",
-      "confidence": 0.8,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Use for text that needs to pull attention.",
+      "rationale": "Polaris text-brand: Use for text that needs to pull attention.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3408,13 +3483,28 @@
       "token": "color-text-brand-hover",
       "concept": "dsi:concept/color/intent-accent/property-text/state-hover",
       "match": "exact",
-      "confidence": 0.8,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "The hover state color for text that needs to pull attention.",
+      "rationale": "Polaris text-brand (hover): The hover state color for text that needs to pull attention.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-b4f7307bc699",
+      "token": "color-text-brand-hover",
+      "concept": "dsi:concept/color/intent-accent/property-text/state-hover",
+      "match": "close",
+      "confidence": 0.72,
+      "status": "proposed",
+      "rationale": "Text that needs to pull attention (brand); near-neutral in Polaris, nuance noted. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3423,14 +3513,19 @@
       "token": "color-text-brand-on-bg-fill",
       "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text",
       "match": "exact",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Use for text on bg-fill-brand, like primary buttons.",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Text on bg-fill-brand (primary buttons).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -3438,14 +3533,19 @@
       "token": "color-text-brand-on-bg-fill-active",
       "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text/state-active",
       "match": "exact",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "The active state (on press) color for text on bg-fill-brand.",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Text on bg-fill-brand (primary buttons). active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -3453,14 +3553,19 @@
       "token": "color-text-brand-on-bg-fill-disabled",
       "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text/state-disabled",
       "match": "exact",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "The disabled state color for text on bg-fill-brand-disabled.",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Text on bg-fill-brand (primary buttons). disabled state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -3468,148 +3573,128 @@
       "token": "color-text-brand-on-bg-fill-hover",
       "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text/state-hover",
       "match": "exact",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "The hover state color for text on bg-fill-brand-hover.",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Text on bg-fill-brand (primary buttons). hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-24bbd9d18bc7",
+      "id": "m-51d160ab711f",
       "token": "color-text-caution",
-      "concept": "dsi:concept/color/intent-warning/property-text",
+      "concept": "dsi:concept/color/intent-caution/property-text",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-f6e2a9d87d19",
-      "token": "color-text-caution",
-      "concept": "dsi:concept/color/intent-warning/property-text",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Use for text communicating caution. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Text communicating caution (Polaris caution).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-02c49a1587d2",
+      "id": "m-6270cb77aca1",
       "token": "color-text-caution-active",
-      "concept": "dsi:concept/color/intent-warning/property-text/state-active",
+      "concept": "dsi:concept/color/intent-caution/property-text/state-active",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: active.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-8e8103649ba3",
-      "token": "color-text-caution-active",
-      "concept": "dsi:concept/color/intent-warning/property-text/state-active",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "The active state (on press) color for text communicating caution. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Text communicating caution (Polaris caution). active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-38c0d2780e47",
+      "id": "m-60ef60d2d6c1",
       "token": "color-text-caution-hover",
-      "concept": "dsi:concept/color/intent-warning/property-text/state-hover",
+      "concept": "dsi:concept/color/intent-caution/property-text/state-hover",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Direct name/description match. State: hover.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-62206d19f520",
-      "token": "color-text-caution-hover",
-      "concept": "dsi:concept/color/intent-warning/property-text/state-hover",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "The hover state color for text communicating caution. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Text communicating caution (Polaris caution). hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-207675ba847c",
+      "id": "m-8f4d25f689ad",
       "token": "color-text-caution-on-bg-fill",
-      "concept": "dsi:concept/color/intent-warning/usage-on-fill/property-foreground",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Use for text and icons on bg-fill-caution. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
+      "concept": "dsi:concept/color/intent-caution/usage-on-fill/property-foreground",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Text and icons on bg-fill-caution.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-a60072465c57",
-      "token": "color-text-caution-on-bg-fill",
-      "concept": "dsi:concept/color/intent-warning/usage-on-fill/property-foreground",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Content on strong filled warning background.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-4f6ad9763fd4",
+      "id": "m-76ce5258ab63",
       "token": "color-text-caution-secondary",
-      "concept": "dsi:concept/color/intent-warning/property-text/emphasis-subtle",
+      "concept": "dsi:concept/color/intent-caution/property-text/emphasis-subtle",
       "match": "close",
       "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Use for text communicating caution with a secondary level of prominence. Nuance: Polaris caution is a milder (yellow) warning tier distinct from its orange warning.",
+      "rationale": "Polaris text-caution-secondary: Use for text communicating caution with a secondary level of prominence.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-10-31T23:50:52.644Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-c298c2dcff38",
+      "token": "color-text-caution-secondary",
+      "concept": "dsi:concept/color/intent-caution/property-text/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.86,
+      "status": "proposed",
+      "rationale": "Text communicating caution (Polaris caution) at secondary prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3698,13 +3783,13 @@
       "token": "color-text-critical-secondary",
       "concept": "dsi:concept/color/intent-danger/property-text/emphasis-subtle",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle.",
+      "rationale": "Polaris text-critical-secondary: Use for text communicating critical information with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3713,13 +3798,13 @@
       "token": "color-text-critical-secondary",
       "concept": "dsi:concept/color/intent-danger/property-text/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.9,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "Use for text communicating critical information with a secondary level of prominence.",
+      "rationale": "Text communicating danger (Polaris critical) at secondary prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3744,48 +3829,63 @@
       }
     },
     {
-      "id": "m-63675515e51a",
+      "id": "m-3cc4c25da76b",
       "token": "color-text-emphasis",
-      "concept": "dsi:concept/color/intent-accent/property-text",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Use for text indicating areas of focus in editors, like the theme editor. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-text",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Text communicating highlight (Polaris emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-4cdff66dee03",
+      "id": "m-61a60f07d2f6",
       "token": "color-text-emphasis-active",
-      "concept": "dsi:concept/color/intent-accent/property-text/state-active",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "The active state (on press) color for text indicating areas of focus. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-text/state-active",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Text communicating highlight (Polaris emphasis). active state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "id": "m-29f79207d9ce",
+      "id": "m-3a93451a1618",
       "token": "color-text-emphasis-hover",
-      "concept": "dsi:concept/color/intent-accent/property-text/state-hover",
-      "match": "broad",
-      "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "The hover state color for text indicating areas of focus. Nuance: editor-focus highlight (blue), one specific case of attention-drawing accent, separate from brand.",
+      "concept": "dsi:concept/color/intent-highlight/property-text/state-hover",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "Text communicating highlight (Polaris emphasis). hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -3873,13 +3973,13 @@
       "token": "color-text-info-secondary",
       "concept": "dsi:concept/color/intent-info/property-text/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.9,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "Use for text communicating important information with a secondary level of prominence.",
+      "rationale": "Text communicating info (Polaris info) at secondary prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -3888,13 +3988,13 @@
       "token": "color-text-info-secondary",
       "concept": "dsi:concept/color/intent-info/property-text/emphasis-subtle",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle.",
+      "rationale": "Polaris text-info-secondary: Use for text communicating important information with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3925,11 +4025,11 @@
       "match": "close",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Direct name/description match.",
+      "rationale": "Polaris text-inverse-secondary: Use for secondary text on an inverse background.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -3938,13 +4038,13 @@
       "token": "color-text-inverse-secondary",
       "concept": "dsi:concept/color/usage-inverse/property-text/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "status": "proposed",
-      "rationale": "Use for secondary text on an inverse background.",
+      "rationale": "Secondary text on an inverse background.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -4009,18 +4109,23 @@
       }
     },
     {
-      "id": "m-eb24ab623bf8",
+      "id": "m-6ed6ebe4d434",
       "token": "color-text-link-inverse",
-      "concept": "dsi:concept/color/usage-link/property-text",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Use for text links on an inverse background. Nuance: link on inverse backgrounds only.",
+      "concept": "dsi:concept/color/usage-inverse+link/property-text",
+      "match": "exact",
+      "confidence": 0.9,
+      "status": "approved",
+      "rationale": "Text links on an inverse background, the usage-inverse+link combination.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-10-31T23:52:35.412Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -4068,13 +4173,13 @@
       "token": "color-text-magic-secondary",
       "concept": "dsi:concept/color/intent-ai/property-text/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.9,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "Use for text suggested by magic AI with a secondary level of prominence.",
+      "rationale": "Text communicating ai (Polaris magic) at secondary prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -4083,13 +4188,13 @@
       "token": "color-text-magic-secondary",
       "concept": "dsi:concept/color/intent-ai/property-text/emphasis-subtle",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle.",
+      "rationale": "Polaris text-magic-secondary: Use for text suggested by magic AI with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -4198,13 +4303,13 @@
       "token": "color-text-success-secondary",
       "concept": "dsi:concept/color/intent-success/property-text/emphasis-subtle",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle.",
+      "rationale": "Polaris text-success-secondary: Use for text communicating success with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -4213,13 +4318,13 @@
       "token": "color-text-success-secondary",
       "concept": "dsi:concept/color/intent-success/property-text/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.9,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "Use for text communicating success with a secondary level of prominence.",
+      "rationale": "Text communicating success (Polaris success) at secondary prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     },
@@ -4308,13 +4413,13 @@
       "token": "color-text-warning-secondary",
       "concept": "dsi:concept/color/intent-warning/property-text/emphasis-subtle",
       "match": "close",
-      "confidence": 0.82,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Secondary prominence mapped to subtle.",
+      "rationale": "Polaris text-warning-secondary: Use for text communicating warning with a secondary level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:46:53.513Z",
+        "at": "2026-10-31T23:50:52.644Z",
         "method": "color-v1"
       }
     },
@@ -4323,13 +4428,13 @@
       "token": "color-text-warning-secondary",
       "concept": "dsi:concept/color/intent-warning/property-text/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.9,
+      "confidence": 0.86,
       "status": "proposed",
-      "rationale": "Use for text communicating warning with a secondary level of prominence.",
+      "rationale": "Text communicating warning (Polaris warning) at secondary prominence.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:47:34+00:00",
+        "at": "2026-10-31T23:51:18.375Z",
         "method": "color-v1"
       }
     }

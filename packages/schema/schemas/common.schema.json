@@ -3,25 +3,55 @@
   "$id": "https://dsi.nonoun.io/schema/common.schema.json",
   "title": "Common definitions",
   "$defs": {
-    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Lowercase kebab-case identifier." },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Lowercase kebab-case identifier."
+    },
     "conceptRef": {
       "type": "string",
-      "pattern": "^dsi:[a-z0-9-]+(/[a-z0-9-]+)+$",
+      "pattern": "^dsi:[a-z0-9-]+(/[a-z0-9+-]+)+$",
       "description": "Compact IRI of an ontology concept, e.g. dsi:intent/danger. Existence and scheme are checked against ontology/, not here."
     },
-    "spdx": { "type": "string", "pattern": "^[A-Za-z0-9.+-]+( (AND|OR|WITH) [A-Za-z0-9.+-]+)*$", "description": "SPDX license expression." },
-    "exactVersion": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+(-[0-9A-Za-z.-]+)?$", "description": "Exact semver, never a range." },
-    "uri": { "type": "string", "format": "uri" },
+    "spdx": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9.+-]+( (AND|OR|WITH) [A-Za-z0-9.+-]+)*$",
+      "description": "SPDX license expression."
+    },
+    "exactVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(-[0-9A-Za-z.-]+)?$",
+      "description": "Exact semver, never a range."
+    },
+    "uri": {
+      "type": "string",
+      "format": "uri"
+    },
     "provenance": {
       "type": "object",
       "description": "Who or what produced a record, and when.",
-      "required": ["agent", "at"],
+      "required": [
+        "agent",
+        "at"
+      ],
       "additionalProperties": false,
       "properties": {
-        "agent": { "type": "string", "description": "Agent or person name, e.g. dsi-mapper or a GitHub handle." },
-        "model": { "type": "string", "description": "Model ID when the agent is an AI model." },
-        "at": { "type": "string", "format": "date-time" },
-        "method": { "type": "string", "description": "Pipeline step or prompt version." }
+        "agent": {
+          "type": "string",
+          "description": "Agent or person name, e.g. dsi-mapper or a GitHub handle."
+        },
+        "model": {
+          "type": "string",
+          "description": "Model ID when the agent is an AI model."
+        },
+        "at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "method": {
+          "type": "string",
+          "description": "Pipeline step or prompt version."
+        }
       }
     }
   }
