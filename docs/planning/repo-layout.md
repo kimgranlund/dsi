@@ -31,7 +31,7 @@ design-system-index/
 ├─ sources/                  AUTHORED. Ingestion config per product
 │  └─ <product>/source.json  package, pinned version, entry files, adapter, upstream license
 ├─ mappings/                 AGENT-AUTHORED judgments, reviewable, never blindly regenerated
-│  └─ <product>/<version>.mappings.jsonld   SKOS match assertions + provenance + review state
+│  └─ <product>/<version>.mappings.json   match assertions, facet bindings, provenance, review state
 ├─ data/                     GENERATED. Reproducible from inputs, never hand-edited
 │  ├─ native/<product>/<version>/*.tokens.json   DTCG, native names and values
 │  ├─ canonical/             Canonical DTCG set + one resolver per product
@@ -52,6 +52,8 @@ sources/ --ingest--> data/native --map (+ ontology/)--> mappings/ --canon--> dat
                                                                   \--> site/ (with catalog/)
 ```
 
+Mapping files are plain JSON validated by `@dsi/schema`; their SKOS/RDF form is a generated projection, not a second authored copy.
+
 ## Why this split
 
 - **Authored, agent-authored and generated stay apart.** `data/` can be deleted and rebuilt. `mappings/` cannot: it holds judgments with review state, so the mapper merges into it and never overwrites an approved mapping.
@@ -61,8 +63,8 @@ sources/ --ingest--> data/native --map (+ ontology/)--> mappings/ --canon--> dat
 
 ## Build order
 
-1. `docs/` entry system (this change).
-2. `packages/schema` + `ontology/schemes` (categories, tiers, facets).
+1. `docs/` entry system. Done.
+2. `ontology/schemes` (done) + `packages/schema` (done).
 3. `sources/` + `packages/ingest` for Material, then Carbon, Polaris.
 4. `ontology/concepts/color` + `packages/mapper`, first mappings.
 5. `packages/canon`, `data/canonical`.

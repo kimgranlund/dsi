@@ -21,12 +21,13 @@ A public, searchable index of design-system tokens. Each system's shipped tokens
 | Write, review or fix mappings | `mappings/README.md`, `ontology/README.md` | `packages/mapper/README.md` |
 | Canonical token output | `packages/canon/README.md` | `ontology/README.md` |
 | Explorer site | `site/README.md` | `packages/schema/README.md` |
+| Data file shape or validation rule | `packages/schema/README.md` | `ontology/README.md` |
 
 ## Invariants
 
 - **Shipped code is the source of truth.** Native token names and values are never renamed or edited; spec divergence is a note.
 - **`data/` is generated.** Change the input (`sources/`, `ontology/`, `mappings/`, an adapter) and rebuild. Never hand-edit it.
-- **Mappings are judgments.** Each carries a SKOS match type (`exact`, `close`, `broader`, `narrower`, `related`), confidence, provenance (agent, model, date, source version) and review status. Re-running the mapper never overwrites an approved mapping.
+- **Mappings are judgments.** Each carries a SKOS match type (`exact`, `close`, `broad`, `narrow`, `related`; see `ontology/schemes/mapping.jsonld` for direction), confidence, provenance (agent, model, date, source version) and review status. Re-running the mapper never overwrites an approved mapping.
 - **Tier is derived from bound facets**, not hand-labeled.
 - **One authority per fact.** A new or changed term updates `docs/glossary.md` and `ontology/` in the same change.
 - **Plans are temporary.** `docs/planning/` is working state; a ratified decision becomes an ADR in `docs/decisions/`.
@@ -35,4 +36,4 @@ A public, searchable index of design-system tokens. Each system's shipped tokens
 
 ## Checks
 
-None yet. Once the workspace exists: `pnpm check` (typecheck, schema validation, tests).
+`corepack pnpm check` from the root (or `pnpm check` with pnpm installed). Runs each package's `check`: today, `@dsi/schema` generates types, typechecks, runs tests and validates `ontology/`, `catalog/`, `sources/`, `mappings/`.

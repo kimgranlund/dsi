@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dsi.nonoun.io/schema/dtcg-extension.schema.json",
+  "title": "DSI DTCG extension",
+  "description": "Value of $extensions[\"io.nonoun.dsi\"] on every native token in data/native. Records where the token came from.",
+  "type": "object",
+  "required": ["product", "package", "version", "file", "nativeName", "extractedAt"],
+  "additionalProperties": false,
+  "properties": {
+    "product": { "$ref": "common.schema.json#/$defs/slug" },
+    "implementation": { "$ref": "common.schema.json#/$defs/slug" },
+    "package": { "type": "string", "minLength": 1 },
+    "version": { "$ref": "common.schema.json#/$defs/exactVersion" },
+    "file": { "type": "string", "minLength": 1, "description": "Source file inside the package." },
+    "nativeName": { "type": "string", "minLength": 1, "description": "The name exactly as shipped, e.g. --md-sys-color-error or $support-error." },
+    "theme": { "type": "string", "description": "Native theme the value came from." },
+    "extractedAt": { "type": "string", "format": "date-time" },
+    "specDivergence": { "type": "string", "description": "Known difference from the documented spec. A note only; shipped code wins." }
+  }
+}

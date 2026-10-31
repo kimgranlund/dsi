@@ -1,0 +1,28 @@
+{
+  "name": "@dsi/schema",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./schemas/*": "./schemas/*"
+  },
+  "bin": { "dsi-validate": "./src/cli.ts" },
+  "scripts": {
+    "types": "node src/gen-types.ts",
+    "typecheck": "tsc -p .",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "validate": "node src/cli.ts ../..",
+    "check": "node src/gen-types.ts && tsc -p . && node --test \"test/**/*.test.ts\" && node src/cli.ts ../.."
+  },
+  "dependencies": {
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "jsonld": "8.3.3"
+  },
+  "devDependencies": {
+    "@types/jsonld": "1.5.15",
+    "@types/node": "24.0.0",
+    "json-schema-to-typescript": "15.0.4",
+    "typescript": "5.8.3"
+  }
+}

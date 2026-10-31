@@ -1,0 +1,139 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
+import type { Ajv2020 } from 'ajv/dist/2020.js';
+import type { FormatsPlugin } from 'ajv-formats';
+import { expand, inScheme, loadOntology, type Issue, type Ontology } from './ontology.ts';
+
+// ajv and ajv-formats are CommonJS with a `default` export; load them through require for correct interop.
+const require = createRequire(import.meta.url);
+const Ajv: typeof Ajv2020 = require('ajv/dist/2020.js').default;
+const addFormats: FormatsPlugin = require('ajv-formats').default;
+
+export const SCHEMA_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'schemas');
+const BASE = 'https://dsi.nonoun.io/schema/';
+
+export function createAjv() {
+  // strictRequired is off because if/then branches require properties defined in the parent schema.
+  const ajv = new Ajv({ allErrors: true, strict: true, strictRequired: false, allowUnionTypes: true });
+  addFormats(ajv);
+  for (const f of fs.readdirSync(SCHEMA_DIR).filter((f) => f.endsWith('.schema.json'))) ajv.addSchema(JSON.parse(fs.readFileSync(path.join(SCHEMA_DIR, f), 'utf8')));
+  return ajv;
+}
+
+export interface ValidateOptions { root: string; ontologyDir?: string }
+
+/** Validate repo data: JSON Schema shape first, then references against the ontology and catalog. */
+export async function validateRepo({ root, ontologyDir = path.join(root, 'ontology') }: ValidateOptions): Promise<Issue[]> {
+  const ontology = await loadOntology(ontologyDir);
+  const issues: Issue[] = [...ontology.issues];
+  const ajv = createAjv();
+  const rel = (f: string) => path.relative(root, f);
+  const read = (f: string): unknown => {
+    try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { issues.push({ file: rel(f), message: `invalid JSON: ${(e as Error).message}` }); return undefined; }
+  };
+  const shape = (schema: string, f: string, data: unknown): boolean => {
+    const v = ajv.getSchema(BASE + schema)!;
+    if (v(data)) return true;
+    for (const e of v.errors ?? []) issues.push({ file: rel(f), message: `${e.instancePath || '/'} ${e.message}${e.params && 'allowedValues' in e.params ? ` ${JSON.stringify(e.params.allowedValues)}` : ''}` });
+    return false;
+  };
+
+  // Catalog
+  type Entry = { id: string; category: string; targets?: string[]; relations?: Record<string, string[]>; implementations?: { id: string; targets?: string[] }[] };
+  const catalog = new Map<string, { entry: Entry; file: string }>();
+  const implOf = new Map<string, string>();
+  for (const f of walk(path.join(root, 'catalog'), '.json')) {
+    const data = read(f);
+    if (data === undefined || !shape('catalog-entry.schema.json', f, data)) continue;
+    const e = data as Entry;
+    if (path.basename(f, '.json') !== e.id) issues.push({ file: rel(f), message: `file name must equal id "${e.id}"` });
+    if (catalog.has(e.id) || implOf.has(e.id)) issues.push({ file: rel(f), message: `duplicate catalog id "${e.id}"` });
+    catalog.set(e.id, { entry: e, file: f });
+    for (const i of e.implementations ?? []) {
+      if (catalog.has(i.id) || implOf.has(i.id)) issues.push({ file: rel(f), message: `duplicate catalog id "${i.id}"` });
+      implOf.set(i.id, e.id);
+    }
+  }
+  const cat = (id: string) => catalog.get(id)?.entry.category;
+  for (const { entry: e, file: f } of catalog.values()) {
+    const at = rel(f);
+    if (!inScheme(ontology, e.category, 'dsi:scheme/categories')) issues.push({ file: at, message: `category ${e.category} is not in dsi:scheme/categories` });
+    const targets = [...(e.targets ?? []), ...(e.implementations ?? []).flatMap((i) => i.targets ?? [])];
+    for (const t of targets) if (!inScheme(ontology, t, 'dsi:scheme/targets')) issues.push({ file: at, message: `target ${t} is not in dsi:scheme/targets` });
+    if (e.implementations?.length && e.category !== 'dsi:category/design-system') issues.push({ file: at, message: 'only Design Systems have implementations; link other products with relations.implements' });
+    for (const [rel_, ids] of Object.entries(e.relations ?? {}))
+      for (const id of ids) if (!catalog.has(id) && !implOf.has(id)) issues.push({ file: at, message: `relations.${rel_} references unknown catalog id "${id}"` });
+    for (const id of e.relations?.implements ?? []) if (catalog.has(id) && cat(id) !== 'dsi:category/design-system') issues.push({ file: at, message: `implements "${id}", which is not a Design System` });
+    for (const id of e.relations?.usesFormat ?? []) if (catalog.has(id) && cat(id) !== 'dsi:category/token-format') issues.push({ file: at, message: `usesFormat "${id}", which is not a Token Format` });
+    if (e.relations?.providesTokenSet?.length && e.category !== 'dsi:category/styling-engine') issues.push({ file: at, message: 'providesTokenSet is only for Styling Engines' });
+    for (const id of e.relations?.providesTokenSet ?? []) if (catalog.has(id) && cat(id) !== 'dsi:category/token-set') issues.push({ file: at, message: `providesTokenSet "${id}", which is not a Token Set` });
+  }
+
+  // Sources
+  for (const f of walk(path.join(root, 'sources'), 'source.json')) {
+    const data = read(f);
+    if (data === undefined || !shape('source.schema.json', f, data)) continue;
+    const s = data as { product: string; implementation?: string; themes?: string[]; entries: { theme?: string }[] };
+    const at = rel(f);
+    if (path.basename(path.dirname(f)) !== s.product) issues.push({ file: at, message: `folder must equal product "${s.product}"` });
+    const p = catalog.get(s.product);
+    if (!p) { issues.push({ file: at, message: `unknown product "${s.product}"` }); continue; }
+    if (ontology.ingested.get(expand(p.entry.category)) !== true) issues.push({ file: at, message: `${p.entry.category} is not an ingested category` });
+    if (p.entry.category === 'dsi:category/design-system' && !s.implementation) issues.push({ file: at, message: 'Design Systems are ingested through an implementation (shipped code is the source of truth)' });
+    if (s.implementation && implOf.get(s.implementation) !== s.product) issues.push({ file: at, message: `implementation "${s.implementation}" is not an implementation of "${s.product}"` });
+    for (const en of s.entries) if (en.theme && !(s.themes ?? []).includes(en.theme)) issues.push({ file: at, message: `entry theme "${en.theme}" is not listed in themes` });
+  }
+
+  // Mappings
+  for (const f of walk(path.join(root, 'mappings'), '.mappings.json')) {
+    const data = read(f);
+    if (data === undefined || !shape('mapping-file.schema.json', f, data)) continue;
+    issues.push(...checkMappingSemantics(ontology, data as MappingFile, rel(f), catalog.has.bind(catalog)));
+  }
+  return issues;
+}
+
+type Judgment = { status: string; supersededBy?: string };
+type MappingFile = {
+  product: string;
+  bindings?: (Judgment & { token: string; facets: Record<string, string | number> })[];
+  mappings?: (Judgment & { id: string; token: string; concept: string; match: string })[];
+  noEquivalent?: (Judgment & { concept: string })[];
+};
+
+const FACET_SCHEMES: Record<string, string> = { domain: 'domain', emphasis: 'emphasis', intent: 'intent', property: 'property', state: 'state' };
+
+function checkMappingSemantics(o: Ontology, m: MappingFile, at: string, productExists: (id: string) => boolean): Issue[] {
+  const out: Issue[] = [];
+  const err = (message: string) => out.push({ file: at, message });
+  if (!productExists(m.product)) err(`unknown product "${m.product}"`);
+  const status = (j: Judgment, where: string) => { if (!inScheme(o, `dsi:review/${j.status}`, 'dsi:scheme/review-status')) err(`${where}: status "${j.status}" is not in dsi:scheme/review-status`); };
+  (m.bindings ?? []).forEach((b, i) => {
+    status(b, `bindings[${i}]`);
+    for (const [facet, scheme] of Object.entries(FACET_SCHEMES)) {
+      const v = b.facets[facet];
+      if (typeof v === 'string' && !inScheme(o, v, `dsi:scheme/${scheme}`)) err(`bindings[${i}] ${b.token}: ${facet} ${v} is not in dsi:scheme/${scheme}`);
+    }
+  });
+  const ids = new Set<string>();
+  (m.mappings ?? []).forEach((x, i) => {
+    status(x, `mappings[${i}]`);
+    if (ids.has(x.id)) err(`mappings[${i}]: duplicate id "${x.id}"`);
+    ids.add(x.id);
+    if (!inScheme(o, `dsi:match/${x.match}`, 'dsi:scheme/match-types')) err(`mappings[${i}] ${x.token}: match "${x.match}" is not in dsi:scheme/match-types`);
+    if (!o.defined.has(expand(x.concept))) err(`mappings[${i}] ${x.token}: concept ${x.concept} is not defined in the ontology`);
+  });
+  (m.mappings ?? []).forEach((x, i) => { if (x.supersededBy && !ids.has(x.supersededBy)) err(`mappings[${i}]: supersededBy "${x.supersededBy}" is not a mapping id in this file`); });
+  (m.noEquivalent ?? []).forEach((x, i) => {
+    status(x, `noEquivalent[${i}]`);
+    if (!o.defined.has(expand(x.concept))) err(`noEquivalent[${i}]: concept ${x.concept} is not defined in the ontology`);
+  });
+  return out;
+}
+
+function walk(dir: string, suffix: string): string[] {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir, { recursive: true, encoding: 'utf8' }).filter((f) => f.endsWith(suffix)).sort().map((f) => path.join(dir, f));
+}

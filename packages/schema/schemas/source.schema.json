@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dsi.nonoun.io/schema/source.schema.json",
+  "title": "Ingestion source",
+  "description": "How to ingest one product's shipped tokens. File: sources/<product>/source.json.",
+  "type": "object",
+  "required": ["product", "package", "entries", "adapter", "license"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "product": { "$ref": "common.schema.json#/$defs/slug", "description": "Catalog id of the product." },
+    "implementation": { "$ref": "common.schema.json#/$defs/slug", "description": "Implementation id, required when the product is a Design System." },
+    "package": {
+      "type": "object",
+      "required": ["registry", "name", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "registry": { "const": "npm" },
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "$ref": "common.schema.json#/$defs/exactVersion" }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["path", "format"],
+        "additionalProperties": false,
+        "properties": {
+          "path": { "type": "string", "minLength": 1, "description": "Path inside the package." },
+          "format": { "enum": ["dtcg", "json", "js-module", "css", "scss"] },
+          "theme": { "type": "string", "description": "Native theme this entry holds, if theme-specific." }
+        }
+      }
+    },
+    "themes": { "type": "array", "uniqueItems": true, "items": { "type": "string" }, "description": "Native theme names (e.g. white, g10, g90, g100). Their canonical modes are mapping judgments." },
+    "adapter": { "$ref": "common.schema.json#/$defs/slug", "description": "packages/ingest/src/adapters/<adapter>.ts" },
+    "license": {
+      "type": "object",
+      "required": ["spdx", "redistribution"],
+      "additionalProperties": false,
+      "properties": {
+        "spdx": { "$ref": "common.schema.json#/$defs/spdx" },
+        "url": { "$ref": "common.schema.json#/$defs/uri" },
+        "redistribution": { "enum": ["permitted", "unknown", "restricted"], "description": "Whether token values may be republished on the site. Unknown blocks publishing." },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}
