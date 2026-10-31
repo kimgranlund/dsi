@@ -1,0 +1,69 @@
+# Repo layout plan
+
+Status: planned. Folders are created when their first file lands, each with a README from [the area template](../templates/area-readme.md).
+
+## Stack
+
+- TypeScript, pnpm workspaces.
+- Ontology: SKOS in JSON-LD.
+- Site: Vite + vanilla TS, static build deployed to Cloudflare. Client-side search (library TBD).
+
+## Tree
+
+```
+design-system-index/
+├─ AGENTS.md                 Entry for any agent: purpose, invariants, task routes
+├─ CLAUDE.md                 Imports AGENTS.md
+├─ README.md                 Public project readme (when the site ships)
+├─ package.json, pnpm-workspace.yaml
+├─ docs/
+│  ├─ README.md              Docs index
+│  ├─ glossary.md            Authoritative project vocabulary
+│  ├─ planning/              Working set: plans, open questions (temporary)
+│  ├─ decisions/             ADRs, NNNN-title.md (durable)
+│  └─ templates/             Area README template
+├─ ontology/                 AUTHORED. SKOS JSON-LD concept schemes
+│  ├─ context.jsonld         Shared @context
+│  ├─ schemes/               categories, tiers, facets
+│  └─ concepts/              color, space, typography, motion, components/<component>
+├─ catalog/                  AUTHORED. One entry per product, all categories
+│  └─ <category>/<product>.json   relations, implementations, license, links
+├─ sources/                  AUTHORED. Ingestion config per product
+│  └─ <product>/source.json  package, pinned version, entry files, adapter, upstream license
+├─ mappings/                 AGENT-AUTHORED judgments, reviewable, never blindly regenerated
+│  └─ <product>/<version>.mappings.jsonld   SKOS match assertions + provenance + review state
+├─ data/                     GENERATED. Reproducible from inputs, never hand-edited
+│  ├─ native/<product>/<version>/*.tokens.json   DTCG, native names and values
+│  ├─ canonical/             Canonical DTCG set + one resolver per product
+│  └─ reports/               Validation and coverage reports
+├─ packages/
+│  ├─ schema/                JSON Schemas + TS types (catalog, source, mapping, DTCG $extensions)
+│  ├─ ingest/                adapters/<product>.ts: sources -> data/native
+│  ├─ mapper/                Agent mapping pipeline: ontology + native -> mappings
+│  ├─ canon/                 ontology + mappings -> data/canonical
+│  └─ cli/                   `dsi ingest | map | build | validate`
+└─ site/                     Vite + vanilla explorer, reads data/ at build time
+```
+
+## Pipeline
+
+```
+sources/ --ingest--> data/native --map (+ ontology/)--> mappings/ --canon--> data/canonical
+                                                                  \--> site/ (with catalog/)
+```
+
+## Why this split
+
+- **Authored, agent-authored and generated stay apart.** `data/` can be deleted and rebuilt. `mappings/` cannot: it holds judgments with review state, so the mapper merges into it and never overwrites an approved mapping.
+- **catalog/ vs sources/**: every product gets a catalog entry; only products whose tokens are ingested (Design Systems, Component Libraries, Token Sets) get a source config.
+- **ontology/ is the meaning authority.** `docs/glossary.md` explains project terms in prose and points to concept IDs once they exist.
+- **UI Frameworks** never get catalog entries; they appear only as an implementation's `targets`.
+
+## Build order
+
+1. `docs/` entry system (this change).
+2. `packages/schema` + `ontology/schemes` (categories, tiers, facets).
+3. `sources/` + `packages/ingest` for Material, then Carbon, Polaris.
+4. `ontology/concepts/color` + `packages/mapper`, first mappings.
+5. `packages/canon`, `data/canonical`.
+6. `site/`, then the remaining concept domains and component tokens.
