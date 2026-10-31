@@ -8,7 +8,7 @@ import { EXT, type Token } from '../src/dtcg.ts';
 const PKG = path.join(path.dirname(fileURLToPath(import.meta.url)), 'fixtures/material');
 const source = { product: 'material', implementation: 'material-web', package: { registry: 'npm' as const, name: '@material/web', version: '2.5.0' }, entries: [], adapter: 'material' };
 
-const result = await material(PKG, source);
+const result = await material({ '@material/web': { dir: PKG, version: '2.5.0' } }, source);
 const set = (file: string) => result.sets.find((s) => s.file === file)!;
 const tok = (file: string, p: string): Token | undefined => set(file)?.tokens.get(p);
 

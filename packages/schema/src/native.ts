@@ -20,6 +20,18 @@ function leaves(tree: Record<string, unknown>, prefix = ''): Leaf[] {
 }
 
 const isNum = (n: unknown): n is number => typeof n === 'number' && Number.isFinite(n);
+const isRef = (v: unknown) => typeof v === 'string' && ALIAS.test(v);
+
+/** Every {alias} string anywhere inside a value, including composite sub-values. */
+function refsIn(v: unknown): string[] {
+  if (isRef(v)) return [(v as string).slice(1, -1)];
+  if (Array.isArray(v)) return v.flatMap(refsIn);
+  if (v && typeof v === 'object') return Object.values(v).flatMap(refsIn);
+  return [];
+}
+
+/** A sub-value of a composite is valid if it is an alias or a valid value of the given type. */
+const sub = (type: string, v: unknown) => isRef(v) || valueIssue({ $type: type, $value: v }) === undefined;
 
 /** Minimal DTCG 2025.10 value-shape checks for the types the adapters emit. */
 function valueIssue(t: Tok): string | undefined {
@@ -41,6 +53,14 @@ function valueIssue(t: Tok): string | undefined {
       return (isNum(t.$value) && t.$value >= 1 && t.$value <= 1000) || typeof t.$value === 'string' ? undefined : 'fontWeight must be 1..1000 or a keyword';
     case 'fontFamily':
       return typeof t.$value === 'string' || (Array.isArray(t.$value) && t.$value.every((f) => typeof f === 'string')) ? undefined : 'fontFamily must be a string or string[]';
+    case 'transition':
+      return v && sub('duration', v.duration) && sub('duration', v.delay) && sub('cubicBezier', v.timingFunction) ? undefined : 'transition must be { duration, delay, timingFunction }';
+    case 'shadow': {
+      const layers = Array.isArray(t.$value) ? t.$value : [t.$value];
+      return layers.every((l: any) => l && sub('color', l.color) && ['offsetX', 'offsetY', 'blur', 'spread'].every((k) => sub('dimension', l[k])) && (l.inset === undefined || typeof l.inset === 'boolean')) ? undefined : 'shadow must be { color, offsetX, offsetY, blur, spread, inset? } or an array of them';
+    }
+    case 'gradient':
+      return Array.isArray(t.$value) && t.$value.every((st: any) => st && sub('color', st.color) && (isRef(st.position) || (isNum(st.position) && st.position >= 0 && st.position <= 1))) ? undefined : 'gradient must be [{ color, position 0..1 }]';
     case undefined:
       return undefined;
     default:
@@ -56,13 +76,15 @@ export function validateNative(root: string, ajv: Ajv2020, issues: Issue[]) {
   const nativeRoot = path.join(root, 'data', 'native');
   if (!fs.existsSync(nativeRoot)) return;
   const ext = ajv.getSchema('https://dsi.nonoun.io/schema/dtcg-extension.schema.json')!;
-  for (const product of fs.readdirSync(nativeRoot)) {
-    for (const version of fs.readdirSync(path.join(nativeRoot, product))) {
+  const dirs = (p: string) => fs.readdirSync(p, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name);
+  for (const product of dirs(nativeRoot)) {
+    for (const version of dirs(path.join(nativeRoot, product))) {
       const dir = path.join(nativeRoot, product, version);
       const at = (f: string) => path.relative(root, path.join(dir, f));
       const manifestPath = path.join(dir, 'manifest.json');
       if (!fs.existsSync(manifestPath)) { issues.push({ file: at(''), message: 'missing manifest.json' }); continue; }
-      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8')) as { product: string; package: { version: string }; files: { file: string; theme?: string; tokens: number }[] };
+      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8')) as { product: string; package: { name: string; version: string }; dependencies?: { name: string; version: string }[]; themes?: string[]; defaultTheme?: string; files: { file: string; theme?: string; tokens: number }[] };
+      const packages = new Map([manifest.package, ...(manifest.dependencies ?? [])].map((p) => [p.name, p.version]));
       if (manifest.product !== product || manifest.package.version !== version) issues.push({ file: at('manifest.json'), message: `manifest says ${manifest.product}@${manifest.package.version}, folder is ${product}/${version}` });
       const listed = new Set(manifest.files.map((f) => f.file));
       for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.tokens.json'))) if (!listed.has(f)) issues.push({ file: at(f), message: 'token file not listed in manifest.json' });
@@ -83,24 +105,34 @@ export function validateNative(root: string, ajv: Ajv2020, issues: Issue[]) {
           const prov = token.$extensions?.[EXT] as Record<string, unknown> | undefined;
           if (!ext(prov)) issues.push({ file: at(entry.file), message: `${tp}: $extensions["${EXT}"] ${ext.errors?.map((e) => `${e.instancePath || '/'} ${e.message}`).join('; ')}` });
           else {
-            if (prov!.product !== product || prov!.version !== version) issues.push({ file: at(entry.file), message: `${tp}: provenance says ${prov!.product}@${prov!.version}` });
+            if (prov!.product !== product) issues.push({ file: at(entry.file), message: `${tp}: provenance says product ${prov!.product}` });
+            if (packages.get(prov!.package as string) !== prov!.version) issues.push({ file: at(entry.file), message: `${tp}: provenance package ${prov!.package}@${prov!.version} is not the manifest's package or a dependency` });
             if ((prov!.theme ?? undefined) !== entry.theme) issues.push({ file: at(entry.file), message: `${tp}: provenance theme ${prov!.theme} differs from file theme ${entry.theme}` });
           }
-          const isAlias = typeof token.$value === 'string' && ALIAS.test(token.$value);
+          const isAlias = isRef(token.$value);
           if (!isAlias && !token.$type && !prov?.untyped) issues.push({ file: at(entry.file), message: `${tp}: literal without $type must be marked untyped` });
           const vi = isAlias ? undefined : valueIssue(token);
           if (vi) issues.push({ file: at(entry.file), message: `${tp}: ${vi}` });
         }
       }
-      const contexts = themed.size ? [...themed].map(([name, m]) => ({ name, all: new Map([...base, ...m]) })) : [{ name: '', all: base }];
+      // Each declared theme resolves against the mode-independent files plus its own file (the default theme may have none).
+      for (const t of themed.keys()) if (manifest.themes && !manifest.themes.includes(t)) issues.push({ file: at('manifest.json'), message: `theme file for "${t}", which is not in themes` });
+      for (const t of manifest.themes ?? []) if (!themed.has(t) && t !== manifest.defaultTheme) issues.push({ file: at('manifest.json'), message: `theme "${t}" has no file and is not the defaultTheme` });
+      const names = manifest.themes ?? [...themed.keys()];
+      const contexts = names.length ? names.map((name) => ({ name, all: new Map([...base, ...(themed.get(name) ?? [])]) })) : [{ name: '', all: base }];
       for (const { name, all } of contexts) {
         for (const [tp, token] of all) {
+          // Every reference inside the value must resolve; whole-value aliases are followed to detect cycles.
+          for (const ref of refsIn(token.$value)) {
+            if (ref === tp) { issues.push({ file: at(fileOf.get(token)!), message: `${tp}: alias cycle through ${ref}` }); continue; }
+            if (!all.has(ref)) issues.push({ file: at(fileOf.get(token)!), message: `${tp}: alias {${ref}} does not resolve${name ? ` in theme ${name}` : ''}` });
+          }
           const seen = new Set([tp]);
           let cur = token;
-          while (typeof cur.$value === 'string' && ALIAS.test(cur.$value)) {
-            const ref = cur.$value.slice(1, -1);
+          while (isRef(cur.$value)) {
+            const ref = (cur.$value as string).slice(1, -1);
             const next = all.get(ref);
-            if (!next) { issues.push({ file: at(fileOf.get(token)!), message: `${tp}: alias ${cur.$value} does not resolve${name ? ` in theme ${name}` : ''}` }); break; }
+            if (!next) break;
             if (seen.has(ref)) { issues.push({ file: at(fileOf.get(token)!), message: `${tp}: alias cycle through ${ref}` }); break; }
             seen.add(ref);
             cur = next;

@@ -12,6 +12,7 @@ export interface Provenance {
   theme?: string;
   rawValue: string;
   untyped?: true;
+  visibility?: 'internal';
 }
 
 export interface Token {
@@ -54,8 +55,8 @@ export function inferLiteral(raw: string, name: string): Typed {
   if ((m = s.match(/^(-?\d*\.?\d+)(px|rem)$/))) return { $type: 'dimension', $value: { value: +m[1], unit: m[2] } };
   if ((m = s.match(/^(-?\d*\.?\d+)(ms|s)$/))) return { $type: 'duration', $value: { value: +m[1], unit: m[2] } };
   if ((m = s.match(/^cubic-bezier\(\s*([-\d.]+)\s*,\s*([-\d.]+)\s*,\s*([-\d.]+)\s*,\s*([-\d.]+)\s*\)$/))) return { $type: 'cubicBezier', $value: [+m[1], +m[2], +m[3], +m[4]] };
-  if (/^-?\d*\.?\d+$/.test(s)) return { $type: /weight$/.test(name) ? 'fontWeight' : 'number', $value: +s };
-  if (/(^|-)(font|typeface)$|^(brand|plain)$/.test(name)) {
+  if (/^-?\d*\.?\d+$/.test(s)) return { $type: /(^|-)weight($|-)/.test(name) ? 'fontWeight' : 'number', $value: +s };
+  if (/(^|-)(font|typeface)$|^(brand|plain)$|(^|-)font-family(-|$)/.test(name)) {
     const families = splitList(s).map(unquote);
     if (families.every((f) => f.length > 0 && !/[(){}]/.test(f))) return { $type: 'fontFamily', $value: families.length === 1 ? families[0] : families };
   }

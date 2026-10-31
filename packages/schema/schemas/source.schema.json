@@ -4,20 +4,45 @@
   "title": "Ingestion source",
   "description": "How to ingest one product's shipped tokens. File: sources/<product>/source.json.",
   "type": "object",
-  "required": ["product", "package", "entries", "adapter", "license"],
+  "required": [
+    "product",
+    "package",
+    "entries",
+    "adapter",
+    "license"
+  ],
   "additionalProperties": false,
   "properties": {
-    "$schema": { "type": "string" },
-    "product": { "$ref": "common.schema.json#/$defs/slug", "description": "Catalog id of the product." },
-    "implementation": { "$ref": "common.schema.json#/$defs/slug", "description": "Implementation id, required when the product is a Design System." },
+    "$schema": {
+      "type": "string"
+    },
+    "product": {
+      "$ref": "common.schema.json#/$defs/slug",
+      "description": "Catalog id of the product."
+    },
+    "implementation": {
+      "$ref": "common.schema.json#/$defs/slug",
+      "description": "Implementation id, required when the product is a Design System."
+    },
     "package": {
       "type": "object",
-      "required": ["registry", "name", "version"],
+      "required": [
+        "registry",
+        "name",
+        "version"
+      ],
       "additionalProperties": false,
       "properties": {
-        "registry": { "const": "npm" },
-        "name": { "type": "string", "minLength": 1 },
-        "version": { "$ref": "common.schema.json#/$defs/exactVersion" }
+        "registry": {
+          "const": "npm"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "$ref": "common.schema.json#/$defs/exactVersion"
+        }
       }
     },
     "entries": {
@@ -25,26 +50,128 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["path", "format"],
+        "required": [
+          "path",
+          "format"
+        ],
         "additionalProperties": false,
         "properties": {
-          "path": { "type": "string", "minLength": 1, "description": "Path inside the package." },
-          "format": { "enum": ["dtcg", "json", "js-module", "css", "scss"] },
-          "theme": { "type": "string", "description": "Native theme this entry holds, if theme-specific." }
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Path inside the package."
+          },
+          "format": {
+            "enum": [
+              "dtcg",
+              "dtcg-resolver",
+              "json",
+              "js-module",
+              "css",
+              "scss"
+            ]
+          },
+          "theme": {
+            "type": "string",
+            "description": "Native theme this entry holds, if theme-specific."
+          },
+          "package": {
+            "type": "string",
+            "description": "Package the path is in, when not the main package."
+          },
+          "nativeName": {
+            "type": "string",
+            "pattern": "\\{path\\}",
+            "description": "How the product names these tokens in its public API, with {path} for the token's path, e.g. --cds-{path}. Omit when the DTCG path is the shipped name."
+          }
         }
       }
     },
-    "themes": { "type": "array", "uniqueItems": true, "items": { "type": "string" }, "description": "Native theme names (e.g. white, g10, g90, g100). Their canonical modes are mapping judgments." },
-    "adapter": { "$ref": "common.schema.json#/$defs/slug", "description": "packages/ingest/src/adapters/<adapter>.ts" },
+    "themes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      },
+      "description": "Native theme names (e.g. white, g10, g90, g100). Their canonical modes are mapping judgments."
+    },
+    "adapter": {
+      "$ref": "common.schema.json#/$defs/slug",
+      "description": "packages/ingest/src/adapters/<adapter>.ts"
+    },
     "license": {
       "type": "object",
-      "required": ["spdx", "redistribution"],
+      "required": [
+        "spdx",
+        "redistribution"
+      ],
       "additionalProperties": false,
       "properties": {
-        "spdx": { "$ref": "common.schema.json#/$defs/spdx" },
-        "url": { "$ref": "common.schema.json#/$defs/uri" },
-        "redistribution": { "enum": ["permitted", "unknown", "restricted"], "description": "Whether token values may be republished on the site. Unknown blocks publishing." },
-        "notes": { "type": "string" }
+        "spdx": {
+          "$ref": "common.schema.json#/$defs/spdx",
+          "description": "SPDX expression, or LicenseRef-<name> for a non-standard license."
+        },
+        "url": {
+          "$ref": "common.schema.json#/$defs/uri"
+        },
+        "redistribution": {
+          "enum": [
+            "permitted",
+            "unknown",
+            "restricted"
+          ],
+          "description": "Whether token values may be republished on the site. Unknown blocks publishing."
+        },
+        "notes": {
+          "type": "string"
+        },
+        "publishOverride": {
+          "type": "object",
+          "description": "Owner decision to publish values despite redistribution being restricted or unknown. Records who accepted the risk, not that the license permits it.",
+          "required": [
+            "by",
+            "at",
+            "note"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "by": {
+              "type": "string"
+            },
+            "at": {
+              "type": "string",
+              "format": "date"
+            },
+            "note": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "Further packages the adapter reads, each pinned exactly (e.g. @carbon/colors for the palette @carbon/themes references).",
+      "items": {
+        "type": "object",
+        "required": [
+          "registry",
+          "name",
+          "version"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "registry": {
+            "const": "npm"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version": {
+            "$ref": "common.schema.json#/$defs/exactVersion"
+          }
+        }
       }
     }
   }

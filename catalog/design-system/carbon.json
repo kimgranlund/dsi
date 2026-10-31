@@ -1,0 +1,16 @@
+{
+  "id": "carbon",
+  "name": "Carbon Design System",
+  "category": "dsi:category/design-system",
+  "organization": "IBM",
+  "description": "IBM's open-source design system: design language, guidance, tokens and components.",
+  "homepage": "https://carbondesignsystem.com/",
+  "repository": "https://github.com/carbon-design-system/carbon",
+  "license": "Apache-2.0",
+  "implementations": [
+    { "id": "carbon-elements", "name": "Carbon Elements", "package": "@carbon/themes", "repository": "https://github.com/carbon-design-system/carbon/tree/main/packages/themes", "license": "Apache-2.0", "targets": ["dsi:target/css"] },
+    { "id": "carbon-react", "name": "Carbon React", "package": "@carbon/react", "license": "Apache-2.0", "targets": ["dsi:target/react"] },
+    { "id": "carbon-web-components", "name": "Carbon Web Components", "package": "@carbon/web-components", "license": "Apache-2.0", "targets": ["dsi:target/web-components"] }
+  ],
+  "notes": "Carbon Elements are the foundation packages (@carbon/themes, colors, layout, type, motion) shared by every Carbon implementation; tokens are ingested from them."
+}

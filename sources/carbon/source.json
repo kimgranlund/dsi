@@ -1,0 +1,25 @@
+{
+  "product": "carbon",
+  "implementation": "carbon-elements",
+  "package": { "registry": "npm", "name": "@carbon/themes", "version": "11.84.0" },
+  "dependencies": [
+    { "registry": "npm", "name": "@carbon/colors", "version": "11.61.0" },
+    { "registry": "npm", "name": "@carbon/layout", "version": "11.62.0" },
+    { "registry": "npm", "name": "@carbon/motion", "version": "11.55.0" }
+  ],
+  "entries": [
+    { "package": "@carbon/colors", "path": "tokens/colors.tokens.json", "format": "dtcg" },
+    { "package": "@carbon/layout", "path": "tokens/layout.tokens.json", "format": "dtcg" },
+    { "package": "@carbon/motion", "path": "tokens/motion.tokens.json", "format": "dtcg" },
+    { "package": "@carbon/motion", "path": "tokens/surfaces.tokens.json", "format": "dtcg" },
+    { "path": "tokens/themes.resolver.json", "format": "dtcg-resolver", "nativeName": "--cds-{path}" }
+  ],
+  "themes": ["white", "g10", "g90", "g100"],
+  "adapter": "dtcg",
+  "license": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+    "redistribution": "permitted",
+    "notes": "Apache-2.0 permits redistribution with attribution and the license notice. @carbon/type ships no DTCG file in 11.70.0, so typography is not ingested yet."
+  }
+}

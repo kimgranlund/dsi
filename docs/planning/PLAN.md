@@ -67,7 +67,9 @@ The concept layer is published as its own DTCG token set (e.g. canonical `--dang
 - **Source of truth: shipped code.** Ingest from published packages/repos. Spec divergence is recorded as a note, not a second native layer.
 - **Depth: everything, including component tokens** (e.g. `md.comp.filled-button.container.color`). Consequence: the concept layer needs a component anatomy facet (component x part, e.g. Button / container) on top of intent x property x emphasis x state x mode.
 - **Versions: pin latest major, keep history.** Every record carries source package + version + extraction date so older majors can be added later.
-- **v1 scope: 3 systems**: Material, Carbon, Polaris.
+- **v1 scope: 3 systems**: Material, Carbon, Polaris. Ingested: Material Web 2.5.0, Carbon Elements (@carbon/themes 11.84.0), Polaris tokens 9.4.2.
+- **Polaris license (decided 2026-10-31)**: the Polaris license limits use to apps that integrate with Shopify. The owner chose to ingest and publish anyway, accepting the risk; recorded as `publishOverride` in `sources/polaris/source.json`.
+- **Internal tokens count**: shipped-but-not-public tokens (Polaris palette, size scale) are ingested with `visibility: internal`, because they are the real Source tier.
 
 ## 5. Explorer UI (intent)
 
@@ -83,6 +85,9 @@ Show a consistent canonical label (e.g. "Danger") and how each design system rep
 - **v1 done when**: a searchable website is live.
 
 ## 7. Open questions
+
+- Carbon typography: `@carbon/type` ships no DTCG file; ingest from its Sass/JS or wait for upstream.
+- Polaris shadows and Material/Polaris CSS shorthands are untyped strings; parse into DTCG `shadow`/`typography` composites later.
 
 - Align mode files with the DTCG Resolver module (today: per-theme files plus manifest.json).
 - Typing CSS `font` shorthands and multi-corner shapes (13 untyped Material tokens): parse into DTCG composites, or keep untyped.

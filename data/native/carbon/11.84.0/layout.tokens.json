@@ -1,0 +1,862 @@
+{
+  "border-radius": {
+    "border-radius-00": {
+      "$description": "Border radius token — 0. No rounding; use for sharp-cornered elements.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "border-radius.border-radius-00",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":0,\"unit\":\"px\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "px",
+        "value": 0
+      }
+    },
+    "border-radius-02": {
+      "$description": "Border radius token — 2px. Subtle rounding for small components like tags and badges.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "border-radius.border-radius-02",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":0.125,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 0.125
+      }
+    },
+    "border-radius-04": {
+      "$description": "Border radius token — 4px. Default rounding for inputs, cards, and general components.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "border-radius.border-radius-04",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":0.25,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 0.25
+      }
+    },
+    "border-radius-08": {
+      "$description": "Border radius token — 8px. Moderate rounding for panels, modals, and containers.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "border-radius.border-radius-08",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":0.5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 0.5
+      }
+    },
+    "border-radius-16": {
+      "$description": "Border radius token — 16px. Strong rounding for large cards or featured containers.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "border-radius.border-radius-16",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":1,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 1
+      }
+    },
+    "border-radius-24": {
+      "$description": "Border radius token — 24px. Very rounded corners for pill-adjacent components.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "border-radius.border-radius-24",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":1.5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 1.5
+      }
+    },
+    "border-radius-max": {
+      "$description": "Border radius token — pill/fully rounded. Use for pill buttons, chips, and circular elements.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "border-radius.border-radius-max",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":999999,\"unit\":\"px\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "px",
+        "value": 999999
+      }
+    }
+  },
+  "container": {
+    "container-01": {
+      "$description": "Container height token — 24px. Minimum interactive target height for compact UI elements.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "container.container-01",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":1.5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 1.5
+      }
+    },
+    "container-02": {
+      "$description": "Container height token — 32px. Small interactive element height.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "container.container-02",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":2,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 2
+      }
+    },
+    "container-03": {
+      "$description": "Container height token — 40px. Default interactive element height.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "container.container-03",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":2.5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 2.5
+      }
+    },
+    "container-04": {
+      "$description": "Container height token — 48px. Large interactive element height.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "container.container-04",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":3,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 3
+      }
+    },
+    "container-05": {
+      "$description": "Container height token — 64px. Extra-large interactive element height.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "container.container-05",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":4,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 4
+      }
+    }
+  },
+  "fluid-spacing": {
+    "fluid-spacing-01": {
+      "$description": "Fluid spacing token — 0. Use when no fluid spacing is required.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "fluid-spacing.fluid-spacing-01",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "0",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "number",
+      "$value": 0
+    },
+    "fluid-spacing-02": {
+      "$description": "Fluid spacing token — 2vw. Use for viewport-proportional small spacing in fluid layouts.",
+      "$extensions": {
+        "com.ibm.carbon": {
+          "layout": {
+            "unit": "vw"
+          }
+        },
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "fluid-spacing.fluid-spacing-02",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "2",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "number",
+      "$value": 2
+    },
+    "fluid-spacing-03": {
+      "$description": "Fluid spacing token — 5vw. Use for medium fluid spacing that scales with the viewport.",
+      "$extensions": {
+        "com.ibm.carbon": {
+          "layout": {
+            "unit": "vw"
+          }
+        },
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "fluid-spacing.fluid-spacing-03",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "5",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "number",
+      "$value": 5
+    },
+    "fluid-spacing-04": {
+      "$description": "Fluid spacing token — 10vw. Use for large fluid spacing in full-bleed or hero sections.",
+      "$extensions": {
+        "com.ibm.carbon": {
+          "layout": {
+            "unit": "vw"
+          }
+        },
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "fluid-spacing.fluid-spacing-04",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "10",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "number",
+      "$value": 10
+    }
+  },
+  "icon-size": {
+    "icon-size-01": {
+      "$description": "Icon size token — 16px. Standard icon size for inline and UI icons.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "icon-size.icon-size-01",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":1,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 1
+      }
+    },
+    "icon-size-02": {
+      "$description": "Icon size token — 20px. Use for slightly larger icons that need more visual weight.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "icon-size.icon-size-02",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":1.25,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 1.25
+      }
+    }
+  },
+  "layout": {
+    "layout-01": {
+      "$deprecated": true,
+      "$description": "Deprecated layout token — 16px. Replaced by spacing scale. Do not use in new work.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "layout.layout-01",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":1,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 1
+      }
+    },
+    "layout-02": {
+      "$deprecated": true,
+      "$description": "Deprecated layout token — 24px. Replaced by spacing scale. Do not use in new work.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "layout.layout-02",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":1.5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 1.5
+      }
+    },
+    "layout-03": {
+      "$deprecated": true,
+      "$description": "Deprecated layout token — 32px. Replaced by spacing scale. Do not use in new work.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "layout.layout-03",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":2,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 2
+      }
+    },
+    "layout-04": {
+      "$deprecated": true,
+      "$description": "Deprecated layout token — 48px. Replaced by spacing scale. Do not use in new work.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "layout.layout-04",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":3,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 3
+      }
+    },
+    "layout-05": {
+      "$deprecated": true,
+      "$description": "Deprecated layout token — 64px. Replaced by spacing scale. Do not use in new work.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "layout.layout-05",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":4,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 4
+      }
+    },
+    "layout-06": {
+      "$deprecated": true,
+      "$description": "Deprecated layout token — 96px. Replaced by spacing scale. Do not use in new work.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "layout.layout-06",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":6,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 6
+      }
+    },
+    "layout-07": {
+      "$deprecated": true,
+      "$description": "Deprecated layout token — 160px. Replaced by spacing scale. Do not use in new work.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "layout.layout-07",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":10,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 10
+      }
+    }
+  },
+  "size": {
+    "size-2xl": {
+      "$description": "Component size token — 2XLarge, 80px.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "size.size-2xl",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 5
+      }
+    },
+    "size-lg": {
+      "$description": "Component size token — Large, 48px.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "size.size-lg",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":3,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 3
+      }
+    },
+    "size-md": {
+      "$description": "Component size token — Medium, 40px. Default component size.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "size.size-md",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":2.5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 2.5
+      }
+    },
+    "size-sm": {
+      "$description": "Component size token — Small, 32px.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "size.size-sm",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":2,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 2
+      }
+    },
+    "size-xl": {
+      "$description": "Component size token — XLarge, 64px.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "size.size-xl",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":4,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 4
+      }
+    },
+    "size-xs": {
+      "$description": "Component size token — XSmall, 24px. Use for the smallest component variant.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "size.size-xs",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":1.5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 1.5
+      }
+    }
+  },
+  "spacing": {
+    "spacing-01": {
+      "$description": "Spacing token — 2px. Use for the smallest internal padding or gaps between tightly-packed elements.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-01",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":0.125,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 0.125
+      }
+    },
+    "spacing-02": {
+      "$description": "Spacing token — 4px. Use for compact padding within dense components.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-02",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":0.25,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 0.25
+      }
+    },
+    "spacing-03": {
+      "$description": "Spacing token — 8px. Default small spacing unit for inset padding and icon gaps.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-03",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":0.5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 0.5
+      }
+    },
+    "spacing-04": {
+      "$description": "Spacing token — 12px. Use for comfortable inset padding in small components.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-04",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":0.75,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 0.75
+      }
+    },
+    "spacing-05": {
+      "$description": "Spacing token — 16px. Standard spacing unit; use for typical component padding and gutters.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-05",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":1,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 1
+      }
+    },
+    "spacing-06": {
+      "$description": "Spacing token — 24px. Use for section padding and medium gaps between components.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-06",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":1.5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 1.5
+      }
+    },
+    "spacing-07": {
+      "$description": "Spacing token — 32px. Use for group separation and larger layout gaps.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-07",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":2,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 2
+      }
+    },
+    "spacing-08": {
+      "$description": "Spacing token — 40px. Use for generous padding between distinct sections.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-08",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":2.5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 2.5
+      }
+    },
+    "spacing-09": {
+      "$description": "Spacing token — 48px. Use for large vertical rhythm and section separation.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-09",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":3,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 3
+      }
+    },
+    "spacing-10": {
+      "$description": "Spacing token — 64px. Use for major page section gaps.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-10",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":4,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 4
+      }
+    },
+    "spacing-11": {
+      "$description": "Spacing token — 80px. Use for hero and large feature-area spacing.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-11",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":5,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 5
+      }
+    },
+    "spacing-12": {
+      "$description": "Spacing token — 96px. Use for very large layout separations.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-12",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":6,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 6
+      }
+    },
+    "spacing-13": {
+      "$description": "Spacing token — 160px. Use for the largest page-level spacing needs.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "tokens/layout.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "spacing.spacing-13",
+          "package": "@carbon/layout",
+          "product": "carbon",
+          "rawValue": "{\"value\":10,\"unit\":\"rem\"}",
+          "version": "11.62.0"
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "rem",
+        "value": 10
+      }
+    }
+  }
+}

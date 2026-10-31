@@ -4,7 +4,8 @@ export interface SourceConfig {
   product: string;
   implementation?: string;
   package: { registry: 'npm'; name: string; version: string };
-  entries: { path: string; format: string; theme?: string }[];
+  dependencies?: { registry: 'npm'; name: string; version: string }[];
+  entries: { path: string; format: string; theme?: string; package?: string; nativeName?: string }[];
   themes?: string[];
   adapter: string;
 }
@@ -14,8 +15,13 @@ export interface OutputSet { file: string; theme?: string; tokens: Map<string, T
 
 export interface AdapterResult {
   sets: OutputSet[];
+  /** Theme whose values live in the mode-independent files rather than a theme file (Polaris: light). */
+  defaultTheme?: string;
   /** Counts and per-token notes for the ingest report. */
   report: { notes: string[]; counts: Record<string, number> };
 }
 
-export type Adapter = (pkgDir: string, source: SourceConfig) => Promise<AdapterResult> | AdapterResult;
+/** Unpacked package directories by package name: the main package and every dependency. */
+export type Packages = Record<string, { dir: string; version: string }>;
+
+export type Adapter = (pkgs: Packages, source: SourceConfig) => Promise<AdapterResult> | AdapterResult;

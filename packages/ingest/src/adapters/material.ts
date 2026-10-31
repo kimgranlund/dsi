@@ -56,8 +56,8 @@ function emit(tokensDir: string, uses: string[], mapExpr: string): Map<string, s
   return out;
 }
 
-export const material: Adapter = (pkgDir, source) => {
-  const tokensDir = path.join(pkgDir, 'tokens');
+export const material: Adapter = (pkgs, source) => {
+  const tokensDir = path.join(pkgs[source.package.name].dir, 'tokens');
   const modules = fs.readdirSync(tokensDir).filter((f) => /^_md-(ref|sys|comp)-.*\.scss$/.test(f)).map((f) => readModule(tokensDir, f)).filter((m) => !SKIP.has(m.name));
   const byName = new Map(modules.map((m) => [m.name, m]));
   const notes: string[] = [];

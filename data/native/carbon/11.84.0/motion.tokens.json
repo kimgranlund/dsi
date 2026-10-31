@@ -1,0 +1,258 @@
+{
+  "duration": {
+    "fast": {
+      "01": {
+        "$description": "Micro-interactions such as button and toggle. Instant response to user action.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "duration.fast.01",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "{\"value\":70,\"unit\":\"ms\"}",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "duration",
+        "$value": {
+          "unit": "ms",
+          "value": 70
+        }
+      },
+      "02": {
+        "$description": "Micro-interactions such as fade in. Subtle entrance or exit of small UI elements.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "duration.fast.02",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "{\"value\":110,\"unit\":\"ms\"}",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "duration",
+        "$value": {
+          "unit": "ms",
+          "value": 110
+        }
+      }
+    },
+    "moderate": {
+      "01": {
+        "$description": "Micro-interactions, small expansion, short distance movements. Default transition speed.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "duration.moderate.01",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "{\"value\":150,\"unit\":\"ms\"}",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "duration",
+        "$value": {
+          "unit": "ms",
+          "value": 150
+        }
+      },
+      "02": {
+        "$description": "Expansion, system communication, toast. Slightly longer interactions with more visual weight.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "duration.moderate.02",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "{\"value\":240,\"unit\":\"ms\"}",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "duration",
+        "$value": {
+          "unit": "ms",
+          "value": 240
+        }
+      }
+    },
+    "slow": {
+      "01": {
+        "$description": "Large expansion, important system notifications. Deliberate, prominent transitions.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "duration.slow.01",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "{\"value\":400,\"unit\":\"ms\"}",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "duration",
+        "$value": {
+          "unit": "ms",
+          "value": 400
+        }
+      },
+      "02": {
+        "$description": "Background dimming, large hero transitions. Slow, immersive motion for maximum emphasis.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "duration.slow.02",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "{\"value\":700,\"unit\":\"ms\"}",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "duration",
+        "$value": {
+          "unit": "ms",
+          "value": 700
+        }
+      }
+    }
+  },
+  "easing": {
+    "entrance": {
+      "expressive": {
+        "$description": "Entrance easing for expressive motion. Used for prominent element entrances.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "easing.entrance.expressive",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "[0,0,0.3,1]",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "cubicBezier",
+        "$value": [
+          0,
+          0,
+          0.3,
+          1
+        ]
+      },
+      "productive": {
+        "$description": "Entrance easing for productive motion. Used when elements enter the screen.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "easing.entrance.productive",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "[0,0,0.38,0.9]",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "cubicBezier",
+        "$value": [
+          0,
+          0,
+          0.38,
+          0.9
+        ]
+      }
+    },
+    "exit": {
+      "expressive": {
+        "$description": "Exit easing for expressive motion. Used for prominent element exits.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "easing.exit.expressive",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "[0.4,0.14,1,1]",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "cubicBezier",
+        "$value": [
+          0.4,
+          0.14,
+          1,
+          1
+        ]
+      },
+      "productive": {
+        "$description": "Exit easing for productive motion. Used when elements leave the screen.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "easing.exit.productive",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "[0.2,0,1,0.9]",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "cubicBezier",
+        "$value": [
+          0.2,
+          0,
+          1,
+          0.9
+        ]
+      }
+    },
+    "standard": {
+      "expressive": {
+        "$description": "Standard easing for expressive motion. Used for elements with more prominent, fluid movement.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "easing.standard.expressive",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "[0.4,0.14,0.3,1]",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "cubicBezier",
+        "$value": [
+          0.4,
+          0.14,
+          0.3,
+          1
+        ]
+      },
+      "productive": {
+        "$description": "Standard easing for productive motion. Used for UI elements that move within the viewport.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "tokens/motion.tokens.json",
+            "implementation": "carbon-elements",
+            "nativeName": "easing.standard.productive",
+            "package": "@carbon/motion",
+            "product": "carbon",
+            "rawValue": "[0.2,0,0.38,0.9]",
+            "version": "11.55.0"
+          }
+        },
+        "$type": "cubicBezier",
+        "$value": [
+          0.2,
+          0,
+          0.38,
+          0.9
+        ]
+      }
+    }
+  }
+}

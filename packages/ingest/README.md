@@ -8,13 +8,14 @@ Code. Its output in `data/native/` is generated: fix the adapter or the source c
 
 ## Run
 
-`node packages/ingest/src/cli.ts <product>` from the repo root. Downloads the exact pinned version with `npm pack --ignore-scripts` into `.cache/` (gitignored), runs the adapter named in the source, rewrites the version folder.
+`node packages/ingest/src/cli.ts <product>` from the repo root. Downloads the exact pinned versions (main package and `dependencies`) with `npm pack --ignore-scripts` into `.cache/` (gitignored), runs the adapter named in the source, rewrites the version folder.
 
 ## Output
 
 - `*.tokens.json`: DTCG 2025.10 token trees under native names. Mode-specific values go in `<group>.<theme>.tokens.json`; everything else is mode-independent.
 - Every token carries `$extensions["io.nonoun.dsi"]`: product, package, version, source file, native name as shipped, theme, and `rawValue` (the computed value, also kept on aliases so they can be verified).
-- `manifest.json`: package integrity hash, file list with token counts, counts, and per-token notes.
+- `manifest.json`: package and dependency integrity hashes, themes, `defaultTheme` when a theme's values live in the base files, file list with token counts, counts, and notes.
+- Themes: a theme resolves against the mode-independent files plus its theme file, theme values winning. Material and Carbon theme files hold every themed token; Polaris's theme files hold only overrides of its default (light) theme.
 - Byte-stable: re-running the same version produces identical files (no timestamps, sorted keys).
 
 ## Rules
@@ -29,6 +30,8 @@ Code. Its output in `data/native/` is generated: fix the adapter or the source c
 | Adapter | Product | Method |
 |---|---|---|
 | `material` | `@material/web` | Evaluates each `tokens/_md-*.scss` module twice: with real dependencies (values) and with placeholder dependencies (aliases). Skips `md-comp-test-table`. |
+| `dtcg` | Carbon (`@carbon/themes` + colors, layout, motion) | Reads shipped DTCG 2025.10 files and one resolver. Keeps `{aliases}`, `$description`, `$deprecated` and foreign `$extensions`; resolves partial JSON Pointer `$ref`s to literals (noted as derived); inherits group `$type`. `nativeName` pattern per entry (`--cds-{path}`). |
+| `polaris` | `@shopify/polaris-tokens` | Values and `var(--p-x)` aliases from `dist/css/styles.css`; palette and size aliases from the token modules, **parsed with the TypeScript parser, never executed**, and accepted only when the palette value equals the CSS value. The palette and size scale are internal (`visibility: internal`); the size scale is stored in rem as the build ships it. |
 
 ## Checks
 

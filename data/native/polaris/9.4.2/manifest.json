@@ -1,0 +1,55 @@
+{
+  "product": "polaris",
+  "implementation": "polaris-tokens",
+  "package": {
+    "registry": "npm",
+    "name": "@shopify/polaris-tokens",
+    "version": "9.4.2",
+    "integrity": "sha512-WNoDWLYFj38Cj0FolbNsLaY54JbjuYoO0qsLCj6yBb3Bkg4BEdAjOHji9AktL9IZGPsNhTcMp2/8CfzKtSHg2A=="
+  },
+  "adapter": "polaris",
+  "themes": [
+    "light",
+    "dark-experimental",
+    "light-high-contrast-experimental",
+    "light-mobile"
+  ],
+  "defaultTheme": "light",
+  "files": [
+    {
+      "file": "polaris.tokens.json",
+      "tokens": 452
+    },
+    {
+      "file": "scales.tokens.json",
+      "tokens": 251
+    },
+    {
+      "file": "theme.dark-experimental.tokens.json",
+      "theme": "dark-experimental",
+      "tokens": 40
+    },
+    {
+      "file": "theme.light-high-contrast-experimental.tokens.json",
+      "theme": "light-high-contrast-experimental",
+      "tokens": 9
+    },
+    {
+      "file": "theme.light-mobile.tokens.json",
+      "theme": "light-mobile",
+      "tokens": 30
+    }
+  ],
+  "counts": {
+    "tokens": 782,
+    "aliases": 436,
+    "literals": 346,
+    "untyped": 48,
+    "internal": 251,
+    "aliasRejected": 0
+  },
+  "notes": [
+    "size scale converted from px to rem (16px root) as the package build does; rawValue keeps the px literal",
+    "default theme \"light\" is the base file; other themes are override files"
+  ]
+}

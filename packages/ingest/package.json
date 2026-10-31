@@ -2,17 +2,19 @@
   "name": "@dsi/ingest",
   "private": true,
   "type": "module",
-  "bin": { "dsi-ingest": "./src/cli.ts" },
+  "bin": {
+    "dsi-ingest": "./src/cli.ts"
+  },
   "scripts": {
     "ingest": "node src/cli.ts",
     "check": "tsc -p . && node --test \"test/**/*.test.ts\""
   },
   "dependencies": {
     "@dsi/schema": "workspace:*",
-    "sass": "1.89.2"
+    "sass": "1.89.2",
+    "typescript": "5.8.3"
   },
   "devDependencies": {
-    "@types/node": "24.0.0",
-    "typescript": "5.8.3"
+    "@types/node": "24.0.0"
   }
 }

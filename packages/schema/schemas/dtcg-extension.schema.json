@@ -22,7 +22,8 @@
     },
     "package": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "description": "Package the token was read from (the main package or one of the source's dependencies)."
     },
     "version": {
       "$ref": "common.schema.json#/$defs/exactVersion"
@@ -52,6 +53,13 @@
     "untyped": {
       "const": true,
       "description": "The literal fits no DTCG type (e.g. a CSS font shorthand); $value holds it as a string and $type is absent."
+    },
+    "visibility": {
+      "enum": [
+        "public",
+        "internal"
+      ],
+      "description": "internal: shipped in the package but not part of its public API (e.g. Polaris's palette behind its CSS variables). Absent means public."
     }
   }
 }

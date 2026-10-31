@@ -1,0 +1,177 @@
+{
+  "surface": {
+    "contextual": {
+      "$description": "Icon → tooltip/popover — fade and scale reveal.",
+      "$extensions": {
+        "com.ibm.carbon": {
+          "motion": {
+            "duration": "fast-02",
+            "enter": {
+              "opacity": 1,
+              "transform": "scale(1)"
+            },
+            "enterEasing": {
+              "mode": "expressive",
+              "name": "entrance"
+            },
+            "exit": {
+              "opacity": 0,
+              "transform": "scale(0.96)"
+            },
+            "exitEasing": {
+              "mode": "expressive",
+              "name": "exit"
+            },
+            "kind": "reveal"
+          }
+        },
+        "io.nonoun.dsi": {
+          "file": "tokens/surfaces.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "surface.contextual",
+          "package": "@carbon/motion",
+          "product": "carbon",
+          "rawValue": "{\"duration\":\"{duration.fast.02}\",\"delay\":{\"value\":0,\"unit\":\"ms\"},\"timingFunction\":\"{easing.entrance.expressive}\"}",
+          "version": "11.55.0"
+        }
+      },
+      "$type": "transition",
+      "$value": {
+        "delay": {
+          "unit": "ms",
+          "value": 0
+        },
+        "duration": "{duration.fast.02}",
+        "timingFunction": "{easing.entrance.expressive}"
+      }
+    },
+    "disclosure": {
+      "$description": "Accordion, table-row expand — reveal in place.",
+      "$extensions": {
+        "com.ibm.carbon": {
+          "motion": {
+            "duration": "moderate-01",
+            "enter": {
+              "blockSize": "auto",
+              "opacity": 1
+            },
+            "enterEasing": {
+              "mode": "productive",
+              "name": "entrance"
+            },
+            "exit": {
+              "blockSize": 0,
+              "opacity": 0
+            },
+            "exitEasing": {
+              "mode": "productive",
+              "name": "exit"
+            },
+            "kind": "reveal"
+          }
+        },
+        "io.nonoun.dsi": {
+          "file": "tokens/surfaces.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "surface.disclosure",
+          "package": "@carbon/motion",
+          "product": "carbon",
+          "rawValue": "{\"duration\":\"{duration.moderate.01}\",\"delay\":{\"value\":0,\"unit\":\"ms\"},\"timingFunction\":\"{easing.entrance.productive}\"}",
+          "version": "11.55.0"
+        }
+      },
+      "$type": "transition",
+      "$value": {
+        "delay": {
+          "unit": "ms",
+          "value": 0
+        },
+        "duration": "{duration.moderate.01}",
+        "timingFunction": "{easing.entrance.productive}"
+      }
+    },
+    "expand": {
+      "$description": "Card/tile → side-panel/tearsheet — shared-element morph.",
+      "$extensions": {
+        "com.ibm.carbon": {
+          "motion": {
+            "duration": "moderate-02",
+            "enter": {
+              "opacity": 1,
+              "transform": "scale(1)"
+            },
+            "enterEasing": {
+              "mode": "productive",
+              "name": "standard"
+            },
+            "exit": {
+              "opacity": 0,
+              "transform": "scale(0.96)"
+            },
+            "exitEasing": {
+              "mode": "productive",
+              "name": "standard"
+            },
+            "kind": "shared-element"
+          }
+        },
+        "io.nonoun.dsi": {
+          "file": "tokens/surfaces.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "surface.expand",
+          "package": "@carbon/motion",
+          "product": "carbon",
+          "rawValue": "{\"duration\":\"{duration.moderate.02}\",\"delay\":{\"value\":0,\"unit\":\"ms\"},\"timingFunction\":\"{easing.standard.productive}\"}",
+          "version": "11.55.0"
+        }
+      },
+      "$type": "transition",
+      "$value": {
+        "delay": {
+          "unit": "ms",
+          "value": 0
+        },
+        "duration": "{duration.moderate.02}",
+        "timingFunction": "{easing.standard.productive}"
+      }
+    },
+    "invoke": {
+      "$description": "Button → modal/menu/popover — shared-element morph from the trigger.",
+      "$extensions": {
+        "com.ibm.carbon": {
+          "motion": {
+            "duration": "moderate-02",
+            "enterEasing": {
+              "mode": "expressive",
+              "name": "standard"
+            },
+            "exitEasing": {
+              "mode": "expressive",
+              "name": "standard"
+            },
+            "kind": "shared-element",
+            "origin": "trigger"
+          }
+        },
+        "io.nonoun.dsi": {
+          "file": "tokens/surfaces.tokens.json",
+          "implementation": "carbon-elements",
+          "nativeName": "surface.invoke",
+          "package": "@carbon/motion",
+          "product": "carbon",
+          "rawValue": "{\"duration\":\"{duration.moderate.02}\",\"delay\":{\"value\":0,\"unit\":\"ms\"},\"timingFunction\":\"{easing.standard.expressive}\"}",
+          "version": "11.55.0"
+        }
+      },
+      "$type": "transition",
+      "$value": {
+        "delay": {
+          "unit": "ms",
+          "value": 0
+        },
+        "duration": "{duration.moderate.02}",
+        "timingFunction": "{easing.standard.expressive}"
+      }
+    }
+  }
+}
