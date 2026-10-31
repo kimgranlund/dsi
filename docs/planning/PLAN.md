@@ -81,6 +81,8 @@ Show a consistent canonical label (e.g. "Danger") and how each design system rep
 - **Query database (decided)**: SQLite built in CI from the repo files and served from Cloudflare D1, with FTS5 full-text search and recursive CTEs for alias chains and mappings. Git files stay the source of truth; the database is a projection. An RDF store (SPARQL) is deferred until external users need it.
 - **Form**: public, searchable website hosted on Cloudflare at `dsi.nonoun.io`. Ontology IRIs use `https://dsi.nonoun.io/ontology/`.
 - **Mapping authorship**: AI agents propose and write mappings through a pipeline: ingest -> map (against the SKOS scheme) -> store as DTCG-compatible data.
+- **Approval rule (decided)**: two Claude Code agents on different models map each packet blind; a mapping is approved when both give the same concept and match type with confidence >= 0.85. Disagreements go to a human queue. The public site shows approved mappings only.
+- **Concepts are compositional**: `dsi:concept/<domain>/<facet>-<value>/...` in a fixed facet order, validated against the facet schemes.
 - **License**: MIT for this project.
 - **Component Libraries** are a full category with token ingestion, like Design Systems.
 - **v1 done when**: a searchable website is live.
@@ -96,7 +98,6 @@ Show a consistent canonical label (e.g. "Danger") and how each design system rep
 - Canonical hue names (scale facet) and usage values: deferred to the color concepts work.
 
 - Unmatched canonical tokens: leave unresolved, fall back to the broader match with a flag, or derive a value.
-- Approval gate for AI-written mappings (confidence threshold, validator, human spot check).
 - Upstream licenses of ingested token values (MIT covers our code and mappings, not third-party values).
 - Component anatomy vocabulary: whose part names become canonical.
 - Entry depth for Headless Primitives, Styling Engines, Token Tooling, Token Formats (catalog entry only vs ingestion).

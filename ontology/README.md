@@ -17,7 +17,21 @@ Authored. Changes here change meaning for every consumer; see Rules.
 | `schemes/tiers.jsonld` | Source, Scale, Semantic, System, Component, and the tier derivation rule |
 | `schemes/facets.jsonld` | Facet dimensions and starter value schemes (domain, emphasis, intent, property, state, mode) |
 | `schemes/mapping.jsonld` | Match types with fixed direction, review statuses |
-| `concepts/` | (planned) Canonical concepts as facet combinations, per domain |
+| `concepts/` | (optional) Labels and definitions for notable compositional concepts |
+
+## Canonical concepts
+
+A canonical concept is a combination of facet values with a compositional IRI, so combinations are not enumerated by hand:
+
+```
+dsi:concept/<domain>/<facet>-<value>/<facet>-<value>...
+dsi:concept/color/intent-danger/property-background/emphasis-strong/state-hover
+```
+
+- `<domain>` is a value of `dsi:scheme/domain`. Facet segments follow the fixed order **intent, usage, component, part, property, emphasis, state**; each value must exist in that facet's scheme (`dsi:scheme/<facet>`). At least one facet segment is required.
+- Component and part segments are reserved until their vocabularies exist.
+- Mode is never a segment: it is context, not identity.
+- The validator (`@dsi/schema`) checks grammar, order and every value. A compositional IRI does not need an entry in `concepts/`; add one only to give it a curated label or definition.
 
 ## Inputs and outputs
 

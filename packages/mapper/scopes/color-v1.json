@@ -1,0 +1,11 @@
+{
+  "$comment": "Which native tokens the color-v1 mapping run covers: semantic and system color tokens. Palettes (Source tier) and component tokens are out of scope until hue and component vocabularies exist.",
+  "id": "color-v1",
+  "domain": "color",
+  "prompt": "packages/mapper/prompts/color-v1.md",
+  "products": {
+    "material": { "version": "2.5.0", "pathPrefix": ["md.sys.color."] },
+    "carbon": { "version": "11.84.0", "provenanceFile": ["theme.tokens.json"] },
+    "polaris": { "version": "9.4.2", "pathPrefix": ["color-"], "exclude": ["color-scheme"] }
+  }
+}

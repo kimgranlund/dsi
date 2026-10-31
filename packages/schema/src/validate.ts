@@ -6,6 +6,7 @@ import type { Ajv2020 } from 'ajv/dist/2020.js';
 import type { FormatsPlugin } from 'ajv-formats';
 import { expand, inScheme, loadOntology, type Issue, type Ontology } from './ontology.ts';
 import { validateNative } from './native.ts';
+import { parseConcept } from './concepts.ts';
 
 // ajv and ajv-formats are CommonJS with a `default` export; load them through require for correct interop.
 const require = createRequire(import.meta.url);
@@ -105,9 +106,18 @@ type MappingFile = {
   bindings?: (Judgment & { token: string; facets: Record<string, string | number> })[];
   mappings?: (Judgment & { id: string; token: string; concept: string; match: string })[];
   noEquivalent?: (Judgment & { concept: string })[];
+  unmapped?: (Judgment & { token: string })[];
 };
 
-const FACET_SCHEMES: Record<string, string> = { domain: 'domain', emphasis: 'emphasis', intent: 'intent', property: 'property', state: 'state' };
+/** A concept reference is valid if the ontology defines it or it is a well-formed compositional concept. */
+function conceptIssue(o: Ontology, ref: string): string | undefined {
+  if (o.defined.has(expand(ref))) return undefined;
+  if (!ref.startsWith('dsi:concept/')) return 'is not defined in the ontology';
+  const p = parseConcept(o, ref);
+  return typeof p === 'string' ? p : undefined;
+}
+
+const FACET_SCHEMES: Record<string, string> = { domain: 'domain', emphasis: 'emphasis', intent: 'intent', property: 'property', state: 'state', usage: 'usage' };
 
 function checkMappingSemantics(o: Ontology, m: MappingFile, at: string, productExists: (id: string) => boolean): Issue[] {
   const out: Issue[] = [];
@@ -118,7 +128,7 @@ function checkMappingSemantics(o: Ontology, m: MappingFile, at: string, productE
     status(b, `bindings[${i}]`);
     for (const [facet, scheme] of Object.entries(FACET_SCHEMES)) {
       const v = b.facets[facet];
-      if (typeof v === 'string' && !inScheme(o, v, `dsi:scheme/${scheme}`)) err(`bindings[${i}] ${b.token}: ${facet} ${v} is not in dsi:scheme/${scheme}`);
+      if (typeof v === 'string' && v.startsWith('dsi:') && !inScheme(o, v, `dsi:scheme/${scheme}`)) err(`bindings[${i}] ${b.token}: ${facet} ${v} is not in dsi:scheme/${scheme}`);
     }
   });
   const ids = new Set<string>();
@@ -127,12 +137,19 @@ function checkMappingSemantics(o: Ontology, m: MappingFile, at: string, productE
     if (ids.has(x.id)) err(`mappings[${i}]: duplicate id "${x.id}"`);
     ids.add(x.id);
     if (!inScheme(o, `dsi:match/${x.match}`, 'dsi:scheme/match-types')) err(`mappings[${i}] ${x.token}: match "${x.match}" is not in dsi:scheme/match-types`);
-    if (!o.defined.has(expand(x.concept))) err(`mappings[${i}] ${x.token}: concept ${x.concept} is not defined in the ontology`);
+    const ci = conceptIssue(o, x.concept);
+    if (ci) err(`mappings[${i}] ${x.token}: concept ${x.concept} ${ci}`);
   });
   (m.mappings ?? []).forEach((x, i) => { if (x.supersededBy && !ids.has(x.supersededBy)) err(`mappings[${i}]: supersededBy "${x.supersededBy}" is not a mapping id in this file`); });
   (m.noEquivalent ?? []).forEach((x, i) => {
     status(x, `noEquivalent[${i}]`);
-    if (!o.defined.has(expand(x.concept))) err(`noEquivalent[${i}]: concept ${x.concept} is not defined in the ontology`);
+    const ci = conceptIssue(o, x.concept);
+    if (ci) err(`noEquivalent[${i}]: concept ${x.concept} ${ci}`);
+  });
+  const mapped = new Set((m.mappings ?? []).filter((x) => x.status !== 'rejected' && x.status !== 'superseded').map((x) => x.token));
+  (m.unmapped ?? []).forEach((x, i) => {
+    status(x, `unmapped[${i}]`);
+    if (x.status === 'approved' && mapped.has(x.token)) err(`unmapped[${i}] ${x.token}: approved as unmapped but also has a live mapping`);
   });
   return out;
 }

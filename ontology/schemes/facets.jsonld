@@ -66,9 +66,9 @@
     },
     {
       "id": "dsi:facet/usage", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
-      "prefLabel": "Usage", "facetKind": "dsi:facet-kind/identity", "bindingProperty": "dsi:hasUsage",
-      "definition": "Where in the interface the token applies across components (heading, body, surface, layer, overlay, link).",
-      "editorialNote": "Value scheme deferred to the concepts work, built from the three v1 systems."
+      "prefLabel": "Usage", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/usage", "bindingProperty": "dsi:hasUsage",
+      "definition": "Where in the interface the token applies across components (page, surface, overlay, field, link, ...).",
+      "editorialNote": "v1 values derived from Material, Carbon and Polaris semantic color tokens. Surface depth levels (Carbon layer-01..03, Material surface-container-low..highest) are expressed with emphasis or close matches, not separate usages."
     },
     {
       "id": "dsi:facet/component", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
@@ -121,10 +121,27 @@
       "scopeNote": "Explorer Danger views also list Destructive tokens, marked as related, not equal."
     },
     {
+      "id": "dsi:intent/ai", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "AI",
+      "definition": "Marks content or actions generated or assisted by AI.",
+      "example": "Carbon ai-* tokens, Polaris magic tokens"
+    },
+    {
       "id": "dsi:intent/destructive", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Destructive",
       "definition": "Action consequence: the action deletes data or cannot be undone. Describes an action, not a status.",
       "related": ["dsi:intent/danger"]
     },
+
+    { "id": "dsi:scheme/usage", "type": "ConceptScheme", "prefLabel": "Usage values" },
+    { "id": "dsi:usage/page", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Page", "definition": "The outermost application background behind all surfaces.", "example": "Carbon background, Polaris color-bg, Material background" },
+    { "id": "dsi:usage/surface", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Surface", "definition": "Containers placed on the page: cards, panels, layers.", "example": "Polaris color-bg-surface, Carbon layer-01, Material surface-container" },
+    { "id": "dsi:usage/overlay", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Overlay", "definition": "Content floating above the page: menus, popovers, modals." },
+    { "id": "dsi:usage/scrim", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Scrim", "definition": "The dimming layer behind a modal overlay.", "example": "Material scrim, Carbon overlay" },
+    { "id": "dsi:usage/inverse", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Inverse", "definition": "Contrasting surfaces with the opposite lightness of the current theme (e.g. dark tooltip in light mode).", "example": "Material inverse-surface, Carbon background-inverse, Polaris color-bg-inverse" },
+    { "id": "dsi:usage/field", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Field", "definition": "Form inputs: text fields, selects, text areas.", "example": "Carbon field-01, Polaris color-input-bg-surface" },
+    { "id": "dsi:usage/link", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Link", "definition": "Inline navigational text links.", "example": "Carbon link-primary, Polaris color-text-link" },
+    { "id": "dsi:usage/navigation", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Navigation", "definition": "Application navigation chrome: side nav, top bar.", "example": "Polaris color-nav-bg" },
+    { "id": "dsi:usage/skeleton", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Skeleton", "definition": "Loading placeholders.", "example": "Carbon skeleton-background" },
+    { "id": "dsi:usage/code", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Code", "definition": "Code display and syntax highlighting.", "example": "Carbon syntax-*" },
 
     { "id": "dsi:scheme/property", "type": "ConceptScheme", "prefLabel": "Property values" },
     { "id": "dsi:property/background", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Background", "definition": "Fill behind content: surfaces, containers, fills." },

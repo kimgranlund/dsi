@@ -70,7 +70,7 @@ Mapping files are plain JSON validated by `@dsi/schema`; their SKOS/RDF form is 
 1. `docs/` entry system. Done.
 2. `ontology/schemes` (done) + `packages/schema` (done).
 3. `sources/` + `packages/ingest`: Material, Carbon, Polaris done.
-4. `ontology/concepts/color` + `packages/mapper`, first mappings.
+4. `packages/mapper` + color-v1 scope, first mappings. In progress.
 5. `packages/canon`, `data/canonical`.
 6. `packages/db`: SQLite build in CI, D1 deploy, FTS5 search.
 7. `site/`, then the remaining concept domains and component tokens.

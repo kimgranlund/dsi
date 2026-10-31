@@ -32,8 +32,10 @@ const base = (): Files => ({
     mappings: [
       { id: 'm1', token: 'md.sys.color.error', concept: 'dsi:intent/danger', match: 'narrow', confidence: 0.8, status: 'approved', review, provenance: prov },
       { id: 'm0', token: 'md.sys.color.error', concept: 'dsi:intent/danger', match: 'exact', confidence: 0.6, status: 'superseded', supersededBy: 'm1', provenance: prov },
+      { id: 'm2', token: 'md.sys.color.error-container', concept: 'dsi:concept/color/intent-danger/property-background/emphasis-subtle', match: 'close', confidence: 0.9, status: 'proposed', provenance: prov },
     ],
     noEquivalent: [{ concept: 'dsi:intent/destructive', status: 'proposed', provenance: prov }],
+    unmapped: [{ token: 'md.sys.color.surface-tint', status: 'proposed', provenance: prov, rationale: 'no tint concept yet' }],
   },
 });
 
@@ -76,6 +78,12 @@ const negatives: [string, (f: Record<string, any>) => void, RegExp][] = [
   ['superseded without replacement', (f) => delete f['mappings/material/2.4.0.mappings.json'].mappings[1].supersededBy, /must have required property 'supersededBy'/],
   ['undefined concept', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[0].concept = 'dsi:intent/critical'), /concept dsi:intent\/critical is not defined/],
   ['facet value from wrong scheme', (f) => (f['mappings/material/2.4.0.mappings.json'].bindings[0].facets.intent = 'dsi:state/hover'), /intent dsi:state\/hover is not in dsi:scheme\/intent/],
+  ['concept with unknown facet value', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/intent-critical'), /intent "critical" is not in dsi:scheme\/intent/],
+  ['concept facets out of order', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/property-background/intent-danger'), /out of order/],
+  ['concept with unknown domain', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/colour/intent-danger'), /domain "colour"/],
+  ['concept with reserved facet', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/component-button'), /reserved/],
+  ['concept with no facets', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color'), /at least one facet/],
+  ['approved unmapped token that also has a mapping', (f) => { const u = f['mappings/material/2.4.0.mappings.json'].unmapped[0]; Object.assign(u, { token: 'md.sys.color.error', status: 'approved', review }); }, /approved as unmapped but also has a live mapping/],
   ['part without component', (f) => (f['mappings/material/2.4.0.mappings.json'].bindings[0].facets.part = 'container'), /must have property component when property part is present/],
   ['confidence out of range', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[0].confidence = 1.5), /must be <= 1/],
   ['stored tier field', (f) => (f['mappings/material/2.4.0.mappings.json'].bindings[0].tier = 'dsi:tier/semantic'), /must NOT have unevaluated properties/],

@@ -4,89 +4,272 @@
   "title": "Mapping file",
   "description": "Agent-authored judgments for one product version. File: mappings/<product>/<version>.mappings.json. Match types, statuses and facet values are slugs checked against ontology/.",
   "type": "object",
-  "required": ["product", "sourceVersion"],
+  "required": [
+    "product",
+    "sourceVersion"
+  ],
   "additionalProperties": false,
   "properties": {
-    "$schema": { "type": "string" },
-    "product": { "$ref": "common.schema.json#/$defs/slug" },
-    "implementation": { "$ref": "common.schema.json#/$defs/slug" },
-    "sourceVersion": { "$ref": "common.schema.json#/$defs/exactVersion" },
-    "bindings": { "type": "array", "items": { "$ref": "#/$defs/binding" } },
-    "mappings": { "type": "array", "items": { "$ref": "#/$defs/mapping" } },
-    "noEquivalent": { "type": "array", "items": { "$ref": "#/$defs/noEquivalent" } }
+    "$schema": {
+      "type": "string"
+    },
+    "product": {
+      "$ref": "common.schema.json#/$defs/slug"
+    },
+    "implementation": {
+      "$ref": "common.schema.json#/$defs/slug"
+    },
+    "sourceVersion": {
+      "$ref": "common.schema.json#/$defs/exactVersion"
+    },
+    "bindings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/binding"
+      }
+    },
+    "mappings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/mapping"
+      }
+    },
+    "noEquivalent": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/noEquivalent"
+      }
+    },
+    "unmapped": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/unmapped"
+      }
+    }
   },
   "$defs": {
-    "tokenPath": { "type": "string", "minLength": 1, "description": "Dot path of the native token in data/native, e.g. md.sys.color.error." },
-    "status": { "$ref": "common.schema.json#/$defs/slug", "description": "Slug of a concept in dsi:scheme/review-status." },
+    "tokenPath": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Dot path of the native token in data/native, e.g. md.sys.color.error."
+    },
+    "status": {
+      "$ref": "common.schema.json#/$defs/slug",
+      "description": "Slug of a concept in dsi:scheme/review-status."
+    },
     "review": {
       "type": "object",
-      "required": ["by", "at"],
+      "required": [
+        "by",
+        "at"
+      ],
       "additionalProperties": false,
-      "properties": { "by": { "type": "string" }, "at": { "type": "string", "format": "date-time" }, "note": { "type": "string" } }
+      "properties": {
+        "by": {
+          "type": "string"
+        },
+        "at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
     },
     "judgment": {
       "type": "object",
-      "required": ["status", "provenance"],
+      "required": [
+        "status",
+        "provenance"
+      ],
       "properties": {
-        "status": { "$ref": "#/$defs/status" },
-        "provenance": { "$ref": "common.schema.json#/$defs/provenance" },
-        "review": { "$ref": "#/$defs/review" },
-        "rationale": { "type": "string" },
-        "supersededBy": { "type": "string" }
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "provenance": {
+          "$ref": "common.schema.json#/$defs/provenance"
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "supersededBy": {
+          "type": "string"
+        }
       },
       "allOf": [
-        { "if": { "properties": { "status": { "enum": ["approved", "rejected"] } } }, "then": { "required": ["review"] } },
-        { "if": { "properties": { "status": { "const": "superseded" } } }, "then": { "required": ["supersededBy"] } }
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "approved",
+                  "rejected"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "review"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "superseded"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "supersededBy"
+            ]
+          }
+        }
       ]
     },
     "binding": {
       "description": "Facet values a native token binds. Tier is derived from these, never stored.",
-      "allOf": [{ "$ref": "#/$defs/judgment" }],
+      "allOf": [
+        {
+          "$ref": "#/$defs/judgment"
+        }
+      ],
       "type": "object",
-      "required": ["token", "facets"],
+      "required": [
+        "token",
+        "facets"
+      ],
       "unevaluatedProperties": false,
       "properties": {
-        "token": { "$ref": "#/$defs/tokenPath" },
+        "token": {
+          "$ref": "#/$defs/tokenPath"
+        },
         "facets": {
           "type": "object",
           "minProperties": 1,
           "additionalProperties": false,
           "properties": {
-            "domain": { "$ref": "common.schema.json#/$defs/conceptRef" },
-            "scale": { "type": "string" },
-            "step": { "type": ["string", "number"] },
-            "emphasis": { "$ref": "common.schema.json#/$defs/conceptRef" },
-            "intent": { "$ref": "common.schema.json#/$defs/conceptRef" },
-            "property": { "$ref": "common.schema.json#/$defs/conceptRef" },
-            "usage": { "type": "string" },
-            "component": { "type": "string" },
-            "part": { "type": "string" },
-            "state": { "$ref": "common.schema.json#/$defs/conceptRef" }
+            "domain": {
+              "$ref": "common.schema.json#/$defs/conceptRef"
+            },
+            "scale": {
+              "type": "string"
+            },
+            "step": {
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            "emphasis": {
+              "$ref": "common.schema.json#/$defs/conceptRef"
+            },
+            "intent": {
+              "$ref": "common.schema.json#/$defs/conceptRef"
+            },
+            "property": {
+              "$ref": "common.schema.json#/$defs/conceptRef"
+            },
+            "usage": {
+              "$ref": "common.schema.json#/$defs/conceptRef"
+            },
+            "component": {
+              "type": "string"
+            },
+            "part": {
+              "type": "string"
+            },
+            "state": {
+              "$ref": "common.schema.json#/$defs/conceptRef"
+            }
           },
-          "dependentRequired": { "part": ["component"] }
+          "dependentRequired": {
+            "part": [
+              "component"
+            ]
+          }
         }
       }
     },
     "mapping": {
-      "allOf": [{ "$ref": "#/$defs/judgment" }],
+      "allOf": [
+        {
+          "$ref": "#/$defs/judgment"
+        }
+      ],
       "type": "object",
-      "required": ["id", "token", "concept", "match", "confidence"],
+      "required": [
+        "id",
+        "token",
+        "concept",
+        "match",
+        "confidence"
+      ],
       "unevaluatedProperties": false,
       "properties": {
-        "id": { "type": "string", "minLength": 1 },
-        "token": { "$ref": "#/$defs/tokenPath" },
-        "concept": { "$ref": "common.schema.json#/$defs/conceptRef" },
-        "match": { "$ref": "common.schema.json#/$defs/slug", "description": "Slug of a concept in dsi:scheme/match-types (exact, close, broad, narrow, related)." },
-        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "token": {
+          "$ref": "#/$defs/tokenPath"
+        },
+        "concept": {
+          "$ref": "common.schema.json#/$defs/conceptRef"
+        },
+        "match": {
+          "$ref": "common.schema.json#/$defs/slug",
+          "description": "Slug of a concept in dsi:scheme/match-types (exact, close, broad, narrow, related)."
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
       }
     },
     "noEquivalent": {
       "description": "The product version has no token for this concept. Absence of a record means unknown.",
-      "allOf": [{ "$ref": "#/$defs/judgment" }],
+      "allOf": [
+        {
+          "$ref": "#/$defs/judgment"
+        }
+      ],
       "type": "object",
-      "required": ["concept"],
+      "required": [
+        "concept"
+      ],
       "unevaluatedProperties": false,
-      "properties": { "concept": { "$ref": "common.schema.json#/$defs/conceptRef" } }
+      "properties": {
+        "concept": {
+          "$ref": "common.schema.json#/$defs/conceptRef"
+        }
+      }
+    },
+    "unmapped": {
+      "description": "No canonical concept fits this token yet: an ontology gap, distinct from not having been assessed.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/judgment"
+        }
+      ],
+      "type": "object",
+      "required": [
+        "token"
+      ],
+      "unevaluatedProperties": false,
+      "properties": {
+        "token": {
+          "$ref": "#/$defs/tokenPath"
+        }
+      }
     }
   }
 }
