@@ -32,7 +32,7 @@ Authored. Changes here change meaning for every consumer; see Rules.
 - **Unbound is not default.** A missing facet means "not specific to that dimension".
 - **Mapping direction**: subject is the native token, object is the concept. `native skos:narrowMatch concept` means the native token is broader.
 - A term change updates `docs/glossary.md` in the same change.
-- The `dsi:` base is a placeholder (`https://dsi.example/ontology/`) until the site domain is chosen; change it only in `context.jsonld`.
+- The `dsi:` base is `https://dsi.nonoun.io/ontology/`, bound only in `context.jsonld`. Concept IRIs should resolve to explorer pages on the site.
 
 ## Checks
 

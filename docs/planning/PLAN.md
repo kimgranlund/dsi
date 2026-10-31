@@ -76,7 +76,7 @@ Show a consistent canonical label (e.g. "Danger") and how each design system rep
 ## 6. Product and operations (decided)
 
 - **Audience**: the author, designers, developers, AI agents.
-- **Form**: public, searchable website hosted on Cloudflare.
+- **Form**: public, searchable website hosted on Cloudflare at `dsi.nonoun.io`. Ontology IRIs use `https://dsi.nonoun.io/ontology/`.
 - **Mapping authorship**: AI agents propose and write mappings through a pipeline: ingest -> map (against the SKOS scheme) -> store as DTCG-compatible data.
 - **License**: MIT for this project.
 - **Component Libraries** are a full category with token ingestion, like Design Systems.
@@ -84,7 +84,6 @@ Show a consistent canonical label (e.g. "Danger") and how each design system rep
 
 ## 7. Open questions
 
-- Site domain: the `dsi:` base IRI is a placeholder (`https://dsi.example/ontology/`) until chosen.
 - Canonical hue names (scale facet) and usage values: deferred to the color concepts work.
 
 - Unmatched canonical tokens: leave unresolved, fall back to the broader match with a flag, or derive a value.
