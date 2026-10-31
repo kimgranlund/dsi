@@ -91,7 +91,7 @@ for (const [name, change, expected] of negatives) {
 
 test('dtcg extension schema accepts provenance and rejects a missing native name', () => {
   const v = createAjv().getSchema('https://dsi.nonoun.io/schema/dtcg-extension.schema.json')!;
-  const ok = { product: 'material', implementation: 'material-web', package: '@material/web', version: '2.4.0', file: 'tokens/_md-sys-color.scss', nativeName: '--md-sys-color-error', extractedAt: '2026-10-31T12:00:00Z' };
+  const ok = { product: 'material', implementation: 'material-web', package: '@material/web', version: '2.4.0', file: 'tokens/_md-sys-color.scss', nativeName: '--md-sys-color-error', rawValue: '#b3261e' };
   assert.equal(v(ok), true, JSON.stringify(v.errors));
   const { nativeName, ...missing } = ok;
   assert.equal(v(missing), false);

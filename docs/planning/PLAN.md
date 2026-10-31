@@ -84,6 +84,9 @@ Show a consistent canonical label (e.g. "Danger") and how each design system rep
 
 ## 7. Open questions
 
+- Align mode files with the DTCG Resolver module (today: per-theme files plus manifest.json).
+- Typing CSS `font` shorthands and multi-corner shapes (13 untyped Material tokens): parse into DTCG composites, or keep untyped.
+
 - Canonical hue names (scale facet) and usage values: deferred to the color concepts work.
 
 - Unmatched canonical tokens: leave unresolved, fall back to the broader match with a flag, or derive a value.

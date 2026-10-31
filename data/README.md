@@ -1,0 +1,16 @@
+# Data
+
+Generated output. **Never hand-edit.** Change the inputs (`sources/`, `ontology/`, `mappings/`, an adapter) and rebuild.
+
+## Kind
+
+Generated, committed so that upstream changes show up as reviewable diffs and the mapper and site can run offline.
+
+| Path | Produced by | From |
+|---|---|---|
+| `native/<product>/<version>/` | `@dsi/ingest` | `sources/<product>/source.json` + the npm package |
+| `canonical/` | `@dsi/canon` (planned) | `ontology/` + `mappings/` + `native/` |
+
+## Checks
+
+`corepack pnpm check` validates `native/`: provenance on every token, DTCG value shapes, aliases resolve in every theme, no cycles, manifest matches files.

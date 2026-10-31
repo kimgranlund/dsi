@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use 'md-ref-palette';
+$_default-light: ('md-ref-palette': md-ref-palette.values(),);
+$_default-dark: ('md-ref-palette': md-ref-palette.values(),);
+@function _wrap($tokens, $exclude-custom-properties) {
+  @if not $exclude-custom-properties {
+    @each $k, $v in $tokens { $tokens: map.set($tokens, $k, var(--md-sys-color-#{$k}, #{$v})); }
+  }
+  @return $tokens;
+}
+@function values-light($deps: $_default-light, $exclude-custom-properties: false) {
+  @return _wrap(('error': map.get($deps, 'md-ref-palette', 'error40'), 'primary': map.get($deps, 'md-ref-palette', 'primary40')), $exclude-custom-properties);
+}
+@function values-dark($deps: $_default-dark, $exclude-custom-properties: false) {
+  @return _wrap(('error': map.get($deps, 'md-ref-palette', 'error80'), 'primary': map.get($deps, 'md-ref-palette', 'primary80')), $exclude-custom-properties);
+}

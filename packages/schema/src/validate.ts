@@ -5,6 +5,7 @@ import { createRequire } from 'node:module';
 import type { Ajv2020 } from 'ajv/dist/2020.js';
 import type { FormatsPlugin } from 'ajv-formats';
 import { expand, inScheme, loadOntology, type Issue, type Ontology } from './ontology.ts';
+import { validateNative } from './native.ts';
 
 // ajv and ajv-formats are CommonJS with a `default` export; load them through require for correct interop.
 const require = createRequire(import.meta.url);
@@ -92,6 +93,9 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
     if (data === undefined || !shape('mapping-file.schema.json', f, data)) continue;
     issues.push(...checkMappingSemantics(ontology, data as MappingFile, rel(f), catalog.has.bind(catalog)));
   }
+
+  // Native tokens
+  validateNative(root, ajv, issues);
   return issues;
 }
 
