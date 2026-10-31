@@ -10,6 +10,7 @@ Generated, committed so that upstream changes show up as reviewable diffs and th
 |---|---|---|
 | `native/<product>/<version>/` | `@dsi/ingest` | `sources/<product>/source.json` + the npm package |
 | `canonical/` | `@dsi/canon` (planned) | `ontology/` + `mappings/` + `native/` |
+| SQLite / D1 (not in git) | `@dsi/db` (planned) | everything above + `catalog/` + `ontology/` |
 
 ## Checks
 

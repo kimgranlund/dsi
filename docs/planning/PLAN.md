@@ -78,6 +78,7 @@ Show a consistent canonical label (e.g. "Danger") and how each design system rep
 ## 6. Product and operations (decided)
 
 - **Audience**: the author, designers, developers, AI agents.
+- **Query database (decided)**: SQLite built in CI from the repo files and served from Cloudflare D1, with FTS5 full-text search and recursive CTEs for alias chains and mappings. Git files stay the source of truth; the database is a projection. An RDF store (SPARQL) is deferred until external users need it.
 - **Form**: public, searchable website hosted on Cloudflare at `dsi.nonoun.io`. Ontology IRIs use `https://dsi.nonoun.io/ontology/`.
 - **Mapping authorship**: AI agents propose and write mappings through a pipeline: ingest -> map (against the SKOS scheme) -> store as DTCG-compatible data.
 - **License**: MIT for this project.

@@ -6,7 +6,8 @@ Status: planned. Folders are created when their first file lands, each with a RE
 
 - TypeScript, pnpm workspaces.
 - Ontology: SKOS in JSON-LD.
-- Site: Vite + vanilla TS, static build deployed to Cloudflare. Client-side search (library TBD).
+- Site: Vite + vanilla TS, static build deployed to Cloudflare.
+- Query database: SQLite generated from the repo files in CI, served from Cloudflare D1, with FTS5 for search. A projection, never the source of truth.
 
 ## Tree
 
@@ -41,6 +42,7 @@ design-system-index/
 │  ├─ ingest/                adapters/<product>.ts: sources -> data/native
 │  ├─ mapper/                Agent mapping pipeline: ontology + native -> mappings
 │  ├─ canon/                 ontology + mappings -> data/canonical
+│  ├─ db/                    builds the SQLite query database (D1) from the repo files
 │  └─ cli/                   `dsi ingest | map | build | validate`
 └─ site/                     Vite + vanilla explorer, reads data/ at build time
 ```
@@ -49,12 +51,14 @@ design-system-index/
 
 ```
 sources/ --ingest--> data/native --map (+ ontology/)--> mappings/ --canon--> data/canonical
-                                                                  \--> site/ (with catalog/)
+                                                                  \--> db (SQLite / D1, + catalog/ + ontology/) --> site/
 ```
 
 Mapping files are plain JSON validated by `@dsi/schema`; their SKOS/RDF form is a generated projection, not a second authored copy.
 
 ## Why this split
+
+- **The database is derived.** Git files hold authority, review state and diffs; `packages/db` rebuilds SQLite from them on every build. Nothing writes to D1 except that build.
 
 - **Authored, agent-authored and generated stay apart.** `data/` can be deleted and rebuilt. `mappings/` cannot: it holds judgments with review state, so the mapper merges into it and never overwrites an approved mapping.
 - **catalog/ vs sources/**: every product gets a catalog entry; only products whose tokens are ingested (Design Systems, Component Libraries, Token Sets) get a source config.
@@ -68,4 +72,5 @@ Mapping files are plain JSON validated by `@dsi/schema`; their SKOS/RDF form is 
 3. `sources/` + `packages/ingest`: Material, Carbon, Polaris done.
 4. `ontology/concepts/color` + `packages/mapper`, first mappings.
 5. `packages/canon`, `data/canonical`.
-6. `site/`, then the remaining concept domains and component tokens.
+6. `packages/db`: SQLite build in CI, D1 deploy, FTS5 search.
+7. `site/`, then the remaining concept domains and component tokens.

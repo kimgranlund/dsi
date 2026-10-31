@@ -20,6 +20,7 @@ A public, searchable index of design-system tokens. Each system's shipped tokens
 | Add or change a concept, facet, tier, category | `docs/glossary.md`, `ontology/README.md` | `docs/decisions/` |
 | Write, review or fix mappings | `mappings/README.md`, `ontology/README.md` | `packages/mapper/README.md` |
 | Canonical token output | `packages/canon/README.md` | `ontology/README.md` |
+| Query database, search | `packages/db/README.md` | `docs/planning/repo-layout.md` |
 | Explorer site | `site/README.md` | `packages/schema/README.md` |
 | Data file shape or validation rule | `packages/schema/README.md` | `ontology/README.md` |
 
