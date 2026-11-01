@@ -33,7 +33,8 @@ const set = loadNative(root, product, version);
 const fileOf = (p: string) => String(set.tokens.get(p)?.prov.file ?? '');
 // Domain from the DTCG type at the end of the alias chain: alias tokens often carry no $type of their own.
 const anyTheme = themeFor(set) ?? '';
-const typeOf = (p: string) => set.tokens.get(p)?.type ?? resolve(set, anyTheme, p).type;
+// A token that exists only in one theme (Material expressive) resolves in that theme.
+const typeOf = (p: string) => { const t = set.tokens.get(p); return t?.type ?? resolve(set, t && !t.byTheme.has(anyTheme) ? [...t.byTheme.keys()][0] : anyTheme, p).type; };
 /**
  * Type used to check a scale role (ADR 0013). A unitless number whose shipped extension names its unit (Carbon fluid
  * spacing: `com.ibm.carbon.layout.unit: vw`) counts as a dimension; an untyped CSS keyword (`auto`) counts as `keyword`.

@@ -131,6 +131,13 @@
             },
             "minItems": 1,
             "description": "sass-vars: module names in the directory at path, in dependency order."
+          },
+          "exclude": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "sass-module: public variables not ingested, e.g. a map that only indexes the others."
           }
         },
         "allOf": [

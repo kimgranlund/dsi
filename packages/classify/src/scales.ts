@@ -6,7 +6,7 @@ export const ROLE_TYPES: Record<string, string[]> = {
   spacing: ['dimension'], 'corner-radius': ['dimension'], 'border-width': ['dimension'], height: ['dimension'], width: ['dimension'], size: ['dimension'], 'icon-size': ['dimension'],
   'container-width': ['dimension'], breakpoint: ['dimension'], 'z-index': ['number', 'keyword'], 'elevation-level': ['number', 'dimension'], opacity: ['number'], shadow: ['shadow', 'keyword', ''],
   'font-family': ['fontFamily'], 'font-weight': ['fontWeight', 'number'], 'font-size': ['dimension'], 'line-height': ['dimension', 'number'], 'letter-spacing': ['dimension'],
-  duration: ['duration'], easing: ['cubicBezier'], transition: ['transition'], keyframes: [''],
+  duration: ['duration'], easing: ['cubicBezier'], 'spring-stiffness': ['number'], 'spring-damping': ['number'], 'corner-shape': [''], transition: ['transition'], keyframes: [''],
 };
 
 export interface ScaleResult { mapped: { token: string; concept: string }[]; leftovers: { token: string; why: string }[] }
@@ -20,6 +20,8 @@ export function mapScales(o: Ontology, terms: TermsFile, tokens: { path: string;
   const out: ScaleResult = { mapped: [], leftovers: [] };
   for (const t of tokens) {
     const c = classify(terms, t.path, t.file, 'color');
+    // A corner token whose value is four radii (untyped: DTCG has no four-corner type) is a Corner shape.
+    if (c.facets.property === 'corner-radius' && !t.type) c.facets.property = 'corner-shape';
     const prop = c.facets.property;
     if (!prop) { out.leftovers.push({ token: t.path, why: c.unknown.length ? `unexplained words: ${c.unknown.join(', ')}` : 'no role term in the name' }); continue; }
     if (c.unknown.length) { out.leftovers.push({ token: t.path, why: `unexplained words: ${c.unknown.join(', ')}` }); continue; }

@@ -67,6 +67,8 @@ function easingCurve(value?: string) {
 }
 
 /** Strip a typography property suffix to get the type style a token belongs to (body-large-font -> body-large). */
+/** The property part of a concept label ("Heading · Font size · Productive" -> "Font size"). */
+const propLabel = (c: Concept | undefined) => { if (!c) return undefined; const i = Object.keys(c.facets).indexOf('property'); const parts = c.label.split(' · '); return parts[i] ?? parts.at(-1); };
 const styleKey = (name: string) => name.replace(/[-.](font-family|font-size|font-weight|font-line-height|font-letter-spacing|line-height|letter-spacing|tracking|weight|size|font)$/, '');
 
 /** A concept's members in one system, as a ruler (or curves), for concept pages. */
@@ -98,7 +100,7 @@ export function renderScales(category: Category, product: string, ts: Token[], b
       return { size: size?.n ?? 0, node: el('div', { class: 'type-row' },
         el('div', { class: 'type-meta' }, el('b', { class: 'mono', text: short(key) }),
           el('span', { class: 'none-note', text: [size && `${round(size.n)}px`, lh && `/${lh.unit === '' ? lh.n : `${round(lh.n)}px`}`, weight && `· ${weight}`].filter(Boolean).join(' ') }),
-          el('span', { class: 'type-tokens' }, members.map((t) => el('a', { class: 'tok-chip', href: tokenHref(product, t.p), 'data-link': true, title: `${t.p}: ${valueOf(t, theme)}`, text: role(t, byIri)?.label.split(' · ').pop() ?? short(t.p) })))),
+          el('span', { class: 'type-tokens' }, members.map((t) => el('a', { class: 'tok-chip', href: tokenHref(product, t.p), 'data-link': true, title: `${t.p}: ${valueOf(t, theme)}`, text: propLabel(role(t, byIri)) ?? short(t.p) })))),
         sample) };
     }).sort((a, b) => b.size - a.size).map((x) => x.node);
     const out: HTMLElement[] = [];

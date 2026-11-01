@@ -5599,21 +5599,36 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/polaris/9.4.2",
    "prefLabel": "shadow-button",
-   "notation": "--p-shadow-button"
+   "notation": "--p-shadow-button",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/elevation/component-button/property-shadow"
+    }
+   ]
   },
   {
    "id": "dsi:native/polaris/9.4.2/shadow-button-hover",
    "type": "Concept",
    "inScheme": "dsi:scheme/native/polaris/9.4.2",
    "prefLabel": "shadow-button-hover",
-   "notation": "--p-shadow-button-hover"
+   "notation": "--p-shadow-button-hover",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/elevation/component-button/property-shadow/state-hover"
+    }
+   ]
   },
   {
    "id": "dsi:native/polaris/9.4.2/shadow-button-inset",
    "type": "Concept",
    "inScheme": "dsi:scheme/native/polaris/9.4.2",
    "prefLabel": "shadow-button-inset",
-   "notation": "--p-shadow-button-inset"
+   "notation": "--p-shadow-button-inset",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/elevation/component-button/property-shadow"
+    }
+   ]
   },
   {
    "id": "dsi:native/polaris/9.4.2/shadow-button-primary",
@@ -6119,21 +6134,36 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/polaris/9.4.2",
    "prefLabel": "space-card-gap",
-   "notation": "--p-space-card-gap"
+   "notation": "--p-space-card-gap",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/space/component-card/property-spacing"
+    }
+   ]
   },
   {
    "id": "dsi:native/polaris/9.4.2/space-card-padding",
    "type": "Concept",
    "inScheme": "dsi:scheme/native/polaris/9.4.2",
    "prefLabel": "space-card-padding",
-   "notation": "--p-space-card-padding"
+   "notation": "--p-space-card-padding",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/space/component-card/property-spacing"
+    }
+   ]
   },
   {
    "id": "dsi:native/polaris/9.4.2/space-table-cell-padding",
    "type": "Concept",
    "inScheme": "dsi:scheme/native/polaris/9.4.2",
    "prefLabel": "space-table-cell-padding",
-   "notation": "--p-space-table-cell-padding"
+   "notation": "--p-space-table-cell-padding",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/space/component-table/part-cell/property-spacing"
+    }
+   ]
   },
   {
    "id": "dsi:native/polaris/9.4.2/text-body-lg-font-family",
@@ -7291,6 +7321,28 @@
    ]
   },
   {
+   "id": "dsi:vocab/polaris/button",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/polaris",
+   "prefLabel": "button",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:component/button"
+    }
+   ]
+  },
+  {
+   "id": "dsi:vocab/polaris/card",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/polaris",
+   "prefLabel": "card",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:component/card"
+    }
+   ]
+  },
+  {
    "id": "dsi:vocab/polaris/caution",
    "type": "Concept",
    "inScheme": "dsi:scheme/vocab/polaris",
@@ -7298,6 +7350,17 @@
    "skos:exactMatch": [
     {
      "id": "dsi:intent/caution"
+    }
+   ]
+  },
+  {
+   "id": "dsi:vocab/polaris/cell",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/polaris",
+   "prefLabel": "cell",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:part/cell"
     }
    ]
   },
@@ -7780,6 +7843,17 @@
     },
     {
      "id": "dsi:usage/surface"
+    }
+   ]
+  },
+  {
+   "id": "dsi:vocab/polaris/table",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/polaris",
+   "prefLabel": "table",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:component/table"
     }
    ]
   },
@@ -11385,6 +11459,43 @@
    "prefLabel": "Color: Surface · Background · Selected"
   },
   {
+   "id": "dsi:concept/elevation/component-button/property-shadow",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/elevation",
+   "dsi:hasComponent": [
+    {
+     "id": "dsi:component/button"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/shadow"
+    }
+   ],
+   "prefLabel": "Elevation: Button · Shadow"
+  },
+  {
+   "id": "dsi:concept/elevation/component-button/property-shadow/state-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/elevation",
+   "dsi:hasComponent": [
+    {
+     "id": "dsi:component/button"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/shadow"
+    }
+   ],
+   "dsi:hasState": [
+    {
+     "id": "dsi:state/hover"
+    }
+   ],
+   "prefLabel": "Elevation: Button · Shadow · Hover"
+  },
+  {
    "id": "dsi:concept/elevation/property-shadow",
    "type": "Concept",
    "inScheme": "dsi:scheme/canonical/elevation",
@@ -11493,6 +11604,43 @@
     }
    ],
    "prefLabel": "Size: Width"
+  },
+  {
+   "id": "dsi:concept/space/component-card/property-spacing",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/space",
+   "dsi:hasComponent": [
+    {
+     "id": "dsi:component/card"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/spacing"
+    }
+   ],
+   "prefLabel": "Space: Card · Spacing"
+  },
+  {
+   "id": "dsi:concept/space/component-table/part-cell/property-spacing",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/space",
+   "dsi:hasComponent": [
+    {
+     "id": "dsi:component/table"
+    }
+   ],
+   "dsi:hasPart": [
+    {
+     "id": "dsi:part/cell"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/spacing"
+    }
+   ],
+   "prefLabel": "Space: Table · Cell · Spacing"
   },
   {
    "id": "dsi:concept/space/property-spacing",

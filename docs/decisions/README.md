@@ -17,3 +17,4 @@ ADRs, one per file: `NNNN-short-title.md` with Status, Context, Decision, Conseq
 | [0011](0011-token-structure.md) | Token groups and order come from the best shipped evidence |
 | [0012](0012-research-backed-ontology.md) | Research-backed facets (Lezer syntax, categorical, brightness) and conventions |
 | [0013](0013-scale-roles.md) | Geometry, typography and motion map as roles; steps stay native and align by value |
+| [0014](0014-style-components-expressive.md) | Style facet, component values, and Material's expressive token set as a mode |

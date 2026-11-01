@@ -125,7 +125,7 @@ export const dtcg: Adapter = (pkgs, source) => {
     const file = `${short}${e.group === short ? "" : "." + e.group}.tokens.json`;
     let set = sets.find((x) => x.file === file);
     if (!set) sets.push((set = { file, tokens: new Map() }));
-    const vars = sassModuleVariables(pkgs, pkg, e.path).filter((v) => !e.variables || e.variables.includes(v.name));
+    const vars = sassModuleVariables(pkgs, pkg, e.path).filter((v) => (!e.variables || e.variables.includes(v.name)) && !e.exclude?.includes(v.name));
     if (e.variables) for (const name of e.variables) if (!vars.some((v) => v.name === name)) throw new Error(`${e.path}: no public variable $${name}`);
     let skipped = 0;
     const put = (keys: string[], v: SassValue, meta: { description?: string; deprecated?: boolean }, varName: string) => {
@@ -149,7 +149,7 @@ export const dtcg: Adapter = (pkgs, source) => {
       counts.literals++;
     };
     for (const v of vars) put([], v.value, v, v.name);
-    notes.push(`${e.path}: ${vars.length} Sass variables evaluated to literals (references inside Sass maps are not proven, so no aliases)${skipped ? `; ${skipped} ${e.skipKeys!.join('/')} entries skipped` : ''}`);
+    notes.push(`${e.path}: ${vars.length} Sass variables evaluated${e.exclude ? ` (${e.exclude.map((x) => '$' + x).join(', ')} excluded: an index of the others)` : ''} to literals (references inside Sass maps are not proven, so no aliases)${skipped ? `; ${skipped} ${e.skipKeys!.join('/')} entries skipped` : ''}`);
   }
   const groupsEntry = source.entries.find((e) => e.format === 'ts-token-groups');
   const structure = groupsEntry ? carbonTokenGroups(path.join(pkgs[pkgOf(groupsEntry)].dir, groupsEntry.path), groupsEntry.path) : undefined;

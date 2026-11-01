@@ -44,6 +44,9 @@ export async function systemView(main: HTMLElement, p: Product) {
   const catCount = (c: Category) => allTs.filter((t) => categoryOf(t) === c).length;
   let cat: Category = 'color';
   try { const saved = localStorage.getItem('dsi-category') as Category | null; if (saved && catCount(saved)) cat = saved; } catch { /* storage unavailable */ }
+  // ?category=typography links straight to a tab.
+  const asked = new URLSearchParams(location.search).get('category') as Category | null;
+  if (asked && catCount(asked)) cat = asked;
   const catBar = el('div', { class: 'cats', role: 'group', 'aria-label': 'Token category' });
   const byIri = new Map(cs.map((c) => [c.iri, c]));
   const byPath = new Map(allTs.map((t) => [t.p, t]));
@@ -72,7 +75,8 @@ export async function systemView(main: HTMLElement, p: Product) {
     const shownMode = modePick.value;
     const v = t.v?.[themeOf()] ?? t.v?.all ?? Object.values(t.v ?? {})[0];
     const c = t.m[0] && byIri.get(t.m[0][0]);
-    const others = modeNames.filter((mo) => mo !== shownMode && t.v?.[p.modes[mo]]).map((mo) => ({ mode: mo, display: t.v![p.modes[mo]][0] }));
+    // A mode whose value repeats the shown one (Material expressive reuses light colors) adds no circle.
+    const others = modeNames.filter((mo) => mo !== shownMode && t.v?.[p.modes[mo]] && t.v[p.modes[mo]][0] !== v?.[0]).map((mo) => ({ mode: mo, display: t.v![p.modes[mo]][0] }));
     return tokenTile({ href: tokenHref(p.id, t.p), name: short(t.p), full: `${t.n}${c ? ` → ${c.label}` : ''}`, shown: v?.[0], others, concept: c ? c.label : t.u ? 'No concept fits' : '', muted: !c });
   };
   /** Palette view: one row per step, one swatch, the tokens that use it as name chips. */

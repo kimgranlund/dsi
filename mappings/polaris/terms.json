@@ -105,6 +105,58 @@
       }
     },
     {
+      "term": "body-lg",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "proposed",
+      "note": "body role at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "body-md",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "proposed",
+      "note": "body role at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "body-sm",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "proposed",
+      "note": "body role at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "body-xs",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "proposed",
+      "note": "body role at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
       "term": "border",
       "concept": "dsi:property/border",
       "match": "exact",
@@ -236,6 +288,68 @@
       }
     },
     {
+      "term": "button",
+      "concept": "dsi:component/button",
+      "match": "exact",
+      "status": "approved",
+      "note": "shadow-button-*, space-button-group-gap: Button component tokens.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.642Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "button-group",
+      "concept": "dsi:component/button-group",
+      "match": "exact",
+      "status": "proposed",
+      "note": "space-button-group-gap: ButtonGroup component; longer than button. (confidence 0.95; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "button-inset",
+      "concept": "dsi:state/active",
+      "match": "close",
+      "status": "proposed",
+      "note": "Docs: shadow-button-inset is the pressed button. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "card",
+      "concept": "dsi:component/card",
+      "match": "exact",
+      "status": "approved",
+      "note": "space-card-*: Card component tokens.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.642Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "caution",
       "concept": "dsi:intent/caution",
       "match": "exact",
@@ -250,6 +364,24 @@
       "review": {
         "by": "agreement",
         "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "cell",
+      "concept": "dsi:part/cell",
+      "match": "exact",
+      "status": "approved",
+      "note": "Table cell part.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.642Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
@@ -269,6 +401,19 @@
         "by": "agreement",
         "at": "2026-11-01T00:41:58.804Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "critical-inset",
+      "concept": "dsi:state/active",
+      "match": "close",
+      "status": "proposed",
+      "note": "Pressed critical button shadow. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -323,6 +468,19 @@
         "by": "agreement",
         "at": "2026-11-01T05:15:09.919Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "ease-in",
+      "concept": "dsi:property/easing",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Named easing curve. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -643,6 +801,97 @@
       }
     },
     {
+      "term": "heading-2xl",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading role at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "heading-3xl",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading role at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "heading-lg",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading role at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "heading-md",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading role at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "heading-sm",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading role at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "heading-xl",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading role at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "heading-xs",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading role at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
       "term": "height",
       "concept": "dsi:property/height",
       "match": "exact",
@@ -782,6 +1031,19 @@
         "by": "agreement",
         "at": "2026-11-01T05:15:09.919Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "keyframes-appear",
+      "concept": "dsi:property/keyframes",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Appear animations. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -1036,6 +1298,45 @@
       }
     },
     {
+      "term": "primary",
+      "concept": "dsi:emphasis/strong",
+      "match": "close",
+      "status": "proposed",
+      "note": "Primary button variant is the highest-emphasis button; no variant facet. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "primary-inset",
+      "concept": "dsi:state/active",
+      "match": "close",
+      "status": "proposed",
+      "note": "Pressed primary button shadow. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "radius",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Only occurs in border-radius. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
       "term": "selected",
       "concept": "dsi:property/background",
       "match": "exact",
@@ -1092,6 +1393,19 @@
       }
     },
     {
+      "term": "shadow-inset",
+      "concept": "dsi:property/shadow",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Inner shadow, a narrower kind of shadow. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
       "term": "space",
       "concept": "dsi:property/spacing",
       "match": "exact",
@@ -1125,6 +1439,19 @@
         "by": "agreement",
         "at": "2026-11-01T00:41:58.804Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "success-inset",
+      "concept": "dsi:state/active",
+      "match": "close",
+      "status": "proposed",
+      "note": "Pressed success button shadow. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -1183,6 +1510,24 @@
       }
     },
     {
+      "term": "table",
+      "concept": "dsi:component/table",
+      "match": "exact",
+      "status": "approved",
+      "note": "space-table-cell-padding: Table component.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.642Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "text",
       "concept": "dsi:property/text",
       "match": "exact",
@@ -1216,6 +1561,58 @@
         "by": "agreement",
         "at": "2026-11-01T05:15:09.919Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "text-body-lg",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "proposed",
+      "note": "body text style at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-body-md",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "proposed",
+      "note": "body text style at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-body-sm",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "proposed",
+      "note": "body text style at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-body-xs",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "proposed",
+      "note": "body text style at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -1254,6 +1651,97 @@
         "by": "agreement",
         "at": "2026-11-01T05:15:09.919Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "text-heading-2xl",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading text style at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-heading-3xl",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading text style at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-heading-lg",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading text style at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-heading-md",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading text style at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-heading-sm",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading text style at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-heading-xl",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading text style at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-heading-xs",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "proposed",
+      "note": "heading text style at a step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:33Z",
+        "method": "terms-v1"
       }
     },
     {

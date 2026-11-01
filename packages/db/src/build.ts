@@ -86,7 +86,7 @@ export async function buildDatabase(root: string, out: string): Promise<Record<s
     for (const [mode, theme] of Object.entries(set.modes)) iMode.run(product, mode, theme);
     const themes = set.themes.length ? set.themes : [''];
     for (const [p, t] of [...set.tokens].sort(([a], [b]) => a.localeCompare(b))) {
-      iToken.run(product, p, String(t.prov.nativeName ?? ''), t.type ?? resolve(set, themes[0], p).type ?? null, t.description ?? null, classified.get(p)?.scope ?? null, (t.prov.visibility as string) ?? null, String(t.prov.file ?? ''), t.deprecated === undefined || t.deprecated === false ? null : typeof t.deprecated === 'string' ? t.deprecated : 'deprecated');
+      iToken.run(product, p, String(t.prov.nativeName ?? ''), t.type ?? resolve(set, t.byTheme.has(themes[0]) ? themes[0] : [...t.byTheme.keys()][0], p).type ?? null, t.description ?? null, classified.get(p)?.scope ?? null, (t.prov.visibility as string) ?? null, String(t.prov.file ?? ''), t.deprecated === undefined || t.deprecated === false ? null : typeof t.deprecated === 'string' ? t.deprecated : 'deprecated');
       for (const th of themes) { const r = resolve(set, th, p); iValue.run(product, p, th, r.value === undefined ? null : JSON.stringify(r.value), showValue(r.type, r.value), JSON.stringify(r.chain)); }
       add('tokens');
     }

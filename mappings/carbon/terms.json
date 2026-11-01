@@ -1,8 +1,211 @@
 {
   "product": "carbon",
   "noise": [
+    "body-compact",
+    "body-compact-font",
+    "body-compact-letter",
+    "body-compact-line",
+    "body-font",
+    "body-font-size",
+    "body-font-weight",
+    "body-letter",
+    "body-letter-spacing",
+    "body-line",
+    "body-line-height",
+    "body-long",
+    "body-long-font",
+    "body-long-letter",
+    "body-long-line",
+    "body-short",
+    "body-short-font",
+    "body-short-letter",
+    "body-short-line",
+    "border-radius-border",
+    "breakpoint-lg",
+    "breakpoint-max",
+    "breakpoint-md",
+    "breakpoint-xlg",
+    "caption-font",
+    "caption-font-size",
+    "caption-font-weight",
+    "caption-letter",
+    "caption-letter-spacing",
+    "caption-line",
+    "caption-line-height",
+    "code-font",
+    "code-font-family",
+    "code-font-size",
+    "code-font-weight",
+    "code-letter",
+    "code-letter-spacing",
+    "code-line",
+    "code-line-height",
+    "compact-font",
+    "compact-font-size",
+    "compact-font-weight",
+    "compact-letter",
+    "compact-letter-spacing",
+    "compact-line",
+    "compact-line-height",
+    "container-container",
+    "display-font",
+    "display-font-size",
+    "display-font-weight",
+    "display-letter",
+    "display-letter-spacing",
+    "display-line",
+    "display-line-height",
+    "duration-fast",
+    "duration-moderate",
+    "duration-slow",
+    "easing-entrance",
+    "easing-exit",
+    "easing-standard",
+    "expressive-heading-font",
+    "expressive-heading-letter",
+    "expressive-heading-line",
+    "expressive-paragraph-font",
+    "families",
+    "families-sans",
+    "families-sans-thai",
+    "family",
     "fluid",
-    "sm"
+    "font",
+    "font-families-sans",
+    "heading-compact",
+    "heading-compact-font",
+    "heading-compact-letter",
+    "heading-compact-line",
+    "heading-font",
+    "heading-font-size",
+    "heading-font-weight",
+    "heading-letter",
+    "heading-letter-spacing",
+    "heading-line",
+    "heading-line-height",
+    "height",
+    "helper-text-font",
+    "helper-text-letter",
+    "helper-text-line",
+    "icon-size-icon",
+    "index",
+    "label-font",
+    "label-font-size",
+    "label-font-weight",
+    "label-letter",
+    "label-letter-spacing",
+    "label-line",
+    "label-line-height",
+    "layout-layout",
+    "legal-font",
+    "legal-font-size",
+    "legal-font-weight",
+    "legal-letter",
+    "legal-letter-spacing",
+    "legal-line",
+    "legal-line-height",
+    "letter",
+    "line",
+    "long-font",
+    "long-font-size",
+    "long-font-weight",
+    "long-letter",
+    "long-letter-spacing",
+    "long-line",
+    "long-line-height",
+    "paragraph-font",
+    "paragraph-font-size",
+    "paragraph-font-weight",
+    "paragraph-letter",
+    "paragraph-letter-spacing",
+    "paragraph-line",
+    "paragraph-line-height",
+    "productive-heading-font",
+    "productive-heading-letter",
+    "productive-heading-line",
+    "quotation-font",
+    "quotation-font-family",
+    "quotation-font-size",
+    "quotation-font-weight",
+    "quotation-letter",
+    "quotation-letter-spacing",
+    "quotation-line",
+    "quotation-line-height",
+    "radius",
+    "radius-border",
+    "radius-border-radius",
+    "scale",
+    "short-font",
+    "short-font-size",
+    "short-font-weight",
+    "short-letter",
+    "short-letter-spacing",
+    "short-line",
+    "short-line-height",
+    "size-icon",
+    "size-icon-size",
+    "sm",
+    "spacing-spacing",
+    "text-font",
+    "text-font-size",
+    "text-letter",
+    "text-letter-spacing",
+    "text-line",
+    "text-line-height",
+    "type",
+    "type-body",
+    "type-body-compact",
+    "type-body-font",
+    "type-body-letter",
+    "type-body-line",
+    "type-body-long",
+    "type-body-short",
+    "type-caption",
+    "type-caption-font",
+    "type-caption-letter",
+    "type-caption-line",
+    "type-code",
+    "type-code-font",
+    "type-code-letter",
+    "type-code-line",
+    "type-display",
+    "type-display-font",
+    "type-display-letter",
+    "type-display-line",
+    "type-expressive",
+    "type-expressive-heading",
+    "type-expressive-paragraph",
+    "type-font",
+    "type-font-families",
+    "type-font-weights",
+    "type-heading",
+    "type-heading-compact",
+    "type-heading-font",
+    "type-heading-letter",
+    "type-heading-line",
+    "type-helper",
+    "type-helper-text",
+    "type-label",
+    "type-label-font",
+    "type-label-letter",
+    "type-label-line",
+    "type-legal",
+    "type-legal-font",
+    "type-legal-letter",
+    "type-legal-line",
+    "type-paragraph",
+    "type-paragraph-font",
+    "type-productive",
+    "type-productive-heading",
+    "type-quotation",
+    "type-quotation-font",
+    "type-quotation-letter",
+    "type-quotation-line",
+    "type-type",
+    "type-type-scale",
+    "weight",
+    "weights",
+    "z"
   ],
   "scopes": [
     {
@@ -24,6 +227,10 @@
     {
       "file": "theme.tokens.json",
       "scope": "semantic"
+    },
+    {
+      "file": ".scss",
+      "scope": "foundation"
     },
     {
       "file": ".tokens.json",
@@ -86,6 +293,24 @@
       }
     },
     {
+      "term": "body",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "approved",
+      "note": "Running-text type styles.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "border",
       "concept": "dsi:property/border",
       "match": "exact",
@@ -136,6 +361,24 @@
       "review": {
         "by": "agreement",
         "at": "2026-11-01T00:41:58.679Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "breakpoint",
+      "concept": "dsi:property/breakpoint",
+      "match": "exact",
+      "status": "approved",
+      "note": "Grid breakpoints; breakpoint.<step>.width is the viewport width.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
@@ -250,6 +493,24 @@
       }
     },
     {
+      "term": "display",
+      "concept": "dsi:usage/display",
+      "match": "exact",
+      "status": "approved",
+      "note": "Largest display type styles.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "duration",
       "concept": "dsi:property/duration",
       "match": "exact",
@@ -301,6 +562,50 @@
         "by": "agreement",
         "at": "2026-11-01T00:41:58.679Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "expressive",
+      "concept": "dsi:style/expressive",
+      "match": "exact",
+      "status": "approved",
+      "note": "Carbon expressive style (easing and type styles).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "expressive-heading",
+      "concept": "dsi:style/expressive",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Type style family expressive-heading-01..06 (ADR 0014). (confidence 0.9); both agents gave this, claude-sonnet-5-5 at confidence 0.75",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "expressive-paragraph",
+      "concept": "dsi:style/expressive",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Type style family expressive-paragraph-01 (ADR 0014). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -371,6 +676,114 @@
       "review": {
         "by": "agreement",
         "at": "2026-11-01T00:41:58.679Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "font-families",
+      "concept": "dsi:property/font-family",
+      "match": "exact",
+      "status": "approved",
+      "note": "type.font-families.mono/sans/serif...: the typeface stacks.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "font-family",
+      "concept": "dsi:property/font-family",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typeface of a type style.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "font-size",
+      "concept": "dsi:property/font-size",
+      "match": "exact",
+      "status": "approved",
+      "note": "Size of text in a type style.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "font-weight",
+      "concept": "dsi:property/font-weight",
+      "match": "exact",
+      "status": "approved",
+      "note": "Weight of a type style.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "font-weights",
+      "concept": "dsi:property/font-weight",
+      "match": "exact",
+      "status": "approved",
+      "note": "type.font-weights.light/regular/semibold: the weight set.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "heading",
+      "concept": "dsi:usage/heading",
+      "match": "exact",
+      "status": "approved",
+      "note": "Heading type styles (productive/expressive/fluid heading, heading-compact).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
@@ -500,6 +913,24 @@
       }
     },
     {
+      "term": "label",
+      "concept": "dsi:usage/label",
+      "match": "exact",
+      "status": "approved",
+      "note": "Carbon label-01/02: small text in components and field labels.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "layer",
       "concept": "dsi:property/background",
       "match": "close",
@@ -549,6 +980,42 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:27:33.659Z"
+      }
+    },
+    {
+      "term": "letter-spacing",
+      "concept": "dsi:property/letter-spacing",
+      "match": "exact",
+      "status": "approved",
+      "note": "Tracking of a type style.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "line-height",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "approved",
+      "note": "Line height of a type style.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -604,6 +1071,19 @@
         "by": "agreement",
         "at": "2026-11-01T00:41:58.679Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "margin",
+      "concept": "dsi:property/spacing",
+      "match": "close",
+      "status": "proposed",
+      "note": "Grid margin per breakpoint. (confidence 0.55; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T05:50:24.231Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -716,6 +1196,19 @@
       }
     },
     {
+      "term": "paragraph",
+      "concept": "dsi:usage/body",
+      "match": "close",
+      "status": "proposed",
+      "note": "expressive/fluid-paragraph-01: large running text, a body style. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      }
+    },
+    {
       "term": "popover",
       "concept": "dsi:usage/overlay",
       "match": "broad",
@@ -748,6 +1241,37 @@
         "by": "kimgranlund",
         "at": "2026-11-01T01:44:31.694Z",
         "note": "Rejected after audit: most of its own approved tokens disagree."
+      }
+    },
+    {
+      "term": "productive",
+      "concept": "dsi:style/productive",
+      "match": "exact",
+      "status": "approved",
+      "note": "Carbon productive style (easing and type styles).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "productive-heading",
+      "concept": "dsi:style/productive",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Type style family productive-heading-01..07 (ADR 0014). (confidence 0.9); both agents gave this, claude-sonnet-5-5 at confidence 0.75",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -1074,6 +1598,32 @@
       }
     },
     {
+      "term": "type-scale",
+      "concept": "dsi:property/font-size",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Carbon type scale type-scale.1..23 is the font-size ramp. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "type-scale",
+      "concept": "dsi:property/font-size",
+      "match": "close",
+      "status": "proposed",
+      "note": "type-scale.N are the numeric font-size steps. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T05:50:24.231Z",
+        "method": "terms-v1"
+      }
+    },
+    {
       "term": "visited",
       "concept": "dsi:state/visited",
       "match": "exact",
@@ -1108,26 +1658,82 @@
         "at": "2026-11-01T00:41:58.679Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
+    },
+    {
+      "term": "width",
+      "concept": "dsi:property/width",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Only in breakpoint.<step>.width; the longer breakpoint term sets the role there. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "z-index",
+      "concept": "dsi:property/z-index",
+      "match": "exact",
+      "status": "approved",
+      "note": "Stacking order of layers.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:51:20.126Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:51:43.198Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
     }
   ],
   "steps": [
     "2xl",
+    "arabic",
+    "compact",
+    "condensed",
     "contextual",
+    "devanagari",
     "disclosure",
+    "dropdown",
     "entrance",
     "exit",
     "expand",
     "expressive",
     "fast",
+    "floating",
+    "footer",
+    "header",
+    "hebrew",
+    "hidden",
     "invoke",
+    "jp",
+    "kr",
     "lg",
+    "light",
+    "long",
+    "looped",
     "max",
     "md",
+    "modal",
     "moderate",
+    "mono",
+    "overflow",
     "productive",
+    "regular",
+    "sans",
+    "semibold",
+    "serif",
+    "short",
     "slow",
     "standard",
+    "thai",
     "xl",
+    "xlg",
     "xs"
   ]
 }

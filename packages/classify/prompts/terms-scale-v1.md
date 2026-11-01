@@ -11,6 +11,10 @@ Non-color tokens are **scales**: `space-100 .. space-3200`, `corner-small .. cor
 - **State words** (hover, pressed/active, focus, dragged, disabled) map to `state` values, e.g. Material `hover-state-layer-opacity`.
 - **Step words** name positions on a scale: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `small`, `medium`, `large`, `fast`, `moderate`, `slow`, `extra-small`, numbers, `full`, `none`, `0`. Answer them with `"ignore": "step"`.
 - **Noise** (`md`, `sys`, `ref`, product prefixes) is `"ignore": "noise"`.
+- **Style words** (ADR 0014) map to `style`: Carbon `productive` -> `dsi:style/productive` (exact), `expressive` -> `dsi:style/expressive` (exact); Material easing sets `standard` -> `dsi:style/productive` and `emphasized` -> `dsi:style/expressive` (close: Material's names). A word that names a type style family rather than a motion style follows the same rule (`productive-heading`, `expressive-heading`).
+- **Component words** map to `component` values (`button`, `card`, `table`, `button-group`), and anatomy words to `part` (`cell`), only when the ontology lists them.
+- **Spring words**: `stiffness` -> `dsi:property/spring-stiffness`, `damping` -> `dsi:property/spring-damping`; spring names (`default`, `fast`, `slow`, `spatial`, `effects`) are steps.
+- **Corner sides** (`top`, `start`, `end`) on a corner token pick which corners round: they are steps; the classifier files four-value corners under Corner shape.
 
 ## Input and output
 
@@ -25,7 +29,7 @@ The packet (`<product>.<role>.packet.json`) lists `ontology` (allowed values; ea
   ] }
 ```
 
-Check it with `node packages/classify/src/cli.ts vocab-check <product> terms-scale-r1 <role>`.
+Check it with `node packages/classify/src/cli.ts vocab-check <product> <run> <role>`.
 
 ## Rules
 
