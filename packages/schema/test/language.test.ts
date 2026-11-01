@@ -25,7 +25,7 @@ test('L3 head is the domain noun without a property, and shadow color is named a
 
 test('L4 generated definitions use the frame', () => {
   const p = parseConcept(o, 'dsi:concept/color/intent-danger/usage-page/property-background/state-hover') as any;
-  assert.equal(conceptDefinition(lex, p), 'The color of backgrounds that signals danger on the page, when hovered.');
+  assert.equal(conceptDefinition(lex, p), 'The color of backgrounds that communicates danger on the page, when hovered.');
 });
 
 test('emphasis default is never bound and opacity lives in its own domain', () => {

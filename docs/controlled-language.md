@@ -111,14 +111,14 @@ Definitions follow the genus-differentia form: what kind of thing it is, then wh
 **Registered concept definitions** are generated from this frame (amended 2026-11-01, ADR 0019):
 
 ```
-<genus>[ of the <part>][ that signals <intent>][ <usage phrase>][ of the <component>[ <part>]][ for <syntax> in code][, in <hue>][, <style> style][, <brightness>][, at <emphasis> emphasis][, when <state>].
+<genus>[ of the <part>][ that communicates <intent>][ <usage phrase>][ of the <component>[ <part>]][ for <syntax> in code][, in <hue>][, <style> style][, <brightness>][, at <emphasis> emphasis][, when <state>].
 ```
 
 - **Genus.** In the color domain, "The color of <property phrase>" ("The color of text", "The color of backgrounds"), or "A color" with no property. In other domains, "The <property>", or "A <domain noun>".
 - **No circular definitions.** A concept outside the color domain that binds one facet takes that value's own definition ("Duration": "Length of an animation.").
-- **Phrases.** Usage and color properties read as the phrase recorded on the word (`dsi:phrase`): usage/categorical "in a categorical set", property/foreground "text and icons". Syntax reads as its definition's noun phrase ("for a literal color value in code").
+- **Phrases.** Usage and color properties read as the phrase recorded on the word (`dsi:phrase`): usage/categorical "in a categorical set", usage/on-fill "on a bold background", property/foreground "text and icons". Syntax reads as its definition's noun phrase ("for a literal color value in code").
 
-For example: "The color of backgrounds that signals danger on the page, when hovered." A reviewer may replace it with a hand-written definition, which then follows the facet rules above.
+For example: "The color of backgrounds that communicates danger on the page, when hovered." A reviewer may replace it with a hand-written definition, which then follows the facet rules above.
 
 ## 7. L5 Match statement
 

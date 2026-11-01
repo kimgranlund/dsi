@@ -111,7 +111,7 @@ export function conceptName(lex: Map<string, Word>, p: ParsedConcept): string {
  * - color with a property: "The color of <property phrase>"; color without one: "A color";
  *   other domains: "The <property>" (or "A <domain noun>").
  * - a concept with one facet outside the color domain takes that value's own definition (never circular).
- * - then "[ that signals <intent>][ <usage phrase>][ of the <component>[ <part>]][ for <syntax definition> in code]
+ * - then "[ that communicates <intent>][ <usage phrase>][ of the <component>[ <part>]][ for <syntax definition> in code]
  *   [, in <hue>][, <style> style][, <brightness>][, at <emphasis> emphasis][, when <state>]."
  */
 export function conceptDefinition(lex: Map<string, Word>, p: ParsedConcept): string {
@@ -125,7 +125,7 @@ export function conceptDefinition(lex: Map<string, Word>, p: ParsedConcept): str
     ? (prop ? `The color of ${word('property', prop)?.phrase ?? form(lex, 'property', prop)}` : 'A color')
     : (prop ? `The ${form(lex, 'property', prop)}` : `A ${form(lex, 'domain', p.domain)}`);
   if (f.part && !f.component) s += ` of the ${w('part', f.part)}`; // code-surface parts: "of the gutter on code surfaces"
-  if (f.intent) s += ` that signals ${w('intent', f.intent)}`;
+  if (f.intent) s += ` that communicates ${w('intent', f.intent)}`;
   if (f.usage) s += ` ${phrase('usage', f.usage)}`;
   if (f.component) s += ` of the ${w('component', f.component)}${f.part ? ` ${w('part', f.part)}` : ''}`;
   if (f.syntax) {
