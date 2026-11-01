@@ -261,11 +261,12 @@
           "says": "The hover state color of main actions, like primary buttons."
         },
         {
-          "kind": "docs",
-          "source": "docs/decisions/0008-mapping-conventions.md",
-          "says": "\"brand\" -> intent-accent, close (example color-bg-fill-brand)"
+          "kind": "value",
+          "source": "color-bg-fill-brand-hover",
+          "says": "#1a1a1a in light, #f3f3f3 in dark-experimental: a bold fill for primary actions, a hover of the brand (accent) fill, not a status color."
         }
-      ]
+      ],
+      "note": "Re-audited after the Jev pre-screen (claude-haiku-5-5, 2026-11-01T17:26:00Z)."
     },
     {
       "token": "color-bg-fill-brand-selected",
@@ -2668,14 +2669,25 @@
     {
       "token": "color-text-emphasis-hover",
       "mappingId": "m-3a93451a1618",
-      "verdict": "supported",
+      "verdict": "insufficient",
       "evidence": [
         {
           "kind": "description",
           "source": "color-text-emphasis-hover",
           "says": "The hover state color for text indicating areas of focus."
+        },
+        {
+          "kind": "value",
+          "source": "color-text-emphasis-hover",
+          "says": "#004299 (blue.14) in every theme; a dark blue text value, which does not by itself show a region highlight."
+        },
+        {
+          "kind": "docs",
+          "source": "https://polaris-react.shopify.com/tokens/color",
+          "says": "Redirects to https://shopify.dev/docs/api/polaris, which has no color token guidance; the official color-token purpose could not be read."
         }
-      ]
+      ],
+      "note": "Re-audited after the Jev pre-screen (claude-haiku-5-5, 2026-11-01T17:26:00Z)."
     },
     {
       "token": "color-text-info",

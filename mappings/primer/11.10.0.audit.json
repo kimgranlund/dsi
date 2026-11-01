@@ -758,8 +758,14 @@
           "kind": "description",
           "source": "bgColor.upsell.emphasis",
           "says": "Strong background for prominent upsell elements"
+        },
+        {
+          "kind": "value",
+          "source": "bgColor.upsell.emphasis",
+          "says": "Aliases bgColor.done.emphasis (purple.5 #8250df light, #8957e5 dark); the strongest background step of the upsell family, matching emphasis-strong."
         }
-      ]
+      ],
+      "note": "Re-audited after the Jev pre-screen (claude-haiku-5-5, 2026-11-01T17:26:00Z)."
     },
     {
       "token": "bgColor.upsell.muted",
@@ -770,8 +776,14 @@
           "kind": "description",
           "source": "bgColor.upsell.muted",
           "says": "Subtle background for upsell and promotional content"
+        },
+        {
+          "kind": "value",
+          "source": "bgColor.upsell.muted",
+          "says": "#fbefff light (purple.0), dark purple at alpha 0.149; the subtlest step of the family, matching emphasis-subtle."
         }
-      ]
+      ],
+      "note": "Re-audited after the Jev pre-screen (claude-haiku-5-5, 2026-11-01T17:26:00Z)."
     },
     {
       "token": "borderColor.accent.emphasis",
@@ -967,8 +979,14 @@
           "kind": "description",
           "source": "borderColor.upsell.emphasis",
           "says": "Strong border for prominent upsell elements"
+        },
+        {
+          "kind": "value",
+          "source": "borderColor.upsell.emphasis",
+          "says": "#8250df light (purple.5), #8957e5 dark; a solid, stronger border than the muted variant."
         }
-      ]
+      ],
+      "note": "Re-audited after the Jev pre-screen (claude-haiku-5-5, 2026-11-01T17:26:00Z)."
     },
     {
       "token": "borderColor.upsell.muted",
@@ -979,8 +997,14 @@
           "kind": "description",
           "source": "borderColor.upsell.muted",
           "says": "Subtle border for upsell and promotional content"
+        },
+        {
+          "kind": "value",
+          "source": "borderColor.upsell.muted",
+          "says": "#c297ff at alpha 0.4 light, #ab7df8 at alpha 0.4 dark; a translucent border, the subtle step."
         }
-      ]
+      ],
+      "note": "Re-audited after the Jev pre-screen (claude-haiku-5-5, 2026-11-01T17:26:00Z)."
     },
     {
       "token": "borderRadius.default",
@@ -1268,6 +1292,23 @@
           "kind": "value",
           "source": "codeMirror.syntax.fgColor.string",
           "says": "light base.color.blue.8=#0a3069"
+        }
+      ]
+    },
+    {
+      "token": "codeMirror.syntax.fgColor.support",
+      "mappingId": "m-9a678416bf78",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://lezer.codemirror.net/docs/ref/#highlight.tags",
+          "says": "The Lezer \"standard\" modifier is documented as marking names that \"belong to the language's standard environment\"; a \"support\" tag is not in the visible part of the page (the page was truncated), so the link from \"support\" to \"standard\" is not confirmed."
+        },
+        {
+          "kind": "value",
+          "source": "codeMirror.syntax.fgColor.support",
+          "says": "blue.6 #0550ae light, blue.2 #79c0ff dark; a code text color, consistent with a syntax role but not specific to standard names."
         }
       ]
     },
@@ -5536,6 +5577,33 @@
       ]
     },
     {
+      "token": "fgColor.severe",
+      "mappingId": "m-8db2cb5c6b5e",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "fgColor.severe",
+          "says": "Severe text for high-priority warnings"
+        },
+        {
+          "kind": "docs",
+          "source": "https://primer.style/foundations/color",
+          "says": "Foreground table values: --fgColor-attention #9a6700 (yellow), --fgColor-severe #bc4c00 (orange), --fgColor-danger #d1242f (red). Severe sits between the warning (attention) and danger tokens; the page gives no prose definition."
+        },
+        {
+          "kind": "value",
+          "source": "fgColor.severe",
+          "says": "Light orange.5 #bc4c00, dark orange.4 #db6d28; a stronger warning than the attention base, so the mapping needs strong emphasis, not just warning."
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-warning/property-foreground/emphasis-strong",
+        "match": "close"
+      },
+      "note": "Warning with strong emphasis follows the ADR 0012 warning ladder (Carbon caution-major). ADR 0008 names intent-caution broad for severity between warning and danger; the description says high-priority warnings, so the warning ladder fits better."
+    },
+    {
       "token": "fgColor.success",
       "mappingId": "m-eb52163f45dc",
       "verdict": "supported",
@@ -5556,8 +5624,14 @@
           "kind": "description",
           "source": "fgColor.upsell",
           "says": "Text color for upsell and promotional content"
+        },
+        {
+          "kind": "value",
+          "source": "fgColor.upsell",
+          "says": "Aliases fgColor.done (purple.5 #8250df light, purple.4 #ab7df8 dark); a text color for the upsell family, matching property-foreground."
         }
-      ]
+      ],
+      "note": "Re-audited after the Jev pre-screen (claude-haiku-5-5, 2026-11-01T17:26:00Z)."
     },
     {
       "token": "focus.outline-color",
@@ -5836,18 +5910,6 @@
       ]
     },
     {
-      "token": "prettylights.syntax.brackethighlighter.angle",
-      "mappingId": "m-b3ba14326291",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "description",
-          "source": "prettylights.syntax.brackethighlighter.angle",
-          "says": "Deprecated. Use prettylights.syntax.bracketHighlighterAngle instead."
-        }
-      ]
-    },
-    {
       "token": "prettylights.syntax.bracketHighlighterAngle",
       "mappingId": "m-98027faf9fcf",
       "verdict": "supported",
@@ -5856,6 +5918,18 @@
           "kind": "description",
           "source": "prettylights.syntax.bracketHighlighterAngle",
           "says": "Syntax highlighting color for angle brackets"
+        }
+      ]
+    },
+    {
+      "token": "prettylights.syntax.brackethighlighter.angle",
+      "mappingId": "m-b3ba14326291",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "prettylights.syntax.brackethighlighter.angle",
+          "says": "Deprecated. Use prettylights.syntax.bracketHighlighterAngle instead."
         }
       ]
     },

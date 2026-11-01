@@ -472,22 +472,27 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "docs",
-          "source": "https://m3.material.io/styles/color/roles",
-          "says": "Primary container: Standout fill color against surface, for key components like FAB"
+          "kind": "description",
+          "source": "md.sys.color.primary-container",
+          "says": "Standout container color for key components"
         },
         {
           "kind": "docs",
-          "source": "https://api.flutter.dev/flutter/material/ColorScheme-class.html",
-          "says": "primaryContainer: A color used for elements needing less emphasis than primary."
+          "source": "https://github.com/material-components/material-web/blob/main/docs/theming/color.md",
+          "says": "Token listed in the Primary row of the token table; each token has an on-<token> content color (container role)."
         },
         {
           "kind": "usage",
-          "source": "md.comp.fab.primary-container-color",
-          "says": "Container (background) fill."
+          "source": "md.sys.color.primary-container",
+          "says": "6 shipped tokens alias it, all with a background role (fab primary-container-color, switch selected handle colors, progress indicator active colors)."
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.primary-container",
+          "says": "light #eaddff (primary90), dark #4f378b (primary30); a light container fill, so subtle emphasis fits."
         }
       ],
-      "note": "close is apt: a tonal accent fill, lower emphasis than primary but still a standout fill."
+      "note": "Re-audited after the Jev pre-screen (claude-haiku-5-5, 2026-11-01T17:26:00Z)."
     },
     {
       "token": "md.sys.color.primary-fixed",
