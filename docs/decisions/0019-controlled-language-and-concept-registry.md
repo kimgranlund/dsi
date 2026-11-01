@@ -21,5 +21,5 @@ Facet words are a closed list enforced by `parseConcept`, but which combinations
 
 ## Amendment, 2026-11-01: emphasis/default retired
 
-The lexicon still held `emphasis/default`, defined as "not implied by an unbound facet", the opposite of this ADR's rule, and Atlassian's term `default` was approved to it. The owner retired the value: `emphasis/default` is `deprecated`, and `default` is a noise word for Primer and Atlassian (their term mappings to it are rejected). `dsi-map language-sweep` now also checks queued and approved term mappings for deprecated values.
+The lexicon still held `emphasis/default`, defined as "not implied by an unbound facet", the opposite of this ADR's rule, and Atlassian's term `default` was approved to it. The owner retired the value: `emphasis/default` is `deprecated`, and `default` is a noise word for Primer and Atlassian (their term mappings to it are rejected). The validator refuses any proposed or approved term mapping to a deprecated value; rejected records keep their history.
 
