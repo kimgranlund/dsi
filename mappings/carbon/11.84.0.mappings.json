@@ -1505,6 +1505,436 @@
       }
     },
     {
+      "id": "m-56692a53b84e",
+      "token": "chat-avatar-agent",
+      "concept": "dsi:concept/color/component-chat/part-avatar/property-background",
+      "match": "broad",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Avatar fill for human agents in chat, one of three participant kinds. Evidence: description (\"Avatar background color for human agents in chat\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-avatar/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-c3d2843ed30c",
+      "token": "chat-avatar-bot",
+      "concept": "dsi:concept/color/intent-ai/component-chat/part-avatar/property-background",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Background of the chat avatar for AI bots, which marks automated content. Evidence: description (identify automated or AI-generated responses).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-f9e22ab56d4a",
+      "token": "chat-avatar-bot",
+      "concept": "dsi:concept/color/component-chat/part-avatar/property-background",
+      "match": "broad",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Avatar fill for AI bots in chat, one of three participant kinds; its gray value carries no AI color. Evidence: description (\"Avatar background color for AI bots\"); value (gray.60).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-9d97ce3fef56",
+      "token": "chat-avatar-user",
+      "concept": "dsi:concept/color/component-chat/part-avatar/property-background",
+      "match": "broad",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Avatar fill for the current user in chat, one of three participant kinds. Evidence: description (\"Avatar background color for users in chat\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-avatar/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-b7be949615a8",
+      "token": "chat-bubble-agent",
+      "concept": "dsi:concept/color/component-chat/part-bubble/property-background",
+      "match": "broad",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Fill of message bubbles from human agents, one of two bubble kinds. Evidence: description (\"Background color for agent message bubbles\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-bubble/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-6a8294778327",
+      "token": "chat-bubble-agent-text",
+      "concept": "dsi:concept/color/component-chat/part-bubble/property-text",
+      "match": "broad",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Text color inside agent message bubbles, one of two bubble kinds. Evidence: description (\"Text color for agent message bubbles\"); sibling (Carbon ships a separate icon family).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-bubble/property-text: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-7e1f2b36ba0d",
+      "token": "chat-bubble-border",
+      "concept": "dsi:concept/color/component-chat/part-bubble/property-border",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Border of every chat message bubble. Evidence: description (\"Border color for chat message bubbles... all message types\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-bubble/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-61f20924719b",
+      "token": "chat-bubble-user",
+      "concept": "dsi:concept/color/component-chat/part-bubble/property-background",
+      "match": "broad",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Fill of message bubbles from the current user, one of two bubble kinds. Evidence: description (\"Background color for user message bubbles\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-bubble/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-fe49c058a72d",
+      "token": "chat-bubble-user-text",
+      "concept": "dsi:concept/color/component-chat/part-bubble/property-text",
+      "match": "broad",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Text color inside user message bubbles, one of two bubble kinds. Evidence: description (\"Text color for user message bubbles\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-bubble/property-text: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-2b5143a0f0e3",
+      "token": "chat-button",
+      "concept": "dsi:concept/color/component-chat/property-icon",
+      "match": "broad",
+      "confidence": 0.65,
+      "status": "proposed",
+      "rationale": "Icon color of the action buttons inside a chat. Evidence: description (icon color for chat action buttons).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-43608876ff63",
+      "token": "chat-button",
+      "concept": "dsi:concept/color/component-chat/part-icon/property-icon",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Icon color of action buttons inside the chat interface, one case of chat icons. Evidence: description (\"Icon color for chat action buttons\"); value (blue.60, the interactive blue).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-d36ad4ee3635",
+      "token": "chat-button-active",
+      "concept": "dsi:concept/color/component-chat/property-background/state-active",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Translucent fill of chat action buttons while pressed, one chat control. Evidence: description (\"Background color for chat buttons in active/pressed state\"); value (gray.50 at 0.5 alpha).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/property-background/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-969b3c7135fd",
+      "token": "chat-button-hover",
+      "concept": "dsi:concept/color/component-chat/property-background/state-hover",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Translucent fill of chat action buttons under the pointer, one chat control. Evidence: description (\"Background color for chat buttons on hover\"); value (gray.50 at 0.12 alpha).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/property-background/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-205510e4a750",
+      "token": "chat-button-selected",
+      "concept": "dsi:concept/color/component-chat/property-background/state-selected",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Translucent fill of the selected chat action button, one chat control. Evidence: description (\"Background color for selected chat buttons\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/property-background/state-selected: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-704c041c59b8",
+      "token": "chat-button-text-hover",
+      "concept": "dsi:concept/color/component-chat/property-text/state-hover",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Text color of chat action buttons under the pointer, one chat control. Evidence: description (\"Text color for chat buttons on hover\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/property-text/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-8ffcf51c8218",
+      "token": "chat-button-text-selected",
+      "concept": "dsi:concept/color/component-chat/property-text/state-selected",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Text color of the selected chat action button, one chat control. Evidence: description (\"Text color for selected chat buttons\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/property-text/state-selected: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-f8c375e600ec",
+      "token": "chat-header-background",
+      "concept": "dsi:concept/color/component-chat/part-header/property-background",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Fill of the chat header region. Evidence: description (\"Background color for chat header\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-header/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-e3a46b7f9375",
+      "token": "chat-header-text",
+      "concept": "dsi:concept/color/component-chat/part-header/property-text",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Text color of titles and labels in the chat header. Evidence: description (\"Text color for chat header\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-header/property-text: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-0440d3ee02b0",
+      "token": "chat-prompt-background",
+      "concept": "dsi:concept/color/component-chat/part-prompt/property-background",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Fill of the chat message composition area. Evidence: description (\"Background color for chat input prompt area\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-prompt/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-b85f8b6b1398",
+      "token": "chat-prompt-border-end",
+      "concept": "dsi:concept/color/component-chat/part-prompt/property-border",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "End stop of the chat prompt border gradient, one of two stops. Evidence: description (\"End color for chat prompt border gradient\"); value (gray.10 at 0 alpha).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-f3ad652b72c4",
+      "token": "chat-prompt-border-start",
+      "concept": "dsi:concept/color/component-chat/part-prompt/property-border",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Start stop of the chat prompt border gradient, one of two stops. Evidence: description (\"Start color for chat prompt border gradient\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-e4cdee3e3244",
+      "token": "chat-prompt-text",
+      "concept": "dsi:concept/color/component-chat/part-prompt/property-text",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Text color in the chat message composition area. Evidence: description (\"Text color for chat input prompt\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-prompt/property-text: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-685e9a62f6d8",
+      "token": "chat-shell-background",
+      "concept": "dsi:concept/color/component-chat/part-container/property-background",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Fill of the outer chat container that holds the whole interface. Evidence: description (\"Background color for chat container shell\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.356Z",
+        "note": "New concept dsi:concept/color/component-chat/part-container/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-1dbc9f6e01e5",
       "token": "container.container-01",
       "concept": "dsi:concept/size/property-height",
@@ -2516,6 +2946,36 @@
         "by": "agreement",
         "at": "2026-10-31T23:52:35.397Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-97f9f49da796",
+      "token": "highlight",
+      "concept": "dsi:concept/color/intent-highlight/property-background",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Background that marks selected text or search results. Evidence: description (text selection or search result highlighting); ontology example.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-a6972c8728ff",
+      "token": "highlight",
+      "concept": "dsi:concept/color/intent-highlight/property-background",
+      "match": "close",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Fill behind selected text; close because Carbon also uses it for search-result highlighting. Evidence: description (\"for text selection or search result highlighting\"); value (blue.20 light).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
       }
     },
     {
@@ -7276,6 +7736,21 @@
         "by": "agreement",
         "at": "2026-10-31T23:38:32.187Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-af21a42fb555",
+      "token": "toggle-off",
+      "concept": "dsi:concept/color/component-toggle/part-track/property-background",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Track fill of a toggle in its off position, one toggle state. Evidence: name; value (gray.50); docs (https://carbondesignsystem.com/components/toggle/style/).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:51+00:00",
+        "method": "color-v1"
       }
     },
     {

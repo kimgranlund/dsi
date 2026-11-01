@@ -475,6 +475,45 @@
       }
     },
     {
+      "id": "m-1b26590c0658",
+      "token": "md.sys.color.on-primary-fixed-variant",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground",
+      "match": "close",
+      "confidence": 0.6,
+      "status": "rejected",
+      "rationale": "Text and icons on the primary fixed fill, a variant of on-primary-fixed; same value in every theme. Evidence: description (stronger hue variant for text and icons on fixed color); value (identical in all themes).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T21:16:38.085Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler close."
+      }
+    },
+    {
+      "id": "m-205ab5ecc35e",
+      "token": "md.sys.color.on-primary-fixed-variant",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler",
+      "match": "close",
+      "confidence": 0.65,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B1 filter) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:38.085Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:38.558Z",
+        "note": "New concept dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-d46bdd9dee91",
       "token": "md.sys.color.on-secondary",
       "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground",
@@ -550,6 +589,45 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:43:42.806Z"
+      }
+    },
+    {
+      "id": "m-5312eabaf246",
+      "token": "md.sys.color.on-secondary-fixed-variant",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B1 filter) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:38.085Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:38.558Z",
+        "note": "New concept dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-e6f309638f2c",
+      "token": "md.sys.color.on-secondary-fixed-variant",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "rejected",
+      "rationale": "Text and icons on the secondary fixed fill, a variant of on-secondary-fixed; same value in every theme. Evidence: description (stronger hue variant for text and icons on fixed color); value (identical in all themes); convention (ADR 0008).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T21:16:38.085Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler broad."
       }
     },
     {
@@ -686,6 +764,45 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:43:43.681Z"
+      }
+    },
+    {
+      "id": "m-48497f62b406",
+      "token": "md.sys.color.on-tertiary-fixed-variant",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "rejected",
+      "rationale": "Text and icons on the tertiary fixed fill, a variant of on-tertiary-fixed; same value in every theme. Evidence: description (stronger hue variant for text and icons on fixed color); value (identical in all themes); convention (ADR 0008).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T21:16:38.085Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler broad."
+      }
+    },
+    {
+      "id": "m-78bb6a49f15d",
+      "token": "md.sys.color.on-tertiary-fixed-variant",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B1 filter) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:38.085Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:38.558Z",
+        "note": "New concept dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -843,6 +960,36 @@
       }
     },
     {
+      "id": "m-2ec3b31ebcf7",
+      "token": "md.sys.color.primary-fixed-dim",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed/property-background/brightness-dim",
+      "match": "close",
+      "confidence": 0.65,
+      "status": "proposed",
+      "rationale": "Accent fill that keeps one value in every theme, dimmer than primary-fixed; close because Material pairs it with the same on-fixed content. Evidence: description; value (primary80 in every theme vs primary-fixed primary90).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:50+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-9b20b5d1a9c9",
+      "token": "md.sys.color.primary-fixed-dim",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed/property-background",
+      "match": "close",
+      "confidence": 0.65,
+      "status": "proposed",
+      "rationale": "Dimmer primary fixed fill that keeps one value in light and dark themes. Evidence: description (does not change for light or dark theme); value (identical in all themes).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
       "id": "m-271f1668787f",
       "token": "md.sys.color.scrim",
       "concept": "dsi:concept/color/usage-scrim",
@@ -939,6 +1086,36 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:43:55.406Z"
+      }
+    },
+    {
+      "id": "m-49ddb48fd6eb",
+      "token": "md.sys.color.secondary-fixed-dim",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed/property-background/brightness-dim",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Secondary accent fill that keeps one value in every theme, dimmer than secondary-fixed. Evidence: description; value (secondary80 in every theme); convention (ADR 0010 broad for secondary).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:50+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-7e5660419bed",
+      "token": "md.sys.color.secondary-fixed-dim",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed/property-background",
+      "match": "broad",
+      "confidence": 0.65,
+      "status": "proposed",
+      "rationale": "Dimmer secondary fixed fill that keeps one value in light and dark themes. Evidence: description (does not change for light or dark theme); value (identical in all themes); convention (ADR 0008 secondary and tertiary accents are broad).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
       }
     },
     {
@@ -1272,6 +1449,36 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:43:56.269Z"
+      }
+    },
+    {
+      "id": "m-31a407829f49",
+      "token": "md.sys.color.tertiary-fixed-dim",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed/property-background",
+      "match": "broad",
+      "confidence": 0.65,
+      "status": "proposed",
+      "rationale": "Dimmer tertiary fixed fill that keeps one value in light and dark themes. Evidence: description (does not change for light or dark theme); value (identical in all themes); convention (ADR 0008 secondary and tertiary accents are broad).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-a42623f80fd4",
+      "token": "md.sys.color.tertiary-fixed-dim",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed/property-background/brightness-dim",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Tertiary accent fill that keeps one value in every theme, dimmer than tertiary-fixed. Evidence: description; value (tertiary80 in every theme); convention (ADR 0010 broad for tertiary).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:11:50+00:00",
+        "method": "color-v1"
       }
     },
     {

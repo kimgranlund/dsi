@@ -11282,6 +11282,21 @@
       }
     },
     {
+      "id": "m-d9cd42574d15",
+      "token": "colorScrollbarOverlay",
+      "concept": "dsi:concept/color/component-scrollbar/part-thumb/property-background",
+      "match": "close",
+      "confidence": 0.55,
+      "status": "proposed",
+      "rationale": "Translucent scrollbar thumb fill drawn over content; close because it serves overlay scrollbars only. Evidence: name; value (black at 0.5 light, white at 0.6 dark, white in high contrast).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:57+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
       "id": "m-75ff6d7355b7",
       "token": "colorStatusDangerBackground1",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtlest",
@@ -12486,6 +12501,26 @@
       }
     },
     {
+      "id": "m-72003c7305ef",
+      "token": "colorTransparentBackground",
+      "concept": "dsi:concept/color/usage-transparent/property-background",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Deliberately unpainted background slot of transparent controls. Evidence: name; value (black at 0 in every theme).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:57+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.486Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-97fa46b4df17",
       "token": "colorTransparentBackground",
       "concept": "dsi:concept/color/property-background",
@@ -12506,6 +12541,26 @@
       }
     },
     {
+      "id": "m-73a7c26a0177",
+      "token": "colorTransparentBackgroundHover",
+      "concept": "dsi:concept/color/usage-transparent/property-background/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Hover background of transparent controls, clear in standard themes and painted in high contrast. Evidence: name; value (black at 0 standard, #1aebff high contrast).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:57+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.486Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-850240398a6d",
       "token": "colorTransparentBackgroundHover",
       "concept": "dsi:concept/color/property-background/state-hover",
@@ -12523,6 +12578,26 @@
         "by": "two-of-three",
         "at": "2026-11-01T15:31:47.703Z",
         "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
+      }
+    },
+    {
+      "id": "m-1920459234cb",
+      "token": "colorTransparentBackgroundPressed",
+      "concept": "dsi:concept/color/usage-transparent/property-background/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Pressed background of transparent controls, clear in standard themes and painted in high contrast. Evidence: name; value (black at 0 standard, #1aebff high contrast).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:57+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.486Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -12566,6 +12641,46 @@
       }
     },
     {
+      "id": "m-ed39ba7d66cf",
+      "token": "colorTransparentBackgroundSelected",
+      "concept": "dsi:concept/color/usage-transparent/property-background/state-selected",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Selected background of transparent controls, clear in standard themes and painted in high contrast. Evidence: name; value (black at 0 standard, #1aebff high contrast).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:57+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.486Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background/state-selected: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-e1969bdcc6aa",
+      "token": "colorTransparentStroke",
+      "concept": "dsi:concept/color/usage-transparent/property-border",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Deliberately unpainted border slot of transparent controls, painted only in high contrast. Evidence: name; value (black at 0 standard, white high contrast).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:57+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.486Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-ee70d4fcb3fe",
       "token": "colorTransparentStroke",
       "concept": "dsi:concept/color/property-border",
@@ -12603,6 +12718,56 @@
         "by": "two-of-three",
         "at": "2026-11-01T15:31:47.703Z",
         "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
+      }
+    },
+    {
+      "id": "m-888b3871945d",
+      "token": "colorTransparentStrokeDisabled",
+      "concept": "dsi:concept/color/usage-transparent/property-border/state-disabled",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Border slot of disabled transparent controls, painted only in high contrast. Evidence: name; value (black at 0 standard, #3ff23f high contrast).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:57+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.486Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-border/state-disabled: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-406fb12ed7a4",
+      "token": "colorTransparentStrokeInteractive",
+      "concept": "dsi:concept/color/intent-accent/usage-transparent/property-border",
+      "match": "close",
+      "confidence": 0.55,
+      "status": "proposed",
+      "rationale": "Border slot of interactive transparent controls, painted only in high contrast; close because interactive maps to accent. Evidence: name; value (#1aebff high contrast); convention (ADR 0008 interactive).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:57+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-4d631ad34f24",
+      "token": "colorTransparentStrokeInteractive",
+      "concept": "dsi:concept/color/usage-transparent/property-border",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Unpainted border slot of interactive elements; the interaction state is not stated. Evidence: name; value (alpha 0 in every theme).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
       }
     },
     {

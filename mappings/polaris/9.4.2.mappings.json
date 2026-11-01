@@ -2323,6 +2323,183 @@
       }
     },
     {
+      "id": "m-deb1993d05d7",
+      "token": "color-bg-fill-transparent",
+      "concept": "dsi:concept/color/usage-transparent/property-background",
+      "match": "close",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Near-clear fill for elements such as tabs that sit on varying backgrounds; close because it carries a 2% tint, not full transparency. Evidence: description; value (black at 0.02 light, white at 0.11 dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-bf2ae81b39bc",
+      "token": "color-bg-fill-transparent-active",
+      "concept": "dsi:concept/color/usage-transparent/property-background/state-active",
+      "match": "close",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Pressed fill of the near-clear element fill, where paint appears on press. Evidence: description (\"active state (on press) color\"); value (black at 0.08 light).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-a08252545197",
+      "token": "color-bg-fill-transparent-hover",
+      "concept": "dsi:concept/color/usage-transparent/property-background/state-hover",
+      "match": "close",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Hover fill of the near-clear element fill, where paint appears under the pointer. Evidence: description (\"hover state color\"); value (black at 0.05 light).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-09ccda07751e",
+      "token": "color-bg-fill-transparent-secondary",
+      "concept": "dsi:concept/color/usage-transparent/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.5,
+      "status": "rejected",
+      "rationale": "Near-clear element fill at secondary prominence; close because its tint is darker than the base in light mode. Evidence: description (\"secondary level of prominence\"); convention (ADR 0012 prominence words).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T21:16:38.085Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-transparent/property-background close."
+      }
+    },
+    {
+      "id": "m-e99ebfc69e32",
+      "token": "color-bg-fill-transparent-secondary",
+      "concept": "dsi:concept/color/usage-transparent/property-background",
+      "match": "close",
+      "confidence": 0.5,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B1) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:38.085Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:38.781Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-660fa1f06584",
+      "token": "color-bg-fill-transparent-secondary-active",
+      "concept": "dsi:concept/color/usage-transparent/property-background/emphasis-subtle/state-active",
+      "match": "close",
+      "confidence": 0.5,
+      "status": "rejected",
+      "rationale": "Pressed fill of the secondary near-clear element fill. Evidence: description (\"active state (on press)... secondary level of prominence\"); convention (ADR 0012).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T21:16:38.085Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-transparent/property-background/state-active close."
+      }
+    },
+    {
+      "id": "m-f6dd6240ab48",
+      "token": "color-bg-fill-transparent-secondary-active",
+      "concept": "dsi:concept/color/usage-transparent/property-background/state-active",
+      "match": "close",
+      "confidence": 0.5,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B1) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:38.085Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:38.781Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-693b3a84cdc6",
+      "token": "color-bg-fill-transparent-secondary-hover",
+      "concept": "dsi:concept/color/usage-transparent/property-background/emphasis-subtle/state-hover",
+      "match": "close",
+      "confidence": 0.5,
+      "status": "rejected",
+      "rationale": "Hover fill of the secondary near-clear element fill. Evidence: description (\"hover state... secondary level of prominence\"); convention (ADR 0012).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T21:16:38.085Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-transparent/property-background/state-hover close."
+      }
+    },
+    {
+      "id": "m-e1ba001bb6ec",
+      "token": "color-bg-fill-transparent-secondary-hover",
+      "concept": "dsi:concept/color/usage-transparent/property-background/state-hover",
+      "match": "close",
+      "confidence": 0.5,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B1) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:38.085Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:38.781Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-10915072b84b",
+      "token": "color-bg-fill-transparent-selected",
+      "concept": "dsi:concept/color/usage-transparent/property-background/state-selected",
+      "match": "close",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Selected fill of the near-clear element fill, such as the chosen tab. Evidence: description (\"selected state color... like tabs\"); value (black at 0.08 light).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
       "id": "m-2ea14643b95c",
       "token": "color-bg-fill-warning",
       "concept": "dsi:concept/color/intent-warning/property-background",
@@ -3738,6 +3915,26 @@
       }
     },
     {
+      "id": "m-64d2b13b62cf",
+      "token": "color-bg-surface-transparent",
+      "concept": "dsi:concept/color/usage-transparent/property-background",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Fully transparent background slot for elements that paint nothing. Evidence: description (\"fully transparent background\"); value (black at 0 in every theme).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.372Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-471fdbb6fb65",
       "token": "color-bg-surface-warning",
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
@@ -4494,6 +4691,56 @@
         "by": "agreement",
         "at": "2026-10-31T23:38:32.199Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-7662fc61356f",
+      "token": "color-checkbox-bg-surface-disabled",
+      "concept": "dsi:concept/color/component-checkbox/property-background/state-disabled",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Fill of a disabled checkbox box. Evidence: name; value (black at 0.08 in every theme).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.372Z",
+        "note": "New concept dsi:concept/color/component-checkbox/property-background/state-disabled: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-0a6da83496c3",
+      "token": "color-checkbox-icon-disabled",
+      "concept": "dsi:concept/color/component-checkbox/property-icon/state-disabled",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Check mark color of a disabled checkbox. Evidence: name; value (white on the disabled fill).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-5c64ae1b83e3",
+      "token": "color-checkbox-icon-disabled",
+      "concept": "dsi:concept/color/component-checkbox/part-icon/property-icon/state-disabled",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Check mark color inside a disabled checkbox. Evidence: name; value (white in every theme).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
       }
     },
     {
@@ -5290,6 +5537,96 @@
       }
     },
     {
+      "id": "m-c98d65abcda2",
+      "token": "color-radio-button-bg-surface-disabled",
+      "concept": "dsi:concept/color/component-radio/property-background/state-disabled",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Fill of a disabled radio button. Evidence: name; value (black at 0.08 in every theme).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.372Z",
+        "note": "New concept dsi:concept/color/component-radio/property-background/state-disabled: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-4e18449459b2",
+      "token": "color-radio-button-icon-disabled",
+      "concept": "dsi:concept/color/component-radio/part-icon/property-icon/state-disabled",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Dot mark color inside a disabled radio button. Evidence: name; value (white in every theme).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-df1e9c93c40b",
+      "token": "color-radio-button-icon-disabled",
+      "concept": "dsi:concept/color/component-radio/property-icon/state-disabled",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Dot color of a disabled radio button. Evidence: name; value (white on the disabled fill).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-537cc84ae08e",
+      "token": "color-scrollbar-thumb-bg",
+      "concept": "dsi:concept/color/component-scrollbar/part-thumb/property-background",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Fill of the scrollbar thumb. Evidence: name; value (gray.11 in every theme).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.372Z",
+        "note": "New concept dsi:concept/color/component-scrollbar/part-thumb/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-ef5a0ac41124",
+      "token": "color-scrollbar-thumb-bg-hover",
+      "concept": "dsi:concept/color/component-scrollbar/part-thumb/property-background/state-hover",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Fill of the scrollbar thumb under the pointer. Evidence: name; value (gray.12, darker than the rest value gray.11).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.372Z",
+        "note": "New concept dsi:concept/color/component-scrollbar/part-thumb/property-background/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-441915ae6b9f",
       "token": "color-text",
       "concept": "dsi:concept/color/property-text",
@@ -5779,6 +6116,84 @@
         "by": "agreement",
         "at": "2026-10-31T23:52:35.412Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-6ca07efc84e2",
+      "token": "color-text-emphasis-on-bg-fill-active",
+      "concept": "dsi:concept/color/intent-highlight/usage-on-fill/property-text/state-active",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:38.085Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:38.781Z",
+        "note": "New concept dsi:concept/color/intent-highlight/usage-on-fill/property-text/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-caa665e150e6",
+      "token": "color-text-emphasis-on-bg-fill-active",
+      "concept": "dsi:concept/color/intent-highlight/usage-on-fill/property-foreground/state-active",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Text and icons on the pressed emphasis fill, which marks focus regions. Evidence: description; ontology example (Polaris emphasis tokens are highlight).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T21:16:38.085Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-highlight/usage-on-fill/property-text/state-active close."
+      }
+    },
+    {
+      "id": "m-6ce73d90b3ae",
+      "token": "color-text-emphasis-on-bg-fill-hover",
+      "concept": "dsi:concept/color/intent-highlight/usage-on-fill/property-foreground/state-hover",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Text and icons on the hovered emphasis fill, which marks focus regions. Evidence: description; ontology example (Polaris emphasis tokens are highlight).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T21:16:38.085Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-highlight/usage-on-fill/property-text/state-hover close."
+      }
+    },
+    {
+      "id": "m-8f19bc703dad",
+      "token": "color-text-emphasis-on-bg-fill-hover",
+      "concept": "dsi:concept/color/intent-highlight/usage-on-fill/property-text/state-hover",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:38.085Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:38.781Z",
+        "note": "New concept dsi:concept/color/intent-highlight/usage-on-fill/property-text/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -6369,6 +6784,106 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:17:12.888Z"
+      }
+    },
+    {
+      "id": "m-cf6c669143bc",
+      "token": "color-tooltip-tail-down-border",
+      "concept": "dsi:concept/color/component-tooltip/part-tail/property-border",
+      "match": "broad",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Border of a tooltip tail that points down, one of two tail directions. Evidence: description (\"border color for tooltip tails pointing down\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.372Z",
+        "note": "New concept dsi:concept/color/component-tooltip/part-tail/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-d3ad570cdc79",
+      "token": "color-tooltip-tail-up-border",
+      "concept": "dsi:concept/color/component-tooltip/part-tail/property-border",
+      "match": "broad",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Border of a tooltip tail that points up, one of two tail directions. Evidence: description (\"border color for tooltip tails pointing up\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.372Z",
+        "note": "New concept dsi:concept/color/component-tooltip/part-tail/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-54505d81ae5d",
+      "token": "color-video-thumbnail-play-button-bg-fill-hover",
+      "concept": "dsi:concept/color/usage-fixed/component-button/property-background/state-hover",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Hover fill of the play button on video thumbnails, one value in every theme over media. Evidence: name; value (black at 0.81 in every theme).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-7830033fd2ff",
+      "token": "color-video-thumbnail-play-button-bg-fill-hover",
+      "concept": "dsi:concept/color/usage-fixed/property-background/state-hover",
+      "match": "close",
+      "confidence": 0.55,
+      "status": "proposed",
+      "rationale": "Hover background of the play button on a video thumbnail; keeps one value in every theme. Evidence: name; value (black at 81 percent in all themes); ontology (fixed is for content on media).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-cbdbeadc8885",
+      "token": "color-video-thumbnail-play-button-text-on-bg-fill",
+      "concept": "dsi:concept/color/usage-fixed+on-fill/component-button/property-text",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Content on the dark play button fill over video thumbnails, one value in every theme. Evidence: name; value (white in every theme).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:12:42+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-d18c73694f8c",
+      "token": "color-video-thumbnail-play-button-text-on-bg-fill",
+      "concept": "dsi:concept/color/usage-fixed+on-fill/property-foreground",
+      "match": "close",
+      "confidence": 0.55,
+      "status": "proposed",
+      "rationale": "Play icon on the video play button fill; keeps one value in every theme. Evidence: name; value (white in all themes on a black fill).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
       }
     },
     {

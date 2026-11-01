@@ -4449,6 +4449,166 @@
       }
     },
     {
+      "id": "m-243380f9d09b",
+      "token": "color.background.code.added.highlight",
+      "concept": "dsi:concept/color/usage-code-surface/syntax-inserted/part-line/property-background",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Background of highlighted added code lines, a variant of the added line. Evidence: description; sibling (code.added.line).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-dfa169d4111c",
+      "token": "color.background.code.added.highlight",
+      "concept": "dsi:concept/color/intent-highlight/usage-code-surface/syntax-inserted/part-line/property-background",
+      "match": "close",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Background of an added diff line that is also highlighted; close because highlight here marks the focused line. Evidence: description (\"highlighted added code lines\"); value (Green100, solid vs the 40% added line).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-e73df72a5017",
+      "token": "color.background.code.added.line",
+      "concept": "dsi:concept/color/usage-code-surface/syntax-inserted/part-line/property-background",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Background of a whole added line in a code diff. Evidence: description (\"Use for added code lines\"); value (Green200 at 0.4 light).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "New concept dsi:concept/color/usage-code-surface/syntax-inserted/part-line/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-14c0414679ca",
+      "token": "color.background.code.default",
+      "concept": "dsi:concept/color/usage-code-surface/property-background",
+      "match": "exact",
+      "confidence": 0.9,
+      "status": "approved",
+      "rationale": "Default background of code blocks and code diffs. Evidence: description (\"default background of code blocks and code diffs\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-52ce423d25a6",
+      "token": "color.background.code.gutter",
+      "concept": "dsi:concept/color/usage-code-surface/part-gutter/property-background",
+      "match": "exact",
+      "confidence": 0.9,
+      "status": "proposed",
+      "rationale": "Background of the code gutter column beside the lines. Evidence: description (\"background of code gutters\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "New concept dsi:concept/color/usage-code-surface/part-gutter/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-30d40a0af622",
+      "token": "color.background.code.highlight",
+      "concept": "dsi:concept/color/intent-highlight/usage-code-surface/property-background",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Background of a highlighted unchanged code line; close because it applies to whole lines. Evidence: description (\"highlighted unchanged code lines\"); value (Neutral200, same as the gutter).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-81fc74f25df5",
+      "token": "color.background.code.removed.highlight",
+      "concept": "dsi:concept/color/usage-code-surface/syntax-deleted/part-line/property-background",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Background of highlighted removed code lines, a variant of the removed line. Evidence: description; sibling (code.removed.line).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-ed0bbd946ca7",
+      "token": "color.background.code.removed.highlight",
+      "concept": "dsi:concept/color/intent-highlight/usage-code-surface/syntax-deleted/part-line/property-background",
+      "match": "close",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Background of a removed diff line that is also highlighted; close because highlight here marks the focused line. Evidence: description (\"highlighted removed code lines\"); value (Red100, solid vs the 40% removed line).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-cc1ee65d7d55",
+      "token": "color.background.code.removed.line",
+      "concept": "dsi:concept/color/usage-code-surface/syntax-deleted/part-line/property-background",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Background of a whole removed line in a code diff. Evidence: description (\"Use for removed code lines\"); value (Red200 at 0.4 light).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "New concept dsi:concept/color/usage-code-surface/syntax-deleted/part-line/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-5216244f0060",
       "token": "color.background.danger.bold.default",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-strong",
@@ -4723,6 +4883,338 @@
         "by": "agreement",
         "at": "2026-11-01T07:15:56.836Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-895ad092e1b6",
+      "token": "color.background.discovery.bold.default",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-strong",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-d1305dc742e9",
+      "token": "color.background.discovery.bold.default",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-strong",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "rejected",
+      "rationale": "Vibrant discovery fill for change or something new, such as onboarding spotlights. Evidence: description; value (strongest contrast of the discovery backgrounds in every mode).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-discovery/property-background/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-2c71325cd4bf",
+      "token": "color.background.discovery.bold.hovered",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-6e582d2e40ad",
+      "token": "color.background.discovery.bold.hovered",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "rejected",
+      "rationale": "Hover state of the bold discovery fill. Evidence: description (\"Hovered state of color.background.discovery.bold\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-6b6758342f3c",
+      "token": "color.background.discovery.bold.pressed",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-active",
+      "match": "close",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-f04a1b98097f",
+      "token": "color.background.discovery.bold.pressed",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "rejected",
+      "rationale": "Pressed state of the bold discovery fill. Evidence: description (\"Pressed state of color.background.discovery.bold\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-active."
+      }
+    },
+    {
+      "id": "m-122a2d257888",
+      "token": "color.background.discovery.default.default",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtlest",
+      "match": "close",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtlest: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-541db21c62de",
+      "token": "color.background.discovery.default.hovered",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtlest/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Hover state of the lightest discovery background; close because default ranks subtlest by contrast. Evidence: description; value (Purple200); convention (ADR 0018 anchor at subtlest).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtlest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-ef8570ec294a",
+      "token": "color.background.discovery.default.pressed",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtlest/state-active",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Pressed state of the lightest discovery background; close because default ranks subtlest by contrast. Evidence: description; value (Purple250); convention (ADR 0018 anchor at subtlest).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtlest/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-b8fc82748e4f",
+      "token": "color.background.discovery.subtle.default",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-d04cbad42504",
+      "token": "color.background.discovery.subtle.default",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "rejected",
+      "rationale": "Background that marks something new or changed, subtle step. Evidence: description; value (lightness rank in light and dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-discovery/property-background/emphasis-subtle."
+      }
+    },
+    {
+      "id": "m-962f02736122",
+      "token": "color.background.discovery.subtler.default",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtler",
+      "match": "close",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtler: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-e391dfbc7cfe",
+      "token": "color.background.discovery.subtler.default",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtler",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "rejected",
+      "rationale": "Background that marks something new or changed, subtler step. Evidence: description; value (lightness rank in light and dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-discovery/property-background/emphasis-subtler."
+      }
+    },
+    {
+      "id": "m-c4a44a84057e",
+      "token": "color.background.discovery.subtler.hovered",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-hover",
+      "match": "close",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-ce3c3ced173d",
+      "token": "color.background.discovery.subtler.hovered",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "rejected",
+      "rationale": "Background that marks something new or changed, subtler step on hover. Evidence: description; value (lightness rank in light and dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-hover."
+      }
+    },
+    {
+      "id": "m-3e74583870b8",
+      "token": "color.background.discovery.subtler.pressed",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "rejected",
+      "rationale": "Background that marks something new or changed, subtler step when pressed. Evidence: description; value (lightness rank in light and dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-active."
+      }
+    },
+    {
+      "id": "m-cace45beb607",
+      "token": "color.background.discovery.subtler.pressed",
+      "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-active",
+      "match": "close",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -6889,6 +7381,85 @@
       }
     },
     {
+      "id": "m-663d2a98a3ec",
+      "token": "color.border.discovery",
+      "concept": "dsi:concept/color/intent-discovery/property-border",
+      "match": "exact",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Border communicating change or something new, such as onboarding spotlight borders. Evidence: description; sibling (color.border.discovery.default has the same description).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-2e716b0b86de",
+      "token": "color.border.discovery.default",
+      "concept": "dsi:concept/color/intent-discovery/property-border",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-64b86e5013b3",
+      "token": "color.border.discovery.default",
+      "concept": "dsi:concept/color/intent-discovery/property-border/emphasis-strong",
+      "match": "close",
+      "confidence": 0.65,
+      "status": "rejected",
+      "rationale": "Border that marks something new or changed; stronger than the subtle border. Evidence: description; value (#af59e1 against #d8a0f7).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-discovery/property-border."
+      }
+    },
+    {
+      "id": "m-5e0d1d03aee2",
+      "token": "color.border.discovery.subtle",
+      "concept": "dsi:concept/color/intent-discovery/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Decorative discovery border that need not meet 3:1 contrast. Evidence: description; value (Purple300, lighter than border.discovery.default Purple500 in light).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "id": "m-64833ab42a73",
       "token": "color.border.focused",
       "concept": "dsi:concept/color/property-focus-ring",
@@ -7204,6 +7775,240 @@
         "by": "agreement+classifier",
         "at": "2026-11-01T07:26:22.665Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+      }
+    },
+    {
+      "id": "m-53e2b43416a3",
+      "token": "color.chart.blue.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-cf460e6449bb",
+      "token": "color.chart.blue.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strong",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in blue, bold step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-76679a80961c",
+      "token": "color.chart.blue.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in blue, bold step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-b17de0c6bbb0",
+      "token": "color.chart.blue.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-1ec61e030c7b",
+      "token": "color.chart.blue.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-stronger",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in blue, bolder step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-stronger."
+      }
+    },
+    {
+      "id": "m-e2bcaba6a7f7",
+      "token": "color.chart.blue.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-stronger",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-stronger: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-3691664ba1f2",
+      "token": "color.chart.blue.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-stronger/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in blue, bolder step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-stronger/state-hover."
+      }
+    },
+    {
+      "id": "m-4055510c12b9",
+      "token": "color.chart.blue.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-stronger/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-36198fff1b05",
+      "token": "color.chart.blue.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strongest",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strongest: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-6110acbd4cbc",
+      "token": "color.chart.blue.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strongest",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in blue, boldest step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strongest."
+      }
+    },
+    {
+      "id": "m-5e0383310ed6",
+      "token": "color.chart.blue.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strongest/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in blue, boldest step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strongest/state-hover."
+      }
+    },
+    {
+      "id": "m-675ac1878640",
+      "token": "color.chart.blue.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strongest/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strongest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -7743,6 +8548,601 @@
       }
     },
     {
+      "id": "m-8196b2f32963",
+      "token": "color.chart.discovery.bold.default",
+      "concept": "dsi:concept/color/intent-discovery/usage-data-viz/emphasis-strong",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart color for new statuses, stronger step. Evidence: description (data visualisation communicating new statuses); sibling (chart.discovery.default).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-discovery/usage-data-viz/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-d277256ed5a1",
+      "token": "color.chart.discovery.bold.default",
+      "concept": "dsi:concept/color/intent-discovery/usage-data-viz/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/intent-discovery/usage-data-viz/emphasis-strong: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-e13647b5b83f",
+      "token": "color.chart.discovery.bold.hovered",
+      "concept": "dsi:concept/color/intent-discovery/usage-data-viz/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart color for new statuses, stronger step on hover. Evidence: description (data visualisation communicating new statuses); sibling (chart.discovery.default).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-discovery/usage-data-viz/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-fbe9593310b1",
+      "token": "color.chart.discovery.bold.hovered",
+      "concept": "dsi:concept/color/intent-discovery/usage-data-viz/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/intent-discovery/usage-data-viz/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-586b8042f6e3",
+      "token": "color.chart.discovery.default.default",
+      "concept": "dsi:concept/color/intent-discovery/usage-data-viz",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/intent-discovery/usage-data-viz: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-06202447a47d",
+      "token": "color.chart.discovery.default.hovered",
+      "concept": "dsi:concept/color/intent-discovery/usage-data-viz/state-hover",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Hover state of the discovery chart color. Evidence: description (\"Hovered state of color.chart.discovery\"); sibling (chart.danger.default.hovered and chart.warning.default.hovered approved broad).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-88c853d46a1a",
+      "token": "color.chart.discovery.default.hovered",
+      "concept": "dsi:concept/color/intent-discovery/usage-data-viz/state-hover",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Chart color for new statuses on hover. Evidence: description (data visualisation communicating new statuses).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-17ef50606f39",
+      "token": "color.chart.gray.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strong",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in gray, bold step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-c408976ea84f",
+      "token": "color.chart.gray.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-101cae652ec6",
+      "token": "color.chart.gray.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-430983ea3c8b",
+      "token": "color.chart.gray.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in gray, bold step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-1be2e6a6b3c5",
+      "token": "color.chart.gray.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-stronger",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-stronger: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-253e769af10d",
+      "token": "color.chart.gray.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-stronger",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in gray, bolder step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-stronger."
+      }
+    },
+    {
+      "id": "m-a62e86bebc10",
+      "token": "color.chart.gray.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-stronger/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-f5eaa50bd5cd",
+      "token": "color.chart.gray.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-stronger/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in gray, bolder step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-stronger/state-hover."
+      }
+    },
+    {
+      "id": "m-379e17c996f8",
+      "token": "color.chart.gray.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strongest",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in gray, boldest step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strongest."
+      }
+    },
+    {
+      "id": "m-d9a9cdf4f6ef",
+      "token": "color.chart.gray.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strongest",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strongest: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-159d4256f6d3",
+      "token": "color.chart.gray.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strongest/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in gray, boldest step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strongest/state-hover."
+      }
+    },
+    {
+      "id": "m-841224fbdf62",
+      "token": "color.chart.gray.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strongest/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strongest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-1cf75a1cc21f",
+      "token": "color.chart.green.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strong",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in green, bold step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-a35c965136a1",
+      "token": "color.chart.green.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-25d4dba34e74",
+      "token": "color.chart.green.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-b53a02346d9b",
+      "token": "color.chart.green.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in green, bold step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-750db8173d64",
+      "token": "color.chart.green.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-stronger",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in green, bolder step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-stronger."
+      }
+    },
+    {
+      "id": "m-ad31369afc6c",
+      "token": "color.chart.green.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-stronger",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-stronger: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-110b30a67e0a",
+      "token": "color.chart.green.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-stronger/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-f47382aa0d83",
+      "token": "color.chart.green.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-stronger/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in green, bolder step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-stronger/state-hover."
+      }
+    },
+    {
+      "id": "m-85c610522bde",
+      "token": "color.chart.green.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strongest",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in green, boldest step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strongest."
+      }
+    },
+    {
+      "id": "m-a9310d0298c3",
+      "token": "color.chart.green.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strongest",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strongest: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-bc4a7361eb74",
+      "token": "color.chart.green.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strongest/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in green, boldest step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strongest/state-hover."
+      }
+    },
+    {
+      "id": "m-d4629faaf506",
+      "token": "color.chart.green.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strongest/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strongest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-8a6d0d92d7cd",
       "token": "color.chart.information.bold.default",
       "concept": "dsi:concept/color/intent-info/usage-data-viz/emphasis-strong",
@@ -7919,6 +9319,474 @@
       }
     },
     {
+      "id": "m-3c293e381f24",
+      "token": "color.chart.lime.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strong",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in lime, bold step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-58ef044b83d3",
+      "token": "color.chart.lime.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-9946aa670138",
+      "token": "color.chart.lime.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in lime, bold step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-9fde9ad13427",
+      "token": "color.chart.lime.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-6483ac520d10",
+      "token": "color.chart.lime.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-stronger",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-stronger: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-967d5bc22c83",
+      "token": "color.chart.lime.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-stronger",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in lime, bolder step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-stronger."
+      }
+    },
+    {
+      "id": "m-76447baef5b8",
+      "token": "color.chart.lime.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-stronger/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in lime, bolder step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-stronger/state-hover."
+      }
+    },
+    {
+      "id": "m-b5a66da45483",
+      "token": "color.chart.lime.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-stronger/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-dec359a7f5d0",
+      "token": "color.chart.lime.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strongest",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strongest: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-eb4873ef5b70",
+      "token": "color.chart.lime.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strongest",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in lime, boldest step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strongest."
+      }
+    },
+    {
+      "id": "m-708c9787381f",
+      "token": "color.chart.lime.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strongest/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strongest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-cce3e2b6e89a",
+      "token": "color.chart.lime.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strongest/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in lime, boldest step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strongest/state-hover."
+      }
+    },
+    {
+      "id": "m-030328842012",
+      "token": "color.chart.magenta.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strong: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-ba7f47301227",
+      "token": "color.chart.magenta.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strong",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in magenta, bold step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-7d24f6e656e7",
+      "token": "color.chart.magenta.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-de6337763a53",
+      "token": "color.chart.magenta.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in magenta, bold step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-8caf7a3ea2f6",
+      "token": "color.chart.magenta.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-stronger",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-stronger: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-d44cf0991047",
+      "token": "color.chart.magenta.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-stronger",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in magenta, bolder step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-stronger."
+      }
+    },
+    {
+      "id": "m-519b5e223160",
+      "token": "color.chart.magenta.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-stronger/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in magenta, bolder step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-stronger/state-hover."
+      }
+    },
+    {
+      "id": "m-745bb4eeb024",
+      "token": "color.chart.magenta.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-stronger/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-6b4f728592ee",
+      "token": "color.chart.magenta.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strongest",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strongest: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-dac35c4ef017",
+      "token": "color.chart.magenta.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strongest",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in magenta, boldest step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strongest."
+      }
+    },
+    {
+      "id": "m-7533050eae97",
+      "token": "color.chart.magenta.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strongest/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strongest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-9a17cfc58b4f",
+      "token": "color.chart.magenta.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strongest/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in magenta, boldest step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-magenta/emphasis-strongest/state-hover."
+      }
+    },
+    {
       "id": "m-5d8d615d77c9",
       "token": "color.chart.neutral.default",
       "concept": "dsi:concept/color/intent-neutral/usage-data-viz",
@@ -7994,6 +9862,708 @@
         "by": "two-of-three",
         "at": "2026-11-01T15:20:39.972Z",
         "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
+      }
+    },
+    {
+      "id": "m-9b8814ee89a0",
+      "token": "color.chart.orange.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strong",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in orange, bold step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-df4b9f5c2b23",
+      "token": "color.chart.orange.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-7f19e3624e1a",
+      "token": "color.chart.orange.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in orange, bold step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-80e013d1a6d1",
+      "token": "color.chart.orange.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-6418b6e0f106",
+      "token": "color.chart.orange.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-stronger",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-stronger: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-82ae6f7f2c7f",
+      "token": "color.chart.orange.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-stronger",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in orange, bolder step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-stronger."
+      }
+    },
+    {
+      "id": "m-3ca1653099fa",
+      "token": "color.chart.orange.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-stronger/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in orange, bolder step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-stronger/state-hover."
+      }
+    },
+    {
+      "id": "m-f46c4c28e2df",
+      "token": "color.chart.orange.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-stronger/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-2bbdde8aff75",
+      "token": "color.chart.orange.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strongest",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in orange, boldest step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strongest."
+      }
+    },
+    {
+      "id": "m-452949b4799f",
+      "token": "color.chart.orange.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strongest",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strongest: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-0d4741023af8",
+      "token": "color.chart.orange.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strongest/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in orange, boldest step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strongest/state-hover."
+      }
+    },
+    {
+      "id": "m-1443a4a6fb37",
+      "token": "color.chart.orange.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strongest/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strongest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-2043df192285",
+      "token": "color.chart.purple.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strong",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in purple, bold step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-e21f40b62c2d",
+      "token": "color.chart.purple.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-ae744596adaa",
+      "token": "color.chart.purple.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in purple, bold step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-ecf531f2c952",
+      "token": "color.chart.purple.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-525dce71fcae",
+      "token": "color.chart.purple.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-stronger",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-stronger: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-92a831cca372",
+      "token": "color.chart.purple.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-stronger",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in purple, bolder step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-stronger."
+      }
+    },
+    {
+      "id": "m-39eccd1f4a93",
+      "token": "color.chart.purple.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-stronger/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in purple, bolder step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-stronger/state-hover."
+      }
+    },
+    {
+      "id": "m-4cf59999249e",
+      "token": "color.chart.purple.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-stronger/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-46255a0b2584",
+      "token": "color.chart.purple.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strongest",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strongest: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-c9a9e47d4e7d",
+      "token": "color.chart.purple.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strongest",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in purple, boldest step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strongest."
+      }
+    },
+    {
+      "id": "m-135d80103541",
+      "token": "color.chart.purple.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strongest/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in purple, boldest step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strongest/state-hover."
+      }
+    },
+    {
+      "id": "m-f41b090cc2b7",
+      "token": "color.chart.purple.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strongest/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strongest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-6c0f3002a27b",
+      "token": "color.chart.red.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strong",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in red, bold step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-73663c291697",
+      "token": "color.chart.red.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-320e5ae75700",
+      "token": "color.chart.red.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in red, bold step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-6a0417794894",
+      "token": "color.chart.red.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-83e1f628d34a",
+      "token": "color.chart.red.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-stronger",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-stronger: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-b59b6ac9417e",
+      "token": "color.chart.red.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-stronger",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in red, bolder step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-stronger."
+      }
+    },
+    {
+      "id": "m-8b436ab9b340",
+      "token": "color.chart.red.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-stronger/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in red, bolder step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-stronger/state-hover."
+      }
+    },
+    {
+      "id": "m-ee506eee1dc9",
+      "token": "color.chart.red.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-stronger/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-33218c95e47a",
+      "token": "color.chart.red.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strongest",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strongest: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-989eb828535b",
+      "token": "color.chart.red.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strongest",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in red, boldest step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strongest."
+      }
+    },
+    {
+      "id": "m-15ded328ec61",
+      "token": "color.chart.red.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strongest/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in red, boldest step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strongest/state-hover."
+      }
+    },
+    {
+      "id": "m-1b1a0a41b956",
+      "token": "color.chart.red.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strongest/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strongest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -8173,6 +10743,240 @@
       }
     },
     {
+      "id": "m-4bbbb80a3f29",
+      "token": "color.chart.teal.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-67921ddf155e",
+      "token": "color.chart.teal.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strong",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in teal, bold step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-6ac011202bb2",
+      "token": "color.chart.teal.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-d4acdc398271",
+      "token": "color.chart.teal.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in teal, bold step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-ada7b3d786af",
+      "token": "color.chart.teal.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-stronger",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-stronger: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-f4dee7e39035",
+      "token": "color.chart.teal.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-stronger",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in teal, bolder step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-stronger."
+      }
+    },
+    {
+      "id": "m-2f8426dcbca9",
+      "token": "color.chart.teal.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-stronger/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-ad1ba7194890",
+      "token": "color.chart.teal.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-stronger/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in teal, bolder step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-stronger/state-hover."
+      }
+    },
+    {
+      "id": "m-165ccbbe131c",
+      "token": "color.chart.teal.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strongest",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strongest: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-56e5a1555e5b",
+      "token": "color.chart.teal.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strongest",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in teal, boldest step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strongest."
+      }
+    },
+    {
+      "id": "m-088f4597df89",
+      "token": "color.chart.teal.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strongest/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in teal, boldest step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strongest/state-hover."
+      }
+    },
+    {
+      "id": "m-dbe3b7d9fd16",
+      "token": "color.chart.teal.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strongest/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strongest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-5be6af031f31",
       "token": "color.chart.warning.bold.default",
       "concept": "dsi:concept/color/intent-warning/usage-data-viz/emphasis-strong",
@@ -8346,6 +11150,240 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:51.195Z",
         "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
+      }
+    },
+    {
+      "id": "m-128033f32433",
+      "token": "color.chart.yellow.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-12fffd0f89ad",
+      "token": "color.chart.yellow.bold.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strong",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in yellow, bold step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strong."
+      }
+    },
+    {
+      "id": "m-385d54fc30d3",
+      "token": "color.chart.yellow.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in yellow, bold step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strong/state-hover."
+      }
+    },
+    {
+      "id": "m-5b0f5d482d53",
+      "token": "color.chart.yellow.bold.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-ab9f16bf113f",
+      "token": "color.chart.yellow.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-stronger",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-stronger: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-acd7acf4e085",
+      "token": "color.chart.yellow.bolder.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-stronger",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in yellow, bolder step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-stronger."
+      }
+    },
+    {
+      "id": "m-abe5881ce149",
+      "token": "color.chart.yellow.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-stronger/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-e695ca9ae523",
+      "token": "color.chart.yellow.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-stronger/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in yellow, bolder step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-stronger/state-hover."
+      }
+    },
+    {
+      "id": "m-107254aca483",
+      "token": "color.chart.yellow.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strongest",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strongest: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-31db738fca21",
+      "token": "color.chart.yellow.boldest.default",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strongest",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in yellow, boldest step. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strongest."
+      }
+    },
+    {
+      "id": "m-329c9db527a0",
+      "token": "color.chart.yellow.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strongest/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "proposed",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:16:36.915Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:36.923Z",
+        "note": "New concept dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strongest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-c52d2072b96a",
+      "token": "color.chart.yellow.boldest.hovered",
+      "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strongest/state-hover",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Chart series color in yellow, boldest step on hover. Evidence: description (data visualisation only); sibling (bold, bolder, boldest steps); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T21:16:36.915Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strongest/state-hover."
       }
     },
     {
@@ -8665,6 +11703,26 @@
         "by": "agreement",
         "at": "2026-11-01T07:15:56.836Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-5f8952bca8f4",
+      "token": "color.icon.discovery",
+      "concept": "dsi:concept/color/intent-discovery/property-icon",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "proposed",
+      "rationale": "Icon color communicating change or something new, such as discovery section messages. Evidence: description.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-icon: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -10265,6 +13323,36 @@
       }
     },
     {
+      "id": "m-54a294b0743b",
+      "token": "color.text.code.accent.1",
+      "concept": "dsi:concept/color/usage-code-surface/property-text",
+      "match": "broad",
+      "confidence": 0.55,
+      "status": "proposed",
+      "rationale": "Additional syntax-highlighting text color, one of several accent colors in code. Evidence: description; sibling (code.accent.2).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-17cf96376eaf",
+      "token": "color.text.code.accent.2",
+      "concept": "dsi:concept/color/usage-code-surface/property-text",
+      "match": "broad",
+      "confidence": 0.55,
+      "status": "proposed",
+      "rationale": "Additional syntax-highlighting text color, one of several accent colors in code. Evidence: description; sibling (code.accent.1).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
       "id": "m-868a6e760ea5",
       "token": "color.text.code.comments",
       "concept": "dsi:concept/color/syntax-comment/property-text",
@@ -10281,6 +13369,26 @@
       "review": {
         "by": "agreement",
         "at": "2026-11-01T14:55:38.059Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-0a3ef756b1ae",
+      "token": "color.text.code.default",
+      "concept": "dsi:concept/color/usage-code-surface/property-text",
+      "match": "exact",
+      "confidence": 0.9,
+      "status": "approved",
+      "rationale": "Default text color in code blocks and code diffs. Evidence: description (\"default text in code blocks and code diffs\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T21:16:28.396Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
@@ -10321,6 +13429,26 @@
         "by": "two-of-three",
         "at": "2026-11-01T15:20:39.972Z",
         "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
+      }
+    },
+    {
+      "id": "m-673d94e75945",
+      "token": "color.text.code.gutter",
+      "concept": "dsi:concept/color/usage-code-surface/part-gutter/property-text",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Text in the code gutter, mainly line numbers. Evidence: description (\"line numbers and other code gutter text\").",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "New concept dsi:concept/color/usage-code-surface/part-gutter/property-text: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -10550,6 +13678,76 @@
         "by": "agreement",
         "at": "2026-11-01T07:15:56.836Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-dc0f5c5e1800",
+      "token": "color.text.discovery",
+      "concept": "dsi:concept/color/intent-discovery/property-text",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "proposed",
+      "rationale": "Text emphasizing change or something new, such as new lozenges. Evidence: description; sibling (color.text.discovery.default has the same description).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-text: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-5c637bae0fd1",
+      "token": "color.text.discovery.bolder",
+      "concept": "dsi:concept/color/intent-discovery/usage-on-fill/property-text/emphasis-subtle",
+      "match": "close",
+      "confidence": 0.65,
+      "status": "proposed",
+      "rationale": "Text on discovery labels; close because those labels use subtler fills. Evidence: description (\"text on top of discovery semantic labels\"); sibling (text.danger.bolder approved as on-fill text, subtle).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-d73f2f0b6042",
+      "token": "color.text.discovery.bolder",
+      "concept": "dsi:concept/color/intent-discovery/property-text/emphasis-stronger",
+      "match": "close",
+      "confidence": 0.65,
+      "status": "proposed",
+      "rationale": "Text on discovery labels, stronger than the default discovery text. Evidence: description; value (#48245d against #803fa5); convention (ADR 0018 bolder is stronger).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T21:14:14Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-4740f2fa35a0",
+      "token": "color.text.discovery.default",
+      "concept": "dsi:concept/color/intent-discovery/property-text",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "proposed",
+      "rationale": "Text emphasizing change or something new, such as new lozenges. Evidence: description; value (Purple800 light, Purple200 dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T21:14:35+00:00",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:16:28.396Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-text: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -14195,34 +17393,24 @@
     },
     {
       "token": "color.text.code.accent.1",
-      "status": "rejected",
-      "rationale": "Additional unnamed syntax-highlighting color with no fixed Lezer tag; missing concept: generic extra syntax slot.",
+      "status": "proposed",
+      "rationale": "Spare syntax-highlighting text color with no assigned code role; no syntax value names an unassigned slot. Evidence: description (\"an additional syntax-highlighting text color\").",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T21:14:35+00:00",
         "method": "color-v1"
-      },
-      "review": {
-        "by": "owner-decision",
-        "at": "2026-11-01T21:09:42.556Z",
-        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "color.text.code.accent.2",
-      "status": "rejected",
-      "rationale": "Additional unnamed syntax-highlighting color with no fixed Lezer tag; missing concept: generic extra syntax slot.",
+      "status": "proposed",
+      "rationale": "Spare syntax-highlighting text color with no assigned code role; no syntax value names an unassigned slot. Evidence: description (\"an additional syntax-highlighting text color\").",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T21:14:35+00:00",
         "method": "color-v1"
-      },
-      "review": {
-        "by": "owner-decision",
-        "at": "2026-11-01T21:09:42.556Z",
-        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
