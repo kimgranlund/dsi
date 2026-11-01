@@ -4,7 +4,7 @@
 - How to ask (format, batching, what never needs asking)
 - G1 License, G2 Package and version, G3 Themes to modes
 - G4 Queued words, G5 Ontology change, G6 Rule or policy change
-- G7 Review decisions, G8 Push and production deploy
+- G7 Review decisions, G8 Push and production deploy, G9 Jev role
 
 Freedom: Low. The owner decides; you gather the evidence and recommend.
 
@@ -58,3 +58,8 @@ Ask once: "The review page has N tokens, W words and D disputes queued: <artifac
 
 Evidence: commits since origin (`git log --oneline origin/main..`), preview URL, full check result, probe result.
 Ask: two separate options or one question with "push and deploy / push only / neither yet". Approval applies to this push and this deploy only; a later change needs a new yes.
+
+## G9 Jev role
+
+Ask before Jev gets any role in mapping (vote, tiebreak, reuse check, audit pre-screen). Show the pilot evidence: joint and per-facet accuracy, calibration, and owner-tier numbers against the current voters. Recommend the narrowest role the evidence supports. Running lab experiments needs no gate beyond the owner's go-ahead to use the API.
+

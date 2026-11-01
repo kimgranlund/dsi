@@ -23,6 +23,7 @@ A public, searchable index of design-system tokens. Each system's shipped tokens
 | Classify tokens from their names, term mappings | `packages/classify/README.md` | `mappings/README.md` |
 | Resolve a token's value or a concept per product and mode | `packages/resolve/README.md` | `ontology/README.md` |
 | Canonical token output | `packages/canon/README.md` | `packages/resolve/README.md` |
+| Jev experiments (TypeSafe model as a mapping voter) | `packages/jev/README.md` | `packages/jev/LESSONS.md` |
 | Query database, search | `packages/db/README.md` | `docs/planning/repo-layout.md` |
 | Explorer site | `site/README.md` | `packages/db/README.md` |
 | Data file shape or validation rule | `packages/schema/README.md` | `ontology/README.md` |

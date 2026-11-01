@@ -18,7 +18,8 @@ description: Add a design system (or a new upstream version of one) to DesignSys
 | 3 | Verify ingest | Low | - | runbook §3 | `workflows/verify-ingest.js` |
 | 4 | Vocabulary | Low (cmds) / High (agents) | G4 queued words go to review | runbook §4 | `workflows/words.js`, `workflows/tiebreak.js` (kind words) |
 | 5 | Mapping | Low / High | G5 ontology change from gaps | runbook §5, gates §G5 | `workflows/map.js` |
-| 6 | Tiebreak | Low | - | runbook §6 | `workflows/tiebreak.js` (kind map) |
+| 6 | Tiebreak and settle | Low | - | runbook §6 | `workflows/tiebreak.js` (kind map), then `settle` |
+| 6b | Jev vote (experimental) | Low | G9 Jev gets a role only after the pilot | runbook §12, references/jev.md | none |
 | 7 | Audit | Low / High | G6 rule changes (ADR) | runbook §7, gates §G6 | `workflows/audit.js` |
 | 8 | Review | Low | G7 owner's review decisions | runbook §8, gates §G7 | none (artifact) |
 | 9 | Ship | Low | G8 push + production deploy | runbook §9, gates §G8 | none |
@@ -35,6 +36,7 @@ Freedom: **Low** = run the exact commands, no improvising. **Medium** = goal + c
 7. **Two strikes**: after two failed root-cause fixes of the same check, stop and tell the owner what failed, what you tried, and the evidence.
 8. **`data/` is generated**; native names and values are never edited; approved mappings are never overwritten (AGENTS.md invariants).
 9. Owner questions go through AskUserQuestion, recommendation first (gates.md).
+10. **Controlled language** (`docs/controlled-language.md`, ADR 0019): concepts come from the registry (`ontology/schemes/concepts.jsonld`); a new combination waits for the owner; never bind `emphasis-default`; rationales follow L6.
 
 ## Where things live
 - Steps and exact commands: `references/runbook.md` (the one authority for steps).
@@ -77,9 +79,14 @@ Copy the checklist of the current stage into your task list. Each has an exit cr
 - [ ] Agent gap reports read; G5 if they point at the ontology
 - Exit: merge counts recorded; gaps answered or queued. Loop: agents split on a family -> suspect an ontology gap (lessons L1) before re-mapping.
 
-### 6 Tiebreak (Low)
+### 6 Tiebreak and settle (Low)
 - [ ] `workflows/tiebreak.js` `{kind: "map", product, version, run, firstRun, docs}`
-- Exit: tiebreak printed counts; remaining queue size known.
+- [ ] `settle color-v1 <run> <p> <firstRun>` (three agree, emphasis-only splits, two of three at 0.5; runbook §6)
+- Exit: tiebreak and settle counts printed; remaining queue size known; new-concept answers held by the registry gate counted.
+
+### 6b Jev vote (experimental)
+- [ ] Only when `packages/jev/LESSONS.md` records a configuration that passed the pilot and the owner gave it a role (G9)
+- Exit: Jev's answers recorded as votes with provenance; never an approval on its own.
 
 ### 7 Audit (Low / High)
 - [ ] `workflows/audit.js` `{product, version, run, docs}`

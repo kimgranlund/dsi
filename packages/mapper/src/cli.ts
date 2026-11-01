@@ -297,8 +297,8 @@ if (cmd === 'prepare') {
       if (m.provenance?.method === 'human-review' || m.review?.by === 'kimgranlund') { counts.owner++; continue; }
       if (m.match === 'narrow' || m.match === 'related') { counts.narrowOrRelated++; continue; }
       const segs = m.concept.split('/');
-      const segs2: string[] = segs; const cands = [...new Set<string>(segs2.slice(3).map((_, i) => [...segs2.slice(0, 3 + i), ...segs2.slice(4 + i)].join('/')))]
-        .filter((b) => b.split('/').length > 3 && (usedBy.get(b)?.size ?? 0) >= 2 && !mine.has(b) && typeof parseConcept(ontology, b) !== 'string');
+      const segs2: string[] = segs; const cands = [...new Set<string>(segs2.slice(2).map((_, i) => [...segs2.slice(0, 2 + i), ...segs2.slice(3 + i)].join('/')))]
+        .filter((b) => b.split('/').length > 2 && (usedBy.get(b)?.size ?? 0) >= 2 && !mine.has(b) && typeof parseConcept(ontology, b) !== 'string');
       if (!cands.length) { counts.unique++; continue; }
       if (cands.length > 1) { counts.ambiguous++; continue; }
       (plans.get(cands[0]) ?? plans.set(cands[0], []).get(cands[0])!).push(m);

@@ -1,0 +1,25 @@
+{
+  "name": "e06-facets-json",
+  "hypothesis": "JSON state instead of key: value text.",
+  "sample": {
+    "n": 70,
+    "seed": 1,
+    "tier": "all"
+  },
+  "state": {
+    "kind": "full",
+    "format": "json"
+  },
+  "questions": {
+    "kind": "facets",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "criteria": "definition"
+  }
+}

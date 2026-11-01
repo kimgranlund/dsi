@@ -1,0 +1,25 @@
+{
+  "name": "e03-facets-desc",
+  "hypothesis": "Does the description add signal beyond the name?",
+  "sample": {
+    "n": 70,
+    "seed": 1,
+    "tier": "all"
+  },
+  "state": {
+    "kind": "name+desc",
+    "format": "text"
+  },
+  "questions": {
+    "kind": "facets",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "criteria": "definition"
+  }
+}

@@ -32,3 +32,10 @@ Each lesson: what failed, why, the fix now in place. Rounds: Material, Carbon, P
 ## Site and probe
 
 - **L13 Probe computed colors, not screenshots.** Unreadable specimen buttons came from the resolver policy (broader concepts and state variants answering), not from data (ADR 0006 amendment). The Playwright probe reads computed colors and contrast per part, system and mode, and names the token chain. Headless Chrome's minimum window is 500px: narrower "screenshots" are crops, not a mobile layout.
+
+## 2026-11-01, controlled language
+
+- **Facet segments start at index 2.** `dsi:concept` is one path segment: `dsi:concept/color/intent-danger`.split('/') gives `['dsi:concept', 'color', 'intent-danger']`. Slicing at 3 skipped the first facet and halved a reconcile report.
+- **Folding rare concepts loses meaning.** Concepts only one system uses are mostly precise positions, not drift. Real drift showed up as name collisions (L3): `emphasis-default` and duplicated domains.
+- **Composite shadows are elevation.** Models put full `shadow.*` tokens in the color domain; the canonical validator caught it. Color-domain shadow is shadow color only.
+

@@ -1,0 +1,25 @@
+{
+  "name": "e02-facets-name",
+  "hypothesis": "How much of the answer the token name alone carries.",
+  "sample": {
+    "n": 70,
+    "seed": 1,
+    "tier": "all"
+  },
+  "state": {
+    "kind": "name",
+    "format": "text"
+  },
+  "questions": {
+    "kind": "facets",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "criteria": "definition"
+  }
+}

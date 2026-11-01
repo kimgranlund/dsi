@@ -13,6 +13,7 @@
 - §9 Ship
 - §10 Rebuild sequence (used by several stages)
 - §11 Re-ingest a new upstream version
+- §12 Jev (experimental)
 
 This file is the one authority for steps. Rationale lives in the ADRs named inline; history in `lessons.md`.
 
@@ -116,7 +117,13 @@ Manual copy step:
 python3 -c "import json;R='.cache/mapper/<run>/';d=json.load(open(R+'<p>.a.packet.json'));d['role']='c';d['output']=d['output'].replace('.a.proposals','.c.proposals');json.dump(d,open(R+'<p>.c.packet.json','w'),indent=1)"
 ```
 
-Exit: tiebreak counts recorded (`contested`, `approved`, `unmapped`, `queued`); `node packages/mapper/src/cli.ts queue color-v1` size known.
+Then the settle rules (ADR 0005 amended) on what is still contested:
+```
+node packages/mapper/src/cli.ts settle color-v1 <run> <p> <firstRun>
+```
+It approves three-way concept agreement with the most cautious match, settles emphasis-only splits by contrast rank (else the concept without emphasis, matched broad), and approves two of three at confidence 0.5. Every rule step passes the registry gate (ADR 0019): an answer with an unregistered concept goes back to Proposed as "New concept" for the owner.
+
+Exit: tiebreak and settle counts recorded (`contested`, `approved`, `unmapped`, `queued`); `node packages/mapper/src/cli.ts queue color-v1` size known.
 
 ## §7 Audit
 
@@ -172,3 +179,13 @@ The site data (`node packages/db/src/cli.ts build` then `export`, or `cd site &&
 3. Verify ingest (§3).
 4. Bump the version in `packages/mapper/scopes/color-v1.json`; create the new empty `<new>.mappings.json`. No command carries approved mappings to a new version today: run the pipeline from §4 (approved terms in `terms.json` are per product, so they apply again and the classifier vote can settle tokens) and say so in the report.
 5. Audit and review the new version as for a new system.
+
+## §12 Jev (experimental)
+
+Freedom: Low. Jev (TypeSafe System One) answers typed questions with probabilities, and it is not an Anthropic model, so it could be a truly independent voter. It has no role until the pilot in `packages/jev/` earns it one (G9).
+
+1. Read `packages/jev/LESSONS.md` for the current best configuration and what failed.
+2. To test on a new system: add or copy an experiment with `"products": ["<p>"]`, then `node packages/jev/src/lab.ts run <file>` (key in `.env.local`, endpoint api.typesafe.ai only) and `compare` against the best.
+3. Follow the loop in `packages/jev/README.md`: one change per round, paired seeds, keep a change at 2 points or more, stop after two flat rounds.
+4. Promote findings to `LESSONS.md` with experiment names and numbers. Propose a pipeline role only with owner-tier evidence (G9).
+

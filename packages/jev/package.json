@@ -1,0 +1,17 @@
+{
+  "name": "@dsi/jev",
+  "private": true,
+  "type": "module",
+  "bin": { "dsi-jev": "./src/lab.ts" },
+  "scripts": {
+    "check": "tsc -p . && node --test \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@dsi/schema": "workspace:*",
+    "@dsi/resolve": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.0",
+    "typescript": "5.8.3"
+  }
+}
