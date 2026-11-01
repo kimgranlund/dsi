@@ -6,10 +6,10 @@
   "scopes": {
    "semantic": 234,
    "palette": 244,
-   "foundation": 60,
+   "foundation": 357,
    "component": 78
   },
-  "colorTokensFullyExplained": 73
+  "colorTokensFullyExplained": 71
  },
  "tokens": [
   {
@@ -226,17 +226,17 @@
    "token": "ai-overlay",
    "scope": "semantic",
    "facets": {
-    "intent": "ai",
-    "usage": "overlay"
+    "intent": "ai"
    },
    "matchedTerms": [
-    "ai",
+    "ai"
+   ],
+   "unknown": [
     "overlay"
    ],
-   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai/usage-overlay",
-   "explained": 1,
+   "concept": "dsi:concept/color/intent-ai",
+   "explained": 0.5,
    "domain": "color"
   },
   {
@@ -896,121 +896,127 @@
    "token": "border-radius.border-radius-00",
    "scope": "foundation",
    "facets": {
-    "property": "border"
+    "property": "corner-radius"
    },
    "matchedTerms": [
+    "border-radius",
+    "border-radius",
     "border",
     "border"
    ],
-   "unknown": [
-    "radius",
-    "radius"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0.5
+   "concept": "dsi:concept/color/property-corner-radius",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "border-radius.border-radius-02",
    "scope": "foundation",
    "facets": {
-    "property": "border"
+    "property": "corner-radius"
    },
    "matchedTerms": [
+    "border-radius",
+    "border-radius",
     "border",
     "border"
    ],
-   "unknown": [
-    "radius",
-    "radius"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0.5
+   "concept": "dsi:concept/color/property-corner-radius",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "border-radius.border-radius-04",
    "scope": "foundation",
    "facets": {
-    "property": "border"
+    "property": "corner-radius"
    },
    "matchedTerms": [
+    "border-radius",
+    "border-radius",
     "border",
     "border"
    ],
-   "unknown": [
-    "radius",
-    "radius"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0.5
+   "concept": "dsi:concept/color/property-corner-radius",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "border-radius.border-radius-08",
    "scope": "foundation",
    "facets": {
-    "property": "border"
+    "property": "corner-radius"
    },
    "matchedTerms": [
+    "border-radius",
+    "border-radius",
     "border",
     "border"
    ],
-   "unknown": [
-    "radius",
-    "radius"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0.5
+   "concept": "dsi:concept/color/property-corner-radius",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "border-radius.border-radius-16",
    "scope": "foundation",
    "facets": {
-    "property": "border"
+    "property": "corner-radius"
    },
    "matchedTerms": [
+    "border-radius",
+    "border-radius",
     "border",
     "border"
    ],
-   "unknown": [
-    "radius",
-    "radius"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0.5
+   "concept": "dsi:concept/color/property-corner-radius",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "border-radius.border-radius-24",
    "scope": "foundation",
    "facets": {
-    "property": "border"
+    "property": "corner-radius"
    },
    "matchedTerms": [
+    "border-radius",
+    "border-radius",
     "border",
     "border"
    ],
-   "unknown": [
-    "radius",
-    "radius"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0.5
+   "concept": "dsi:concept/color/property-corner-radius",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "border-radius.border-radius-max",
    "scope": "foundation",
    "facets": {
-    "property": "border"
+    "property": "corner-radius"
    },
    "matchedTerms": [
+    "border-radius",
+    "border-radius",
     "border",
     "border"
    ],
-   "unknown": [
-    "radius",
-    "radius",
-    "max"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0.4
+   "concept": "dsi:concept/color/property-corner-radius",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "border-strong-01",
@@ -1241,6 +1247,261 @@
    "concept": "dsi:concept/color/property-border",
    "explained": 0.5,
    "domain": "color"
+  },
+  {
+   "token": "breakpoint.lg.columns",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint"
+   ],
+   "unknown": [
+    "columns"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-breakpoint",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.lg.margin",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint",
+    "margin"
+   ],
+   "unknown": [],
+   "conflicts": [
+    "property: breakpoint vs spacing (margin)"
+   ],
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.lg.width",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint",
+    "width"
+   ],
+   "unknown": [],
+   "conflicts": [
+    "property: breakpoint vs width (width)"
+   ],
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.max.columns",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint"
+   ],
+   "unknown": [
+    "columns"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-breakpoint",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.max.margin",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint",
+    "margin"
+   ],
+   "unknown": [],
+   "conflicts": [
+    "property: breakpoint vs spacing (margin)"
+   ],
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.max.width",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint",
+    "width"
+   ],
+   "unknown": [],
+   "conflicts": [
+    "property: breakpoint vs width (width)"
+   ],
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.md.columns",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint"
+   ],
+   "unknown": [
+    "columns"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-breakpoint",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.md.margin",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint",
+    "margin"
+   ],
+   "unknown": [],
+   "conflicts": [
+    "property: breakpoint vs spacing (margin)"
+   ],
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.md.width",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint",
+    "width"
+   ],
+   "unknown": [],
+   "conflicts": [
+    "property: breakpoint vs width (width)"
+   ],
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.sm.columns",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint"
+   ],
+   "unknown": [
+    "columns"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-breakpoint",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.sm.margin",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint",
+    "margin"
+   ],
+   "unknown": [],
+   "conflicts": [
+    "property: breakpoint vs spacing (margin)"
+   ],
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.sm.width",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint",
+    "width"
+   ],
+   "unknown": [],
+   "conflicts": [
+    "property: breakpoint vs width (width)"
+   ],
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.xlg.columns",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint"
+   ],
+   "unknown": [
+    "columns"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-breakpoint",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.xlg.margin",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint",
+    "margin"
+   ],
+   "unknown": [],
+   "conflicts": [
+    "property: breakpoint vs spacing (margin)"
+   ],
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "breakpoint.xlg.width",
+   "scope": "foundation",
+   "facets": {
+    "property": "breakpoint"
+   },
+   "matchedTerms": [
+    "breakpoint",
+    "width"
+   ],
+   "unknown": [],
+   "conflicts": [
+    "property: breakpoint vs width (width)"
+   ],
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "button-danger-active",
@@ -1738,12 +1999,11 @@
     "background"
    ],
    "unknown": [
-    "chat",
-    "header"
+    "chat"
    ],
    "conflicts": [],
    "concept": "dsi:concept/color/property-background",
-   "explained": 0.3333333333333333,
+   "explained": 0.5,
    "domain": "color"
   },
   {
@@ -1756,12 +2016,11 @@
     "text"
    ],
    "unknown": [
-    "chat",
-    "header"
+    "chat"
    ],
    "conflicts": [],
    "concept": "dsi:concept/color/property-text",
-   "explained": 0.3333333333333333,
+   "explained": 0.5,
    "domain": "color"
   },
   {
@@ -1859,62 +2118,82 @@
   {
    "token": "container.container-01",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "height"
+   },
+   "matchedTerms": [
     "container",
     "container"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-height",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "container.container-02",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "height"
+   },
+   "matchedTerms": [
     "container",
     "container"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-height",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "container.container-03",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "height"
+   },
+   "matchedTerms": [
     "container",
     "container"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-height",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "container.container-04",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "height"
+   },
+   "matchedTerms": [
     "container",
     "container"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-height",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "container.container-05",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "height"
+   },
+   "matchedTerms": [
     "container",
     "container"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-height",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "content-switcher-background",
@@ -2496,152 +2775,194 @@
   {
    "token": "duration.fast.01",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "duration",
-    "fast"
+   "facets": {
+    "property": "duration"
+   },
+   "matchedTerms": [
+    "duration"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-duration",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "duration.fast.02",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "duration",
-    "fast"
+   "facets": {
+    "property": "duration"
+   },
+   "matchedTerms": [
+    "duration"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-duration",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "duration.moderate.01",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "duration",
-    "moderate"
+   "facets": {
+    "property": "duration"
+   },
+   "matchedTerms": [
+    "duration"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-duration",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "duration.moderate.02",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "duration",
-    "moderate"
+   "facets": {
+    "property": "duration"
+   },
+   "matchedTerms": [
+    "duration"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-duration",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "duration.slow.01",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "duration",
-    "slow"
+   "facets": {
+    "property": "duration"
+   },
+   "matchedTerms": [
+    "duration"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-duration",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "duration.slow.02",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "duration",
-    "slow"
+   "facets": {
+    "property": "duration"
+   },
+   "matchedTerms": [
+    "duration"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-duration",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "easing.entrance.expressive",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "easing",
+    "style": "expressive"
+   },
+   "matchedTerms": [
     "easing",
-    "entrance",
     "expressive"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-easing/style-expressive",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "easing.entrance.productive",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "easing",
+    "style": "productive"
+   },
+   "matchedTerms": [
     "easing",
-    "entrance",
     "productive"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-easing/style-productive",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "easing.exit.expressive",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "easing",
+    "style": "expressive"
+   },
+   "matchedTerms": [
     "easing",
-    "exit",
     "expressive"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-easing/style-expressive",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "easing.exit.productive",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "easing",
+    "style": "productive"
+   },
+   "matchedTerms": [
     "easing",
-    "exit",
     "productive"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-easing/style-productive",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "easing.standard.expressive",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "easing",
+    "style": "expressive"
+   },
+   "matchedTerms": [
     "easing",
-    "standard",
     "expressive"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-easing/style-expressive",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "easing.standard.productive",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "easing",
+    "style": "productive"
+   },
+   "matchedTerms": [
     "easing",
-    "standard",
     "productive"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-easing/style-productive",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "field-01",
@@ -2748,58 +3069,74 @@
   {
    "token": "fluid-spacing.fluid-spacing-01",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "fluid",
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
+    "fluid-spacing",
+    "fluid-spacing",
     "spacing",
-    "fluid",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "fluid-spacing.fluid-spacing-02",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "fluid",
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
+    "fluid-spacing",
+    "fluid-spacing",
     "spacing",
-    "fluid",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "fluid-spacing.fluid-spacing-03",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "fluid",
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
+    "fluid-spacing",
+    "fluid-spacing",
     "spacing",
-    "fluid",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "fluid-spacing.fluid-spacing-04",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "fluid",
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
+    "fluid-spacing",
+    "fluid-spacing",
     "spacing",
-    "fluid",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "focus",
@@ -3420,12 +3757,14 @@
    "token": "icon-on-color",
    "scope": "semantic",
    "facets": {
-    "property": "icon",
-    "usage": "on-fill"
+    "usage": "on-fill",
+    "property": "icon"
    },
    "matchedTerms": [
+    "on-color",
     "icon",
-    "on"
+    "on",
+    "color"
    ],
    "unknown": [],
    "conflicts": [],
@@ -3437,13 +3776,15 @@
    "token": "icon-on-color-disabled",
    "scope": "semantic",
    "facets": {
-    "property": "icon",
     "usage": "on-fill",
+    "property": "icon",
     "state": "disabled"
    },
    "matchedTerms": [
+    "on-color",
     "icon",
     "on",
+    "color",
     "disabled"
    ],
    "unknown": [],
@@ -3490,35 +3831,41 @@
    "token": "icon-size.icon-size-01",
    "scope": "foundation",
    "facets": {
-    "property": "icon"
+    "property": "icon-size"
    },
    "matchedTerms": [
+    "icon-size",
+    "icon-size",
     "icon",
-    "icon"
-   ],
-   "unknown": [
     "size",
+    "icon",
     "size"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0.5
+   "concept": "dsi:concept/color/property-icon-size",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "icon-size.icon-size-02",
    "scope": "foundation",
    "facets": {
-    "property": "icon"
+    "property": "icon-size"
    },
    "matchedTerms": [
+    "icon-size",
+    "icon-size",
     "icon",
-    "icon"
-   ],
-   "unknown": [
     "size",
+    "icon",
     "size"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0.5
+   "concept": "dsi:concept/color/property-icon-size",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "interactive",
@@ -4068,86 +4415,114 @@
   {
    "token": "layout.layout-01",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "layout",
     "layout"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "layout.layout-02",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "layout",
     "layout"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "layout.layout-03",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "layout",
     "layout"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "layout.layout-04",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "layout",
     "layout"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "layout.layout-05",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "layout",
     "layout"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "layout.layout-06",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "layout",
     "layout"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "layout.layout-07",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "layout",
     "layout"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "link-inverse",
@@ -4651,14 +5026,16 @@
    "token": "notification-action-tertiary-inverse-text-on-color-disabled",
    "scope": "component",
    "facets": {
-    "usage": "inverse+on-fill",
+    "usage": "on-fill",
     "property": "text",
     "state": "disabled"
    },
    "matchedTerms": [
+    "on-color",
     "inverse",
     "text",
     "on",
+    "color",
     "disabled"
    ],
    "unknown": [
@@ -4667,8 +5044,8 @@
     "tertiary"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-inverse+on-fill/property-text/state-disabled",
-   "explained": 0.5714285714285714,
+   "concept": "dsi:concept/color/usage-on-fill/property-text/state-disabled",
+   "explained": 0.625,
    "domain": "color"
   },
   {
@@ -5000,16 +5377,13 @@
   {
    "token": "overlay",
    "scope": "semantic",
-   "facets": {
-    "usage": "overlay"
-   },
-   "matchedTerms": [
+   "facets": {},
+   "matchedTerms": [],
+   "unknown": [
     "overlay"
    ],
-   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-overlay",
-   "explained": 1,
+   "explained": 0,
    "domain": "color"
   },
   {
@@ -5530,79 +5904,104 @@
   {
    "token": "size.size-2xl",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "height"
+   },
+   "matchedTerms": [
+    "size-size",
     "size",
-    "size",
-    "2xl"
+    "size"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-height",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "size.size-lg",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "height"
+   },
+   "matchedTerms": [
+    "size-size",
     "size",
-    "size",
-    "lg"
+    "size"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-height",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "size.size-md",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "height"
+   },
+   "matchedTerms": [
+    "size-size",
     "size",
-    "size",
-    "md"
+    "size"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-height",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "size.size-sm",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "height"
+   },
+   "matchedTerms": [
+    "size-size",
     "size",
     "size"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-height",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "size.size-xl",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "height"
+   },
+   "matchedTerms": [
+    "size-size",
     "size",
-    "size",
-    "xl"
+    "size"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-height",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "size.size-xs",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "height"
+   },
+   "matchedTerms": [
+    "size-size",
     "size",
-    "size",
-    "xs"
+    "size"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-height",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "skeleton-background",
@@ -5642,158 +6041,210 @@
   {
    "token": "spacing.spacing-01",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-02",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-03",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-04",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-05",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-06",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-07",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-08",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-09",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-10",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-11",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-12",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "spacing.spacing-13",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "spacing"
+   },
+   "matchedTerms": [
     "spacing",
     "spacing"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-spacing",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "status-accessibility-background",
@@ -6133,50 +6584,62 @@
   {
    "token": "surface.contextual",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "surface",
-    "contextual"
+   "facets": {
+    "property": "transition"
+   },
+   "matchedTerms": [
+    "surface"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-transition",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "surface.disclosure",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "surface",
-    "disclosure"
+   "facets": {
+    "property": "transition"
+   },
+   "matchedTerms": [
+    "surface"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-transition",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "surface.expand",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "surface",
-    "expand"
+   "facets": {
+    "property": "transition"
+   },
+   "matchedTerms": [
+    "surface"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-transition",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "surface.invoke",
    "scope": "foundation",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "surface",
-    "invoke"
+   "facets": {
+    "property": "transition"
+   },
+   "matchedTerms": [
+    "surface"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0
+   "concept": "dsi:concept/color/property-transition",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "syntax-angle-bracket",
@@ -6370,13 +6833,18 @@
   {
    "token": "syntax-color",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "on-fill"
+   },
+   "matchedTerms": [
+    "color"
+   ],
    "unknown": [
     "syntax"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-on-fill",
+   "explained": 0.5,
    "domain": "color"
   },
   {
@@ -6782,15 +7250,19 @@
   {
    "token": "syntax-label-name",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "label"
+   },
+   "matchedTerms": [
+    "label"
+   ],
    "unknown": [
     "syntax",
-    "label",
     "name"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-label",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
@@ -6800,7 +7272,6 @@
    "matchedTerms": [],
    "unknown": [
     "syntax",
-    "line",
     "comment"
    ],
    "conflicts": [],
@@ -7177,8 +7648,7 @@
    "facets": {},
    "matchedTerms": [],
    "unknown": [
-    "syntax",
-    "standard"
+    "syntax"
    ],
    "conflicts": [],
    "explained": 0,
@@ -7260,8 +7730,7 @@
    "facets": {},
    "matchedTerms": [],
    "unknown": [
-    "syntax",
-    "type"
+    "syntax"
    ],
    "conflicts": [],
    "explained": 0,
@@ -7274,7 +7743,6 @@
    "matchedTerms": [],
    "unknown": [
     "syntax",
-    "type",
     "name"
    ],
    "conflicts": [],
@@ -7288,7 +7756,6 @@
    "matchedTerms": [],
    "unknown": [
     "syntax",
-    "type",
     "operator"
    ],
    "conflicts": [],
@@ -7729,133 +8196,183 @@
   {
    "token": "tag-color-blue",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "on-fill"
+   },
+   "matchedTerms": [
+    "color"
+   ],
    "unknown": [
     "tag",
     "blue"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-on-fill",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
    "token": "tag-color-cool-gray",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "on-fill"
+   },
+   "matchedTerms": [
+    "color"
+   ],
    "unknown": [
     "tag",
     "cool",
     "gray"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-on-fill",
+   "explained": 0.25,
    "domain": "color"
   },
   {
    "token": "tag-color-cyan",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "on-fill"
+   },
+   "matchedTerms": [
+    "color"
+   ],
    "unknown": [
     "tag",
     "cyan"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-on-fill",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
    "token": "tag-color-gray",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "on-fill"
+   },
+   "matchedTerms": [
+    "color"
+   ],
    "unknown": [
     "tag",
     "gray"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-on-fill",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
    "token": "tag-color-green",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "on-fill"
+   },
+   "matchedTerms": [
+    "color"
+   ],
    "unknown": [
     "tag",
     "green"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-on-fill",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
    "token": "tag-color-magenta",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "on-fill"
+   },
+   "matchedTerms": [
+    "color"
+   ],
    "unknown": [
     "tag",
     "magenta"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-on-fill",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
    "token": "tag-color-purple",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "on-fill"
+   },
+   "matchedTerms": [
+    "color"
+   ],
    "unknown": [
     "tag",
     "purple"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-on-fill",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
    "token": "tag-color-red",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "on-fill"
+   },
+   "matchedTerms": [
+    "color"
+   ],
    "unknown": [
     "tag",
     "red"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-on-fill",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
    "token": "tag-color-teal",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "on-fill"
+   },
+   "matchedTerms": [
+    "color"
+   ],
    "unknown": [
     "tag",
     "teal"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-on-fill",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
    "token": "tag-color-warm-gray",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "usage": "on-fill"
+   },
+   "matchedTerms": [
+    "color"
+   ],
    "unknown": [
     "tag",
     "warm",
     "gray"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-on-fill",
+   "explained": 0.25,
    "domain": "color"
   },
   {
@@ -8362,12 +8879,14 @@
    "token": "text-on-color",
    "scope": "semantic",
    "facets": {
-    "property": "text",
-    "usage": "on-fill"
+    "usage": "on-fill",
+    "property": "text"
    },
    "matchedTerms": [
+    "on-color",
     "text",
-    "on"
+    "on",
+    "color"
    ],
    "unknown": [],
    "conflicts": [],
@@ -8379,13 +8898,15 @@
    "token": "text-on-color-disabled",
    "scope": "semantic",
    "facets": {
-    "property": "text",
     "usage": "on-fill",
+    "property": "text",
     "state": "disabled"
    },
    "matchedTerms": [
+    "on-color",
     "text",
     "on",
+    "color",
     "disabled"
    ],
    "unknown": [],
@@ -8457,6 +8978,4777 @@
    "conflicts": [],
    "explained": 0,
    "domain": "color"
+  },
+  {
+   "token": "type.body-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-size",
+    "body",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "body",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "line-height",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-size",
+    "body",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "body",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "line-height",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-compact-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-size",
+    "body",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-compact-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-compact-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "body",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-compact-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "line-height",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-compact-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-size",
+    "body",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-compact-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-compact-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "body",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-compact-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "line-height",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-long-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-size",
+    "body",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-long-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-long-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "body",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-long-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "line-height",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-long-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-size",
+    "body",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-long-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-long-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "body",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-long-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "line-height",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-short-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-size",
+    "body",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-short-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-short-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "body",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-short-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "line-height",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-short-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-size",
+    "body",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-short-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-short-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "body",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.body-short-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "line-height",
+    "body"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.caption-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "caption"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.caption-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "caption"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.caption-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "caption"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.caption-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "caption"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.caption-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "caption"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.caption-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "caption"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.caption-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "caption"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.caption-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "caption"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.code-01.font-family",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-family"
+   ],
+   "unknown": [
+    "code"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.code-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "code"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.code-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "code"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.code-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "code"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.code-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "code"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.code-02.font-family",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-family"
+   ],
+   "unknown": [
+    "code"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.code-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "code"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.code-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "code"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.code-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "code"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.code-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "code"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-size",
+    "display",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "display",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "line-height",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-size",
+    "display",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "display",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "line-height",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-03.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-size",
+    "display",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-03.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-03.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "display",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-03.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "line-height",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-04.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-size",
+    "display",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-04.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-04.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "display",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.display-04.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "line-height",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-size",
+    "expressive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-weight",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "letter-spacing",
+    "expressive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "line-height",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-size",
+    "expressive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-weight",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "letter-spacing",
+    "expressive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "line-height",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-03.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-size",
+    "expressive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-03.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-weight",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-03.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "letter-spacing",
+    "expressive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-03.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "line-height",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-04.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-size",
+    "expressive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-04.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-weight",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-04.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "letter-spacing",
+    "expressive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-04.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "line-height",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-05.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-size",
+    "expressive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-05.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-weight",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-05.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "letter-spacing",
+    "expressive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-05.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "line-height",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-06.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-size",
+    "expressive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-06.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "font-weight",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-06.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "letter-spacing",
+    "expressive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-heading-06.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "expressive-heading",
+    "line-height",
+    "expressive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-paragraph-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-size",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "expressive-paragraph",
+    "font-size",
+    "expressive",
+    "paragraph",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-size/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-paragraph-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "font-weight",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "expressive-paragraph",
+    "font-weight",
+    "expressive",
+    "paragraph"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-weight/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-paragraph-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "letter-spacing",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "expressive-paragraph",
+    "letter-spacing",
+    "expressive",
+    "paragraph",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-letter-spacing/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.expressive-paragraph-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "expressive",
+    "property": "line-height",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "expressive-paragraph",
+    "line-height",
+    "expressive",
+    "paragraph"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-line-height/style-expressive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-size",
+    "display",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "display",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "line-height",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-size",
+    "display",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "display",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "line-height",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-03.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-size",
+    "display",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-03.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-03.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "display",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-03.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "line-height",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-04.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-size",
+    "display",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-04.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-04.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "display",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-display-04.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "display"
+   },
+   "matchedTerms": [
+    "line-height",
+    "display"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-display/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-03.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-03.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-03.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-03.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-04.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-04.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-04.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-04.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-05.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-05.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-05.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-05.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-06.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-06.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-06.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-heading-06.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-paragraph-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-size",
+    "paragraph",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-paragraph-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "paragraph"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-paragraph-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "paragraph",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-paragraph-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "body"
+   },
+   "matchedTerms": [
+    "line-height",
+    "paragraph"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-body/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-quotation-01.font-family",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-family"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-quotation-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-quotation-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-quotation-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-quotation-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-quotation-02.font-family",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-family"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-quotation-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-quotation-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-quotation-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.fluid-quotation-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-families.mono",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-families"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-families.sans",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-families"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-families.sans-arabic",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-families"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-families.sans-condensed",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-families"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-families.sans-devanagari",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-families"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-families.sans-hebrew",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-families"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-families.sans-jp",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-families"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-families.sans-kr",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-families"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-families.sans-thai",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-families"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-families.sans-thai-looped",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-families"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-families.serif",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-families"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-weights.light",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weights"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-weights.regular",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weights"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.font-weights.semibold",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weights"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-03.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-03.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-03.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-03.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-04.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-04.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-04.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-04.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-05.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-05.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-05.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-05.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-06.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-06.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-06.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-06.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-07.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-07.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-07.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-07.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-compact-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-compact-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-compact-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-compact-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-compact-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-compact-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-compact-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.heading-compact-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "heading"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.helper-text-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "text",
+    "size"
+   ],
+   "unknown": [
+    "helper"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.6666666666666666,
+   "domain": "other"
+  },
+  {
+   "token": "type.helper-text-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "text",
+    "spacing"
+   ],
+   "unknown": [
+    "helper"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.6666666666666666,
+   "domain": "other"
+  },
+  {
+   "token": "type.helper-text-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height",
+    "text"
+   ],
+   "unknown": [
+    "helper"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.helper-text-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "text",
+    "size"
+   ],
+   "unknown": [
+    "helper"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.6666666666666666,
+   "domain": "other"
+  },
+  {
+   "token": "type.helper-text-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "text"
+   ],
+   "unknown": [
+    "helper"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.helper-text-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "text",
+    "spacing"
+   ],
+   "unknown": [
+    "helper"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.6666666666666666,
+   "domain": "other"
+  },
+  {
+   "token": "type.helper-text-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height",
+    "text"
+   ],
+   "unknown": [
+    "helper"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.label-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "label"
+   },
+   "matchedTerms": [
+    "font-size",
+    "label",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-label/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.label-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "label"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "label"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-label/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.label-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "label"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "label",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-label/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.label-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "label"
+   },
+   "matchedTerms": [
+    "line-height",
+    "label"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-label/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.label-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size",
+    "usage": "label"
+   },
+   "matchedTerms": [
+    "font-size",
+    "label",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-label/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.label-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight",
+    "usage": "label"
+   },
+   "matchedTerms": [
+    "font-weight",
+    "label"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-label/property-font-weight",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.label-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing",
+    "usage": "label"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "label",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-label/property-letter-spacing",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.label-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height",
+    "usage": "label"
+   },
+   "matchedTerms": [
+    "line-height",
+    "label"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/usage-label/property-line-height",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.legal-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "legal"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.legal-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "legal"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.legal-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "legal"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.legal-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "legal"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.legal-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "legal"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.legal-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "legal"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.legal-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "legal"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.legal-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "legal"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-size",
+    "productive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-weight",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "letter-spacing",
+    "productive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "line-height",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-size",
+    "productive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-weight",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "letter-spacing",
+    "productive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "line-height",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-03.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-size",
+    "productive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-03.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-weight",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-03.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "letter-spacing",
+    "productive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-03.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "line-height",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-04.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-size",
+    "productive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-04.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-weight",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-04.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "letter-spacing",
+    "productive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-04.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "line-height",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-05.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-size",
+    "productive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-05.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-weight",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-05.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "letter-spacing",
+    "productive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-05.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "line-height",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-06.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-size",
+    "productive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-06.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-weight",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-06.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "letter-spacing",
+    "productive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-06.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "line-height",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-07.font-size",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-size",
+    "productive",
+    "size"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-07.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "font-weight",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-07.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "letter-spacing",
+    "productive",
+    "spacing"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.productive-heading-07.line-height",
+   "scope": "foundation",
+   "facets": {
+    "style": "productive",
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "productive-heading",
+    "line-height",
+    "productive"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height/style-productive",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.quotation-01.font-family",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-family"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.quotation-01.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.quotation-01.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.quotation-01.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.quotation-01.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.quotation-02.font-family",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-family"
+   },
+   "matchedTerms": [
+    "font-family"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-family",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.quotation-02.font-size",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "font-size",
+    "size"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.quotation-02.font-weight",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-weight"
+   },
+   "matchedTerms": [
+    "font-weight"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-weight",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.quotation-02.letter-spacing",
+   "scope": "foundation",
+   "facets": {
+    "property": "letter-spacing"
+   },
+   "matchedTerms": [
+    "letter-spacing",
+    "spacing"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-letter-spacing",
+   "explained": 0.5,
+   "domain": "other"
+  },
+  {
+   "token": "type.quotation-02.line-height",
+   "scope": "foundation",
+   "facets": {
+    "property": "line-height"
+   },
+   "matchedTerms": [
+    "line-height"
+   ],
+   "unknown": [
+    "quotation"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-line-height",
+   "explained": 0,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.1",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.10",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.11",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.12",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.13",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.14",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.15",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.16",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.17",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.18",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.19",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.2",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.20",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.21",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.22",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.23",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.3",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.4",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.5",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.6",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.7",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.8",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "type.type-scale.9",
+   "scope": "foundation",
+   "facets": {
+    "property": "font-size"
+   },
+   "matchedTerms": [
+    "type-scale"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-font-size",
+   "explained": 1,
+   "domain": "other"
   },
   {
    "token": "warmGray.10",
@@ -9006,6 +14298,128 @@
    "conflicts": [],
    "explained": 0,
    "domain": "color"
+  },
+  {
+   "token": "z-index.dropdown",
+   "scope": "foundation",
+   "facets": {
+    "property": "z-index"
+   },
+   "matchedTerms": [
+    "z-index"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-z-index",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "z-index.floating",
+   "scope": "foundation",
+   "facets": {
+    "property": "z-index"
+   },
+   "matchedTerms": [
+    "z-index"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-z-index",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "z-index.footer",
+   "scope": "foundation",
+   "facets": {
+    "property": "z-index"
+   },
+   "matchedTerms": [
+    "z-index"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-z-index",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "z-index.header",
+   "scope": "foundation",
+   "facets": {
+    "property": "z-index"
+   },
+   "matchedTerms": [
+    "z-index"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-z-index",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "z-index.hidden",
+   "scope": "foundation",
+   "facets": {
+    "property": "z-index"
+   },
+   "matchedTerms": [
+    "z-index"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-z-index",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "z-index.modal",
+   "scope": "foundation",
+   "facets": {
+    "property": "z-index"
+   },
+   "matchedTerms": [
+    "z-index"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-z-index",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "z-index.overflowHidden",
+   "scope": "foundation",
+   "facets": {
+    "property": "z-index"
+   },
+   "matchedTerms": [
+    "z-index"
+   ],
+   "unknown": [],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-z-index",
+   "explained": 1,
+   "domain": "other"
+  },
+  {
+   "token": "z-index.overlay",
+   "scope": "foundation",
+   "facets": {
+    "property": "z-index"
+   },
+   "matchedTerms": [
+    "z-index"
+   ],
+   "unknown": [
+    "overlay"
+   ],
+   "conflicts": [],
+   "concept": "dsi:concept/color/property-z-index",
+   "explained": 0,
+   "domain": "other"
   }
  ]
 }

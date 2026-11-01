@@ -2473,7 +2473,7 @@
       "term": "severe",
       "concept": "dsi:intent/caution",
       "match": "broad",
-      "status": "approved",
+      "status": "rejected",
       "note": "Orange 'high-priority warnings' between attention (warning) and danger. ADR 0008 maps severity between warning and danger to intent-caution broad (Carbon support-caution-major).",
       "provenance": {
         "agent": "dsi-classify",
@@ -2482,9 +2482,26 @@
         "method": "terms-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:42:31.251Z",
-        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "ADR 0024: severe is its own intent."
+      }
+    },
+    {
+      "term": "severe",
+      "concept": "dsi:intent/severe",
+      "match": "exact",
+      "status": "approved",
+      "note": "The orange status level between attention (warning) and danger.",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "method": "owner-rule"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "Owner decision (ADR 0024)."
       }
     },
     {

@@ -27,3 +27,4 @@ ADRs, one per file: `NNNN-short-title.md` with Status, Context, Decision, Conseq
 | [0021](0021-boundary-tests.md) | Deciding tests for vocabulary boundaries |
 | [0022](0022-graphic-property.md) | A graphic property for non-text marks |
 | [0023](0023-gap-words-and-components.md) | Fixed, transparent and terminal usages, done intent; eight components and six parts |
+| [0024](0024-severe-intent.md) | A severe intent between warning and danger |

@@ -1605,7 +1605,7 @@
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-strong",
       "match": "broad",
       "confidence": 0.5,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Strong bgColor of the severe role; Primer's muted/emphasis pair is a two-step ladder whose contrast rank matches subtle/strong. Severe is Primer's higher-priority warning (orange) above attention (yellow) and below danger; the ontology has no severity ladder inside Warning, so Warning with the severity as the nuance. Muted/emphasis already fix the emphasis step, so severity cannot take it.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -1613,10 +1613,11 @@
         "method": "settle-three-v1"
       },
       "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:51.456Z",
-        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
-      }
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "ADR 0024: the orange level between warning and danger is intent severe."
+      },
+      "supersededBy": "m-6e37b02e9c25"
     },
     {
       "id": "m-6908d828a8e8",
@@ -1644,7 +1645,7 @@
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
       "match": "broad",
       "confidence": 0.5,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Subtle bgColor of the severe role; Primer's muted/emphasis pair is a two-step ladder whose contrast rank matches subtle/strong. Severe is Primer's higher-priority warning (orange) above attention (yellow) and below danger; the ontology has no severity ladder inside Warning, so Warning with the severity as the nuance. Muted/emphasis already fix the emphasis step, so severity cannot take it.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -1652,10 +1653,11 @@
         "method": "settle-three-v1"
       },
       "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:51.456Z",
-        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
-      }
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "ADR 0024: the orange level between warning and danger is intent severe."
+      },
+      "supersededBy": "m-5bc91a5a77e6"
     },
     {
       "id": "m-abb08d2d2e14",
@@ -2464,7 +2466,7 @@
       "concept": "dsi:concept/color/intent-warning/property-border/emphasis-strong",
       "match": "broad",
       "confidence": 0.5,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Strong borderColor of the severe role; Primer's muted/emphasis pair is a two-step ladder whose contrast rank matches subtle/strong. Severe is Primer's higher-priority warning (orange) above attention (yellow) and below danger; the ontology has no severity ladder inside Warning, so Warning with the severity as the nuance. Muted/emphasis already fix the emphasis step, so severity cannot take it.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2472,10 +2474,11 @@
         "method": "settle-three-v1"
       },
       "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:51.456Z",
-        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
-      }
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "ADR 0024: the orange level between warning and danger is intent severe."
+      },
+      "supersededBy": "m-a98d87b99a16"
     },
     {
       "id": "m-7d4a252096c8",
@@ -2483,7 +2486,7 @@
       "concept": "dsi:concept/color/intent-warning/property-border/emphasis-subtle",
       "match": "broad",
       "confidence": 0.5,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Subtle borderColor of the severe role; Primer's muted/emphasis pair is a two-step ladder whose contrast rank matches subtle/strong. Severe is Primer's higher-priority warning (orange) above attention (yellow) and below danger; the ontology has no severity ladder inside Warning, so Warning with the severity as the nuance. Muted/emphasis already fix the emphasis step, so severity cannot take it.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2491,10 +2494,11 @@
         "method": "settle-three-v1"
       },
       "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:51.456Z",
-        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
-      }
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "ADR 0024: the orange level between warning and danger is intent severe."
+      },
+      "supersededBy": "m-22701adbaa44"
     },
     {
       "id": "m-8ce25e3bb144",
@@ -14909,7 +14913,7 @@
       "concept": "dsi:concept/color/intent-warning/property-foreground",
       "match": "close",
       "confidence": 0.6,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Primer severe is a high-priority warning between attention and danger; mapped to Warning with the nuance that it is more severe. Gap: severity level within warning. Primer fgColor colors text and icons; single member, emphasis unbound.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -14917,10 +14921,11 @@
         "method": "settle-two-v1"
       },
       "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:51.456Z",
-        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-warning/property-text broad."
-      }
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "ADR 0024: the orange level between warning and danger is intent severe."
+      },
+      "supersededBy": "m-eadd557d32dc"
     },
     {
       "id": "m-e3ff6803e90a",
@@ -17775,6 +17780,101 @@
         "by": "terms+classifier",
         "at": "2026-11-01T14:55:00.395Z",
         "note": "Deterministic: every word is an approved term or a step word."
+      }
+    },
+    {
+      "id": "m-6e37b02e9c25",
+      "token": "bgColor.severe.emphasis",
+      "concept": "dsi:concept/color/intent-severe/property-background/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "The orange status level between warning and danger. Evidence: name (\"severe\" or \"major\"); convention (ADR 0024).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "method": "owner-rule"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "Owner decision: add intent severe (ADR 0024)."
+      }
+    },
+    {
+      "id": "m-5bc91a5a77e6",
+      "token": "bgColor.severe.muted",
+      "concept": "dsi:concept/color/intent-severe/property-background/emphasis-subtle",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "The orange status level between warning and danger. Evidence: name (\"severe\" or \"major\"); convention (ADR 0024).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "method": "owner-rule"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "Owner decision: add intent severe (ADR 0024)."
+      }
+    },
+    {
+      "id": "m-a98d87b99a16",
+      "token": "borderColor.severe.emphasis",
+      "concept": "dsi:concept/color/intent-severe/property-border/emphasis-strong",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "The orange status level between warning and danger. Evidence: name (\"severe\" or \"major\"); convention (ADR 0024).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "method": "owner-rule"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "Owner decision: add intent severe (ADR 0024)."
+      }
+    },
+    {
+      "id": "m-22701adbaa44",
+      "token": "borderColor.severe.muted",
+      "concept": "dsi:concept/color/intent-severe/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "The orange status level between warning and danger. Evidence: name (\"severe\" or \"major\"); convention (ADR 0024).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "method": "owner-rule"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "Owner decision: add intent severe (ADR 0024)."
+      }
+    },
+    {
+      "id": "m-eadd557d32dc",
+      "token": "fgColor.severe",
+      "concept": "dsi:concept/color/intent-severe/property-foreground",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "The orange status level between warning and danger. Evidence: name (\"severe\" or \"major\"); convention (ADR 0024).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "method": "owner-rule"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "Owner decision: add intent severe (ADR 0024)."
       }
     }
   ],

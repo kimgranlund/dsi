@@ -145,11 +145,11 @@
     { "id": "dsi:intent/info", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Info", "definition": "Status: informational, no action required.", "related": ["dsi:intent/discovery"] },
     { "id": "dsi:intent/discovery", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Discovery", "definition": "Marks something new or changed that invites exploration: new features, onboarding, promotion. Not a status and not a warning.", "example": "Atlassian color.background.discovery (\"change or something new\"); Primer upsell (close).", "related": ["dsi:intent/info", "dsi:intent/ai"] },
     { "id": "dsi:intent/success", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Success", "definition": "Status: completed or positive outcome.", "related": ["dsi:intent/done"], "scopeNote": "A positive outcome. Work that is finished or merged, whatever its outcome, is intent/done (ADR 0023)." },
-    { "id": "dsi:intent/warning", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Warning", "definition": "Status: needs attention; something may go wrong." },
+    { "id": "dsi:intent/warning", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Warning", "definition": "Status: needs attention; something may go wrong.", "related": ["dsi:intent/severe"] },
     {
       "id": "dsi:intent/danger", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Danger",
       "definition": "Status: something is wrong, failed or at risk.",
-      "related": ["dsi:intent/destructive"],
+      "related": ["dsi:intent/destructive", "dsi:intent/severe"],
       "scopeNote": "Explorer Danger views also list Destructive tokens, marked as related, not equal."
     },
     {
@@ -175,6 +175,7 @@
       "related": ["dsi:intent/danger"]
     },
     { "id": "dsi:intent/done", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Done", "definition": "Status of work that is completed or merged, distinct from success at an outcome.", "example": "Primer fgColor.done, bgColor.done.emphasis", "related": ["dsi:intent/success"], "scopeNote": "ADR 0023." },
+    { "id": "dsi:intent/severe", "type": "Concept", "inScheme": "dsi:scheme/intent", "topConceptOf": "dsi:scheme/intent", "prefLabel": "Severe", "definition": "Status serious enough to need prompt attention: stronger than a warning, short of danger.", "example": "Primer bgColor.severe.emphasis, Carbon support-caution-major", "related": ["dsi:intent/warning", "dsi:intent/danger"], "scopeNote": "Usually orange, between yellow warning and red danger. ADR 0024." },
 
     { "id": "dsi:scheme/usage", "type": "ConceptScheme", "prefLabel": "Usage values" },
     { "id": "dsi:usage/page", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "phrase": "on the page", "prefLabel": "Page", "definition": "The outermost application background behind all surfaces.", "example": "Carbon background, Polaris color-bg, Material background" },

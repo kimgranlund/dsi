@@ -5417,7 +5417,7 @@
       "concept": "dsi:concept/color/intent-warning/emphasis-strong",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Carbon status indicators: orange = serious warning, between warning and danger (carbondesignsystem.com/patterns/status-indicator-pattern).",
       "provenance": {
         "agent": "dsi-research",
@@ -5426,9 +5426,10 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T04:30:00Z",
-        "note": "Approved in the research round (ADR 0012)."
-      }
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "ADR 0024: the orange level between warning and danger is intent severe."
+      },
+      "supersededBy": "m-fbd7bcbdaee6"
     },
     {
       "id": "m-b88f7ce417fb",
@@ -17715,6 +17716,25 @@
         "by": "terms+classifier",
         "at": "2026-11-01T05:56:30.737Z",
         "note": "The approved terms no longer explain this name."
+      }
+    },
+    {
+      "id": "m-fbd7bcbdaee6",
+      "token": "support-caution-major",
+      "concept": "dsi:concept/color/intent-severe",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "The orange status level between warning and danger. Evidence: name (\"severe\" or \"major\"); convention (ADR 0024).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "method": "owner-rule"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:48:37.000Z",
+        "note": "Owner decision: add intent severe (ADR 0024)."
       }
     }
   ],
