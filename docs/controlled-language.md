@@ -161,6 +161,9 @@ Where two facet values meet, a deciding test on shipped facts says which side a 
 - **Surface** requires a page token the token differs from (B3).
 - **On-fill** means on a bold fill, at 4.5:1 (B4).
 - **Text** applies when the system ships a separate icon family; otherwise **foreground** (B6).
+- **Graphic** is for tokens that paint non-text marks in general (B5, ADR 0022).
+- **Code surface** is decided by code namespace or description, then Jev (B7).
+- **Neutral** intent only beside status versions of the same role (B8).
 
 ## 10. Concept registry
 

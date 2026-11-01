@@ -328,6 +328,33 @@
         "hex": "#274dea"
       }
     },
+    "accent-graphic": {
+      "$description": "Accent graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "accent-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2941,
+          0.4588,
+          1
+        ],
+        "hex": "#4b75ff"
+      }
+    },
     "accent-icon": {
       "$description": "Accent icon",
       "$extensions": {
@@ -828,6 +855,33 @@
         "hex": "#e5f0fe"
       }
     },
+    "categorical-blue-graphic": {
+      "$description": "Blue categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-blue/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-blue-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "blue-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2941,
+          0.4588,
+          1
+        ],
+        "hex": "#4b75ff"
+      }
+    },
     "categorical-brown": {
       "$description": "Brown categorical color",
       "$extensions": {
@@ -835,12 +889,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-brown",
           "match": "exact",
           "mode": "light",
-          "nativeName": "--spectrum-brown-subtle-background-color-default",
-          "note": "no direct mapping; brown-subtle-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-brown/property-background/emphasis-subtle",
+          "nativeName": "--spectrum-brown-visual-color",
+          "note": "no direct mapping; brown-visual-color maps to the more specific dsi:concept/color/usage-categorical/hue-brown/property-graphic",
           "product": "spectrum",
           "status": "nearest",
           "theme": "light",
-          "token": "brown-subtle-background-color-default",
+          "token": "brown-visual-color",
           "version": "15.6.0",
           "via": "more-specific"
         }
@@ -849,11 +903,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.9686,
-          0.9333,
-          0.8824
+          0.6039,
+          0.4824,
+          0.302
         ],
-        "hex": "#f7eee1"
+        "hex": "#9a7b4d"
       }
     },
     "categorical-brown-background": {
@@ -911,6 +965,33 @@
         "hex": "#f7eee1"
       }
     },
+    "categorical-brown-graphic": {
+      "$description": "Brown categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-brown/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-brown-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "brown-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6039,
+          0.4824,
+          0.302
+        ],
+        "hex": "#9a7b4d"
+      }
+    },
     "categorical-cyan": {
       "$description": "Cyan categorical color",
       "$extensions": {
@@ -918,12 +999,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-cyan",
           "match": "exact",
           "mode": "light",
-          "nativeName": "--spectrum-cyan-subtle-background-color-default",
-          "note": "no direct mapping; cyan-subtle-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-cyan/property-background/emphasis-subtle",
+          "nativeName": "--spectrum-cyan-visual-color",
+          "note": "no direct mapping; cyan-visual-color maps to the more specific dsi:concept/color/usage-categorical/hue-cyan/property-graphic",
           "product": "spectrum",
           "status": "nearest",
           "theme": "light",
-          "token": "cyan-subtle-background-color-default",
+          "token": "cyan-visual-color",
           "version": "15.6.0",
           "via": "more-specific"
         }
@@ -932,11 +1013,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.851,
-          0.9569,
-          0.9922
+          0.1882,
+          0.6549,
+          0.9961
         ],
-        "hex": "#d9f4fd"
+        "hex": "#30a7fe"
       }
     },
     "categorical-cyan-background": {
@@ -994,6 +1075,33 @@
         "hex": "#d9f4fd"
       }
     },
+    "categorical-cyan-graphic": {
+      "$description": "Cyan categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-cyan-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "cyan-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1882,
+          0.6549,
+          0.9961
+        ],
+        "hex": "#30a7fe"
+      }
+    },
     "categorical-gray": {
       "$description": "Gray categorical color",
       "$extensions": {
@@ -1001,12 +1109,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-gray",
           "match": "exact",
           "mode": "light",
-          "nativeName": "--spectrum-gray-subtle-background-color-default",
-          "note": "no direct mapping; gray-subtle-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle",
+          "nativeName": "--spectrum-gray-visual-color",
+          "note": "no direct mapping; gray-visual-color maps to the more specific dsi:concept/color/usage-categorical/hue-gray/property-graphic",
           "product": "spectrum",
           "status": "nearest",
           "theme": "light",
-          "token": "gray-subtle-background-color-default",
+          "token": "gray-visual-color",
           "version": "15.6.0",
           "via": "more-specific"
         }
@@ -1015,11 +1123,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.9137,
-          0.9137,
-          0.9137
+          0.5608,
+          0.5608,
+          0.5608
         ],
-        "hex": "#e9e9e9"
+        "hex": "#8f8f8f"
       }
     },
     "categorical-gray-background": {
@@ -1075,6 +1183,33 @@
           0.9137
         ],
         "hex": "#e9e9e9"
+      }
+    },
+    "categorical-gray-graphic": {
+      "$description": "Gray categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-gray/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-gray-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "gray-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.5608,
+          0.5608,
+          0.5608
+        ],
+        "hex": "#8f8f8f"
       }
     },
     "categorical-green": {
@@ -1159,6 +1294,33 @@
         "hex": "#d7f7e1"
       }
     },
+    "categorical-green-graphic": {
+      "$description": "Green categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-green/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-green-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "green-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0431,
+          0.6431,
+          0.3647
+        ],
+        "hex": "#0ba45d"
+      }
+    },
     "categorical-indigo": {
       "$description": "Indigo categorical color",
       "$extensions": {
@@ -1241,19 +1403,46 @@
         "hex": "#ebeeff"
       }
     },
+    "categorical-indigo-graphic": {
+      "$description": "Indigo categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-indigo/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-indigo-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "indigo-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.4784,
+          0.4157,
+          0.9922
+        ],
+        "hex": "#7a6afd"
+      }
+    },
     "categorical-lime": {
       "$description": "Lime categorical color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-categorical/hue-lime",
-          "match": "close",
+          "match": "exact",
           "mode": "light",
-          "nativeName": "--spectrum-chartreuse-subtle-background-color-default",
-          "note": "no direct mapping; chartreuse-subtle-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle",
+          "nativeName": "--spectrum-celery-visual-color",
+          "note": "no direct mapping; celery-visual-color maps to the more specific dsi:concept/color/usage-categorical/hue-lime/property-graphic",
           "product": "spectrum",
           "status": "nearest",
           "theme": "light",
-          "token": "chartreuse-subtle-background-color-default",
+          "token": "celery-visual-color",
           "version": "15.6.0",
           "via": "more-specific"
         }
@@ -1262,11 +1451,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.9176,
-          0.9647,
-          0.6784
+          0.3216,
+          0.6314,
+          0.098
         ],
-        "hex": "#eaf6ad"
+        "hex": "#52a119"
       }
     },
     "categorical-lime-background": {
@@ -1324,6 +1513,33 @@
         "hex": "#eaf6ad"
       }
     },
+    "categorical-lime-graphic": {
+      "$description": "Lime categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-lime/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-celery-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "celery-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3216,
+          0.6314,
+          0.098
+        ],
+        "hex": "#52a119"
+      }
+    },
     "categorical-magenta-background": {
       "$description": "Magenta categorical background",
       "$extensions": {
@@ -1377,6 +1593,33 @@
           0.9412
         ],
         "hex": "#ffe8f0"
+      }
+    },
+    "categorical-magenta-graphic": {
+      "$description": "Magenta categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-magenta-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "magenta-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9412,
+          0.1765,
+          0.4314
+        ],
+        "hex": "#f02d6e"
       }
     },
     "categorical-orange": {
@@ -1461,6 +1704,33 @@
         "hex": "#ffeccf"
       }
     },
+    "categorical-orange-graphic": {
+      "$description": "Orange categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-orange/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-orange-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "orange-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9098,
+          0.4157,
+          0
+        ],
+        "hex": "#e86a00"
+      }
+    },
     "categorical-pink": {
       "$description": "Pink categorical color",
       "$extensions": {
@@ -1541,6 +1811,33 @@
           0.9686
         ],
         "hex": "#ffe8f7"
+      }
+    },
+    "categorical-pink-graphic": {
+      "$description": "Pink categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-pink/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-pink-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "pink-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8941,
+          0.2039,
+          0.6392
+        ],
+        "hex": "#e434a3"
       }
     },
     "categorical-purple": {
@@ -1625,6 +1922,33 @@
         "hex": "#f4ebfc"
       }
     },
+    "categorical-purple-graphic": {
+      "$description": "Purple categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-purple/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-purple-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "purple-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.651,
+          0.3608,
+          0.9059
+        ],
+        "hex": "#a65ce7"
+      }
+    },
     "categorical-red": {
       "$description": "Red categorical color",
       "$extensions": {
@@ -1705,6 +2029,33 @@
           0.9098
         ],
         "hex": "#ffebe8"
+      }
+    },
+    "categorical-red-graphic": {
+      "$description": "Red categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-red/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-red-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "red-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9412,
+          0.2196,
+          0.1373
+        ],
+        "hex": "#f03823"
       }
     },
     "categorical-teal": {
@@ -1789,6 +2140,33 @@
         "hex": "#d3f6ea"
       }
     },
+    "categorical-teal-graphic": {
+      "$description": "Teal categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-teal/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-seafoam-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "seafoam-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0431,
+          0.6353,
+          0.5255
+        ],
+        "hex": "#0ba286"
+      }
+    },
     "categorical-yellow": {
       "$description": "Yellow categorical color",
       "$extensions": {
@@ -1869,6 +2247,33 @@
           0.5922
         ],
         "hex": "#fff197"
+      }
+    },
+    "categorical-yellow-graphic": {
+      "$description": "Yellow categorical graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-yellow-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "yellow-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8235,
+          0.5843,
+          0
+        ],
+        "hex": "#d29500"
       }
     },
     "danger": {
@@ -2363,6 +2768,33 @@
           0.0941
         ],
         "hex": "#b72818"
+      }
+    },
+    "danger-graphic": {
+      "$description": "Danger graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "negative-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9412,
+          0.2196,
+          0.1373
+        ],
+        "hex": "#f03823"
       }
     },
     "danger-icon": {
@@ -2916,6 +3348,33 @@
           0.9961
         ],
         "hex": "#e5f0fe"
+      }
+    },
+    "info-graphic": {
+      "$description": "Info graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-informative-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "informative-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2941,
+          0.4588,
+          1
+        ],
+        "hex": "#4b75ff"
       }
     },
     "info-icon": {
@@ -3553,6 +4012,33 @@
         "hex": "#292929"
       }
     },
+    "neutral-graphic": {
+      "$description": "Neutral graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "neutral-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.5608,
+          0.5608,
+          0.5608
+        ],
+        "hex": "#8f8f8f"
+      }
+    },
     "neutral-icon": {
       "$description": "Neutral icon",
       "$extensions": {
@@ -3968,6 +4454,33 @@
         "hex": "#d7f7e1"
       }
     },
+    "success-graphic": {
+      "$description": "Success graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-positive-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "positive-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0275,
+          0.5765,
+          0.3333
+        ],
+        "hex": "#079355"
+      }
+    },
     "success-icon": {
       "$description": "Success icon",
       "$extensions": {
@@ -4159,6 +4672,33 @@
           0.8118
         ],
         "hex": "#ffeccf"
+      }
+    },
+    "warning-graphic": {
+      "$description": "Warning graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-graphic",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-notice-visual-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "notice-visual-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8314,
+          0.3569,
+          0
+        ],
+        "hex": "#d45b00"
       }
     },
     "warning-icon": {

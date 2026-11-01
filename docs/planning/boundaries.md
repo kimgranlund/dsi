@@ -12,7 +12,7 @@ Score = 3 × open + 2 × audit + decided + jev / 2 + systems.
 
 ## Decided (ADR 0021)
 
-B1, B3, B4 and B6 are decided and implemented as tests (`dsi-map boundary-rules`). First run: 42 queued tokens settled (19 held as new concepts), 97 approved mappings listed as conflicts in `.cache/boundary-conflicts.txt`. Open: B2, B5, B7, B8.
+B1, B3, B4, B5, B6, B7 and B8 are decided and implemented as tests (`dsi-map boundary-rules --jev`). So far 68 queued tokens settled (19 held as new concepts for the owner). 80 approved mappings conflict with a test (`.cache/boundary-conflicts.txt`; Jev triage in `.cache/boundary-triage.json`). Open: B2, pending a re-audit.
 
 ## Themes (pairs grouped by the question they share)
 

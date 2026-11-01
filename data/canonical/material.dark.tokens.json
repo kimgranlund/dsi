@@ -138,6 +138,34 @@
         "hex": "#d0bcff"
       }
     },
+    "accent-graphic": {
+      "$description": "Accent graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-graphic",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--md-sys-color-primary",
+          "note": "no direct mapping; md.sys.color.primary maps to the broader dsi:concept/color/intent-accent",
+          "product": "material",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "md.sys.color.primary",
+          "version": "2.5.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8157,
+          0.7373,
+          1
+        ],
+        "hex": "#d0bcff"
+      }
+    },
     "accent-icon": {
       "$description": "Accent icon",
       "$extensions": {
@@ -634,6 +662,34 @@
           0.8627
         ],
         "hex": "#f9dedc"
+      }
+    },
+    "danger-graphic": {
+      "$description": "Danger graphic",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-graphic",
+          "match": "narrow",
+          "mode": "dark",
+          "nativeName": "--md-sys-color-error",
+          "note": "no direct mapping; md.sys.color.error maps to the broader dsi:concept/color/intent-danger",
+          "product": "material",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "md.sys.color.error",
+          "version": "2.5.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.949,
+          0.7216,
+          0.7098
+        ],
+        "hex": "#f2b8b5"
       }
     },
     "danger-icon": {

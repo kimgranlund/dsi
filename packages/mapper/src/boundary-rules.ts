@@ -118,13 +118,37 @@ export class BoundaryTests {
   }
 }
 
+/** B5: a token that paints non-text graphics in general (ADR 0022). */
+export function paintsGraphics(t: BoundaryTests, token: string): boolean {
+  const d = t.set.tokens.get(token)?.description ?? '';
+  return /(^|[.-])visual-colou?r/.test(token) || /non-text (graphic|element|mark)s?/i.test(d);
+}
+
+/** B7: code colors. Namespace or description first; Jev's "colors code" judgement where neither says (passed in). */
+export function codeByName(t: BoundaryTests, token: string): boolean | undefined {
+  if (/^(prettylights|codeMirror|diffBlob|syntax)[.-]|(^|[.-])(code|syntax)([.-]|$)/.test(token)) return true;
+  if (/\bcode\b|syntax/i.test(t.set.tokens.get(token)?.description ?? '')) return true;
+  return undefined;
+}
+
+/** B8: neutral intent only when the system ships status siblings of the same role (danger, success, warning, info). */
+export function hasStatusSiblings(t: BoundaryTests, token: string): boolean {
+  const STATUS = ['danger', 'critical', 'negative', 'error', 'success', 'positive', 'warning', 'caution', 'notice', 'attention', 'info', 'informative', 'information'];
+  const m = /(neutral|gray|grey)/i.exec(token);
+  if (!m) return false;
+  // Same role: the name up to the neutral word, with a status word in its place, starts some token of the system.
+  const head = token.slice(0, m.index);
+  const names = [...t.set.tokens.keys()];
+  return STATUS.some((s) => { const w = m[0][0] === m[0][0].toUpperCase() ? s[0].toUpperCase() + s.slice(1) : s; return names.some((n) => n.startsWith(head + w)); });
+}
+
 /** Facets of a concept, and back. */
 export const facetsOf = (c: string) => { const out = new Map<string, string[]>(); for (const seg of c.split('/').slice(2)) { const i = seg.indexOf('-'); out.set(seg.slice(0, i), seg.slice(i + 1).split('+')); } return out; };
 const ORDER = ['intent', 'usage', 'hue', 'syntax', 'component', 'part', 'property', 'style', 'emphasis', 'brightness', 'state'];
 export const conceptOf = (domain: string, f: Map<string, string[]>) => `dsi:concept/${domain}/` + ORDER.filter((k) => f.get(k)?.length).map((k) => `${k}-${[...new Set(f.get(k)!)].sort().join('+')}`).join('/');
 
 /** Normalize one answer's boundary facets by the tests. Returns the concept and which rules changed it. */
-export function normalize(t: BoundaryTests, token: string, concept: string, hasPage: boolean, jevB4?: Map<string, boolean | undefined>): { concept: string; applied: string[]; needsEmphasis: boolean } {
+export function normalize(t: BoundaryTests, token: string, concept: string, hasPage: boolean, jevB4?: Map<string, boolean | undefined>, jevB7?: Map<string, boolean | undefined>): { concept: string; applied: string[]; needsEmphasis: boolean } {
   const domain = concept.split('/')[1];
   const f = facetsOf(concept);
   const applied: string[] = [];
@@ -159,5 +183,23 @@ export function normalize(t: BoundaryTests, token: string, concept: string, hasP
     if (txt === true && prop === 'foreground') { f.set('property', ['text']); applied.push('B6'); }
     if (txt === false && prop === 'text') { f.set('property', ['foreground']); applied.push('B6'); }
   }
+  // B5 (ADR 0022)
+  if (domain === 'color' && paintsGraphics(t, token)) {
+    const p = f.get('property')?.[0];
+    if (p === 'icon' || p === undefined) { f.set('property', ['graphic']); applied.push('B5'); }
+  }
+  // B7: code-surface usage by namespace or description, else Jev; diff markup binds syntax inserted/deleted/changed.
+  if (domain === 'color') {
+    const code = codeByName(t, token) ?? jevB7?.get(token);
+    const u = new Set(f.get('usage') ?? []);
+    if (code === true && !u.has('code-surface') && !f.has('syntax')) {
+      u.add('code-surface'); f.set('usage', [...u]); applied.push('B7');
+      const diff = /(inserted|addition)/i.test(token) ? 'inserted' : /(deleted|deletion)/i.test(token) ? 'deleted' : /changed/i.test(token) ? 'changed' : undefined;
+      if (diff && !f.has('syntax') && /markup|diff/i.test(token)) f.set('syntax', [diff]);
+    }
+    if (code === false && u.has('code-surface')) { u.delete('code-surface'); f.set('usage', [...u]); applied.push('B7'); }
+  }
+  // B8
+  if (f.get('intent')?.[0] === 'neutral' && !hasStatusSiblings(t, token)) { f.delete('intent'); applied.push('B8'); }
   return { concept: conceptOf(domain, f), applied, needsEmphasis };
 }

@@ -54,7 +54,7 @@ const root = process.cwd();
 if (!cmd || !scopeId) { console.error(USAGE); process.exit(2); }
 const scope = JSON.parse(fs.readFileSync(path.join(root, 'packages/mapper/scopes', `${scopeId}.json`), 'utf8')) as Scope;
 const runDir = run ? path.join(root, '.cache/mapper', run) : '';
-const ontology = await loadOntology(path.join(root, 'ontology'));
+let ontology = await loadOntology(path.join(root, 'ontology'));
 if (ontology.issues.length) { console.error('ontology has issues; run corepack pnpm check'); process.exit(1); }
 
 if (cmd === 'prepare') {
@@ -386,14 +386,20 @@ if (cmd === 'prepare') {
     // --jev: B4 statement judgements for queued tokens the code test cannot decide (ADR 0021 amended).
     const jevB4 = new Map<string, boolean | undefined>();
     if (judgeFn) await Promise.all([...by].filter(([tok, ms]) => !ms.some((m) => m.status === 'approved') && ms.some((m) => m.status === 'proposed' && /on-fill/.test(m.concept)) && t.onFill(tok) === undefined).map(async ([tok]) => { const j = await judgeFn!(product, version, tok, 'B4'); jevB4.set(tok, j.decided); }));
+    // B7: Jev's "colors code" judgement for queued tokens the namespace and description leave undecided.
+    const jevB7 = new Map<string, boolean | undefined>();
+    if (judgeFn) {
+      const { codeByName } = await import('./boundary-rules.ts');
+      await Promise.all([...by].filter(([tok, ms]) => !ms.some((m) => m.status === 'approved') && ms.some((m) => m.status === 'proposed') && codeByName(t, tok) === undefined && ms.some((m) => /code-surface|syntax-/.test(m.concept))).map(async ([tok]) => { const j = await judgeFn!(product, version, tok, 'B7'); jevB7.set(tok, j.decided); }));
+    }
     const breaking: string[] = [];
     let settled = 0, open = 0;
     for (const [token, ms] of by) {
       const ap = ms.find((m) => m.status === 'approved');
-      if (ap) { const n = normalize(t, token, ap.concept, !!pageTok, jevB4); if (n.applied.length && !n.applied.every((r) => r === 'B1' && /usage-categorical/.test(ap.concept))) breaking.push(`${token}: ${n.applied.join(',')} -> ${n.concept.replace('dsi:concept/color/', '')}`); continue; }
+      if (ap) { const n = normalize(t, token, ap.concept, !!pageTok, jevB4, jevB7); if (n.applied.length && !n.applied.every((r) => r === 'B1' && /usage-categorical/.test(ap.concept))) breaking.push(`${token}: ${n.applied.join(',')} -> ${n.concept.replace('dsi:concept/color/', '')}`); continue; }
       const props = ms.filter((m) => m.status === 'proposed');
       if (props.length < 1) continue;
-      const norm = props.map((m) => ({ m, n: normalize(t, token, m.concept, !!pageTok, jevB4) }));
+      const norm = props.map((m) => ({ m, n: normalize(t, token, m.concept, !!pageTok, jevB4, jevB7) }));
       let keep = norm;
       if (norm.some((x) => x.n.needsEmphasis)) { const withE = norm.filter((x) => /emphasis-/.test(x.n.concept)); if (withE.length) keep = withE; }
       const concepts = [...new Set(keep.map((x) => x.n.concept))];
@@ -401,7 +407,8 @@ if (cmd === 'prepare') {
       const concept = concepts[0];
       const matches = keep.map((x) => x.m.match);
       if (matches.includes('related') || (matches.includes('broad') && matches.includes('narrow')) || typeof parseConcept(ontology, concept) === 'string') { open++; continue; }
-      const match = matches.reduce((a, b) => (RANK[b] > RANK[a] ? b : a));
+      // ADR 0022: the owner ruled that visual colors bind graphic exactly.
+      const match = keep.some((x) => x.n.applied.includes('B5')) ? 'exact' : matches.reduce((a, b) => (RANK[b] > RANK[a] ? b : a));
       settled++;
       if (dry) { console.log(`  ${product} ${token} -> ${concept.replace('dsi:concept/color/', '')} ${match} [${[...new Set(keep.flatMap((x) => x.n.applied))].join(',') || 'filter'}]`); continue; }
       const id = 'm-' + crypto.createHash('sha1').update([token, concept, match].join('|')).digest('hex').slice(0, 12);
@@ -413,6 +420,10 @@ if (cmd === 'prepare') {
     conflicts.push(...breaking.map((b) => `${product} ${b}`));
     console.log(`${product}: ${settled} settled, ${open} still open, ${breaking.length} approved mappings break a test`);
     for (const b of breaking.slice(0, 3)) console.log('    breaks: ' + b);
+    if (!dry && settled) {
+      const b5 = file.mappings.filter((m: any) => m.status === 'approved' && m.provenance?.method === 'boundary-rule-v1' && /property-graphic/.test(m.concept) && !isRegistered(ontology, m.concept)).map((m: any) => m.concept);
+      if (b5.length) { registerConcepts(root, ontology, b5); ontology = await loadOntology(path.join(root, 'ontology')); console.log(`  registered ${new Set(b5).size} graphic concept(s) (ADR 0022)`); }
+    }
     if (!dry && settled) { const held = gateUnregistered(ontology, file); if (held.length) console.log(`  ${held.length} held: new concepts`); file.mappings.sort((a: any, b: any) => a.token.localeCompare(b.token) || a.id.localeCompare(b.id)); fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n'); }
   }
   fs.writeFileSync(path.join(root, '.cache/boundary-conflicts.txt'), conflicts.join('\n') + '\n');

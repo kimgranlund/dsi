@@ -664,18 +664,42 @@
       }
     },
     {
+      "id": "m-a711ffc96e72",
+      "token": "accent-visual-color",
+      "concept": "dsi:concept/color/intent-accent/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
+      }
+    },
+    {
       "id": "m-c8ca74e8e960",
       "token": "accent-visual-color",
       "concept": "dsi:concept/color/intent-accent",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Accent for non-text visual elements (graphics); one use of the accent intent.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-accent/property-graphic exact."
       }
     },
     {
@@ -684,13 +708,18 @@
       "concept": "dsi:concept/color/intent-accent/property-icon",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum accent (blue): the primary interactive/brand emphasis color. Visual color is for non-text graphics (icons, status lights, illustrations); icon is the nearest property, nuance: also other non-text marks.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-accent/property-graphic exact."
       }
     },
     {
@@ -1641,13 +1670,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-blue",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named blue for visual elements (graphics).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-blue/property-graphic exact."
       }
     },
     {
@@ -1656,13 +1690,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-blue/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (blue -> blue) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-blue/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-ff6400b157d6",
+      "token": "blue-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -1826,13 +1884,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-brown",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named brown for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-brown/property-graphic exact."
       }
     },
     {
@@ -1841,13 +1904,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-brown/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (brown -> brown) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-brown/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-347c5d4a0c10",
+      "token": "brown-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-brown/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -1914,13 +2001,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-lime/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (celery (hue ~95deg) -> lime) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-lime/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-1cdcc20b31ba",
+      "token": "celery-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-graphic",
+      "match": "exact",
+      "confidence": 0.45,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -1929,13 +2040,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-lime",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Celery for visual elements, nearest lime.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-lime/property-graphic exact."
       }
     },
     {
@@ -2002,13 +2118,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-lime",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Chartreuse for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-lime/property-graphic exact."
       }
     },
     {
@@ -2017,13 +2138,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-lime/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (chartreuse (hue ~70deg) -> lime) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-lime/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-fed3545c80ce",
+      "token": "chartreuse-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-graphic",
+      "match": "exact",
+      "confidence": 0.45,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2090,13 +2235,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-brown/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (cinnamon (muted red-brown, ~20deg) -> brown) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-brown/property-graphic exact."
       }
     },
     {
@@ -2105,13 +2255,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-brown",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Cinnamon for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-brown/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-d184e0ed02f2",
+      "token": "cinnamon-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-brown/property-graphic",
+      "match": "exact",
+      "confidence": 0.45,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -3700,13 +3874,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (cyan -> cyan) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-cyan/property-graphic exact."
       }
     },
     {
@@ -3715,13 +3894,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-cyan",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named cyan for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-cyan/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-f5f54a52bab2",
+      "token": "cyan-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -4838,18 +5041,42 @@
       }
     },
     {
+      "id": "m-31a4afa24543",
+      "token": "fuchsia-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-graphic",
+      "match": "exact",
+      "confidence": 0.45,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
+      }
+    },
+    {
       "id": "m-ddcf7c227cac",
       "token": "fuchsia-visual-color",
       "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (fuchsia (~292deg; CSS fuchsia = magenta) -> magenta) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-magenta/property-graphic exact."
       }
     },
     {
@@ -4858,13 +5085,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-magenta",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Fuchsia for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-magenta/property-graphic exact."
       }
     },
     {
@@ -5009,13 +5241,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-gray",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named gray for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-gray/property-graphic exact."
       }
     },
     {
@@ -5024,13 +5261,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-gray/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (gray -> gray) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-gray/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-cd632bcd3dcd",
+      "token": "gray-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -5117,13 +5378,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-green/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (green -> green) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-green/property-graphic exact."
       }
     },
     {
@@ -5132,13 +5398,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-green",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named green for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-green/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-fcd729b94257",
+      "token": "green-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -5572,13 +5862,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-indigo/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (indigo -> indigo) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-indigo/property-graphic exact."
       }
     },
     {
@@ -5587,13 +5882,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-indigo",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named indigo for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-indigo/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-e2453bde859a",
+      "token": "indigo-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-indigo/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -6157,18 +6476,42 @@
       }
     },
     {
+      "id": "m-43c2cd8a126a",
+      "token": "informative-visual-color",
+      "concept": "dsi:concept/color/intent-info/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
+      }
+    },
+    {
       "id": "m-889d9a912f9f",
       "token": "informative-visual-color",
       "concept": "dsi:concept/color/intent-info",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Informative color for visual elements; one use of the info intent.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-info/property-graphic exact."
       }
     },
     {
@@ -6177,13 +6520,18 @@
       "concept": "dsi:concept/color/intent-info/property-icon",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum informative: status, information with no action needed. Visual color is for non-text graphics (icons, status lights, illustrations); icon is the nearest property, nuance: also other non-text marks.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-info/property-graphic exact."
       }
     },
     {
@@ -6323,18 +6671,42 @@
       }
     },
     {
+      "id": "m-7351b93fdb2c",
+      "token": "magenta-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
+      }
+    },
+    {
       "id": "m-e70a947dadfd",
       "token": "magenta-visual-color",
       "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (magenta -> magenta) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-magenta/property-graphic exact."
       }
     },
     {
@@ -6343,13 +6715,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-magenta",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named magenta for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-magenta/property-graphic exact."
       }
     },
     {
@@ -7423,13 +7800,18 @@
       "concept": "dsi:concept/color/intent-danger",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Negative color for visual elements; one use of the danger intent.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-danger/property-graphic exact."
       }
     },
     {
@@ -7438,13 +7820,37 @@
       "concept": "dsi:concept/color/intent-danger/property-icon",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. Visual color is for non-text graphics (icons, status lights, illustrations); icon is the nearest property, nuance: also other non-text marks.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-danger/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-9aa7f0f98b9d",
+      "token": "negative-visual-color",
+      "concept": "dsi:concept/color/intent-danger/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -8782,18 +9188,42 @@
       }
     },
     {
+      "id": "m-1ff51eb4ab63",
+      "token": "neutral-visual-color",
+      "concept": "dsi:concept/color/intent-neutral/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
+      }
+    },
+    {
       "id": "m-2cb824878521",
       "token": "neutral-visual-color",
       "concept": "dsi:concept/color/intent-neutral",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral color for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-neutral/property-graphic exact."
       }
     },
     {
@@ -8802,13 +9232,18 @@
       "concept": "dsi:concept/color/intent-neutral/property-icon",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral (gray) visual color for non-text graphics (icons, status lights); icon nearest property.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-neutral/property-graphic exact."
       }
     },
     {
@@ -9219,13 +9654,37 @@
       "concept": "dsi:concept/color/intent-warning/property-icon",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum notice (orange): warning status needing attention. Visual color is for non-text graphics (icons, status lights, illustrations); icon is the nearest property, nuance: also other non-text marks.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-warning/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-717dcbe5798f",
+      "token": "notice-visual-color",
+      "concept": "dsi:concept/color/intent-warning/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -9234,13 +9693,18 @@
       "concept": "dsi:concept/color/intent-warning",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Notice color for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-warning/property-graphic exact."
       }
     },
     {
@@ -9616,13 +10080,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-orange/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (orange -> orange) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-orange/property-graphic exact."
       }
     },
     {
@@ -9631,13 +10100,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-orange",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named orange for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-orange/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-7cdb68d0edb4",
+      "token": "orange-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -9820,13 +10313,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-pink",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named pink for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-pink/property-graphic exact."
       }
     },
     {
@@ -9835,13 +10333,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-pink/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (pink -> pink) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-pink/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-b2b240f695b2",
+      "token": "pink-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-pink/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -10410,13 +10932,37 @@
       "concept": "dsi:concept/color/intent-success",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Positive color for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-success/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-83d894659019",
+      "token": "positive-visual-color",
+      "concept": "dsi:concept/color/intent-success/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -10425,13 +10971,18 @@
       "concept": "dsi:concept/color/intent-success/property-icon",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum positive: success/completed status. Visual color is for non-text graphics (icons, status lights, illustrations); icon is the nearest property, nuance: also other non-text marks.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-success/property-graphic exact."
       }
     },
     {
@@ -10518,13 +11069,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-purple/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (purple -> purple) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-purple/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-2da399e7733b",
+      "token": "purple-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -10533,13 +11108,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-purple",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named purple for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-purple/property-graphic exact."
       }
     },
     {
@@ -10621,18 +11201,42 @@
       }
     },
     {
+      "id": "m-4a762656a6a4",
+      "token": "red-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
+      }
+    },
+    {
       "id": "m-8201867838df",
       "token": "red-visual-color",
       "concept": "dsi:concept/color/usage-categorical/hue-red",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named red for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-red/property-graphic exact."
       }
     },
     {
@@ -10641,13 +11245,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-red/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (red -> red) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-red/property-graphic exact."
       }
     },
     {
@@ -10772,13 +11381,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-teal",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Seafoam for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-teal/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-84038bc43870",
+      "token": "seafoam-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-graphic",
+      "match": "exact",
+      "confidence": 0.45,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -10787,13 +11420,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-teal/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (seafoam (~170deg) -> teal) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-teal/property-graphic exact."
       }
     },
     {
@@ -10879,13 +11517,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-gray/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (silver -> gray) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-gray/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-48d7da338ce2",
+      "token": "silver-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-graphic",
+      "match": "exact",
+      "confidence": 0.45,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -10894,13 +11556,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-gray",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Silver for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-gray/property-graphic exact."
       }
     },
     {
@@ -11735,13 +12402,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-cyan",
       "match": "broad",
       "confidence": 0.4,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Turquoise for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-cyan/property-graphic exact."
       }
     },
     {
@@ -11750,13 +12422,37 @@
       "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-icon",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (turquoise (~185deg) -> cyan) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-cyan/property-graphic exact."
+      }
+    },
+    {
+      "id": "m-8f432351c888",
+      "token": "turquoise-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-graphic",
+      "match": "exact",
+      "confidence": 0.4,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -11933,18 +12629,42 @@
       }
     },
     {
+      "id": "m-6f1b9c3d85d1",
+      "token": "yellow-visual-color",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-graphic",
+      "match": "exact",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B5) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T19:00:11.575Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
+      }
+    },
+    {
       "id": "m-96b7a667c69d",
       "token": "yellow-visual-color",
       "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-icon",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum non-semantic visual color (yellow -> yellow) for non-text graphics (status lights, icons); icon nearest property, nuance: other marks too.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-yellow/property-graphic exact."
       }
     },
     {
@@ -11953,13 +12673,18 @@
       "concept": "dsi:concept/color/usage-categorical/hue-yellow",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Named yellow for visual elements.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T19:00:11.575Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-categorical/hue-yellow/property-graphic exact."
       }
     }
   ],

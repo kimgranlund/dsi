@@ -26,3 +26,10 @@ Each test reads only names, descriptions and values per mode (`packages/mapper/s
 - **B6 refinements from triage.** Syntax, code-surface and link colors are text by nature, so B6 skips them. A system "ships icon colors" when any token name has an icon-color segment, not only at the same name position.
 - **Conflict triage.** `dsi-map triage-conflicts` has Jev judge approved conflicts on B4 and B6 only. B1 and B3 stay for the owner: Jev's accuracy there is 76% and one-sided. After the refinements, 76 approved conflicts remain (59 B1, 11 B3, 6 B6).
 - B7 can use Jev's "colors code" judgement (99 to 100%) as its deciding test once the owner decides B7.
+
+## Amendment, 2026-11-01 (owner decisions on B5, B7, B8)
+
+- **B5, graphics.** A token whose name says visual color, or whose description says it paints non-text graphics, binds the new `property/graphic` exactly (ADR 0022). First run: Spectrum's 25 `*-visual-color` tokens settled, and their 20 concepts registered.
+- **B7, code surface.** Code-surface usage when the token lives under a code namespace (prettylights, codeMirror, diffBlob, syntax, or a code or syntax name segment) or its description names code. Otherwise Jev's "colors code" judgement decides at margin 0.3. Diff markup colors also bind syntax inserted, deleted or changed.
+- **B8, neutral intent.** Neutral only when the system ships status versions of the same role: the name up to the neutral word, with danger, success, warning or info in its place, starts some token of the system. Plain structural grays get no intent. Jev is not used: it is at chance on this statement.
+- B2 stays open pending a re-audit of its contradictions.

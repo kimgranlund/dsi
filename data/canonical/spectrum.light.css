@@ -12,6 +12,7 @@
   --dsi-color-accent-foreground-focus: var(--spectrum-accent-content-color-key-focus, #274dea);
   --dsi-color-accent-foreground-hover: var(--spectrum-accent-content-color-hover, #274dea);
   --dsi-color-accent-foreground-selected: var(--spectrum-accent-content-color-selected, #274dea);
+  --dsi-color-accent-graphic: var(--spectrum-accent-visual-color, #4b75ff);
   --dsi-color-accent-icon: var(--spectrum-accent-content-color-default, #3b63fb); /* nearest: exact */
   --dsi-color-accent-text: var(--spectrum-accent-content-color-default, #3b63fb); /* nearest: exact */
   --dsi-color-accent-text-hover: var(--spectrum-accent-content-color-hover, #274dea); /* nearest: exact */
@@ -33,6 +34,7 @@
   --dsi-color-danger-foreground-active: var(--spectrum-negative-content-color-down, #b72818); /* nearest: narrow */
   --dsi-color-danger-foreground-focus: var(--spectrum-negative-content-color-key-focus, #b72818);
   --dsi-color-danger-foreground-hover: var(--spectrum-negative-content-color-hover, #b72818); /* nearest: narrow */
+  --dsi-color-danger-graphic: var(--spectrum-negative-visual-color, #f03823);
   --dsi-color-danger-icon: var(--spectrum-icon-color-negative, #f03823);
   --dsi-color-danger-text: var(--spectrum-negative-content-color-default, #d73220); /* nearest: narrow */
   --dsi-color-danger-text-active: var(--spectrum-negative-content-color-down, #b72818); /* nearest: narrow */
@@ -43,6 +45,7 @@
   --dsi-color-info-background-active: var(--spectrum-informative-background-color-down, #274dea); /* nearest: broad */
   --dsi-color-info-background-focus: var(--spectrum-informative-background-color-key-focus, #274dea); /* nearest: broad */
   --dsi-color-info-background-hover: var(--spectrum-informative-background-color-hover, #274dea);
+  --dsi-color-info-graphic: var(--spectrum-informative-visual-color, #4b75ff);
   --dsi-color-info-icon: var(--spectrum-icon-color-informative, #4b75ff);
   --dsi-color-neutral-background: var(--spectrum-neutral-background-color-default, #292929); /* nearest: broad */
   --dsi-color-neutral-background-subtle: var(--spectrum-neutral-subtle-background-color-default, #e9e9e9);
@@ -66,6 +69,7 @@
   --dsi-color-neutral-foreground-hover: var(--spectrum-neutral-content-color-hover, #131313); /* nearest: broad */
   --dsi-color-neutral-foreground-hover_selected: var(--spectrum-neutral-content-color-selected-hover, #131313); /* nearest: broad */
   --dsi-color-neutral-foreground-selected: var(--spectrum-neutral-content-color-selected-default, #292929); /* nearest: broad */
+  --dsi-color-neutral-graphic: var(--spectrum-neutral-visual-color, #8f8f8f);
   --dsi-color-neutral-icon: var(--spectrum-icon-color-neutral, #8f8f8f);
   --dsi-color-success: var(--spectrum-positive-color-100, #edfcf1); /* nearest: broad */
   --dsi-color-success-background: var(--spectrum-positive-background-color-default, #05834e);
@@ -73,10 +77,12 @@
   --dsi-color-success-background-active: var(--spectrum-positive-background-color-down, #036e45); /* nearest: broad */
   --dsi-color-success-background-focus: var(--spectrum-positive-background-color-key-focus, #036e45); /* nearest: broad */
   --dsi-color-success-background-hover: var(--spectrum-positive-background-color-hover, #036e45);
+  --dsi-color-success-graphic: var(--spectrum-positive-visual-color, #079355);
   --dsi-color-success-icon: var(--spectrum-icon-color-positive, #079355);
   --dsi-color-warning: var(--spectrum-notice-color-100, #fff6e7); /* nearest: broad */
   --dsi-color-warning-background: var(--spectrum-notice-background-color-default, #fc7d00);
   --dsi-color-warning-background-subtle: var(--spectrum-notice-subtle-background-color-default, #ffeccf);
+  --dsi-color-warning-graphic: var(--spectrum-notice-visual-color, #d45b00);
   --dsi-color-warning-icon: var(--spectrum-icon-color-notice, #d45b00);
   --dsi-color-background: var(--spectrum-accent-background-color-default, #3b63fb); /* nearest: exact */
   --dsi-color-background-subtle: var(--spectrum-notice-subtle-background-color-default, #ffeccf); /* nearest: exact */
@@ -105,44 +111,58 @@
   --dsi-color-categorical-blue: var(--spectrum-blue-background-color-default, #3b63fb); /* nearest: exact */
   --dsi-color-categorical-blue-background: var(--spectrum-blue-background-color-default, #3b63fb);
   --dsi-color-categorical-blue-background-subtle: var(--spectrum-blue-subtle-background-color-default, #e5f0fe);
-  --dsi-color-categorical-brown: var(--spectrum-brown-subtle-background-color-default, #f7eee1); /* nearest: exact */
+  --dsi-color-categorical-blue-graphic: var(--spectrum-blue-visual-color, #4b75ff);
+  --dsi-color-categorical-brown: var(--spectrum-brown-visual-color, #9a7b4d); /* nearest: exact */
   --dsi-color-categorical-brown-background: var(--spectrum-brown-background-color-default, #8b6d42); /* nearest: broad */
   --dsi-color-categorical-brown-background-subtle: var(--spectrum-brown-subtle-background-color-default, #f7eee1);
-  --dsi-color-categorical-cyan: var(--spectrum-cyan-subtle-background-color-default, #d9f4fd); /* nearest: exact */
+  --dsi-color-categorical-brown-graphic: var(--spectrum-brown-visual-color, #9a7b4d);
+  --dsi-color-categorical-cyan: var(--spectrum-cyan-visual-color, #30a7fe); /* nearest: exact */
   --dsi-color-categorical-cyan-background: var(--spectrum-cyan-background-color-default, #0b78b3); /* nearest: broad */
   --dsi-color-categorical-cyan-background-subtle: var(--spectrum-cyan-subtle-background-color-default, #d9f4fd);
-  --dsi-color-categorical-gray: var(--spectrum-gray-subtle-background-color-default, #e9e9e9); /* nearest: exact */
+  --dsi-color-categorical-cyan-graphic: var(--spectrum-cyan-visual-color, #30a7fe);
+  --dsi-color-categorical-gray: var(--spectrum-gray-visual-color, #8f8f8f); /* nearest: exact */
   --dsi-color-categorical-gray-background: var(--spectrum-gray-background-color-default, #505050); /* nearest: broad */
   --dsi-color-categorical-gray-background-subtle: var(--spectrum-gray-subtle-background-color-default, #e9e9e9);
+  --dsi-color-categorical-gray-graphic: var(--spectrum-gray-visual-color, #8f8f8f);
   --dsi-color-categorical-green: var(--spectrum-green-background-color-default, #05834e); /* nearest: exact */
   --dsi-color-categorical-green-background: var(--spectrum-green-background-color-default, #05834e);
   --dsi-color-categorical-green-background-subtle: var(--spectrum-green-subtle-background-color-default, #d7f7e1);
+  --dsi-color-categorical-green-graphic: var(--spectrum-green-visual-color, #0ba45d);
   --dsi-color-categorical-indigo: var(--spectrum-indigo-background-color-default, #7155fa); /* nearest: exact */
   --dsi-color-categorical-indigo-background: var(--spectrum-indigo-background-color-default, #7155fa);
   --dsi-color-categorical-indigo-background-subtle: var(--spectrum-indigo-subtle-background-color-default, #ebeeff);
-  --dsi-color-categorical-lime: var(--spectrum-chartreuse-subtle-background-color-default, #eaf6ad); /* nearest: close */
+  --dsi-color-categorical-indigo-graphic: var(--spectrum-indigo-visual-color, #7a6afd);
+  --dsi-color-categorical-lime: var(--spectrum-celery-visual-color, #52a119); /* nearest: exact */
   --dsi-color-categorical-lime-background: var(--spectrum-chartreuse-background-color-default, #a3c400); /* nearest: broad */
   --dsi-color-categorical-lime-background-subtle: var(--spectrum-chartreuse-subtle-background-color-default, #eaf6ad);
+  --dsi-color-categorical-lime-graphic: var(--spectrum-celery-visual-color, #52a119);
   --dsi-color-categorical-magenta-background: var(--spectrum-magenta-background-color-default, #d92361); /* nearest: broad */
   --dsi-color-categorical-magenta-background-subtle: var(--spectrum-magenta-subtle-background-color-default, #ffe8f0);
+  --dsi-color-categorical-magenta-graphic: var(--spectrum-magenta-visual-color, #f02d6e);
   --dsi-color-categorical-orange: var(--spectrum-orange-background-color-default, #fc7d00); /* nearest: exact */
   --dsi-color-categorical-orange-background: var(--spectrum-orange-background-color-default, #fc7d00);
   --dsi-color-categorical-orange-background-subtle: var(--spectrum-orange-subtle-background-color-default, #ffeccf);
+  --dsi-color-categorical-orange-graphic: var(--spectrum-orange-visual-color, #e86a00);
   --dsi-color-categorical-pink: var(--spectrum-pink-background-color-default, #ce2a92); /* nearest: exact */
   --dsi-color-categorical-pink-background: var(--spectrum-pink-background-color-default, #ce2a92);
   --dsi-color-categorical-pink-background-subtle: var(--spectrum-pink-subtle-background-color-default, #ffe8f7);
+  --dsi-color-categorical-pink-graphic: var(--spectrum-pink-visual-color, #e434a3);
   --dsi-color-categorical-purple: var(--spectrum-purple-background-color-default, #9a47e2); /* nearest: exact */
   --dsi-color-categorical-purple-background: var(--spectrum-purple-background-color-default, #9a47e2);
   --dsi-color-categorical-purple-background-subtle: var(--spectrum-purple-subtle-background-color-default, #f4ebfc);
+  --dsi-color-categorical-purple-graphic: var(--spectrum-purple-visual-color, #a65ce7);
   --dsi-color-categorical-red: var(--spectrum-red-background-color-default, #d73220); /* nearest: exact */
   --dsi-color-categorical-red-background: var(--spectrum-red-background-color-default, #d73220);
   --dsi-color-categorical-red-background-subtle: var(--spectrum-red-subtle-background-color-default, #ffebe8);
+  --dsi-color-categorical-red-graphic: var(--spectrum-red-visual-color, #f03823);
   --dsi-color-categorical-teal: var(--spectrum-seafoam-background-color-default, #07816d); /* nearest: exact */
   --dsi-color-categorical-teal-background: var(--spectrum-seafoam-background-color-default, #07816d);
   --dsi-color-categorical-teal-background-subtle: var(--spectrum-seafoam-subtle-background-color-default, #d3f6ea);
+  --dsi-color-categorical-teal-graphic: var(--spectrum-seafoam-visual-color, #0ba286);
   --dsi-color-categorical-yellow: var(--spectrum-yellow-background-color-default, #f5c700); /* nearest: exact */
   --dsi-color-categorical-yellow-background: var(--spectrum-yellow-background-color-default, #f5c700);
   --dsi-color-categorical-yellow-background-subtle: var(--spectrum-yellow-subtle-background-color-default, #fff197);
+  --dsi-color-categorical-yellow-graphic: var(--spectrum-yellow-visual-color, #d29500);
   --dsi-color-categorical-background: var(--spectrum-blue-background-color-default, #3b63fb); /* nearest: exact */
   --dsi-color-heading-text: var(--spectrum-title-color, #131313);
   --dsi-color-on-fill-text: var(--spectrum-static-black-text-color, #000000); /* nearest: broad */
