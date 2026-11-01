@@ -6,7 +6,7 @@ import { canonicalNameOf, loadOntology, parseConcept } from '@dsi/schema';
 
 export const SCHEMA = `
 CREATE TABLE products (id TEXT PRIMARY KEY, name TEXT NOT NULL, category TEXT NOT NULL, organization TEXT, homepage TEXT, license TEXT, description TEXT, version TEXT, implementation TEXT, redistribution TEXT);
-CREATE TABLE tokens (product TEXT NOT NULL, path TEXT NOT NULL, native_name TEXT, type TEXT, description TEXT, scope TEXT, visibility TEXT, file TEXT, PRIMARY KEY (product, path));
+CREATE TABLE tokens (product TEXT NOT NULL, path TEXT NOT NULL, native_name TEXT, type TEXT, description TEXT, scope TEXT, visibility TEXT, file TEXT, deprecated TEXT, PRIMARY KEY (product, path));
 CREATE TABLE token_values (product TEXT NOT NULL, path TEXT NOT NULL, theme TEXT NOT NULL, value_json TEXT, display TEXT, alias_chain TEXT NOT NULL, PRIMARY KEY (product, path, theme));
 CREATE TABLE modes (product TEXT NOT NULL, mode TEXT NOT NULL, theme TEXT NOT NULL, PRIMARY KEY (product, mode));
 CREATE TABLE concepts (iri TEXT PRIMARY KEY, grp TEXT NOT NULL, name TEXT NOT NULL, label TEXT NOT NULL, facets TEXT NOT NULL);
@@ -73,7 +73,7 @@ export async function buildDatabase(root: string, out: string): Promise<Record<s
   for (const [concept, byProduct] of Object.entries(canon.coverage as Record<string, Record<string, Record<string, any>>>))
     for (const [product, byMode] of Object.entries(byProduct)) for (const [mode, cell] of Object.entries(byMode)) { iCov.run(concept, product, mode, cell.status, cell.token ?? null, cell.match ?? null, cell.via ?? null, cell.value ?? null); add('coverage'); }
 
-  const iToken = ins('tokens', ['product', 'path', 'native_name', 'type', 'description', 'scope', 'visibility', 'file']);
+  const iToken = ins('tokens', ['product', 'path', 'native_name', 'type', 'description', 'scope', 'visibility', 'file', 'deprecated']);
   const iValue = ins('token_values', ['product', 'path', 'theme', 'value_json', 'display', 'alias_chain']);
   const iMode = ins('modes', ['product', 'mode', 'theme']);
   const iMap = ins('mappings', ['id', 'product', 'token', 'concept', 'match', 'confidence', 'status', 'review_by', 'rationale']);
@@ -86,7 +86,7 @@ export async function buildDatabase(root: string, out: string): Promise<Record<s
     for (const [mode, theme] of Object.entries(set.modes)) iMode.run(product, mode, theme);
     const themes = set.themes.length ? set.themes : [''];
     for (const [p, t] of [...set.tokens].sort(([a], [b]) => a.localeCompare(b))) {
-      iToken.run(product, p, String(t.prov.nativeName ?? ''), t.type ?? resolve(set, themes[0], p).type ?? null, t.description ?? null, classified.get(p)?.scope ?? null, (t.prov.visibility as string) ?? null, String(t.prov.file ?? ''));
+      iToken.run(product, p, String(t.prov.nativeName ?? ''), t.type ?? resolve(set, themes[0], p).type ?? null, t.description ?? null, classified.get(p)?.scope ?? null, (t.prov.visibility as string) ?? null, String(t.prov.file ?? ''), t.deprecated === undefined || t.deprecated === false ? null : typeof t.deprecated === 'string' ? t.deprecated : 'deprecated');
       for (const th of themes) { const r = resolve(set, th, p); iValue.run(product, p, th, r.value === undefined ? null : JSON.stringify(r.value), showValue(r.type, r.value), JSON.stringify(r.chain)); }
       add('tokens');
     }

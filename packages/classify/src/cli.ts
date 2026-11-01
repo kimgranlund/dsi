@@ -34,6 +34,18 @@ const fileOf = (p: string) => String(set.tokens.get(p)?.prov.file ?? '');
 // Domain from the DTCG type at the end of the alias chain: alias tokens often carry no $type of their own.
 const anyTheme = themeFor(set) ?? '';
 const typeOf = (p: string) => set.tokens.get(p)?.type ?? resolve(set, anyTheme, p).type;
+/**
+ * Type used to check a scale role (ADR 0013). A unitless number whose shipped extension names its unit (Carbon fluid
+ * spacing: `com.ibm.carbon.layout.unit: vw`) counts as a dimension; an untyped CSS keyword (`auto`) counts as `keyword`.
+ */
+const scaleTypeOf = (p: string) => {
+  const t = typeOf(p);
+  const raw = [...(set.tokens.get(p)?.byTheme.values() ?? [])][0] as { $value?: unknown; $extensions?: Record<string, unknown> } | undefined;
+  const unit = Object.entries(raw?.$extensions ?? {}).some(([k, v]) => k !== 'io.nonoun.dsi' && JSON.stringify(v).includes('"unit"'));
+  if (t === 'number' && (unit || raw?.$value === 0)) return 'dimension'; // CSS allows a unitless 0 length
+  if (!t && typeof raw?.$value === 'string' && /^(auto|none)$/.test(raw.$value)) return 'keyword';
+  return t;
+};
 const domainOf = (p: string) => (typeOf(p) === 'color' ? 'color' : typeOf(p) ? 'other' : undefined);
 const hints = new Set(['approved', 'proposed']);
 
@@ -96,7 +108,7 @@ if (cmd === 'derive') {
   const graph = fs.readdirSync(schemeDir).filter((f) => f.endsWith('.jsonld')).flatMap((f) => JSON.parse(fs.readFileSync(path.join(schemeDir, f), 'utf8'))['@graph'] as any[]);
   const domainOfProperty = new Map<string, string>(graph.filter((c) => c['dsi:inDomain']).map((c) => [String(c.id).split('/').pop()!, String(c['dsi:inDomain'].id).split('/').pop()!]));
   const scoped = [...set.tokens.keys()].filter((p) => classify(terms, p, fileOf(p), 'color').scope === 'foundation' && domainOf(p) !== 'color').sort();
-  const r = mapScales(o, terms, scoped.map((p) => ({ path: p, file: fileOf(p), type: typeOf(p) })), domainOfProperty);
+  const r = mapScales(o, terms, scoped.map((p) => ({ path: p, file: fileOf(p), type: scaleTypeOf(p) })), domainOfProperty);
   const file = JSON.parse(fs.readFileSync(mapFile, 'utf8'));
   const settled = new Set([...file.mappings.filter((m: any) => m.status === 'approved').map((m: any) => m.token), ...(file.unmapped ?? []).filter((u: any) => u.status === 'approved').map((u: any) => u.token)]);
   const at = new Date().toISOString();

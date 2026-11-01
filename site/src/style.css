@@ -230,3 +230,6 @@ td.num { font-variant-numeric: tabular-nums; text-align: right; }
 .bar-fill.capped { background: repeating-linear-gradient(90deg, var(--accent) 0 8px, transparent 8px 11px); }
 .ruler.compact .ruler-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 8.5ch; gap: 8px; padding: 5px 10px; }
 .ruler.compact .ruler-name { font-size: 0.74rem; }
+
+.dep { margin-left: 6px; padding: 0 5px; border-radius: 3px; font: 600 0.62rem/1.5 var(--sans, system-ui); letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); }
+.ruler-row.is-dep .bar-fill { opacity: 0.45; }

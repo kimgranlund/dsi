@@ -83,14 +83,19 @@
     },
     {
       "id": "dsi:facet/component", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
-      "prefLabel": "Component", "facetKind": "dsi:facet-kind/identity", "bindingProperty": "dsi:hasComponent",
+      "prefLabel": "Component", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/component", "bindingProperty": "dsi:hasComponent",
       "definition": "The component a token is scoped to (button, text field, ...).",
-      "editorialNote": "Component and part vocabularies are open (PLAN.md open question: whose part names become canonical)."
+      "editorialNote": "Values are added when a product ships component-scoped tokens (ADR 0014); whose part names become canonical stays a PLAN.md open question."
     },
     {
       "id": "dsi:facet/part", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
-      "prefLabel": "Part", "facetKind": "dsi:facet-kind/identity", "bindingProperty": "dsi:hasPart",
+      "prefLabel": "Part", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/part", "bindingProperty": "dsi:hasPart",
       "definition": "An anatomical part of a component (container, label, icon, track, handle). Only meaningful together with a component."
+    },
+    {
+      "id": "dsi:facet/style", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Style", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/style", "bindingProperty": "dsi:hasStyle",
+      "definition": "The motion or type style a token belongs to: quick, utilitarian (productive) or larger, more noticeable (expressive). Comparable across systems that split their motion or type this way (ADR 0014)."
     },
     {
       "id": "dsi:facet/state", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
@@ -192,6 +197,7 @@
 
     { "id": "dsi:property/spacing", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Spacing", "definition": "Gaps, padding and margins between and inside elements.", "dsi:inDomain": { "id": "dsi:domain/space" } },
     { "id": "dsi:property/corner-radius", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Corner radius", "definition": "Rounding of corners.", "dsi:inDomain": { "id": "dsi:domain/shape" } },
+    { "id": "dsi:property/corner-shape", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Corner shape", "definition": "A set of four corner radii, rounding only some corners (Material corner-large-top: 16px 16px 0 0).", "dsi:inDomain": { "id": "dsi:domain/shape" } },
     { "id": "dsi:property/border-width", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Border width", "definition": "Thickness of borders and dividers.", "dsi:inDomain": { "id": "dsi:domain/shape" } },
     { "id": "dsi:property/height", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Height", "definition": "Fixed heights of elements (controls, rows).", "dsi:inDomain": { "id": "dsi:domain/size" } },
     { "id": "dsi:property/width", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Width", "definition": "Fixed widths of elements.", "dsi:inDomain": { "id": "dsi:domain/size" } },
@@ -212,12 +218,26 @@
     { "id": "dsi:property/transition", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Transition", "definition": "A composite of duration, delay and easing.", "dsi:inDomain": { "id": "dsi:domain/motion" } },
     { "id": "dsi:property/keyframes", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Keyframes", "definition": "A named animation sequence.", "dsi:inDomain": { "id": "dsi:domain/motion" } },
 
+    { "id": "dsi:scheme/style", "type": "ConceptScheme", "prefLabel": "Style values", "scopeNote": "Carbon names its two motion and type styles productive and expressive; Material names its easing sets standard and emphasized. Both splits mean quick and utilitarian versus noticeable, so native names map here with close." },
+    { "id": "dsi:style/productive", "type": "Concept", "inScheme": "dsi:scheme/style", "topConceptOf": "dsi:scheme/style", "prefLabel": "Productive", "altLabel": "Standard", "definition": "Quick, subtle motion or compact type for everyday task work.", "editorialNote": "Source: https://carbondesignsystem.com/elements/motion/overview/" },
+    { "id": "dsi:style/expressive", "type": "Concept", "inScheme": "dsi:scheme/style", "topConceptOf": "dsi:scheme/style", "prefLabel": "Expressive", "altLabel": "Emphasized", "definition": "Slower, more noticeable motion or display type for significant moments.", "editorialNote": "Source: https://m3.material.io/styles/motion/easing-and-duration" },
+
+    { "id": "dsi:scheme/component", "type": "ConceptScheme", "prefLabel": "Component values", "scopeNote": "Only components that a product's shipped tokens name; not a component catalog." },
+    { "id": "dsi:component/button", "type": "Concept", "inScheme": "dsi:scheme/component", "topConceptOf": "dsi:scheme/component", "prefLabel": "Button" },
+    { "id": "dsi:component/button-group", "type": "Concept", "inScheme": "dsi:scheme/component", "topConceptOf": "dsi:scheme/component", "prefLabel": "Button group" },
+    { "id": "dsi:component/card", "type": "Concept", "inScheme": "dsi:scheme/component", "topConceptOf": "dsi:scheme/component", "prefLabel": "Card" },
+    { "id": "dsi:component/table", "type": "Concept", "inScheme": "dsi:scheme/component", "topConceptOf": "dsi:scheme/component", "prefLabel": "Table" },
+
+    { "id": "dsi:scheme/part", "type": "ConceptScheme", "prefLabel": "Part values", "scopeNote": "Anatomical parts named by shipped component tokens. A part binds only together with a component." },
+    { "id": "dsi:part/cell", "type": "Concept", "inScheme": "dsi:scheme/part", "topConceptOf": "dsi:scheme/part", "prefLabel": "Cell" },
+
     { "id": "dsi:scheme/state", "type": "ConceptScheme", "prefLabel": "State values" },
     { "id": "dsi:state/hover", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Hover" },
     { "id": "dsi:state/active", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Active", "definition": "Being pressed. Material calls this pressed." },
     { "id": "dsi:state/focus", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Focus" },
     { "id": "dsi:state/disabled", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Disabled" },
     { "id": "dsi:state/selected", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Selected" },
+    { "id": "dsi:state/dragged", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Dragged", "definition": "Being dragged. Material state layers have a dragged opacity (0.16)." },
     { "id": "dsi:state/visited", "type": "Concept", "inScheme": "dsi:scheme/state", "topConceptOf": "dsi:scheme/state", "prefLabel": "Visited", "definition": "A link the user has already followed." },
 
     { "id": "dsi:scheme/mode", "type": "ConceptScheme", "prefLabel": "Mode values" },

@@ -1,8 +1,7 @@
 import { expand, inScheme, type Ontology } from './ontology.ts';
 
-/** Fixed facet order of compositional concept IRIs. component and part are reserved until their vocabularies exist. */
-export const CONCEPT_FACETS = ['intent', 'usage', 'syntax', 'component', 'part', 'property', 'emphasis', 'brightness', 'state'] as const;
-const RESERVED = new Set(['component', 'part']);
+/** Fixed facet order of compositional concept IRIs. */
+export const CONCEPT_FACETS = ['intent', 'usage', 'syntax', 'component', 'part', 'property', 'style', 'emphasis', 'brightness', 'state'] as const;
 /** Facets that may combine values with '+', sorted alphabetically so one combination has one IRI. */
 export const MULTI_VALUED = new Set(['usage', 'state']);
 
@@ -24,7 +23,6 @@ export function parseConcept(o: Ontology, ref: string): ParsedConcept | string {
   for (const seg of segs) {
     const facet = CONCEPT_FACETS.find((f) => seg.startsWith(f + '-'));
     if (!facet) return `segment "${seg}" does not start with a facet (${CONCEPT_FACETS.join(', ')})`;
-    if (RESERVED.has(facet)) return `facet "${facet}" is reserved until its vocabulary exists`;
     const i = CONCEPT_FACETS.indexOf(facet);
     if (i <= last) return `segment "${seg}" is out of order; facet order is ${CONCEPT_FACETS.join(', ')}`;
     last = i;
@@ -40,6 +38,7 @@ export function parseConcept(o: Ontology, ref: string): ParsedConcept | string {
     }
     facets[facet] = value;
   }
+  if (facets.part && !facets.component) return 'part needs a component';
   return { domain, facets };
 }
 

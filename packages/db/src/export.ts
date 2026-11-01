@@ -18,7 +18,7 @@ export function exportSite(root: string, dbFile: string, outDir: string): Record
 
   const schemeDir = path.join(root, 'ontology/schemes');
   const facets = fs.readdirSync(schemeDir).filter((f) => f.endsWith('.jsonld')).flatMap((f) => JSON.parse(fs.readFileSync(path.join(schemeDir, f), 'utf8'))['@graph'] as Row[]);
-  const facetValues = Object.fromEntries(['intent', 'usage', 'syntax', 'property', 'emphasis', 'brightness', 'state'].map((f) => [f, facets.filter((c) => c.inScheme === `dsi:scheme/${f}` && !c.deprecated).map((c) => ({ value: String(c.id).split('/').pop(), label: c.prefLabel, definition: c.definition ?? null, ...(c.broader ? { broader: String(c.broader).split('/').pop() } : {}) }))]));
+  const facetValues = Object.fromEntries(['intent', 'usage', 'syntax', 'component', 'part', 'property', 'style', 'emphasis', 'brightness', 'state'].map((f) => [f, facets.filter((c) => c.inScheme === `dsi:scheme/${f}` && !c.deprecated).map((c) => ({ value: String(c.id).split('/').pop(), label: c.prefLabel, definition: c.definition ?? null, ...(c.broader ? { broader: String(c.broader).split('/').pop() } : {}) }))]));
   const modes = all('SELECT product, mode, theme FROM modes ORDER BY product, mode');
   const products = all("SELECT * FROM products WHERE version IS NOT NULL ORDER BY name").map((p): Row => ({
     ...p,
@@ -57,8 +57,8 @@ export function exportSite(root: string, dbFile: string, outDir: string): Record
     const values = all('SELECT path, theme, display, alias_chain FROM token_values WHERE product = ?', p.id);
     const vals = new Map<string, Row>();
     for (const v of values) ((vals.get(v.path) ?? vals.set(v.path, {}).get(v.path)!) as Row)[v.theme || 'all'] = [v.display, JSON.parse(v.alias_chain)];
-    const tokens = all("SELECT path, native_name, type, description, scope, visibility FROM tokens WHERE product = ? AND (scope = 'semantic' OR path IN (SELECT token FROM mappings WHERE product = ?)) ORDER BY path", p.id, p.id).map((t) => ({
-      p: t.path, n: t.native_name, t: t.type, d: t.description ?? undefined, s: t.scope, vis: t.visibility ?? undefined, v: vals.get(t.path),
+    const tokens = all("SELECT path, native_name, type, description, scope, visibility, deprecated FROM tokens WHERE product = ? AND (scope = 'semantic' OR path IN (SELECT token FROM mappings WHERE product = ?)) ORDER BY path", p.id, p.id).map((t) => ({
+      p: t.path, n: t.native_name, t: t.type, d: t.description ?? undefined, s: t.scope, vis: t.visibility ?? undefined, dep: t.deprecated ?? undefined, v: vals.get(t.path),
       m: mapped.get(t.path)?.map((m) => [m.concept, m.match, m.review_by]) ?? [],
       u: unm.get(t.path) ?? undefined,
     }));

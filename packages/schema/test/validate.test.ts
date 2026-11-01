@@ -88,7 +88,7 @@ const negatives: [string, (f: Record<string, any>) => void, RegExp][] = [
   ['multi-value on a single-valued facet', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/intent-danger+warning'), /takes one value/],
   ['multi-value not sorted', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/usage-link+inverse'), /sorted alphabetically/],
   ['multi-value with unknown part', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/property-text/state-hover+pressed'), /state "pressed"/],
-  ['concept with reserved facet', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/component-button'), /reserved/],
+  ['concept with a part but no component', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/part-cell/property-background'), /part needs a component/],
   ['concept with no facets', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color'), /at least one facet/],
   ['approved unmapped token that also has a mapping', (f) => { const u = f['mappings/material/2.4.0.mappings.json'].unmapped[0]; Object.assign(u, { token: 'md.sys.color.error', status: 'approved', review }); }, /approved as unmapped but also has a live mapping/],
   ['stale unmapped proposal on an approved token', (f) => f['mappings/material/2.4.0.mappings.json'].unmapped.push({ token: 'md.sys.color.error', status: 'proposed', provenance: prov }), /stale proposal; the token already has an approved mapping/],

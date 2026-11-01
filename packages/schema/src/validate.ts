@@ -185,7 +185,7 @@ type MappingFile = {
   unmapped?: (Judgment & { token: string })[];
 };
 
-export const TERM_FACETS = ['intent', 'usage', 'syntax', 'property', 'emphasis', 'brightness', 'state'] as const;
+export const TERM_FACETS = ['intent', 'usage', 'syntax', 'component', 'part', 'property', 'style', 'emphasis', 'brightness', 'state'] as const;
 /** The facet whose value scheme holds this concept (dsi:intent/danger -> intent), if any. */
 export function facetOfConcept(o: Ontology, concept: string): (typeof TERM_FACETS)[number] | undefined {
   return TERM_FACETS.find((f) => concept.startsWith(`dsi:${f}/`) && inScheme(o, concept, `dsi:scheme/${f}`));
@@ -199,7 +199,7 @@ function conceptIssue(o: Ontology, ref: string): string | undefined {
   return typeof p === 'string' ? p : undefined;
 }
 
-const FACET_SCHEMES: Record<string, string> = { domain: 'domain', emphasis: 'emphasis', intent: 'intent', property: 'property', state: 'state', usage: 'usage', syntax: 'syntax', brightness: 'brightness' };
+const FACET_SCHEMES: Record<string, string> = { domain: 'domain', emphasis: 'emphasis', intent: 'intent', property: 'property', state: 'state', usage: 'usage', syntax: 'syntax', brightness: 'brightness', style: 'style', component: 'component', part: 'part' };
 
 function checkMappingSemantics(o: Ontology, m: MappingFile, at: string, productExists: (id: string) => boolean): Issue[] {
   const out: Issue[] = [];

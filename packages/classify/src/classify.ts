@@ -1,7 +1,7 @@
 import { CONCEPT_FACETS } from '@dsi/schema';
 
-export type Facet = 'intent' | 'usage' | 'syntax' | 'property' | 'emphasis' | 'brightness' | 'state';
-export const FACETS: Facet[] = CONCEPT_FACETS.filter((f): f is Facet => f !== 'component' && f !== 'part');
+export type Facet = (typeof CONCEPT_FACETS)[number];
+export const FACETS: Facet[] = [...CONCEPT_FACETS];
 const MULTI = new Set<Facet>(['usage', 'state']);
 const MAX_GRAM = 4;
 

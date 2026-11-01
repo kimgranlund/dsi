@@ -29,12 +29,12 @@ const valueOf = (t: Token, theme: string) => (t.v?.[theme] ?? t.v?.all ?? Object
 const role = (t: Token, byIri: Map<string, Concept>) => (t.m[0] ? byIri.get(t.m[0][0]) : undefined);
 
 /** One ruler row: name, a bar to a shared scale, the value. */
-function rulerRow(product: string, t: { p: string }, name: string, value: string | undefined, max: number, unit: string, pxOnly = false) {
+function rulerRow(product: string, t: { p: string; dep?: string }, name: string, value: string | undefined, max: number, unit: string, pxOnly = false) {
   const num = numeric(value);
   const bar = el('span', { class: 'bar-fill' + (num && max && Math.abs(num.n) > max ? ' capped' : '') });
   bar.style.width = num && max ? `${Math.max(1.5, Math.min(100, (100 * Math.abs(num.n)) / max))}%` : '0';
-  return el('a', { class: 'ruler-row', href: tokenHref(product, t.p), 'data-link': true, title: t.p },
-    el('span', { class: 'ruler-name mono', text: name }),
+  return el('a', { class: 'ruler-row' + (t.dep ? ' is-dep' : ''), href: tokenHref(product, t.p), 'data-link': true, title: t.p },
+    el('span', { class: 'ruler-name mono' }, name, t.dep ? el('span', { class: 'dep', text: 'deprecated', title: t.dep }) : null),
     el('span', { class: 'ruler-track' }, bar),
     el('span', { class: 'ruler-value mono', text: num ? pxOnly && num.unit === 'px' ? `${round(num.n)}px` : `${value}${num.unit === 'px' && !String(value).endsWith('px') ? ` · ${round(num.n)}px` : ''}` : value ?? '—' }));
   void unit;

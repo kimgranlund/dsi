@@ -38,7 +38,7 @@ function ontologySummary(root: string, o: Ontology) {
   const schemeDir = path.join(root, 'ontology/schemes');
   const facets = fs.readdirSync(schemeDir).filter((f) => f.endsWith('.jsonld')).flatMap((f) => JSON.parse(fs.readFileSync(path.join(schemeDir, f), 'utf8'))['@graph'] as Record<string, unknown>[]);
   const values = (scheme: string) => facets.filter((c) => c.inScheme === `dsi:scheme/${scheme}`).map((c) => ({ value: String(c.id).split('/').pop(), label: c.prefLabel, definition: c.definition, example: c.example })).filter((v) => o.defined.has(DSI + `${scheme}/${v.value}`) && !o.deprecated.has(DSI + `${scheme}/${v.value}`));
-  const facetOrder = CONCEPT_FACETS.filter((f) => f !== 'component' && f !== 'part');
+  const facetOrder = [...CONCEPT_FACETS];
   return {
     grammar: 'dsi:concept/<domain>/<facet>-<value>/... with facets in this order: ' + facetOrder.join(', '),
     facets: Object.fromEntries(facetOrder.map((f) => [f, values(f)])),
