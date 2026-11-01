@@ -1,0 +1,8 @@
+[
+  { "product": "primer", "pattern": "^display\\.[a-z]+\\.scale\\.\\d+$", "note": "Numbered ramp steps bind no emphasis: each step is the hue itself (owner ramp rule, ADR 0018 amended)." },
+  { "product": "primer", "pattern": "upsell", "note": "Upsell colors mark promotions and new features: discovery intent, not accent (ADR 0018)." },
+  { "product": "atlassian", "pattern": "\\.(bolder|bold|subtle|subtler|subtlest)(\\.|$)", "note": "Emphasis words are ranked by contrast against the page; bolder reads as stronger (ADR 0018)." },
+  { "product": "atlassian", "pattern": "\\.accent\\.", "note": "Accent hues are a meaning-free categorical set: usage categorical with the named hue (ADR 0017)." },
+  { "product": "fluent", "pattern": "^colorNeutral(Background|Foreground|Stroke)\\d", "note": "Numbered neutrals are ranked by contrast; no number is an intent." },
+  { "product": "primer", "pattern": "^(prettylights|codeMirror)\\.", "note": "Code syntax colors bind syntax roles on usage code-surface (ADR 0018)." }
+]

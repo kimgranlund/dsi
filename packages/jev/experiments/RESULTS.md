@@ -37,3 +37,12 @@ Appended by `dsi-jev run`. Full results: `.cache/jev/results/<name>.json`.
 | e24-usage-noul | jev-1.14.0 | 70 | 51.4 | usage-set 51.4, usage-top 52.9 | 26.3 | 50 (5.7) | 70 (0) | 59774/17850 |
 | e25-usage-noul-t07 | jev-1.14.0 | 70 | 51.4 | usage-set 51.4, usage-top 52.9 | 26.3 | 75 (5.7) | 0 (70) | 0/0 |
 | e23-noul-audit-sweep | jev-1.14.0 | 1133 | 91.4 | gold-beats-all 91.4 | 52 | 100 (4.9) | 0 (1133) | 0/0 |
+| r5-a-baseline | jev-1.14.0 | 140 | 25 | intent 73.6, usage 47.1, hue 81.4, property 90.7, emphasis 74.3, state 95.7 | 5.3 | null (0) | 103 (38) | 219465/58595 |
+| r5-b-drafts | jev-1.14.0 | 140 | 22.9 | intent 75, usage 48.6, hue 82.1, property 90.7, emphasis 68.6, state 95.7 | 3.7 | null (0) | 141 (0) | 304287/80411 |
+| r5-c-contrastive | jev-1.14.0 | 140 | 30 | intent 77.1, usage 61.4, hue 84.3, property 91.4, emphasis 71.4, state 95 | 5.7 | 100 (0.7) | 141 (0) | 324307/80401 |
+| r5-d-evidence | jev-1.14.0 | 140 | 30 | intent 77.1, usage 60.7, hue 84.3, property 92.1, emphasis 70.7, state 95 | 5.8 | 100 (0.7) | 13 (128) | 28102/6908 |
+| r5-e-conventions | jev-1.14.0 | 140 | 27.9 | intent 79.3, usage 59.3, hue 85, property 94.3, emphasis 67.9, state 96.4 | 5 | 100 (0.7) | 108 (33) | 249348/61480 |
+| r5-e0-no-conventions | jev-1.14.0 | 140 | 27.9 | intent 80, usage 58.6, hue 84.3, property 94.3, emphasis 70, state 96.4 | 4.9 | 100 (0.7) | 17 (124) | 37932/9216 |
+| r5-f-staged | jev-1.14.0 | 140 | 30.7 | property 91.4, usage 60, intent 77.9, hue 84.3, emphasis 72.1, state 95 | 5.8 | 100 (0.7) | 281 (0) | 376417/80820 |
+| r5-g-merged | jev-1.14.0 | 84 | 45.2 | recall 90.5, concept 54.8, agent-baseline 60.7 | 20.2 | 70 (35.7) | 157 (12) | 212138/46679 |
+| r5-h-words | jev-1.14.0 | 198 | 39.4 | word-facet 57.5, word-value 39.5 | 14.2 | 79.7 (37.4) | 201 (0) | 487939/127997 |

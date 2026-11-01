@@ -31,18 +31,35 @@ export function apiKey(root: string): string | undefined {
 export class Jev {
   calls = 0; hits = 0; inputTokens = 0; outputTokens = 0;
   private active = 0; private queue: (() => void)[] = [];
-  private root: string; private opts: { concurrency?: number; offline?: boolean };
-  constructor(root: string, opts: { concurrency?: number; offline?: boolean } = {}) { this.root = root; this.opts = opts; }
+  private root: string; private opts: { concurrency?: number; offline?: boolean; refresh?: boolean };
+  constructor(root: string, opts: { concurrency?: number; offline?: boolean; refresh?: boolean } = {}) { this.root = root; this.opts = opts; }
   private cacheFile(req: Request) { return path.join(this.root, '.cache/jev/responses', crypto.createHash('sha256').update(JSON.stringify(req)).digest('hex') + '.json'); }
   private async slot<T>(fn: () => Promise<T>): Promise<T> {
     if (this.active >= (this.opts.concurrency ?? 8)) await new Promise<void>((r) => this.queue.push(r));
     this.active++;
     try { return await fn(); } finally { this.active--; this.queue.shift()?.(); }
   }
+  /** The model version `jev-latest` serves today, from one tiny uncached request. Cached answers from another version are re-asked. */
+  current?: string;
+  async version(): Promise<string | undefined> {
+    if (this.current || this.opts.offline) return this.current;
+    const r = await this.fetchOnce({ model: 'jev-latest', state: 'version probe', questions: { ok: { type: 'noul', instructions: 'This text is a probe' } } });
+    this.current = r.model;
+    return this.current;
+  }
   async ask(req: Request): Promise<Response> {
     const f = this.cacheFile(req);
-    if (fs.existsSync(f)) { this.hits++; return { ...JSON.parse(fs.readFileSync(f, 'utf8')), cached: true }; }
+    if (fs.existsSync(f) && !this.opts.refresh) {
+      const c = JSON.parse(fs.readFileSync(f, 'utf8')) as Response;
+      if (!this.current || c.model === this.current) { this.hits++; return { ...c, cached: true }; }
+    }
     if (this.opts.offline) throw new Error('offline: response not cached');
+    const body = await this.fetchOnce(req);
+    fs.mkdirSync(path.dirname(f), { recursive: true });
+    fs.writeFileSync(f, JSON.stringify(body));
+    return body;
+  }
+  private async fetchOnce(req: Request): Promise<Response> {
     const key = apiKey(this.root);
     if (!key) throw new Error('no TYPESAFE_API_KEY (environment or .env.local)');
     return this.slot(async () => {
@@ -51,8 +68,6 @@ export class Jev {
         if (res.ok) {
           const body = (await res.json()) as Response;
           this.calls++; this.inputTokens += body.usage?.input_tokens ?? 0; this.outputTokens += body.usage?.output_tokens ?? 0;
-          fs.mkdirSync(path.dirname(f), { recursive: true });
-          fs.writeFileSync(f, JSON.stringify(body));
           return body;
         }
         const retry = res.status === 429 || res.status >= 500;

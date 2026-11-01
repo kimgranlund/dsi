@@ -39,3 +39,9 @@ Each lesson: what failed, why, the fix now in place. Rounds: Material, Carbon, P
 - **Folding rare concepts loses meaning.** Concepts only one system uses are mostly precise positions, not drift. Real drift showed up as name collisions (L3): `emphasis-default` and duplicated domains.
 - **Composite shadows are elevation.** Models put full `shadow.*` tokens in the color domain; the canonical validator caught it. Color-domain shadow is shadow color only.
 
+## 2026-11-01, Jev (details in packages/jev/LESSONS.md)
+
+- **Ask Jev to compare or confirm, not to judge.** It verifies an answer against its rival 94 to 96% of the time and is reliable when confident (0.85 or more), but on hard cases it is no better than the agents.
+- **Write options in contrast.** Option descriptions that say what each value is not beat better definitions (usage 47 to 61%).
+- **Conventions stay rules.** Jev does not apply a convention from a note in its input; keep them as deterministic steps.
+

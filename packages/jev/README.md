@@ -21,6 +21,7 @@ packages/jev/experiments/matrix.sh                                  # every expe
 node packages/jev/src/lab.ts compare e01-facets-full e04-facets-siblings
 node packages/jev/src/lab.ts errors e01-facets-full property        # most common confusions
 node packages/jev/src/lab.ts show e01-facets-full <token>           # one item: state, gold, answers
+node packages/jev/src/lab.ts gaps --products fluent,spectrum        # Jev's pick for sample-card parts a system lacks
 ```
 
 - **Key:** `TYPESAFE_API_KEY` in the environment or in the gitignored `.env.local` at the repo root. It is never logged or written elsewhere.
@@ -34,7 +35,9 @@ An experiment is a JSON file: `sample` (size, seed, tier `owner`/`rule`/`all`, p
 
 - `facets`: one Choice per facet. Criteria are the facet values that registered color concepts use, plus `none`; `definition` or `label` criteria; `plain` or `rich` instructions.
 - `registry`: one Choice among k registered concepts (the gold one plus the k-1 nearest): reuse first.
-- `noul`: Noul scores for the gold concept and its nearest neighbor; the pair is right when gold scores higher.
+- `noul`: Noul scores for the gold concept and its nearest neighbor(s); right when gold scores higher.
+- `two-stage`, `staged`, `merged`, `owner-choice`, `usage-noul`, `words`: see `src/tasks.ts` and the round notes in `LESSONS.md`.
+- `criteriaFile` replaces option descriptions; `state.evidence` adds alias chain and consuming tokens; `state.conventions` adds lines from `experiments/conventions.json`. Samples can be limited to a tier: `judgment`, `convention`, `agent`, `no-convention`.
 
 Metrics (`src/metrics.ts`): per-facet accuracy, joint accuracy (every facet right), expected calibration error, and accuracy with coverage at confidence thresholds, by product and by tier (owner-reviewed is the gold tier).
 

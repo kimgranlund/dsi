@@ -1,0 +1,38 @@
+{
+  "name": "r5-f-staged",
+  "hypothesis": "Staged: property and usage first, then the rest with those answers in the state.",
+  "sample": {
+    "n": 140,
+    "seed": 3,
+    "tier": "no-convention"
+  },
+  "state": {
+    "kind": "full+siblings",
+    "format": "text",
+    "evidence": true
+  },
+  "post": {
+    "grammar": true,
+    "noneBoost": {
+      "intent": 0.3,
+      "usage": 0.3,
+      "hue": 0.3,
+      "emphasis": 0.2
+    }
+  },
+  "questions": {
+    "kind": "staged",
+    "first": [
+      "property",
+      "usage"
+    ],
+    "then": [
+      "intent",
+      "hue",
+      "emphasis",
+      "state"
+    ],
+    "criteria": "definition"
+  },
+  "criteriaFile": "docs/planning/lexicon-definition-drafts.json,packages/jev/experiments/criteria-contrastive.json"
+}

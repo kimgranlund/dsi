@@ -1,0 +1,37 @@
+{
+  "name": "r5-e-conventions",
+  "hypothesis": "r5-d plus stated system conventions, on the convention class (all tiers).",
+  "sample": {
+    "n": 140,
+    "seed": 3,
+    "tier": "all"
+  },
+  "state": {
+    "kind": "full+siblings",
+    "format": "text",
+    "evidence": true,
+    "conventions": true
+  },
+  "post": {
+    "grammar": true,
+    "noneBoost": {
+      "intent": 0.3,
+      "usage": 0.3,
+      "hue": 0.3,
+      "emphasis": 0.2
+    }
+  },
+  "questions": {
+    "kind": "facets",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "criteria": "definition"
+  },
+  "criteriaFile": "docs/planning/lexicon-definition-drafts.json,packages/jev/experiments/criteria-contrastive.json"
+}

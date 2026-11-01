@@ -54,3 +54,20 @@ Sample: 70 approved exact/close color mappings per experiment, stratified by pro
 ## Pre-screen audited (2026-11-01, strict haiku auditor, blind to Jev's suggestion)
 
 Of the 11 flags, the auditor found 8 supported, 2 insufficient and 1 contradicted. The contradiction (Primer `fgColor.severe`: "Warning foreground", where the auditor suggests "Strong warning foreground", citing the description and Primer's color docs) is the rival Jev preferred. The three Primer `upsell` flags (discovery vs accent) were supported as approved. So the pre-screen's precision for real errors is about 1 in 11 at margin 0.2, with 2 more needing evidence: cheap at 1% of mappings, but only a second look, not a verdict.
+
+## Round 5 (2026-11-01): data quality and pipeline shapes
+
+Fresh, convention-free sample of 140 (seed 3), e12 settings as the baseline (joint 25%, usage 47%). The answer key now drops mappings the strict audit contradicts and tags each answer as judgment (201), convention (162) or agent (756). Responses are cached by request but re-asked when Jev serves a new model version (`--refresh` forces it).
+
+- **Contrastive option descriptions win.** Saying what each usage value is *not*, and giving "none" concrete examples ("most text, icon and border tokens are general"), lifts usage from 47 to 61% and joint accuracy from 25 to 30% (r5-c). The descriptions are in `experiments/criteria-contrastive.json`; review suggestions use them.
+- **Better definitions alone do nothing** (r5-b: 23% joint). The drafted L4 definitions are better documentation but not more decisive. What helps Jev is contrast between neighboring options.
+- **Shipped-code evidence adds nothing** (r5-d): alias chains and consuming tokens leave every facet within a point.
+- **Staged questions are within noise** (r5-f: 30.7 vs 30%).
+- **Stated conventions do not help** (r5-e vs r5-e0): the 18 convention-matched tokens score 11% joint either way. Keep conventions as deterministic rules; don't expect Jev to apply them from a note.
+- **The merged candidate list is worse than the agents.** Every agent answer plus Jev's top 5 lists the owner's answer 90% of the time, but Jev picks it 55% vs the agent majority's 61% (r5-g, 84 owner judgments). Jev does not settle disagreements the agents could not.
+- **Naming words are weak.** Right dimension 58%, right value 40% (r5-h, 198 approved terms). Words without their token context are too ambiguous for one-shot Choice.
+- **Sample-card gaps** (`dsi-jev gaps`): Fluent's page background is picked plausibly (`colorNeutralBackground1`, 0.68). Danger-label picks are weak or wrong for every system (0.19 to 0.62), and two systems have no "link" token names to choose from. Use it as a lead for review only at high confidence.
+
+### Where this leaves the roles
+
+Jev is a good **checker** (pairwise Noul, 94 to 96%) and a good **confident suggester** (Choice at 0.85 or more is right 93 to 99% of the time). It is not a better **judge of hard cases** than the agents. The levers that worked were all about the question: limiting options to the domain, contrastive descriptions, enforcing the grammar afterwards, and comparing instead of thresholding.

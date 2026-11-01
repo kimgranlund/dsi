@@ -25,6 +25,7 @@ export async function prescreen(root: string, o: Ontology, opts: { margin?: numb
   const ctx = new Context(root, o, gold);
   const reg = registry(root);
   const jev = new Jev(root, { offline: opts.offline });
+  await jev.version();
   const ask = (c: string) => ({ type: 'noul' as const, instructions: `This token means "${ctx.name(c)}": ${ctx.definition(c)}` });
   let model: string | undefined;
   const flags: Flag[] = [];
@@ -44,11 +45,16 @@ export async function prescreen(root: string, o: Ontology, opts: { margin?: numb
 
 export interface Suggestion { concept: string; confidence: number; model: string }
 
+/** Option descriptions that won round 5 (usage 47 -> 61%): drafted definitions plus contrastive usage and "none" texts. */
+export const CRITERIA_FILES = ['docs/planning/lexicon-definition-drafts.json', 'packages/jev/experiments/criteria-contrastive.json'];
+
 export async function suggest(root: string, o: Ontology, items: { product: string; version: string; token: string }[], opts: { offline?: boolean } = {}): Promise<Map<string, Suggestion>> {
   const gold = loadGold(root, o);
   const ctx = new Context(root, o, gold);
+  ctx.override = Object.assign({}, ...CRITERIA_FILES.filter((f) => fs.existsSync(path.join(root, f))).map((f) => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8'))));
   const reg = registry(root);
   const jev = new Jev(root, { offline: opts.offline });
+  await jev.version();
   const out = new Map<string, Suggestion>();
   await Promise.all(items.map(async (it) => {
     const g: GoldItem = { ...it, concept: '', facets: {}, tier: 'rule', method: '' };

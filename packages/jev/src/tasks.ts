@@ -5,14 +5,17 @@ import { loadNative, resolve, showValue, type NativeSet } from '@dsi/resolve';
 import type { Question } from './client.ts';
 
 /** One token with a known answer: an approved exact/close color mapping. Owner-reviewed ones are the gold tier. */
-export interface GoldItem { product: string; version: string; token: string; concept: string; facets: Record<string, string>; tier: 'owner' | 'rule'; method: string; alts?: string[]; baseline?: string }
+/** tier: judgment = owner decided this token; convention = applied by an owner rule or a computed step; agent = agents agreed. */
+export interface GoldItem { product: string; version: string; token: string; concept: string; facets: Record<string, string>; tier: 'judgment' | 'convention' | 'agent' | 'owner' | 'rule'; method: string; alts?: string[]; baseline?: string }
 
 export interface Experiment {
   name: string;
   hypothesis: string;
   model?: string;
-  sample: { n: number; seed?: number; tier?: 'all' | 'owner' | 'rule'; products?: string[] };
-  state: { kind: 'name' | 'name+desc' | 'full' | 'full+siblings'; format?: 'text' | 'json' };
+  sample: { n: number; seed?: number; tier?: 'all' | 'owner' | 'rule' | 'judgment' | 'convention' | 'agent' | 'no-convention'; products?: string[] };
+  state: { kind: 'name' | 'name+desc' | 'full' | 'full+siblings'; format?: 'text' | 'json'; evidence?: boolean; conventions?: boolean };
+  /** Replace option descriptions: JSON { "dsi:<facet>/<value>": text, "none:<facet>": text }. */
+  criteriaFile?: string;
   /** Post-processing on the answers, free to vary because responses are cached. */
   post?: { grammar?: boolean; noneBoost?: Record<string, number> };
   questions:
@@ -20,6 +23,9 @@ export interface Experiment {
     | { kind: 'two-stage'; facets: string[]; k: number; criteria?: 'definition' | 'label'; noneKey?: string; siblings?: boolean }
     | { kind: 'registry'; k: number }
     | { kind: 'owner-choice'; extra?: number }
+    | { kind: 'staged'; first: string[]; then: string[]; criteria?: 'definition' | 'label' }
+    | { kind: 'merged'; jevTop: number }
+    | { kind: 'words' }
     | { kind: 'noul'; neighbors?: number }
     | { kind: 'usage-noul'; threshold?: number };
 }
@@ -46,6 +52,11 @@ const rng = (seed: number) => () => ((seed = (seed * 1664525 + 1013904223) >>> 0
 export function loadGold(root: string, o: Ontology, scopeFile = 'packages/mapper/scopes/color-v1.json'): GoldItem[] {
   const scope = JSON.parse(fs.readFileSync(path.join(root, scopeFile), 'utf8')) as { products: Record<string, { version: string }> };
   const out: GoldItem[] = [];
+  const contradicted = new Set<string>();
+  for (const [product, { version }] of Object.entries(scope.products)) {
+    const af = path.join(root, 'mappings', product, `${version}.audit.json`);
+    if (fs.existsSync(af)) for (const v of JSON.parse(fs.readFileSync(af, 'utf8')).verdicts) if (v.verdict === 'contradicted') contradicted.add(`${product} ${v.token} ${v.mappingId}`);
+  }
   for (const [product, { version }] of Object.entries(scope.products)) {
     const f = path.join(root, 'mappings', product, `${version}.mappings.json`);
     if (!fs.existsSync(f)) continue;
@@ -53,8 +64,10 @@ export function loadGold(root: string, o: Ontology, scopeFile = 'packages/mapper
       if (m.status !== 'approved' || !['exact', 'close'].includes(m.match) || !m.concept.startsWith('dsi:concept/color/')) continue;
       const p = parseConcept(o, m.concept);
       if (typeof p === 'string') continue;
+      if (contradicted.has(`${product} ${m.token} ${m.id}`)) continue; // the strict audit disputes it: not an answer key
       const owner = m.provenance?.method === 'human-review' || m.review?.by === 'kimgranlund';
-      out.push({ product, version, token: m.token, concept: m.concept, facets: p.facets as Record<string, string>, tier: owner ? 'owner' : 'rule', method: m.provenance?.method ?? '' });
+      const convention = /rule|re-derived|Migrated/i.test(m.review?.note ?? '') || /^(emphasis-rank|settle-broad|map-scales|reconcile|domain-fix)/.test(m.provenance?.method ?? '');
+      out.push({ product, version, token: m.token, concept: m.concept, facets: p.facets as Record<string, string>, tier: convention ? 'convention' : owner ? 'judgment' : 'agent', method: m.provenance?.method ?? '' });
     }
   }
   return out;
@@ -92,7 +105,8 @@ export function loadOwnerChoices(root: string, o: Ontology, scopeFile = 'package
 
 /** A seeded sample, stratified by product so no one system dominates. */
 export function sample(gold: GoldItem[], s: Experiment['sample']): GoldItem[] {
-  const pool = gold.filter((g) => (!s.tier || s.tier === 'all' || g.tier === s.tier) && (!s.products || s.products.includes(g.product)));
+  const tierOk = (g: GoldItem) => !s.tier || s.tier === 'all' || g.tier === s.tier || (s.tier === 'owner' && (g.tier === 'judgment' || g.tier === 'owner')) || (s.tier === 'rule' && g.tier !== 'judgment') || (s.tier === 'no-convention' && g.tier !== 'convention');
+  const pool = gold.filter((g) => tierOk(g) && (!s.products || s.products.includes(g.product)));
   const r = rng(s.seed ?? 1);
   const by = new Map<string, GoldItem[]>();
   for (const g of pool) (by.get(g.product) ?? by.set(g.product, []).get(g.product)!).push(g);
@@ -113,7 +127,24 @@ export class Context {
   definition(concept: string) { const p = parseConcept(this.o, concept); return typeof p === 'string' ? '' : conceptDefinition(this.lex, p as ParsedConcept); }
 
   /** The state Jev sees for a token. Siblings carry their approved concept names (precedent), never the token's own. */
-  state(g: GoldItem, kind: Experiment['state']['kind'], format: 'text' | 'json' = 'text'): unknown {
+  private usedBy = new Map<string, Map<string, string[]>>();
+  /** Tokens whose first alias hop is this token (component tokens that consume it), per product. */
+  consumers(g: GoldItem): string[] {
+    if (!this.usedBy.has(g.product)) {
+      const s = this.set(g); const m = new Map<string, string[]>(); const th = s.themes[0] ?? '';
+      for (const t of s.tokens.keys()) { const hop = resolve(s, th, t).chain?.[1]; if (hop) (m.get(hop) ?? m.set(hop, []).get(hop)!).push(t); }
+      this.usedBy.set(g.product, m);
+    }
+    return this.usedBy.get(g.product)!.get(g.token) ?? [];
+  }
+  private conv?: { product: string; pattern: string; note: string }[];
+  conventionsFor(g: GoldItem): string[] {
+    this.conv ??= JSON.parse(fs.readFileSync(path.join(this.root, 'packages/jev/experiments/conventions.json'), 'utf8'));
+    return this.conv!.filter((c) => c.product === g.product && new RegExp(c.pattern).test(g.token)).map((c) => c.note);
+  }
+  override?: Record<string, string>;
+
+  state(g: GoldItem, kind: Experiment['state']['kind'], format: 'text' | 'json' = 'text', extra: { evidence?: boolean; conventions?: boolean } = {}): unknown {
     const s = this.set(g);
     const t = s.tokens.get(g.token);
     const modes = s.themes.includes('light') && s.themes.includes('dark') ? ['light', 'dark'] : s.themes.slice(0, 2);
@@ -124,6 +155,13 @@ export class Context {
     if (kind !== 'name') { if (t?.description) obj.description = t.description; }
     if (kind === 'full' || kind === 'full+siblings') { const css = t?.prov?.nativeName; if (css && css !== g.token) obj.cssName = css; obj.valuesByMode = values; }
     if (siblings?.length) obj.siblings = siblings;
+    if (extra.evidence) {
+      const chain = resolve(s, s.themes[0] ?? '', g.token).chain ?? [];
+      if (chain.length > 1) obj.aliasOf = chain.slice(1).join(' -> ');
+      const used = this.consumers(g);
+      if (used.length) obj.usedBy = `${used.length} token(s), e.g. ${used.slice(0, 8).join(', ')}`;
+    }
+    if (extra.conventions) { const c = this.conventionsFor(g); if (c.length) obj.systemConvention = c.join(' '); }
     if (format === 'json') return obj;
     return Object.entries(obj).map(([k, v]) => `${k}: ${typeof v === 'string' ? v : JSON.stringify(v)}`).join('\n');
   }
@@ -150,9 +188,9 @@ export class Context {
       if (!iri.startsWith(`dsi:${facet}/`) || iri.includes('/scheme/')) continue;
       if (!allowed.has(iri.split('/').pop()!)) continue;
       if (facet === 'emphasis' && iri.endsWith('/default')) continue; // ADR 0019: never bound
-      out[iri.split('/').pop()!] = style === 'label' ? w.label : `${w.label}: ${w.definition ?? w.label}`;
+      out[iri.split('/').pop()!] = style === 'label' ? w.label : `${w.label}: ${this.override?.[iri] ?? w.definition ?? w.label}`;
     }
-    out[noneKey] = FACET_NONE[facet] ?? 'Not specific to this facet.';
+    out[noneKey] = this.override?.[`none:${facet}`] ?? FACET_NONE[facet] ?? 'Not specific to this facet.';
     return out;
   }
 
@@ -189,5 +227,30 @@ export class Context {
     });
     return scored.sort((a, b) => b.lp - a.lp).map((x) => x.c);
   }
+
+  /** Up to n token names of a product that contain a word (examples for word questions). */
+  examplesOf(product: string, version: string, word: string, n = 6): string[] {
+    const set = this.set({ product, version } as GoldItem);
+    const re = new RegExp(`(^|[.\\-_])${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[.\\-_])`, 'i');
+    return [...set.tokens.keys()].filter((t) => re.test(t) || t.toLowerCase().includes(word.toLowerCase())).slice(0, n);
+  }
+}
+
+/** Naming words with an approved term (word -> facet value): the words benchmark. tier judgment = owner reviewed. */
+export interface WordItem { product: string; version: string; term: string; facet: string; value: string; tier: string }
+export function loadWords(root: string, scopeFile = 'packages/mapper/scopes/color-v1.json'): WordItem[] {
+  const scope = JSON.parse(fs.readFileSync(path.join(root, scopeFile), 'utf8')) as { products: Record<string, { version: string }> };
+  const out: WordItem[] = [];
+  for (const [product, { version }] of Object.entries(scope.products)) {
+    const f = path.join(root, 'mappings', product, 'terms.json');
+    if (!fs.existsSync(f)) continue;
+    for (const t of JSON.parse(fs.readFileSync(f, 'utf8')).terms) {
+      if (t.status !== 'approved') continue;
+      const m = /^dsi:([a-z]+)\/([a-z0-9-]+)$/.exec(t.concept);
+      if (!m || !['intent', 'usage', 'hue', 'property', 'emphasis', 'state'].includes(m[1])) continue;
+      out.push({ product, version, term: t.term, facet: m[1], value: m[2], tier: t.review?.by === 'kimgranlund' ? 'judgment' : 'agent' });
+    }
+  }
+  return out;
 }
 

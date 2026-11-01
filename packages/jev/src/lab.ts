@@ -5,7 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadOntology } from '@dsi/schema';
 import { Jev, type Request, type Response } from './client.ts';
-import { Context, loadGold, loadOwnerChoices, sample, type Experiment, type GoldItem } from './tasks.ts';
+import { Context, loadGold, loadOwnerChoices, loadWords, sample, type Experiment, type GoldItem } from './tasks.ts';
 import { confusions, isCorrect, summarize, type Scored } from './metrics.ts';
 import { prescreen } from './roles.ts';
 
@@ -16,24 +16,40 @@ const flag = (n: string) => args.includes(n);
 const opt = (n: string) => (args.includes(n) ? args[args.indexOf(n) + 1] : undefined);
 const USAGE = `usage:
   dsi-jev gold                                  gold set size by product and tier
-  dsi-jev run <experiment.json> [--dry] [--offline] [--concurrency N]
+  dsi-jev run <experiment.json> [--dry] [--offline] [--refresh] [--concurrency N]
   dsi-jev compare <name>...                     key metrics side by side
   dsi-jev errors <name> [facet]                 most common confusions
   dsi-jev show <name> <token>                   one item: state, gold, answers
+  dsi-jev gaps [--products fluent,spectrum]      Jev's pick for sample-card parts a system has no approved token for
   dsi-jev prescreen [--margin 0.2] [--offline]  audit pre-screen: write .cache/jev/prescreen.json for audit-prepare --only`;
 
 const o = await loadOntology(path.join(root, 'ontology'));
 const gold = loadGold(root, o);
+
+/** Concepts the mapping agents proposed for a token (any status), excluding owner-authored records. */
+function loadAgentAnswers(g: GoldItem): string[] {
+  const f = path.join(root, 'mappings', g.product, `${g.version}.mappings.json`);
+  return [...new Set((JSON.parse(fs.readFileSync(f, 'utf8')).mappings as any[]).filter((m) => m.token === g.token && m.provenance?.model && m.concept.startsWith('dsi:concept/color/')).map((m) => m.concept as string))];
+}
 
 function registry(): string[] {
   return (JSON.parse(fs.readFileSync(path.join(root, 'ontology/schemes/concepts.jsonld'), 'utf8'))['@graph'] as { id: string }[]).map((c) => c.id);
 }
 
 function build(ctx: Context, e: Experiment, g: GoldItem): { req: Request; key?: Record<string, string>; pair?: [string, string] } {
-  const state = ctx.state(g, e.state.kind, e.state.format);
+  const state = e.questions.kind === 'words' ? '' : ctx.state(g, e.state.kind, e.state.format, { evidence: e.state.evidence, conventions: e.state.conventions });
   const model = e.model ?? 'jev-latest';
   const q = e.questions;
   if (q.kind === 'facets' || q.kind === 'two-stage') return { req: { model, state, questions: ctx.facetQuestions(q.facets, q.criteria, q.kind === 'facets' ? q.instructions : 'plain', q.noneKey) } };
+  if (q.kind === 'staged') return { req: { model, state, questions: ctx.facetQuestions(q.first, q.criteria) } };
+  if (q.kind === 'words') {
+    const w = (g as any).word;
+    const facets = ['intent', 'usage', 'hue', 'property', 'emphasis', 'state'];
+    return { req: { model, state: `system: ${g.product}\nword in token names: ${w}\nexamples: ${ctx.examplesOf(g.product, g.version, w).join(', ')}`, questions: {
+      facet: { type: 'choice', instructions: 'Which dimension of meaning this naming word expresses in the token names', criteria: { intent: 'What the color signals (danger, success, brand)', usage: 'Where it is used (page, surface, overlay, link)', hue: 'A named hue of a categorical color set', property: 'Which part it colors (background, text, border, icon)', emphasis: 'How strong it is (subtle, strong)', state: 'An interaction state (hover, pressed, disabled)', none: 'No meaning: a noise word, a number or part of a product name' } },
+      ...Object.fromEntries(facets.map((f) => [f, { type: 'choice' as const, instructions: `If this word expresses ${f}, which value`, criteria: ctx.criteria(f) }])) } } };
+  }
+  if (q.kind === 'merged') return { req: { model, state, questions: ctx.facetQuestions(['intent', 'usage', 'hue', 'property', 'emphasis', 'state']) } };
   if (q.kind === 'owner-choice') {
     // The owner's concept, the rejected alternatives, and optionally the nearest registered concepts as extra distractors.
     const extra = q.extra ? ctx.candidates(g, q.extra + 1, registry()).filter((c) => c !== g.concept && !g.alts!.includes(c)).slice(0, q.extra) : [];
@@ -79,6 +95,16 @@ function score(e: Experiment, g: GoldItem, b: ReturnType<typeof build>, r: Respo
     const a = extra?.answers.concept; const pred = b.key?.[a?.choice ?? ''] ?? '(none)';
     return [{ ...base, facet: 'recall@k', gold: g.concept, pred: b.key && Object.values(b.key).includes(g.concept) ? g.concept : '(missed)', confidence: 1, correct: !!b.key && Object.values(b.key).includes(g.concept) }, { ...base, facet: 'concept', gold: g.concept, pred, confidence: a?.confidence ?? 0, correct: pred === g.concept }];
   }
+  if (q.kind === 'staged') { const pf = postFacets({ ...e, post: { grammar: true, ...(e.post ?? {}) } }, { ...r.answers, ...(extra?.answers ?? {}) }, [...q.first, ...q.then], 'none'); return [...q.first, ...q.then].map((f) => ({ ...base, facet: f, gold: g.facets[f] ?? '', pred: pf[f].pred, confidence: pf[f].confidence, correct: isCorrect(g.facets[f], pf[f].pred) })); }
+  if (q.kind === 'words') {
+    const w = g as any; const fa = r.answers.facet; const fp = fa?.choice ?? 'none';
+    const vp = fp === 'none' ? 'none' : (r.answers[fp]?.choice ?? 'none');
+    return [{ ...base, item: `${g.product} ${w.word}`, facet: 'word-facet', gold: w.wordFacet, pred: fp, confidence: fa?.confidence ?? 0, correct: fp === w.wordFacet }, { ...base, item: `${g.product} ${w.word}`, facet: 'word-value', gold: `${w.wordFacet}/${w.wordValue}`, pred: `${fp}/${vp}`, confidence: Math.min(fa?.confidence ?? 0, r.answers[fp]?.confidence ?? 0), correct: fp === w.wordFacet && vp === w.wordValue }];
+  }
+  if (q.kind === 'merged') {
+    const a = extra?.answers.concept; const pred = b.key?.[a?.choice ?? ''] ?? '(none)'; const inList = !!b.key && Object.values(b.key).includes(g.concept);
+    return [{ ...base, facet: 'recall', gold: g.concept, pred: inList ? g.concept : '(missed)', confidence: 1, correct: inList }, { ...base, facet: 'concept', gold: g.concept, pred, confidence: a?.confidence ?? 0, correct: pred === g.concept }, { ...base, facet: 'agent-baseline', gold: g.concept, pred: g.baseline ?? '(none)', confidence: 1, correct: g.baseline === g.concept }];
+  }
   if (q.kind === 'owner-choice') { const a = r.answers.concept; const pred = b.key![a?.choice ?? ''] ?? '(none)'; return [{ ...base, facet: 'concept', gold: g.concept, pred, confidence: a?.confidence ?? 0, correct: pred === g.concept }, { ...base, facet: 'agent-baseline', gold: g.concept, pred: g.baseline ?? '(none)', confidence: 1, correct: g.baseline === g.concept }]; }
   if (q.kind === 'registry') { const a = r.answers.concept; const pred = b.key![a?.choice ?? ''] ?? '(none)'; return [{ ...base, facet: 'concept', gold: g.concept, pred, confidence: a?.confidence ?? 0, correct: pred === g.concept }]; }
   if (q.kind === 'usage-noul') {
@@ -98,14 +124,16 @@ function score(e: Experiment, g: GoldItem, b: ReturnType<typeof build>, r: Respo
 
 if (cmd === 'gold') {
   const c: Record<string, Record<string, number>> = {};
-  for (const g of gold) { c[g.product] ??= { owner: 0, rule: 0 }; c[g.product][g.tier]++; }
+  for (const g of gold) { c[g.product] ??= { judgment: 0, convention: 0, agent: 0 }; c[g.product][g.tier]++; }
   console.log(`${gold.length} approved exact/close color mappings`); console.table(c);
 } else if (cmd === 'run') {
   const file = args.find((a) => a.endsWith('.json'));
   if (!file) { console.error(USAGE); process.exit(2); }
   const e = JSON.parse(fs.readFileSync(file, 'utf8')) as Experiment;
-  const items = sample(e.questions.kind === 'owner-choice' ? loadOwnerChoices(root, o) : gold, e.sample);
+  const wordsAsGold = () => loadWords(root).map((w) => ({ product: w.product, version: w.version, token: `${w.term}`, concept: '', facets: {}, tier: w.tier as GoldItem['tier'], method: '', word: w.term, wordFacet: w.facet, wordValue: w.value } as GoldItem));
+  const items = sample(e.questions.kind === 'owner-choice' || e.questions.kind === 'merged' ? loadOwnerChoices(root, o) : e.questions.kind === 'words' ? wordsAsGold() : gold, e.sample);
   const ctx = new Context(root, o, gold);
+  if (e.criteriaFile) ctx.override = Object.assign({}, ...e.criteriaFile.split(',').map((f) => JSON.parse(fs.readFileSync(path.resolve(root, f), 'utf8'))));
   const built = items.map((g) => ({ g, b: build(ctx, e, g) }));
   if (flag('--dry')) {
     console.log(`${e.name}: ${built.length} requests. First request:\n${JSON.stringify(built[0].b.req, null, 2)}`);
@@ -113,7 +141,8 @@ if (cmd === 'gold') {
     console.log(`about ${Math.round(chars / 4)} input tokens in total (4 characters per token)`);
     process.exit(0);
   }
-  const jev = new Jev(root, { concurrency: Number(opt('--concurrency') ?? 8), offline: flag('--offline') });
+  const jev = new Jev(root, { concurrency: Number(opt('--concurrency') ?? 8), offline: flag('--offline'), refresh: flag('--refresh') });
+  await jev.version(); // cached answers from another Jev release are re-asked
   const t0 = Date.now();
   const failures: string[] = [];
   const answers = await Promise.all(built.map(async ({ g, b }) => { try { return { g, b, r: await jev.ask(b.req) }; } catch (err) { failures.push(`${g.token}: ${(err as Error).message}`); return undefined; } }));
@@ -129,6 +158,26 @@ if (cmd === 'gold') {
       const fam = q.siblings ? ctx.familyConcepts(x.g).filter((c) => reg.includes(c)) : [];
       const top = [...new Set([...fam.slice(0, Math.floor(q.k / 2)), ...ranked])].slice(0, q.k);
       x.b.key = Object.fromEntries(top.map((c, i) => [`c${i + 1}`, c]));
+      const req: Request = { model: e.model ?? 'jev-latest', state: x.b.req.state, questions: { concept: { type: 'choice', instructions: 'Which shared concept this design token means', criteria: Object.fromEntries(Object.entries(x.b.key).map(([k, c]) => [k, `${ctx.name(c)}: ${ctx.definition(c)}`])) } } };
+      try { second.set(x.g.token + x.g.product, await jev.ask(req)); } catch (err) { failures.push(`${x.g.token} (stage 2): ${(err as Error).message}`); }
+    }));
+  }
+  if (e.questions.kind === 'staged') {
+    const q = e.questions;
+    await Promise.all(done.map(async (x) => {
+      const firsts = q.first.map((f) => `${f}: ${x.r.answers[f]?.choice ?? 'none'}`).join('; ');
+      const req: Request = { model: e.model ?? 'jev-latest', state: `${x.b.req.state}\nalready decided: ${firsts}`, questions: ctx.facetQuestions(q.then, q.criteria) };
+      try { second.set(x.g.token + x.g.product, await jev.ask(req)); } catch (err) { failures.push(`${x.g.token} (stage 2): ${(err as Error).message}`); }
+    }));
+  }
+  if (e.questions.kind === 'merged') {
+    const q = e.questions; const reg = registry(); const F = ['intent', 'usage', 'hue', 'property', 'emphasis', 'state'];
+    await Promise.all(done.map(async (x) => {
+      // Candidates: every agent answer on record (approved or rejected) plus Jev's top facet-ranked registered concepts. No owner leak.
+      const agents = loadAgentAnswers(x.g);
+      const probs = Object.fromEntries(F.map((f) => [f, x.r.answers[f]?.probabilities ?? {}]));
+      const cands = [...new Set([...agents, ...ctx.rankByFacets(probs, reg).slice(0, q.jevTop)])];
+      x.b.key = Object.fromEntries(cands.map((c, i) => [`c${i + 1}`, c]));
       const req: Request = { model: e.model ?? 'jev-latest', state: x.b.req.state, questions: { concept: { type: 'choice', instructions: 'Which shared concept this design token means', criteria: Object.fromEntries(Object.entries(x.b.key).map(([k, c]) => [k, `${ctx.name(c)}: ${ctx.definition(c)}`])) } } };
       try { second.set(x.g.token + x.g.product, await jev.ask(req)); } catch (err) { failures.push(`${x.g.token} (stage 2): ${(err as Error).message}`); }
     }));
@@ -165,4 +214,36 @@ if (cmd === 'gold') {
   console.log(`${r.flags.length} of ${r.checked} approved mappings flagged (${r.model}) -> ${path.relative(root, out)}`);
   const ctx = new Context(root, o, gold);
   for (const f of r.flags.slice(0, 20)) console.log(`  ${f.margin.toFixed(2)} ${f.product} ${f.token}: ${ctx.name(f.approved)} -> ${ctx.name(f.rival)}`);
+} else if (cmd === 'gaps') {
+  // Sample-card gaps: for a system with no approved token at a specimen concept, let Jev pick from that system's own
+  // color tokens (name-filtered shortlist). A report for review, never a mapping.
+  const SPEC: { part: string; concept: string; hint: RegExp }[] = [
+    { part: 'Page', concept: 'dsi:concept/color/usage-page/property-background', hint: /(page|canvas|app|body|base|background1$|default)/i },
+    { part: 'Link', concept: 'dsi:concept/color/usage-link/property-text', hint: /(link|href|hyperlink|anchor)/i },
+    { part: 'Delete button label', concept: 'dsi:concept/color/intent-danger/usage-on-fill/property-foreground', hint: /(danger|error|negative|critical|red).*(on|inverse|fill|static|white|foreground)|on.*(danger|error|negative|critical)/i },
+  ];
+  const products = (opt('--products') ?? 'fluent,spectrum').split(',');
+  const scope = JSON.parse(fs.readFileSync(path.join(root, 'packages/mapper/scopes/color-v1.json'), 'utf8')).products as Record<string, { version: string }>;
+  const ctx = new Context(root, o, gold);
+  const jev = new Jev(root, { offline: flag('--offline') });
+  await jev.version();
+  const report: any[] = [];
+  for (const product of products) {
+    const version = scope[product].version;
+    const approved = new Set((JSON.parse(fs.readFileSync(path.join(root, 'mappings', product, `${version}.mappings.json`), 'utf8')).mappings as any[]).filter((m) => m.status === 'approved').map((m) => m.concept));
+    const set = ctx.set({ product, version } as GoldItem);
+    for (const sp of SPEC) {
+      if (approved.has(sp.concept)) continue;
+      const pool = [...set.tokens.values()].filter((t) => (t.type === 'color' || !t.type) && sp.hint.test(t.path) && !t.deprecated).map((t) => t.path).slice(0, 25);
+      if (!pool.length) { report.push({ product, part: sp.part, note: 'no candidate names' }); continue; }
+      const key = Object.fromEntries(pool.map((t, i) => [`t${i + 1}`, t]));
+      const desc = (t: string) => { const tk = set.tokens.get(t)!; const v = ctx.state({ product, version, token: t } as GoldItem, 'full', 'json') as any; return `${t}${tk.description ? ': ' + tk.description : ''} (${JSON.stringify(v.valuesByMode ?? {})})`; };
+      const r = await jev.ask({ model: 'jev-latest', state: `system: ${product}\nlooking for: ${ctx.name(sp.concept)} (${ctx.definition(sp.concept)})`, questions: { token: { type: 'choice', instructions: `Which of this system's tokens is its ${ctx.name(sp.concept).toLowerCase()}`, criteria: Object.fromEntries(Object.entries(key).map(([k, t]) => [k, desc(t)])) } } });
+      const a = r.answers.token;
+      report.push({ product, part: sp.part, concept: sp.concept, pick: key[a?.choice ?? ''], confidence: a?.confidence, runnerUp: Object.entries(a?.probabilities ?? {}).sort((x, y) => y[1] - x[1]).slice(1, 3).map(([k, p]) => `${key[k]} ${p.toFixed(2)}`), model: r.model });
+    }
+  }
+  fs.mkdirSync(path.join(root, '.cache/jev'), { recursive: true });
+  fs.writeFileSync(path.join(root, '.cache/jev/gaps.json'), JSON.stringify(report, null, 1));
+  for (const x of report) console.log(`${x.product} ${x.part}: ${x.pick ?? x.note}${x.confidence != null ? ` (${x.confidence.toFixed(2)}; next: ${x.runnerUp.join(', ')})` : ''}`);
 } else { console.error(USAGE); process.exit(2); }
