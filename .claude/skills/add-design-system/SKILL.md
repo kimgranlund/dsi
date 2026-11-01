@@ -19,7 +19,7 @@ description: Add a design system (or a new upstream version of one) to DesignSys
 | 4 | Vocabulary | Low (cmds) / High (agents) | G4 queued words go to review | runbook §4 | `workflows/words.js`, `workflows/tiebreak.js` (kind words) |
 | 5 | Mapping | Low / High | G5 ontology change from gaps | runbook §5, gates §G5 | `workflows/map.js` |
 | 6 | Tiebreak and settle | Low | - | runbook §6 | `workflows/tiebreak.js` (kind map), then `settle` |
-| 6b | Jev vote (experimental) | Low | G9 Jev gets a role only after the pilot | runbook §12, references/jev.md | none |
+| 6b | Jev pre-screen and suggestions | Low | G9 (decided: ADR 0020, no vote) | runbook §12 | none |
 | 7 | Audit | Low / High | G6 rule changes (ADR) | runbook §7, gates §G6 | `workflows/audit.js` |
 | 8 | Review | Low | G7 owner's review decisions | runbook §8, gates §G7 | none (artifact) |
 | 9 | Ship | Low | G8 push + production deploy | runbook §9, gates §G8 | none |
@@ -84,9 +84,10 @@ Copy the checklist of the current stage into your task list. Each has an exit cr
 - [ ] `settle color-v1 <run> <p> <firstRun>` (three agree, emphasis-only splits, two of three at 0.5; runbook §6)
 - Exit: tiebreak and settle counts printed; remaining queue size known; new-concept answers held by the registry gate counted.
 
-### 6b Jev vote (experimental)
-- [ ] Only when `packages/jev/LESSONS.md` records a configuration that passed the pilot and the owner gave it a role (G9)
-- Exit: Jev's answers recorded as votes with provenance; never an approval on its own.
+### 6b Jev pre-screen and suggestions (ADR 0020)
+- [ ] `node packages/jev/src/lab.ts prescreen`; audit the flags first (`audit-prepare --only .cache/jev/prescreen.json`)
+- [ ] Render the review page with `--jev`
+- Exit: flags audited; Jev picks on the cards. Jev never approves.
 
 ### 7 Audit (Low / High)
 - [ ] `workflows/audit.js` `{product, version, run, docs}`

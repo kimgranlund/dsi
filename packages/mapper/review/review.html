@@ -484,10 +484,17 @@ function card(item) {
           el('span', { class: 'tally', text: o.voters.length + ' of ' + total }),
           el('span', { class: 'voters', text: o.voters.map((v) => v.model.replace(/^claude-/, '') + (v.confidence != null ? ' ' + v.confidence.toFixed(2) : '')).join(' · ') }),
           o.concept ? (o.registered ? el('span', { class: 'reg shared', text: (o.usedBy && o.usedBy.length ? 'Shared · ' + o.usedBy.join(', ') : 'Registered') }) : el('span', { class: 'reg new', text: 'New concept · needs your approval', title: 'Not in the concept registry yet. Accepting it registers it (ADR 0019).' })) : null,
+          o.jev != null ? el('span', { class: 'reg shared', text: 'Jev ' + o.jev.toFixed(2) }) : null,
           sugg ? el('span', { class: 'sugg', text: 'Suggested: ' + item.preselectWhy }) : null),
         el('details', {}, el('summary', { text: o.voters[0].rationale }), o.voters.map((v) => el('p', {}, el('b', { text: v.model.replace(/^claude-/, '') + ': ' }), v.rationale)))),
       !d ? el('button', { class: sugg ? 'primary' : '', text: 'Accept', disabled: !canWrite, onclick: () => decideOpt(item, i) }) : el('span')));
   });
+  if (item.jev) {
+    const inOpts = item.options.some((o) => o.concept === item.jev.concept);
+    right.append(el('div', { class: 'prec' },
+      el('div', {}, el('b', { text: 'Jev' }), ' (' + item.jev.model + ', confidence ' + item.jev.confidence.toFixed(2) + (item.jev.confident ? '' : ', below 0.85: weak') + '): ' + SENTENCE.exact(item.jev.name).replace('It means exactly', 'means')),
+      !inOpts && !d && item.jev.confident ? el('div', { class: 'actions' }, el('button', { text: 'Accept Jev’s concept (exact)', disabled: !canWrite, onclick: () => { activeKey = nextOpen(item.key); decide(item, { action: 'custom', concept: item.jev.concept, match: 'exact', note: 'Jev two-stage pick, confidence ' + item.jev.confidence.toFixed(2) + ' (' + item.jev.model + ').' }); } })) : null));
+  }
   if (item.family && item.family.approved.length) {
     right.append(el('div', { class: 'prec' },
       el('div', { text: 'Approved siblings (' + item.family.label + ')' + (item.family.precedent ? ': ' + item.family.precedent.count + ' of ' + item.family.precedent.of + ' share one shape' : '') }),

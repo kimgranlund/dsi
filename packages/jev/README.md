@@ -2,6 +2,11 @@
 
 An experiment lab for TypeSafe's Jev model (System One: state plus typed questions in, typed answers with probabilities out; https://docs.typesafe.ai) as a voter in DSI mapping. It measures Jev against approved mappings before Jev gets any role in the pipeline.
 
+## Roles (ADR 0020)
+
+- `node packages/jev/src/lab.ts prescreen`: flags approved mappings a registered rival outscores by 0.2 or more; `audit-prepare --only .cache/jev/prescreen.json` audits them first.
+- `dsi-map review ... --jev`: Jev's two-stage pick on each review card (preselects at 0.85 or more, never approves). Code: `src/roles.ts`.
+
 ## Kind
 
 A tool package. It writes nothing under `mappings/`, `ontology/` or `data/`. Results go to `.cache/jev/` (gitignored); the experiment log and lessons are committed here.

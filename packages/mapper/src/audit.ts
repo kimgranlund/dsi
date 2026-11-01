@@ -149,11 +149,12 @@ const DOCS: Record<string, string[]> = {
   polaris: ['https://polaris-react.shopify.com/tokens/color'],
 };
 
-export function prepareAudit(root: string, o: Ontology, scope: Scope, product: string, runDir: string) {
+export function prepareAudit(root: string, o: Ontology, scope: Scope, product: string, runDir: string, only?: Set<string>) {
   const { version } = scope.products[product];
   const set = loadNative(root, product, version);
   const file = readMappings(root, product, version) as any;
-  const approved = (file?.mappings ?? []).filter((m: any) => m.status === 'approved');
+  // `only`: audit just these tokens (for example the Jev pre-screen's flags, `audit-prepare --only <file>`).
+  const approved = (file?.mappings ?? []).filter((m: any) => m.status === 'approved' && (!only || only.has(m.token)));
   const termsPath = path.join(root, 'mappings', product, 'terms.json');
   const terms = fs.existsSync(termsPath) ? (JSON.parse(fs.readFileSync(termsPath, 'utf8')) as TermsFile) : undefined;
   const findings = runChecks(o, product, set, approved, terms);

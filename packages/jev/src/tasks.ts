@@ -20,7 +20,8 @@ export interface Experiment {
     | { kind: 'two-stage'; facets: string[]; k: number; criteria?: 'definition' | 'label'; noneKey?: string; siblings?: boolean }
     | { kind: 'registry'; k: number }
     | { kind: 'owner-choice'; extra?: number }
-    | { kind: 'noul' };
+    | { kind: 'noul'; neighbors?: number }
+    | { kind: 'usage-noul'; threshold?: number };
 }
 
 export const FACET_NONE: Record<string, string> = {

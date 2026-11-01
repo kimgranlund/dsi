@@ -7,6 +7,7 @@ import { loadOntology } from '@dsi/schema';
 import { Jev, type Request, type Response } from './client.ts';
 import { Context, loadGold, loadOwnerChoices, sample, type Experiment, type GoldItem } from './tasks.ts';
 import { confusions, isCorrect, summarize, type Scored } from './metrics.ts';
+import { prescreen } from './roles.ts';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const resultsDir = path.join(root, '.cache/jev/results');
@@ -18,7 +19,8 @@ const USAGE = `usage:
   dsi-jev run <experiment.json> [--dry] [--offline] [--concurrency N]
   dsi-jev compare <name>...                     key metrics side by side
   dsi-jev errors <name> [facet]                 most common confusions
-  dsi-jev show <name> <token>                   one item: state, gold, answers`;
+  dsi-jev show <name> <token>                   one item: state, gold, answers
+  dsi-jev prescreen [--margin 0.2] [--offline]  audit pre-screen: write .cache/jev/prescreen.json for audit-prepare --only`;
 
 const o = await loadOntology(path.join(root, 'ontology'));
 const gold = loadGold(root, o);
@@ -44,8 +46,15 @@ function build(ctx: Context, e: Experiment, g: GoldItem): { req: Request; key?: 
     const key = Object.fromEntries(cands.map((c, i) => [`c${i + 1}`, c]));
     return { key, req: { model, state, questions: { concept: { type: 'choice', instructions: 'Which shared concept this design token means', criteria: Object.fromEntries(Object.entries(key).map(([k, c]) => [k, `${ctx.name(c)}: ${ctx.definition(c)}`])) } } } };
   }
-  const distractor = ctx.candidates(g, 2, registry()).find((c) => c !== g.concept)!;
-  return { pair: [g.concept, distractor], req: { model, state, questions: { gold: { type: 'noul', instructions: `This token means "${ctx.name(g.concept)}": ${ctx.definition(g.concept)}` }, distractor: { type: 'noul', instructions: `This token means "${ctx.name(distractor)}": ${ctx.definition(distractor)}` } } } };
+  if (q.kind === 'usage-noul') {
+    const vals = Object.keys(ctx.criteria('usage')).filter((v) => v !== 'none');
+    const lex = ctx.lex;
+    return { req: { model, state, questions: Object.fromEntries(vals.map((v) => [v, { type: 'noul' as const, instructions: `This token is used for ${lex.get('dsi:usage/' + v)?.label ?? v}: ${lex.get('dsi:usage/' + v)?.definition ?? ''}` }])) } };
+  }
+  const n = q.kind === 'noul' ? (q.neighbors ?? 1) : 1;
+  const rivals = ctx.candidates(g, n + 1, registry()).filter((c) => c !== g.concept).slice(0, n);
+  const ask = (c: string) => ({ type: 'noul' as const, instructions: `This token means "${ctx.name(c)}": ${ctx.definition(c)}` });
+  return { pair: [g.concept, rivals[0]], key: Object.fromEntries(rivals.map((c, i) => [`r${i + 1}`, c])), req: { model, state, questions: { gold: ask(g.concept), ...Object.fromEntries(rivals.map((c, i) => [i === 0 ? 'distractor' : `r${i + 1}`, ask(c)])) } } };
 }
 
 /** Apply post-processing: boost the none option per facet, then the grammar (no hue without categorical usage). */
@@ -72,7 +81,18 @@ function score(e: Experiment, g: GoldItem, b: ReturnType<typeof build>, r: Respo
   }
   if (q.kind === 'owner-choice') { const a = r.answers.concept; const pred = b.key![a?.choice ?? ''] ?? '(none)'; return [{ ...base, facet: 'concept', gold: g.concept, pred, confidence: a?.confidence ?? 0, correct: pred === g.concept }, { ...base, facet: 'agent-baseline', gold: g.concept, pred: g.baseline ?? '(none)', confidence: 1, correct: g.baseline === g.concept }]; }
   if (q.kind === 'registry') { const a = r.answers.concept; const pred = b.key![a?.choice ?? ''] ?? '(none)'; return [{ ...base, facet: 'concept', gold: g.concept, pred, confidence: a?.confidence ?? 0, correct: pred === g.concept }]; }
+  if (q.kind === 'usage-noul') {
+    const t = q.threshold ?? 0.5;
+    const ps = Object.entries(r.answers).map(([v, a]) => [v, a.noul ?? 0] as const).sort((a, b) => b[1] - a[1]);
+    const chosen = ps.filter(([, p]) => p >= t).map(([v]) => v).sort();
+    const goldSet = (g.facets.usage ?? '').split('+').filter(Boolean).sort();
+    const top = ps[0];
+    const single = top && top[1] >= t ? top[0] : 'none';
+    return [{ ...base, facet: 'usage-set', gold: goldSet.join('+'), pred: chosen.join('+') || 'none', confidence: top?.[1] ?? 0, correct: chosen.join('+') === goldSet.join('+') }, { ...base, facet: 'usage-top', gold: g.facets.usage ?? '', pred: single, confidence: top?.[1] ?? 0, correct: isCorrect(g.facets.usage, single) }];
+  }
+  const rivals = Object.entries(r.answers).filter(([k]) => k !== 'gold').map(([, a]) => a.noul ?? 0);
   const yes = r.answers.gold?.noul ?? 0, no = r.answers.distractor?.noul ?? 0;
+  if ((q.kind === 'noul') && (q.neighbors ?? 1) > 1) return [{ ...base, facet: 'gold-beats-all', gold: 'true', pred: String(yes > Math.max(...rivals)), confidence: yes - Math.max(...rivals), correct: yes > Math.max(...rivals) }];
   return [{ ...base, facet: 'noul-pair', gold: b.pair![0], pred: yes > no ? b.pair![0] : b.pair![1], confidence: Math.abs(yes - no), correct: yes > no }, { ...base, facet: 'noul-gold>0.5', gold: 'true', pred: yes > 0.5 ? 'true' : 'false', confidence: yes, correct: yes > 0.5 }];
 }
 
@@ -116,7 +136,7 @@ if (cmd === 'gold') {
   const scored = done.flatMap(({ g, b, r }) => score(e, g, b, r, second.get(g.token + g.product)));
   const summary = summarize(scored);
   const model = done.find((x) => x.r.model)?.r.model;
-  const out = { experiment: e, model, at: new Date().toISOString(), seconds: (Date.now() - t0) / 1000, calls: jev.calls, cached: jev.hits, usage: { input: jev.inputTokens, output: jev.outputTokens }, failures, summary, scored, raw: done.map(({ g, r }) => ({ token: g.token, product: g.product, answers: r.answers })) };
+  const out = { experiment: e, model, at: new Date().toISOString(), seconds: (Date.now() - t0) / 1000, calls: jev.calls, cached: jev.hits, usage: { input: jev.inputTokens, output: jev.outputTokens }, failures, summary, scored, raw: done.map(({ g, b, r }) => ({ token: g.token, product: g.product, concept: g.concept, key: b.key, answers: r.answers })) };
   fs.mkdirSync(resultsDir, { recursive: true });
   fs.writeFileSync(path.join(resultsDir, `${e.name}.json`), JSON.stringify(out, null, 1));
   const log = path.join(root, 'packages/jev/experiments/RESULTS.md');
@@ -137,4 +157,12 @@ if (cmd === 'gold') {
   const ctx = new Context(root, o, gold);
   if (g) console.log(ctx.state(g, r.experiment.state.kind, r.experiment.state.format), '\ngold:', g.concept);
   console.log(JSON.stringify(r.raw.find((x: any) => x.token === args[1])?.answers, null, 1));
+} else if (cmd === 'prescreen') {
+  const r = await prescreen(root, o, { margin: opt('--margin') ? Number(opt('--margin')) : undefined, offline: flag('--offline') });
+  const out = path.join(root, '.cache/jev/prescreen.json');
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.writeFileSync(out, JSON.stringify({ at: new Date().toISOString(), ...r }, null, 1));
+  console.log(`${r.flags.length} of ${r.checked} approved mappings flagged (${r.model}) -> ${path.relative(root, out)}`);
+  const ctx = new Context(root, o, gold);
+  for (const f of r.flags.slice(0, 20)) console.log(`  ${f.margin.toFixed(2)} ${f.product} ${f.token}: ${ctx.name(f.approved)} -> ${ctx.name(f.rival)}`);
 } else { console.error(USAGE); process.exit(2); }

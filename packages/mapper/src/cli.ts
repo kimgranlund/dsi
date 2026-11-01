@@ -18,10 +18,10 @@ const USAGE = `usage:
   dsi-map merge <scope> <run>     merge <product>.{a,b}.proposals.json into mappings/ by two-agent agreement
   dsi-map check <scope> <run> <product> <role>   validate one proposals file against its packet
   dsi-map queue <scope>           list tokens whose mappings still need a human decision
-  dsi-map audit-prepare <scope> <run>            deterministic checks + auditor packets for every approved mapping
+  dsi-map audit-prepare <scope> <run> [--only <prescreen.json>]  deterministic checks + auditor packets for every approved mapping (or only the flagged ones)
   dsi-map audit-check <scope> <run> <product>    validate an auditor's verdicts
   dsi-map audit-merge <scope> <run>              write mappings/<product>/<version>.audit.json and list disputes
-  dsi-map review <scope> <run> <out.html> [vocab run[,run]] [--words-only] [--third <run>] [--definitions <drafts.json>]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
+  dsi-map review <scope> <run> <out.html> [vocab run[,run]] [--words-only] [--third <run>] [--definitions <drafts.json>] [--jev]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
   dsi-map tiebreak <scope> <run> <product> <first run>   two of three: approve where a third model agrees with one of the first two
   dsi-map settle <scope> <run> <product> <first run>     settle rules: three agree (cautious match), emphasis-only splits (rank or broad), two of three at 0.5
   dsi-map reconcile <scope> [--dry]               fold single-system concepts into shared ones where one facet separates them (ADR 0019)
@@ -114,6 +114,22 @@ if (cmd === 'prepare') {
   const near = (p: string, t: string) => { const s = setOf(p); return [...s.tokens.keys()].filter((k) => k === t || k.startsWith(t + '.') || k.startsWith(t + '-')); };
   const lex = readLexicon(root);
   const items = wordsOnly ? [] : enrichQueue(root, scope, collectQueue(root, scope, runDir), third, hexIn, near, (c) => { const p = parseConcept(ontology, c); return { name: typeof p === 'string' ? undefined : conceptName(lex, p), registered: isRegistered(ontology, c) }; });
+  // --jev: Jev's two-stage pick per card (G9, 2026-11-01). It preselects only when no precedent or majority did and its
+  // confidence is at least SUGGEST_AT; a pick outside the answers shows as its own option. It never approves.
+  if (process.argv.includes('--jev') && items.length) {
+    const { suggest, SUGGEST_AT } = await import('@dsi/jev/roles');
+    const picks = await suggest(root, ontology, items.map((i) => ({ product: i.product, version: i.version, token: i.token })));
+    for (const it of items as any[]) {
+      const s = picks.get(`${it.product}__${it.token}`);
+      if (!s) continue;
+      const p = parseConcept(ontology, s.concept);
+      it.jev = { ...s, name: typeof p === 'string' ? s.concept : conceptName(lex, p), confident: s.confidence >= SUGGEST_AT };
+      const idx = it.options.findIndex((o: any) => o.concept === s.concept);
+      if (idx >= 0) it.options[idx].jev = s.confidence;
+      if (it.preselect == null && s.confidence >= SUGGEST_AT && idx >= 0) { it.preselect = idx; it.preselectWhy = `Jev ${s.confidence.toFixed(2)} (${s.model})`; }
+    }
+    console.log(`jev: ${picks.size} picks, ${[...picks.values()].filter((s) => s.confidence >= SUGGEST_AT).length} at ${SUGGEST_AT} or more`);
+  }
   // Several vocabulary runs: one card per word, examples from the first run that counted it.
   const termItems = [...(vocabRun && !vocabRun.startsWith('--') ? vocabRun.split(',').flatMap((r) => collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', r))) : [])
     .reduce((m, t) => { const prev = m.get(t.key); if (!prev || (!prev.examples.length && t.examples.length)) m.set(t.key, t); return m; }, new Map<string, any>()).values()];
@@ -351,7 +367,11 @@ if (cmd === 'prepare') {
   if (!run) { console.error(USAGE); process.exit(2); }
   const dir = path.join(root, '.cache/audit', run);
   for (const product of Object.keys(scope.products)) {
-    const r = prepareAudit(root, ontology, scope, product, dir);
+    // --only <prescreen.json>: audit only the flagged tokens (`dsi-jev prescreen` writes the file).
+    const onlyFile = process.argv.includes('--only') ? process.argv[process.argv.indexOf('--only') + 1] : undefined;
+    const only = onlyFile ? new Set<string>((JSON.parse(fs.readFileSync(onlyFile, 'utf8')).flags as any[]).filter((f) => f.product === product).map((f) => f.token)) : undefined;
+    if (only && !only.size) continue;
+    const r = prepareAudit(root, ontology, scope, product, dir, only);
     const by: Record<string, number> = {};
     for (const f of r.findings) by[f.check] = (by[f.check] ?? 0) + 1;
     console.log(`${product}: ${r.count} approved mappings to audit; check findings ${JSON.stringify(by)}`);

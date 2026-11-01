@@ -182,7 +182,12 @@ The site data (`node packages/db/src/cli.ts build` then `export`, or `cd site &&
 
 ## §12 Jev (experimental)
 
-Freedom: Low. Jev (TypeSafe System One) answers typed questions with probabilities, and it is not an Anthropic model, so it could be a truly independent voter. It has no role until the pilot in `packages/jev/` earns it one (G9).
+Freedom: Low. Jev (TypeSafe System One) answers typed questions with probabilities, and it is not an Anthropic model. ADR 0020 gives it two roles and no vote:
+
+- **Audit pre-screen** (before §7): `node packages/jev/src/lab.ts prescreen`, then `audit-prepare color-v1 <run> --only .cache/jev/prescreen.json` so the strict auditor checks the flagged mappings first.
+- **Review suggestions** (in §8): add `--jev` to `review`; confident picks (0.85 or more) preselect or appear as their own option.
+
+To widen its role:
 
 1. Read `packages/jev/LESSONS.md` for the current best configuration and what failed.
 2. To test on a new system: add or copy an experiment with `"products": ["<p>"]`, then `node packages/jev/src/lab.ts run <file>` (key in `.env.local`, endpoint api.typesafe.ai only) and `compare` against the best.

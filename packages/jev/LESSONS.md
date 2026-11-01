@@ -43,3 +43,10 @@ Sample: 70 approved exact/close color mappings per experiment, stratified by pro
 - Noul audit over all 1,133 approved exact/close mappings: how many does it flag, and how many of those does the strict auditor confirm?
 - Usage as one Noul per value (it is multi-valued, which a single Choice cannot express).
 - Two-stage on the 171 queued tokens: how often its confident pick matches the owner's eventual decision.
+
+## Round 4 (2026-11-01): the external report's claims, the audit sweep, usage
+
+- **Confidence bands hold for Choice.** Two-stage picks: 93 to 97% right at 0.85 or more, 50 to 60% from 0.5 to 0.85, 24 to 28% below 0.5 (e16, c2). Facet Choices: 99% at 0.85 or more. The three-tier branching the external report proposes fits Choice answers. It does not fit raw Noul scores, which are poorly calibrated: compare pairs instead. The report's price ($0.042 per million input tokens, output free), latency and "100% guaranteed" claims are not in docs.typesafe.ai and stay unverified.
+- **Audit sweep (e23, 1,133 approved mappings, approved concept vs 3 nearest rivals).** The approved concept wins 91.4% of the time. Most losses are near-ties (77 of 98 within 0.1), so flags need a margin. At 0.2 or more, 11 mappings are flagged (1%), and they are real borderline calls: Primer `upsell` (discovery vs accent), Material `primary-container` (subtle vs strong), Polaris brand hover (emphasis step). Flags do not track the earlier auditor's verdicts (8.6% of contradicted vs 9.9% of supported), so the pre-screen finds different things.
+- **Usage as one Noul per value** (e24): 51 to 53% vs 46 to 50% as one Choice. A small gain; usage stays the weak facet.
+- **Review suggestions on the 171 queued tokens:** 32 picks at 0.85 or more. 12 match an agent's answer; 20 name a concept no agent proposed.

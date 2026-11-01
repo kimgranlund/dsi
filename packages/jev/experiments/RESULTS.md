@@ -33,3 +33,7 @@ Appended by `dsi-jev run`. Full results: `.cache/jev/results/<name>.json`.
 | c1-facets-boost-seed2 | jev-1.14.0 | 70 | 28.6 | intent 81.4, usage 50, hue 84.3, property 92.9, emphasis 70, state 98.6 | 6.3 | null (0) | 54 (16) | 116566/31015 |
 | c2-two-stage-k20-seed2 | jev-1.14.0 | 70 | 64.3 | recall@k 92.9, concept 64.3 | 7.6 | 93.9 (47.1) | 56 (84) | 52014/10587 |
 | c3-noul-pair-seed2 | jev-1.14.0 | 70 | 77.1 | noul-pair 95.7, noul-gold>0.5 77.1 | 33.6 | 100 (4.3) | 56 (14) | 20972/2128 |
+| e23-noul-audit-sweep | jev-1.14.0 | 1133 | 91.4 | gold-beats-all 91.4 | 52 | 100 (4.9) | 1133 (0) | 490137/81576 |
+| e24-usage-noul | jev-1.14.0 | 70 | 51.4 | usage-set 51.4, usage-top 52.9 | 26.3 | 50 (5.7) | 70 (0) | 59774/17850 |
+| e25-usage-noul-t07 | jev-1.14.0 | 70 | 51.4 | usage-set 51.4, usage-top 52.9 | 26.3 | 75 (5.7) | 0 (70) | 0/0 |
+| e23-noul-audit-sweep | jev-1.14.0 | 1133 | 91.4 | gold-beats-all 91.4 | 52 | 100 (4.9) | 0 (1133) | 0/0 |
