@@ -1,7 +1,7 @@
 {
   "packet": "audit-color-v1/fluent@1.0.0-alpha.24",
   "model": "claude-haiku-5-5",
-  "at": "2026-11-01T15:44:41.108Z",
+  "at": "2026-11-01T15:50:56.012Z",
   "checks": [
     {
       "token": "colorBrandForegroundLink",
@@ -99,14 +99,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "borderRadiusCircular web-light",
-          "says": "10000px; --borderRadiusCircular"
-        },
-        {
-          "kind": "value",
-          "source": "borderRadiusCircular web-dark",
-          "says": "10000px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens \"also hold typography, border radius, stroke width, and animation values\""
         }
       ]
     },
@@ -116,14 +111,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "borderRadiusLarge web-light",
-          "says": "6px; --borderRadiusLarge"
-        },
-        {
-          "kind": "value",
-          "source": "borderRadiusLarge web-dark",
-          "says": "6px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens \"also hold typography, border radius, stroke width, and animation values\""
         }
       ]
     },
@@ -133,14 +123,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "borderRadiusMedium web-light",
-          "says": "4px; --borderRadiusMedium"
-        },
-        {
-          "kind": "value",
-          "source": "borderRadiusMedium web-dark",
-          "says": "4px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens \"also hold typography, border radius, stroke width, and animation values\""
         }
       ]
     },
@@ -150,14 +135,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "borderRadiusNone web-light",
-          "says": "0px; --borderRadiusNone"
-        },
-        {
-          "kind": "value",
-          "source": "borderRadiusNone web-dark",
-          "says": "0px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens \"also hold typography, border radius, stroke width, and animation values\""
         }
       ]
     },
@@ -167,14 +147,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "borderRadiusSmall web-light",
-          "says": "2px; --borderRadiusSmall"
-        },
-        {
-          "kind": "value",
-          "source": "borderRadiusSmall web-dark",
-          "says": "2px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens \"also hold typography, border radius, stroke width, and animation values\""
         }
       ]
     },
@@ -184,33 +159,17 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "borderRadiusXLarge web-light",
-          "says": "8px; --borderRadiusXLarge"
-        },
-        {
-          "kind": "value",
-          "source": "borderRadiusXLarge web-dark",
-          "says": "8px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens \"also hold typography, border radius, stroke width, and animation values\""
         }
       ]
     },
     {
       "token": "colorBackgroundOverlay",
       "mappingId": "m-c399a7afc49d",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorBackgroundOverlay web-light",
-          "says": "#000000 @ 0.4; --colorBackgroundOverlay"
-        },
-        {
-          "kind": "value",
-          "source": "colorBackgroundOverlay web-dark",
-          "says": "#000000 @ 0.5"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorBrandBackground2",
@@ -218,14 +177,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorBrandBackground2 web-light",
-          "says": "#ebf3fc; --colorBrandBackground2"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandBackground2 web-dark",
-          "says": "#082338"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -235,14 +189,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorBrandBackground2Hover web-light",
-          "says": "#cfe4fa; --colorBrandBackground2Hover"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandBackground2Hover web-dark",
-          "says": "#0c3b5e"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -252,14 +201,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorBrandBackground2Pressed web-light",
-          "says": "#96c6fa; --colorBrandBackground2Pressed"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandBackground2Pressed web-dark",
-          "says": "#061724"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -269,14 +213,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorBrandForeground1 web-light",
-          "says": "#0f6cbd; --colorBrandForeground1"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandForeground1 web-dark",
-          "says": "#479ef5"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -286,14 +225,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorBrandForegroundInverted web-light",
-          "says": "#479ef5; --colorBrandForegroundInverted"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandForegroundInverted web-dark",
-          "says": "#0f6cbd"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -303,14 +237,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorBrandForegroundInvertedHover web-light",
-          "says": "#62abf5; --colorBrandForegroundInvertedHover"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandForegroundInvertedHover web-dark",
-          "says": "#115ea3"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -320,84 +249,35 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorBrandForegroundInvertedPressed web-light",
-          "says": "#479ef5; --colorBrandForegroundInvertedPressed"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandForegroundInvertedPressed web-dark",
-          "says": "#0f548c"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
     {
       "token": "colorBrandForegroundLink",
       "mappingId": "m-3ad126dc2ca9",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorBrandForegroundLink web-light",
-          "says": "#115ea3; --colorBrandForegroundLink"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandForegroundLink web-dark",
-          "says": "#479ef5"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorBrandForegroundLinkHover",
       "mappingId": "m-92b494bf5470",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorBrandForegroundLinkHover web-light",
-          "says": "#0f548c; --colorBrandForegroundLinkHover"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandForegroundLinkHover web-dark",
-          "says": "#62abf5"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorBrandForegroundLinkPressed",
       "mappingId": "m-3ab8567c14be",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorBrandForegroundLinkPressed web-light",
-          "says": "#0c3b5e; --colorBrandForegroundLinkPressed"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandForegroundLinkPressed web-dark",
-          "says": "#2886de"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorBrandForegroundLinkSelected",
       "mappingId": "m-f5acf94cd451",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorBrandForegroundLinkSelected web-light",
-          "says": "#115ea3; --colorBrandForegroundLinkSelected"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandForegroundLinkSelected web-dark",
-          "says": "#479ef5"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorBrandStroke1",
@@ -405,14 +285,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorBrandStroke1 web-light",
-          "says": "#0f6cbd; --colorBrandStroke1"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandStroke1 web-dark",
-          "says": "#479ef5"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -422,14 +297,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorBrandStroke2 web-light",
-          "says": "#b4d6fa; --colorBrandStroke2"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandStroke2 web-dark",
-          "says": "#0e4775"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -439,14 +309,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorBrandStroke2Hover web-light",
-          "says": "#77b7f7; --colorBrandStroke2Hover"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandStroke2Hover web-dark",
-          "says": "#0e4775"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -456,14 +321,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorBrandStroke2Pressed web-light",
-          "says": "#0f6cbd; --colorBrandStroke2Pressed"
-        },
-        {
-          "kind": "value",
-          "source": "colorBrandStroke2Pressed web-dark",
-          "says": "#0a2e4a"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -473,14 +333,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorCompoundBrandForeground1 web-light",
-          "says": "#0f6cbd; --colorCompoundBrandForeground1"
-        },
-        {
-          "kind": "value",
-          "source": "colorCompoundBrandForeground1 web-dark",
-          "says": "#479ef5"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -490,14 +345,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorCompoundBrandForeground1Hover web-light",
-          "says": "#115ea3; --colorCompoundBrandForeground1Hover"
-        },
-        {
-          "kind": "value",
-          "source": "colorCompoundBrandForeground1Hover web-dark",
-          "says": "#62abf5"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -507,14 +357,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorCompoundBrandForeground1Pressed web-light",
-          "says": "#0f548c; --colorCompoundBrandForeground1Pressed"
-        },
-        {
-          "kind": "value",
-          "source": "colorCompoundBrandForeground1Pressed web-dark",
-          "says": "#2886de"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Brand colors: \"Apply them to buttons, CTAs, and selected states\""
         }
       ]
     },
@@ -524,14 +369,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralBackgroundDisabled web-light",
-          "says": "#f0f0f0; --colorNeutralBackgroundDisabled"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralBackgroundDisabled web-dark",
-          "says": "#141414"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -541,14 +381,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralBackgroundInverted web-light",
-          "says": "#292929; --colorNeutralBackgroundInverted"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralBackgroundInverted web-dark",
-          "says": "#ffffff"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -558,14 +393,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralBackgroundInvertedHover web-light",
-          "says": "#3d3d3d; --colorNeutralBackgroundInvertedHover"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralBackgroundInvertedHover web-dark",
-          "says": "#f5f5f5"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -575,14 +405,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralBackgroundInvertedPressed web-light",
-          "says": "#1f1f1f; --colorNeutralBackgroundInvertedPressed"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralBackgroundInvertedPressed web-dark",
-          "says": "#e0e0e0"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -592,14 +417,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralBackgroundInvertedSelected web-light",
-          "says": "#383838; --colorNeutralBackgroundInvertedSelected"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralBackgroundInvertedSelected web-dark",
-          "says": "#ebebeb"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -609,14 +429,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralForegroundDisabled web-light",
-          "says": "#bdbdbd; --colorNeutralForegroundDisabled"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralForegroundDisabled web-dark",
-          "says": "#5c5c5c"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -626,14 +441,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralForegroundInverted web-light",
-          "says": "#ffffff; --colorNeutralForegroundInverted"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralForegroundInverted web-dark",
-          "says": "#242424"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -643,14 +453,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralForegroundInverted2 web-light",
-          "says": "#ffffff; --colorNeutralForegroundInverted2"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralForegroundInverted2 web-dark",
-          "says": "#242424"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -660,14 +465,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralForegroundInvertedHover web-light",
-          "says": "#ffffff; --colorNeutralForegroundInvertedHover"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralForegroundInvertedHover web-dark",
-          "says": "#242424"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -677,14 +477,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralForegroundInvertedPressed web-light",
-          "says": "#ffffff; --colorNeutralForegroundInvertedPressed"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralForegroundInvertedPressed web-dark",
-          "says": "#242424"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -694,14 +489,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralForegroundInvertedSelected web-light",
-          "says": "#ffffff; --colorNeutralForegroundInvertedSelected"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralForegroundInvertedSelected web-dark",
-          "says": "#242424"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -711,14 +501,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralForegroundOnBrand web-light",
-          "says": "#ffffff; --colorNeutralForegroundOnBrand"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralForegroundOnBrand web-dark",
-          "says": "#ffffff"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -728,14 +513,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralStencil1 web-light",
-          "says": "#e6e6e6; --colorNeutralStencil1"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralStencil1 web-dark",
-          "says": "#575757"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -745,14 +525,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralStencil2 web-light",
-          "says": "#fafafa; --colorNeutralStencil2"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralStencil2 web-dark",
-          "says": "#333333"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -762,14 +537,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralStroke2 web-light",
-          "says": "#e0e0e0; --colorNeutralStroke2"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralStroke2 web-dark",
-          "says": "#525252"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -779,14 +549,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralStrokeAccessible web-light",
-          "says": "#616161; --colorNeutralStrokeAccessible"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralStrokeAccessible web-dark",
-          "says": "#adadad"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -796,14 +561,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralStrokeAccessibleHover web-light",
-          "says": "#575757; --colorNeutralStrokeAccessibleHover"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralStrokeAccessibleHover web-dark",
-          "says": "#bdbdbd"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -813,14 +573,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralStrokeAccessiblePressed web-light",
-          "says": "#4d4d4d; --colorNeutralStrokeAccessiblePressed"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralStrokeAccessiblePressed web-dark",
-          "says": "#b3b3b3"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -830,14 +585,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralStrokeDisabled web-light",
-          "says": "#e0e0e0; --colorNeutralStrokeDisabled"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralStrokeDisabled web-dark",
-          "says": "#424242"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -847,14 +597,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorNeutralStrokeOnBrand web-light",
-          "says": "#ffffff; --colorNeutralStrokeOnBrand"
-        },
-        {
-          "kind": "value",
-          "source": "colorNeutralStrokeOnBrand web-dark",
-          "says": "#292929"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Neutral colors \"ground an interface\" and are \"used on surfaces, text, and layout elements\""
         }
       ]
     },
@@ -864,14 +609,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorPaletteBerryBorder1 web-light",
-          "says": "#edbbe7; --colorPaletteBerryBorder1"
-        },
-        {
-          "kind": "value",
-          "source": "colorPaletteBerryBorder1 web-dark",
-          "says": "#c239b3"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Shared colors \"used in reusable components like avatars, calendars, and badges\""
         }
       ]
     },
@@ -881,14 +621,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorPaletteBerryBorder2 web-light",
-          "says": "#c239b3; --colorPaletteBerryBorder2"
-        },
-        {
-          "kind": "value",
-          "source": "colorPaletteBerryBorder2 web-dark",
-          "says": "#d161c4"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Shared colors \"used in reusable components like avatars, calendars, and badges\""
         }
       ]
     },
@@ -898,14 +633,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorPaletteDarkOrangeBorder1 web-light",
-          "says": "#f4bfab; --colorPaletteDarkOrangeBorder1"
-        },
-        {
-          "kind": "value",
-          "source": "colorPaletteDarkOrangeBorder1 web-dark",
-          "says": "#da3b01"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Shared colors \"used in reusable components like avatars, calendars, and badges\""
         }
       ]
     },
@@ -915,14 +645,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorPaletteDarkOrangeBorder2 web-light",
-          "says": "#da3b01; --colorPaletteDarkOrangeBorder2"
-        },
-        {
-          "kind": "value",
-          "source": "colorPaletteDarkOrangeBorder2 web-dark",
-          "says": "#e9835e"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Shared colors \"used in reusable components like avatars, calendars, and badges\""
         }
       ]
     },
@@ -932,14 +657,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorPaletteRedBorder1 web-light",
-          "says": "#f1bbbc; --colorPaletteRedBorder1"
-        },
-        {
-          "kind": "value",
-          "source": "colorPaletteRedBorder1 web-dark",
-          "says": "#d13438"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Shared colors \"used in reusable components like avatars, calendars, and badges\""
         }
       ]
     },
@@ -949,14 +669,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorPaletteRedBorder2 web-light",
-          "says": "#d13438; --colorPaletteRedBorder2"
-        },
-        {
-          "kind": "value",
-          "source": "colorPaletteRedBorder2 web-dark",
-          "says": "#e37d80"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Shared colors \"used in reusable components like avatars, calendars, and badges\""
         }
       ]
     },
@@ -966,14 +681,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusDangerBackground1 web-light",
-          "says": "#fdf3f4; --colorStatusDangerBackground1"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusDangerBackground1 web-dark",
-          "says": "#3b0509"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -983,14 +693,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusDangerBackground2 web-light",
-          "says": "#eeacb2; --colorStatusDangerBackground2"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusDangerBackground2 web-dark",
-          "says": "#6e0811"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1000,14 +705,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusDangerBackground3 web-light",
-          "says": "#c50f1f; --colorStatusDangerBackground3"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusDangerBackground3 web-dark",
-          "says": "#c50f1f"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1017,14 +717,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusDangerBackground3Hover web-light",
-          "says": "#b10e1c; --colorStatusDangerBackground3Hover"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusDangerBackground3Hover web-dark",
-          "says": "#b10e1c"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1034,14 +729,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusDangerBackground3Pressed web-light",
-          "says": "#960b18; --colorStatusDangerBackground3Pressed"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusDangerBackground3Pressed web-dark",
-          "says": "#960b18"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1051,14 +741,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusDangerBorder1 web-light",
-          "says": "#eeacb2; --colorStatusDangerBorder1"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusDangerBorder1 web-dark",
-          "says": "#c50f1f"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1068,14 +753,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusDangerBorder2 web-light",
-          "says": "#c50f1f; --colorStatusDangerBorder2"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusDangerBorder2 web-dark",
-          "says": "#dc626d"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1085,14 +765,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusDangerForeground1 web-light",
-          "says": "#b10e1c; --colorStatusDangerForeground1"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusDangerForeground1 web-dark",
-          "says": "#dc626d"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1102,36 +777,21 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusDangerForeground2 web-light",
-          "says": "#6e0811; --colorStatusDangerForeground2"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusDangerForeground2 web-dark",
-          "says": "#eeacb2"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
     {
       "token": "colorStatusDangerForeground3",
       "mappingId": "m-f94bad70edcf",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusDangerForeground3 web-light",
-          "says": "#c50f1f; --colorStatusDangerForeground3"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusDangerForeground3 web-dark",
-          "says": "#eeacb2"
-        },
-        {
-          "kind": "value",
-          "source": "packet web-light/web-dark",
-          "says": "Contrast order against page flips between modes (light: below the no-emphasis foreground; dark: equal to the strong foreground), so the subtle word is not settled by values."
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1141,14 +801,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusDangerForegroundInverted web-light",
-          "says": "#dc626d; --colorStatusDangerForegroundInverted"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusDangerForegroundInverted web-dark",
-          "says": "#b10e1c"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1158,14 +813,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusSuccessBackground1 web-light",
-          "says": "#f1faf1; --colorStatusSuccessBackground1"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusSuccessBackground1 web-dark",
-          "says": "#052505"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1175,14 +825,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusSuccessBackground2 web-light",
-          "says": "#9fd89f; --colorStatusSuccessBackground2"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusSuccessBackground2 web-dark",
-          "says": "#094509"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1192,14 +837,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusSuccessBackground3 web-light",
-          "says": "#107c10; --colorStatusSuccessBackground3"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusSuccessBackground3 web-dark",
-          "says": "#107c10"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1209,14 +849,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusSuccessBorder1 web-light",
-          "says": "#9fd89f; --colorStatusSuccessBorder1"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusSuccessBorder1 web-dark",
-          "says": "#107c10"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1226,14 +861,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusSuccessBorder2 web-light",
-          "says": "#107c10; --colorStatusSuccessBorder2"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusSuccessBorder2 web-dark",
-          "says": "#9fd89f"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1243,14 +873,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusSuccessForeground1 web-light",
-          "says": "#0e700e; --colorStatusSuccessForeground1"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusSuccessForeground1 web-dark",
-          "says": "#54b054"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1260,36 +885,21 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusSuccessForeground2 web-light",
-          "says": "#094509; --colorStatusSuccessForeground2"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusSuccessForeground2 web-dark",
-          "says": "#9fd89f"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
     {
       "token": "colorStatusSuccessForeground3",
       "mappingId": "m-dbbca7bc9985",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusSuccessForeground3 web-light",
-          "says": "#107c10; --colorStatusSuccessForeground3"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusSuccessForeground3 web-dark",
-          "says": "#9fd89f"
-        },
-        {
-          "kind": "value",
-          "source": "packet web-light/web-dark",
-          "says": "Contrast order against page flips between modes (light: below the no-emphasis foreground; dark: equal to the strong foreground), so the subtle word is not settled by values."
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
@@ -1299,152 +909,59 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStatusSuccessForegroundInverted web-light",
-          "says": "#54b054; --colorStatusSuccessForegroundInverted"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusSuccessForegroundInverted web-dark",
-          "says": "#0e700e"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Semantic (status) colors: \"red for danger, yellow for caution, and green for positive feedback\""
         }
       ]
     },
     {
       "token": "colorStatusWarningBackground1",
       "mappingId": "m-44466a0c1cba",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorStatusWarningBackground1 web-light",
-          "says": "#fff9f5; --colorStatusWarningBackground1"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusWarningBackground1 web-dark",
-          "says": "#4a1e04"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorStatusWarningBackground2",
       "mappingId": "m-68a9049bae70",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorStatusWarningBackground2 web-light",
-          "says": "#fdcfb4; --colorStatusWarningBackground2"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusWarningBackground2 web-dark",
-          "says": "#8a3707"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorStatusWarningBackground3",
       "mappingId": "m-68574d634508",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorStatusWarningBackground3 web-light",
-          "says": "#f7630c; --colorStatusWarningBackground3"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusWarningBackground3 web-dark",
-          "says": "#f7630c"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorStatusWarningBorder1",
       "mappingId": "m-167e60ea96a2",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorStatusWarningBorder1 web-light",
-          "says": "#fdcfb4; --colorStatusWarningBorder1"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusWarningBorder1 web-dark",
-          "says": "#f7630c"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorStatusWarningBorder2",
       "mappingId": "m-15cd984e584b",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorStatusWarningBorder2 web-light",
-          "says": "#bc4b09; --colorStatusWarningBorder2"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusWarningBorder2 web-dark",
-          "says": "#f98845"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorStatusWarningForeground1",
       "mappingId": "m-dba43fc7865c",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorStatusWarningForeground1 web-light",
-          "says": "#bc4b09; --colorStatusWarningForeground1"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusWarningForeground1 web-dark",
-          "says": "#faa06b"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorStatusWarningForeground2",
       "mappingId": "m-77f9f9442d2e",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorStatusWarningForeground2 web-light",
-          "says": "#8a3707; --colorStatusWarningForeground2"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusWarningForeground2 web-dark",
-          "says": "#fdcfb4"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorStatusWarningForegroundInverted",
       "mappingId": "m-06476c3cae04",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "colorStatusWarningForegroundInverted web-light",
-          "says": "#faa06b; --colorStatusWarningForegroundInverted"
-        },
-        {
-          "kind": "value",
-          "source": "colorStatusWarningForegroundInverted web-dark",
-          "says": "#bc4b09"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "colorStrokeFocus1",
@@ -1452,14 +969,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStrokeFocus1 web-light",
-          "says": "#ffffff; --colorStrokeFocus1"
-        },
-        {
-          "kind": "value",
-          "source": "colorStrokeFocus1 web-dark",
-          "says": "#000000"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Focus: \"the container gets a thicker stroke\""
         }
       ]
     },
@@ -1469,14 +981,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "colorStrokeFocus2 web-light",
-          "says": "#000000; --colorStrokeFocus2"
-        },
-        {
-          "kind": "value",
-          "source": "colorStrokeFocus2 web-dark",
-          "says": "#ffffff"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/color",
+          "says": "Focus: \"the container gets a thicker stroke\""
         }
       ]
     },
@@ -1486,14 +993,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "curveAccelerateMax web-light",
-          "says": "[0.9,0.1,1,0.2]; --curveAccelerateMax"
-        },
-        {
-          "kind": "value",
-          "source": "curveAccelerateMax web-dark",
-          "says": "[0.9,0.1,1,0.2]"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1503,14 +1005,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "curveAccelerateMid web-light",
-          "says": "[1,0,1,1]; --curveAccelerateMid"
-        },
-        {
-          "kind": "value",
-          "source": "curveAccelerateMid web-dark",
-          "says": "[1,0,1,1]"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1520,14 +1017,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "curveAccelerateMin web-light",
-          "says": "[0.8,0,0.78,1]; --curveAccelerateMin"
-        },
-        {
-          "kind": "value",
-          "source": "curveAccelerateMin web-dark",
-          "says": "[0.8,0,0.78,1]"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1537,14 +1029,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "curveDecelerateMax web-light",
-          "says": "[0.1,0.9,0.2,1]; --curveDecelerateMax"
-        },
-        {
-          "kind": "value",
-          "source": "curveDecelerateMax web-dark",
-          "says": "[0.1,0.9,0.2,1]"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1554,14 +1041,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "curveDecelerateMid web-light",
-          "says": "[0,0,0,1]; --curveDecelerateMid"
-        },
-        {
-          "kind": "value",
-          "source": "curveDecelerateMid web-dark",
-          "says": "[0,0,0,1]"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1571,14 +1053,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "curveDecelerateMin web-light",
-          "says": "[0.33,0,0.1,1]; --curveDecelerateMin"
-        },
-        {
-          "kind": "value",
-          "source": "curveDecelerateMin web-dark",
-          "says": "[0.33,0,0.1,1]"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1588,14 +1065,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "curveEasyEase web-light",
-          "says": "[0.33,0,0.67,1]; --curveEasyEase"
-        },
-        {
-          "kind": "value",
-          "source": "curveEasyEase web-dark",
-          "says": "[0.33,0,0.67,1]"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1605,14 +1077,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "curveEasyEaseMax web-light",
-          "says": "[0.8,0,0.2,1]; --curveEasyEaseMax"
-        },
-        {
-          "kind": "value",
-          "source": "curveEasyEaseMax web-dark",
-          "says": "[0.8,0,0.2,1]"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1622,14 +1089,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "curveLinear web-light",
-          "says": "[0,0,1,1]; --curveLinear"
-        },
-        {
-          "kind": "value",
-          "source": "curveLinear web-dark",
-          "says": "[0,0,1,1]"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1639,14 +1101,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "durationFast web-light",
-          "says": "150ms; --durationFast"
-        },
-        {
-          "kind": "value",
-          "source": "durationFast web-dark",
-          "says": "150ms"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1656,14 +1113,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "durationFaster web-light",
-          "says": "100ms; --durationFaster"
-        },
-        {
-          "kind": "value",
-          "source": "durationFaster web-dark",
-          "says": "100ms"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1673,14 +1125,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "durationGentle web-light",
-          "says": "250ms; --durationGentle"
-        },
-        {
-          "kind": "value",
-          "source": "durationGentle web-dark",
-          "says": "250ms"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1690,14 +1137,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "durationNormal web-light",
-          "says": "200ms; --durationNormal"
-        },
-        {
-          "kind": "value",
-          "source": "durationNormal web-dark",
-          "says": "200ms"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1707,14 +1149,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "durationSlow web-light",
-          "says": "300ms; --durationSlow"
-        },
-        {
-          "kind": "value",
-          "source": "durationSlow web-dark",
-          "says": "300ms"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1724,14 +1161,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "durationSlower web-light",
-          "says": "400ms; --durationSlower"
-        },
-        {
-          "kind": "value",
-          "source": "durationSlower web-dark",
-          "says": "400ms"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1741,14 +1173,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "durationUltraFast web-light",
-          "says": "50ms; --durationUltraFast"
-        },
-        {
-          "kind": "value",
-          "source": "durationUltraFast web-dark",
-          "says": "50ms"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1758,14 +1185,9 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "durationUltraSlow web-light",
-          "says": "500ms; --durationUltraSlow"
-        },
-        {
-          "kind": "value",
-          "source": "durationUltraSlow web-dark",
-          "says": "500ms"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens hold \"animation values\""
         }
       ]
     },
@@ -1775,50 +1197,23 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontFamilyBase web-light",
-          "says": "[\"Segoe UI\",\"Segoe UI Web (West European)\",\"-apple-system\",\"BlinkMacSystemFont\",\"Roboto\",\"Helvetica Neue\",\"sans-serif\"]; --fontFamilyBase"
-        },
-        {
-          "kind": "value",
-          "source": "fontFamilyBase web-dark",
-          "says": "[\"Segoe UI\",\"Segoe UI Web (West European)\",\"-apple-system\",\"BlinkMacSystemFont\",\"Roboto\",\"Helvetica Neue\",\"sans-serif\"]"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "\"Segoe is Microsoft's signature typeface\"; Web uses Segoe UI"
         }
       ]
     },
     {
       "token": "fontFamilyMonospace",
       "mappingId": "m-142a9a190248",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "fontFamilyMonospace web-light",
-          "says": "[\"Consolas\",\"Courier New\",\"Courier\",\"monospace\"]; --fontFamilyMonospace"
-        },
-        {
-          "kind": "value",
-          "source": "fontFamilyMonospace web-dark",
-          "says": "[\"Consolas\",\"Courier New\",\"Courier\",\"monospace\"]"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "fontFamilyNumeric",
       "mappingId": "m-41a599bfa326",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "fontFamilyNumeric web-light",
-          "says": "[\"Bahnschrift\",\"Segoe UI\",\"Segoe UI Web (West European)\",\"-apple-system\",\"BlinkMacSystemFont\",\"Roboto\",\"Helvetica Neue\",\"sans-serif\"]; --fontFamilyNumeric"
-        },
-        {
-          "kind": "value",
-          "source": "fontFamilyNumeric web-dark",
-          "says": "[\"Bahnschrift\",\"Segoe UI\",\"Segoe UI Web (West European)\",\"-apple-system\",\"BlinkMacSystemFont\",\"Roboto\",\"Helvetica Neue\",\"sans-serif\"]"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "fontSizeBase100",
@@ -1826,14 +1221,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontSizeBase100 web-light",
-          "says": "10px; --fontSizeBase100"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontSizeBase100 web-dark",
-          "says": "10px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -1843,14 +1238,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontSizeBase200 web-light",
-          "says": "12px; --fontSizeBase200"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontSizeBase200 web-dark",
-          "says": "12px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -1860,14 +1255,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontSizeBase300 web-light",
-          "says": "14px; --fontSizeBase300"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontSizeBase300 web-dark",
-          "says": "14px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -1877,14 +1272,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontSizeBase400 web-light",
-          "says": "16px; --fontSizeBase400"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontSizeBase400 web-dark",
-          "says": "16px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -1894,14 +1289,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontSizeBase500 web-light",
-          "says": "20px; --fontSizeBase500"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontSizeBase500 web-dark",
-          "says": "20px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -1911,14 +1306,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontSizeBase600 web-light",
-          "says": "24px; --fontSizeBase600"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontSizeBase600 web-dark",
-          "says": "24px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -1928,14 +1323,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontSizeHero1000 web-light",
-          "says": "68px; --fontSizeHero1000"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontSizeHero1000 web-dark",
-          "says": "68px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -1945,14 +1340,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontSizeHero700 web-light",
-          "says": "28px; --fontSizeHero700"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontSizeHero700 web-dark",
-          "says": "28px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -1962,14 +1357,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontSizeHero800 web-light",
-          "says": "32px; --fontSizeHero800"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontSizeHero800 web-dark",
-          "says": "32px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -1979,14 +1374,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontSizeHero900 web-light",
-          "says": "40px; --fontSizeHero900"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontSizeHero900 web-dark",
-          "says": "40px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -1996,14 +1391,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontWeightBold web-light",
-          "says": "700; --fontWeightBold"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontWeightBold web-dark",
-          "says": "700"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2013,14 +1408,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontWeightMedium web-light",
-          "says": "500; --fontWeightMedium"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontWeightMedium web-dark",
-          "says": "500"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2030,14 +1425,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontWeightRegular web-light",
-          "says": "400; --fontWeightRegular"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontWeightRegular web-dark",
-          "says": "400"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2047,14 +1442,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "fontWeightSemibold web-light",
-          "says": "600; --fontWeightSemibold"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "fontWeightSemibold web-dark",
-          "says": "600"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2064,14 +1459,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "lineHeightBase100 web-light",
-          "says": "14px; --lineHeightBase100"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "lineHeightBase100 web-dark",
-          "says": "14px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2081,14 +1476,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "lineHeightBase200 web-light",
-          "says": "16px; --lineHeightBase200"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "lineHeightBase200 web-dark",
-          "says": "16px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2098,14 +1493,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "lineHeightBase300 web-light",
-          "says": "20px; --lineHeightBase300"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "lineHeightBase300 web-dark",
-          "says": "20px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2115,14 +1510,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "lineHeightBase400 web-light",
-          "says": "22px; --lineHeightBase400"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "lineHeightBase400 web-dark",
-          "says": "22px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2132,14 +1527,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "lineHeightBase500 web-light",
-          "says": "28px; --lineHeightBase500"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "lineHeightBase500 web-dark",
-          "says": "28px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2149,14 +1544,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "lineHeightBase600 web-light",
-          "says": "32px; --lineHeightBase600"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "lineHeightBase600 web-dark",
-          "says": "32px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2166,14 +1561,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "lineHeightHero1000 web-light",
-          "says": "92px; --lineHeightHero1000"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "lineHeightHero1000 web-dark",
-          "says": "92px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2183,14 +1578,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "lineHeightHero700 web-light",
-          "says": "36px; --lineHeightHero700"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "lineHeightHero700 web-dark",
-          "says": "36px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2200,14 +1595,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "lineHeightHero800 web-light",
-          "says": "40px; --lineHeightHero800"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "lineHeightHero800 web-dark",
-          "says": "40px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2217,14 +1612,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "lineHeightHero900 web-light",
-          "says": "52px; --lineHeightHero900"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/typography",
+          "says": "Type ramps list px sizes, line heights and weights per style (e.g. Body 1 14px/20px; Regular or Semibold)"
         },
         {
-          "kind": "value",
-          "source": "lineHeightHero900 web-dark",
-          "says": "52px"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "Global tokens store typography values"
         }
       ]
     },
@@ -2234,14 +1629,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "shadow16 web-light",
-          "says": "0 0 2px rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.14); --shadow16"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/elevation",
+          "says": "Shadow tokens $shadow2..$shadow64; low and high elevation tokens by use"
         },
         {
-          "kind": "value",
-          "source": "shadow16 web-dark",
-          "says": "0 0 2px rgba(0,0,0,0.24), 0 8px 16px rgba(0,0,0,0.28)"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "\"Shadows are handled by alias tokens\""
         }
       ]
     },
@@ -2251,14 +1646,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "shadow2 web-light",
-          "says": "0 0 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14); --shadow2"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/elevation",
+          "says": "Shadow tokens $shadow2..$shadow64; low and high elevation tokens by use"
         },
         {
-          "kind": "value",
-          "source": "shadow2 web-dark",
-          "says": "0 0 2px rgba(0,0,0,0.24), 0 1px 2px rgba(0,0,0,0.28)"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "\"Shadows are handled by alias tokens\""
         }
       ]
     },
@@ -2268,14 +1663,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "shadow28 web-light",
-          "says": "0 0 8px rgba(0,0,0,0.12), 0 14px 28px rgba(0,0,0,0.14); --shadow28"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/elevation",
+          "says": "Shadow tokens $shadow2..$shadow64; low and high elevation tokens by use"
         },
         {
-          "kind": "value",
-          "source": "shadow28 web-dark",
-          "says": "0 0 8px rgba(0,0,0,0.24), 0 14px 28px rgba(0,0,0,0.28)"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "\"Shadows are handled by alias tokens\""
         }
       ]
     },
@@ -2285,14 +1680,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "shadow4 web-light",
-          "says": "0 0 2px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.14); --shadow4"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/elevation",
+          "says": "Shadow tokens $shadow2..$shadow64; low and high elevation tokens by use"
         },
         {
-          "kind": "value",
-          "source": "shadow4 web-dark",
-          "says": "0 0 2px rgba(0,0,0,0.24), 0 2px 4px rgba(0,0,0,0.28)"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "\"Shadows are handled by alias tokens\""
         }
       ]
     },
@@ -2302,14 +1697,14 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "shadow64 web-light",
-          "says": "0 0 8px rgba(0,0,0,0.12), 0 32px 64px rgba(0,0,0,0.14); --shadow64"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/elevation",
+          "says": "Shadow tokens $shadow2..$shadow64; low and high elevation tokens by use"
         },
         {
-          "kind": "value",
-          "source": "shadow64 web-dark",
-          "says": "0 0 8px rgba(0,0,0,0.24), 0 32px 64px rgba(0,0,0,0.28)"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "\"Shadows are handled by alias tokens\""
         }
       ]
     },
@@ -2319,390 +1714,148 @@
       "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "shadow8 web-light",
-          "says": "0 0 2px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.14); --shadow8"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/elevation",
+          "says": "Shadow tokens $shadow2..$shadow64; low and high elevation tokens by use"
         },
         {
-          "kind": "value",
-          "source": "shadow8 web-dark",
-          "says": "0 0 2px rgba(0,0,0,0.24), 0 4px 8px rgba(0,0,0,0.28)"
+          "kind": "docs",
+          "source": "https://fluent2.microsoft.design/design-tokens",
+          "says": "\"Shadows are handled by alias tokens\""
         }
       ]
     },
     {
       "token": "spacingHorizontalL",
       "mappingId": "m-12f92e62ab61",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingHorizontalL web-light",
-          "says": "16px; --spacingHorizontalL"
-        },
-        {
-          "kind": "value",
-          "source": "spacingHorizontalL web-dark",
-          "says": "16px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingHorizontalM",
       "mappingId": "m-d7ae959c232b",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingHorizontalM web-light",
-          "says": "12px; --spacingHorizontalM"
-        },
-        {
-          "kind": "value",
-          "source": "spacingHorizontalM web-dark",
-          "says": "12px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingHorizontalMNudge",
       "mappingId": "m-a538b220f060",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingHorizontalMNudge web-light",
-          "says": "10px; --spacingHorizontalMNudge"
-        },
-        {
-          "kind": "value",
-          "source": "spacingHorizontalMNudge web-dark",
-          "says": "10px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingHorizontalNone",
       "mappingId": "m-fe84445f5f66",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingHorizontalNone web-light",
-          "says": "0px; --spacingHorizontalNone"
-        },
-        {
-          "kind": "value",
-          "source": "spacingHorizontalNone web-dark",
-          "says": "0px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingHorizontalS",
       "mappingId": "m-4e540cfaca0d",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingHorizontalS web-light",
-          "says": "8px; --spacingHorizontalS"
-        },
-        {
-          "kind": "value",
-          "source": "spacingHorizontalS web-dark",
-          "says": "8px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingHorizontalSNudge",
       "mappingId": "m-cc62d1f7aff5",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingHorizontalSNudge web-light",
-          "says": "6px; --spacingHorizontalSNudge"
-        },
-        {
-          "kind": "value",
-          "source": "spacingHorizontalSNudge web-dark",
-          "says": "6px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingHorizontalXL",
       "mappingId": "m-55f0f1b7d806",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingHorizontalXL web-light",
-          "says": "20px; --spacingHorizontalXL"
-        },
-        {
-          "kind": "value",
-          "source": "spacingHorizontalXL web-dark",
-          "says": "20px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingHorizontalXS",
       "mappingId": "m-702b13db0535",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingHorizontalXS web-light",
-          "says": "4px; --spacingHorizontalXS"
-        },
-        {
-          "kind": "value",
-          "source": "spacingHorizontalXS web-dark",
-          "says": "4px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingHorizontalXXL",
       "mappingId": "m-916a6f415ed6",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingHorizontalXXL web-light",
-          "says": "24px; --spacingHorizontalXXL"
-        },
-        {
-          "kind": "value",
-          "source": "spacingHorizontalXXL web-dark",
-          "says": "24px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingHorizontalXXS",
       "mappingId": "m-728a174ea9ba",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingHorizontalXXS web-light",
-          "says": "2px; --spacingHorizontalXXS"
-        },
-        {
-          "kind": "value",
-          "source": "spacingHorizontalXXS web-dark",
-          "says": "2px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingHorizontalXXXL",
       "mappingId": "m-bc4f0e18b8af",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingHorizontalXXXL web-light",
-          "says": "32px; --spacingHorizontalXXXL"
-        },
-        {
-          "kind": "value",
-          "source": "spacingHorizontalXXXL web-dark",
-          "says": "32px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingVerticalL",
       "mappingId": "m-9229feac257f",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingVerticalL web-light",
-          "says": "16px; --spacingVerticalL"
-        },
-        {
-          "kind": "value",
-          "source": "spacingVerticalL web-dark",
-          "says": "16px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingVerticalM",
       "mappingId": "m-2047cd8d3780",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingVerticalM web-light",
-          "says": "12px; --spacingVerticalM"
-        },
-        {
-          "kind": "value",
-          "source": "spacingVerticalM web-dark",
-          "says": "12px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingVerticalMNudge",
       "mappingId": "m-6291a49814ae",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingVerticalMNudge web-light",
-          "says": "10px; --spacingVerticalMNudge"
-        },
-        {
-          "kind": "value",
-          "source": "spacingVerticalMNudge web-dark",
-          "says": "10px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingVerticalNone",
       "mappingId": "m-41ec6d72cb92",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingVerticalNone web-light",
-          "says": "0px; --spacingVerticalNone"
-        },
-        {
-          "kind": "value",
-          "source": "spacingVerticalNone web-dark",
-          "says": "0px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingVerticalS",
       "mappingId": "m-491dc8f0643b",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingVerticalS web-light",
-          "says": "8px; --spacingVerticalS"
-        },
-        {
-          "kind": "value",
-          "source": "spacingVerticalS web-dark",
-          "says": "8px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingVerticalSNudge",
       "mappingId": "m-13e955223eb2",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingVerticalSNudge web-light",
-          "says": "6px; --spacingVerticalSNudge"
-        },
-        {
-          "kind": "value",
-          "source": "spacingVerticalSNudge web-dark",
-          "says": "6px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingVerticalXL",
       "mappingId": "m-c9c64c3af213",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingVerticalXL web-light",
-          "says": "20px; --spacingVerticalXL"
-        },
-        {
-          "kind": "value",
-          "source": "spacingVerticalXL web-dark",
-          "says": "20px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingVerticalXS",
       "mappingId": "m-a85807c30a68",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingVerticalXS web-light",
-          "says": "4px; --spacingVerticalXS"
-        },
-        {
-          "kind": "value",
-          "source": "spacingVerticalXS web-dark",
-          "says": "4px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingVerticalXXL",
       "mappingId": "m-1e3038086932",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingVerticalXXL web-light",
-          "says": "24px; --spacingVerticalXXL"
-        },
-        {
-          "kind": "value",
-          "source": "spacingVerticalXXL web-dark",
-          "says": "24px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingVerticalXXS",
       "mappingId": "m-1d6c0fa89af5",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingVerticalXXS web-light",
-          "says": "2px; --spacingVerticalXXS"
-        },
-        {
-          "kind": "value",
-          "source": "spacingVerticalXXS web-dark",
-          "says": "2px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     },
     {
       "token": "spacingVerticalXXXL",
       "mappingId": "m-e090176569d4",
-      "verdict": "supported",
-      "evidence": [
-        {
-          "kind": "value",
-          "source": "spacingVerticalXXXL web-light",
-          "says": "32px; --spacingVerticalXXXL"
-        },
-        {
-          "kind": "value",
-          "source": "spacingVerticalXXXL web-dark",
-          "says": "32px"
-        }
-      ]
+      "verdict": "insufficient",
+      "evidence": []
     }
   ]
 }

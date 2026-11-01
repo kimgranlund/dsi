@@ -23,6 +23,7 @@ const USAGE = `usage:
   dsi-map audit-merge <scope> <run>              write mappings/<product>/<version>.audit.json and list disputes
   dsi-map review <scope> <run> <out.html> [vocab run[,run]] [--words-only]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
   dsi-map tiebreak <scope> <run> <product> <first run>   two of three: approve where a third model agrees with one of the first two
+  dsi-map settle <scope> <run> <product> <first run>     settle rules: three agree (cautious match), emphasis-only splits (rank or broad), two of three at 0.5
   dsi-map rank-emphasis <scope> <run> <product>   settle emphasis by contrast rank where both agents agree on the rest (ADR 0018)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
 
@@ -95,7 +96,9 @@ if (cmd === 'prepare') {
   // --words-only leaves the token queue out (a round that settles naming terms first); vocab runs may be comma-separated.
   const wordsOnly = process.argv.includes('--words-only');
   const items = wordsOnly ? [] : collectQueue(root, scope, runDir);
-  const termItems = vocabRun && !vocabRun.startsWith('--') ? vocabRun.split(',').flatMap((r) => collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', r))) : [];
+  // Several vocabulary runs: one card per word, examples from the first run that counted it.
+  const termItems = [...(vocabRun && !vocabRun.startsWith('--') ? vocabRun.split(',').flatMap((r) => collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', r))) : [])
+    .reduce((m, t) => { const prev = m.get(t.key); if (!prev || (!prev.examples.length && t.examples.length)) m.set(t.key, t); return m; }, new Map<string, any>()).values()];
   const disputes = collectDisputes(root, scope, termFindingsFor(), valuesOf);
   const packet = JSON.parse(fs.readFileSync(path.join(runDir, `${Object.keys(scope.products)[0]}.a.packet.json`), 'utf8'));
   fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true });
@@ -156,6 +159,92 @@ if (cmd === 'prepare') {
   file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
   fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n');
   console.log(`${product}: ${n} approved and ${unmappedN} agreed unmapped by two of three (third: ${c.model})`);
+} else if (cmd === 'settle') {
+  // ADR 0005 amended (settle rules), for tokens still contested after tiebreak:
+  //  1. all three agree on the concept: approve with the most cautious match (exact < close < broad|narrow; a
+  //     broad/narrow split or any `related` stays queued);
+  //  2. all three agree on every facet but emphasis: contrast rank (ADR 0018) when it computes, else the shared
+  //     concept without emphasis, matched broad (the token is one member of it);
+  //  3. two of three give the same concept and match, each confidence >= SETTLE_AT: approve; the third is rejected.
+  const SETTLE_AT = 0.5;
+  const [product, firstRun] = [process.argv[5], process.argv[6]];
+  if (!run || !product || !firstRun) { console.error(USAGE); process.exit(2); }
+  const { version } = scope.products[product];
+  const load = (dir: string, r: string) => JSON.parse(fs.readFileSync(path.join(root, '.cache/mapper', dir, `${product}.${r}.proposals.json`), 'utf8'));
+  const [A, B, C] = [load(firstRun, 'a'), load(firstRun, 'b'), load(run, 'c')];
+  const byTok = (f: any) => new Map<string, any>(f.proposals.map((p: any) => [p.token, p]));
+  const [a, b, c] = [byTok(A), byTok(B), byTok(C)];
+  const mf = path.join(root, 'mappings', product, `${version}.mappings.json`);
+  const file = JSON.parse(fs.readFileSync(mf, 'utf8'));
+  const approved = new Set([...file.mappings, ...(file.unmapped ?? [])].filter((m: any) => m.status === 'approved').map((m: any) => m.token));
+  const at = new Date().toISOString();
+  const strip = (x: string) => x.split('/').filter((s) => !s.startsWith('emphasis-')).join('/');
+  const RANK: Record<string, number> = { exact: 0, close: 1, broad: 2, narrow: 2 };
+  const cautious = (ms: string[]) => {
+    if (ms.some((m) => RANK[m] === undefined) || (ms.includes('broad') && ms.includes('narrow'))) return undefined;
+    return ms.reduce((x, y) => (RANK[y] > RANK[x] ? y : x));
+  };
+  const counts = { three: 0, rank: 0, broad: 0, two: 0, unmapped: 0 };
+  const left: string[] = [];
+  const approve = (token: string, concept: string, match: string, confidence: number, rationale: string, method: string, note: string) => {
+    const id = 'm-' + crypto.createHash('sha1').update([token, concept, match].join('|')).digest('hex').slice(0, 12);
+    for (const m of file.mappings) if (m.token === token && m.status === 'proposed' && m.id !== id) { m.status = 'rejected'; m.review = { by: 'settle-rule', at, note: `Settled (${method}): ${concept} ${match}.` }; }
+    file.unmapped = (file.unmapped ?? []).filter((u: any) => !(u.token === token && u.status === 'proposed'));
+    file.mappings = file.mappings.filter((m: any) => m.id !== id);
+    file.mappings.push({ id, token, concept, match, confidence, status: 'approved', rationale, provenance: { agent: 'dsi-mapper', at, method }, review: { by: 'settle-rule', at, note } });
+  };
+  const approveUnmapped = (token: string, rationale: string, note: string) => {
+    for (const m of file.mappings) if (m.token === token && m.status === 'proposed') { m.status = 'rejected'; m.review = { by: 'settle-rule', at, note: 'Settled: no concept fits.' }; }
+    file.unmapped = (file.unmapped ?? []).filter((u: any) => u.token !== token);
+    file.unmapped.push({ token, status: 'approved', rationale, provenance: { agent: 'dsi-mapper', at, method: 'settle-v1' }, review: { by: 'settle-rule', at, note } });
+    counts.unmapped++;
+  };
+  const valid = (x: string) => typeof parseConcept(ontology, x) !== 'string';
+  const emphasisOnly: string[] = [];
+  const queued = new Set<string>([...file.mappings, ...(file.unmapped ?? [])].filter((m: any) => m.status === 'proposed').map((m: any) => m.token));
+  for (const token of [...queued].sort()) {
+    if (approved.has(token)) continue;
+    const xs = [a.get(token), b.get(token), c.get(token)];
+    if (xs.some((x) => !x)) { left.push(token); continue; }
+    const concepts = xs.map((x) => x.concept ?? null);
+    const conf = Math.min(...xs.map((x) => x.confidence ?? 1));
+    // Rule 1
+    if (concepts.every((x) => x === concepts[0])) {
+      if (!concepts[0]) { approveUnmapped(token, xs[0].rationale ?? 'No concept fits (three agents).', 'All three agents agree no concept fits.'); continue; }
+      const m = cautious(xs.map((x) => x.match));
+      if (m && valid(concepts[0])) { approve(token, concepts[0], m, conf, xs[2].rationale ?? xs[0].rationale, 'settle-three-v1', `All three agents (${A.model}, ${B.model}, ${C.model}) agree on the concept; most cautious match.`); counts.three++; continue; }
+    }
+    // Rule 2 (collected; ranked below)
+    if (concepts.every((x) => x && strip(x) === strip(concepts[0]!)) && new Set(concepts).size > 1) { emphasisOnly.push(token); continue; }
+    // Rule 3
+    const pairs = [[0, 1], [0, 2], [1, 2]] as const;
+    const pair = pairs.find(([i, j]) => concepts[i] === concepts[j] && (xs[i].concept ? xs[i].match === xs[j].match : true) && (xs[i].confidence ?? 1) >= SETTLE_AT && (xs[j].confidence ?? 1) >= SETTLE_AT);
+    if (pair) {
+      const [i, j] = pair;
+      const odd = xs[3 - i - j];
+      const note = `Two of three agents agree (each >= ${SETTLE_AT}); the third answered ${odd.concept ?? 'no concept'} ${odd.match ?? ''}`.trim() + '.';
+      if (!concepts[i]) { approveUnmapped(token, xs[i].rationale ?? 'No concept fits (two of three agents).', note); continue; }
+      if (valid(concepts[i]!)) { approve(token, concepts[i]!, xs[i].match, Math.min(xs[i].confidence ?? 1, xs[j].confidence ?? 1), xs[i].rationale ?? xs[j].rationale, 'settle-two-v1', note); counts.two++; continue; }
+    }
+    left.push(token);
+  }
+  // Rule 2: rank with all three agreeing, then broad without emphasis for what the rank cannot settle.
+  if (emphasisOnly.length) {
+    const pageTok = file.mappings.find((m: any) => m.status === 'approved' && m.concept === 'dsi:concept/color/usage-page/property-background')?.token;
+    const pick = (m: Map<string, any>) => emphasisOnly.map((t) => m.get(t));
+    const r = rankEmphasis(root, product, version, pick(a), pick(c), () => pageTok);
+    const ranked = new Map(r.out.map((x) => [x.token, x]));
+    for (const token of emphasisOnly) {
+      const x = ranked.get(token);
+      if (x && valid(x.concept)) { approve(token, x.concept, x.match, 1, `All three agents agree on every facet but emphasis; ${x.note} (ADR 0018).`, 'emphasis-rank-three-v1', 'Deterministic: contrast against the page in every mode.'); counts.rank++; continue; }
+      const base = strip(a.get(token).concept);
+      if (valid(base)) { approve(token, base, 'broad', Math.min(...[a, b, c].map((m) => m.get(token).confidence ?? 1)), `All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of ${base}.`, 'settle-broad-v1', 'Emphasis left unbound: the agents split and the contrast rank does not compute.'); counts.broad++; continue; }
+      left.push(token);
+    }
+  }
+  file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
+  fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n');
+  console.log(`${product}: ${JSON.stringify(counts)}; ${left.length} left for review`);
 } else if (cmd === 'rank-emphasis') {
   // ADR 0018: settle emphasis by contrast rank where both agents agree on everything else.
   const product = process.argv[5];

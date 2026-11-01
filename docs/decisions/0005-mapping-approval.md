@@ -18,3 +18,13 @@ With about 1,100 color tokens queued after Atlassian, Primer, Spectrum and Fluen
 - **Two of three**: tokens still contested get a third, blind agent on a third model family with web research; when its concept and match equal one of the first two answers (each >= 0.7), that answer is approved (`review.by: two-of-three`, method `two-of-three-v1`). The other answers are rejected with a note.
 - Computed answers (`rank-rule`, `terms+classifier` for scales) remain deterministic and cite their ADRs.
 - Every approval stays subject to the evidence audit; contradictions reopen for human review.
+
+## Amendment, 2026-11-01 (owner decision, settle rules)
+
+After the third opinion, still-contested tokens settle by rule (`dsi-map settle`), each recorded with its method:
+
+- **Three agree on the concept** (`settle-three-v1`): approved with the most cautious match any of them gave (exact, then close, then broad or narrow). A broad/narrow split or any `related` answer stays queued.
+- **Three agree on every facet but emphasis**: the contrast rank of ADR 0018 when it computes (`emphasis-rank-three-v1`); otherwise the shared concept without emphasis, matched `broad`, since the token is one member of it (`settle-broad-v1`).
+- **Two of three** give the same concept and match at confidence 0.5 or higher (`settle-two-v1`): approved; the third answer is rejected with a note. These remain subject to the evidence audit.
+
+Everything else goes to the review page.

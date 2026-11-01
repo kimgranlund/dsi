@@ -1,7 +1,7 @@
 {
   "packet": "audit-color-v1/spectrum@15.6.0",
   "model": "claude-haiku-5-5",
-  "at": "2026-11-01T15:44:50.215Z",
+  "at": "2026-11-01T15:51:49.708Z",
   "checks": [
     {
       "token": "accent-background-color-hover",
@@ -25,7 +25,12 @@
         {
           "kind": "usage",
           "source": "accent-background-color-default",
-          "says": "used by stack-item-selected-background-color-highlight, stack-item-selected-background-color-emphasized"
+          "says": "Shipped tokens alias it: stack-item-selected-background-color-highlight, stack-item-selected-background-color-emphasized (background use)."
+        },
+        {
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "Names an accent intent: \"accent (what's communicated)\"."
         }
       ]
     },
@@ -37,44 +42,53 @@
         {
           "kind": "value",
           "source": "accent-background-color-hover",
-          "says": "name and value only (#274dea); no description, usage or docs state this token's role"
+          "says": "Values only (#274dea light, #345bf8 dark). Same values as informative-background-color-hover in every theme; value and name cannot separate accent from info."
         }
-      ],
-      "note": "Check same-value-different-intent is expected: Spectrum accent and informative both resolve to blue; token name carries the intent."
+      ]
     },
     {
       "token": "accent-content-color-default",
       "mappingId": "m-8a7e4983848c",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "accent-content-color-default",
-          "says": "name and value only (#3b63fb); no description, usage or docs state this token's role"
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "Names an accent intent: \"accent (what's communicated)\"."
+        },
+        {
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/color-system/",
+          "says": "\"Use the appropriate gray tokens and color tokens for text, icons, and illustrations.\""
         }
       ]
     },
     {
       "token": "accent-content-color-down",
       "mappingId": "m-639562b27368",
-      "verdict": "supported",
+      "verdict": "insufficient",
       "evidence": [
         {
-          "kind": "usage",
+          "kind": "value",
           "source": "accent-content-color-down",
-          "says": "used by accent-content-color-selected"
+          "says": "Values only (#274dea light, #6995fe dark). usage does not fit the color intent; no non-value citation fits the concept."
         }
       ]
     },
     {
       "token": "accent-content-color-hover",
       "mappingId": "m-3101c2fee648",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "accent-content-color-hover",
-          "says": "name and value only (#274dea); no description, usage or docs state this token's role"
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "\"hover (when it applies)\" defines the hover state word."
+        },
+        {
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "\"accent (what's communicated)\" defines the accent intent word."
         }
       ]
     },
@@ -86,7 +100,7 @@
         {
           "kind": "value",
           "source": "accent-content-color-key-focus",
-          "says": "name and value only (#274dea); no description, usage or docs state this token's role"
+          "says": "Values only (#274dea light, #6995fe dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -98,7 +112,7 @@
         {
           "kind": "value",
           "source": "accent-content-color-selected",
-          "says": "name and value only (#274dea); no description, usage or docs state this token's role"
+          "says": "Values only (#274dea light, #6995fe dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -110,19 +124,19 @@
         {
           "kind": "value",
           "source": "accent-subtle-background-color-default",
-          "says": "name and value only (#e5f0fe); no description, usage or docs state this token's role"
+          "says": "Values only (#e5f0fe light, #0c2175 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
     {
       "token": "background-base-color",
       "mappingId": "m-a618bfdaff3a",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "background-base-color",
-          "says": "name and value only (#ffffff); no description, usage or docs state this token's role"
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/color-system/",
+          "says": "\"Use background layers for creating application hierarchy.\" (page background is the base layer)."
         }
       ]
     },
@@ -134,7 +148,7 @@
         {
           "kind": "description",
           "source": "base-gap-2x-large",
-          "says": "Spacing between child elements for base UI elements at 2x-large size"
+          "says": "\"Spacing between child elements for base UI elements at 2x-large size\""
         }
       ]
     },
@@ -146,7 +160,7 @@
         {
           "kind": "description",
           "source": "base-gap-3x-large",
-          "says": "Spacing between child elements for base UI elements at 3x-large size"
+          "says": "\"Spacing between child elements for base UI elements at 3x-large size\""
         }
       ]
     },
@@ -158,7 +172,7 @@
         {
           "kind": "description",
           "source": "base-gap-4x-large",
-          "says": "Spacing between child elements for base UI elements at 4x-large size"
+          "says": "\"Spacing between child elements for base UI elements at 4x-large size\""
         }
       ]
     },
@@ -170,12 +184,7 @@
         {
           "kind": "description",
           "source": "base-gap-extra-large",
-          "says": "Spacing between child elements for base UI elements at extra-large size"
-        },
-        {
-          "kind": "usage",
-          "source": "base-gap-extra-large",
-          "says": "used by form-item-gap-extra-large"
+          "says": "\"Spacing between child elements for base UI elements at extra-large size\""
         }
       ]
     },
@@ -187,7 +196,7 @@
         {
           "kind": "description",
           "source": "base-gap-extra-small",
-          "says": "Spacing between child elements for base UI elements at extra-small size"
+          "says": "\"Spacing between child elements for base UI elements at extra-small size\""
         }
       ]
     },
@@ -199,12 +208,7 @@
         {
           "kind": "description",
           "source": "base-gap-large",
-          "says": "Spacing between child elements for base UI elements at large size"
-        },
-        {
-          "kind": "usage",
-          "source": "base-gap-large",
-          "says": "used by form-item-gap-large"
+          "says": "\"Spacing between child elements for base UI elements at large size\""
         }
       ]
     },
@@ -216,12 +220,7 @@
         {
           "kind": "description",
           "source": "base-gap-medium",
-          "says": "Spacing between child elements for base UI elements at medium size"
-        },
-        {
-          "kind": "usage",
-          "source": "base-gap-medium",
-          "says": "used by form-item-gap-medium"
+          "says": "\"Spacing between child elements for base UI elements at medium size\""
         }
       ]
     },
@@ -233,12 +232,7 @@
         {
           "kind": "description",
           "source": "base-gap-small",
-          "says": "Spacing between child elements for base UI elements at small size"
-        },
-        {
-          "kind": "usage",
-          "source": "base-gap-small",
-          "says": "used by form-item-gap-small"
+          "says": "\"Spacing between child elements for base UI elements at small size\""
         }
       ]
     },
@@ -250,7 +244,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-2x-large",
-          "says": "Horizontal internal spacing for base UI elements at 2x-large size"
+          "says": "\"Horizontal internal spacing for base UI elements at 2x-large size\""
         }
       ]
     },
@@ -262,7 +256,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-extra-large",
-          "says": "Horizontal internal spacing for base UI elements at extra-large size"
+          "says": "\"Horizontal internal spacing for base UI elements at extra-large size\""
         }
       ]
     },
@@ -274,7 +268,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-extra-small",
-          "says": "Horizontal internal spacing for base UI elements at extra-small size"
+          "says": "\"Horizontal internal spacing for base UI elements at extra-small size\""
         }
       ]
     },
@@ -286,7 +280,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-large",
-          "says": "Horizontal internal spacing for base UI elements at large size"
+          "says": "\"Horizontal internal spacing for base UI elements at large size\""
         }
       ]
     },
@@ -298,7 +292,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-medium",
-          "says": "Horizontal internal spacing for base UI elements at medium size"
+          "says": "\"Horizontal internal spacing for base UI elements at medium size\""
         }
       ]
     },
@@ -310,7 +304,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-small",
-          "says": "Horizontal internal spacing for base UI elements at small size"
+          "says": "\"Horizontal internal spacing for base UI elements at small size\""
         }
       ]
     },
@@ -322,7 +316,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-uniform-2x-large",
-          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at 2x-large size"
+          "says": "\"Horizontal internal spacing with uniform dimensions for base UI elements at 2x-large size\""
         }
       ]
     },
@@ -334,7 +328,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-uniform-2x-small",
-          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at 2x-small size"
+          "says": "\"Horizontal internal spacing with uniform dimensions for base UI elements at 2x-small size\""
         }
       ]
     },
@@ -346,7 +340,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-uniform-extra-large",
-          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at extra-large size"
+          "says": "\"Horizontal internal spacing with uniform dimensions for base UI elements at extra-large size\""
         }
       ]
     },
@@ -358,7 +352,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-uniform-extra-small",
-          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at extra-small size"
+          "says": "\"Horizontal internal spacing with uniform dimensions for base UI elements at extra-small size\""
         }
       ]
     },
@@ -370,7 +364,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-uniform-large",
-          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at large size"
+          "says": "\"Horizontal internal spacing with uniform dimensions for base UI elements at large size\""
         }
       ]
     },
@@ -382,7 +376,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-uniform-medium",
-          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at medium size"
+          "says": "\"Horizontal internal spacing with uniform dimensions for base UI elements at medium size\""
         }
       ]
     },
@@ -394,7 +388,7 @@
         {
           "kind": "description",
           "source": "base-padding-horizontal-uniform-small",
-          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at small size"
+          "says": "\"Horizontal internal spacing with uniform dimensions for base UI elements at small size\""
         }
       ]
     },
@@ -406,12 +400,7 @@
         {
           "kind": "description",
           "source": "base-padding-vertical-2x-large",
-          "says": "Vertical internal spacing for base UI elements at 2x-large size"
-        },
-        {
-          "kind": "usage",
-          "source": "base-padding-vertical-2x-large",
-          "says": "used by base-padding-horizontal-uniform-2x-large"
+          "says": "\"Vertical internal spacing for base UI elements at 2x-large size\""
         }
       ]
     },
@@ -423,12 +412,7 @@
         {
           "kind": "description",
           "source": "base-padding-vertical-2x-small",
-          "says": "Vertical internal spacing for base UI elements at 2x-small size"
-        },
-        {
-          "kind": "usage",
-          "source": "base-padding-vertical-2x-small",
-          "says": "used by base-padding-horizontal-uniform-2x-small"
+          "says": "\"Vertical internal spacing for base UI elements at 2x-small size\""
         }
       ]
     },
@@ -440,7 +424,7 @@
         {
           "kind": "description",
           "source": "base-padding-vertical-3x-large",
-          "says": "Vertical internal spacing for base UI elements at 3x-large size"
+          "says": "\"Vertical internal spacing for base UI elements at 3x-large size\""
         }
       ]
     },
@@ -452,12 +436,7 @@
         {
           "kind": "description",
           "source": "base-padding-vertical-extra-large",
-          "says": "Vertical internal spacing for base UI elements at extra-large size"
-        },
-        {
-          "kind": "usage",
-          "source": "base-padding-vertical-extra-large",
-          "says": "used by base-padding-horizontal-uniform-extra-large"
+          "says": "\"Vertical internal spacing for base UI elements at extra-large size\""
         }
       ]
     },
@@ -469,12 +448,7 @@
         {
           "kind": "description",
           "source": "base-padding-vertical-extra-small",
-          "says": "Vertical internal spacing for base UI elements at extra-small size"
-        },
-        {
-          "kind": "usage",
-          "source": "base-padding-vertical-extra-small",
-          "says": "used by base-padding-horizontal-uniform-extra-small"
+          "says": "\"Vertical internal spacing for base UI elements at extra-small size\""
         }
       ]
     },
@@ -486,17 +460,7 @@
         {
           "kind": "description",
           "source": "base-padding-vertical-large",
-          "says": "Vertical internal spacing for base UI elements at large size"
-        },
-        {
-          "kind": "usage",
-          "source": "base-padding-vertical-large",
-          "says": "used by base-padding-horizontal-uniform-large"
-        },
-        {
-          "kind": "docs",
-          "source": "https://spectrum.adobe.com/page/design-tokens/",
-          "says": "Padding tokens include base-padding-vertical-large (design-tokens page)"
+          "says": "\"Vertical internal spacing for base UI elements at large size\""
         }
       ]
     },
@@ -508,12 +472,7 @@
         {
           "kind": "description",
           "source": "base-padding-vertical-medium",
-          "says": "Vertical internal spacing for base UI elements at medium size"
-        },
-        {
-          "kind": "usage",
-          "source": "base-padding-vertical-medium",
-          "says": "used by base-padding-horizontal-uniform-medium"
+          "says": "\"Vertical internal spacing for base UI elements at medium size\""
         }
       ]
     },
@@ -525,12 +484,7 @@
         {
           "kind": "description",
           "source": "base-padding-vertical-small",
-          "says": "Vertical internal spacing for base UI elements at small size"
-        },
-        {
-          "kind": "usage",
-          "source": "base-padding-vertical-small",
-          "says": "used by base-padding-horizontal-uniform-small"
+          "says": "\"Vertical internal spacing for base UI elements at small size\""
         }
       ]
     },
@@ -542,7 +496,7 @@
         {
           "kind": "usage",
           "source": "black-font-weight",
-          "says": "used by heading-cjk-emphasized-font-weight, heading-cjk-heavy-emphasized-font-weight, heading-cjk-heavy-strong-emphasized-font-weight, heading-cjk-heavy-strong-font-weight, heading-cjk-strong-emphasized-font-weight, heading-cjk-strong-font-weight"
+          "says": "Shipped tokens alias it: heading-cjk-emphasized-font-weight, heading-cjk-heavy-emphasized-font-weight, heading-cjk-heavy-strong-emphasized-font-weight, heading-cjk-heavy-strong-font-weight, heading-cjk-strong-emphasized-font-weight, heading-cjk-strong-font-weight."
         }
       ]
     },
@@ -554,7 +508,7 @@
         {
           "kind": "value",
           "source": "blue-background-color-default",
-          "says": "name and value only (#3b63fb); no description, usage or docs state this token's role"
+          "says": "Values only (#3b63fb light, #4069fd dark). Hue-named fill with values identical to accent; no evidence it is used as a categorical series."
         }
       ]
     },
@@ -566,7 +520,7 @@
         {
           "kind": "value",
           "source": "blue-subtle-background-color-default",
-          "says": "name and value only (#e5f0fe); no description, usage or docs state this token's role"
+          "says": "Values only (#e5f0fe light, #0c2175 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -578,7 +532,7 @@
         {
           "kind": "usage",
           "source": "bold-font-weight",
-          "says": "used by body-sans-serif-strong-emphasized-font-weight, body-sans-serif-strong-font-weight, body-serif-strong-emphasized-font-weight, body-serif-strong-font-weight, code-cjk-emphasized-font-weight, code-cjk-strong-emphasized-font-weight"
+          "says": "Shipped tokens alias it: body-sans-serif-strong-emphasized-font-weight, body-sans-serif-strong-font-weight, body-serif-strong-emphasized-font-weight, body-serif-strong-font-weight, code-cjk-emphasized-font-weight, code-cjk-strong-emphasized-font-weight."
         }
       ]
     },
@@ -590,7 +544,7 @@
         {
           "kind": "usage",
           "source": "border-width-100",
-          "says": "used by avatar-border-width, color-area-border-width, picker-border-width"
+          "says": "Shipped tokens alias it: avatar-border-width, color-area-border-width, picker-border-width."
         }
       ]
     },
@@ -602,7 +556,7 @@
         {
           "kind": "usage",
           "source": "border-width-200",
-          "says": "used by color-handle-border-width, color-loupe-outer-border-width, segmented-control-selection-border-width"
+          "says": "Shipped tokens alias it: color-handle-border-width, color-loupe-outer-border-width, segmented-control-selection-border-width."
         }
       ]
     },
@@ -614,7 +568,7 @@
         {
           "kind": "value",
           "source": "border-width-400",
-          "says": "name and value only (4px); no description, usage or docs state this token's role"
+          "says": "Values only (4px light, 4px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -626,7 +580,7 @@
         {
           "kind": "value",
           "source": "brown-subtle-background-color-default",
-          "says": "name and value only (#f7eee1); no description, usage or docs state this token's role"
+          "says": "Values only (#f7eee1 light, #3a280e dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -638,7 +592,7 @@
         {
           "kind": "usage",
           "source": "cjk-font-family",
-          "says": "used by body-cjk-font-family, detail-cjk-font-family, heading-cjk-font-family, title-cjk-font-family"
+          "says": "Shipped tokens alias it: body-cjk-font-family, detail-cjk-font-family, heading-cjk-font-family, title-cjk-font-family."
         }
       ]
     },
@@ -650,7 +604,7 @@
         {
           "kind": "usage",
           "source": "cjk-line-height-100",
-          "says": "used by detail-cjk-line-height, heading-cjk-line-height, title-cjk-line-height"
+          "says": "Shipped tokens alias it: detail-cjk-line-height, heading-cjk-line-height, title-cjk-line-height."
         }
       ]
     },
@@ -662,7 +616,7 @@
         {
           "kind": "usage",
           "source": "cjk-line-height-200",
-          "says": "used by body-cjk-line-height, code-cjk-line-height"
+          "says": "Shipped tokens alias it: body-cjk-line-height, code-cjk-line-height."
         }
       ]
     },
@@ -674,7 +628,7 @@
         {
           "kind": "usage",
           "source": "component-bottom-to-text-100",
-          "says": "used by breadcrumbs-bottom-to-text-compact, table-row-bottom-to-text-medium-compact"
+          "says": "Shipped tokens alias it: breadcrumbs-bottom-to-text-compact, table-row-bottom-to-text-medium-compact."
         }
       ]
     },
@@ -686,7 +640,7 @@
         {
           "kind": "usage",
           "source": "component-bottom-to-text-200",
-          "says": "used by breadcrumbs-bottom-to-text, table-row-bottom-to-text-large-compact"
+          "says": "Shipped tokens alias it: breadcrumbs-bottom-to-text, table-row-bottom-to-text-large-compact."
         }
       ]
     },
@@ -698,7 +652,7 @@
         {
           "kind": "usage",
           "source": "component-bottom-to-text-300",
-          "says": "used by table-row-bottom-to-text-extra-large-compact"
+          "says": "Shipped tokens alias it: table-row-bottom-to-text-extra-large-compact."
         }
       ]
     },
@@ -710,7 +664,7 @@
         {
           "kind": "value",
           "source": "component-bottom-to-text-50",
-          "says": "name and value only (3px); no description, usage or docs state this token's role"
+          "says": "Values only (3px light, 3px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -722,7 +676,7 @@
         {
           "kind": "usage",
           "source": "component-bottom-to-text-75",
-          "says": "used by table-row-bottom-to-text-small-compact"
+          "says": "Shipped tokens alias it: table-row-bottom-to-text-small-compact."
         }
       ]
     },
@@ -734,7 +688,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-text-100",
-          "says": "name and value only (12px); no description, usage or docs state this token's role"
+          "says": "Values only (12px light, 12px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -746,7 +700,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-text-200",
-          "says": "name and value only (15px); no description, usage or docs state this token's role"
+          "says": "Values only (15px light, 15px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -758,7 +712,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-text-300",
-          "says": "name and value only (18px); no description, usage or docs state this token's role"
+          "says": "Values only (18px light, 18px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -770,7 +724,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-text-50",
-          "says": "name and value only (8px); no description, usage or docs state this token's role"
+          "says": "Values only (8px light, 8px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -782,7 +736,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-text-75",
-          "says": "name and value only (9px); no description, usage or docs state this token's role"
+          "says": "Values only (9px light, 9px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -794,7 +748,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-visual-100",
-          "says": "name and value only (10px); no description, usage or docs state this token's role"
+          "says": "Values only (10px light, 10px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -806,7 +760,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-visual-200",
-          "says": "name and value only (13px); no description, usage or docs state this token's role"
+          "says": "Values only (13px light, 13px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -818,7 +772,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-visual-300",
-          "says": "name and value only (15px); no description, usage or docs state this token's role"
+          "says": "Values only (15px light, 15px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -830,7 +784,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-visual-50",
-          "says": "name and value only (6px); no description, usage or docs state this token's role"
+          "says": "Values only (6px light, 6px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -842,7 +796,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-visual-75",
-          "says": "name and value only (7px); no description, usage or docs state this token's role"
+          "says": "Values only (7px light, 7px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -854,7 +808,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-visual-only-100",
-          "says": "name and value only (6px); no description, usage or docs state this token's role"
+          "says": "Values only (6px light, 6px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -866,7 +820,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-visual-only-200",
-          "says": "name and value only (9px); no description, usage or docs state this token's role"
+          "says": "Values only (9px light, 9px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -878,7 +832,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-visual-only-300",
-          "says": "name and value only (11px); no description, usage or docs state this token's role"
+          "says": "Values only (11px light, 11px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -890,7 +844,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-visual-only-50",
-          "says": "name and value only (3px); no description, usage or docs state this token's role"
+          "says": "Values only (3px light, 3px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -902,7 +856,7 @@
         {
           "kind": "value",
           "source": "component-edge-to-visual-only-75",
-          "says": "name and value only (4px); no description, usage or docs state this token's role"
+          "says": "Values only (4px light, 4px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -914,7 +868,7 @@
         {
           "kind": "usage",
           "source": "component-height-100",
-          "says": "used by breadcrumbs-height-compact, rating-height-medium, segmented-control-item-height, table-row-height-medium-compact, tab-item-compact-height-medium"
+          "says": "Shipped tokens alias it: breadcrumbs-height-compact, rating-height-medium, segmented-control-item-height, table-row-height-medium-compact, tab-item-compact-height-medium."
         }
       ]
     },
@@ -926,7 +880,7 @@
         {
           "kind": "usage",
           "source": "component-height-200",
-          "says": "used by breadcrumbs-height, table-row-height-large-compact, tab-item-compact-height-large, tab-item-height-small"
+          "says": "Shipped tokens alias it: breadcrumbs-height, table-row-height-large-compact, tab-item-compact-height-large, tab-item-height-small."
         }
       ]
     },
@@ -938,7 +892,7 @@
         {
           "kind": "usage",
           "source": "component-height-300",
-          "says": "used by table-row-height-extra-large-compact, tab-item-compact-height-extra-large, tab-item-height-medium"
+          "says": "Shipped tokens alias it: table-row-height-extra-large-compact, tab-item-compact-height-extra-large, tab-item-height-medium."
         }
       ]
     },
@@ -950,7 +904,7 @@
         {
           "kind": "usage",
           "source": "component-height-400",
-          "says": "used by action-bar-height, tab-item-height-large"
+          "says": "Shipped tokens alias it: action-bar-height, tab-item-height-large."
         }
       ]
     },
@@ -962,7 +916,7 @@
         {
           "kind": "value",
           "source": "component-height-50",
-          "says": "name and value only (20px); no description, usage or docs state this token's role"
+          "says": "Values only (20px light, 20px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -974,7 +928,7 @@
         {
           "kind": "usage",
           "source": "component-height-500",
-          "says": "used by tab-item-height-extra-large"
+          "says": "Shipped tokens alias it: tab-item-height-extra-large."
         }
       ]
     },
@@ -986,7 +940,7 @@
         {
           "kind": "usage",
           "source": "component-height-75",
-          "says": "used by rating-height-small, table-row-height-small-compact, tab-item-compact-height-small"
+          "says": "Shipped tokens alias it: rating-height-small, table-row-height-small-compact, tab-item-compact-height-small."
         }
       ]
     },
@@ -998,7 +952,7 @@
         {
           "kind": "value",
           "source": "component-padding-vertical-100",
-          "says": "name and value only (7px); no description, usage or docs state this token's role"
+          "says": "Values only (7px light, 7px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1010,7 +964,7 @@
         {
           "kind": "value",
           "source": "component-padding-vertical-200",
-          "says": "name and value only (10px); no description, usage or docs state this token's role"
+          "says": "Values only (10px light, 10px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1022,7 +976,7 @@
         {
           "kind": "value",
           "source": "component-padding-vertical-300",
-          "says": "name and value only (13px); no description, usage or docs state this token's role"
+          "says": "Values only (13px light, 13px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1034,7 +988,7 @@
         {
           "kind": "value",
           "source": "component-padding-vertical-50",
-          "says": "name and value only (3px); no description, usage or docs state this token's role"
+          "says": "Values only (3px light, 3px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1046,7 +1000,7 @@
         {
           "kind": "value",
           "source": "component-padding-vertical-75",
-          "says": "name and value only (4px); no description, usage or docs state this token's role"
+          "says": "Values only (4px light, 4px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1058,7 +1012,7 @@
         {
           "kind": "usage",
           "source": "component-top-to-text-100",
-          "says": "used by breadcrumbs-top-to-text-compact, table-row-top-to-text-medium-compact"
+          "says": "Shipped tokens alias it: breadcrumbs-top-to-text-compact, table-row-top-to-text-medium-compact."
         }
       ]
     },
@@ -1070,7 +1024,7 @@
         {
           "kind": "usage",
           "source": "component-top-to-text-200",
-          "says": "used by breadcrumbs-top-to-text, table-row-top-to-text-large-compact"
+          "says": "Shipped tokens alias it: breadcrumbs-top-to-text, table-row-top-to-text-large-compact."
         }
       ]
     },
@@ -1082,7 +1036,7 @@
         {
           "kind": "usage",
           "source": "component-top-to-text-300",
-          "says": "used by action-bar-top-to-item-counter, table-row-top-to-text-extra-large-compact"
+          "says": "Shipped tokens alias it: action-bar-top-to-item-counter, table-row-top-to-text-extra-large-compact."
         }
       ]
     },
@@ -1094,7 +1048,7 @@
         {
           "kind": "value",
           "source": "component-top-to-text-50",
-          "says": "name and value only (3px); no description, usage or docs state this token's role"
+          "says": "Values only (3px light, 3px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1106,7 +1060,7 @@
         {
           "kind": "usage",
           "source": "component-top-to-text-75",
-          "says": "used by table-row-top-to-text-small-compact"
+          "says": "Shipped tokens alias it: table-row-top-to-text-small-compact."
         }
       ]
     },
@@ -1118,7 +1072,7 @@
         {
           "kind": "description",
           "source": "container-gap-2x-large",
-          "says": "Spacing between child elements for containers at 2x-large size"
+          "says": "\"Spacing between child elements for containers at 2x-large size\""
         }
       ]
     },
@@ -1130,7 +1084,7 @@
         {
           "kind": "description",
           "source": "container-gap-2x-small",
-          "says": "Spacing between child elements for containers at 2x-small size"
+          "says": "\"Spacing between child elements for containers at 2x-small size\""
         }
       ]
     },
@@ -1142,7 +1096,7 @@
         {
           "kind": "description",
           "source": "container-gap-extra-large",
-          "says": "Spacing between child elements for containers at extra-large size"
+          "says": "\"Spacing between child elements for containers at extra-large size\""
         }
       ]
     },
@@ -1154,7 +1108,7 @@
         {
           "kind": "description",
           "source": "container-gap-extra-small",
-          "says": "Spacing between child elements for containers at extra-small size"
+          "says": "\"Spacing between child elements for containers at extra-small size\""
         }
       ]
     },
@@ -1166,7 +1120,7 @@
         {
           "kind": "description",
           "source": "container-gap-large",
-          "says": "Spacing between child elements for containers at large size"
+          "says": "\"Spacing between child elements for containers at large size\""
         }
       ]
     },
@@ -1178,7 +1132,7 @@
         {
           "kind": "description",
           "source": "container-gap-medium",
-          "says": "Spacing between child elements for containers at medium size"
+          "says": "\"Spacing between child elements for containers at medium size\""
         }
       ]
     },
@@ -1190,7 +1144,7 @@
         {
           "kind": "description",
           "source": "container-gap-small",
-          "says": "Spacing between child elements for containers at small size"
+          "says": "\"Spacing between child elements for containers at small size\""
         }
       ]
     },
@@ -1202,7 +1156,7 @@
         {
           "kind": "description",
           "source": "container-padding-2x-large",
-          "says": "Internal spacing for containers at 2x-large size"
+          "says": "\"Internal spacing for containers at 2x-large size\""
         }
       ]
     },
@@ -1214,7 +1168,7 @@
         {
           "kind": "description",
           "source": "container-padding-2x-small",
-          "says": "Internal spacing for containers at 2x-small size"
+          "says": "\"Internal spacing for containers at 2x-small size\""
         }
       ]
     },
@@ -1226,7 +1180,7 @@
         {
           "kind": "description",
           "source": "container-padding-3x-large",
-          "says": "Internal spacing for containers at 3x-large size"
+          "says": "\"Internal spacing for containers at 3x-large size\""
         }
       ]
     },
@@ -1238,7 +1192,7 @@
         {
           "kind": "description",
           "source": "container-padding-extra-large",
-          "says": "Internal spacing for containers at extra-large size"
+          "says": "\"Internal spacing for containers at extra-large size\""
         }
       ]
     },
@@ -1250,7 +1204,7 @@
         {
           "kind": "description",
           "source": "container-padding-extra-small",
-          "says": "Internal spacing for containers at extra-small size"
+          "says": "\"Internal spacing for containers at extra-small size\""
         }
       ]
     },
@@ -1262,7 +1216,7 @@
         {
           "kind": "description",
           "source": "container-padding-large",
-          "says": "Internal spacing for containers at large size"
+          "says": "\"Internal spacing for containers at large size\""
         }
       ]
     },
@@ -1274,12 +1228,7 @@
         {
           "kind": "description",
           "source": "container-padding-medium",
-          "says": "Internal spacing for containers at medium size"
-        },
-        {
-          "kind": "docs",
-          "source": "https://spectrum.adobe.com/page/design-tokens/",
-          "says": "Padding tokens include container-padding-medium (design-tokens page)"
+          "says": "\"Internal spacing for containers at medium size\""
         }
       ]
     },
@@ -1291,7 +1240,7 @@
         {
           "kind": "description",
           "source": "container-padding-small",
-          "says": "Internal spacing for containers at small size"
+          "says": "\"Internal spacing for containers at small size\""
         }
       ]
     },
@@ -1303,7 +1252,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-0",
-          "says": "used by corner-radius-none"
+          "says": "Shipped tokens alias it: corner-radius-none."
         }
       ]
     },
@@ -1315,7 +1264,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-100",
-          "says": "used by corner-radius-small-default, corner-radius-small-size-medium"
+          "says": "Shipped tokens alias it: corner-radius-small-default, corner-radius-small-size-medium."
         }
       ]
     },
@@ -1327,7 +1276,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-200",
-          "says": "used by corner-radius-small-size-large"
+          "says": "Shipped tokens alias it: corner-radius-small-size-large."
         }
       ]
     },
@@ -1339,7 +1288,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-300",
-          "says": "used by corner-radius-medium-size-extra-small, corner-radius-small-size-extra-large"
+          "says": "Shipped tokens alias it: corner-radius-medium-size-extra-small, corner-radius-small-size-extra-large."
         }
       ]
     },
@@ -1351,7 +1300,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-400",
-          "says": "used by corner-radius-medium-size-small"
+          "says": "Shipped tokens alias it: corner-radius-medium-size-small."
         }
       ]
     },
@@ -1363,7 +1312,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-500",
-          "says": "used by corner-radius-medium-default, corner-radius-medium-size-medium"
+          "says": "Shipped tokens alias it: corner-radius-medium-default, corner-radius-medium-size-medium."
         }
       ]
     },
@@ -1375,7 +1324,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-600",
-          "says": "used by corner-radius-medium-size-large"
+          "says": "Shipped tokens alias it: corner-radius-medium-size-large."
         }
       ]
     },
@@ -1387,7 +1336,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-700",
-          "says": "used by corner-radius-large-default, corner-radius-medium-size-extra-large"
+          "says": "Shipped tokens alias it: corner-radius-large-default, corner-radius-medium-size-extra-large."
         }
       ]
     },
@@ -1399,7 +1348,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-75",
-          "says": "used by corner-radius-small-size-small, thumbnail-corner-radius"
+          "says": "Shipped tokens alias it: corner-radius-small-size-small, thumbnail-corner-radius."
         }
       ]
     },
@@ -1411,7 +1360,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-800",
-          "says": "used by corner-radius-extra-large-default"
+          "says": "Shipped tokens alias it: corner-radius-extra-large-default."
         }
       ]
     },
@@ -1423,7 +1372,7 @@
         {
           "kind": "value",
           "source": "corner-radius-extra-large-default",
-          "says": "name and value only (16px); no description, usage or docs state this token's role"
+          "says": "Values only (16px light, 16px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1435,7 +1384,7 @@
         {
           "kind": "value",
           "source": "corner-radius-large-default",
-          "says": "name and value only (10px); no description, usage or docs state this token's role"
+          "says": "Values only (10px light, 10px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1447,7 +1396,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-medium-default",
-          "says": "used by list-view-item-bottom-corner-radius, list-view-item-top-corner-radius"
+          "says": "Shipped tokens alias it: list-view-item-bottom-corner-radius, list-view-item-top-corner-radius."
         }
       ]
     },
@@ -1459,7 +1408,7 @@
         {
           "kind": "value",
           "source": "corner-radius-medium-size-extra-large",
-          "says": "name and value only (10px); no description, usage or docs state this token's role"
+          "says": "Values only (10px light, 10px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1471,7 +1420,7 @@
         {
           "kind": "value",
           "source": "corner-radius-medium-size-extra-small",
-          "says": "name and value only (6px); no description, usage or docs state this token's role"
+          "says": "Values only (6px light, 6px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1483,7 +1432,7 @@
         {
           "kind": "value",
           "source": "corner-radius-medium-size-large",
-          "says": "name and value only (9px); no description, usage or docs state this token's role"
+          "says": "Values only (9px light, 9px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1495,7 +1444,7 @@
         {
           "kind": "value",
           "source": "corner-radius-medium-size-medium",
-          "says": "name and value only (8px); no description, usage or docs state this token's role"
+          "says": "Values only (8px light, 8px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1507,7 +1456,7 @@
         {
           "kind": "usage",
           "source": "corner-radius-medium-size-small",
-          "says": "used by color-area-border-rounding, color-slider-border-rounding"
+          "says": "Shipped tokens alias it: color-area-border-rounding, color-slider-border-rounding."
         }
       ]
     },
@@ -1519,7 +1468,7 @@
         {
           "kind": "value",
           "source": "corner-radius-none",
-          "says": "name and value only (0px); no description, usage or docs state this token's role"
+          "says": "Values only (0px light, 0px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1531,7 +1480,7 @@
         {
           "kind": "value",
           "source": "corner-radius-small-default",
-          "says": "name and value only (4px); no description, usage or docs state this token's role"
+          "says": "Values only (4px light, 4px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1543,7 +1492,7 @@
         {
           "kind": "value",
           "source": "corner-radius-small-size-extra-large",
-          "says": "name and value only (6px); no description, usage or docs state this token's role"
+          "says": "Values only (6px light, 6px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1555,7 +1504,7 @@
         {
           "kind": "value",
           "source": "corner-radius-small-size-large",
-          "says": "name and value only (5px); no description, usage or docs state this token's role"
+          "says": "Values only (5px light, 5px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1567,7 +1516,7 @@
         {
           "kind": "value",
           "source": "corner-radius-small-size-medium",
-          "says": "name and value only (4px); no description, usage or docs state this token's role"
+          "says": "Values only (4px light, 4px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1579,7 +1528,7 @@
         {
           "kind": "value",
           "source": "corner-radius-small-size-small",
-          "says": "name and value only (3px); no description, usage or docs state this token's role"
+          "says": "Values only (3px light, 3px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1591,7 +1540,7 @@
         {
           "kind": "value",
           "source": "cyan-subtle-background-color-default",
-          "says": "name and value only (#d9f4fd); no description, usage or docs state this token's role"
+          "says": "Values only (#d9f4fd light, #003041 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1603,7 +1552,7 @@
         {
           "kind": "value",
           "source": "default-font-family",
-          "says": "name and value only (Adobe Clean Spectrum VF); no description, usage or docs state this token's role"
+          "says": "Values only (Adobe Clean Spectrum VF light, Adobe Clean Spectrum VF dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1615,7 +1564,7 @@
         {
           "kind": "value",
           "source": "disabled-background-color",
-          "says": "name and value only (#e9e9e9); no description, usage or docs state this token's role"
+          "says": "Values only (#e9e9e9 light, #2c2c2c dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1627,7 +1576,7 @@
         {
           "kind": "value",
           "source": "disabled-border-color",
-          "says": "name and value only (#dadada); no description, usage or docs state this token's role"
+          "says": "Values only (#dadada light, #393939 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1639,7 +1588,7 @@
         {
           "kind": "value",
           "source": "disabled-content-color",
-          "says": "name and value only (#c6c6c6); no description, usage or docs state this token's role"
+          "says": "Values only (#c6c6c6 light, #444444 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1651,7 +1600,7 @@
         {
           "kind": "value",
           "source": "disabled-static-black-background-color",
-          "says": "name and value only (#000000 @ 0.09); no description, usage or docs state this token's role"
+          "says": "Values only (#000000 @ 0.09 light, #000000 @ 0.09 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1663,7 +1612,7 @@
         {
           "kind": "value",
           "source": "disabled-static-black-border-color",
-          "says": "name and value only (#000000 @ 0.15); no description, usage or docs state this token's role"
+          "says": "Values only (#000000 @ 0.15 light, #000000 @ 0.15 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1675,7 +1624,7 @@
         {
           "kind": "value",
           "source": "disabled-static-black-content-color",
-          "says": "name and value only (#000000 @ 0.22); no description, usage or docs state this token's role"
+          "says": "Values only (#000000 @ 0.22 light, #000000 @ 0.22 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1687,7 +1636,7 @@
         {
           "kind": "usage",
           "source": "drop-shadow-color",
-          "says": "used by color-handle-drop-shadow-color"
+          "says": "Shipped token aliases it: color-handle-drop-shadow-color (shadow use)."
         }
       ]
     },
@@ -1699,7 +1648,7 @@
         {
           "kind": "value",
           "source": "drop-shadow-dragged-color",
-          "says": "name and value only (#000000 @ 0.2); no description, usage or docs state this token's role"
+          "says": "Values only (#000000 @ 0.2 light, #000000 @ 0.6 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -1711,7 +1660,7 @@
         {
           "kind": "usage",
           "source": "extra-bold-font-weight",
-          "says": "used by body-cjk-emphasized-font-weight, body-cjk-strong-emphasized-font-weight, body-cjk-strong-font-weight, detail-cjk-emphasized-font-weight, detail-cjk-light-strong-emphasized-font-weight, detail-cjk-light-strong-font-weight"
+          "says": "Shipped tokens alias it: body-cjk-emphasized-font-weight, body-cjk-strong-emphasized-font-weight, body-cjk-strong-font-weight, detail-cjk-emphasized-font-weight, detail-cjk-light-strong-emphasized-font-weight, detail-cjk-light-strong-font-weight."
         }
       ]
     },
@@ -1723,10 +1672,9 @@
         {
           "kind": "value",
           "source": "focus-indicator-color",
-          "says": "name and value only (#4b75ff); no description, usage or docs state this token's role"
+          "says": "Values only (#4b75ff light, #4069fd dark). Check flagged a state mismatch (unbound state vs terms focus); no evidence settles it."
         }
-      ],
-      "note": "Terms check flags state unbound; mapping is property-focus-ring, not a state. Docs do not mention focus-indicator."
+      ]
     },
     {
       "token": "font-size-100",
@@ -1736,7 +1684,7 @@
         {
           "kind": "usage",
           "source": "font-size-100",
-          "says": "used by action-bar-counter-font-size, body-cjk-size-m, body-size-s, code-size-s, detail-cjk-size-l, detail-size-m"
+          "says": "Shipped tokens alias it: action-bar-counter-font-size, body-cjk-size-m, body-size-s, code-size-s, detail-cjk-size-l, detail-size-m."
         }
       ]
     },
@@ -1748,7 +1696,7 @@
         {
           "kind": "usage",
           "source": "font-size-1000",
-          "says": "used by heading-cjk-size-xxl"
+          "says": "Shipped tokens alias it: heading-cjk-size-xxl."
         }
       ]
     },
@@ -1760,7 +1708,7 @@
         {
           "kind": "usage",
           "source": "font-size-1100",
-          "says": "used by heading-size-xxl"
+          "says": "Shipped tokens alias it: heading-size-xxl."
         }
       ]
     },
@@ -1772,7 +1720,7 @@
         {
           "kind": "usage",
           "source": "font-size-1200",
-          "says": "used by heading-cjk-size-xxxl"
+          "says": "Shipped tokens alias it: heading-cjk-size-xxxl."
         }
       ]
     },
@@ -1784,7 +1732,7 @@
         {
           "kind": "usage",
           "source": "font-size-1300",
-          "says": "used by heading-size-xxxl"
+          "says": "Shipped tokens alias it: heading-size-xxxl."
         }
       ]
     },
@@ -1796,7 +1744,7 @@
         {
           "kind": "usage",
           "source": "font-size-1400",
-          "says": "used by heading-cjk-size-xxxxl"
+          "says": "Shipped tokens alias it: heading-cjk-size-xxxxl."
         }
       ]
     },
@@ -1808,7 +1756,7 @@
         {
           "kind": "usage",
           "source": "font-size-1500",
-          "says": "used by heading-size-xxxxl"
+          "says": "Shipped tokens alias it: heading-size-xxxxl."
         }
       ]
     },
@@ -1820,7 +1768,7 @@
         {
           "kind": "usage",
           "source": "font-size-200",
-          "says": "used by body-cjk-size-l, body-size-m, code-size-m, detail-cjk-size-xl, detail-size-l, heading-cjk-size-xs"
+          "says": "Shipped tokens alias it: body-cjk-size-l, body-size-m, code-size-m, detail-cjk-size-xl, detail-size-l, heading-cjk-size-xs."
         }
       ]
     },
@@ -1832,7 +1780,7 @@
         {
           "kind": "usage",
           "source": "font-size-25",
-          "says": "used by body-cjk-size-xxs, detail-cjk-size-xs"
+          "says": "Shipped tokens alias it: body-cjk-size-xxs, detail-cjk-size-xs."
         }
       ]
     },
@@ -1844,7 +1792,7 @@
         {
           "kind": "usage",
           "source": "font-size-300",
-          "says": "used by body-cjk-size-xl, body-size-l, code-size-l, detail-size-xl, heading-cjk-size-s, heading-size-xs"
+          "says": "Shipped tokens alias it: body-cjk-size-xl, body-size-l, code-size-l, detail-size-xl, heading-cjk-size-s, heading-size-xs."
         }
       ]
     },
@@ -1856,7 +1804,7 @@
         {
           "kind": "usage",
           "source": "font-size-400",
-          "says": "used by body-cjk-size-xxl, body-size-xl, code-size-xl, heading-cjk-size-m, heading-size-s, title-cjk-size-xxl"
+          "says": "Shipped tokens alias it: body-cjk-size-xxl, body-size-xl, code-size-xl, heading-cjk-size-m, heading-size-s, title-cjk-size-xxl."
         }
       ]
     },
@@ -1868,7 +1816,7 @@
         {
           "kind": "usage",
           "source": "font-size-50",
-          "says": "used by body-cjk-size-xs, body-size-xxs, detail-cjk-size-s, detail-size-xs, title-cjk-size-xs"
+          "says": "Shipped tokens alias it: body-cjk-size-xs, body-size-xxs, detail-cjk-size-s, detail-size-xs, title-cjk-size-xs."
         }
       ]
     },
@@ -1880,7 +1828,7 @@
         {
           "kind": "usage",
           "source": "font-size-500",
-          "says": "used by body-cjk-size-xxxl, body-size-xxl, heading-size-m, title-cjk-size-xxxl, title-size-xxl"
+          "says": "Shipped tokens alias it: body-cjk-size-xxxl, body-size-xxl, heading-size-m, title-cjk-size-xxxl, title-size-xxl."
         }
       ]
     },
@@ -1892,7 +1840,7 @@
         {
           "kind": "usage",
           "source": "font-size-600",
-          "says": "used by body-size-xxxl, heading-cjk-size-l, title-size-xxxl"
+          "says": "Shipped tokens alias it: body-size-xxxl, heading-cjk-size-l, title-size-xxxl."
         }
       ]
     },
@@ -1904,7 +1852,7 @@
         {
           "kind": "usage",
           "source": "font-size-700",
-          "says": "used by heading-size-l"
+          "says": "Shipped tokens alias it: heading-size-l."
         }
       ]
     },
@@ -1916,7 +1864,7 @@
         {
           "kind": "usage",
           "source": "font-size-75",
-          "says": "used by body-cjk-size-s, body-size-xs, code-size-xs, detail-cjk-size-m, detail-size-s, title-cjk-size-s"
+          "says": "Shipped tokens alias it: body-cjk-size-s, body-size-xs, code-size-xs, detail-cjk-size-m, detail-size-s, title-cjk-size-s."
         }
       ]
     },
@@ -1928,7 +1876,7 @@
         {
           "kind": "usage",
           "source": "font-size-800",
-          "says": "used by heading-cjk-size-xl"
+          "says": "Shipped tokens alias it: heading-cjk-size-xl."
         }
       ]
     },
@@ -1940,7 +1888,7 @@
         {
           "kind": "usage",
           "source": "font-size-900",
-          "says": "used by heading-size-xl"
+          "says": "Shipped tokens alias it: heading-size-xl."
         }
       ]
     },
@@ -1952,7 +1900,7 @@
         {
           "kind": "description",
           "source": "gap-horizontal",
-          "says": "Spacing between child elements for banner components"
+          "says": "\"Spacing between child elements for banner components\""
         }
       ]
     },
@@ -1964,7 +1912,7 @@
         {
           "kind": "description",
           "source": "gap-regular",
-          "says": "Spacing between child elements for list structures (regular density)"
+          "says": "\"Spacing between child elements for list structures (regular density)\""
         }
       ]
     },
@@ -1976,21 +1924,35 @@
         {
           "kind": "description",
           "source": "gap-vertical",
-          "says": "Spacing between child elements for banner components"
+          "says": "\"Spacing between child elements for banner components\""
         }
       ]
     },
     {
       "token": "gray-subtle-background-color-default",
       "mappingId": "m-93172beeb75c",
-      "verdict": "insufficient",
+      "verdict": "contradicted",
       "evidence": [
         {
-          "kind": "value",
-          "source": "gray-subtle-background-color-default",
-          "says": "name and value only (#e9e9e9); no description, usage or docs state this token's role"
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/color-palette/",
+          "says": "\"Gray tokens are used for text, icons, and background layers.\" Gray is a neutral background layer, not a categorical hue."
+        },
+        {
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/color-system/",
+          "says": "The categorical palette is for \"multi-color\" meaning that text labels cannot clarify, such as data viz; a single gray fill is not that case."
+        },
+        {
+          "kind": "sibling",
+          "source": "neutral-subtle-background-color-default",
+          "says": "Identical values in every theme, mapped to intent-neutral property-background emphasis-subtle (exact)."
         }
-      ]
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-subtle",
+        "match": "exact"
+      }
     },
     {
       "token": "green-background-color-default",
@@ -2000,7 +1962,7 @@
         {
           "kind": "value",
           "source": "green-background-color-default",
-          "says": "name and value only (#05834e); no description, usage or docs state this token's role"
+          "says": "Values only (#05834e light, #068850 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2012,7 +1974,7 @@
         {
           "kind": "value",
           "source": "green-subtle-background-color-default",
-          "says": "name and value only (#d7f7e1); no description, usage or docs state this token's role"
+          "says": "Values only (#d7f7e1 light, #003326 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2024,7 +1986,7 @@
         {
           "kind": "description",
           "source": "group-gap-compact",
-          "says": "Spacing between child elements (compact density)"
+          "says": "\"Spacing between child elements (compact density)\""
         }
       ]
     },
@@ -2036,7 +1998,7 @@
         {
           "kind": "description",
           "source": "group-gap-extra-large",
-          "says": "Spacing between child elements at extra-large size"
+          "says": "\"Spacing between child elements at extra-large size\""
         }
       ]
     },
@@ -2048,7 +2010,7 @@
         {
           "kind": "value",
           "source": "group-gap-extra-large-spacious",
-          "says": "name and value only (24px); no description, usage or docs state this token's role"
+          "says": "Values only (24px light, 24px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2060,7 +2022,7 @@
         {
           "kind": "description",
           "source": "group-gap-extra-small",
-          "says": "Spacing between child elements at extra-small size"
+          "says": "\"Spacing between child elements at extra-small size\""
         }
       ]
     },
@@ -2072,7 +2034,7 @@
         {
           "kind": "value",
           "source": "group-gap-extra-small-spacious",
-          "says": "name and value only (8px); no description, usage or docs state this token's role"
+          "says": "Values only (8px light, 8px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2084,7 +2046,7 @@
         {
           "kind": "description",
           "source": "group-gap-large",
-          "says": "Spacing between child elements at large size"
+          "says": "\"Spacing between child elements at large size\""
         }
       ]
     },
@@ -2096,7 +2058,7 @@
         {
           "kind": "value",
           "source": "group-gap-large-spacious",
-          "says": "name and value only (20px); no description, usage or docs state this token's role"
+          "says": "Values only (20px light, 20px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2108,7 +2070,7 @@
         {
           "kind": "description",
           "source": "group-gap-medium",
-          "says": "Spacing between child elements at medium size"
+          "says": "\"Spacing between child elements at medium size\""
         }
       ]
     },
@@ -2120,7 +2082,7 @@
         {
           "kind": "value",
           "source": "group-gap-medium-spacious",
-          "says": "name and value only (16px); no description, usage or docs state this token's role"
+          "says": "Values only (16px light, 16px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2132,12 +2094,7 @@
         {
           "kind": "description",
           "source": "group-gap-small",
-          "says": "Spacing between child elements at small size"
-        },
-        {
-          "kind": "docs",
-          "source": "https://spectrum.adobe.com/page/design-tokens/",
-          "says": "Gap tokens include group-gap-small (design-tokens page lists gap tokens by name)"
+          "says": "\"Spacing between child elements at small size\""
         }
       ]
     },
@@ -2149,7 +2106,7 @@
         {
           "kind": "value",
           "source": "group-gap-small-spacious",
-          "says": "name and value only (12px); no description, usage or docs state this token's role"
+          "says": "Values only (12px light, 12px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2161,19 +2118,24 @@
         {
           "kind": "value",
           "source": "icon-color-informative",
-          "says": "name and value only (#4b75ff); no description, usage or docs state this token's role"
+          "says": "Values only (#4b75ff light, #5681ff dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
     {
       "token": "icon-color-negative",
       "mappingId": "m-3b7d3724707e",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "icon-color-negative",
-          "says": "name and value only (#f03823); no description, usage or docs state this token's role"
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "Negative tokens listed as communicating meaning: \"negative-border-color-default, negative-content-color-default\"."
+        },
+        {
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/color-system/",
+          "says": "Color tokens are used \"for text, icons, and illustrations\"."
         }
       ]
     },
@@ -2185,7 +2147,7 @@
         {
           "kind": "value",
           "source": "icon-color-neutral",
-          "says": "name and value only (#8f8f8f); no description, usage or docs state this token's role"
+          "says": "Values only (#8f8f8f light, #8a8a8a dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2197,19 +2159,24 @@
         {
           "kind": "value",
           "source": "icon-color-notice",
-          "says": "name and value only (#d45b00); no description, usage or docs state this token's role"
+          "says": "Values only (#d45b00 light, #e06400 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
     {
       "token": "icon-color-positive",
       "mappingId": "m-4becd554cbc7",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "icon-color-positive",
-          "says": "name and value only (#079355); no description, usage or docs state this token's role"
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "\"positive (what's communicated)\" defines the positive intent word; positive-background-color-default is listed as a meaning token."
+        },
+        {
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/color-system/",
+          "says": "Color tokens are used \"for text, icons, and illustrations\"."
         }
       ]
     },
@@ -2221,7 +2188,7 @@
         {
           "kind": "value",
           "source": "indigo-background-color-default",
-          "says": "name and value only (#7155fa); no description, usage or docs state this token's role"
+          "says": "Values only (#7155fa light, #745bfc dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2233,19 +2200,19 @@
         {
           "kind": "value",
           "source": "indigo-subtle-background-color-default",
-          "says": "name and value only (#ebeeff); no description, usage or docs state this token's role"
+          "says": "Values only (#ebeeff light, #2f008c dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
     {
       "token": "informative-background-color-default",
       "mappingId": "m-a2fc0840d676",
-      "verdict": "supported",
+      "verdict": "insufficient",
       "evidence": [
         {
-          "kind": "usage",
+          "kind": "value",
           "source": "informative-background-color-default",
-          "says": "used by table-selected-row-background-color, tree-view-selected-row-background-color-emphasized"
+          "says": "Values only (#3b63fb light, #4069fd dark). usage does not fit the color intent; no non-value citation fits the concept."
         }
       ]
     },
@@ -2257,7 +2224,7 @@
         {
           "kind": "value",
           "source": "informative-background-color-hover",
-          "says": "name and value only (#274dea); no description, usage or docs state this token's role"
+          "says": "Values only (#274dea light, #345bf8 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2269,7 +2236,7 @@
         {
           "kind": "value",
           "source": "informative-subtle-background-color-default",
-          "says": "name and value only (#e5f0fe); no description, usage or docs state this token's role"
+          "says": "Values only (#e5f0fe light, #0c2175 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2281,7 +2248,7 @@
         {
           "kind": "usage",
           "source": "light-font-weight",
-          "says": "used by detail-cjk-light-font-weight, heading-cjk-light-font-weight, heading-sans-serif-light-emphasized-font-weight, heading-sans-serif-light-font-weight"
+          "says": "Shipped tokens alias it: detail-cjk-light-font-weight, heading-cjk-light-font-weight, heading-sans-serif-light-emphasized-font-weight, heading-sans-serif-light-font-weight."
         }
       ]
     },
@@ -2293,7 +2260,7 @@
         {
           "kind": "usage",
           "source": "line-height-100",
-          "says": "used by detail-line-height, heading-line-height, title-line-height"
+          "says": "Shipped tokens alias it: detail-line-height, heading-line-height, title-line-height."
         }
       ]
     },
@@ -2305,7 +2272,7 @@
         {
           "kind": "usage",
           "source": "line-height-200",
-          "says": "used by body-line-height, code-line-height"
+          "says": "Shipped tokens alias it: body-line-height, code-line-height."
         }
       ]
     },
@@ -2317,7 +2284,7 @@
         {
           "kind": "value",
           "source": "magenta-subtle-background-color-default",
-          "says": "name and value only (#ffe8f0); no description, usage or docs state this token's role"
+          "says": "Values only (#ffe8f0 light, #5d0022 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2329,31 +2296,31 @@
         {
           "kind": "usage",
           "source": "medium-font-weight",
-          "says": "used by detail-sans-serif-font-weight, detail-serif-emphasized-font-weight, detail-serif-font-weight"
+          "says": "Shipped tokens alias it: detail-sans-serif-font-weight, detail-serif-emphasized-font-weight, detail-serif-font-weight."
         }
       ]
     },
     {
       "token": "negative-border-color-default",
       "mappingId": "m-000d0c00bb29",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "negative-border-color-default",
-          "says": "name and value only (#d73220); no description, usage or docs state this token's role"
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "\"negative-border-color-default\" is listed by name as a meaning token (negative intent, border)."
         }
       ]
     },
     {
       "token": "negative-border-color-down",
       "mappingId": "m-f1ec7ffe4d6b",
-      "verdict": "supported",
+      "verdict": "insufficient",
       "evidence": [
         {
-          "kind": "usage",
+          "kind": "value",
           "source": "negative-border-color-down",
-          "says": "used by negative-border-color-focus-hover"
+          "says": "Values only (#9c2113 light, #ff8678 dark). usage does not fit the color intent; no non-value citation fits the concept."
         }
       ]
     },
@@ -2365,7 +2332,7 @@
         {
           "kind": "value",
           "source": "negative-border-color-focus",
-          "says": "name and value only (#b72818); no description, usage or docs state this token's role"
+          "says": "Values only (#b72818 light, #ff6756 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2377,10 +2344,9 @@
         {
           "kind": "value",
           "source": "negative-border-color-focus-hover",
-          "says": "name and value only (#9c2113); no description, usage or docs state this token's role"
+          "says": "Values only (#9c2113 light, #ff8678 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
-      ],
-      "note": "Value equals negative-border-color-down (active); the name's focus+hover state is the only stated basis."
+      ]
     },
     {
       "token": "negative-border-color-hover",
@@ -2390,7 +2356,7 @@
         {
           "kind": "value",
           "source": "negative-border-color-hover",
-          "says": "name and value only (#b72818); no description, usage or docs state this token's role"
+          "says": "Values only (#b72818 light, #ff6756 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2402,7 +2368,7 @@
         {
           "kind": "value",
           "source": "negative-border-color-key-focus",
-          "says": "name and value only (#b72818); no description, usage or docs state this token's role"
+          "says": "Values only (#b72818 light, #ff6756 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2414,7 +2380,7 @@
         {
           "kind": "value",
           "source": "negative-content-color-key-focus",
-          "says": "name and value only (#b72818); no description, usage or docs state this token's role"
+          "says": "Values only (#b72818 light, #ff6756 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2426,7 +2392,7 @@
         {
           "kind": "value",
           "source": "negative-subdued-background-color-default",
-          "says": "name and value only (#ffebe8); no description, usage or docs state this token's role"
+          "says": "Values only (#ffebe8 light, #571107 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2438,7 +2404,7 @@
         {
           "kind": "value",
           "source": "negative-subdued-background-color-down",
-          "says": "name and value only (#ffd6d1); no description, usage or docs state this token's role"
+          "says": "Values only (#ffd6d1 light, #571107 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2450,7 +2416,7 @@
         {
           "kind": "value",
           "source": "negative-subdued-background-color-hover",
-          "says": "name and value only (#ffd6d1); no description, usage or docs state this token's role"
+          "says": "Values only (#ffd6d1 light, #571107 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2462,19 +2428,19 @@
         {
           "kind": "value",
           "source": "negative-subdued-background-color-key-focus",
-          "says": "name and value only (#ffd6d1); no description, usage or docs state this token's role"
+          "says": "Values only (#ffd6d1 light, #571107 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
     {
       "token": "negative-subtle-background-color-default",
       "mappingId": "m-e5d1f2de7c8e",
-      "verdict": "supported",
+      "verdict": "insufficient",
       "evidence": [
         {
-          "kind": "usage",
+          "kind": "value",
           "source": "negative-subtle-background-color-default",
-          "says": "used by negative-subdued-background-color-default"
+          "says": "Values only (#ffebe8 light, #571107 dark). usage does not fit the color intent; no non-value citation fits the concept."
         }
       ]
     },
@@ -2486,7 +2452,7 @@
         {
           "kind": "value",
           "source": "neutral-content-color-key-focus",
-          "says": "name and value only (#131313); no description, usage or docs state this token's role"
+          "says": "Values only (#131313 light, #f2f2f2 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2498,10 +2464,9 @@
         {
           "kind": "value",
           "source": "neutral-content-color-selected-key-focus",
-          "says": "name and value only (#131313); no description, usage or docs state this token's role"
+          "says": "Values only (#131313 light, #f2f2f2 dark). Check flagged terms-contradict-mapping (focus+selected vs focus); no non-name evidence."
         }
-      ],
-      "note": "Terms check flags focus+selected vs focus; close match is consistent with name."
+      ]
     },
     {
       "token": "neutral-subdued-content-color-default",
@@ -2511,19 +2476,19 @@
         {
           "kind": "value",
           "source": "neutral-subdued-content-color-default",
-          "says": "name and value only (#505050); no description, usage or docs state this token's role"
+          "says": "Values only (#505050 light, #afafaf dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
     {
       "token": "neutral-subtle-background-color-default",
       "mappingId": "m-2e967e62fc1d",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "neutral-subtle-background-color-default",
-          "says": "name and value only (#e9e9e9); no description, usage or docs state this token's role"
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/color-palette/",
+          "says": "\"Gray tokens are used for text, icons, and background layers.\" Gray/neutral is handled separately from the categorical palette."
         }
       ]
     },
@@ -2535,7 +2500,7 @@
         {
           "kind": "value",
           "source": "notice-background-color-default",
-          "says": "name and value only (#fc7d00); no description, usage or docs state this token's role"
+          "says": "Values only (#fc7d00 light, #e06400 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2547,7 +2512,7 @@
         {
           "kind": "value",
           "source": "notice-subtle-background-color-default",
-          "says": "name and value only (#ffeccf); no description, usage or docs state this token's role"
+          "says": "Values only (#ffeccf light, #501b00 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2559,7 +2524,7 @@
         {
           "kind": "usage",
           "source": "opacity-disabled",
-          "says": "used by avatar-opacity-disabled, thumbnail-opacity-disabled"
+          "says": "Shipped tokens alias it: avatar-opacity-disabled, thumbnail-opacity-disabled (disabled opacity use)."
         }
       ]
     },
@@ -2571,7 +2536,7 @@
         {
           "kind": "value",
           "source": "orange-background-color-default",
-          "says": "name and value only (#fc7d00); no description, usage or docs state this token's role"
+          "says": "Values only (#fc7d00 light, #e06400 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2583,7 +2548,7 @@
         {
           "kind": "value",
           "source": "orange-subtle-background-color-default",
-          "says": "name and value only (#ffeccf); no description, usage or docs state this token's role"
+          "says": "Values only (#ffeccf light, #501b00 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2595,7 +2560,7 @@
         {
           "kind": "value",
           "source": "overlay-color",
-          "says": "name and value only (#000000); no description, usage or docs state this token's role"
+          "says": "Values only (#000000 light, #000000 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2607,7 +2572,7 @@
         {
           "kind": "value",
           "source": "overlay-opacity",
-          "says": "name and value only (0.4); no description, usage or docs state this token's role"
+          "says": "Values only (0.4 light, 0.6 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2619,7 +2584,7 @@
         {
           "kind": "description",
           "source": "padding-horizontal",
-          "says": "Horizontal internal spacing for banner components"
+          "says": "\"Horizontal internal spacing for banner components\""
         }
       ]
     },
@@ -2631,7 +2596,7 @@
         {
           "kind": "description",
           "source": "padding-vertical",
-          "says": "Vertical internal spacing for banner components"
+          "says": "\"Vertical internal spacing for banner components\""
         }
       ]
     },
@@ -2643,7 +2608,7 @@
         {
           "kind": "value",
           "source": "pink-background-color-default",
-          "says": "name and value only (#ce2a92); no description, usage or docs state this token's role"
+          "says": "Values only (#ce2a92 light, #d52d97 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2655,31 +2620,31 @@
         {
           "kind": "value",
           "source": "pink-subtle-background-color-default",
-          "says": "name and value only (#ffe8f7); no description, usage or docs state this token's role"
+          "says": "Values only (#ffe8f7 light, #5a0039 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
     {
       "token": "positive-background-color-default",
       "mappingId": "m-d1d1c4db1eb6",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "positive-background-color-default",
-          "says": "name and value only (#05834e); no description, usage or docs state this token's role"
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "\"positive (what's communicated)\"; positive-background-color-default is listed as a meaning token."
         }
       ]
     },
     {
       "token": "positive-background-color-hover",
       "mappingId": "m-641cb136bbd1",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "positive-background-color-hover",
-          "says": "name and value only (#036e45); no description, usage or docs state this token's role"
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "\"positive (what's communicated)\" and \"hover (when it applies)\" define the words."
         }
       ]
     },
@@ -2691,7 +2656,7 @@
         {
           "kind": "value",
           "source": "positive-subtle-background-color-default",
-          "says": "name and value only (#d7f7e1); no description, usage or docs state this token's role"
+          "says": "Values only (#d7f7e1 light, #003326 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2703,7 +2668,7 @@
         {
           "kind": "value",
           "source": "purple-background-color-default",
-          "says": "name and value only (#9a47e2); no description, usage or docs state this token's role"
+          "says": "Values only (#9a47e2 light, #9d4ee4 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2715,7 +2680,7 @@
         {
           "kind": "value",
           "source": "purple-subtle-background-color-default",
-          "says": "name and value only (#f4ebfc); no description, usage or docs state this token's role"
+          "says": "Values only (#f4ebfc light, #40007a dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2727,7 +2692,7 @@
         {
           "kind": "value",
           "source": "red-background-color-default",
-          "says": "name and value only (#d73220); no description, usage or docs state this token's role"
+          "says": "Values only (#d73220 light, #df3422 dark). Hue-named fill; values match negative-border-color-default but no evidence it is categorical or status."
         }
       ]
     },
@@ -2739,7 +2704,7 @@
         {
           "kind": "value",
           "source": "red-subtle-background-color-default",
-          "says": "name and value only (#ffebe8); no description, usage or docs state this token's role"
+          "says": "Values only (#ffebe8 light, #571107 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2751,7 +2716,7 @@
         {
           "kind": "usage",
           "source": "regular-font-weight",
-          "says": "used by body-cjk-font-weight, body-sans-serif-emphasized-font-weight, body-sans-serif-font-weight, body-serif-emphasized-font-weight, body-serif-font-weight, code-cjk-font-weight"
+          "says": "Shipped tokens alias it: body-cjk-font-weight, body-sans-serif-emphasized-font-weight, body-sans-serif-font-weight, body-serif-emphasized-font-weight, body-serif-font-weight, code-cjk-font-weight."
         }
       ]
     },
@@ -2763,7 +2728,7 @@
         {
           "kind": "usage",
           "source": "sans-serif-font-family",
-          "says": "used by body-sans-serif-font-family, detail-sans-serif-font-family, heading-sans-serif-font-family, title-sans-serif-font-family, default-font-family"
+          "says": "Shipped tokens alias it: body-sans-serif-font-family, detail-sans-serif-font-family, heading-sans-serif-font-family, title-sans-serif-font-family, default-font-family."
         }
       ]
     },
@@ -2775,7 +2740,7 @@
         {
           "kind": "value",
           "source": "seafoam-background-color-default",
-          "says": "name and value only (#07816d); no description, usage or docs state this token's role"
+          "says": "Values only (#07816d light, #088670 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2787,7 +2752,7 @@
         {
           "kind": "value",
           "source": "seafoam-subtle-background-color-default",
-          "says": "name and value only (#d3f6ea); no description, usage or docs state this token's role"
+          "says": "Values only (#d3f6ea light, #00322c dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2799,7 +2764,7 @@
         {
           "kind": "usage",
           "source": "serif-font-family",
-          "says": "used by body-serif-font-family, detail-serif-font-family, heading-serif-font-family, title-serif-font-family"
+          "says": "Shipped tokens alias it: body-serif-font-family, detail-serif-font-family, heading-serif-font-family, title-serif-font-family."
         }
       ]
     },
@@ -2811,7 +2776,7 @@
         {
           "kind": "usage",
           "source": "spacing-100",
-          "says": "used by action-bar-edge-to-content-area, banner-gap-vertical, banner-padding-horizontal-compact, container-gap-extra-small, container-padding-extra-small, drop-target-dash-length"
+          "says": "Shipped tokens alias it: action-bar-edge-to-content-area, banner-gap-vertical, banner-padding-horizontal-compact, container-gap-extra-small, container-padding-extra-small, drop-target-dash-length."
         }
       ]
     },
@@ -2823,7 +2788,7 @@
         {
           "kind": "value",
           "source": "spacing-1000",
-          "says": "name and value only (96px); no description, usage or docs state this token's role"
+          "says": "Values only (96px light, 96px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2835,7 +2800,7 @@
         {
           "kind": "usage",
           "source": "spacing-200",
-          "says": "used by action-bar-bottom-to-content-area, action-bar-top-to-content-area, banner-padding-vertical, container-gap-small, container-padding-small, group-gap-large"
+          "says": "Shipped tokens alias it: action-bar-bottom-to-content-area, action-bar-top-to-content-area, banner-padding-vertical, container-gap-small, container-padding-small, group-gap-large."
         }
       ]
     },
@@ -2847,7 +2812,7 @@
         {
           "kind": "value",
           "source": "spacing-25",
-          "says": "name and value only (1px); no description, usage or docs state this token's role"
+          "says": "Values only (1px light, 1px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2859,7 +2824,7 @@
         {
           "kind": "usage",
           "source": "spacing-300",
-          "says": "used by action-bar-label-to-action-group-area, card-description-to-footer, coach-mark-edge-to-content, banner-padding-horizontal, container-gap-medium, container-padding-medium"
+          "says": "Shipped tokens alias it: action-bar-label-to-action-group-area, card-description-to-footer, coach-mark-edge-to-content, banner-padding-horizontal, container-gap-medium, container-padding-medium."
         }
       ]
     },
@@ -2871,7 +2836,7 @@
         {
           "kind": "usage",
           "source": "spacing-350",
-          "says": "used by container-gap-large, container-padding-large, group-gap-large-spacious, tab-gap-horizontal-small"
+          "says": "Shipped tokens alias it: container-gap-large, container-padding-large, group-gap-large-spacious, tab-gap-horizontal-small."
         }
       ]
     },
@@ -2883,7 +2848,7 @@
         {
           "kind": "usage",
           "source": "spacing-400",
-          "says": "used by coach-mark-edge-to-content, banner-gap-horizontal, container-gap-extra-large, container-padding-extra-large, gap-horizontal, group-gap-extra-large-spacious"
+          "says": "Shipped tokens alias it: coach-mark-edge-to-content, banner-gap-horizontal, container-gap-extra-large, container-padding-extra-large, gap-horizontal, group-gap-extra-large-spacious."
         }
       ]
     },
@@ -2895,7 +2860,7 @@
         {
           "kind": "usage",
           "source": "spacing-50",
-          "says": "used by focus-ring-gap, group-gap-compact, list-gap-compact, list-item-gap-small"
+          "says": "Shipped tokens alias it: focus-ring-gap, group-gap-compact, list-gap-compact, list-item-gap-small."
         }
       ]
     },
@@ -2907,7 +2872,7 @@
         {
           "kind": "usage",
           "source": "spacing-500",
-          "says": "used by container-gap-2x-large, container-padding-2x-large, tab-gap-horizontal-large"
+          "says": "Shipped tokens alias it: container-gap-2x-large, container-padding-2x-large, tab-gap-horizontal-large."
         }
       ]
     },
@@ -2919,7 +2884,7 @@
         {
           "kind": "usage",
           "source": "spacing-600",
-          "says": "used by container-padding-3x-large, window-to-edge, tab-gap-horizontal-extra-large"
+          "says": "Shipped tokens alias it: container-padding-3x-large, window-to-edge, tab-gap-horizontal-extra-large."
         }
       ]
     },
@@ -2931,7 +2896,7 @@
         {
           "kind": "value",
           "source": "spacing-700",
-          "says": "name and value only (48px); no description, usage or docs state this token's role"
+          "says": "Values only (48px light, 48px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2943,7 +2908,7 @@
         {
           "kind": "usage",
           "source": "spacing-75",
-          "says": "used by card-header-to-description, gap-regular, group-gap-extra-small, list-gap-regular, list-item-padding-vertical-regular, rating-bottom-to-content-area-small"
+          "says": "Shipped tokens alias it: card-header-to-description, gap-regular, group-gap-extra-small, list-gap-regular, list-item-padding-vertical-regular, rating-bottom-to-content-area-small."
         }
       ]
     },
@@ -2955,7 +2920,7 @@
         {
           "kind": "value",
           "source": "spacing-800",
-          "says": "name and value only (64px); no description, usage or docs state this token's role"
+          "says": "Values only (64px light, 64px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2967,7 +2932,7 @@
         {
           "kind": "usage",
           "source": "spacing-85",
-          "says": "used by container-gap-2x-small, container-padding-2x-small, drop-target-dash-gap, group-gap-small, list-item-padding-horizontal"
+          "says": "Shipped tokens alias it: container-gap-2x-small, container-padding-2x-small, drop-target-dash-gap, group-gap-small, list-item-padding-horizontal."
         }
       ]
     },
@@ -2979,7 +2944,7 @@
         {
           "kind": "value",
           "source": "spacing-900",
-          "says": "name and value only (80px); no description, usage or docs state this token's role"
+          "says": "Values only (80px light, 80px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -2991,7 +2956,7 @@
         {
           "kind": "value",
           "source": "text-to-control-100",
-          "says": "name and value only (10px); no description, usage or docs state this token's role"
+          "says": "Values only (10px light, 10px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3003,7 +2968,7 @@
         {
           "kind": "value",
           "source": "text-to-control-200",
-          "says": "name and value only (11px); no description, usage or docs state this token's role"
+          "says": "Values only (11px light, 11px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3015,7 +2980,7 @@
         {
           "kind": "value",
           "source": "text-to-control-300",
-          "says": "name and value only (13px); no description, usage or docs state this token's role"
+          "says": "Values only (13px light, 13px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3027,7 +2992,7 @@
         {
           "kind": "usage",
           "source": "text-to-control-50",
-          "says": "used by action-bar-close-button-to-counter"
+          "says": "Shipped tokens alias it: action-bar-close-button-to-counter."
         }
       ]
     },
@@ -3039,7 +3004,7 @@
         {
           "kind": "value",
           "source": "text-to-control-75",
-          "says": "name and value only (9px); no description, usage or docs state this token's role"
+          "says": "Values only (9px light, 9px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3051,7 +3016,7 @@
         {
           "kind": "usage",
           "source": "text-to-visual-100",
-          "says": "used by status-light-text-to-visual-100"
+          "says": "Shipped tokens alias it: status-light-text-to-visual-100."
         }
       ]
     },
@@ -3063,7 +3028,7 @@
         {
           "kind": "usage",
           "source": "text-to-visual-200",
-          "says": "used by status-light-text-to-visual-200"
+          "says": "Shipped tokens alias it: status-light-text-to-visual-200."
         }
       ]
     },
@@ -3075,7 +3040,7 @@
         {
           "kind": "usage",
           "source": "text-to-visual-300",
-          "says": "used by status-light-text-to-visual-300"
+          "says": "Shipped tokens alias it: status-light-text-to-visual-300."
         }
       ]
     },
@@ -3087,7 +3052,7 @@
         {
           "kind": "value",
           "source": "text-to-visual-400",
-          "says": "name and value only (9px); no description, usage or docs state this token's role"
+          "says": "Values only (9px light, 9px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3099,7 +3064,7 @@
         {
           "kind": "value",
           "source": "text-to-visual-50",
-          "says": "name and value only (5px); no description, usage or docs state this token's role"
+          "says": "Values only (5px light, 5px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3111,7 +3076,7 @@
         {
           "kind": "usage",
           "source": "text-to-visual-75",
-          "says": "used by status-light-text-to-visual-75"
+          "says": "Shipped tokens alias it: status-light-text-to-visual-75."
         }
       ]
     },
@@ -3123,7 +3088,7 @@
         {
           "kind": "value",
           "source": "workflow-icon-size-100",
-          "says": "name and value only (20px); no description, usage or docs state this token's role"
+          "says": "Values only (20px light, 20px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3135,7 +3100,7 @@
         {
           "kind": "value",
           "source": "workflow-icon-size-200",
-          "says": "name and value only (22px); no description, usage or docs state this token's role"
+          "says": "Values only (22px light, 22px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3147,7 +3112,7 @@
         {
           "kind": "value",
           "source": "workflow-icon-size-300",
-          "says": "name and value only (26px); no description, usage or docs state this token's role"
+          "says": "Values only (26px light, 26px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3159,7 +3124,7 @@
         {
           "kind": "value",
           "source": "workflow-icon-size-50",
-          "says": "name and value only (14px); no description, usage or docs state this token's role"
+          "says": "Values only (14px light, 14px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3171,7 +3136,7 @@
         {
           "kind": "value",
           "source": "workflow-icon-size-75",
-          "says": "name and value only (16px); no description, usage or docs state this token's role"
+          "says": "Values only (16px light, 16px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3183,7 +3148,7 @@
         {
           "kind": "value",
           "source": "yellow-background-color-default",
-          "says": "name and value only (#f5c700); no description, usage or docs state this token's role"
+          "says": "Values only (#f5c700 light, #da9f00 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     },
@@ -3195,7 +3160,7 @@
         {
           "kind": "value",
           "source": "yellow-subtle-background-color-default",
-          "says": "name and value only (#fff197); no description, usage or docs state this token's role"
+          "says": "Values only (#fff197 light, #3d2700 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
         }
       ]
     }

@@ -6037,13 +6037,18 @@
       "concept": "dsi:concept/color/intent-danger/usage-overlay/property-background",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Translucent danger overlay for states; not a modal scrim.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/intent-danger/usage-state-layer/property-background close."
       }
     },
     {
@@ -6051,14 +6056,18 @@
       "token": "color.blanket.danger",
       "concept": "dsi:concept/color/intent-danger/usage-state-layer/property-background",
       "match": "close",
-      "confidence": 0.65,
-      "status": "proposed",
+      "confidence": 0.6,
+      "status": "approved",
       "rationale": "Translucent danger overlay used when the background cannot change (drag and drop); a state layer communicating danger rather than an interaction state, hence close.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-danger/usage-overlay/property-background close."
       }
     },
     {
@@ -6087,13 +6096,18 @@
       "concept": "dsi:concept/color/usage-overlay/property-background/state-selected",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Translucent selection overlay.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-state-layer/property-background/state-selected close."
       }
     },
     {
@@ -6101,14 +6115,18 @@
       "token": "color.blanket.selected",
       "concept": "dsi:concept/color/usage-state-layer/property-background/state-selected",
       "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
+      "confidence": 0.65,
+      "status": "approved",
       "rationale": "Translucent blanket signalling selection when the background cannot change; selected state layer, close because Atlassian calls it a blanket.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-overlay/property-background/state-selected close."
       }
     },
     {
@@ -7706,18 +7724,42 @@
       }
     },
     {
+      "id": "m-407864824c9a",
+      "token": "color.chart.danger.default.hovered",
+      "concept": "dsi:concept/color/intent-danger/usage-data-viz/state-hover",
+      "match": "broad",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/intent-danger/usage-data-viz/state-hover.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
+      }
+    },
+    {
       "id": "m-408fc3cdfd96",
       "token": "color.chart.danger.default.hovered",
       "concept": "dsi:concept/color/intent-danger/usage-data-viz/emphasis-default/state-hover",
       "match": "close",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover of chart danger.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-danger/usage-data-viz/state-hover broad."
       }
     },
     {
@@ -7726,13 +7768,18 @@
       "concept": "dsi:concept/color/intent-danger/usage-data-viz/state-hover",
       "match": "exact",
       "confidence": 0.82,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hovered danger chart status color.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-danger/usage-data-viz/state-hover broad."
       }
     },
     {
@@ -7878,13 +7925,18 @@
       "concept": "dsi:concept/color/intent-info/usage-data-viz/state-hover",
       "match": "exact",
       "confidence": 0.82,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hovered information chart status color.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-info/usage-data-viz/state-hover broad."
       }
     },
     {
@@ -7893,13 +7945,37 @@
       "concept": "dsi:concept/color/intent-info/usage-data-viz/emphasis-default/state-hover",
       "match": "close",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover of chart info.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-info/usage-data-viz/state-hover broad."
+      }
+    },
+    {
+      "id": "m-cfed246c8e88",
+      "token": "color.chart.information.default.hovered",
+      "concept": "dsi:concept/color/intent-info/usage-data-viz/state-hover",
+      "match": "broad",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/intent-info/usage-data-viz/state-hover.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -8123,13 +8199,18 @@
       "concept": "dsi:concept/color/intent-success/usage-data-viz/state-hover",
       "match": "exact",
       "confidence": 0.82,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hovered success chart status color.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-success/usage-data-viz/state-hover broad."
       }
     },
     {
@@ -8138,13 +8219,37 @@
       "concept": "dsi:concept/color/intent-success/usage-data-viz/emphasis-default/state-hover",
       "match": "close",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover of chart success.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-success/usage-data-viz/state-hover broad."
+      }
+    },
+    {
+      "id": "m-ff43c7b81c3f",
+      "token": "color.chart.success.default.hovered",
+      "concept": "dsi:concept/color/intent-success/usage-data-viz/state-hover",
+      "match": "broad",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/intent-success/usage-data-viz/state-hover.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -8290,13 +8395,37 @@
       "concept": "dsi:concept/color/intent-warning/usage-data-viz/state-hover",
       "match": "exact",
       "confidence": 0.82,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hovered warning chart status color.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-warning/usage-data-viz/state-hover broad."
+      }
+    },
+    {
+      "id": "m-e057aa2754b8",
+      "token": "color.chart.warning.default.hovered",
+      "concept": "dsi:concept/color/intent-warning/usage-data-viz/state-hover",
+      "match": "broad",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/intent-warning/usage-data-viz/state-hover.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -8305,13 +8434,18 @@
       "concept": "dsi:concept/color/intent-warning/usage-data-viz/emphasis-default/state-hover",
       "match": "close",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover of chart warning.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-warning/usage-data-viz/state-hover broad."
       }
     },
     {
@@ -8928,13 +9062,18 @@
       "concept": "dsi:concept/color/intent-ai/property-background",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Rovo (Atlassian AI) brand background, black/white; AI intent; the only Rovo background, so emphasis unbound; close: a brand treatment of AI.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-ai/property-background broad."
       }
     },
     {
@@ -8943,13 +9082,56 @@
       "concept": "dsi:concept/color/intent-ai/property-background/emphasis-strong",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Rovo (Atlassian AI) brand bold bg.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-ai/property-background broad."
+      }
+    },
+    {
+      "id": "m-fdc7f09ed8a0",
+      "token": "color.rovo.background.brand.bold.default",
+      "concept": "dsi:concept/color/intent-ai/property-background",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/intent-ai/property-background.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
+      }
+    },
+    {
+      "id": "m-174de9cf34d9",
+      "token": "color.rovo.background.brand.bold.hovered",
+      "concept": "dsi:concept/color/intent-ai/property-background/state-hover",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/intent-ai/property-background/state-hover.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -8958,13 +9140,18 @@
       "concept": "dsi:concept/color/intent-ai/property-background/emphasis-strong/state-hover",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover of Rovo brand bold.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-ai/property-background/state-hover broad."
       }
     },
     {
@@ -8973,13 +9160,37 @@
       "concept": "dsi:concept/color/intent-ai/property-background/state-hover",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Rovo (Atlassian AI) brand background, black/white; AI intent; the only Rovo background, so emphasis unbound; close: a brand treatment of AI; hovered state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-ai/property-background/state-hover broad."
+      }
+    },
+    {
+      "id": "m-200ea32478de",
+      "token": "color.rovo.background.brand.bold.pressed",
+      "concept": "dsi:concept/color/intent-ai/property-background/state-active",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/intent-ai/property-background/state-active.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -8988,13 +9199,18 @@
       "concept": "dsi:concept/color/intent-ai/property-background/state-active",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Rovo (Atlassian AI) brand background, black/white; AI intent; the only Rovo background, so emphasis unbound; close: a brand treatment of AI; pressed state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-ai/property-background/state-active broad."
       }
     },
     {
@@ -9003,13 +9219,18 @@
       "concept": "dsi:concept/color/intent-ai/property-background/emphasis-strong/state-active",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Pressed of Rovo brand bold.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-ai/property-background/state-active broad."
       }
     },
     {
@@ -9017,14 +9238,18 @@
       "token": "color.rovo.border.blue",
       "concept": "dsi:concept/color/intent-ai/property-border",
       "match": "broad",
-      "confidence": 0.62,
-      "status": "proposed",
-      "rationale": "One of four Rovo (AI) brand hues for borders; hue cannot bind outside categorical (ADR 0017), so one case of AI border -> broad (like Carbon ai-aura stops, ADR 0008).",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "One of the four Rovo (Atlassian AI) brand palette borders (blue, purple, saffron, lime), used for Rovo branded borders in generative states. The AI border concept is broader: this token is one specific hue of it. Hue cannot bind without usage categorical (ADR 0017), so the blue identity stays native.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -9032,14 +9257,18 @@
       "token": "color.rovo.border.lime",
       "concept": "dsi:concept/color/intent-ai/property-border",
       "match": "broad",
-      "confidence": 0.62,
-      "status": "proposed",
-      "rationale": "One of four Rovo (AI) brand hues for borders; hue cannot bind outside categorical (ADR 0017), so one case of AI border -> broad (like Carbon ai-aura stops, ADR 0008).",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "One of the four Rovo (Atlassian AI) brand palette borders (blue, purple, saffron, lime), used for Rovo branded borders in generative states. The AI border concept is broader: this token is one specific hue of it. Hue cannot bind without usage categorical (ADR 0017), so the lime identity stays native.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -9047,14 +9276,18 @@
       "token": "color.rovo.border.purple",
       "concept": "dsi:concept/color/intent-ai/property-border",
       "match": "broad",
-      "confidence": 0.62,
-      "status": "proposed",
-      "rationale": "One of four Rovo (AI) brand hues for borders; hue cannot bind outside categorical (ADR 0017), so one case of AI border -> broad (like Carbon ai-aura stops, ADR 0008).",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "One of the four Rovo (Atlassian AI) brand palette borders (blue, purple, saffron, lime), used for Rovo branded borders in generative states. The AI border concept is broader: this token is one specific hue of it. Hue cannot bind without usage categorical (ADR 0017), so the purple identity stays native.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -9062,14 +9295,18 @@
       "token": "color.rovo.border.saffron",
       "concept": "dsi:concept/color/intent-ai/property-border",
       "match": "broad",
-      "confidence": 0.62,
-      "status": "proposed",
-      "rationale": "One of four Rovo (AI) brand hues for borders; hue cannot bind outside categorical (ADR 0017), so one case of AI border -> broad (like Carbon ai-aura stops, ADR 0008).",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "One of the four Rovo (Atlassian AI) brand palette borders (blue, purple, saffron, lime), used for Rovo branded borders in generative states. The AI border concept is broader: this token is one specific hue of it. Hue cannot bind without usage categorical (ADR 0017), so the saffron identity stays native.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -9077,14 +9314,18 @@
       "token": "color.rovo.icon.blue",
       "concept": "dsi:concept/color/intent-ai/property-icon",
       "match": "broad",
-      "confidence": 0.62,
-      "status": "proposed",
-      "rationale": "One of four Rovo (AI) brand hues for icons; hue cannot bind outside categorical, so one case of AI icon -> broad.",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "One of the four Rovo (Atlassian AI) brand palette icon colors (blue, purple, saffron, lime), used for the Rovo logo and spot illustrations. The AI icon concept is broader: this token is one specific hue of it; hue cannot bind without usage categorical (ADR 0017).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -9092,14 +9333,18 @@
       "token": "color.rovo.icon.lime",
       "concept": "dsi:concept/color/intent-ai/property-icon",
       "match": "broad",
-      "confidence": 0.62,
-      "status": "proposed",
-      "rationale": "One of four Rovo (AI) brand hues for icons; hue cannot bind outside categorical, so one case of AI icon -> broad.",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "One of the four Rovo (Atlassian AI) brand palette icon colors (blue, purple, saffron, lime), used for the Rovo logo and spot illustrations. The AI icon concept is broader: this token is one specific hue of it; hue cannot bind without usage categorical (ADR 0017).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -9107,14 +9352,18 @@
       "token": "color.rovo.icon.purple",
       "concept": "dsi:concept/color/intent-ai/property-icon",
       "match": "broad",
-      "confidence": 0.62,
-      "status": "proposed",
-      "rationale": "One of four Rovo (AI) brand hues for icons; hue cannot bind outside categorical, so one case of AI icon -> broad.",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "One of the four Rovo (Atlassian AI) brand palette icon colors (blue, purple, saffron, lime), used for the Rovo logo and spot illustrations. The AI icon concept is broader: this token is one specific hue of it; hue cannot bind without usage categorical (ADR 0017).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -9122,14 +9371,18 @@
       "token": "color.rovo.icon.saffron",
       "concept": "dsi:concept/color/intent-ai/property-icon",
       "match": "broad",
-      "confidence": 0.62,
-      "status": "proposed",
-      "rationale": "One of four Rovo (AI) brand hues for icons; hue cannot bind outside categorical, so one case of AI icon -> broad.",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "One of the four Rovo (Atlassian AI) brand palette icon colors (blue, purple, saffron, lime), used for the Rovo logo and spot illustrations. The AI icon concept is broader: this token is one specific hue of it; hue cannot bind without usage categorical (ADR 0017).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -9987,13 +10240,18 @@
       "concept": "dsi:concept/color/intent-danger/property-text/emphasis-stronger",
       "match": "close",
       "confidence": 0.68,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Text on danger semantic labels (lozenges on subtler danger backgrounds); higher contrast than color.text.danger in both modes -> stronger (Atlassian bolder); close: scoped to label text.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/intent-danger/usage-on-fill/property-text/emphasis-subtle close."
       }
     },
     {
@@ -10002,13 +10260,17 @@
       "concept": "dsi:concept/color/intent-danger/usage-on-fill/property-text/emphasis-subtle",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "approved",
       "rationale": "Text on danger labels (light containers): on-fill, subtle container convention.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-danger/property-text/emphasis-stronger close."
       }
     },
     {
@@ -10097,13 +10359,18 @@
       "concept": "dsi:concept/color/intent-info/property-text/emphasis-stronger",
       "match": "close",
       "confidence": 0.68,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Text on information semantic labels (lozenges on subtler information backgrounds); higher contrast than color.text.information in both modes -> stronger (Atlassian bolder); close: scoped to label text.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/intent-info/usage-on-fill/property-text/emphasis-subtle close."
       }
     },
     {
@@ -10112,13 +10379,17 @@
       "concept": "dsi:concept/color/intent-info/usage-on-fill/property-text/emphasis-subtle",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "approved",
       "rationale": "Text on info labels (light containers).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-info/property-text/emphasis-stronger close."
       }
     },
     {
@@ -10247,13 +10518,17 @@
       "concept": "dsi:concept/color/intent-success/usage-on-fill/property-text/emphasis-subtle",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "approved",
       "rationale": "Text on success labels (light containers).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-success/property-text/emphasis-stronger close."
       }
     },
     {
@@ -10262,13 +10537,18 @@
       "concept": "dsi:concept/color/intent-success/property-text/emphasis-stronger",
       "match": "close",
       "confidence": 0.68,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Text on success semantic labels (lozenges on subtler success backgrounds); higher contrast than color.text.success in both modes -> stronger (Atlassian bolder); close: scoped to label text.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/intent-success/usage-on-fill/property-text/emphasis-subtle close."
       }
     },
     {
@@ -10297,13 +10577,17 @@
       "concept": "dsi:concept/color/intent-warning/usage-on-fill/property-text/emphasis-subtle",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "approved",
       "rationale": "Text on warning labels (light containers).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-warning/property-text/emphasis-stronger close."
       }
     },
     {
@@ -10312,13 +10596,18 @@
       "concept": "dsi:concept/color/intent-warning/property-text/emphasis-stronger",
       "match": "close",
       "confidence": 0.68,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Text on warning semantic labels (lozenges on subtler warning backgrounds); higher contrast than color.text.warning in both modes -> stronger (Atlassian bolder); close: scoped to label text.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/intent-warning/usage-on-fill/property-text/emphasis-subtle close."
       }
     },
     {
@@ -10444,13 +10733,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background",
       "match": "close",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Translucent neutral container surface; close as it tints whatever is beneath; matches approved hovered/pressed siblings.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-surface/property-background broad."
       }
     },
     {
@@ -10459,13 +10753,17 @@
       "concept": "dsi:concept/color/usage-surface/property-background",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Neutral container surface, one surface level.",
+      "status": "approved",
+      "rationale": "'Use as a neutral container surface background': a translucent neutral tint (Neutral100A / DarkNeutral100A) for containers placed on the page, which is the surface concept's definition. Emphasis unbound: Atlassian's surface levels (sunken, container, raised) do not form a clean lightness ladder (raised equals the page in light mode).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -10533,14 +10831,18 @@
       "token": "elevation.surface.default.hovered",
       "concept": "dsi:concept/color/usage-page/property-background/state-hover",
       "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Primary background for the UI (white / #1f1f21): the page background; hovered state, close as a page rarely takes interaction states.",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "Hover state of elevation.surface, 'the primary background for the UI' (page). Neutral0 -> Neutral200.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -10548,14 +10850,18 @@
       "token": "elevation.surface.default.pressed",
       "concept": "dsi:concept/color/usage-page/property-background/state-active",
       "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Primary background for the UI (white / #1f1f21): the page background; pressed state, close as a page rarely takes interaction states.",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "Pressed state of elevation.surface, the primary UI background (page). Neutral0 -> Neutral300.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.195Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.195Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {

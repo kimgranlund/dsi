@@ -444,14 +444,18 @@
       "token": "bgColor.closed.emphasis",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-strong",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub closed issue/PR state, aliased to danger; a workflow state, not an error. Gap: lifecycle status (open, closed, merged/done, draft). Emphasis variant: strongest contrast of the pair (muted/emphasis -> subtle/strong).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-danger/property-background/emphasis-strong broad."
       }
     },
     {
@@ -459,14 +463,18 @@
       "token": "bgColor.closed.muted",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub closed issue/PR state, aliased to danger; a workflow state, not an error. Gap: lifecycle status (open, closed, merged/done, draft). Muted variant: lighter/translucent, subtle.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-danger/property-background/emphasis-subtle broad."
       }
     },
     {
@@ -592,14 +600,18 @@
       "token": "bgColor.draft.emphasis",
       "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-strong",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub draft state, aliased to neutral; a workflow state. Gap: lifecycle status. Emphasis variant: strongest contrast of the pair (muted/emphasis -> subtle/strong).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-neutral/property-background/emphasis-strong broad."
       }
     },
     {
@@ -607,14 +619,18 @@
       "token": "bgColor.draft.muted",
       "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-subtle",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub draft state, aliased to neutral; a workflow state. Gap: lifecycle status. Muted variant: lighter/translucent, subtle.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-neutral/property-background/emphasis-subtle broad."
       }
     },
     {
@@ -622,14 +638,18 @@
       "token": "bgColor.emphasis",
       "concept": "dsi:concept/color/property-background/emphasis-strong",
       "match": "close",
-      "confidence": 0.65,
-      "status": "proposed",
-      "rationale": "High-emphasis dark neutral background for contrast; no intent.",
+      "confidence": 0.6,
+      "status": "approved",
+      "rationale": "'High-emphasis dark background for strong visual contrast' (neutral.12 light, neutral.7 dark), paired with fgColor.onEmphasis. Strongest-contrast member of the default/muted/inset/emphasis family. Not inverse: Primer ships a separate bgColor.inverse that flips between modes (ADR 0018); in dark this stays a dark gray.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:57:08.231Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -638,13 +658,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-strong",
       "match": "exact",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "High-emphasis neutral dark fill; does not flip between modes (dark is #3d444d), so not inverse.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:57:07Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/property-background/emphasis-strong close."
       }
     },
     {
@@ -652,14 +677,18 @@
       "token": "bgColor.inset",
       "concept": "dsi:concept/color/usage-surface/property-background",
       "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Recessed well/sunken panel background (light = muted, dark below page); one specific surface level.",
+      "confidence": 0.55,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/usage-surface/property-background.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -757,14 +786,18 @@
       "token": "bgColor.open.emphasis",
       "concept": "dsi:concept/color/intent-success/property-background/emphasis-strong",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub open issue/PR state, aliased to success; a workflow state, not a positive outcome. Gap: lifecycle status. Emphasis variant: strongest contrast of the pair (muted/emphasis -> subtle/strong).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-success/property-background/emphasis-strong broad."
       }
     },
     {
@@ -772,14 +805,18 @@
       "token": "bgColor.open.muted",
       "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub open issue/PR state, aliased to success; a workflow state, not a positive outcome. Gap: lifecycle status. Muted variant: lighter/translucent, subtle.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-success/property-background/emphasis-subtle broad."
       }
     },
     {
@@ -788,13 +825,17 @@
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-strong",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
-      "rationale": "Orange high-priority warning, between attention and danger; one case of warning.",
+      "status": "approved",
+      "rationale": "Strong bgColor of the severe role; Primer's muted/emphasis pair is a two-step ladder whose contrast rank matches subtle/strong. Severe is Primer's higher-priority warning (orange) above attention (yellow) and below danger; the ontology has no severity ladder inside Warning, so Warning with the severity as the nuance. Muted/emphasis already fix the emphasis step, so severity cannot take it.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:57:08.231Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -803,13 +844,18 @@
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-strong",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Primer severe is a high-priority warning between attention and danger; mapped to Warning with the nuance that it is more severe. Gap: severity level within warning. Emphasis variant: strongest contrast of the pair (muted/emphasis -> subtle/strong).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:57:07Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/intent-warning/property-background/emphasis-strong broad."
       }
     },
     {
@@ -818,13 +864,17 @@
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
-      "rationale": "Orange tint for high-priority warnings.",
+      "status": "approved",
+      "rationale": "Subtle bgColor of the severe role; Primer's muted/emphasis pair is a two-step ladder whose contrast rank matches subtle/strong. Severe is Primer's higher-priority warning (orange) above attention (yellow) and below danger; the ontology has no severity ladder inside Warning, so Warning with the severity as the nuance. Muted/emphasis already fix the emphasis step, so severity cannot take it.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:57:08.231Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -833,13 +883,18 @@
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Primer severe is a high-priority warning between attention and danger; mapped to Warning with the nuance that it is more severe. Gap: severity level within warning. Muted variant: lighter/translucent, subtle.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:57:07Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/intent-warning/property-background/emphasis-subtle broad."
       }
     },
     {
@@ -1142,14 +1197,18 @@
       "token": "borderColor.closed.emphasis",
       "concept": "dsi:concept/color/intent-danger/property-border/emphasis-strong",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub closed issue/PR state, aliased to danger; a workflow state, not an error. Gap: lifecycle status (open, closed, merged/done, draft). Emphasis variant: strongest contrast of the pair (muted/emphasis -> subtle/strong).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-danger/property-border/emphasis-strong broad."
       }
     },
     {
@@ -1157,14 +1216,18 @@
       "token": "borderColor.closed.muted",
       "concept": "dsi:concept/color/intent-danger/property-border/emphasis-subtle",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub closed issue/PR state, aliased to danger; a workflow state, not an error. Gap: lifecycle status (open, closed, merged/done, draft). Muted variant: lighter/translucent, subtle.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-danger/property-border/emphasis-subtle broad."
       }
     },
     {
@@ -1349,14 +1412,18 @@
       "token": "borderColor.draft.emphasis",
       "concept": "dsi:concept/color/intent-neutral/property-border/emphasis-strong",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub draft state, aliased to neutral; a workflow state. Gap: lifecycle status. Emphasis variant: strongest contrast of the pair (muted/emphasis -> subtle/strong).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-neutral/property-border/emphasis-strong broad."
       }
     },
     {
@@ -1364,14 +1431,18 @@
       "token": "borderColor.draft.muted",
       "concept": "dsi:concept/color/intent-neutral/property-border/emphasis-subtle",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub draft state, aliased to neutral; a workflow state. Gap: lifecycle status. Muted variant: lighter/translucent, subtle.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-neutral/property-border/emphasis-subtle broad."
       }
     },
     {
@@ -1478,14 +1549,18 @@
       "token": "borderColor.open.emphasis",
       "concept": "dsi:concept/color/intent-success/property-border/emphasis-strong",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub open issue/PR state, aliased to success; a workflow state, not a positive outcome. Gap: lifecycle status. Emphasis variant: strongest contrast of the pair (muted/emphasis -> subtle/strong).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-success/property-border/emphasis-strong broad."
       }
     },
     {
@@ -1493,14 +1568,18 @@
       "token": "borderColor.open.muted",
       "concept": "dsi:concept/color/intent-success/property-border/emphasis-subtle",
       "match": "related",
-      "confidence": 0.55,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "GitHub open issue/PR state, aliased to success; a workflow state, not a positive outcome. Gap: lifecycle status. Muted variant: lighter/translucent, subtle.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-success/property-border/emphasis-subtle broad."
       }
     },
     {
@@ -1509,13 +1588,18 @@
       "concept": "dsi:concept/color/intent-warning/property-border/emphasis-strong",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Primer severe is a high-priority warning between attention and danger; mapped to Warning with the nuance that it is more severe. Gap: severity level within warning. Emphasis variant: strongest contrast of the pair (muted/emphasis -> subtle/strong).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:57:07Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/intent-warning/property-border/emphasis-strong broad."
       }
     },
     {
@@ -1524,13 +1608,17 @@
       "concept": "dsi:concept/color/intent-warning/property-border/emphasis-strong",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
-      "rationale": "Orange severe border; one case of warning.",
+      "status": "approved",
+      "rationale": "Strong borderColor of the severe role; Primer's muted/emphasis pair is a two-step ladder whose contrast rank matches subtle/strong. Severe is Primer's higher-priority warning (orange) above attention (yellow) and below danger; the ontology has no severity ladder inside Warning, so Warning with the severity as the nuance. Muted/emphasis already fix the emphasis step, so severity cannot take it.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:57:08.231Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -1539,13 +1627,17 @@
       "concept": "dsi:concept/color/intent-warning/property-border/emphasis-subtle",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
-      "rationale": "Orange subtle severe border.",
+      "status": "approved",
+      "rationale": "Subtle borderColor of the severe role; Primer's muted/emphasis pair is a two-step ladder whose contrast rank matches subtle/strong. Severe is Primer's higher-priority warning (orange) above attention (yellow) and below danger; the ontology has no severity ladder inside Warning, so Warning with the severity as the nuance. Muted/emphasis already fix the emphasis step, so severity cannot take it.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:57:08.231Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -1554,13 +1646,18 @@
       "concept": "dsi:concept/color/intent-warning/property-border/emphasis-subtle",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Primer severe is a high-priority warning between attention and danger; mapped to Warning with the nuance that it is more severe. Gap: severity level within warning. Muted variant: lighter/translucent, subtle.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:57:07Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/intent-warning/property-border/emphasis-subtle broad."
       }
     },
     {
@@ -1648,14 +1745,18 @@
       "token": "borderColor.translucent",
       "concept": "dsi:concept/color/property-border",
       "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "Semi-transparent border for overlays and layered elements; one specific (translucent) border case.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-overlay/property-border close."
       }
     },
     {
@@ -2039,13 +2140,17 @@
       "concept": "dsi:concept/color/usage-code-surface/property-foreground",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "approved",
       "rationale": "Caret color; one specific case of editor foreground.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:57:08.231Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered no concept."
       }
     },
     {
@@ -2250,14 +2355,18 @@
       "token": "codeMirror.gutters.bgColor",
       "concept": "dsi:concept/color/usage-code-surface/property-background",
       "match": "broad",
-      "confidence": 0.9,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "Editor gutter background. Intended part-gutter (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-code-surface/part-gutter/property-background exact."
       }
     },
     {
@@ -2265,14 +2374,18 @@
       "token": "codeMirror.lineNumber.fgColor",
       "concept": "dsi:concept/color/usage-code-surface/property-text",
       "match": "broad",
-      "confidence": 0.9,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "Line number text color. Intended part-line-number (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-code-surface/part-line-number/property-text exact."
       }
     },
     {
@@ -2280,14 +2393,18 @@
       "token": "codeMirror.lines.bgColor",
       "concept": "dsi:concept/color/usage-code-surface/property-background",
       "match": "broad",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Background of code lines. Intended part-line (ADR 0018) dropped: the concept validator rejects part without a component.",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Background of the editor's lines (content) area = bgColor.default: the code-surface background itself, not a single line.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -2431,13 +2548,17 @@
       "concept": "dsi:concept/color/syntax-definition-keyword/property-text",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "approved",
       "rationale": "CodeMirror syntax color for TextMate scope storage -> Lezer definition-keyword.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/syntax-keyword/property-text broad."
       }
     },
     {
@@ -2466,13 +2587,17 @@
       "concept": "dsi:concept/color/syntax-standard/property-text",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "CodeMirror syntax color for TextMate scope support -> Lezer standard.",
+      "status": "approved",
+      "rationale": "TextMate 'support' (library and built-in functions, classes, constants) in the editor; Lezer standard marks 'names that are part of the language or standard library'. Nuance: editor-only.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -3677,14 +3802,18 @@
       "token": "diffBlob.additionNum.bgColor",
       "concept": "dsi:concept/color/usage-code-surface/syntax-inserted/property-background",
       "match": "broad",
-      "confidence": 0.85,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "Line-number cell background on a addition line. Intended part-line-number (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-code-surface/syntax-inserted/part-line-number/property-background exact."
       }
     },
     {
@@ -3692,14 +3821,18 @@
       "token": "diffBlob.additionNum.fgColor",
       "concept": "dsi:concept/color/usage-code-surface/syntax-inserted/property-text",
       "match": "broad",
-      "confidence": 0.8,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "Line-number text on a addition line. Intended part-line-number (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-code-surface/syntax-inserted/part-line-number/property-text exact."
       }
     },
     {
@@ -3807,14 +3940,18 @@
       "token": "diffBlob.deletionNum.bgColor",
       "concept": "dsi:concept/color/usage-code-surface/syntax-deleted/property-background",
       "match": "broad",
-      "confidence": 0.85,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "Line-number cell background on a deletion line. Intended part-line-number (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-code-surface/syntax-deleted/part-line-number/property-background exact."
       }
     },
     {
@@ -3822,14 +3959,18 @@
       "token": "diffBlob.deletionNum.fgColor",
       "concept": "dsi:concept/color/usage-code-surface/syntax-deleted/property-text",
       "match": "broad",
-      "confidence": 0.8,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "Line-number text on a deletion line. Intended part-line-number (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-code-surface/syntax-deleted/part-line-number/property-text exact."
       }
     },
     {
@@ -3877,14 +4018,18 @@
       "token": "diffBlob.emptyLine.bgColor",
       "concept": "dsi:concept/color/usage-code-surface/property-background",
       "match": "broad",
-      "confidence": 0.65,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "Background of the empty side of a split diff; one specific line case. Intended part-line (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-code-surface/part-line/property-background/emphasis-subtle close."
       }
     },
     {
@@ -3892,14 +4037,18 @@
       "token": "diffBlob.emptyNum.bgColor",
       "concept": "dsi:concept/color/usage-code-surface/property-background",
       "match": "broad",
-      "confidence": 0.65,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "Line-number cell background on an empty split-diff line. Intended part-line-number (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-code-surface/part-line-number/property-background/emphasis-subtle close."
       }
     },
     {
@@ -3907,14 +4056,18 @@
       "token": "diffBlob.expander.iconColor",
       "concept": "dsi:concept/color/usage-code-surface/property-icon",
       "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Icon color of the hunk expander control in a diff.",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/usage-code-surface/property-icon.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -13793,13 +13946,18 @@
       "concept": "dsi:concept/color/intent-warning/property-text",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Orange high-priority warning text; one case of warning.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:57:08.231Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/intent-warning/property-foreground close."
       }
     },
     {
@@ -13808,13 +13966,17 @@
       "concept": "dsi:concept/color/intent-warning/property-foreground",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "approved",
       "rationale": "Primer severe is a high-priority warning between attention and danger; mapped to Warning with the nuance that it is more severe. Gap: severity level within warning. Primer fgColor colors text and icons; single member, emphasis unbound.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/intent-warning/property-text broad."
       }
     },
     {
@@ -13921,13 +14083,17 @@
       "concept": "dsi:concept/color/property-focus-ring",
       "match": "narrow",
       "confidence": 0.5,
-      "status": "proposed",
-      "rationale": "Composite outline (width, style, color); also carries non-color parts.",
+      "status": "approved",
+      "rationale": "'Focus ring outline for keyboard navigation and accessibility': composite border (2px solid borderColor.accent.emphasis). Every use is a focus ring; the token also carries width and style.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:57:08.231Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -13936,13 +14102,18 @@
       "concept": "dsi:concept/color/property-focus-ring",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Composite focus outline (width, style and color); the color part is the focus ring, the token also carries width and style.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:57:07Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/property-focus-ring narrow."
       }
     },
     {
@@ -14394,13 +14565,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Page header component background; one surface case.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:57:08.231Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-navigation/property-background close."
       }
     },
     {
@@ -14409,13 +14585,17 @@
       "concept": "dsi:concept/color/usage-navigation/property-background",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "approved",
       "rationale": "Background of the page header region (repo/page header with navigation tabs): muted in light, page color in dark.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-surface/property-background broad."
       }
     },
     {
@@ -14462,14 +14642,18 @@
       "token": "prettylights.syntax.brackethighlighter.unmatched",
       "concept": "dsi:concept/color/syntax-invalid/property-text",
       "match": "close",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Deprecated alias of prettylights.syntax.bracketHighlighterUnmatched; same meaning. Prettylights syntax highlighting: Bracket-highlighter color for unmatched brackets, an invalid construct. (ADR 0012 Lezer tag).",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "Deprecated alias of prettylights.syntax.bracketHighlighterUnmatched (same value in every theme). 'Syntax highlighting color for unmatched brackets' (red.7 / red.4): an error marking in code; Lezer invalid covers erroneous code. Nuance: limited to brackets.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -14516,14 +14700,18 @@
       "token": "prettylights.syntax.bracketHighlighterUnmatched",
       "concept": "dsi:concept/color/syntax-invalid/property-text",
       "match": "close",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Prettylights syntax highlighting: Bracket-highlighter color for unmatched brackets, an invalid construct. (ADR 0012 Lezer tag).",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "'Syntax highlighting color for unmatched brackets' (red.7 / red.4): an error marking in code; Lezer invalid covers erroneous code. Nuance: limited to brackets.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -14662,13 +14850,17 @@
       "concept": "dsi:concept/color/syntax-link/property-text",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Deprecated alias of prettylights.syntax.constantOtherReferenceLink; same meaning. Prettylights syntax highlighting: Reference links and URLs in code (TextMate constant.other.reference.link). (ADR 0012 Lezer tag).",
+      "status": "approved",
+      "rationale": "Deprecated alias of prettylights.syntax.constantOtherReferenceLink (same value in every theme). 'Syntax highlighting color for reference links and URLs in code' (TextMate constant.other.reference.link, markdown reference links); Lezer link; nuance: also plain URLs (Lezer url).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -14677,13 +14869,17 @@
       "concept": "dsi:concept/color/syntax-link/property-text",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Prettylights syntax highlighting: Reference links and URLs in code (TextMate constant.other.reference.link). (ADR 0012 Lezer tag).",
+      "status": "approved",
+      "rationale": "'Syntax highlighting color for reference links and URLs in code' (TextMate constant.other.reference.link, markdown reference links); Lezer link; nuance: also plain URLs (Lezer url).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -15159,14 +15355,18 @@
       "token": "prettylights.syntax.storage.modifier.import",
       "concept": "dsi:concept/color/syntax-module-keyword/property-text",
       "match": "close",
-      "confidence": 0.72,
-      "status": "proposed",
-      "rationale": "Deprecated alias of prettylights.syntax.storageModifierImport; same meaning. Prettylights syntax highlighting: import/require statements (module keywords). (ADR 0012 Lezer tag).",
+      "confidence": 0.65,
+      "status": "approved",
+      "rationale": "Deprecated alias of prettylights.syntax.storageModifierImport (same value in every theme). 'Syntax highlighting color for import and require statements'; Lezer moduleKeyword = keywords for defining or interfacing with modules (import, export).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -15174,14 +15374,18 @@
       "token": "prettylights.syntax.storageModifierImport",
       "concept": "dsi:concept/color/syntax-module-keyword/property-text",
       "match": "close",
-      "confidence": 0.72,
-      "status": "proposed",
-      "rationale": "Prettylights syntax highlighting: import/require statements (module keywords). (ADR 0012 Lezer tag).",
+      "confidence": 0.65,
+      "status": "approved",
+      "rationale": "'Syntax highlighting color for import and require statements'; Lezer moduleKeyword = keywords for defining or interfacing with modules (import, export).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -15249,14 +15453,18 @@
       "token": "prettylights.syntax.sublimelinter.gutter.mark",
       "concept": "dsi:concept/color/usage-code-surface/property-foreground",
       "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "Deprecated alias of prettylights.syntax.sublimeLinterGutterMark; same meaning. Linter mark shown in the editor gutter. Intended part-gutter (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-code-surface/part-gutter/property-foreground broad."
       }
     },
     {
@@ -15264,14 +15472,18 @@
       "token": "prettylights.syntax.sublimeLinterGutterMark",
       "concept": "dsi:concept/color/usage-code-surface/property-foreground",
       "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
+      "confidence": 0.5,
+      "status": "approved",
       "rationale": "Linter mark shown in the editor gutter. Intended part-gutter (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/color/usage-code-surface/part-gutter/property-foreground broad."
       }
     },
     {
@@ -15338,14 +15550,18 @@
       "token": "shadow.floating.large",
       "concept": "dsi:concept/color/usage-overlay/property-shadow",
       "match": "broad",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Floating shadow, large, for overlays (menus, popovers, dialogs); one specific level.",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/usage-overlay/property-shadow.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -15353,14 +15569,18 @@
       "token": "shadow.floating.medium",
       "concept": "dsi:concept/color/usage-overlay/property-shadow",
       "match": "broad",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Floating shadow, medium, for overlays (menus, popovers, dialogs); one specific level.",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/usage-overlay/property-shadow.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -15368,14 +15588,18 @@
       "token": "shadow.floating.small",
       "concept": "dsi:concept/color/usage-overlay/property-shadow",
       "match": "broad",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Floating shadow, small, for overlays (menus, popovers, dialogs); one specific level.",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/usage-overlay/property-shadow.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -15383,14 +15607,18 @@
       "token": "shadow.floating.xlarge",
       "concept": "dsi:concept/color/usage-overlay/property-shadow",
       "match": "broad",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Floating shadow, xlarge, for overlays (menus, popovers, dialogs); one specific level.",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/usage-overlay/property-shadow.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -15398,14 +15626,18 @@
       "token": "shadow.inset",
       "concept": "dsi:concept/color/property-shadow",
       "match": "broad",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Inset shadow for recessed elements; one specific shadow.",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "'Inset shadow for recessed elements' (inset 0 1px 0 0): a shadow, but inward. Nuance: the ontology has no inset/recessed distinction.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
       }
     },
     {
@@ -15413,14 +15645,18 @@
       "token": "shadow.resting.medium",
       "concept": "dsi:concept/color/property-shadow",
       "match": "broad",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Resting (on-page) elevation shadow, medium; one specific shadow level.",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/property-shadow.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -15428,14 +15664,18 @@
       "token": "shadow.resting.small",
       "concept": "dsi:concept/color/property-shadow",
       "match": "broad",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Resting (on-page) elevation shadow, small; one specific shadow level.",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/property-shadow.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -15443,14 +15683,18 @@
       "token": "shadow.resting.xsmall",
       "concept": "dsi:concept/color/property-shadow",
       "match": "broad",
-      "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Resting (on-page) elevation shadow, xsmall; one specific shadow level.",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/property-shadow.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
       }
     },
     {
@@ -16717,17 +16961,6 @@
         "by": "agreement",
         "at": "2026-11-01T14:57:51.795Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fully transparent fixed value; no concept."
-      }
-    },
-    {
-      "token": "codeMirror.cursor.fgColor",
-      "status": "proposed",
-      "rationale": "Editor caret color. Gap: no caret/cursor property.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
       }
     },
     {
