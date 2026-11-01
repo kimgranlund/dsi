@@ -26,6 +26,7 @@ A public, searchable index of design-system tokens. Each system's shipped tokens
 | Query database, search | `packages/db/README.md` | `docs/planning/repo-layout.md` |
 | Explorer site | `site/README.md` | `packages/db/README.md` |
 | Data file shape or validation rule | `packages/schema/README.md` | `ontology/README.md` |
+| Naming, definitions, wording rules (controlled language), concept registry | `docs/controlled-language.md` | `docs/decisions/0019-controlled-language-and-concept-registry.md` |
 
 ## Invariants
 
