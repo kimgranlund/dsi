@@ -7,7 +7,7 @@ Non-color tokens are mostly scales: `spacing-400`, `shape.corner-medium`, `font-
 
 ## Decision
 - A scale token maps to one **role concept** per property: `dsi:concept/<domain>/property-<role>`, e.g. `space/property-spacing`, `shape/property-corner-radius`, `typography/property-font-size`, `motion/property-duration`. The 21 role values live in `facet/property`; each names its domain with `dsi:inDomain`. The `layout` domain holds breakpoint and z-index.
-- Match type is `narrow`: each step is one point of the role's scale.
+- Match type is `broad`: each step covers one point of the role's scale, so the concept is broader than the token (`ontology/schemes/mapping.jsonld`; the token is the subject). Corrected 2026-11-01: the first text said narrow and map-scales-v1 wrote exact; map-scales-v2 supersedes those mappings.
 - The step is not a facet of the concept. It stays in the native name and value; the site aligns steps across systems by value on one ruler.
 - Mapping is deterministic (`classify map-scales`, method `map-scales-v1`): a token maps only when its whole name is explained by approved terms (role words, noise, step words) and its DTCG type fits the role (`ROLE_TYPES`). Anything else is a leftover with a reason, for agents or review. Step words are agreed in vocab rounds (`ignore: step`), as noise words are.
 - Named members of a role are step words too: easing curves (`emphasized`, `entrance`, `productive`, `ease-in`), keyframes (`fade`, `bounce`) and font families (`brand`, `plain`). They pick one member and stay native; comparing them across systems would need a new facet (owner decision, 2026-11-01).

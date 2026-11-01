@@ -111,21 +111,35 @@ if (cmd === 'derive') {
   const scoped = [...set.tokens.keys()].filter((p) => classify(terms, p, fileOf(p), 'color').scope === 'foundation' && domainOf(p) !== 'color').sort();
   const r = mapScales(o, terms, scoped.map((p) => ({ path: p, file: fileOf(p), type: scaleTypeOf(p) })), domainOfProperty);
   const file = JSON.parse(fs.readFileSync(mapFile, 'utf8'));
-  const settled = new Set([...file.mappings.filter((m: any) => m.status === 'approved').map((m: any) => m.token), ...(file.unmapped ?? []).filter((u: any) => u.status === 'approved').map((u: any) => u.token)]);
+  // Judgments by people or agents are never changed. Mappings this command derived (method map-scales-*) are
+  // re-derived: when the terms now give another concept or match, the old one is superseded, not edited.
+  const derived = (m: any) => String(m.provenance?.method ?? '').startsWith('map-scales');
+  const settled = new Set([...file.mappings.filter((m: any) => m.status === 'approved' && !derived(m)).map((m: any) => m.token), ...(file.unmapped ?? []).filter((u: any) => u.status === 'approved').map((u: any) => u.token)]);
   const at = new Date().toISOString();
-  let added = 0;
+  const MATCH = 'broad'; // one step token covers part of its role: the concept is broader (ADR 0013)
+  let added = 0, superseded = 0;
+  const now = new Map(r.mapped.map((m) => [m.token, m.concept]));
+  for (const x of file.mappings) {
+    if (!derived(x) || x.status !== 'approved' || settled.has(x.token)) continue;
+    if (now.get(x.token) === x.concept && x.match === MATCH) continue;
+    x.status = now.has(x.token) ? 'superseded' : 'rejected'; x.review = { ...x.review, by: 'terms+classifier', at, note: now.has(x.token) ? `Re-derived as ${now.get(x.token)} (${MATCH}).` : 'The approved terms no longer explain this name.' };
+    superseded++;
+  }
+  const current = new Set(file.mappings.filter((x: any) => x.status === 'approved').map((x: any) => x.token));
   for (const m of r.mapped) {
-    if (settled.has(m.token)) continue;
-    const id = 'm-' + crypto.createHash('sha1').update([m.token, m.concept, 'exact'].join('|')).digest('hex').slice(0, 12);
+    if (settled.has(m.token) || current.has(m.token)) continue;
+    const id = 'm-' + crypto.createHash('sha1').update([m.token, m.concept, MATCH].join('|')).digest('hex').slice(0, 12);
     file.mappings = file.mappings.filter((x: any) => x.id !== id);
-    file.mappings.push({ id, token: m.token, concept: m.concept, match: 'exact', confidence: 1, status: 'approved', rationale: 'Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role (ADR 0013).', provenance: { agent: 'dsi-classify', at, method: 'map-scales-v1' }, review: { by: 'terms+classifier', at, note: 'Deterministic: every word is an approved term or a step word.' } });
+    file.mappings.push({ id, token: m.token, concept: m.concept, match: MATCH, confidence: 1, status: 'approved', rationale: 'Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role; a step covers part of its role (ADR 0013).', provenance: { agent: 'dsi-classify', at, method: 'map-scales-v2' }, review: { by: 'terms+classifier', at, note: 'Deterministic: every word is an approved term or a step word.' } });
     added++;
   }
+  const replacement = new Map(file.mappings.filter((x: any) => x.status === 'approved').map((x: any) => [x.token, x.id]));
+  for (const x of file.mappings) if (x.status === 'superseded' && derived(x) && !x.supersededBy && replacement.has(x.token)) x.supersededBy = replacement.get(x.token);
   file.mappings.sort((a: any, b: any) => a.token.localeCompare(b.token) || a.id.localeCompare(b.id));
   fs.writeFileSync(mapFile, JSON.stringify(file, null, 2) + '\n');
   const why: Record<string, number> = {};
   for (const l of r.leftovers) { const k = l.why.split(':')[0]; why[k] = (why[k] ?? 0) + 1; }
-  console.log(`${product}: ${scoped.length} foundation tokens; ${added} mapped (${r.mapped.length - added} already settled); ${r.leftovers.length} leftovers ${JSON.stringify(why)}`);
+  console.log(`${product}: ${scoped.length} foundation tokens; ${added} mapped, ${superseded} superseded (${r.mapped.length - added} already settled); ${r.leftovers.length} leftovers ${JSON.stringify(why)}`);
   for (const l of r.leftovers) console.log(`  ${l.token}: ${l.why}`);
 } else if (cmd === 'vocab-prepare' || cmd === 'vocab-check' || cmd === 'vocab-merge') {
   if (!run) { console.error(USAGE); process.exit(2); }
