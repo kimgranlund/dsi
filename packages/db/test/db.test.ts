@@ -45,7 +45,8 @@ test('site export: concepts carry only answered cells; token files keep alias ch
   const concepts = JSON.parse(fs.readFileSync(path.join(out, 'concepts.json'), 'utf8'));
   const dt = concepts.find((c: any) => c.name === 'danger-text');
   assert.equal(dt.cells.carbon.dark.t, 'text-error');
-  assert.equal(dt.cells.material, undefined, 'Material has no answer for danger text');
+  // ADR 0006 amended: Material error (mapped to the broader Danger) answers danger text, flagged nearest.
+  assert.deepEqual([dt.cells.material.light.s, dt.cells.material.light.t, dt.cells.material.light.via], ['nearest', 'md.sys.color.error', 'less-specific']);
   const carbon = JSON.parse(fs.readFileSync(path.join(out, 'tokens.carbon.json'), 'utf8'));
   const se = carbon.find((t: any) => t.p === 'support-error');
   assert.deepEqual(se.v.g100, ['#fa4d56', ['red.50']]);

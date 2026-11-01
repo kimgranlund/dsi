@@ -29,7 +29,7 @@ export interface Candidate {
   token: string;
   match: MatchType;
   /** 'direct' maps to the asked concept; 'more-specific' maps to a concept that adds facets to it. */
-  via: 'direct' | 'more-specific';
+  via: 'direct' | 'less-specific' | 'more-specific';
   concept: string;
   confidence: number;
   theme: string;
@@ -64,26 +64,35 @@ export function resolveConcept(o: Ontology, set: NativeSet, maps: MappingSet, co
     let via: Candidate['via'] | undefined;
     let extra: number | undefined, addsState: boolean | undefined;
     if (m.concept === concept) via = 'direct';
-    else if (want && (m.match === 'exact' || m.match === 'close')) {
+    else if (want) {
       const have = facetSet(o, m.concept);
-      if (have && have.size > want.size && [...want].every((f) => have.has(f))) {
-        via = 'more-specific';
+      if (have && (m.match === 'exact' || m.match === 'close') && have.size > want.size && [...want].every((f) => have.has(f))) {
         const added = [...have].filter((f) => !want.has(f));
+        // A state variant (hover, selected, visited) never answers a stateless concept: a hovered surface is not a surface.
+        if (added.some((f) => /:state-/.test(f))) continue;
+        via = 'more-specific';
         extra = added.length;
-        addsState = added.some((f) => f.includes(':state-'));
+        addsState = false;
+      } else if (have && (m.match === 'exact' || m.match === 'close' || m.match === 'narrow') && have.size < want.size && [...have].every((f) => want.has(f)) && [...have].some((f) => !f.endsWith(':domain')) && [...want].filter((f) => !have.has(f)).every((f) => /:property-/.test(f))) {
+        // A broader concept answers when only the property is unbound (Material primary = Accent answers Accent
+        // background): the token is that meaning's color for any property. Never across usage, emphasis or state.
+        via = 'less-specific';
+        extra = want.size - have.size;
       }
     }
     if (!via) continue;
     const r = resolve(set, theme, m.token);
+    if (r.value === undefined) continue; // no value in this theme: not an answer
     cands.push({ token: m.token, match: m.match, via, concept: m.concept, confidence: m.confidence, theme, chain: r.chain, type: r.type, value: r.value, display: showValue(r.type, r.value), extra, addsState });
   }
-  // Direct answers first; among more-specific ones, the closest superset: no added state (hover, selected...), then
-  // the fewest added facet values. Never an alphabetical accident.
-  cands.sort((a, b) => (a.via === b.via ? 0 : a.via === 'direct' ? -1 : 1) || Number(a.addsState ?? false) - Number(b.addsState ?? false) || (a.extra ?? 0) - (b.extra ?? 0) || RANK[a.match] - RANK[b.match] || b.confidence - a.confidence || a.token.localeCompare(b.token));
+  // Direct answers first, then a broader concept the token covers (fewest missing facets), then a narrower one
+  // (fewest added facets, never an added state). Never an alphabetical accident.
+  const VIA = { direct: 0, 'less-specific': 1, 'more-specific': 2 } as const;
+  cands.sort((a, b) => VIA[a.via] - VIA[b.via] || Number(a.addsState ?? false) - Number(b.addsState ?? false) || (a.extra ?? 0) - (b.extra ?? 0) || RANK[a.match] - RANK[b.match] || b.confidence - a.confidence || a.token.localeCompare(b.token));
   const top = cands[0];
   const t = theme || undefined;
   if (top && top.via === 'direct' && RANK[top.match] <= 1) return { ...base, theme: t, status: 'match', answer: top, candidates: cands };
-  if (top) return { ...base, theme: t, status: 'nearest', answer: top, candidates: cands, note: top.via === 'more-specific' ? `no direct mapping; ${top.token} maps to the more specific ${top.concept}` : `only a ${top.match} match` };
+  if (top) return { ...base, theme: t, status: 'nearest', answer: top, candidates: cands, note: top.via === 'more-specific' ? `no direct mapping; ${top.token} maps to the more specific ${top.concept}` : top.via === 'less-specific' ? `no direct mapping; ${top.token} maps to the broader ${top.concept}` : `only a ${top.match} match` };
   if (maps.noEquivalent.some((n) => n.status === 'approved' && n.concept === concept)) return { ...base, theme: t, status: 'absent', candidates: [] };
   return { ...base, theme: t, status: 'unknown', candidates: [] };
 }

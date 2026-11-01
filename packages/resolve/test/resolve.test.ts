@@ -58,13 +58,24 @@ test('approved exact/close answers; broad/narrow only as nearest; related and pr
   assert.equal(r.status, 'unknown');
 });
 
-test('a more specific exact mapping answers a broader concept only as nearest; a broader one never answers a narrower concept', () => {
+test('a more specific exact mapping answers a broader concept only as nearest; a sibling never answers', () => {
   const maps: MappingSet = { mappings: [m('danger', DANGER_BG, 'exact')], noEquivalent: [] };
   const a = resolveConcept(o, set, maps, DANGER, 'light');
   assert.deepEqual([a.status, a.answer?.via], ['nearest', 'more-specific']);
-  const up: MappingSet = { mappings: [m('danger', DANGER, 'exact')], noEquivalent: [] };
-  assert.equal(resolveConcept(o, set, up, DANGER_BG, 'light').status, 'unknown');
   assert.equal(resolveConcept(o, set, maps, DANGER_TEXT, 'light').status, 'unknown');
+});
+
+test('a broader mapping answers a narrower concept as nearest only when just the property is unbound (ADR 0006 amended)', () => {
+  const up: MappingSet = { mappings: [m('danger', DANGER, 'exact')], noEquivalent: [] };
+  const a = resolveConcept(o, set, up, DANGER_BG, 'light');
+  assert.deepEqual([a.status, a.answer?.via], ['nearest', 'less-specific']);
+  // Negative control: Danger never answers Danger on-fill text (a usage is missing, not just the property).
+  assert.equal(resolveConcept(o, set, up, 'dsi:concept/color/intent-danger/usage-on-fill/property-text', 'light').status, 'unknown');
+});
+
+test('a state variant never answers a stateless concept', () => {
+  const hov: MappingSet = { mappings: [m('danger', `${DANGER_BG}/state-hover`, 'exact')], noEquivalent: [] };
+  assert.equal(resolveConcept(o, set, hov, DANGER_BG, 'light').status, 'unknown');
 });
 
 test('absent needs an approved noEquivalent; an unmapped mode is unknown with a note', () => {

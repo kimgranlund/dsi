@@ -108,6 +108,34 @@
         "hex": "#ffffff"
       }
     },
+    "accent-text": {
+      "$description": "Accent · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-text",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-interactive",
+          "note": "no direct mapping; interactive maps to the broader dsi:concept/color/intent-accent",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "interactive",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
     "ai-background": {
       "$description": "AI · Background",
       "$extensions": {
@@ -408,34 +436,6 @@
           0.552941,
           0.552941
         ]
-      }
-    },
-    "background-disabled": {
-      "$description": "Background · Disabled",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/property-background/state-disabled",
-          "match": "exact",
-          "mode": "dark",
-          "nativeName": "--cds-layer-selected-disabled",
-          "note": "no direct mapping; layer-selected-disabled maps to the more specific dsi:concept/color/usage-surface/property-background/state-disabled+selected",
-          "product": "carbon",
-          "status": "nearest",
-          "theme": "g100",
-          "token": "layer-selected-disabled",
-          "version": "11.84.0",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.658824,
-          0.658824,
-          0.658824
-        ],
-        "hex": "#a8a8a8"
       }
     },
     "background-hover": {
@@ -3145,6 +3145,90 @@
         "hex": "#fa4d56"
       }
     },
+    "danger-background": {
+      "$description": "Danger · Background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-background",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-error",
+          "note": "no direct mapping; support-error maps to the broader dsi:concept/color/intent-danger",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-error",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.980392,
+          0.301961,
+          0.337255
+        ],
+        "hex": "#fa4d56"
+      }
+    },
+    "danger-border": {
+      "$description": "Danger · Border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-border",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-error",
+          "note": "no direct mapping; support-error maps to the broader dsi:concept/color/intent-danger",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-error",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.980392,
+          0.301961,
+          0.337255
+        ],
+        "hex": "#fa4d56"
+      }
+    },
+    "danger-icon": {
+      "$description": "Danger · Icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-icon",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-error",
+          "note": "no direct mapping; support-error maps to the broader dsi:concept/color/intent-danger",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-error",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.980392,
+          0.301961,
+          0.337255
+        ],
+        "hex": "#fa4d56"
+      }
+    },
     "danger-inverse": {
       "$description": "Danger · Inverse",
       "$extensions": {
@@ -3417,6 +3501,90 @@
         "hex": "#4589ff"
       }
     },
+    "info-background": {
+      "$description": "Info · Background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-background",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-info",
+          "note": "no direct mapping; support-info maps to the broader dsi:concept/color/intent-info",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-info",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
+    "info-border": {
+      "$description": "Info · Border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-border",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-info",
+          "note": "no direct mapping; support-info maps to the broader dsi:concept/color/intent-info",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-info",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
+    "info-icon": {
+      "$description": "Info · Icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-icon",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-info",
+          "note": "no direct mapping; support-info maps to the broader dsi:concept/color/intent-info",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-info",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
     "info-inverse": {
       "$description": "Info · Inverse",
       "$extensions": {
@@ -3442,6 +3610,34 @@
           0.807843
         ],
         "hex": "#0043ce"
+      }
+    },
+    "info-text": {
+      "$description": "Info · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-text",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-info",
+          "note": "no direct mapping; support-info maps to the broader dsi:concept/color/intent-info",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-info",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
       }
     },
     "inverse+link-text": {
@@ -3550,34 +3746,6 @@
           0.988235
         ],
         "hex": "#8a3ffc"
-      }
-    },
-    "inverse+surface-background": {
-      "$description": "Inverse + Surface · Background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-inverse+surface/property-background",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--cds-layer-selected-inverse",
-          "note": "no direct mapping; layer-selected-inverse maps to the more specific dsi:concept/color/usage-inverse+surface/property-background/state-selected",
-          "product": "carbon",
-          "status": "nearest",
-          "theme": "g100",
-          "token": "layer-selected-inverse",
-          "version": "11.84.0",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.956863,
-          0.956863,
-          0.956863
-        ],
-        "hex": "#f4f4f4"
       }
     },
     "inverse+surface-background-selected": {
@@ -4204,6 +4372,90 @@
         "hex": "#42be65"
       }
     },
+    "success-background": {
+      "$description": "Success · Background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-background",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-success",
+          "note": "no direct mapping; support-success maps to the broader dsi:concept/color/intent-success",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-success",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
+      }
+    },
+    "success-border": {
+      "$description": "Success · Border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-border",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-success",
+          "note": "no direct mapping; support-success maps to the broader dsi:concept/color/intent-success",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-success",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
+      }
+    },
+    "success-icon": {
+      "$description": "Success · Icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-icon",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-success",
+          "note": "no direct mapping; support-success maps to the broader dsi:concept/color/intent-success",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-success",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
+      }
+    },
     "success-inverse": {
       "$description": "Success · Inverse",
       "$extensions": {
@@ -4229,6 +4481,34 @@
           0.282353
         ],
         "hex": "#24a148"
+      }
+    },
+    "success-text": {
+      "$description": "Success · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-text",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-success",
+          "note": "no direct mapping; support-success maps to the broader dsi:concept/color/intent-success",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-success",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
       }
     },
     "surface-background": {
@@ -4420,34 +4700,6 @@
           0.321569
         ],
         "hex": "#525252"
-      }
-    },
-    "surface-background-disabled": {
-      "$description": "Surface · Background · Disabled",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-surface/property-background/state-disabled",
-          "match": "exact",
-          "mode": "dark",
-          "nativeName": "--cds-layer-selected-disabled",
-          "note": "no direct mapping; layer-selected-disabled maps to the more specific dsi:concept/color/usage-surface/property-background/state-disabled+selected",
-          "product": "carbon",
-          "status": "nearest",
-          "theme": "g100",
-          "token": "layer-selected-disabled",
-          "version": "11.84.0",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.658824,
-          0.658824,
-          0.658824
-        ],
-        "hex": "#a8a8a8"
       }
     },
     "surface-background-disabled+selected": {
@@ -5023,6 +5275,118 @@
         "hex": "#f1c21b"
       }
     },
+    "warning-background": {
+      "$description": "Warning · Background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-background",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-minor",
+          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-warning",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-caution-minor",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.945098,
+          0.760784,
+          0.105882
+        ],
+        "hex": "#f1c21b"
+      }
+    },
+    "warning-background-strong": {
+      "$description": "Warning · Background · Strong",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-background/emphasis-strong",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-major",
+          "note": "no direct mapping; support-caution-major maps to the broader dsi:concept/color/intent-warning/emphasis-strong",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-caution-major",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.513725,
+          0.168627
+        ],
+        "hex": "#ff832b"
+      }
+    },
+    "warning-border": {
+      "$description": "Warning · Border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-border",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-minor",
+          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-warning",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-caution-minor",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.945098,
+          0.760784,
+          0.105882
+        ],
+        "hex": "#f1c21b"
+      }
+    },
+    "warning-icon": {
+      "$description": "Warning · Icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-icon",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-minor",
+          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-warning",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-caution-minor",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.945098,
+          0.760784,
+          0.105882
+        ],
+        "hex": "#f1c21b"
+      }
+    },
     "warning-inverse": {
       "$description": "Warning · Inverse",
       "$extensions": {
@@ -5075,6 +5439,34 @@
           0.168627
         ],
         "hex": "#ff832b"
+      }
+    },
+    "warning-text": {
+      "$description": "Warning · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-minor",
+          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-warning",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-caution-minor",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.945098,
+          0.760784,
+          0.105882
+        ],
+        "hex": "#f1c21b"
       }
     }
   }

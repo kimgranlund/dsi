@@ -32,27 +32,27 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-background",
-          "match": "close",
+          "match": "exact",
           "mode": "expressive",
-          "nativeName": "--md-sys-color-primary-fixed",
-          "note": "no direct mapping; md.sys.color.primary-fixed maps to the more specific dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+          "nativeName": "--md-sys-color-primary",
+          "note": "no direct mapping; md.sys.color.primary maps to the broader dsi:concept/color/intent-accent",
           "product": "material",
           "status": "nearest",
           "theme": "expressive",
-          "token": "md.sys.color.primary-fixed",
+          "token": "md.sys.color.primary",
           "version": "2.5.0",
-          "via": "more-specific"
+          "via": "less-specific"
         }
       },
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.9176,
-          0.8667,
-          1
+          0.4039,
+          0.3137,
+          0.6431
         ],
-        "hex": "#eaddff"
+        "hex": "#6750a4"
       }
     },
     "accent-background-subtle": {
@@ -80,6 +80,62 @@
           1
         ],
         "hex": "#eaddff"
+      }
+    },
+    "accent-border": {
+      "$description": "Accent · Border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-border",
+          "match": "exact",
+          "mode": "expressive",
+          "nativeName": "--md-sys-color-primary",
+          "note": "no direct mapping; md.sys.color.primary maps to the broader dsi:concept/color/intent-accent",
+          "product": "material",
+          "status": "nearest",
+          "theme": "expressive",
+          "token": "md.sys.color.primary",
+          "version": "2.5.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.4039,
+          0.3137,
+          0.6431
+        ],
+        "hex": "#6750a4"
+      }
+    },
+    "accent-icon": {
+      "$description": "Accent · Icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-icon",
+          "match": "exact",
+          "mode": "expressive",
+          "nativeName": "--md-sys-color-primary",
+          "note": "no direct mapping; md.sys.color.primary maps to the broader dsi:concept/color/intent-accent",
+          "product": "material",
+          "status": "nearest",
+          "theme": "expressive",
+          "token": "md.sys.color.primary",
+          "version": "2.5.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.4039,
+          0.3137,
+          0.6431
+        ],
+        "hex": "#6750a4"
       }
     },
     "accent-inverse": {
@@ -161,6 +217,34 @@
           0.3647
         ],
         "hex": "#21005d"
+      }
+    },
+    "accent-text": {
+      "$description": "Accent · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-text",
+          "match": "exact",
+          "mode": "expressive",
+          "nativeName": "--md-sys-color-primary",
+          "note": "no direct mapping; md.sys.color.primary maps to the broader dsi:concept/color/intent-accent",
+          "product": "material",
+          "status": "nearest",
+          "theme": "expressive",
+          "token": "md.sys.color.primary",
+          "version": "2.5.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.4039,
+          0.3137,
+          0.6431
+        ],
+        "hex": "#6750a4"
       }
     },
     "background": {
@@ -306,27 +390,27 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-background",
-          "match": "close",
+          "match": "narrow",
           "mode": "expressive",
-          "nativeName": "--md-sys-color-error-container",
-          "note": "no direct mapping; md.sys.color.error-container maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-subtle",
+          "nativeName": "--md-sys-color-error",
+          "note": "no direct mapping; md.sys.color.error maps to the broader dsi:concept/color/intent-danger",
           "product": "material",
           "status": "nearest",
           "theme": "expressive",
-          "token": "md.sys.color.error-container",
+          "token": "md.sys.color.error",
           "version": "2.5.0",
-          "via": "more-specific"
+          "via": "less-specific"
         }
       },
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.9765,
-          0.8706,
-          0.8627
+          0.702,
+          0.149,
+          0.1176
         ],
-        "hex": "#f9dedc"
+        "hex": "#b3261e"
       }
     },
     "danger-background-subtle": {
@@ -354,6 +438,62 @@
           0.8627
         ],
         "hex": "#f9dedc"
+      }
+    },
+    "danger-border": {
+      "$description": "Danger · Border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-border",
+          "match": "narrow",
+          "mode": "expressive",
+          "nativeName": "--md-sys-color-error",
+          "note": "no direct mapping; md.sys.color.error maps to the broader dsi:concept/color/intent-danger",
+          "product": "material",
+          "status": "nearest",
+          "theme": "expressive",
+          "token": "md.sys.color.error",
+          "version": "2.5.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.702,
+          0.149,
+          0.1176
+        ],
+        "hex": "#b3261e"
+      }
+    },
+    "danger-icon": {
+      "$description": "Danger · Icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-icon",
+          "match": "narrow",
+          "mode": "expressive",
+          "nativeName": "--md-sys-color-error",
+          "note": "no direct mapping; md.sys.color.error maps to the broader dsi:concept/color/intent-danger",
+          "product": "material",
+          "status": "nearest",
+          "theme": "expressive",
+          "token": "md.sys.color.error",
+          "version": "2.5.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.702,
+          0.149,
+          0.1176
+        ],
+        "hex": "#b3261e"
       }
     },
     "danger-on-fill-foreground": {
@@ -408,6 +548,34 @@
           0.0431
         ],
         "hex": "#410e0b"
+      }
+    },
+    "danger-text": {
+      "$description": "Danger · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-text",
+          "match": "narrow",
+          "mode": "expressive",
+          "nativeName": "--md-sys-color-error",
+          "note": "no direct mapping; md.sys.color.error maps to the broader dsi:concept/color/intent-danger",
+          "product": "material",
+          "status": "nearest",
+          "theme": "expressive",
+          "token": "md.sys.color.error",
+          "version": "2.5.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.702,
+          0.149,
+          0.1176
+        ],
+        "hex": "#b3261e"
       }
     },
     "foreground-subtle": {
@@ -559,6 +727,34 @@
           "token": "md.sys.color.scrim",
           "version": "2.5.0",
           "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ],
+        "hex": "#000000"
+      }
+    },
+    "scrim-background": {
+      "$description": "Scrim · Background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-scrim/property-background",
+          "match": "exact",
+          "mode": "expressive",
+          "nativeName": "--md-sys-color-scrim",
+          "note": "no direct mapping; md.sys.color.scrim maps to the broader dsi:concept/color/usage-scrim",
+          "product": "material",
+          "status": "nearest",
+          "theme": "expressive",
+          "token": "md.sys.color.scrim",
+          "version": "2.5.0",
+          "via": "less-specific"
         }
       },
       "$type": "color",

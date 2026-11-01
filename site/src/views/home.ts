@@ -40,9 +40,15 @@ function multiples(cs: Concept[], products: Product[]) {
     grid.replaceChildren(...products.map((p) => {
       const vars: string[] = [];
       let answered = 0;
-      for (const { names } of PARTS) for (const n of names) {
-        const c = cssColor(byName.get(n)?.cells[p.id]?.[mode]?.d);
-        if (c) { vars.push(`--dsi-color-${n}: ${c}`); answered++; break; }
+      const got = new Set<string>();
+      for (const { part, names } of PARTS) {
+        // A label is painted only on its own background: a white on-fill label on a missing fill would vanish.
+        const needs = part === 'Primary button label' ? 'Primary button' : part === 'Delete button label' ? 'Delete button' : part === 'Error text' ? undefined : undefined;
+        if (needs && !got.has(needs)) continue;
+        for (const n of names) {
+          const c = cssColor(byName.get(n)?.cells[p.id]?.[mode]?.d);
+          if (c) { vars.push(`--dsi-color-${n}: ${c}`); answered++; got.add(part); break; }
+        }
       }
       const ui = el('div', { class: 'specimen mini', style: vars.join(';'), 'aria-hidden': 'true' },
         el('div', { class: 'sp-card' },
