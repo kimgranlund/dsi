@@ -32,7 +32,9 @@ export interface CanonResult {
  */
 export function buildCanon(o: Ontology, labels: Map<string, string>, products: ProductInput[]): CanonResult {
   const used = new Set<string>();
-  for (const p of products) for (const m of p.maps.mappings) if (m.status === 'approved' && m.match !== 'related' && m.concept.startsWith('dsi:concept/')) used.add(m.concept);
+  // Color only: a geometry, typography or motion role (Spacing, Font size) is a scale with many members, not one
+  // value per mode, so it is listed as members by @dsi/db rather than emitted as a canonical token.
+  for (const p of products) for (const m of p.maps.mappings) if (m.status === 'approved' && m.match !== 'related' && m.concept.startsWith('dsi:concept/color/')) used.add(m.concept);
   const concepts = [...used].sort().flatMap((c) => {
     const n = canonicalName(o, c);
     if (!n) return [];

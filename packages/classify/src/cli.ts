@@ -7,6 +7,8 @@ import { classify, type TermsFile } from './classify.ts';
 import { deriveTerms, mergeTerms, type ApprovedMapping } from './derive.ts';
 import { mergeTermProposals, packetPath, readTermProposals, vocabulary } from './vocab.ts';
 import { buildStructure, type ShippedStructure } from './structure.ts';
+import { mapScales } from './scales.ts';
+import crypto from 'node:crypto';
 import { parseConcept } from '@dsi/schema';
 
 const USAGE = `usage (from the repo root):
@@ -31,7 +33,8 @@ const set = loadNative(root, product, version);
 const fileOf = (p: string) => String(set.tokens.get(p)?.prov.file ?? '');
 // Domain from the DTCG type at the end of the alias chain: alias tokens often carry no $type of their own.
 const anyTheme = themeFor(set) ?? '';
-const domainOf = (p: string) => ((set.tokens.get(p)?.type ?? resolve(set, anyTheme, p).type) === 'color' ? 'color' : undefined);
+const typeOf = (p: string) => set.tokens.get(p)?.type ?? resolve(set, anyTheme, p).type;
+const domainOf = (p: string) => (typeOf(p) === 'color' ? 'color' : typeOf(p) ? 'other' : undefined);
 const hints = new Set(['approved', 'proposed']);
 
 if (cmd === 'derive') {
@@ -58,7 +61,7 @@ if (cmd === 'derive') {
 } else if (cmd === 'run') {
   const out = [...set.tokens.keys()].sort().map((p) => {
     const d = domainOf(p);
-    const c = classify(terms, p, fileOf(p), d ?? 'color', hints);
+    const c = classify(terms, p, fileOf(p), d === "color" ? "color" : "color", hints);
     return { ...c, domain: d, ...(d ? {} : { concept: undefined }) };
   });
   const dir = path.join(root, 'data/classified', product);
@@ -87,20 +90,48 @@ if (cmd === 'derive') {
   if (n !== scoped.length) { console.error(`structure placed ${n} of ${scoped.length} tokens`); process.exit(1); }
   console.log(`${product}: ${st.kind}; ${st.groups.length} groups for ${scoped.length} tokens -> data/structure/${product}/${version}.json`);
   for (const g of st.groups) console.log(`  ${g.label}${g.meaning ? ` = ${g.meaning}` : ''}${g.native && g.native !== g.label.toLowerCase() ? ` (${g.native})` : ''} [${g.source}, ${g.order}] ${g.tokens.length}${g.subgroups.length ? ' + ' + g.subgroups.map((s) => `${s.label}:${s.tokens.length}`).join(', ') : ''}`);
+} else if (cmd === 'map-scales') {
+  // Role concepts for non-color foundation tokens, from approved terms; approved mappings are never changed.
+  const schemeDir = path.join(root, 'ontology/schemes');
+  const graph = fs.readdirSync(schemeDir).filter((f) => f.endsWith('.jsonld')).flatMap((f) => JSON.parse(fs.readFileSync(path.join(schemeDir, f), 'utf8'))['@graph'] as any[]);
+  const domainOfProperty = new Map<string, string>(graph.filter((c) => c['dsi:inDomain']).map((c) => [String(c.id).split('/').pop()!, String(c['dsi:inDomain'].id).split('/').pop()!]));
+  const scoped = [...set.tokens.keys()].filter((p) => classify(terms, p, fileOf(p), 'color').scope === 'foundation' && domainOf(p) !== 'color').sort();
+  const r = mapScales(o, terms, scoped.map((p) => ({ path: p, file: fileOf(p), type: typeOf(p) })), domainOfProperty);
+  const file = JSON.parse(fs.readFileSync(mapFile, 'utf8'));
+  const settled = new Set([...file.mappings.filter((m: any) => m.status === 'approved').map((m: any) => m.token), ...(file.unmapped ?? []).filter((u: any) => u.status === 'approved').map((u: any) => u.token)]);
+  const at = new Date().toISOString();
+  let added = 0;
+  for (const m of r.mapped) {
+    if (settled.has(m.token)) continue;
+    const id = 'm-' + crypto.createHash('sha1').update([m.token, m.concept, 'exact'].join('|')).digest('hex').slice(0, 12);
+    file.mappings = file.mappings.filter((x: any) => x.id !== id);
+    file.mappings.push({ id, token: m.token, concept: m.concept, match: 'exact', confidence: 1, status: 'approved', rationale: 'Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role (ADR 0013).', provenance: { agent: 'dsi-classify', at, method: 'map-scales-v1' }, review: { by: 'terms+classifier', at, note: 'Deterministic: every word is an approved term or a step word.' } });
+    added++;
+  }
+  file.mappings.sort((a: any, b: any) => a.token.localeCompare(b.token) || a.id.localeCompare(b.id));
+  fs.writeFileSync(mapFile, JSON.stringify(file, null, 2) + '\n');
+  const why: Record<string, number> = {};
+  for (const l of r.leftovers) { const k = l.why.split(':')[0]; why[k] = (why[k] ?? 0) + 1; }
+  console.log(`${product}: ${scoped.length} foundation tokens; ${added} mapped (${r.mapped.length - added} already settled); ${r.leftovers.length} leftovers ${JSON.stringify(why)}`);
+  for (const l of r.leftovers.slice(0, 8)) console.log(`  ${l.token}: ${l.why}`);
 } else if (cmd === 'vocab-prepare' || cmd === 'vocab-check' || cmd === 'vocab-merge') {
   if (!run) { console.error(USAGE); process.exit(2); }
   const runDir = path.join(root, '.cache/classify', run);
-  // Vocabulary of the semantic color tokens (the color-v1 mapping scope).
-  const paths = [...set.tokens.keys()].filter((p) => classify(terms, p, fileOf(p), 'color').scope === 'semantic' && domainOf(p) === 'color');
+  // Vocabulary of the semantic color tokens (terms-v1), or of the non-color foundation tokens (terms-scale-v1).
+  const scaleRun = run.includes('scale');
+  const paths = [...set.tokens.keys()].filter((p) => scaleRun ? classify(terms, p, fileOf(p), 'color').scope === 'foundation' && domainOf(p) !== 'color' : classify(terms, p, fileOf(p), 'color').scope === 'semantic' && domainOf(p) === 'color');
   const vocab = vocabulary(paths, terms.noise ?? []);
   const single = new Set(vocab.filter((v) => !v.term.includes('-')).map((v) => v.term));
   if (cmd === 'vocab-prepare') {
     const facets = JSON.parse(fs.readFileSync(path.join(root, 'ontology/schemes/facets.jsonld'), 'utf8'))['@graph'] as any[];
-    const ontology = Object.fromEntries(['intent', 'usage', 'property', 'emphasis', 'state'].map((f) => [f, facets.filter((c) => c.inScheme === `dsi:scheme/${f}` && !c.deprecated).map((c) => ({ concept: c.id, label: c.prefLabel, definition: c.definition }))]));
+    const schemeDir = path.join(root, 'ontology/schemes');
+    const all = fs.readdirSync(schemeDir).filter((f) => f.endsWith('.jsonld')).flatMap((f) => JSON.parse(fs.readFileSync(path.join(schemeDir, f), 'utf8'))['@graph'] as any[]);
+    const facetsFor = scaleRun ? ['usage', 'property', 'emphasis', 'state'] : ['intent', 'usage', 'property', 'emphasis', 'state'];
+    const ontology = Object.fromEntries(facetsFor.map((f) => [f, all.filter((c) => c.inScheme === `dsi:scheme/${f}` && !c.deprecated && (!scaleRun || f !== 'property' || c['dsi:inDomain'] || String(c.id).endsWith('/shadow'))).map((c) => ({ concept: c.id, label: c.prefLabel, definition: c.definition, ...(c['dsi:inDomain'] ? { domain: c['dsi:inDomain'].id } : {}) }))]));
     const derived = terms.terms.filter((t) => t.status === 'proposed' && t.evidence).map(({ term, concept, evidence }) => ({ term, concept, evidence }));
     fs.mkdirSync(runDir, { recursive: true });
-    for (const r of ['a', 'b']) fs.writeFileSync(packetPath(runDir, product, r), JSON.stringify({ id: `terms-v1/${product}`, role: r, product, instructions: 'packages/classify/prompts/terms-v1.md', output: path.join(runDir, `${product}.${r}.proposals.json`), ontology, noise: terms.noise ?? [], vocabulary: vocab, derived }, null, 1) + '\n');
-    console.log(`${product}: ${single.size} words (${vocab.length} entries with recurring sequences) from ${paths.length} semantic color tokens -> ${path.relative(root, packetPath(runDir, product, '{a,b}'))}`);
+    for (const r of ['a', 'b']) fs.writeFileSync(packetPath(runDir, product, r), JSON.stringify({ id: `${scaleRun ? 'terms-scale-v1' : 'terms-v1'}/${product}`, role: r, product, instructions: scaleRun ? 'packages/classify/prompts/terms-scale-v1.md' : 'packages/classify/prompts/terms-v1.md', output: path.join(runDir, `${product}.${r}.proposals.json`), ontology, noise: terms.noise ?? [], vocabulary: vocab, derived }, null, 1) + '\n');
+    console.log(`${product}: ${single.size} words (${vocab.length} entries with recurring sequences) from ${paths.length} ${scaleRun ? 'foundation' : 'semantic color'} tokens -> ${path.relative(root, packetPath(runDir, product, '{a,b}'))}`);
   } else if (cmd === 'vocab-check') {
     try { const pf = readTermProposals(path.join(runDir, `${product}.${role}.proposals.json`), o, single); console.log(`OK: ${pf.terms.length} entries, all ${single.size} words answered, all concepts valid`); }
     catch (e) { console.error(`FAIL: ${(e as Error).message}`); process.exit(1); }
@@ -109,6 +140,6 @@ if (cmd === 'derive') {
     const b = readTermProposals(path.join(runDir, `${product}.b.proposals.json`), o, single);
     const { file, counts } = mergeTermProposals(terms, a, b);
     fs.writeFileSync(termsPath, JSON.stringify(file, null, 2) + '\n');
-    console.log(`${product}: ${counts.approved} terms approved by agreement, ${counts.noise} noise words agreed, ${counts.proposed} words queued for review -> ${path.relative(root, termsPath)}`);
+    console.log(`${product}: ${counts.approved} terms approved by agreement, ${counts.noise} noise words agreed, ${counts.steps} step words agreed, ${counts.proposed} words queued for review -> ${path.relative(root, termsPath)}`);
   }
 } else { console.error(USAGE); process.exit(2); }

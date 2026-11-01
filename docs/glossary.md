@@ -43,6 +43,9 @@ Layers in a stack. Classify products, not organizations.
 | Brightness | `brightness/dim`, `brightness/bright`: lightness that holds in every theme (Material surface-dim/bright) |
 | Foreground | `property/foreground`: one token coloring both text and icons; `property/text` and `property/icon` are for one only |
 | Emphasis | `subtlest`, `subtle`, `default`, `strong`, `strongest`: relative strength within a family |
+| Domain | `facet/domain`: the token family a concept belongs to: color, space, size, shape, typography, elevation, motion, opacity, layout (breakpoints, z-index) |
+| Role | A `property` value naming a whole non-color scale (spacing, corner-radius, font-size, duration...); each names its domain with `dsi:inDomain`. Scale tokens map to the role with `narrow` (ADR 0013) |
+| Step word | A name segment that picks a point on a scale (`400`, `medium`, `05`); explained by `ignore: step`, never a concept |
 | Alias graph | References between tokens inside one product (vertical) |
 | Mapping graph | Links from native tokens to concepts, across products (horizontal) |
 | Canonical token set | The concept layer emitted as DTCG; each product resolves it as a theme |

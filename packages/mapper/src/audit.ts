@@ -128,7 +128,13 @@ export function auditTerms(o: Ontology, terms: TermsFile, approved: { token: str
     if (!fv) continue;
     const parts = t.term.split('-');
     const has = (tok: string) => { const w = words(tok); return w.some((_, i) => parts.every((p, k) => w[i + k] === p)); };
-    const rel = approved.filter((m) => (m.match === 'exact' || m.match === 'close') && has(m.token));
+    // Only tokens where this term decides its facet: a longer approved term on the same facet that matches the token
+    // (border-radius over border, font-size over text) takes over there, so those tokens say nothing about this one.
+    const longer = terms.terms.filter((x) => x.status === 'approved' && x.term !== t.term && x.term.split('-').length > parts.length && x.term.split('-').join(' ').includes(parts.join(' ')) && x.concept.split('/')[0] === t.concept.split('/')[0]);
+    const facetOf = (c: string) => c.match(/^dsi:([a-z]+)\//)?.[1];
+    const overridden = (tok: string) => terms.terms.some((x) => x.status === 'approved' && x.term !== t.term && x.term.split('-').length > parts.length && facetOf(x.concept) === fv[1] && (() => { const xp = x.term.split('-'); const w = words(tok); return w.some((_, i) => xp.every((q, k) => w[i + k] === q)); })());
+    void longer;
+    const rel = approved.filter((m) => (m.match === 'exact' || m.match === 'close') && has(m.token) && !overridden(m.token));
     if (rel.length < 3) continue;
     const agree = rel.filter((m) => { const p = parseConcept(o, m.concept); return typeof p !== 'string' && String((p.facets as Record<string, string>)[fv[1]] ?? '').split('+').includes(fv[2]); });
     if (agree.length / rel.length < 0.6) out.push({ token: `term:${t.term}`, check: 'term-vs-mappings', detail: `${t.term} -> ${t.concept}, but only ${agree.length} of ${rel.length} approved exact/close mappings of tokens containing it bind that (e.g. ${rel.filter((m) => !agree.includes(m)).slice(0, 2).map((m) => `${m.token} = ${m.concept.replace('dsi:concept/color/', '')}`).join('; ')})` });

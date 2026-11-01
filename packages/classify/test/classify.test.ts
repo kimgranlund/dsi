@@ -86,7 +86,7 @@ test('term agreement approves, disagreement queues, approved terms are never cha
   ]);
   const existing = file([term('text', 'property', 'text')]);
   const { file: out, counts } = mergeTermProposals(existing, a, b);
-  assert.deepEqual(counts, { approved: 1, noise: 1, proposed: 2 });
+  assert.deepEqual(counts, { approved: 1, noise: 1, steps: 0, proposed: 2 });
   const st = (t: string) => out.terms.filter((x) => x.term === t).map((x) => `${x.concept}:${x.status}`).sort();
   assert.deepEqual(st('critical'), ['dsi:intent/danger:approved']);
   assert.deepEqual(st('bg'), ['dsi:property/background:proposed', 'dsi:usage/surface:proposed']);
@@ -94,4 +94,15 @@ test('term agreement approves, disagreement queues, approved terms are never cha
   assert.deepEqual(st('text'), ['dsi:property/text:approved'], 'an approved term blocks proposals on its facet');
   assert.ok(out.noise!.includes('sys'));
   assert.throws(() => mergeTermProposals(existing, a, { ...b, model: 'opus' }), /two different models/);
+});
+
+test('a multi-word term matches even when one of its words is a noise word; approved words never become noise', () => {
+  const t = file([term('border', 'property', 'border'), term('border-radius', 'property', 'corner-radius')]);
+  t.noise = ['color', 'border'];
+  const r = classify(t, 'border-radius-200', '', 'color');
+  assert.deepEqual([r.facets.property, r.unknown, r.explained], ['corner-radius', [], 1]);
+  const pf = (role: 'a' | 'b', model: string): TermProposalFile => ({ packet: 'p', role, model, at: 'x', terms: [{ term: 'border', ignore: 'noise', rationale: 'r' }, { term: 'sys', ignore: 'step', rationale: 'r' }] });
+  const { file: out } = mergeTermProposals(file([term('border', 'property', 'border')]), pf('a', 'opus'), pf('b', 'sonnet'));
+  assert.ok(!out.noise!.includes('border'), 'border has an approved term');
+  assert.deepEqual(out.steps, ['sys']);
 });

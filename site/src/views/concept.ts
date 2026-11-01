@@ -1,6 +1,7 @@
 import { concepts, meta, type Concept, type Product } from '../data';
 import { conceptHref, el, link, orderModes, pill, setTitle, swatch, tokenHref } from '../ui';
 import { conceptRow } from './home';
+import { memberRuler } from './scales';
 
 export async function conceptView(main: HTMLElement, c: Concept) {
   setTitle(c.label);
@@ -14,13 +15,23 @@ export async function conceptView(main: HTMLElement, c: Concept) {
       facetChips,
       el('p', { class: 'chain' }, el('span', { text: 'Token ' }), el('code', { text: `${c.group}.${c.name}` }), el('span', { text: ' · IRI ' }), el('code', { text: c.iri.replace('dsi:', 'https://dsi.nonoun.io/ontology/') }))),
     el('section', {},
-      el('h2', { text: 'How each system answers' }),
+      el('h2', { text: c.members ? 'Each system’s scale' : 'How each system answers' }),
       el('div', { class: 'compare' }, m.products.map((p) => systemColumn(p, c)))),
     related.length ? el('section', {}, el('h2', { text: 'Related concepts' }), el('div', { class: 'list' }, related.map((x) => conceptRow(x, m.products.map((p) => p.id))))) : el('span', { hidden: true }),
   );
 }
 
 function systemColumn(p: Product, c: Concept) {
+  // Scale concepts (Spacing, Font size...) are answered by a whole scale: list its members, drawn to scale.
+  if (c.members) {
+    const ms = c.members[p.id];
+    const head = el('div', { class: 'sys-head' }, link(`/system/${p.id}`, p.name), ms ? el('span', { class: 'none-note', text: `${ms.length} step${ms.length === 1 ? '' : 's'}` }) : null);
+    if (!ms) return el('div', { class: 'sys' }, head, el('p', { class: 'none-note', text: 'No approved token in this role. Unknown, not absent.' }));
+    let pre = ms[0][0]; for (const [t] of ms) while (!t.startsWith(pre)) pre = pre.slice(0, -1);
+    const cut = Math.max(pre.lastIndexOf('.'), pre.lastIndexOf('-'));
+    const short = (t: string) => (cut >= 0 ? t.slice(cut + 1) : t) || t;
+    return el('div', { class: 'sys' }, head, memberRuler(p.id, ms, short));
+  }
   const cells = c.cells[p.id];
   const head = el('div', { class: 'sys-head' }, link(`/system/${p.id}`, p.name), cells ? pill(Object.values(cells)[0].s, Object.values(cells)[0].s === 'match' ? Object.values(cells)[0].m : `nearest · ${Object.values(cells)[0].m}`) : null);
   if (!cells) return el('div', { class: 'sys' }, head, el('p', { class: 'none-note', text: 'No approved token answers this concept. That means unknown, not absent: the index has no mapping either way.' }));

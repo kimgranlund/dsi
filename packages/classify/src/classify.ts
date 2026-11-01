@@ -13,7 +13,7 @@ export function facetValue(concept: string): { facet: Facet; value: string } | u
   const m = concept.match(/^dsi:([a-z]+)\/([a-z0-9-]+)$/);
   return m && (FACETS as string[]).includes(m[1]) ? { facet: m[1] as Facet, value: m[2] } : undefined;
 }
-export interface TermsFile { product: string; noise?: string[]; scopes?: { pathPrefix?: string; file?: string; scope: string }[]; terms: Term[] }
+export interface TermsFile { product: string; noise?: string[]; steps?: string[]; scopes?: { pathPrefix?: string; file?: string; scope: string }[]; terms: Term[] }
 
 /** Split a token path into lowercase words: on '.', '-', '_' and camelCase boundaries. */
 export function words(path: string): string[] {
@@ -51,7 +51,7 @@ export function conceptOf(domain: string, facets: Partial<Record<Facet, string>>
  * (approved only for votes; approved and proposed for hints).
  */
 export function classify(t: TermsFile, token: string, file: string, domain: string, statuses = new Set(['approved'])): Classification {
-  const noise = new Set(t.noise ?? []);
+  const noise = new Set([...(t.noise ?? []), ...(t.steps ?? [])]);
   type Bound = { term: string; facet: Facet; value: string };
   const terms = new Map<string, Bound>();
   for (const x of t.terms) {
@@ -64,7 +64,9 @@ export function classify(t: TermsFile, token: string, file: string, domain: stri
   // Every term found anywhere in the name contributes, not a greedy segmentation (which lets a two-word term
   // swallow a word that a one-word term explains). Per facet, the longest term wins; equal-length disagreement on
   // a single-valued facet is a conflict, on usage/state the values combine.
-  const w = words(token).filter((x) => !noise.has(x));
+  // Match terms on the full name first, so multi-word terms see every word (border-radius even when "border" is
+  // also a noise word somewhere); noise and step words only count as explained afterwards.
+  const w = words(token);
   const facets: Partial<Record<Facet, string>> = {};
   const len: Partial<Record<Facet, number>> = {};
   const matchedTerms: string[] = [], conflicts: string[] = [];
@@ -85,7 +87,9 @@ export function classify(t: TermsFile, token: string, file: string, domain: stri
       }
     }
   }
-  const meaningfulIdx = w.map((x, i) => (/^\d+$/.test(x) ? -1 : i)).filter((i) => i >= 0);
+  w.forEach((x, i) => { if (!covered[i] && noise.has(x)) covered[i] = true; });
+  // Meaningful words: everything except numbers and noise or step words that no term claimed.
+  const meaningfulIdx = w.map((x, i) => i).filter((i) => !/^\d+$/.test(w[i]) && !(noise.has(w[i]) && !byTerm.has(w[i])));
   const unknown = meaningfulIdx.filter((i) => !covered[i]).map((i) => w[i]);
   const meaningful = meaningfulIdx.length, explainedWords = meaningfulIdx.filter((i) => covered[i]).length;
   return { token, scope: scopeOf(t, token, file), facets, matchedTerms, unknown, conflicts, concept: conflicts.length ? undefined : conceptOf(domain, facets), explained: meaningful ? explainedWords / meaningful : 1 };

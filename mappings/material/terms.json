@@ -3,9 +3,15 @@
   "noise": [
     "color",
     "comp",
+    "height",
+    "line",
     "md",
+    "motion",
     "ref",
-    "sys"
+    "shape",
+    "state",
+    "sys",
+    "typescale"
   ],
   "scopes": [
     {
@@ -66,6 +72,24 @@
       }
     },
     {
+      "term": "body",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "approved",
+      "note": "Body type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "container",
       "concept": "dsi:property/background",
       "match": "exact",
@@ -97,6 +121,96 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:10:56.115Z"
+      }
+    },
+    {
+      "term": "corner",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "approved",
+      "note": "Corner rounding.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "display",
+      "concept": "dsi:usage/display",
+      "match": "exact",
+      "status": "approved",
+      "note": "Display type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "duration",
+      "concept": "dsi:property/duration",
+      "match": "exact",
+      "status": "approved",
+      "note": "Animation duration.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "easing",
+      "concept": "dsi:property/easing",
+      "match": "exact",
+      "status": "approved",
+      "note": "Easing curve.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "elevation",
+      "concept": "dsi:property/elevation-level",
+      "match": "exact",
+      "status": "approved",
+      "note": "md.sys.elevation.level0..5 ordinal depth.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -132,6 +246,60 @@
       "review": {
         "by": "agreement",
         "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "focus",
+      "concept": "dsi:state/focus",
+      "match": "exact",
+      "status": "approved",
+      "note": "Focus state layer.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "font",
+      "concept": "dsi:property/font-family",
+      "match": "exact",
+      "status": "approved",
+      "note": "typescale.*-font holds the font family.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "headline",
+      "concept": "dsi:usage/headline",
+      "match": "exact",
+      "status": "approved",
+      "note": "Headline type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
@@ -188,6 +356,24 @@
       }
     },
     {
+      "term": "hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "Hover state layer.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "inverse",
       "concept": "dsi:usage/inverse",
       "match": "exact",
@@ -202,6 +388,73 @@
       "review": {
         "by": "agreement",
         "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "label",
+      "concept": "dsi:usage/label",
+      "match": "exact",
+      "status": "approved",
+      "note": "Label type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "large-line",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Names this role in Material token names. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T05:14:35.817Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "large-size",
+      "concept": "dsi:property/font-size",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typescale size of a large type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "line-height",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "approved",
+      "note": "Line height of a type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
@@ -254,6 +507,73 @@
       "review": {
         "by": "agreement",
         "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "medium-line",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Names this role in Material token names. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T05:14:35.817Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "medium-size",
+      "concept": "dsi:property/font-size",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typescale size of a medium type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "motion-duration",
+      "concept": "dsi:property/duration",
+      "match": "exact",
+      "status": "approved",
+      "note": "Animation duration.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "motion-easing",
+      "concept": "dsi:property/easing",
+      "match": "exact",
+      "status": "approved",
+      "note": "Easing curve.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
@@ -450,6 +770,24 @@
       }
     },
     {
+      "term": "opacity",
+      "concept": "dsi:property/opacity",
+      "match": "exact",
+      "status": "approved",
+      "note": "State-layer opacity.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "outline",
       "concept": "dsi:property/border",
       "match": "exact",
@@ -464,6 +802,24 @@
       "review": {
         "by": "agreement",
         "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "Material pressed is the active state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
@@ -501,6 +857,19 @@
         "by": "agreement",
         "at": "2026-11-01T00:41:58.553Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "prominent",
+      "concept": "dsi:emphasis/strong",
+      "match": "close",
+      "status": "proposed",
+      "note": "Heavier, more emphatic weight variant of a label weight. (confidence 0.55; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -605,6 +974,73 @@
       "review": {
         "by": "agreement",
         "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "shape-corner",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "approved",
+      "note": "Corner rounding.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "small-line",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Names this role in Material token names. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T05:14:35.817Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "small-size",
+      "concept": "dsi:property/font-size",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typescale size of a small type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "state-layer",
+      "concept": "dsi:usage/state-layer",
+      "match": "exact",
+      "status": "approved",
+      "note": "Material state layer overlay.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
@@ -732,6 +1168,55 @@
       }
     },
     {
+      "term": "title",
+      "concept": "dsi:usage/title",
+      "match": "exact",
+      "status": "approved",
+      "note": "Title type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "typeface",
+      "concept": "dsi:property/font-family",
+      "match": "close",
+      "status": "proposed",
+      "note": "md.ref.typeface.brand/plain are font families; typeface-weight covers the weight tokens. (confidence 0.75); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "typeface-weight",
+      "concept": "dsi:property/font-weight",
+      "match": "exact",
+      "status": "approved",
+      "note": "Reference font weights.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "variant",
       "concept": "dsi:emphasis/subtle",
       "match": "close",
@@ -747,6 +1232,72 @@
         "by": "kimgranlund",
         "at": "2026-11-01T01:11:50.373Z"
       }
+    },
+    {
+      "term": "weight",
+      "concept": "dsi:property/font-weight",
+      "match": "exact",
+      "status": "approved",
+      "note": "Always a typeface/typescale font weight in Material.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "weight-prominent",
+      "concept": "dsi:property/font-weight",
+      "match": "exact",
+      "status": "approved",
+      "note": "Prominent variant of the label font weight.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T05:14:53.557Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T05:15:09.766Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
     }
+  ],
+  "steps": [
+    "bold",
+    "extra",
+    "extra-large",
+    "extra-small",
+    "full",
+    "large",
+    "level0",
+    "level1",
+    "level2",
+    "level3",
+    "level4",
+    "level5",
+    "long1",
+    "long2",
+    "long3",
+    "long4",
+    "medium",
+    "medium1",
+    "medium2",
+    "medium3",
+    "medium4",
+    "none",
+    "regular",
+    "short1",
+    "short2",
+    "short3",
+    "short4",
+    "small"
   ]
 }

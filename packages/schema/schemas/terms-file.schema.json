@@ -151,6 +151,14 @@
           ]
         }
       }
+    },
+    "steps": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      },
+      "description": "Words that name positions on a scale (xs, 100, fast, large). Explained, not mapped: steps are ordered by value."
     }
   }
 }

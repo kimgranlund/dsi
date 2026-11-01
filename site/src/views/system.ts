@@ -1,5 +1,6 @@
 import { concepts, groups as loadGroups, meta, tokens, type Product, type Token } from '../data';
 import { el, inkOn, orderModes, pill, setTitle, swatch, tokenHref, tokenTile } from '../ui';
+import { categoryOf, renderScales, type Category } from './scales';
 
 type ViewGroup = { id: string; label: string; meaning?: string; native?: string; note?: string; tokens: string[]; subgroups: { label: string; tokens: string[] }[] };
 const FACET_PRIORITY = ['usage', 'intent', 'syntax', 'property'] as const;
@@ -36,9 +37,16 @@ const SOURCE: Record<string, string> = { 'shipped-groups': 'Groups and order as 
 
 export async function systemView(main: HTMLElement, p: Product) {
   setTitle(p.name);
-  const [m, ts, cs, gs] = await Promise.all([meta(), tokens(p.id), concepts(), loadGroups(p.id)]);
+  const [m, allTs, cs, gs] = await Promise.all([meta(), tokens(p.id), concepts(), loadGroups(p.id)]);
+  // Color, Geometry, Typography and Motion are separate categories; the color views below work on color tokens only.
+  const ts = allTs.filter((t) => categoryOf(t) === 'color');
+  const CATS: { id: Category; label: string }[] = [{ id: 'color', label: 'Color' }, { id: 'geometry', label: 'Geometry' }, { id: 'typography', label: 'Typography' }, { id: 'motion', label: 'Motion' }];
+  const catCount = (c: Category) => allTs.filter((t) => categoryOf(t) === c).length;
+  let cat: Category = 'color';
+  try { const saved = localStorage.getItem('dsi-category') as Category | null; if (saved && catCount(saved)) cat = saved; } catch { /* storage unavailable */ }
+  const catBar = el('div', { class: 'cats', role: 'group', 'aria-label': 'Token category' });
   const byIri = new Map(cs.map((c) => [c.iri, c]));
-  const byPath = new Map(ts.map((t) => [t.p, t]));
+  const byPath = new Map(allTs.map((t) => [t.p, t]));
   const modeNames = orderModes(Object.keys(p.modes));
   // Tiles show light mode, with the other modes as inset circles; the picker flips which mode fills the tile.
   const modePick = el('select', { id: 'tok-mode', 'aria-label': 'Swatch mode' }, modeNames.map((mode) => el('option', { value: mode, text: `Swatches: ${mode}`, selected: mode === modeNames[0] || undefined })));
@@ -174,8 +182,18 @@ export async function systemView(main: HTMLElement, p: Product) {
   };
 
   const render = () => {
-    try { localStorage.setItem('dsi-group-by', groupBy.value); } catch { /* storage unavailable */ }
+    try { localStorage.setItem('dsi-group-by', groupBy.value); localStorage.setItem('dsi-category', cat); } catch { /* storage unavailable */ }
+    catBar.replaceChildren(...CATS.filter((c) => catCount(c.id)).map((c) => el('button', { type: 'button', 'aria-pressed': String(c.id === cat), onclick: () => { cat = c.id; render(); } }, c.label, el('small', { text: String(catCount(c.id)) }))));
+    groupBy.hidden = cat !== 'color'; status.hidden = cat !== 'color';
     const q = filter.value.trim().toLowerCase();
+    if (cat !== 'color') {
+      const items = allTs.filter((t) => categoryOf(t) === cat && (!q || t.p.toLowerCase().includes(q) || t.n.toLowerCase().includes(q)));
+      const sections = renderScales(cat, p.id, items, byIri, themeOf(), short);
+      caption.textContent = cat === 'typography' ? 'Type styles drawn at their own size, weight and line height; other roles drawn to scale' : 'Each role drawn to a shared scale, smallest first';
+      jump.replaceChildren(...sections.map((sec, i) => { sec.id ||= `scale-${i}`; const h = sec.querySelector('h3')?.textContent ?? ''; return el('a', { class: 'chip', href: `#${sec.id}`, onclick: (e: Event) => { e.preventDefault(); sec.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); } }, h); }));
+      body.replaceChildren(...(sections.length ? sections : [el('p', { class: 'none-note', text: 'No tokens match this filter.' })]));
+      return;
+    }
     const ok = (t: Token | undefined): t is Token => !!t && (!q || t.p.toLowerCase().includes(q) || t.n.toLowerCase().includes(q) || (t.d ?? '').toLowerCase().includes(q)) && (!status.value || (status.value === 'mapped' ? t.m.length > 0 : !!t.u));
     const systemList: ViewGroup[] = gs?.groups ?? [{ id: 'all', label: 'Tokens', tokens: [...ts].sort((a, b) => a.p.localeCompare(b.p)).map((t) => t.p), subgroups: [] }];
     const list: (ViewGroup & { properties?: string[] })[] = groupBy.value === 'namespace' ? namespaceGroups() : groupBy.value === 'source' ? sourceGroups() : systemList;
@@ -216,7 +234,8 @@ export async function systemView(main: HTMLElement, p: Product) {
         p.homepage ? el('dt', { text: 'Docs' }) : null, p.homepage ? el('dd', {}, el('a', { href: p.homepage, rel: 'noopener', text: p.homepage })) : null),
       el('div', { class: 'stat-row' }, el('span', {}, el('b', { text: String(p.counts.tokens) }), ' tokens ingested'), el('span', {}, el('b', { text: String(p.counts.mapped) }), ' mapped'), el('span', {}, el('b', { text: String(p.counts.unmapped) }), ' no concept fits'), el('span', {}, el('b', { text: `${p.counts.answered} / ${m.concepts}` }), ' concepts answered'))),
     el('section', {},
-      el('div', { class: 'section-head' }, el('h2', { text: 'Semantic and mapped tokens' }), caption),
+      el('div', { class: 'section-head' }, el('h2', { text: 'Tokens' }), caption),
+      catBar,
       el('div', { class: 'filters' }, filter, groupBy, status, modeNames.length > 1 ? modePick : null),
       jump,
       body),

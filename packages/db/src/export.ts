@@ -36,10 +36,16 @@ export function exportSite(root: string, dbFile: string, outDir: string): Record
   const cov = all('SELECT * FROM coverage');
   const byConcept = new Map<string, Row[]>();
   for (const c of cov) (byConcept.get(c.concept) ?? byConcept.set(c.concept, []).get(c.concept)!).push(c);
+  // Scale concepts list every approved member per system, with its value in the system's default theme.
+  const defTheme = new Map(all('SELECT product, theme FROM modes WHERE mode = ?', 'light').map((r) => [r.product, r.theme]));
+  const memberRows = all("SELECT m.product, m.token, m.concept, m.match, v.display FROM mappings m LEFT JOIN token_values v ON v.product = m.product AND v.path = m.token AND (v.theme = '' OR v.theme = (SELECT theme FROM modes WHERE product = m.product AND mode = 'light')) WHERE m.concept NOT LIKE 'dsi:concept/color/%'");
+  const members = new Map<string, Record<string, [string, string, string][]>>();
+  for (const r of memberRows) { const byP = members.get(r.concept) ?? members.set(r.concept, {}).get(r.concept)!; (byP[r.product] ??= []).push([r.token, r.display ?? '', r.match]); }
+  void defTheme;
   const concepts = all('SELECT * FROM concepts ORDER BY name').map((c) => {
     const cells: Record<string, Record<string, Row>> = {};
     for (const x of byConcept.get(c.iri) ?? []) if (x.status === 'match' || x.status === 'nearest') (cells[x.product] ??= {})[x.mode] = { s: x.status, t: x.token, m: x.match, via: x.via, d: x.display };
-    return { iri: c.iri, group: c.grp, name: c.name, label: c.label, facets: JSON.parse(c.facets), cells };
+    return { iri: c.iri, group: c.grp, name: c.name, label: c.label, facets: JSON.parse(c.facets), cells, ...(members.has(c.iri) ? { members: members.get(c.iri) } : {}) };
   });
   sizes['concepts.json'] = write('concepts.json', concepts);
 

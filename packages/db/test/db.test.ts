@@ -10,7 +10,7 @@ import { buildDatabase, exportSite } from '../src/index.ts';
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'dsi-db-'));
 const dbFile = path.join(dir, 'dsi.sqlite');
-const counts = buildDatabase(REPO, dbFile);
+const counts = await buildDatabase(REPO, dbFile);
 const db = new DatabaseSync(dbFile, { readOnly: true });
 const one = (sql: string, ...a: any[]) => db.prepare(sql).get(...a) as Record<string, any>;
 
@@ -27,7 +27,8 @@ test('only approved records reach the database', () => {
 
 test('coverage holds a cell per concept, product and mode, and never a value for unknown', () => {
   const modes = one('SELECT count(*) n FROM modes').n;
-  assert.equal(counts.coverage, counts.concepts * modes);
+  const colorConcepts = one("SELECT count(*) n FROM concepts WHERE grp = 'color'").n;
+  assert.equal(counts.coverage, colorConcepts * modes);
   assert.equal(one("SELECT count(*) n FROM coverage WHERE status IN ('unknown','absent') AND display IS NOT NULL").n, 0);
 });
 

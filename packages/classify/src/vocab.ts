@@ -53,7 +53,8 @@ export function mergeTermProposals(file: TermsFile, a: TermProposalFile, b: Term
   const prov = (pf: TermProposalFile) => ({ agent: 'dsi-classify', model: pf.model, at: pf.at, method: 'terms-v1' });
   const terms: Term[] = file.terms.filter((t) => t.status !== 'proposed' || t.provenance.method === 'derive-from-approved-mappings');
   const noise = new Set(file.noise ?? []);
-  const counts = { approved: 0, noise: 0, proposed: 0 };
+  const steps = new Set(file.steps ?? []);
+  const counts = { approved: 0, noise: 0, steps: 0, proposed: 0 };
   const queued = new Set<string>();
   for (const [k, ta] of A) {
     const tb = B.get(k);
@@ -63,7 +64,11 @@ export function mergeTermProposals(file: TermsFile, a: TermProposalFile, b: Term
         terms.push({ term: ta.term, concept: ta.concept, match: ta.match!, status: 'approved', note: ta.rationale, provenance: prov(a), review: { by: 'agreement', at: now, note: `${a.model} and ${b.model} agreed independently` } } as Term);
         counts.approved++;
       }
-    } else if (tb && ta.ignore === 'noise') { noise.add(ta.term); counts.noise++; }
+    } else if (tb && (ta.ignore === 'noise' || ta.ignore === 'step')) {
+      // A word with an approved term means something somewhere (border = Border): never demote it to noise or step.
+      if (file.terms.some((t) => t.term === ta.term && t.status === 'approved') || terms.some((t) => t.term === ta.term && t.status === 'approved')) continue;
+      if (ta.ignore === 'noise') { noise.add(ta.term); counts.noise++; } else { steps.add(ta.term); counts.steps++; }
+    }
   }
   // Remove derived candidates that agreement just settled.
   const approvedKeys = new Set(terms.filter((t) => t.status === 'approved').map((t) => facetKey(t.term, t.concept)));
@@ -80,7 +85,7 @@ export function mergeTermProposals(file: TermsFile, a: TermProposalFile, b: Term
     }
   }
   counts.proposed = queued.size;
-  return { file: { ...file, noise: [...noise].sort(), terms: kept.sort((x, y) => x.term.localeCompare(y.term) || x.concept.localeCompare(y.concept) || x.status.localeCompare(y.status)) }, counts };
+  return { file: { ...file, noise: [...noise].sort(), ...(steps.size ? { steps: [...steps].sort() } : {}), terms: kept.sort((x, y) => x.term.localeCompare(y.term) || x.concept.localeCompare(y.concept) || x.status.localeCompare(y.status)) }, counts };
 }
 
 export const termId = (product: string, t: { term: string; concept: string; match: string; provenance: { model?: string; agent: string } }) =>

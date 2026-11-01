@@ -30,6 +30,10 @@ From the repo root:
 
 `node packages/classify/src/cli.ts structure <product>` groups and orders the semantic and mapped tokens (ADR 0011): shipped groups, then shipped source order, then name families with pairing prefixes found from the data, ordered by the canonical progression (ramps for two-way families). Output: `data/structure/<product>/<version>.json`.
 
+## Scales
+
+`node src/cli.ts map-scales <product>` maps geometry, typography and motion tokens to role concepts (ADR 0013). A token maps only when approved terms, noise and step words explain its whole name and its DTCG type fits the role (`ROLE_TYPES` in `src/scales.ts`). Mappings are written approved with `review.by: terms+classifier`, method `map-scales-v1`; leftovers are printed with a reason. A vocab run whose name contains `scale` drafts terms for non-color tokens with `prompts/terms-scale-v1.md`.
+
 ## How it decides
 
 Every term found anywhere in the name contributes (not a greedy split, which let `fill-critical` swallow `critical`). Per facet the longest term wins; equal-length disagreement is a conflict on single-valued facets and combines on usage and state. Only approved terms count as a vote; proposed terms may be used as hints.

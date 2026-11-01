@@ -10,7 +10,7 @@ const [cmd, a, b] = process.argv.slice(2);
 const root = process.cwd();
 const dbFile = path.resolve(a ?? '.cache/db/dsi.sqlite');
 if (cmd === 'build') {
-  console.log(`built ${path.relative(root, dbFile)}: ${JSON.stringify(buildDatabase(root, dbFile))}`);
+  console.log(`built ${path.relative(root, dbFile)}: ${JSON.stringify(await buildDatabase(root, dbFile))}`);
 } else if (cmd === 'export') {
   const out = path.resolve(b ?? 'site/public/data');
   const sizes = exportSite(root, dbFile, out);

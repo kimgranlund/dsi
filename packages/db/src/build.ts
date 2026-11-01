@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
-import { loadNative, resolve, showValue } from '@dsi/resolve';
+import { facetLabels, loadNative, resolve, showValue } from '@dsi/resolve';
+import { canonicalNameOf, loadOntology, parseConcept } from '@dsi/schema';
 
 export const SCHEMA = `
 CREATE TABLE products (id TEXT PRIMARY KEY, name TEXT NOT NULL, category TEXT NOT NULL, organization TEXT, homepage TEXT, license TEXT, description TEXT, version TEXT, implementation TEXT, redistribution TEXT);
@@ -23,7 +24,7 @@ const readJson = (p: string) => JSON.parse(fs.readFileSync(p, 'utf8'));
  * Build the query database from the repo's authored and generated files. Only Approved mappings, unmapped records
  * and terms are loaded: the database is what the public site and API may show. Deterministic: same inputs, same rows.
  */
-export function buildDatabase(root: string, out: string): Record<string, number> {
+export async function buildDatabase(root: string, out: string): Promise<Record<string, number>> {
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.rmSync(out, { force: true });
   const db = new DatabaseSync(out);
@@ -47,7 +48,22 @@ export function buildDatabase(root: string, out: string): Record<string, number>
 
   const canon = readJson(path.join(root, 'data/canonical/manifest.json'));
   const iConcept = ins('concepts', ['iri', 'grp', 'name', 'label', 'facets']);
-  for (const c of canon.concepts) {
+  // Scale concepts (geometry, typography, motion) come from approved mappings: they have members, not canonical tokens.
+  const o = await loadOntology(path.join(root, 'ontology'));
+  const labels = facetLabels(root);
+  const known = new Set(canon.concepts.map((c: any) => c.concept));
+  const extra: any[] = [];
+  for (const [product, s] of sources) {
+    const mf = path.join(root, 'mappings', product, `${s.package.version}.mappings.json`);
+    for (const m of readJson(mf).mappings) {
+      if (m.status !== 'approved' || known.has(m.concept) || m.concept.startsWith('dsi:concept/color/')) continue;
+      const pc = parseConcept(o, m.concept);
+      if (typeof pc === 'string') continue;
+      known.add(m.concept);
+      extra.push({ concept: m.concept, group: pc.domain, name: canonicalNameOf(pc), label: Object.entries(pc.facets).map(([f, v]) => String(v).split('+').map((x) => labels.get(`dsi:${f}/${x}`) ?? x).join(' + ')).join(' · ') });
+    }
+  }
+  for (const c of [...canon.concepts, ...extra]) {
     const facets = Object.fromEntries(c.concept.replace(/^dsi:concept\/[a-z]+\//, '').split('/').map((s: string) => { const i = s.indexOf('-'); return [s.slice(0, i), s.slice(i + 1)]; }));
     iConcept.run(c.concept, c.group, c.name, c.label, JSON.stringify(facets));
     iSearch.run('concept', c.concept, c.label, `${c.group}.${c.name} ${Object.values(facets).join(' ')}`);
