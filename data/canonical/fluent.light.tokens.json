@@ -1098,27 +1098,26 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background",
-          "match": "exact",
+          "match": "close",
           "mode": "light",
-          "nativeName": "--colorNeutralBackgroundInverted",
-          "note": "no direct mapping; colorNeutralBackgroundInverted maps to the more specific dsi:concept/color/usage-inverse/property-background",
+          "nativeName": "--colorNeutralBackground6",
           "product": "fluent",
-          "status": "nearest",
+          "status": "match",
           "theme": "web-light",
-          "token": "colorNeutralBackgroundInverted",
+          "token": "colorNeutralBackground6",
           "version": "1.0.0-alpha.24",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.1608,
-          0.1608,
-          0.1608
+          0.902,
+          0.902,
+          0.902
         ],
-        "hex": "#292929"
+        "hex": "#e6e6e6"
       }
     },
     "background-active": {
@@ -1128,12 +1127,12 @@
           "concept": "dsi:concept/color/property-background/state-active",
           "match": "broad",
           "mode": "light",
-          "nativeName": "--colorSubtleBackgroundPressed",
+          "nativeName": "--colorNeutralBackground1Pressed",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-light",
-          "token": "colorSubtleBackgroundPressed",
+          "token": "colorNeutralBackground1Pressed",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -1183,12 +1182,12 @@
           "concept": "dsi:concept/color/property-background/state-hover",
           "match": "broad",
           "mode": "light",
-          "nativeName": "--colorSubtleBackgroundHover",
+          "nativeName": "--colorNeutralBackground1Hover",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-light",
-          "token": "colorSubtleBackgroundHover",
+          "token": "colorNeutralBackground1Hover",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -1211,12 +1210,12 @@
           "concept": "dsi:concept/color/property-background/state-selected",
           "match": "broad",
           "mode": "light",
-          "nativeName": "--colorSubtleBackgroundSelected",
+          "nativeName": "--colorNeutralBackground1Selected",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-light",
-          "token": "colorSubtleBackgroundSelected",
+          "token": "colorNeutralBackground1Selected",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }

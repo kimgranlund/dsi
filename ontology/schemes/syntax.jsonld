@@ -15,7 +15,7 @@
    "id": "dsi:syntax/comment",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Comment",
+   "prefLabel": "Comment", "definition": "Text in source code that explains it and does not run.",
    "notation": "comment",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -23,7 +23,7 @@
    "id": "dsi:syntax/line-comment",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Line comment",
+   "prefLabel": "Line comment", "definition": "A comment that ends at the end of its line.",
    "notation": "lineComment",
    "broader": "dsi:syntax/comment"
   },
@@ -31,7 +31,7 @@
    "id": "dsi:syntax/block-comment",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Block comment",
+   "prefLabel": "Block comment", "definition": "A comment enclosed by start and end markers, which may span several lines.",
    "notation": "blockComment",
    "broader": "dsi:syntax/comment"
   },
@@ -39,7 +39,7 @@
    "id": "dsi:syntax/doc-comment",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Doc comment",
+   "prefLabel": "Doc comment", "definition": "A comment that documents the code element that follows it.",
    "notation": "docComment",
    "broader": "dsi:syntax/comment"
   },
@@ -47,7 +47,7 @@
    "id": "dsi:syntax/name",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Name",
+   "prefLabel": "Name", "definition": "An identifier of any kind in source code.",
    "notation": "name",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -55,7 +55,7 @@
    "id": "dsi:syntax/variable-name",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Variable name",
+   "prefLabel": "Variable name", "definition": "The name of a variable.",
    "notation": "variableName",
    "broader": "dsi:syntax/name"
   },
@@ -63,7 +63,7 @@
    "id": "dsi:syntax/type-name",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Type name",
+   "prefLabel": "Type name", "definition": "The name of a type.",
    "notation": "typeName",
    "broader": "dsi:syntax/name"
   },
@@ -71,7 +71,7 @@
    "id": "dsi:syntax/tag-name",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Tag name",
+   "prefLabel": "Tag name", "definition": "The name of a markup tag, a kind of type name.",
    "notation": "tagName",
    "broader": "dsi:syntax/type-name"
   },
@@ -79,7 +79,7 @@
    "id": "dsi:syntax/property-name",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Property name",
+   "prefLabel": "Property name", "definition": "The name of a property or field of an object.",
    "notation": "propertyName",
    "broader": "dsi:syntax/name"
   },
@@ -87,7 +87,7 @@
    "id": "dsi:syntax/attribute-name",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Attribute name",
+   "prefLabel": "Attribute name", "definition": "The name of a markup attribute, a kind of property name.",
    "notation": "attributeName",
    "broader": "dsi:syntax/property-name"
   },
@@ -95,7 +95,7 @@
    "id": "dsi:syntax/class-name",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Class name",
+   "prefLabel": "Class name", "definition": "The name of a class.",
    "notation": "className",
    "broader": "dsi:syntax/name"
   },
@@ -103,7 +103,7 @@
    "id": "dsi:syntax/label-name",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Label name",
+   "prefLabel": "Label name", "definition": "The name of a label that a jump or loop statement can target.",
    "notation": "labelName",
    "broader": "dsi:syntax/name"
   },
@@ -111,7 +111,7 @@
    "id": "dsi:syntax/namespace",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Namespace",
+   "prefLabel": "Namespace", "definition": "The name of a namespace or module path.",
    "notation": "namespace",
    "broader": "dsi:syntax/name"
   },
@@ -119,7 +119,7 @@
    "id": "dsi:syntax/macro-name",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Macro name",
+   "prefLabel": "Macro name", "definition": "The name of a macro.",
    "notation": "macroName",
    "broader": "dsi:syntax/name"
   },
@@ -127,7 +127,7 @@
    "id": "dsi:syntax/literal",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Literal",
+   "prefLabel": "Literal", "definition": "A value written directly in source code.",
    "notation": "literal",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -135,7 +135,7 @@
    "id": "dsi:syntax/string",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "String",
+   "prefLabel": "String", "definition": "A literal sequence of characters.",
    "notation": "string",
    "broader": "dsi:syntax/literal"
   },
@@ -143,7 +143,7 @@
    "id": "dsi:syntax/doc-string",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Doc string",
+   "prefLabel": "Doc string", "definition": "A string that documents the code element it belongs to.",
    "notation": "docString",
    "broader": "dsi:syntax/string"
   },
@@ -151,7 +151,7 @@
    "id": "dsi:syntax/character",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Character",
+   "prefLabel": "Character", "definition": "A literal single character, a kind of string.",
    "notation": "character",
    "broader": "dsi:syntax/string"
   },
@@ -159,7 +159,7 @@
    "id": "dsi:syntax/attribute-value",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Attribute value",
+   "prefLabel": "Attribute value", "definition": "The value of a markup attribute, a kind of string.",
    "notation": "attributeValue",
    "broader": "dsi:syntax/string"
   },
@@ -167,7 +167,7 @@
    "id": "dsi:syntax/number",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Number",
+   "prefLabel": "Number", "definition": "A literal number.",
    "notation": "number",
    "broader": "dsi:syntax/literal"
   },
@@ -175,7 +175,7 @@
    "id": "dsi:syntax/integer",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Integer",
+   "prefLabel": "Integer", "definition": "A literal whole number.",
    "notation": "integer",
    "broader": "dsi:syntax/number"
   },
@@ -183,7 +183,7 @@
    "id": "dsi:syntax/float",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Float",
+   "prefLabel": "Float", "definition": "A literal floating-point number.",
    "notation": "float",
    "broader": "dsi:syntax/number"
   },
@@ -191,7 +191,7 @@
    "id": "dsi:syntax/bool",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Bool",
+   "prefLabel": "Bool", "definition": "A literal true or false value.",
    "notation": "bool",
    "broader": "dsi:syntax/literal"
   },
@@ -199,7 +199,7 @@
    "id": "dsi:syntax/regexp",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Regexp",
+   "prefLabel": "Regexp", "definition": "A literal regular expression.",
    "notation": "regexp",
    "broader": "dsi:syntax/literal"
   },
@@ -207,7 +207,7 @@
    "id": "dsi:syntax/escape",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Escape",
+   "prefLabel": "Escape", "definition": "A literal escape sequence, such as a backslash escape inside a string.",
    "notation": "escape",
    "broader": "dsi:syntax/literal"
   },
@@ -215,7 +215,7 @@
    "id": "dsi:syntax/color",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Color",
+   "prefLabel": "Color", "definition": "A literal color value, such as a hex color in a style sheet.",
    "notation": "color",
    "broader": "dsi:syntax/literal"
   },
@@ -223,7 +223,7 @@
    "id": "dsi:syntax/url",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Url",
+   "prefLabel": "Url", "definition": "A literal URL.",
    "notation": "url",
    "broader": "dsi:syntax/literal"
   },
@@ -231,7 +231,7 @@
    "id": "dsi:syntax/keyword",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Keyword",
+   "prefLabel": "Keyword", "definition": "A word reserved by the language.",
    "notation": "keyword",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -239,7 +239,7 @@
    "id": "dsi:syntax/self",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Self",
+   "prefLabel": "Self", "definition": "The keyword that refers to the current object.",
    "notation": "self",
    "broader": "dsi:syntax/keyword"
   },
@@ -247,7 +247,7 @@
    "id": "dsi:syntax/null",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Null",
+   "prefLabel": "Null", "definition": "The keyword for the absence of a value.",
    "notation": "null",
    "broader": "dsi:syntax/keyword"
   },
@@ -255,7 +255,7 @@
    "id": "dsi:syntax/atom",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Atom",
+   "prefLabel": "Atom", "definition": "A keyword that denotes an atomic value.",
    "notation": "atom",
    "broader": "dsi:syntax/keyword"
   },
@@ -263,7 +263,7 @@
    "id": "dsi:syntax/unit",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Unit",
+   "prefLabel": "Unit", "definition": "A keyword for a unit of measure, such as px or em.",
    "notation": "unit",
    "broader": "dsi:syntax/keyword"
   },
@@ -271,7 +271,7 @@
    "id": "dsi:syntax/modifier",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Modifier",
+   "prefLabel": "Modifier", "definition": "A keyword that modifies a declaration, such as static or public.",
    "notation": "modifier",
    "broader": "dsi:syntax/keyword"
   },
@@ -279,7 +279,7 @@
    "id": "dsi:syntax/operator-keyword",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Operator keyword",
+   "prefLabel": "Operator keyword", "definition": "A keyword that acts as an operator, such as typeof or in.",
    "notation": "operatorKeyword",
    "broader": "dsi:syntax/keyword"
   },
@@ -287,7 +287,7 @@
    "id": "dsi:syntax/control-keyword",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Control keyword",
+   "prefLabel": "Control keyword", "definition": "A keyword that controls flow, such as if, for or return.",
    "notation": "controlKeyword",
    "broader": "dsi:syntax/keyword"
   },
@@ -295,7 +295,7 @@
    "id": "dsi:syntax/definition-keyword",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Definition keyword",
+   "prefLabel": "Definition keyword", "definition": "A keyword that defines something, such as let, function or class.",
    "notation": "definitionKeyword",
    "broader": "dsi:syntax/keyword"
   },
@@ -303,7 +303,7 @@
    "id": "dsi:syntax/module-keyword",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Module keyword",
+   "prefLabel": "Module keyword", "definition": "A keyword for defining or using modules, such as import or export.",
    "notation": "moduleKeyword",
    "broader": "dsi:syntax/keyword"
   },
@@ -311,7 +311,7 @@
    "id": "dsi:syntax/operator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Operator",
+   "prefLabel": "Operator", "definition": "A symbol that performs an operation on its operands.",
    "notation": "operator",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -319,7 +319,7 @@
    "id": "dsi:syntax/deref-operator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Deref operator",
+   "prefLabel": "Deref operator", "definition": "An operator that dereferences a value or accesses a member.",
    "notation": "derefOperator",
    "broader": "dsi:syntax/operator"
   },
@@ -327,7 +327,7 @@
    "id": "dsi:syntax/arithmetic-operator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Arithmetic operator",
+   "prefLabel": "Arithmetic operator", "definition": "An operator for arithmetic, such as plus or times.",
    "notation": "arithmeticOperator",
    "broader": "dsi:syntax/operator"
   },
@@ -335,7 +335,7 @@
    "id": "dsi:syntax/logic-operator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Logic operator",
+   "prefLabel": "Logic operator", "definition": "An operator for logic, such as and, or, or not.",
    "notation": "logicOperator",
    "broader": "dsi:syntax/operator"
   },
@@ -343,7 +343,7 @@
    "id": "dsi:syntax/bitwise-operator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Bitwise operator",
+   "prefLabel": "Bitwise operator", "definition": "An operator that works on the bits of its operands.",
    "notation": "bitwiseOperator",
    "broader": "dsi:syntax/operator"
   },
@@ -351,7 +351,7 @@
    "id": "dsi:syntax/compare-operator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Compare operator",
+   "prefLabel": "Compare operator", "definition": "An operator that compares its operands.",
    "notation": "compareOperator",
    "broader": "dsi:syntax/operator"
   },
@@ -359,7 +359,7 @@
    "id": "dsi:syntax/update-operator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Update operator",
+   "prefLabel": "Update operator", "definition": "An operator that changes its operand, such as an increment or assignment.",
    "notation": "updateOperator",
    "broader": "dsi:syntax/operator"
   },
@@ -367,7 +367,7 @@
    "id": "dsi:syntax/definition-operator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Definition operator",
+   "prefLabel": "Definition operator", "definition": "An operator that defines something, such as the colon in a declaration.",
    "notation": "definitionOperator",
    "broader": "dsi:syntax/operator"
   },
@@ -375,7 +375,7 @@
    "id": "dsi:syntax/type-operator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Type operator",
+   "prefLabel": "Type operator", "definition": "An operator that works on types.",
    "notation": "typeOperator",
    "broader": "dsi:syntax/operator"
   },
@@ -383,7 +383,7 @@
    "id": "dsi:syntax/control-operator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Control operator",
+   "prefLabel": "Control operator", "definition": "An operator that controls flow, such as the conditional operator.",
    "notation": "controlOperator",
    "broader": "dsi:syntax/operator"
   },
@@ -391,7 +391,7 @@
    "id": "dsi:syntax/punctuation",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Punctuation",
+   "prefLabel": "Punctuation", "definition": "A punctuation mark in code or markup.",
    "notation": "punctuation",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -399,7 +399,7 @@
    "id": "dsi:syntax/separator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Separator",
+   "prefLabel": "Separator", "definition": "Punctuation that separates items, such as a comma or semicolon.",
    "notation": "separator",
    "broader": "dsi:syntax/punctuation"
   },
@@ -407,7 +407,7 @@
    "id": "dsi:syntax/bracket",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Bracket",
+   "prefLabel": "Bracket", "definition": "Punctuation that opens or closes a group.",
    "notation": "bracket",
    "broader": "dsi:syntax/punctuation"
   },
@@ -415,7 +415,7 @@
    "id": "dsi:syntax/angle-bracket",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Angle bracket",
+   "prefLabel": "Angle bracket", "definition": "An angle bracket, usually less-than or greater-than.",
    "notation": "angleBracket",
    "broader": "dsi:syntax/bracket"
   },
@@ -423,7 +423,7 @@
    "id": "dsi:syntax/square-bracket",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Square bracket",
+   "prefLabel": "Square bracket", "definition": "A square bracket.",
    "notation": "squareBracket",
    "broader": "dsi:syntax/bracket"
   },
@@ -431,7 +431,7 @@
    "id": "dsi:syntax/paren",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Paren",
+   "prefLabel": "Paren", "definition": "A parenthesis.",
    "notation": "paren",
    "broader": "dsi:syntax/bracket"
   },
@@ -439,7 +439,7 @@
    "id": "dsi:syntax/brace",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Brace",
+   "prefLabel": "Brace", "definition": "A curly brace.",
    "notation": "brace",
    "broader": "dsi:syntax/bracket"
   },
@@ -447,7 +447,7 @@
    "id": "dsi:syntax/content",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Content",
+   "prefLabel": "Content", "definition": "Prose content in a markup document, such as plain text.",
    "notation": "content",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -455,7 +455,7 @@
    "id": "dsi:syntax/heading",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Heading",
+   "prefLabel": "Heading", "definition": "Content that is a heading.",
    "notation": "heading",
    "broader": "dsi:syntax/content"
   },
@@ -463,7 +463,7 @@
    "id": "dsi:syntax/heading-1",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Heading 1",
+   "prefLabel": "Heading 1", "definition": "A heading at level 1.",
    "notation": "heading1",
    "broader": "dsi:syntax/heading"
   },
@@ -471,7 +471,7 @@
    "id": "dsi:syntax/heading-2",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Heading 2",
+   "prefLabel": "Heading 2", "definition": "A heading at level 2.",
    "notation": "heading2",
    "broader": "dsi:syntax/heading"
   },
@@ -479,7 +479,7 @@
    "id": "dsi:syntax/heading-3",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Heading 3",
+   "prefLabel": "Heading 3", "definition": "A heading at level 3.",
    "notation": "heading3",
    "broader": "dsi:syntax/heading"
   },
@@ -487,7 +487,7 @@
    "id": "dsi:syntax/heading-4",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Heading 4",
+   "prefLabel": "Heading 4", "definition": "A heading at level 4.",
    "notation": "heading4",
    "broader": "dsi:syntax/heading"
   },
@@ -495,7 +495,7 @@
    "id": "dsi:syntax/heading-5",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Heading 5",
+   "prefLabel": "Heading 5", "definition": "A heading at level 5.",
    "notation": "heading5",
    "broader": "dsi:syntax/heading"
   },
@@ -503,7 +503,7 @@
    "id": "dsi:syntax/heading-6",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Heading 6",
+   "prefLabel": "Heading 6", "definition": "A heading at level 6.",
    "notation": "heading6",
    "broader": "dsi:syntax/heading"
   },
@@ -511,7 +511,7 @@
    "id": "dsi:syntax/content-separator",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Content separator",
+   "prefLabel": "Content separator", "definition": "A separator between blocks of prose content, such as a horizontal rule.",
    "notation": "contentSeparator",
    "broader": "dsi:syntax/content"
   },
@@ -519,7 +519,7 @@
    "id": "dsi:syntax/list",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "List",
+   "prefLabel": "List", "definition": "Content that is a list.",
    "notation": "list",
    "broader": "dsi:syntax/content"
   },
@@ -527,7 +527,7 @@
    "id": "dsi:syntax/quote",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Quote",
+   "prefLabel": "Quote", "definition": "Content that is a quotation.",
    "notation": "quote",
    "broader": "dsi:syntax/content"
   },
@@ -535,7 +535,7 @@
    "id": "dsi:syntax/emphasis",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Emphasis",
+   "prefLabel": "Emphasis", "definition": "Content styled with emphasis, usually italic.",
    "notation": "emphasis",
    "broader": "dsi:syntax/content"
   },
@@ -543,7 +543,7 @@
    "id": "dsi:syntax/strong",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Strong",
+   "prefLabel": "Strong", "definition": "Content styled strong, usually bold.",
    "notation": "strong",
    "broader": "dsi:syntax/content"
   },
@@ -551,7 +551,7 @@
    "id": "dsi:syntax/link",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Link",
+   "prefLabel": "Link", "definition": "Content that is part of a link.",
    "notation": "link",
    "broader": "dsi:syntax/content"
   },
@@ -559,7 +559,7 @@
    "id": "dsi:syntax/monospace",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Monospace",
+   "prefLabel": "Monospace", "definition": "Content styled as code or monospace text.",
    "notation": "monospace",
    "broader": "dsi:syntax/content"
   },
@@ -567,7 +567,7 @@
    "id": "dsi:syntax/strikethrough",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Strikethrough",
+   "prefLabel": "Strikethrough", "definition": "Content styled with a line through it.",
    "notation": "strikethrough",
    "broader": "dsi:syntax/content"
   },
@@ -575,7 +575,7 @@
    "id": "dsi:syntax/inserted",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Inserted",
+   "prefLabel": "Inserted", "definition": "Text added in a change-tracking format, such as a diff.",
    "notation": "inserted",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -583,7 +583,7 @@
    "id": "dsi:syntax/deleted",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Deleted",
+   "prefLabel": "Deleted", "definition": "Text removed in a change-tracking format, such as a diff.",
    "notation": "deleted",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -591,7 +591,7 @@
    "id": "dsi:syntax/changed",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Changed",
+   "prefLabel": "Changed", "definition": "Text modified in a change-tracking format, such as a diff.",
    "notation": "changed",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -599,7 +599,7 @@
    "id": "dsi:syntax/invalid",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Invalid",
+   "prefLabel": "Invalid", "definition": "An element that is invalid or breaks the language's syntax.",
    "notation": "invalid",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -607,7 +607,7 @@
    "id": "dsi:syntax/meta",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Meta",
+   "prefLabel": "Meta", "definition": "Metadata or a meta-instruction in code or markup.",
    "notation": "meta",
    "topConceptOf": "dsi:scheme/syntax"
   },
@@ -615,7 +615,7 @@
    "id": "dsi:syntax/document-meta",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Document meta",
+   "prefLabel": "Document meta", "definition": "Metadata that applies to a whole document.",
    "notation": "documentMeta",
    "broader": "dsi:syntax/meta"
   },
@@ -623,7 +623,7 @@
    "id": "dsi:syntax/annotation",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Annotation",
+   "prefLabel": "Annotation", "definition": "Metadata that annotates or adds attributes to a code element.",
    "notation": "annotation",
    "broader": "dsi:syntax/meta"
   },
@@ -631,7 +631,7 @@
    "id": "dsi:syntax/processing-instruction",
    "type": "Concept",
    "inScheme": "dsi:scheme/syntax",
-   "prefLabel": "Processing instruction",
+   "prefLabel": "Processing instruction", "definition": "A processing instruction or preprocessor directive.",
    "notation": "processingInstruction",
    "broader": "dsi:syntax/meta"
   },
@@ -642,7 +642,7 @@
    "topConceptOf": "dsi:scheme/syntax",
    "prefLabel": "Definition",
    "notation": "definition",
-   "definition": "Lezer modifier: marks a definition variant of another role (for example definition of a variable name)."
+   "definition": "A modifier marking the place where a name is defined, as opposed to used.", "scopeNote": "Lezer modifier: marks a definition variant of another role (for example definition of a variable name)."
   },
   {
    "id": "dsi:syntax/constant",
@@ -651,7 +651,7 @@
    "topConceptOf": "dsi:scheme/syntax",
    "prefLabel": "Constant",
    "notation": "constant",
-   "definition": "Lezer modifier: marks a constant variant of another role (for example constant of a variable name)."
+   "definition": "A modifier marking a name or value that does not change.", "scopeNote": "Lezer modifier: marks a constant variant of another role (for example constant of a variable name)."
   },
   {
    "id": "dsi:syntax/function",
@@ -660,7 +660,7 @@
    "topConceptOf": "dsi:scheme/syntax",
    "prefLabel": "Function",
    "notation": "function",
-   "definition": "Lezer modifier: marks a function variant of another role (for example function of a variable name)."
+   "definition": "A modifier marking a name that refers to a function.", "scopeNote": "Lezer modifier: marks a function variant of another role (for example function of a variable name)."
   },
   {
    "id": "dsi:syntax/standard",
@@ -669,7 +669,7 @@
    "topConceptOf": "dsi:scheme/syntax",
    "prefLabel": "Standard",
    "notation": "standard",
-   "definition": "Lezer modifier: marks a standard variant of another role (for example standard of a variable name)."
+   "definition": "A modifier marking a name that the language or its standard library provides.", "scopeNote": "Lezer modifier: marks a standard variant of another role (for example standard of a variable name)."
   },
   {
    "id": "dsi:syntax/local",
@@ -678,7 +678,7 @@
    "topConceptOf": "dsi:scheme/syntax",
    "prefLabel": "Local",
    "notation": "local",
-   "definition": "Lezer modifier: marks a local variant of another role (for example local of a variable name)."
+   "definition": "A modifier marking a name visible only in its local scope.", "scopeNote": "Lezer modifier: marks a local variant of another role (for example local of a variable name)."
   },
   {
    "id": "dsi:syntax/special",
@@ -687,7 +687,7 @@
    "topConceptOf": "dsi:scheme/syntax",
    "prefLabel": "Special",
    "notation": "special",
-   "definition": "Lezer modifier: marks a special variant of another role (for example special of a variable name)."
+   "definition": "A modifier marking a variant with special meaning, such as a special string.", "scopeNote": "Lezer modifier: marks a special variant of another role (for example special of a variable name)."
   },
   {
    "id": "dsi:syntax/variable",
@@ -695,7 +695,7 @@
    "inScheme": "dsi:scheme/syntax",
    "prefLabel": "Variable",
    "broader": "dsi:syntax/name",
-   "definition": "Carbon head for variable roles; groups variableName and its modified forms.",
+   "definition": "A group of roles for variables: variable names and their modified forms.", "scopeNote": "Carbon head for variable roles; groups variableName and its modified forms.",
    "editorialNote": "Not a Lezer tag: needed for Carbon syntax tokens."
   },
   {
@@ -704,7 +704,7 @@
    "inScheme": "dsi:scheme/syntax",
    "prefLabel": "Attribute",
    "broader": "dsi:syntax/name",
-   "definition": "Carbon head for attribute roles (attributeName, attributeValue).",
+   "definition": "A group of roles for markup attributes: attribute names and values.", "scopeNote": "Carbon head for attribute roles (attributeName, attributeValue).",
    "editorialNote": "Not a Lezer tag: needed for Carbon syntax tokens."
   },
   {
@@ -713,7 +713,7 @@
    "inScheme": "dsi:scheme/syntax",
    "prefLabel": "Tag",
    "broader": "dsi:syntax/name",
-   "definition": "Carbon head for markup tag roles (tagName and brackets).",
+   "definition": "A group of roles for markup tags: tag names and their brackets.", "scopeNote": "Carbon head for markup tag roles (tagName and brackets).",
    "editorialNote": "Not a Lezer tag: needed for Carbon syntax tokens."
   },
   {
@@ -722,7 +722,7 @@
    "inScheme": "dsi:scheme/syntax",
    "prefLabel": "Type",
    "broader": "dsi:syntax/name",
-   "definition": "Carbon head for type roles (typeName, typeOperator).",
+   "definition": "A group of roles for types: type names and type operators.", "scopeNote": "Carbon head for type roles (typeName, typeOperator).",
    "editorialNote": "Not a Lezer tag: needed for Carbon syntax tokens."
   },
   {
@@ -731,7 +731,7 @@
    "inScheme": "dsi:scheme/syntax",
    "prefLabel": "Special string",
    "broader": "dsi:syntax/string",
-   "definition": "Lezer special(string): strings with special meaning, such as regular-expression-like or template strings.",
+   "definition": "A string with special meaning, such as a template or pattern string.", "scopeNote": "Lezer special(string): strings with special meaning, such as regular-expression-like or template strings.",
    "editorialNote": "Not a Lezer tag: needed for Carbon syntax tokens."
   }
  ]

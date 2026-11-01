@@ -45,8 +45,8 @@ export async function prescreen(root: string, o: Ontology, opts: { margin?: numb
 
 export interface Suggestion { concept: string; confidence: number; model: string }
 
-/** Option descriptions that won round 5 (usage 47 -> 61%): drafted definitions plus contrastive usage and "none" texts. */
-export const CRITERIA_FILES = ['docs/planning/lexicon-definition-drafts.json', 'packages/jev/experiments/criteria-contrastive.json'];
+/** Option descriptions that won round 5 (usage 47 -> 61%): lexicon definitions plus contrastive usage and "none" texts. */
+export const CRITERIA_FILES = ['packages/jev/experiments/criteria-contrastive.json']; // definitions now live in the lexicon
 
 export async function suggest(root: string, o: Ontology, items: { product: string; version: string; token: string }[], opts: { offline?: boolean } = {}): Promise<Map<string, Suggestion>> {
   const gold = loadGold(root, o);

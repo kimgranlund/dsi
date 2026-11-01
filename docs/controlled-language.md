@@ -181,7 +181,7 @@ Where two facet values meet, a deciding test on shipped facts says which side a 
 | L3 uniqueness | ontology loader (duplicate prefLabel within a scheme) | enforced |
 | Registry membership of approved mappings | validator; registry gate in merge, tiebreak, settle, rank and map-scales | enforced |
 | L4 generated definitions | `conceptDefinition` | enforced |
-| L4 facet definitions | none yet. 99 of 243 lexicon words have no definition, 7 run over 25 words, and 14 name a system | open |
+| L4 facet definitions: present, at most 25 words, no product names | validator (`validateRepo`); 126 written and owner-approved on 2026-11-01 | enforced |
 | L5 and L7 frames | review page templates | built; the site does not show match statements yet |
 | L6 rationale shape | `dsi-map check` warns; prompts teach it | warns |
 

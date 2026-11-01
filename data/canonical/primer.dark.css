@@ -44,7 +44,7 @@
   --dsi-color-success-foreground: var(--fgColor-success, #3fb950);
   --dsi-color-success-icon: var(--fgColor-success, #3fb950); /* nearest: exact */
   --dsi-color-success-text: var(--fgColor-success, #3fb950); /* nearest: exact */
-  --dsi-color-warning: var(--fgColor-severe, #db6d28); /* nearest: close */
+  --dsi-color-warning: var(--fgColor-attention, #d29922); /* nearest: close */
   --dsi-color-warning-strong: var(--bgColor-attention-emphasis, #9e6a03); /* nearest: close */
   --dsi-color-warning-background: var(--bgColor-attention-emphasis, #9e6a03); /* nearest: close */
   --dsi-color-warning-background-strong: var(--bgColor-attention-emphasis, #9e6a03);
@@ -52,9 +52,9 @@
   --dsi-color-warning-border: var(--borderColor-attention-emphasis, #9e6a03); /* nearest: close */
   --dsi-color-warning-border-strong: var(--borderColor-attention-emphasis, #9e6a03);
   --dsi-color-warning-border-subtle: var(--borderColor-attention-muted, #bb8009);
-  --dsi-color-warning-foreground: var(--fgColor-severe, #db6d28);
-  --dsi-color-warning-icon: var(--fgColor-severe, #db6d28); /* nearest: close */
-  --dsi-color-warning-text: var(--fgColor-severe, #db6d28); /* nearest: close */
+  --dsi-color-warning-foreground: var(--fgColor-attention, #d29922);
+  --dsi-color-warning-icon: var(--fgColor-attention, #d29922); /* nearest: close */
+  --dsi-color-warning-text: var(--fgColor-attention, #d29922); /* nearest: close */
   --dsi-color-background: var(--bgColor-inverse, #ffffff); /* nearest: exact */
   --dsi-color-background-strong: var(--bgColor-emphasis, #3d444d);
   --dsi-color-background-subtle: var(--bgColor-accent-muted, #388bfd); /* nearest: exact */
@@ -65,12 +65,13 @@
   --dsi-color-border-subtlest: var(--borderColor-default, #3d444d);
   --dsi-color-border-disabled: var(--borderColor-disabled, #656c76);
   --dsi-color-focus-ring: var(--focus-outline-color, #1f6feb);
-  --dsi-color-foreground: var(--fgColor-accent, #4493f8); /* nearest: exact */
+  --dsi-color-foreground: var(--fgColor-default, #f0f6fc);
   --dsi-color-foreground-subtle: var(--fgColor-muted, #9198a1);
   --dsi-color-foreground-disabled: var(--fgColor-disabled, #656c76);
+  --dsi-color-icon: var(--fgColor-default, #f0f6fc); /* nearest: exact */
   --dsi-color-icon-subtle: var(--fgColor-muted, #9198a1); /* nearest: exact */
   --dsi-color-icon-disabled: var(--fgColor-disabled, #656c76); /* nearest: exact */
-  --dsi-color-text: var(--fgColor-link, #4493f8); /* nearest: exact */
+  --dsi-color-text: var(--fgColor-default, #f0f6fc); /* nearest: exact */
   --dsi-color-text-subtle: var(--fgColor-muted, #9198a1); /* nearest: exact */
   --dsi-color-text-disabled: var(--fgColor-disabled, #656c76); /* nearest: exact */
   --dsi-color-code-angle-bracket-text: var(--prettylights-syntax-brackethighlighter-angle, #9198a1);

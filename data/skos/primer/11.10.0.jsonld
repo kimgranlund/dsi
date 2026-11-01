@@ -10306,7 +10306,12 @@
    "inScheme": "dsi:scheme/native/primer/11.10.0",
    "prefLabel": "fgColor.attention",
    "notation": "--fgColor-attention",
-   "definition": "Attention text for warnings and caution states"
+   "definition": "Attention text for warnings and caution states",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-warning/property-foreground"
+    }
+   ]
   },
   {
    "id": "dsi:native/primer/11.10.0/fgColor.black",
@@ -10343,7 +10348,12 @@
    "inScheme": "dsi:scheme/native/primer/11.10.0",
    "prefLabel": "fgColor.default",
    "notation": "--fgColor-default",
-   "definition": "Default text color for primary content and headings"
+   "definition": "Default text color for primary content and headings",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-foreground"
+    }
+   ]
   },
   {
    "id": "dsi:native/primer/11.10.0/fgColor.disabled",
@@ -15629,6 +15639,17 @@
     }
    ],
    "prefLabel": "Color: Focus ring"
+  },
+  {
+   "id": "dsi:concept/color/property-foreground",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/foreground"
+    }
+   ],
+   "prefLabel": "Color: Foreground"
   },
   {
    "id": "dsi:concept/color/property-foreground/emphasis-subtle",

@@ -1098,27 +1098,26 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background",
-          "match": "exact",
+          "match": "close",
           "mode": "dark",
-          "nativeName": "--colorNeutralBackgroundInverted",
-          "note": "no direct mapping; colorNeutralBackgroundInverted maps to the more specific dsi:concept/color/usage-inverse/property-background",
+          "nativeName": "--colorNeutralBackground6",
           "product": "fluent",
-          "status": "nearest",
+          "status": "match",
           "theme": "web-dark",
-          "token": "colorNeutralBackgroundInverted",
+          "token": "colorNeutralBackground6",
           "version": "1.0.0-alpha.24",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          1,
-          1,
-          1
+          0.2,
+          0.2,
+          0.2
         ],
-        "hex": "#ffffff"
+        "hex": "#333333"
       }
     },
     "background-active": {
@@ -1128,12 +1127,12 @@
           "concept": "dsi:concept/color/property-background/state-active",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorSubtleBackgroundPressed",
+          "nativeName": "--colorNeutralBackground1Pressed",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorSubtleBackgroundPressed",
+          "token": "colorNeutralBackground1Pressed",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -1142,11 +1141,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.1804,
-          0.1804,
-          0.1804
+          0.1216,
+          0.1216,
+          0.1216
         ],
-        "hex": "#2e2e2e"
+        "hex": "#1f1f1f"
       }
     },
     "background-disabled": {
@@ -1183,12 +1182,40 @@
           "concept": "dsi:concept/color/property-background/state-hover",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorSubtleBackgroundHover",
+          "nativeName": "--colorNeutralBackground1Hover",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorSubtleBackgroundHover",
+          "token": "colorNeutralBackground1Hover",
+          "version": "1.0.0-alpha.24",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2392,
+          0.2392,
+          0.2392
+        ],
+        "hex": "#3d3d3d"
+      }
+    },
+    "background-selected": {
+      "$description": "Selected background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-background/state-selected",
+          "match": "broad",
+          "mode": "dark",
+          "nativeName": "--colorNeutralBackground1Selected",
+          "note": "only a broad match",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-dark",
+          "token": "colorNeutralBackground1Selected",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -1202,34 +1229,6 @@
           0.2196
         ],
         "hex": "#383838"
-      }
-    },
-    "background-selected": {
-      "$description": "Selected background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/property-background/state-selected",
-          "match": "broad",
-          "mode": "dark",
-          "nativeName": "--colorSubtleBackgroundSelected",
-          "note": "only a broad match",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorSubtleBackgroundSelected",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.2,
-          0.2,
-          0.2
-        ],
-        "hex": "#333333"
       }
     },
     "background-strong": {

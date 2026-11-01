@@ -1098,16 +1098,15 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background",
-          "match": "exact",
+          "match": "close",
           "mode": "increased-contrast",
-          "nativeName": "--colorNeutralBackgroundInverted",
-          "note": "no direct mapping; colorNeutralBackgroundInverted maps to the more specific dsi:concept/color/usage-inverse/property-background",
+          "nativeName": "--colorNeutralBackground6",
           "product": "fluent",
-          "status": "nearest",
+          "status": "match",
           "theme": "teams-high-contrast",
-          "token": "colorNeutralBackgroundInverted",
+          "token": "colorNeutralBackground6",
           "version": "1.0.0-alpha.24",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
@@ -1128,12 +1127,12 @@
           "concept": "dsi:concept/color/property-background/state-active",
           "match": "broad",
           "mode": "increased-contrast",
-          "nativeName": "--colorSubtleBackgroundPressed",
+          "nativeName": "--colorNeutralBackground1Pressed",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "teams-high-contrast",
-          "token": "colorSubtleBackgroundPressed",
+          "token": "colorNeutralBackground1Pressed",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -1183,12 +1182,12 @@
           "concept": "dsi:concept/color/property-background/state-hover",
           "match": "broad",
           "mode": "increased-contrast",
-          "nativeName": "--colorSubtleBackgroundHover",
+          "nativeName": "--colorNeutralBackground1Hover",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "teams-high-contrast",
-          "token": "colorSubtleBackgroundHover",
+          "token": "colorNeutralBackground1Hover",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -1211,12 +1210,12 @@
           "concept": "dsi:concept/color/property-background/state-selected",
           "match": "broad",
           "mode": "increased-contrast",
-          "nativeName": "--colorSubtleBackgroundSelected",
+          "nativeName": "--colorNeutralBackground1Selected",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "teams-high-contrast",
-          "token": "colorSubtleBackgroundSelected",
+          "token": "colorNeutralBackground1Selected",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }

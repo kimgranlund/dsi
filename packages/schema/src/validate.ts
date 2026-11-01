@@ -30,6 +30,19 @@ export interface ValidateOptions { root: string; ontologyDir?: string }
 export async function validateRepo({ root, ontologyDir = path.join(root, 'ontology') }: ValidateOptions): Promise<Issue[]> {
   const ontology = await loadOntology(ontologyDir);
   const issues: Issue[] = [...ontology.issues];
+  // L4 (docs/controlled-language.md): every lexicon word has a definition of at most 25 words naming no product.
+  const SYSTEMS = /\b(Material|Carbon|Polaris|Atlassian|Primer|Spectrum|Fluent|Lezer|MUI)\b/;
+  for (const file of ['facets.jsonld', 'categories.jsonld', 'syntax.jsonld']) {
+    const fp = path.join(ontologyDir, 'schemes', file);
+    if (!fs.existsSync(fp)) continue;
+    for (const c of JSON.parse(fs.readFileSync(fp, 'utf8'))['@graph'] as any[]) {
+      if (c.type !== 'Concept' || c['owl:deprecated'] || c.deprecated) continue;
+      const d: string | undefined = c.definition;
+      if (!d) issues.push({ file: `ontology/schemes/${file}`, message: `${c.id}: no definition (L4)` });
+      else if (d.trim().split(/\s+/).length > 25) issues.push({ file: `ontology/schemes/${file}`, message: `${c.id}: definition over 25 words (L4)` });
+      else if (SYSTEMS.test(d)) issues.push({ file: `ontology/schemes/${file}`, message: `${c.id}: definition names a product; move it to scopeNote (L4)` });
+    }
+  }
   const ajv = createAjv();
   const rel = (f: string) => path.relative(root, f);
   const read = (f: string): unknown => {

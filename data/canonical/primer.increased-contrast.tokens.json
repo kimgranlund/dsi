@@ -5562,25 +5562,24 @@
           "concept": "dsi:concept/color/property-foreground",
           "match": "exact",
           "mode": "increased-contrast",
-          "nativeName": "--fgColor-accent",
-          "note": "no direct mapping; fgColor.accent maps to the more specific dsi:concept/color/intent-accent/property-foreground",
+          "nativeName": "--fgColor-default",
           "product": "primer",
-          "status": "nearest",
+          "status": "match",
           "theme": "light-high-contrast",
-          "token": "fgColor.accent",
+          "token": "fgColor.default",
           "version": "11.10.0",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.0078,
-          0.2314,
-          0.5843
+          0.0039,
+          0.0157,
+          0.0353
         ],
-        "hex": "#023b95"
+        "hex": "#010409"
       }
     },
     "foreground-disabled": {
@@ -5690,6 +5689,34 @@
           0.9765
         ],
         "hex": "#368cf9"
+      }
+    },
+    "icon": {
+      "$description": "Icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-icon",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--fgColor-default",
+          "note": "no direct mapping; fgColor.default maps to dsi:concept/color/property-foreground, which covers text and icons",
+          "product": "primer",
+          "status": "nearest",
+          "theme": "light-high-contrast",
+          "token": "fgColor.default",
+          "version": "11.10.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0039,
+          0.0157,
+          0.0353
+        ],
+        "hex": "#010409"
       }
     },
     "icon-disabled": {
@@ -6634,25 +6661,25 @@
           "concept": "dsi:concept/color/property-text",
           "match": "exact",
           "mode": "increased-contrast",
-          "nativeName": "--fgColor-link",
-          "note": "no direct mapping; fgColor.link maps to the more specific dsi:concept/color/usage-link/property-text",
+          "nativeName": "--fgColor-default",
+          "note": "no direct mapping; fgColor.default maps to dsi:concept/color/property-foreground, which covers text and icons",
           "product": "primer",
           "status": "nearest",
           "theme": "light-high-contrast",
-          "token": "fgColor.link",
+          "token": "fgColor.default",
           "version": "11.10.0",
-          "via": "more-specific"
+          "via": "broader-property"
         }
       },
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.0078,
-          0.2314,
-          0.5843
+          0.0039,
+          0.0157,
+          0.0353
         ],
-        "hex": "#023b95"
+        "hex": "#010409"
       }
     },
     "text-disabled": {
@@ -6718,12 +6745,12 @@
           "concept": "dsi:concept/color/intent-warning",
           "match": "close",
           "mode": "increased-contrast",
-          "nativeName": "--fgColor-severe",
-          "note": "no direct mapping; fgColor.severe maps to the more specific dsi:concept/color/intent-warning/property-foreground",
+          "nativeName": "--fgColor-attention",
+          "note": "no direct mapping; fgColor.attention maps to the more specific dsi:concept/color/intent-warning/property-foreground",
           "product": "primer",
           "status": "nearest",
           "theme": "light-high-contrast",
-          "token": "fgColor.severe",
+          "token": "fgColor.attention",
           "version": "11.10.0",
           "via": "more-specific"
         }
@@ -6732,11 +6759,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.4392,
-          0.1725,
+          0.3765,
+          0.2157,
           0
         ],
-        "hex": "#702c00"
+        "hex": "#603700"
       }
     },
     "warning-background": {
@@ -6910,11 +6937,11 @@
           "concept": "dsi:concept/color/intent-warning/property-foreground",
           "match": "close",
           "mode": "increased-contrast",
-          "nativeName": "--fgColor-severe",
+          "nativeName": "--fgColor-attention",
           "product": "primer",
           "status": "match",
           "theme": "light-high-contrast",
-          "token": "fgColor.severe",
+          "token": "fgColor.attention",
           "version": "11.10.0",
           "via": "direct"
         }
@@ -6923,11 +6950,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.4392,
-          0.1725,
+          0.3765,
+          0.2157,
           0
         ],
-        "hex": "#702c00"
+        "hex": "#603700"
       }
     },
     "warning-icon": {
@@ -6937,12 +6964,12 @@
           "concept": "dsi:concept/color/intent-warning/property-icon",
           "match": "close",
           "mode": "increased-contrast",
-          "nativeName": "--fgColor-severe",
-          "note": "no direct mapping; fgColor.severe maps to dsi:concept/color/intent-warning/property-foreground, which covers text and icons",
+          "nativeName": "--fgColor-attention",
+          "note": "no direct mapping; fgColor.attention maps to dsi:concept/color/intent-warning/property-foreground, which covers text and icons",
           "product": "primer",
           "status": "nearest",
           "theme": "light-high-contrast",
-          "token": "fgColor.severe",
+          "token": "fgColor.attention",
           "version": "11.10.0",
           "via": "broader-property"
         }
@@ -6951,11 +6978,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.4392,
-          0.1725,
+          0.3765,
+          0.2157,
           0
         ],
-        "hex": "#702c00"
+        "hex": "#603700"
       }
     },
     "warning-strong": {
@@ -6993,12 +7020,12 @@
           "concept": "dsi:concept/color/intent-warning/property-text",
           "match": "close",
           "mode": "increased-contrast",
-          "nativeName": "--fgColor-severe",
-          "note": "no direct mapping; fgColor.severe maps to dsi:concept/color/intent-warning/property-foreground, which covers text and icons",
+          "nativeName": "--fgColor-attention",
+          "note": "no direct mapping; fgColor.attention maps to dsi:concept/color/intent-warning/property-foreground, which covers text and icons",
           "product": "primer",
           "status": "nearest",
           "theme": "light-high-contrast",
-          "token": "fgColor.severe",
+          "token": "fgColor.attention",
           "version": "11.10.0",
           "via": "broader-property"
         }
@@ -7007,11 +7034,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.4392,
-          0.1725,
+          0.3765,
+          0.2157,
           0
         ],
-        "hex": "#702c00"
+        "hex": "#603700"
       }
     }
   }
