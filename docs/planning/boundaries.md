@@ -40,4 +40,4 @@ Score = 3 × open + 2 × audit + decided + jev / 2 + systems.
 
 ## What one decision settles
 
-B1 to B8 cover 129 open tokens (75% of the token queue of 171), the 33 audit contradictions on these pairs, and the precedent for every future system. Where a test is computable, it becomes a deterministic step (like rank-emphasis) and a validator check, and its wording goes into the agent prompts and Jev's option descriptions.
+B1 to B8 touch 99 distinct open tokens (81% of the 122 queued tokens with two or more differing answers; some tokens sit on several pairs), the 33 audit contradictions on these pairs, and the precedent for every future system. Where a test is computable, it becomes a deterministic step (like rank-emphasis) and a validator check, and its wording goes into the agent prompts and Jev's option descriptions.
