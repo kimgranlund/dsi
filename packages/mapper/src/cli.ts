@@ -7,6 +7,8 @@ import { classify, type TermsFile } from '@dsi/classify';
 import { loadNative } from '@dsi/resolve';
 import { preparePacket, readMappings, type Scope } from './packet.ts';
 import { auditTerms, prepareAudit, readVerdicts } from './audit.ts';
+import { rankEmphasis } from './rank.ts';
+import { parseConcept } from '@dsi/schema';
 import { resolve as resolveToken, showValue } from '@dsi/resolve';
 import { applyDecisions, applyDisputes, applyTermDecisions, collectDisputes, collectQueue, collectTermQueue, disputeKey, renderPage, type Decision, type DisputeDecision, type TermDecision } from './review.ts';
 
@@ -19,6 +21,7 @@ const USAGE = `usage:
   dsi-map audit-check <scope> <run> <product>    validate an auditor's verdicts
   dsi-map audit-merge <scope> <run>              write mappings/<product>/<version>.audit.json and list disputes
   dsi-map review <scope> <run> <out.html> [vocab run[,run]] [--words-only]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
+  dsi-map rank-emphasis <scope> <run> <product>   settle emphasis by contrast rank where both agents agree on the rest (ADR 0018)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
 
 const [cmd, scopeId, run] = process.argv.slice(2);
@@ -111,6 +114,30 @@ if (cmd === 'prepare') {
     const disputedTerms = new Map(open.filter((x) => x.kind === 'term').map((x) => [x.key, x.current.concept]));
     console.log('disputes', JSON.stringify(applyDisputes(root, scope, disputeDecisions, reviewer, suggestions, disputedTerms)));
   }
+} else if (cmd === 'rank-emphasis') {
+  // ADR 0018: settle emphasis by contrast rank where both agents agree on everything else.
+  const product = process.argv[5];
+  if (!run || !product) { console.error(USAGE); process.exit(2); }
+  const { version } = scope.products[product];
+  const rd = (r: string) => JSON.parse(fs.readFileSync(path.join(runDir, `${product}.${r}.proposals.json`), 'utf8')).proposals;
+  const mf = path.join(root, 'mappings', product, `${version}.mappings.json`);
+  const file = JSON.parse(fs.readFileSync(mf, 'utf8'));
+  const approved = new Set(file.mappings.filter((m: any) => m.status === 'approved').map((m: any) => m.token));
+  const pageTok = file.mappings.find((m: any) => m.status === 'approved' && m.concept === 'dsi:concept/color/usage-page/property-background')?.token;
+  const r = rankEmphasis(root, product, version, rd('a'), rd('b'), () => pageTok);
+  const at = new Date().toISOString();
+  let added = 0;
+  for (const x of r.out) {
+    if (approved.has(x.token)) continue;
+    if (typeof parseConcept(ontology, x.concept) === 'string') { r.skipped.push(`${x.token}: invalid ${x.concept}`); continue; }
+    for (const m of file.mappings) if (m.token === x.token && m.status === 'proposed') { m.status = 'rejected'; m.review = { by: 'rank-rule', at, note: `Emphasis settled by contrast rank (ADR 0018): ${x.concept}.` }; }
+    file.mappings.push({ id: r.id(x.token, x.concept, x.match), token: x.token, concept: x.concept, match: x.match, confidence: 1, status: 'approved', rationale: `Both agents agree on every facet but emphasis; ${x.note} (ADR 0018).`, provenance: { agent: 'dsi-mapper', at, method: 'emphasis-rank-v1' }, review: { by: 'rank-rule', at, note: 'Deterministic: contrast against the page in every mode.' } });
+    added++;
+  }
+  file.mappings.sort((a: any, b: any) => a.token.localeCompare(b.token) || a.id.localeCompare(b.id));
+  fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n');
+  console.log(`${product}: ${added} settled by contrast rank; ${r.skipped.length} families or tokens skipped`);
+  for (const s of r.skipped.slice(0, 15)) console.log('  ' + s);
 } else if (cmd === 'audit-prepare') {
   if (!run) { console.error(USAGE); process.exit(2); }
   const dir = path.join(root, '.cache/audit', run);
