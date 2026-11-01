@@ -115,6 +115,39 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 .evidence li small { font: 0.7rem var(--font-mono); color: var(--muted); word-break: break-all; }
 .vs { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 8px; }
 .empty { text-align: center; color: var(--muted); padding: 40px 0; }
+
+/* Decision aids: shared facets once, differences highlighted, votes tallied, precedent from approved siblings. */
+.card.active { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ctx { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.tile { border-radius: 8px; border: 1px solid var(--line); padding: 10px; display: grid; gap: 6px; justify-items: start; min-height: 4.2rem; }
+.tile .glyph { display: flex; align-items: center; gap: 8px; font: 600 1.05rem/1 var(--font-body); }
+.tile .glyph svg { width: 18px; height: 18px; }
+.tile .bx { padding: 4px 10px; border-radius: 6px; border: 2px solid; font: 500 0.8rem var(--font-body); }
+.cap { font: 0.66rem/1.25 var(--font-mono); color: var(--muted); word-break: break-all; }
+details.modes summary { font-size: 0.75rem; color: var(--muted); cursor: pointer; }
+details.modes[open] summary { margin-bottom: 6px; }
+.shared { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; font-size: 0.75rem; color: var(--muted); }
+.opt { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 4px 10px; align-items: start; }
+.opt.suggested { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+.opt.chosen { border-color: var(--ok); background: var(--ok-soft); }
+.opt .body { display: grid; gap: 4px; min-width: 0; }
+.opt .line { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
+.facet.add { background: var(--warn-soft); color: var(--warn); font-weight: 600; }
+.voters { font: 0.72rem var(--font-mono); color: var(--muted); }
+.tally { font: 600 0.72rem var(--font-body); color: var(--ink); }
+.sugg { font-size: 0.72rem; font-weight: 600; color: var(--accent); }
+.opt details summary { font-size: 0.78rem; color: var(--muted); cursor: pointer; list-style: none; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.opt details[open] summary { display: none; }
+.opt details p { font-size: 0.8rem; margin: 0 0 4px; }
+kbd { font: 600 0.7rem var(--font-mono); padding: 1px 6px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; background: var(--bg); color: var(--muted); }
+.prec { display: grid; gap: 3px; font-size: 0.75rem; color: var(--muted); }
+.prec span { font-family: var(--font-mono); word-break: break-word; }
+.family { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding: 10px 2px 0; border-top: 2px solid var(--line); margin-top: 6px; }
+.family h2 { font: 600 0.9rem var(--font-mono); margin: 0; }
+.family .sub { flex: 1; min-width: 12rem; }
+.keys { font-size: 0.75rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 12px; }
+@media (max-width: 720px) { header.top { position: static; } }
+.total { font: 600 0.85rem var(--font-body); font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
 </style>
 
@@ -129,6 +162,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
       <a href="#terms" id="tab-terms">Naming terms</a>
       <a href="#disputes" id="tab-disputes">Disputes</a>
     </nav>
+    <div class="title-row"><span class="total" id="total"></span><span class="keys" id="keys"></span></div>
     <div class="progress" id="progress"></div>
     <div class="filters">
       <select id="f-product" aria-label="Product"><option value="">All systems</option></select>
@@ -149,7 +183,7 @@ const DATA = /*__DATA__*/null;
 const ONT = DATA.ontology;
 const FACET_ORDER = ['intent', 'usage', 'property', 'emphasis', 'state'];
 const LABEL = {};
-for (const f of FACET_ORDER) for (const v of ONT.facets[f] || []) LABEL[f + ':' + v.value] = v.label;
+for (const f of Object.keys(ONT.facets)) for (const v of ONT.facets[f] || []) LABEL[f + ':' + v.value] = v.label;
 const MATCHES = ['exact', 'close', 'broad', 'narrow', 'related'];
 const MATCH_HINT = { exact: 'same meaning', close: 'same, with a nuance', broad: 'token is a narrower case', narrow: 'token covers more', related: 'associated only' };
 
@@ -315,7 +349,7 @@ function termCard(item) {
       el('button', { text: 'No concept fits', disabled: !canWrite, onclick: () => decide(item, { action: 'ignore', ignore: 'no-concept' }, 'term-decisions') }),
       el('button', { text: 'Reject all', disabled: !canWrite, onclick: () => decide(item, { action: 'reject' }, 'term-decisions') })));
   }
-  return el('article', { class: 'card' + (d ? ' decided' : '') }, left, right);
+  return el('article', { class: 'card' + (d ? ' decided' : ''), 'data-key': item.key, onclick: () => { if (activeKey !== item.key) { activeKey = item.key; markActive(); } } }, left, right);
 }
 
 function customBuilder(item) {
@@ -345,6 +379,49 @@ function customBuilder(item) {
   return box;
 }
 
+const atoms = (c) => !c ? [] : c.replace(/^dsi:concept\/[a-z]+\//, '').split('/').flatMap((seg) => { const f = FACET_ORDER.concat(['hue', 'syntax', 'component', 'part', 'style', 'brightness']).find((x) => seg.startsWith(x + '-')); return f ? seg.slice(f.length + 1).split('+').map((v) => f + ':' + v) : []; });
+const atomLabel = (a) => { const [f, v] = a.split(':'); return LABEL[a] || v.replace(/-/g, ' '); };
+function atomChip(a, cls = '') { return el('span', { class: 'facet ' + cls }, el('small', { text: a.split(':')[0] }), (cls === 'add' ? '+ ' : '') + atomLabel(a)); }
+const short = (c, m) => !c ? 'no concept fits' : atoms(c).map(atomLabel).join(' · ') + ' — ' + m;
+function css(v) { const m = /^(#[0-9a-f]{6})(?: @ ([\d.]+))?$/i.exec(v || ''); if (!m) return ''; if (!m[2]) return m[1]; const n = parseInt(m[1].slice(1), 16); return 'rgba(' + [n >> 16, (n >> 8) & 255, n & 255, m[2]].join(',') + ')'; }
+const ICON = '<svg viewBox="0 0 18 18" aria-hidden="true"><path fill="currentColor" d="M4 1h7l4 4v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm6 1v4h4z"/></svg>';
+function contextTiles(item) {
+  const cx = item.context;
+  if (!cx || !cx.modes.length) return null;
+  return el('div', { class: 'ctx' }, cx.modes.map((md) => {
+    const tok = css(item.themes[md] && item.themes[md].value), page = css(cx.page[md]) || 'var(--panel)', text = css(cx.text[md]) || 'var(--ink)';
+    const behind = cx.property === 'bg' ? tok : (cx.pair && css(cx.pair.values[md])) || page;
+    const tile = el('div', { class: 'tile' });
+    tile.style.background = behind;
+    if (cx.property === 'fg' || cx.property === 'other') { const g = el('div', { class: 'glyph' }); g.innerHTML = ICON; g.append('Aa'); g.style.color = tok; tile.append(g); }
+    else if (cx.property === 'border') { const b = el('span', { class: 'bx', text: 'Aa' }); b.style.borderColor = tok; b.style.color = text; tile.append(b); }
+    else { const g = el('div', { class: 'glyph', text: 'Aa' }); g.style.color = text; tile.append(g); }
+    return el('div', { class: 'sw' }, tile, el('span', { class: 'cap' }, el('b', { text: md }), ' ' + (cx.property === 'bg' ? 'fill, page text on it' : cx.pair ? 'on ' + cx.pair.token : 'on the page')));
+  }));
+}
+function nextOpen(from) {
+  const ids = [...document.querySelectorAll('#list article.card:not(.decided)')].map((n) => n.dataset.key);
+  const i = ids.indexOf(from);
+  return ids[i + 1] || ids[i - 1] || null;
+}
+function decideOpt(item, i) {
+  const o = item.options[i];
+  if (!o) return;
+  activeKey = nextOpen(item.key);
+  if (!o.concept) return decide(item, { action: 'unmapped', note: 'No concept fits (' + o.voters.map((v) => v.model).join(', ') + ').' });
+  if (o.recordId && !o.recordId.startsWith('u-')) return decide(item, { action: 'accept', candidateId: o.recordId });
+  decide(item, { action: 'custom', concept: o.concept, match: o.match, note: 'Accepted the answer of ' + o.voters.map((v) => v.model).join(', ') + '.' });
+}
+function act(item, body) { activeKey = nextOpen(item.key); decide(item, body); }
+const shapeOf = (c, m) => c ? c.split('/').map((x) => x.replace(/^(hue|emphasis)-.*/, '$1-*')).join('/') + ' ' + m : '(no concept)';
+function decidedShape(item, d) {
+  if (!d) return null;
+  if (d.action === 'unmapped') return '(no concept)';
+  if (d.action === 'custom') return shapeOf(d.concept, d.match);
+  if (d.action === 'accept') { const o = item.options.find((x) => x.recordId === d.candidateId); return o ? o.shape : null; }
+  return null;
+}
+
 function card(item) {
   const d = decisions.get(item.key);
   const themes = Object.entries(item.themes);
@@ -353,36 +430,105 @@ function card(item) {
     el('div', { class: 'tok-name', text: item.token }),
     item.nativeName && item.nativeName !== item.token ? el('div', { class: 'tok-meta', text: item.nativeName }) : null,
     item.description ? el('p', { class: 'desc', text: item.description }) : null,
-    el('div', { class: 'swatches' }, themes.map(([th, t]) => swatch(th, t))));
+    contextTiles(item),
+    el('details', { class: 'modes' }, el('summary', { text: 'All ' + themes.length + ' modes' }), el('div', { class: 'swatches' }, themes.map(([th, t]) => swatch(th, t)))));
 
   const right = el('div', { class: 'answers' });
   if (d) {
-    const label = d.action === 'accept' ? 'Accepted ' + (item.candidates.find((c) => c.id === d.candidateId)?.model || 'an answer')
-      : d.action === 'custom' ? 'Custom mapping saved' : d.action === 'unmapped' ? 'Marked as no concept fits' : 'Rejected both answers';
+    const o = d.action === 'accept' ? item.options.find((x) => x.recordId === d.candidateId) : null;
+    const label = d.action === 'accept' ? 'Accepted: ' + (o ? short(o.concept, o.match) : 'an answer')
+      : d.action === 'custom' ? 'Saved: ' + short(d.concept, d.match) : d.action === 'unmapped' ? 'No concept fits' : 'Rejected all answers';
     right.append(el('div', { class: 'decision' + (d.action === 'reject' ? ' reject' : '') }, el('span', { text: label }),
-      d.action === 'custom' ? el('span', {}, facetChips(d.concept), ' ', el('span', { class: 'pill ' + d.match, text: d.match })) : null,
-      el('button', { text: 'Undo', disabled: !canWrite, onclick: () => undo(item) })));
+      el('button', { text: 'Undo', disabled: !canWrite, onclick: () => { activeKey = item.key; undo(item); } })));
   }
-  for (const c of item.candidates) {
-    const chosen = d && d.action === 'accept' && d.candidateId === c.id;
-    right.append(el('div', { class: 'cand' + (chosen ? ' chosen' : '') },
-      el('div', { class: 'cand-head' },
-        el('span', { class: 'model', text: c.model }),
-        c.kind === 'mapping' ? el('span', { class: 'pill ' + c.match, text: c.match }) : el('span', { class: 'pill none', text: 'no concept fits' }),
-        c.confidence != null ? el('span', { class: 'conf', text: c.confidence.toFixed(2) }) : null),
-      c.kind === 'mapping' ? facetChips(c.concept) : null,
-      el('p', { class: 'why', text: c.rationale }),
-      !d ? el('div', { class: 'actions' }, el('button', { class: 'primary', text: 'Accept this', disabled: !canWrite, onclick: () => decide(item, { action: 'accept', candidateId: c.id }) })) : null));
+  const mapped = item.options.filter((o) => o.concept);
+  const shared = mapped.length ? atoms(mapped[0].concept).filter((a) => mapped.every((o) => atoms(o.concept).includes(a))) : [];
+  const total = item.options.reduce((n, o) => n + o.voters.length, 0);
+  if (mapped.length > 1 && shared.length) right.append(el('div', { class: 'shared' }, el('span', { text: 'All answers agree on' }), shared.map((a) => atomChip(a))));
+  item.options.forEach((o, i) => {
+    const chosen = d && ((d.action === 'accept' && d.candidateId === o.recordId) || (d.action === 'custom' && d.concept === o.concept && d.match === o.match) || (d.action === 'unmapped' && !o.concept));
+    const extra = o.concept ? atoms(o.concept).filter((a) => !(mapped.length > 1 && shared.includes(a))) : [];
+    const sugg = item.preselect === i;
+    right.append(el('div', { class: 'opt' + (sugg && !d ? ' suggested' : '') + (chosen ? ' chosen' : '') },
+      el('kbd', { text: String(i + 1) }),
+      el('div', { class: 'body' },
+        el('div', { class: 'line' },
+          o.concept ? (extra.length ? extra.map((a) => atomChip(a, mapped.length > 1 ? 'add' : '')) : el('span', { class: 'voters', text: 'only the shared facets' })) : el('span', { class: 'pill none', text: 'no concept fits' }),
+          o.concept ? el('span', { class: 'pill ' + o.match, text: o.match }) : null),
+        el('div', { class: 'line' },
+          el('span', { class: 'tally', text: o.voters.length + ' of ' + total }),
+          el('span', { class: 'voters', text: o.voters.map((v) => v.model.replace(/^claude-/, '') + (v.confidence != null ? ' ' + v.confidence.toFixed(2) : '')).join(' · ') }),
+          sugg ? el('span', { class: 'sugg', text: 'Suggested: ' + item.preselectWhy }) : null),
+        el('details', {}, el('summary', { text: o.voters[0].rationale }), o.voters.map((v) => el('p', {}, el('b', { text: v.model.replace(/^claude-/, '') + ': ' }), v.rationale)))),
+      !d ? el('button', { class: sugg ? 'primary' : '', text: 'Accept', disabled: !canWrite, onclick: () => decideOpt(item, i) }) : el('span')));
+  });
+  if (item.family && item.family.approved.length) {
+    right.append(el('div', { class: 'prec' },
+      el('div', { text: 'Approved siblings (' + item.family.label + ')' + (item.family.precedent ? ': ' + item.family.precedent.count + ' of ' + item.family.precedent.of + ' share one shape' : '') }),
+      item.family.approved.slice(0, 6).map((x) => el('span', { text: x.token + ' → ' + short(x.concept, x.match) }))));
   }
   if (!d) {
     if (openCustom.has(item.key)) right.append(customBuilder(item));
     right.append(el('div', { class: 'actions' },
-      el('button', { text: 'Write my own', disabled: !canWrite, onclick: () => { openCustom.add(item.key); render(); } }),
-      el('button', { text: 'No concept fits', disabled: !canWrite, onclick: () => decide(item, { action: 'unmapped' }) }),
-      el('button', { text: 'Reject both', disabled: !canWrite, onclick: () => decide(item, { action: 'reject' }) })));
+      el('button', { text: 'Write my own ', disabled: !canWrite, onclick: () => { openCustom.add(item.key); render(); } }, el('kbd', { text: 'W' })),
+      el('button', { text: 'No concept fits ', disabled: !canWrite, onclick: () => act(item, { action: 'unmapped' }) }, el('kbd', { text: 'N' })),
+      el('button', { text: 'Reject all ', disabled: !canWrite, onclick: () => act(item, { action: 'reject' }) }, el('kbd', { text: 'X' }))));
   }
-  return el('article', { class: 'card' + (d ? ' decided' : ''), id: 'card-' + item.key.replace(/[^a-z0-9]/gi, '-') }, left, right);
+  const n = el('article', { class: 'card' + (d ? ' decided' : '') + (activeKey === item.key ? ' active' : ''), id: 'card-' + item.key.replace(/[^a-z0-9]/gi, '-'), 'data-key': item.key, onclick: () => { if (activeKey !== item.key) { activeKey = item.key; markActive(); } } }, left, right);
+  return n;
 }
+
+function familyHeader(fam, members) {
+  const open = members.filter((i) => !decisions.has(i.key));
+  const viaPrecedent = open.filter((i) => i.preselect != null && item_matchesPrecedent(i));
+  const last = members.filter((i) => decisions.has(i.key)).sort((a, b) => decisions.get(b.key).at.localeCompare(decisions.get(a.key).at))[0];
+  const shape = last && decidedShape(last, decisions.get(last.key));
+  const same = shape ? open.filter((i) => shape === '(no concept)' || i.options.some((o) => o.shape === shape)) : [];
+  return el('div', { class: 'family' },
+    el('h2', { text: fam.label }),
+    el('span', { class: 'sub', text: members.length + ' queued · ' + open.length + ' open' + (fam.precedent ? ' · precedent: ' + fam.precedent.count + ' of ' + fam.precedent.of + ' approved siblings share one shape' : '') }),
+    viaPrecedent.length > 1 ? el('button', { class: 'primary', text: 'Accept suggested for ' + viaPrecedent.length, disabled: !canWrite, onclick: () => viaPrecedent.forEach((i) => decideOpt(i, i.preselect)) }) : null,
+    same.length ? el('button', { text: 'Same as ' + last.token.split(/[.]/).slice(-2).join('.') + ' for ' + same.length, disabled: !canWrite, onclick: () => same.forEach((i) => { if (shape === '(no concept)') return decide(i, { action: 'unmapped' }); decideOpt(i, i.options.findIndex((o) => o.shape === shape)); }) }) : null);
+}
+const item_matchesPrecedent = (i) => i.family && i.family.precedent && i.options[i.preselect] && i.options[i.preselect].shape === i.family.precedent.shape;
+
+let activeKey = null, lastScrolled = null;
+function markActive(scroll) {
+  for (const n of document.querySelectorAll('#list article.card')) n.classList.toggle('active', n.dataset.key === activeKey);
+  const a = activeKey && document.querySelector('#list article.card[data-key="' + CSS.escape(activeKey) + '"]');
+  if (a && scroll && lastScrolled !== activeKey) lastScrolled = activeKey, a.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+}
+document.addEventListener('keydown', (e) => {
+  if (e.metaKey || e.ctrlKey || e.altKey || /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
+  const v = view();
+  if (v === 'disputes') return;
+  const cards = [...document.querySelectorAll('#list article.card')];
+  if (!cards.length) return;
+  let idx = cards.findIndex((n) => n.dataset.key === activeKey);
+  const k = e.key.toLowerCase();
+  if (k === 'j' || k === 'k') { idx = Math.max(0, Math.min(cards.length - 1, idx < 0 ? 0 : idx + (k === 'j' ? 1 : -1))); activeKey = cards[idx].dataset.key; markActive(true); e.preventDefault(); return; }
+  if (idx < 0) return;
+  const pool = v === 'terms' ? TERMS : DATA.items;
+  const item = pool.find((i) => i.key === activeKey);
+  if (!item) return;
+  const done = (v === 'terms' ? termDecisions : decisions).has(item.key);
+  if (k === 'u' && done) { undo(item, v === 'terms' ? 'term-decisions' : 'decisions'); return; }
+  if (done || !canWrite) return;
+  if (v === 'terms') {
+    if (/^[1-9]$/.test(k) && item.candidates[+k - 1]) { activeKey = nextOpen(item.key); decide(item, { action: 'accept', candidateId: item.candidates[+k - 1].id }, 'term-decisions'); }
+    else if (k === 'n') { activeKey = nextOpen(item.key); decide(item, { action: 'ignore', ignore: 'no-concept' }, 'term-decisions'); }
+    else if (k === 'i') { activeKey = nextOpen(item.key); decide(item, { action: 'ignore', ignore: 'noise' }, 'term-decisions'); }
+    else return;
+  } else {
+    if (/^[1-9]$/.test(k)) decideOpt(item, +k - 1);
+    else if (k === 'enter' && item.preselect != null) decideOpt(item, item.preselect);
+    else if (k === 'n') act(item, { action: 'unmapped' });
+    else if (k === 'x') act(item, { action: 'reject' });
+    else if (k === 'w') { openCustom.add(item.key); render(); }
+    else return;
+  }
+  e.preventDefault();
+});
 
 function render() {
   const v = view();
@@ -395,7 +541,22 @@ function render() {
   const product = $('#f-product').value, status = $('#f-status').value, q = $('#f-search').value.trim().toLowerCase();
   const list = $('#list');
   const shown = items.filter((i) => (!product || i.product === product) && (status === 'all' || (status === 'open') !== done.has(i.key)) && (!q || name(i).toLowerCase().includes(q)));
-  list.replaceChildren(...(shown.length ? shown.map(v === 'terms' ? termCard : v === 'disputes' ? disputeCard : card) : [el('p', { class: 'empty', text: status === 'open' ? 'Nothing left to decide here.' : 'Nothing matches these filters.' })]));
+  let nodes;
+  if (v === 'tokens') {
+    // Families together, largest open families first; a header per family with two or more queued members.
+    const fams = new Map();
+    for (const i of shown) { const k = i.family ? i.family.key : i.key; (fams.get(k) || fams.set(k, []).get(k)).push(i); }
+    const groups = [...fams.values()].sort((a, b) => b.length - a.length || a[0].token.localeCompare(b[0].token));
+    nodes = groups.flatMap((g) => { const all = DATA.items.filter((i) => i.family && g[0].family && i.family.key === g[0].family.key); return [all.length > 1 ? familyHeader(g[0].family, all) : null, ...g.map(card)].filter(Boolean); });
+  } else nodes = shown.map(v === 'terms' ? termCard : disputeCard);
+  list.replaceChildren(...(nodes.length ? nodes : [el('p', { class: 'empty', text: status === 'open' ? 'Nothing left to decide here.' : 'Nothing matches these filters.' })]));
+  for (const n of list.querySelectorAll('article.card')) { if (!n.dataset.key) { const it = items.find((i) => 'card-' + i.key.replace(/[^a-z0-9]/gi, '-') === n.id); if (it) n.dataset.key = it.key; } }
+  const cardsNow = [...list.querySelectorAll('article.card')];
+  if (!cardsNow.some((n) => n.dataset.key === activeKey)) activeKey = (cardsNow.find((n) => !n.classList.contains('decided')) || cardsNow[0] || {}).dataset?.key || null;
+  markActive(true);
+  const doneAll = items.filter((i) => done.has(i.key)).length;
+  $('#total').textContent = doneAll + ' of ' + items.length + ' decided · ' + (items.length - doneAll) + ' left';
+  $('#keys').replaceChildren(...(v === 'disputes' ? [] : (v === 'terms' ? [['J/K', 'move'], ['1–9', 'accept'], ['N', 'no concept'], ['I', 'noise'], ['U', 'undo']] : [['J/K', 'move'], ['Enter', 'suggested'], ['1–9', 'pick'], ['N', 'no concept'], ['W', 'write'], ['X', 'reject'], ['U', 'undo']]).map(([a, b]) => el('span', {}, el('kbd', { text: a }), ' ' + b))));
   const prog = $('#progress');
   const products = [...new Set(items.map((i) => i.product))];
   prog.replaceChildren(...products.map((p) => {

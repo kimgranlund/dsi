@@ -5,13 +5,13 @@ import path from 'node:path';
 import { loadOntology } from '@dsi/schema';
 import { merge, readProposals, APPROVE_AT, APPROVE_WITH_CLASSIFIER_AT, type ClassifierVotes } from './merge.ts';
 import { classify, type TermsFile } from '@dsi/classify';
-import { loadNative } from '@dsi/resolve';
+import { loadNative, type NativeSet } from '@dsi/resolve';
 import { preparePacket, readMappings, type Scope } from './packet.ts';
 import { auditTerms, prepareAudit, readVerdicts } from './audit.ts';
 import { rankEmphasis } from './rank.ts';
 import { parseConcept } from '@dsi/schema';
 import { resolve as resolveToken, showValue } from '@dsi/resolve';
-import { applyDecisions, applyDisputes, applyTermDecisions, collectDisputes, collectQueue, collectTermQueue, disputeKey, renderPage, type Decision, type DisputeDecision, type TermDecision } from './review.ts';
+import { applyDecisions, applyDisputes, applyTermDecisions, collectDisputes, collectQueue, collectTermQueue, disputeKey, enrichQueue, renderPage, type Decision, type DisputeDecision, type TermDecision } from './review.ts';
 
 const USAGE = `usage:
   dsi-map prepare <scope> <run>   write <product>.{a,b}.packet.json for every product in the scope
@@ -21,7 +21,7 @@ const USAGE = `usage:
   dsi-map audit-prepare <scope> <run>            deterministic checks + auditor packets for every approved mapping
   dsi-map audit-check <scope> <run> <product>    validate an auditor's verdicts
   dsi-map audit-merge <scope> <run>              write mappings/<product>/<version>.audit.json and list disputes
-  dsi-map review <scope> <run> <out.html> [vocab run[,run]] [--words-only]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
+  dsi-map review <scope> <run> <out.html> [vocab run[,run]] [--words-only] [--third <run>]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
   dsi-map tiebreak <scope> <run> <product> <first run>   two of three: approve where a third model agrees with one of the first two
   dsi-map settle <scope> <run> <product> <first run>     settle rules: three agree (cautious match), emphasis-only splits (rank or broad), two of three at 0.5
   dsi-map rank-emphasis <scope> <run> <product>   settle emphasis by contrast rank where both agents agree on the rest (ADR 0018)
@@ -95,7 +95,19 @@ if (cmd === 'prepare') {
   if (!run || !out) { console.error(USAGE); process.exit(2); }
   // --words-only leaves the token queue out (a round that settles naming terms first); vocab runs may be comma-separated.
   const wordsOnly = process.argv.includes('--words-only');
-  const items = wordsOnly ? [] : collectQueue(root, scope, runDir);
+  // --third <run>: the third opinion's answers join each card's votes.
+  const thirdRun = process.argv.includes('--third') ? process.argv[process.argv.indexOf('--third') + 1] : undefined;
+  const sets = new Map<string, NativeSet>();
+  const setOf = (p: string) => sets.get(p) ?? sets.set(p, loadNative(root, p, scope.products[p].version)).get(p)!;
+  const third = (p: string) => {
+    const f = thirdRun && path.join(root, '.cache/mapper', thirdRun, `${p}.c.proposals.json`);
+    if (!f || !fs.existsSync(f)) return new Map<string, any>();
+    const j = JSON.parse(fs.readFileSync(f, 'utf8'));
+    return new Map<string, any>(j.proposals.map((x: any) => [x.token, { ...x, model: j.model }]));
+  };
+  const hexIn = (p: string, t: string, mode: string) => { const s = setOf(p); const r = resolveToken(s, s.themes.includes(mode) ? mode : s.themes[0] ?? '', t); return r.value ? showValue(r.type, r.value) : undefined; };
+  const near = (p: string, t: string) => { const s = setOf(p); return [...s.tokens.keys()].filter((k) => k === t || k.startsWith(t + '.') || k.startsWith(t + '-')); };
+  const items = wordsOnly ? [] : enrichQueue(root, scope, collectQueue(root, scope, runDir), third, hexIn, near);
   // Several vocabulary runs: one card per word, examples from the first run that counted it.
   const termItems = [...(vocabRun && !vocabRun.startsWith('--') ? vocabRun.split(',').flatMap((r) => collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', r))) : [])
     .reduce((m, t) => { const prev = m.get(t.key); if (!prev || (!prev.examples.length && t.examples.length)) m.set(t.key, t); return m; }, new Map<string, any>()).values()];

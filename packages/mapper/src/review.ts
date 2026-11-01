@@ -254,3 +254,88 @@ export function applyDisputes(root: string, scope: Scope, decisions: DisputeDeci
   }
   return counts;
 }
+
+/** One answer on a card: identical concept+match answers from several models merge into one option with all voters. */
+export interface ReviewOption { concept?: string; match?: string; voters: { model: string; confidence?: number; rationale: string }[]; recordId?: string; shape: string }
+export interface ReviewExtras {
+  options: ReviewOption[];
+  preselect?: number;
+  preselectWhy?: string;
+  family?: { key: string; label: string; approved: { token: string; concept: string; match: string }[]; precedent?: { shape: string; count: number; of: number } };
+  context: { property: 'fg' | 'bg' | 'border' | 'other'; modes: string[]; page: Record<string, string>; text: Record<string, string>; pair?: { token: string; values: Record<string, string> } };
+}
+
+const lumOf = (v?: string) => { const m = /^#([0-9a-f]{6})/i.exec(v ?? ''); if (!m) return undefined; return [0, 2, 4].map((i) => parseInt(m[1].slice(i, i + 2), 16) / 255).map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4)).reduce((n, c, i) => n + c * [0.2126, 0.7152, 0.0722][i], 0); };
+const contrastOf = (a?: string, b?: string) => { const [x, y] = [lumOf(a), lumOf(b)]; if (x === undefined || y === undefined) return 0; return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+const words = (name: string) => name.split(/[.\-_]/).flatMap((s) => s.match(/[A-Z]?[a-z]+|[A-Z]+(?![a-z])|\d+/g) ?? [s]);
+/** A concept and match with the facets that vary within a family (hue, emphasis) wildcarded: "the same kind of answer". */
+export const shapeOf = (concept: string | undefined, match: string | undefined) => concept ? concept.split('/').map((s) => s.replace(/^(hue|emphasis)-.*/, '$1-*')).join('/') + ' ' + match : '(no concept)';
+
+/**
+ * Add what a reviewer needs to decide fast: merged options with all three votes, the family of sibling tokens and
+ * how its approved members were mapped (the precedent), a preselected option, and colors to draw the token in use.
+ */
+export function enrichQueue(root: string, scope: Scope, items: QueueItem[], third: (product: string) => Map<string, any>, value: (product: string, token: string, mode: string) => string | undefined, near: (product: string, token: string) => string[]): (QueueItem & ReviewExtras)[] {
+  const out: (QueueItem & ReviewExtras)[] = [];
+  for (const [product, { version }] of Object.entries(scope.products)) {
+    const mine = items.filter((i) => i.product === product);
+    if (!mine.length) continue;
+    const m = readMappings(root, product, version) as any;
+    const approved = (m.mappings ?? []).filter((x: any) => x.status === 'approved') as { token: string; concept: string; match: string }[];
+    const approvedU = new Set<string>((m.unmapped ?? []).filter((x: any) => x.status === 'approved').map((x: any) => x.token));
+    const universe = [...new Set([...approved.map((x) => x.token), ...approvedU, ...mine.map((i) => i.token)])].map((t) => ({ t, w: words(t) }));
+    const c = third(product);
+    const pageTok = approved.find((x) => x.concept === 'dsi:concept/color/usage-page/property-background')?.token;
+    const textTok = approved.filter((x) => /\/property-(text|foreground)$/.test(x.concept) && x.concept.split('/').length <= 4).sort((a, b) => a.concept.length - b.concept.length || a.token.length - b.token.length)[0]?.token;
+    for (const item of mine) {
+      // Options
+      const options: ReviewOption[] = [];
+      const add = (concept: string | undefined, match: string | undefined, voter: ReviewOption['voters'][number], recordId?: string) => {
+        const o = options.find((x) => x.concept === concept && x.match === match);
+        if (o) { o.voters.push(voter); o.recordId ??= recordId; } else options.push({ concept, match, voters: [voter], recordId, shape: shapeOf(concept, match) });
+      };
+      for (const x of item.candidates) add(x.kind === 'mapping' ? x.concept : undefined, x.kind === 'mapping' ? x.match : undefined, { model: x.model, confidence: x.confidence, rationale: x.rationale }, x.kind === 'mapping' ? x.id : x.id);
+      const cp = c.get(item.token);
+      if (cp) add(cp.concept ?? undefined, cp.concept ? cp.match : undefined, { model: cp.model ?? 'third opinion', confidence: cp.confidence, rationale: cp.rationale ?? '' });
+      options.sort((a, b) => b.voters.length - a.voters.length);
+      // Family: the word position whose variation has the most siblings (later positions win ties).
+      const w = words(item.token);
+      let best: { i: number; sibs: string[] } | undefined;
+      for (let i = 0; i < w.length; i++) {
+        const sibs = universe.filter((u) => u.t !== item.token && u.w.length === w.length && u.w.every((x, j) => j === i || x === w[j])).map((u) => u.t);
+        if (sibs.length && (!best || sibs.length >= best.sibs.length)) best = { i, sibs };
+      }
+      let family: ReviewExtras['family'];
+      if (best) {
+        const label = w.map((x, j) => (j === best!.i ? '*' : x)).join(' ');
+        const fam = approved.filter((x) => best!.sibs.includes(x.token));
+        const tally = new Map<string, number>();
+        for (const x of fam) tally.set(shapeOf(x.concept, x.match), (tally.get(shapeOf(x.concept, x.match)) ?? 0) + 1);
+        const top = [...tally].sort((a, b) => b[1] - a[1])[0];
+        family = { key: product + ' ' + label, label, approved: fam.slice(0, 12).map(({ token, concept, match }) => ({ token, concept, match })), ...(top && top[1] * 2 > fam.length ? { precedent: { shape: top[0], count: top[1], of: fam.length } } : {}) };
+      }
+      // Preselect: the option matching the family precedent, else a majority (2+ votes), else none.
+      let preselect: number | undefined, preselectWhy: string | undefined;
+      const p = family?.precedent ? options.findIndex((o) => o.shape === family!.precedent!.shape) : -1;
+      if (p >= 0) { preselect = p; preselectWhy = `matches ${family!.precedent!.count} of ${family!.precedent!.of} approved siblings`; }
+      else if (options[0]?.voters.length >= 2) { preselect = 0; preselectWhy = `${options[0].voters.length} of ${options.reduce((n, o) => n + o.voters.length, 0)} models`; }
+      // Context
+      const ref = options[preselect ?? 0]?.concept ?? '';
+      const property = /property-(text|icon|foreground|link)/.test(ref) ? 'fg' : /property-(border|divider|outline|focus-ring|stroke)/.test(ref) ? 'border' : /property-(background|fill|surface)/.test(ref) ? 'bg' : 'other';
+      const themes = Object.keys(item.themes);
+      const modes = themes.includes('light') && themes.includes('dark') ? ['light', 'dark'] : themes.slice(0, 2);
+      const vals = (t?: string) => Object.fromEntries(modes.map((md) => [md, t ? value(product, t, md) ?? '' : '']));
+      let pair: ReviewExtras['context']['pair'];
+      if (property === 'fg' || property === 'border') {
+        const cands = [/\b(text|icon|border)\b/, /(Foreground|Stroke)/, /(content|border)/, /\bfg(Color)?\b/].map((re) => item.token.replace(re, (s) => (/[A-Z]/.test(s[0]) ? 'Background' : s.startsWith('fg') ? 'bgColor' : 'background')));
+        // Among the sibling backgrounds, the one this foreground reads best on is its likely pair.
+        const md = modes[0], fg = value(product, item.token, md);
+        const pool = [...new Set(cands.filter((t) => t !== item.token).flatMap((t) => [t, t.replace(/[.-](default|rest|bolder|bold|boldest|subtle|subtler|subtlest|muted|emphasis|strong)$/, '')]).flatMap((t) => near(product, t)))].filter((t) => t !== item.token).filter((t) => !/(hover|pressed|active|selected|disabled)/i.test(t));
+        const hit = pool.map((t) => ({ t, c: contrastOf(fg, value(product, t, md)) })).sort((a, b) => b.c - a.c)[0];
+        if (hit && hit.c > 0) pair = { token: hit.t, values: vals(hit.t) };
+      }
+      out.push({ ...item, options, preselect, preselectWhy, family, context: { property, modes, page: vals(pageTok), text: vals(textTok), pair } });
+    }
+  }
+  return out;
+}
