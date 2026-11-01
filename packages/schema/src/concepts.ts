@@ -38,7 +38,8 @@ export function parseConcept(o: Ontology, ref: string): ParsedConcept | string {
     }
     facets[facet] = value;
   }
-  if (facets.part && !facets.component) return 'part needs a component';
+  // A part belongs to a component, or to a code surface (gutter, line number, line; ADR 0018).
+  if (facets.part && !facets.component && !String(facets.usage ?? '').split('+').includes('code-surface')) return 'part needs a component or usage code-surface';
   if (facets.hue && !String(facets.usage ?? '').split('+').includes('categorical')) return 'hue needs usage categorical';
   return { domain, facets };
 }

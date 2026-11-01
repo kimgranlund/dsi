@@ -1,24 +1,39 @@
 {
   "product": "primer",
   "noise": [
+    "blob",
     "block",
     "body-line",
     "border",
     "box",
+    "color",
     "control-min",
     "control-stack",
     "font",
     "height",
+    "highlighter",
     "index",
     "inline",
     "line",
+    "linter",
+    "markup",
+    "matching",
     "min",
+    "mirror",
     "motion",
+    "other",
     "outline-focus",
+    "prettylights",
     "range",
+    "reference",
+    "rest",
+    "scale",
     "stack",
     "state",
     "stroke",
+    "sublime",
+    "sublimelinter",
+    "syntax",
     "target",
     "text",
     "text-body-line",
@@ -215,6 +230,192 @@
   ],
   "terms": [
     {
+      "term": "accent",
+      "concept": "dsi:intent/accent",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer accent: brand blue emphasis.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "activeline",
+      "concept": "dsi:part/line",
+      "match": "close",
+      "status": "proposed",
+      "note": "The current line of the editor. (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.65",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "addition",
+      "concept": "dsi:syntax/inserted",
+      "match": "exact",
+      "status": "approved",
+      "note": "Added diff lines.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "angle",
+      "concept": "dsi:syntax/angle-bracket",
+      "match": "close",
+      "status": "proposed",
+      "note": "brackethighlighter.angle: angle brackets. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "angle",
+      "concept": "dsi:syntax/angle-bracket",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Angle bracket highlighter. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T12:00:00Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "ansi",
+      "concept": "dsi:usage/categorical",
+      "match": "close",
+      "status": "proposed",
+      "note": "Terminal 16-color palette: named hues whose hue is the meaning; not a status. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "attention",
+      "concept": "dsi:intent/warning",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Primer attention is the warning (yellow) status. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "attention",
+      "concept": "dsi:intent/warning",
+      "match": "close",
+      "status": "proposed",
+      "note": "Yellow status that needs notice. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T12:00:00Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "auburn",
+      "concept": "dsi:hue/brown",
+      "match": "close",
+      "status": "approved",
+      "note": "Nearest canonical hue (ADR 0017: auburn -> brown).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "backdrop",
+      "concept": "dsi:usage/scrim",
+      "match": "exact",
+      "status": "approved",
+      "note": "overlay.backdrop: dimming layer behind modals.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "bg",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "bgColor: background color.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "blue",
+      "concept": "dsi:hue/blue",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "body",
       "concept": "dsi:usage/body",
       "match": "exact",
@@ -269,6 +470,42 @@
       }
     },
     {
+      "term": "bold",
+      "concept": "dsi:syntax/strong",
+      "match": "exact",
+      "status": "approved",
+      "note": "markup.bold.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "border",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "borderColor.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "border-radius",
       "concept": "dsi:property/corner-radius",
       "match": "exact",
@@ -305,28 +542,33 @@
       }
     },
     {
-      "term": "box-shadow",
-      "concept": "dsi:property/shadow",
-      "match": "close",
-      "status": "proposed",
-      "note": "Primer boxShadow values are inset ring shadows used as borders. (confidence 0.6; the other agent disagreed)",
+      "term": "bracket",
+      "concept": "dsi:syntax/bracket",
+      "match": "exact",
+      "status": "approved",
+      "note": "Brackets (matchingBracket, bracketHighlighter).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "term": "box-shadow",
-      "concept": "dsi:property/shadow",
-      "match": "exact",
+      "term": "brackethighlighter",
+      "concept": "dsi:syntax/bracket",
+      "match": "close",
       "status": "proposed",
-      "note": "Shadow. (confidence 0.95; the other agent disagreed)",
+      "note": "BracketHighlighter plugin bracket colors. (confidence 0.7; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
       }
     },
@@ -346,6 +588,122 @@
         "by": "agreement",
         "at": "2026-11-01T14:55:00.203Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "brown",
+      "concept": "dsi:hue/brown",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "changed",
+      "concept": "dsi:syntax/changed",
+      "match": "exact",
+      "status": "approved",
+      "note": "markup.changed.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "code",
+      "concept": "dsi:usage/code-surface",
+      "match": "exact",
+      "status": "approved",
+      "note": "codeMirror.*: code editor colors.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "comment",
+      "concept": "dsi:syntax/comment",
+      "match": "exact",
+      "status": "approved",
+      "note": "Comment scope.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "constant",
+      "concept": "dsi:syntax/constant",
+      "match": "exact",
+      "status": "approved",
+      "note": "Constant scope.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "constant-other-reference-link",
+      "concept": "dsi:syntax/link",
+      "match": "close",
+      "status": "proposed",
+      "note": "Overrides constant: markdown reference links. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "contribution",
+      "concept": "dsi:usage/data-viz",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Contribution graph (heatmap) cell colors. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -382,19 +740,6 @@
         "by": "agreement",
         "at": "2026-11-01T14:55:00.203Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
-      }
-    },
-    {
-      "term": "control-min-target",
-      "concept": "dsi:property/size",
-      "match": "close",
-      "status": "proposed",
-      "note": "Minimum interactive target size. (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.5",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
-        "method": "terms-v1"
       }
     },
     {
@@ -452,15 +797,188 @@
       }
     },
     {
-      "term": "display",
-      "concept": "dsi:usage/display",
-      "match": "exact",
+      "term": "coral",
+      "concept": "dsi:hue/red",
+      "match": "close",
       "status": "proposed",
-      "note": "Display type role. (confidence 0.85); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "note": "Nearest canonical hue (ADR 0017: coral -> red). (confidence 0.9); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "cyan",
+      "concept": "dsi:hue/cyan",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "danger",
+      "concept": "dsi:intent/danger",
+      "match": "exact",
+      "status": "approved",
+      "note": "Danger status.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "data",
+      "concept": "dsi:usage/data-viz",
+      "match": "exact",
+      "status": "approved",
+      "note": "data.<hue>.color.*: chart series palette.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "default",
+      "concept": "dsi:emphasis/default",
+      "match": "exact",
+      "status": "proposed",
+      "note": "fgColor.default, bgColor.default, borderColor.default: the unmodified step. (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "deleted",
+      "concept": "dsi:syntax/deleted",
+      "match": "exact",
+      "status": "approved",
+      "note": "markup.deleted.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "deletion",
+      "concept": "dsi:syntax/deleted",
+      "match": "exact",
+      "status": "approved",
+      "note": "Deleted diff lines.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "diff",
+      "concept": "dsi:usage/code-surface",
+      "match": "exact",
+      "status": "proposed",
+      "note": "diffBlob.*: diff view surfaces (ADR 0018). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "diff",
+      "concept": "dsi:usage/code-surface",
+      "match": "close",
+      "status": "proposed",
+      "note": "diffBlob tokens color diff lines in a code view; in prettylights meta.diff it is a syntax scope. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T12:00:00Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "disabled",
+      "concept": "dsi:state/disabled",
+      "match": "exact",
+      "status": "approved",
+      "note": "Disabled state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "display",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "display.<hue>.*: categorical label/tag colors where the hue is the meaning. (confidence 0.92; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "display",
+      "concept": "dsi:usage/categorical",
+      "match": "close",
+      "status": "proposed",
+      "note": "Primer display.<hue> is its categorical decorative palette (labels, avatars), not the Display type usage. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
       }
     },
@@ -501,15 +1019,85 @@
       }
     },
     {
+      "term": "emphasis",
+      "concept": "dsi:emphasis/strong",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Primer two-step scale: emphasis is the bold, higher-contrast step. (confidence 0.88); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "entity",
+      "concept": "dsi:syntax/name",
+      "match": "close",
+      "status": "proposed",
+      "note": "TextMate entity.name.*: function/class names. (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "entity-tag",
+      "concept": "dsi:syntax/tag-name",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Overrides entity: tag names. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "fg",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "fgColor colors text and icons.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "focus",
+      "concept": "dsi:property/focus-ring",
+      "match": "exact",
+      "status": "proposed",
+      "note": "focus.outlineColor colors the focus indicator. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
       "term": "focus",
       "concept": "dsi:state/focus",
       "match": "exact",
       "status": "proposed",
-      "note": "Focus outline. (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.7",
+      "note": "Focus state. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
       }
     },
@@ -529,19 +1117,6 @@
         "by": "agreement",
         "at": "2026-11-01T14:55:00.203Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
-      }
-    },
-    {
-      "term": "font-stack-sans",
-      "concept": "dsi:property/font-family",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Font stacks are font families. (confidence 0.9; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
-        "method": "terms-v1"
       }
     },
     {
@@ -617,15 +1192,131 @@
       }
     },
     {
-      "term": "hover",
-      "concept": "dsi:state/hover",
-      "match": "close",
-      "status": "proposed",
-      "note": "Easing/transition for hover interactions. (confidence 0.6; the other agent disagreed)",
+      "term": "gray",
+      "concept": "dsi:hue/gray",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "green",
+      "concept": "dsi:hue/green",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "gutter",
+      "concept": "dsi:part/gutter",
+      "match": "exact",
+      "status": "approved",
+      "note": "Editor gutter.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "gutters",
+      "concept": "dsi:part/gutter",
+      "match": "exact",
+      "status": "approved",
+      "note": "codeMirror.gutters.bgColor.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "header",
+      "concept": "dsi:part/header",
+      "match": "exact",
+      "status": "proposed",
+      "note": "page.header: header part. (confidence 0.75); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "heading",
+      "concept": "dsi:syntax/heading",
+      "match": "exact",
+      "status": "approved",
+      "note": "markup.heading.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "highlight",
+      "concept": "dsi:intent/highlight",
+      "match": "close",
+      "status": "proposed",
+      "note": "highlight.neutral.bgColor: highlighted text region. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "highlight",
+      "concept": "dsi:intent/highlight",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Highlighted region. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
       }
     },
@@ -633,13 +1324,191 @@
       "term": "hover",
       "concept": "dsi:state/hover",
       "match": "exact",
+      "status": "approved",
+      "note": "Hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "hunk",
+      "concept": "dsi:syntax/meta",
+      "match": "close",
       "status": "proposed",
-      "note": "Hover state (hover easing/transition). (confidence 0.8; the other agent disagreed)",
+      "note": "Diff hunk header (@@), TextMate meta.diff.range. (confidence 0.55); both agents gave this, claude-sonnet-5-5 at confidence 0.5",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "icon",
+      "concept": "dsi:property/icon",
+      "match": "exact",
+      "status": "approved",
+      "note": "iconColor.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "illegal",
+      "concept": "dsi:syntax/invalid",
+      "match": "close",
+      "status": "proposed",
+      "note": "invalid.illegal. (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "import",
+      "concept": "dsi:syntax/module-keyword",
+      "match": "close",
+      "status": "proposed",
+      "note": "storage.modifier.import: import keyword. (confidence 0.75); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "indigo",
+      "concept": "dsi:hue/indigo",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "inserted",
+      "concept": "dsi:syntax/inserted",
+      "match": "exact",
+      "status": "approved",
+      "note": "markup.inserted.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "inset",
+      "concept": "dsi:usage/surface",
+      "match": "close",
+      "status": "proposed",
+      "note": "Recessed surface background. (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
+        "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
+      }
+    },
+    {
+      "term": "invalid",
+      "concept": "dsi:syntax/invalid",
+      "match": "exact",
+      "status": "approved",
+      "note": "Invalid scope.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "inverse",
+      "concept": "dsi:usage/inverse",
+      "match": "exact",
+      "status": "proposed",
+      "note": "bgColor.inverse flips lightness between modes; fgColor.onInverse is content on it. (confidence 0.85); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "italic",
+      "concept": "dsi:syntax/emphasis",
+      "match": "exact",
+      "status": "approved",
+      "note": "markup.italic.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "keyword",
+      "concept": "dsi:syntax/keyword",
+      "match": "exact",
+      "status": "approved",
+      "note": "Keyword scope.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -679,29 +1548,57 @@
       }
     },
     {
-      "term": "large-padding-inline",
-      "concept": "dsi:property/padding",
-      "match": "broad",
-      "status": "proposed",
-      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "term": "lemon",
+      "concept": "dsi:hue/yellow",
+      "match": "close",
+      "status": "approved",
+      "note": "Nearest canonical hue (ADR 0017: lemon -> yellow).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "term": "large-padding-inline",
-      "concept": "dsi:property/padding",
+      "term": "lime",
+      "concept": "dsi:hue/lime",
       "match": "exact",
-      "status": "proposed",
-      "note": "Padding of large control. (confidence 0.9; the other agent disagreed)",
+      "status": "approved",
+      "note": "Canonical hue name.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "line",
+      "concept": "dsi:part/line",
+      "match": "exact",
+      "status": "approved",
+      "note": "diff/editor line.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -777,6 +1674,125 @@
       }
     },
     {
+      "term": "line-number",
+      "concept": "dsi:part/line-number",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Overrides line: lineNumber colors the line number. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "lines",
+      "concept": "dsi:part/line",
+      "match": "close",
+      "status": "proposed",
+      "note": "codeMirror.lines.bgColor: area of the code lines. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "lines",
+      "concept": "dsi:part/line",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Plural of line. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T12:00:00Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "link",
+      "concept": "dsi:usage/link",
+      "match": "exact",
+      "status": "approved",
+      "note": "fgColor.link and markdown link scopes.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "list",
+      "concept": "dsi:syntax/list",
+      "match": "exact",
+      "status": "approved",
+      "note": "markup.list.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "magenta",
+      "concept": "dsi:hue/magenta",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "mark",
+      "concept": "dsi:part/indicator",
+      "match": "close",
+      "status": "proposed",
+      "note": "Linter gutter mark. (confidence 0.5; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "marker",
+      "concept": "dsi:part/indicator",
+      "match": "close",
+      "status": "proposed",
+      "note": "Gutter marker indicator. (confidence 0.55; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
       "term": "medium-gap",
       "concept": "dsi:property/gap",
       "match": "exact",
@@ -813,42 +1829,39 @@
       }
     },
     {
-      "term": "medium-padding-inline",
-      "concept": "dsi:property/padding",
-      "match": "broad",
-      "status": "proposed",
-      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "medium-padding-inline",
-      "concept": "dsi:property/padding",
+      "term": "meta",
+      "concept": "dsi:syntax/meta",
       "match": "exact",
-      "status": "proposed",
-      "note": "Padding of medium control. (confidence 0.9; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "min-target",
-      "concept": "dsi:property/size",
-      "match": "close",
-      "status": "proposed",
-      "note": "Minimum interactive target size. (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.5",
+      "status": "approved",
+      "note": "Meta scope.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "modifier",
+      "concept": "dsi:syntax/modifier",
+      "match": "exact",
+      "status": "approved",
+      "note": "storage.modifier.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -906,6 +1919,169 @@
       }
     },
     {
+      "term": "muted",
+      "concept": "dsi:emphasis/subtle",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Primer two-step scale: muted is the lower-contrast step (fgColor.muted, bgColor.muted, borderColor.muted). (confidence 0.88); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "neutral",
+      "concept": "dsi:intent/neutral",
+      "match": "exact",
+      "status": "approved",
+      "note": "Neutral, no status or brand meaning.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "num",
+      "concept": "dsi:part/line-number",
+      "match": "exact",
+      "status": "approved",
+      "note": "diffBlob.*Num: line-number column.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "number",
+      "concept": "dsi:part/line-number",
+      "match": "close",
+      "status": "proposed",
+      "note": "Only in codeMirror.lineNumber. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "number",
+      "concept": "dsi:part/line-number",
+      "match": "exact",
+      "status": "proposed",
+      "note": "codeMirror.lineNumber. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T12:00:00Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "olive",
+      "concept": "dsi:hue/lime",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (ADR 0017: olive -> lime). (confidence 0.9); both agents gave this, claude-sonnet-5-5 at confidence 0.7",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "on",
+      "concept": "dsi:usage/on-fill",
+      "match": "close",
+      "status": "proposed",
+      "note": "fgColor.onEmphasis: content on bold fills; also onInverse, where inverse adds the surface. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "on",
+      "concept": "dsi:usage/on-fill",
+      "match": "exact",
+      "status": "proposed",
+      "note": "onEmphasis, onInverse: content on a solid fill. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T12:00:00Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "orange",
+      "concept": "dsi:hue/orange",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "outline",
+      "concept": "dsi:property/focus-ring",
+      "match": "close",
+      "status": "proposed",
+      "note": "Only in focus.outlineColor. (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.7",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "overlay",
+      "concept": "dsi:usage/overlay",
+      "match": "exact",
+      "status": "approved",
+      "note": "overlay.bgColor/borderColor: floating overlays.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
       "term": "padding",
       "concept": "dsi:property/padding",
       "match": "exact",
@@ -924,133 +2100,91 @@
       }
     },
     {
-      "term": "padding-block",
-      "concept": "dsi:property/padding",
-      "match": "broad",
+      "term": "page",
+      "concept": "dsi:usage/page",
+      "match": "close",
       "status": "proposed",
-      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "note": "page.header.bgColor: the page header band. (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "padding-block",
-      "concept": "dsi:property/padding",
+      "term": "page",
+      "concept": "dsi:usage/page",
       "match": "exact",
       "status": "proposed",
-      "note": "Vertical padding. (confidence 0.95; the other agent disagreed)",
+      "note": "page.header: application page. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
+        "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "padding-inline",
-      "concept": "dsi:property/padding",
-      "match": "broad",
+      "term": "pine",
+      "concept": "dsi:hue/green",
+      "match": "close",
       "status": "proposed",
-      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "note": "Nearest canonical hue (ADR 0017: pine -> green). (confidence 0.9); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "padding-inline",
-      "concept": "dsi:property/padding",
+      "term": "pink",
+      "concept": "dsi:hue/pink",
       "match": "exact",
-      "status": "proposed",
-      "note": "Horizontal padding. (confidence 0.95; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "padding-inline-condensed",
-      "concept": "dsi:property/padding",
-      "match": "broad",
-      "status": "proposed",
-      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "status": "approved",
+      "note": "Canonical hue name.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
-      "term": "padding-inline-condensed",
-      "concept": "dsi:property/padding",
-      "match": "exact",
+      "term": "plum",
+      "concept": "dsi:hue/purple",
+      "match": "close",
       "status": "proposed",
-      "note": "Padding at condensed density. (confidence 0.9; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "padding-inline-normal",
-      "concept": "dsi:property/padding",
-      "match": "broad",
-      "status": "proposed",
-      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "note": "Nearest canonical hue (ADR 0017: plum -> purple). (confidence 0.9); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "padding-inline-normal",
-      "concept": "dsi:property/padding",
+      "term": "purple",
+      "concept": "dsi:hue/purple",
       "match": "exact",
-      "status": "proposed",
-      "note": "Padding at normal density. (confidence 0.9; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "padding-inline-spacious",
-      "concept": "dsi:property/padding",
-      "match": "broad",
-      "status": "proposed",
-      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "status": "approved",
+      "note": "Canonical hue name.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
-    },
-    {
-      "term": "padding-inline-spacious",
-      "concept": "dsi:property/padding",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Padding at spacious density. (confidence 0.9; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
-        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -1072,41 +2206,77 @@
       }
     },
     {
-      "term": "range-narrow",
-      "concept": "dsi:property/breakpoint",
-      "match": "close",
-      "status": "proposed",
-      "note": "Viewport media-query ranges built on breakpoints. (confidence 0.7; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "shadow",
-      "concept": "dsi:property/shadow",
-      "match": "close",
-      "status": "proposed",
-      "note": "Primer boxShadow values are inset ring shadows used as borders. (confidence 0.6; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "shadow",
-      "concept": "dsi:property/shadow",
+      "term": "red",
+      "concept": "dsi:hue/red",
       "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "regexp",
+      "concept": "dsi:syntax/regexp",
+      "match": "exact",
+      "status": "approved",
+      "note": "Regular expression scope.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "selection",
+      "concept": "dsi:intent/highlight",
+      "match": "close",
       "status": "proposed",
-      "note": "Shadow. (confidence 0.95; the other agent disagreed)",
+      "note": "Text selection background. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.65",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "severe",
+      "concept": "dsi:intent/caution",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Severity between attention and danger (ADR 0008 caution row). (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "severe",
+      "concept": "dsi:intent/danger",
+      "match": "close",
+      "status": "proposed",
+      "note": "Orange escalation above attention; nearer danger than warning. (confidence 0.5; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
+        "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
       }
     },
@@ -1144,32 +2314,6 @@
         "by": "agreement",
         "at": "2026-11-01T14:55:00.203Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
-      }
-    },
-    {
-      "term": "small-padding-inline",
-      "concept": "dsi:property/padding",
-      "match": "broad",
-      "status": "proposed",
-      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "small-padding-inline",
-      "concept": "dsi:property/padding",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Padding of small control. (confidence 0.9; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
-        "method": "terms-v1"
       }
     },
     {
@@ -1299,16 +2443,166 @@
       }
     },
     {
-      "term": "subtitle",
-      "concept": "dsi:usage/title",
+      "term": "storage",
+      "concept": "dsi:syntax/keyword",
       "match": "close",
       "status": "proposed",
-      "note": "Secondary heading under a title; nearest usage is title. (confidence 0.5; the other agent disagreed)",
+      "note": "TextMate storage: declaration keywords and modifiers. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "storage",
+      "concept": "dsi:syntax/modifier",
+      "match": "close",
+      "status": "proposed",
+      "note": "TextMate storage (modifiers, types, var/class keywords). (confidence 0.5; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
+        "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
+      }
+    },
+    {
+      "term": "storage-modifier-import",
+      "concept": "dsi:syntax/module-keyword",
+      "match": "close",
+      "status": "proposed",
+      "note": "Overrides storage and modifier: import keyword. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "string",
+      "concept": "dsi:syntax/string",
+      "match": "exact",
+      "status": "approved",
+      "note": "String scope.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "string-regexp",
+      "concept": "dsi:syntax/regexp",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Overrides string: regexp literals. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "success",
+      "concept": "dsi:intent/success",
+      "match": "exact",
+      "status": "approved",
+      "note": "Success status.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "support",
+      "concept": "dsi:syntax/standard",
+      "match": "close",
+      "status": "proposed",
+      "note": "TextMate support: library-provided names. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.55",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "tag",
+      "concept": "dsi:syntax/tag",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Syntax role. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T12:00:00Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "tag",
+      "concept": "dsi:syntax/tag-name",
+      "match": "exact",
+      "status": "proposed",
+      "note": "entity.name.tag. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "teal",
+      "concept": "dsi:hue/teal",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "text",
+      "concept": "dsi:property/text",
+      "match": "exact",
+      "status": "approved",
+      "note": "Syntax scope text color (carriage.return.text, markup.*.text).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:56:06.267Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -1363,19 +2657,6 @@
         "by": "agreement",
         "at": "2026-11-01T14:55:00.203Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
-      }
-    },
-    {
-      "term": "text-subtitle",
-      "concept": "dsi:usage/title",
-      "match": "close",
-      "status": "proposed",
-      "note": "Secondary heading; nearest usage is title. (confidence 0.5; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
-        "method": "terms-v1"
       }
     },
     {
@@ -1523,42 +2804,34 @@
       }
     },
     {
-      "term": "viewport-range",
-      "concept": "dsi:property/breakpoint",
+      "term": "upsell",
+      "concept": "dsi:intent/discovery",
       "match": "close",
       "status": "proposed",
-      "note": "Viewport media-query ranges built on breakpoints. (confidence 0.7; the other agent disagreed)",
+      "note": "Upsell promotes paid features: something new inviting exploration (facets example cites Primer upsell). (confidence 0.75); both agents gave this, claude-sonnet-5-5 at confidence 0.65",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "viewport-range",
-      "concept": "dsi:property/breakpoint",
-      "match": "related",
-      "status": "proposed",
-      "note": "Named media-query ranges, related to breakpoints. (confidence 0.5; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "viewport-range-narrow",
-      "concept": "dsi:property/breakpoint",
-      "match": "close",
-      "status": "proposed",
-      "note": "Viewport media-query ranges built on breakpoints. (confidence 0.7; the other agent disagreed)",
+      "term": "variable",
+      "concept": "dsi:syntax/variable",
+      "match": "exact",
+      "status": "approved",
+      "note": "Variable scope.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -1598,32 +2871,6 @@
       }
     },
     {
-      "term": "xlarge-padding-inline",
-      "concept": "dsi:property/padding",
-      "match": "broad",
-      "status": "proposed",
-      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "xlarge-padding-inline",
-      "concept": "dsi:property/padding",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Padding of xlarge control. (confidence 0.9; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
-        "method": "terms-v1"
-      }
-    },
-    {
       "term": "xsmall-padding",
       "concept": "dsi:property/padding",
       "match": "exact",
@@ -1642,29 +2889,21 @@
       }
     },
     {
-      "term": "xsmall-padding-inline",
-      "concept": "dsi:property/padding",
-      "match": "broad",
-      "status": "proposed",
-      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "term": "yellow",
+      "concept": "dsi:hue/yellow",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:54:51Z",
+        "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
-    },
-    {
-      "term": "xsmall-padding-inline",
-      "concept": "dsi:property/padding",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Padding of xsmall control. (confidence 0.9; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T14:54:18.346Z",
-        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:57:51.432Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {

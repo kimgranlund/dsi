@@ -13,7 +13,7 @@ Adding Atlassian, Primer, Spectrum and Fluent exposed gaps. Evidence (shipped va
 ## Decision
 - **Emphasis** gains `subtler` and `stronger` (seven steps). Steps are assigned by **contrast rank** against the page within a family, per mode; the native word maps exact only when its rank agrees, else close. Supersedes ADR 0008's ordered-level row.
 - **Intents**: `discovery`, related to info and ai.
-- **Usages**: `data-viz` (with categorical and hue for series palettes; numbered slots bind no hue; chart status colors bind their intent) and `code-surface` (a new value, so records that used the deprecated `usage/code` keep their meaning). Parts `gutter`, `line-number`, `line`. Diffs combine code-surface with syntax inserted, deleted or changed. Sequential and diverging ramps wait until a system ships them as tokens.
+- **Usages**: `data-viz` (with categorical and hue for series palettes; numbered slots bind no hue; chart status colors bind their intent) and `code-surface` (a new value, so records that used the deprecated `usage/code` keep their meaning). Parts `gutter`, `line-number`, `line`, which bind with usage code-surface (a part otherwise needs a component; corrected after the Primer round, where agents found the rule blocked them). Diffs combine code-surface with syntax inserted, deleted or changed. Sequential and diverging ramps wait until a system ships them as tokens.
 - **Inverse** only for surfaces that flip relative to the page between modes, or content on them; content contrasting with a bold fill is on-fill whatever its native word. Recorded as scope notes on both usages.
 
 ## Consequences
