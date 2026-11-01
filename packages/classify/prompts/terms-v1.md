@@ -17,10 +17,10 @@ Write only the JSON file named in the packet's `output`, valid against `packages
 ```json
 { "packet": "<packet.id>", "role": "<packet.role>", "model": "<your model ID>", "at": "<ISO time>",
   "terms": [
-    { "term": "critical", "facet": "intent", "value": "danger", "match": "exact", "confidence": 0.95, "rationale": "Polaris's name for the danger status." },
-    { "term": "bg", "facet": "property", "value": "background", "match": "exact", "confidence": 0.95, "rationale": "Abbreviation of background." },
-    { "term": "on-bg-fill", "facet": "usage", "value": "on-fill", "match": "exact", "confidence": 0.9, "rationale": "Content placed on a filled background." },
-    { "term": "on-bg-fill", "facet": "property", "value": "foreground", "match": "exact", "confidence": 0.85, "rationale": "Overrides bg: the token colors the content, not the fill." },
+    { "term": "critical", "concept": "dsi:intent/danger", "match": "exact", "confidence": 0.95, "rationale": "Polaris's name for the danger status." },
+    { "term": "bg", "concept": "dsi:property/background", "match": "exact", "confidence": 0.95, "rationale": "Abbreviation of background." },
+    { "term": "on-bg-fill", "concept": "dsi:usage/on-fill", "match": "exact", "confidence": 0.9, "rationale": "Content placed on a filled background." },
+    { "term": "on-bg-fill", "concept": "dsi:property/foreground", "match": "exact", "confidence": 0.85, "rationale": "Overrides bg: the token colors the content, not the fill." },
     { "term": "avatar", "ignore": "no-concept", "rationale": "Avatar palette; no facet fits." }
   ] }
 ```
@@ -28,7 +28,7 @@ Write only the JSON file named in the packet's `output`, valid against `packages
 ## Rules
 
 - **Answer every single word** in `vocabulary` (map it, or `ignore` it with a reason). Multi-word sequences are optional: add one only when it means something different from its words, typically an exception that must override a shorter term (`on-bg-fill` overrides `bg`).
-- One term may bind several facets (one entry each). A longer term overrides a shorter one on the same facet.
+- `concept` is a facet-value concept from the packet's `ontology` (`dsi:intent/danger`, `dsi:property/background`). One term may bind several facets (one entry each). A longer term overrides a shorter one on the same facet, so choose the property a multi-word term binds by what the tokens using it actually color (text only, or text and icons).
 - `match` says how the word's meaning relates to the facet value, as for token mappings: `exact` when the word always means that value in this product's names; `close` with a nuance; `broad` when the word is one specific case of the value; never use a term for a value it only sometimes implies.
 - Do not map hue names (red, blue) to intents. Component and part names (button, field, tab) are `ignore: component`.
 - Confidence is your probability that a designer familiar with this system would accept the term as written.
