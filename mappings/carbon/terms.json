@@ -201,26 +201,34 @@
       "term": "container",
       "concept": "dsi:property/height",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "Carbon container-01..05 (24..64px) size container/component heights. (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T05:14:28Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:27:28.103Z"
       }
     },
     {
       "term": "container",
       "concept": "dsi:property/size",
       "match": "close",
-      "status": "proposed",
+      "status": "rejected",
       "note": "Carbon container-01.. are component container dimensions, not max widths. (confidence 0.4; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T05:14:24.735Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:27:28.103Z"
       }
     },
     {
@@ -530,13 +538,17 @@
       "term": "layout",
       "concept": "dsi:property/spacing",
       "match": "broad",
-      "status": "proposed",
+      "status": "approved",
       "note": "Carbon layout-01..07 are large spacing values for layout gaps (v10 layout scale). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T05:14:28Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:27:33.659Z"
       }
     },
     {
@@ -852,26 +864,34 @@
       "term": "size",
       "concept": "dsi:property/height",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "Carbon size-xs..2xl (24..80px) are component heights; icon-size disambiguates icons. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.5",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T05:14:28Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:27:37.626Z"
       }
     },
     {
       "term": "size-size",
       "concept": "dsi:property/height",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "group.name sequence of the component size scale; disambiguates from icon-size. (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T05:14:28Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:27:38.726Z"
       }
     },
     {
@@ -1005,26 +1025,34 @@
       "term": "surface",
       "concept": "dsi:property/transition",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "surface.contextual/disclosure/expand/invoke are composite motion transitions for surfaces. (confidence 0.55; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T05:14:28Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:27:39.203Z"
       }
     },
     {
       "term": "surface",
       "concept": "dsi:property/transition",
       "match": "broad",
-      "status": "proposed",
+      "status": "rejected",
       "note": "Surface transitions (contextual, disclosure, expand, invoke). (confidence 0.4; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T05:14:24.735Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:27:39.203Z"
       }
     },
     {
@@ -1084,12 +1112,21 @@
   ],
   "steps": [
     "2xl",
+    "contextual",
+    "disclosure",
+    "entrance",
+    "exit",
+    "expand",
+    "expressive",
     "fast",
+    "invoke",
     "lg",
     "max",
     "md",
     "moderate",
+    "productive",
     "slow",
+    "standard",
     "xl",
     "xs"
   ]

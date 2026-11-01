@@ -113,7 +113,7 @@ if (cmd === 'derive') {
   const why: Record<string, number> = {};
   for (const l of r.leftovers) { const k = l.why.split(':')[0]; why[k] = (why[k] ?? 0) + 1; }
   console.log(`${product}: ${scoped.length} foundation tokens; ${added} mapped (${r.mapped.length - added} already settled); ${r.leftovers.length} leftovers ${JSON.stringify(why)}`);
-  for (const l of r.leftovers.slice(0, 8)) console.log(`  ${l.token}: ${l.why}`);
+  for (const l of r.leftovers) console.log(`  ${l.token}: ${l.why}`);
 } else if (cmd === 'vocab-prepare' || cmd === 'vocab-check' || cmd === 'vocab-merge') {
   if (!run) { console.error(USAGE); process.exit(2); }
   const runDir = path.join(root, '.cache/classify', run);

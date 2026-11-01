@@ -413,13 +413,17 @@
       "term": "large-line",
       "concept": "dsi:property/line-height",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "Names this role in Material token names. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T05:14:35.817Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:26:57.503Z"
       }
     },
     {
@@ -514,13 +518,17 @@
       "term": "medium-line",
       "concept": "dsi:property/line-height",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "Names this role in Material token names. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T05:14:35.817Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:26:58.985Z"
       }
     },
     {
@@ -863,13 +871,17 @@
       "term": "prominent",
       "concept": "dsi:emphasis/strong",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "Heavier, more emphatic weight variant of a label weight. (confidence 0.55; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T05:14:53.557Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:27:06.309Z"
       }
     },
     {
@@ -999,13 +1011,17 @@
       "term": "small-line",
       "concept": "dsi:property/line-height",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "Names this role in Material token names. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T05:14:35.817Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:27:08.109Z"
       }
     },
     {
@@ -1189,13 +1205,17 @@
       "term": "typeface",
       "concept": "dsi:property/font-family",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "md.ref.typeface.brand/plain are font families; typeface-weight covers the weight tokens. (confidence 0.75); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T05:14:53.557Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T05:27:10.218Z"
       }
     },
     {
@@ -1271,18 +1291,24 @@
     }
   ],
   "steps": [
+    "accelerate",
     "bold",
+    "brand",
+    "decelerate",
+    "emphasized",
     "extra",
     "extra-large",
     "extra-small",
     "full",
     "large",
+    "legacy",
     "level0",
     "level1",
     "level2",
     "level3",
     "level4",
     "level5",
+    "linear",
     "long1",
     "long2",
     "long3",
@@ -1293,11 +1319,13 @@
     "medium3",
     "medium4",
     "none",
+    "plain",
     "regular",
     "short1",
     "short2",
     "short3",
     "short4",
-    "small"
+    "small",
+    "standard"
   ]
 }

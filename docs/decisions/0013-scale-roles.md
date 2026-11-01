@@ -10,6 +10,7 @@ Non-color tokens are mostly scales: `spacing-400`, `shape.corner-medium`, `font-
 - Match type is `narrow`: each step is one point of the role's scale.
 - The step is not a facet of the concept. It stays in the native name and value; the site aligns steps across systems by value on one ruler.
 - Mapping is deterministic (`classify map-scales`, method `map-scales-v1`): a token maps only when its whole name is explained by approved terms (role words, noise, step words) and its DTCG type fits the role (`ROLE_TYPES`). Anything else is a leftover with a reason, for agents or review. Step words are agreed in vocab rounds (`ignore: step`), as noise words are.
+- Named members of a role are step words too: easing curves (`emphasized`, `entrance`, `productive`, `ease-in`), keyframes (`fade`, `bounce`) and font families (`brand`, `plain`). They pick one member and stay native; comparing them across systems would need a new facet (owner decision, 2026-11-01).
 - Type-style roles (heading, body, label, with display/headline/title narrower than heading) bind `usage`, so `typography/usage-body/property-font-size` is a role too.
 - Color concepts keep their per-token mappings; `@dsi/canon` emits color only.
 
