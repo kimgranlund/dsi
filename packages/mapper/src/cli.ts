@@ -164,7 +164,8 @@ if (cmd === 'prepare') {
   const rd = (r: string) => JSON.parse(fs.readFileSync(path.join(runDir, `${product}.${r}.proposals.json`), 'utf8')).proposals;
   const mf = path.join(root, 'mappings', product, `${version}.mappings.json`);
   const file = JSON.parse(fs.readFileSync(mf, 'utf8'));
-  const approved = new Set(file.mappings.filter((m: any) => m.status === 'approved').map((m: any) => m.token));
+  // Its own earlier answers (method emphasis-rank-*) are re-derived; every other approval is left alone.
+  const approved = new Set(file.mappings.filter((m: any) => m.status === 'approved' && !String(m.provenance?.method ?? '').startsWith('emphasis-rank')).map((m: any) => m.token));
   const pageTok = file.mappings.find((m: any) => m.status === 'approved' && m.concept === 'dsi:concept/color/usage-page/property-background')?.token;
   const r = rankEmphasis(root, product, version, rd('a'), rd('b'), () => pageTok);
   const at = new Date().toISOString();
@@ -173,6 +174,9 @@ if (cmd === 'prepare') {
     if (approved.has(x.token)) continue;
     if (typeof parseConcept(ontology, x.concept) === 'string') { r.skipped.push(`${x.token}: invalid ${x.concept}`); continue; }
     const newId = r.id(x.token, x.concept, x.match);
+    const prior = file.mappings.find((m: any) => m.token === x.token && m.status === 'approved' && String(m.provenance?.method ?? '').startsWith('emphasis-rank'));
+    if (prior && prior.concept === x.concept && prior.match === x.match) continue;
+    if (prior) { prior.status = 'superseded'; prior.supersededBy = newId; prior.review = { ...prior.review, at, note: `Re-derived by contrast rank: ${x.concept}.` }; }
     for (const m of file.mappings) if (m.token === x.token && m.status === 'proposed') { m.status = 'rejected'; m.review = { by: 'rank-rule', at, note: `Emphasis settled by contrast rank (ADR 0018): ${x.concept}.` }; }
     file.mappings = file.mappings.filter((m: any) => m.id !== newId); // an agent proposal of the same answer is replaced, not duplicated
     file.mappings.push({ id: newId, token: x.token, concept: x.concept, match: x.match, confidence: 1, status: 'approved', rationale: `Both agents agree on every facet but emphasis; ${x.note} (ADR 0018).`, provenance: { agent: 'dsi-mapper', at, method: 'emphasis-rank-v1' }, review: { by: 'rank-rule', at, note: 'Deterministic: contrast against the page in every mode.' } });

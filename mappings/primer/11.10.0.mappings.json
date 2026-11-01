@@ -1271,7 +1271,7 @@
       "concept": "dsi:concept/color/property-border/emphasis-subtle",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < muted < emphasis) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -1280,9 +1280,10 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:57:52.018Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
+        "at": "2026-11-01T15:48:39.590Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/property-border/emphasis-subtlest."
+      },
+      "supersededBy": "m-f566491bc34a"
     },
     {
       "id": "m-ec5709bcb2ac",
@@ -1302,6 +1303,25 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:57:52.018Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/property-border/emphasis-subtle."
+      }
+    },
+    {
+      "id": "m-f566491bc34a",
+      "token": "borderColor.default",
+      "concept": "dsi:concept/color/property-border/emphasis-subtlest",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < muted < emphasis) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:48:39.590Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:48:39.590Z",
+        "note": "Deterministic: contrast against the page in every mode."
       }
     },
     {
@@ -2068,6 +2088,25 @@
       }
     },
     {
+      "id": "m-69294f13b4b6",
+      "token": "codeMirror.gutterMarker.fgColor.default",
+      "concept": "dsi:concept/color/usage-code-surface/property-foreground/emphasis-subtlest",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < muted) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:48:39.590Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:48:39.590Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
       "id": "m-7d96008f39ba",
       "token": "codeMirror.gutterMarker.fgColor.default",
       "concept": "dsi:concept/color/usage-code-surface/property-foreground/emphasis-subtle",
@@ -2093,7 +2132,7 @@
       "concept": "dsi:concept/color/usage-code-surface/property-foreground/emphasis-subtle",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < muted) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2102,9 +2141,10 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:57:52.018Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
+        "at": "2026-11-01T15:48:39.590Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/usage-code-surface/property-foreground/emphasis-subtlest."
+      },
+      "supersededBy": "m-69294f13b4b6"
     },
     {
       "id": "m-f06e0826e31b",
@@ -2124,6 +2164,25 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:57:52.018Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-code-surface/property-foreground/emphasis-subtle."
+      }
+    },
+    {
+      "id": "m-352650d4e043",
+      "token": "codeMirror.gutterMarker.fgColor.muted",
+      "concept": "dsi:concept/color/usage-code-surface/property-foreground/emphasis-subtler",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < muted) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:48:39.590Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:48:39.590Z",
+        "note": "Deterministic: contrast against the page in every mode."
       }
     },
     {
@@ -2172,7 +2231,7 @@
       "concept": "dsi:concept/color/usage-code-surface/property-foreground/emphasis-default",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < muted) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2181,9 +2240,10 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:57:52.018Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
+        "at": "2026-11-01T15:48:39.590Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/usage-code-surface/property-foreground/emphasis-subtler."
+      },
+      "supersededBy": "m-352650d4e043"
     },
     {
       "id": "m-5d77a6cde1e8",

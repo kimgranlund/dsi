@@ -76,8 +76,11 @@ export function rankEmphasis(root: string, product: string, version: string, a: 
     const byContrast = orders[0]!;
     const byWordOrder = [...resting].sort((p, q) => WORDS[wordOf(p.token)!] - WORDS[wordOf(q.token)!]).map((m) => m.token);
     const agree = byContrast.join() === byWordOrder.join();
-    const positions = [...words].sort((p, q) => p - q);
-    const stepOf = new Map<string, number>(byContrast.map((t, i) => [t, agree ? WORDS[wordOf(t)!] : positions[i]]));
+    // Words contradict values: anchor at the lightest step (owner decision, ADR 0018 amended). Light-side members
+    // (word at or below default) take subtlest, subtler, subtle, default in contrast order; bold-side members keep
+    // their word's step (bold -> strong, bolder -> stronger, boldest -> strongest).
+    let light = 0;
+    const stepOf = new Map<string, number>(byContrast.map((t) => [t, agree ? WORDS[wordOf(t)!] : WORDS[wordOf(t)!] <= 4 ? ++light : WORDS[wordOf(t)!]]));
     for (const m of members) {
       const rest = stateOf(m.concept!) ? members.find((r) => !stateOf(r.concept!) && restingKey(r.token) === restingKey(m.token)) : m;
       const step = rest && stepOf.get(rest.token);

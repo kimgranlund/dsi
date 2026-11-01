@@ -25,3 +25,6 @@ The contrast-rank rule is computed (`dsi-map rank-emphasis`, method `emphasis-ra
 ## Amendment, 2026-11-01: ramps and bolder
 - **Numbered ramps** of a categorical hue (Primer `display.<hue>.scale.0..9`) map broad to usage-categorical + hue with no emphasis; the step stays native (owner decision; two of three models agreed on all 190).
 - Atlassian `bolder` maps to `stronger` (the term approved earlier as strong predates the seventh step); its families were re-derived.
+
+## Amendment, 2026-11-01: anchor at subtlest
+When a family's words contradict its contrast order, light-side members (word at or below default) take subtlest, subtler, subtle, default in contrast order and bold-side members keep their word's step: Atlassian status `default` -> subtlest, `subtler` -> subtler, `subtle` -> subtle, `bold` -> strong (owner decision; the Haiku audit and the gap research agreed).

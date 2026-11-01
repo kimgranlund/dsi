@@ -4533,19 +4533,18 @@
       "token": "color.background.danger.default.default",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtlest",
       "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "danger status background. Contrast rank in the danger background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'default' ranks as subtlest (ADR 0018), close because the word disagrees with the rank.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-danger/property-background/emphasis-subtler."
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Deterministic: contrast against the page in every mode."
       }
     },
     {
@@ -4554,7 +4553,7 @@
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtler",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4563,9 +4562,10 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-danger/property-background/emphasis-subtlest."
+      },
+      "supersededBy": "m-32344c722579"
     },
     {
       "id": "m-d3bcaa0bedd0",
@@ -4608,12 +4608,31 @@
       }
     },
     {
+      "id": "m-42ffd29760da",
+      "token": "color.background.danger.subtle.default",
+      "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
       "id": "m-c80c9f54453d",
       "token": "color.background.danger.subtle.default",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-default",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4622,7 +4641,27 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-danger/property-background/emphasis-subtle."
+      },
+      "supersededBy": "m-42ffd29760da"
+    },
+    {
+      "id": "m-1b543806572f",
+      "token": "color.background.danger.subtler.default",
+      "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtler",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:48:39.386Z",
         "note": "Deterministic: contrast against the page in every mode."
       }
     },
@@ -4632,7 +4671,7 @@
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4641,9 +4680,10 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-danger/property-background/emphasis-subtler."
+      },
+      "supersededBy": "m-1b543806572f"
     },
     {
       "id": "m-d650afd08121",
@@ -4771,7 +4811,7 @@
       "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtler",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4780,28 +4820,28 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-info/property-background/emphasis-subtlest."
+      },
+      "supersededBy": "m-ad990d094014"
     },
     {
       "id": "m-ad990d094014",
       "token": "color.background.information.default.default",
       "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtlest",
       "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "information status background. Contrast rank in the information background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'default' ranks as subtlest (ADR 0018), close because the word disagrees with the rank.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-info/property-background/emphasis-subtler."
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Deterministic: contrast against the page in every mode."
       }
     },
     {
@@ -4850,7 +4890,7 @@
       "concept": "dsi:concept/color/intent-info/property-background/emphasis-default",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4859,7 +4899,46 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-info/property-background/emphasis-subtle."
+      },
+      "supersededBy": "m-cbf492f2cae7"
+    },
+    {
+      "id": "m-cbf492f2cae7",
+      "token": "color.background.information.subtle.default",
+      "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-9334bc8de7b2",
+      "token": "color.background.information.subtler.default",
+      "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtler",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:48:39.386Z",
         "note": "Deterministic: contrast against the page in every mode."
       }
     },
@@ -4869,7 +4948,7 @@
       "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4878,9 +4957,10 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-info/property-background/emphasis-subtler."
+      },
+      "supersededBy": "m-9334bc8de7b2"
     },
     {
       "id": "m-cb8299433405",
@@ -5503,7 +5583,7 @@
       "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtler",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -5512,28 +5592,28 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-success/property-background/emphasis-subtlest."
+      },
+      "supersededBy": "m-708a58f7ae84"
     },
     {
       "id": "m-708a58f7ae84",
       "token": "color.background.success.default.default",
       "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtlest",
       "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "success status background. Contrast rank in the success background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'default' ranks as subtlest (ADR 0018), close because the word disagrees with the rank.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-success/property-background/emphasis-subtler."
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Deterministic: contrast against the page in every mode."
       }
     },
     {
@@ -5582,7 +5662,7 @@
       "concept": "dsi:concept/color/intent-success/property-background/emphasis-default",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -5591,7 +5671,46 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-success/property-background/emphasis-subtle."
+      },
+      "supersededBy": "m-b02b2f9d345a"
+    },
+    {
+      "id": "m-b02b2f9d345a",
+      "token": "color.background.success.subtle.default",
+      "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-4c17045345ec",
+      "token": "color.background.success.subtler.default",
+      "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtler",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:48:39.386Z",
         "note": "Deterministic: contrast against the page in every mode."
       }
     },
@@ -5601,7 +5720,7 @@
       "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -5610,9 +5729,10 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-success/property-background/emphasis-subtler."
+      },
+      "supersededBy": "m-4c17045345ec"
     },
     {
       "id": "m-8011b46273dc",
@@ -5720,7 +5840,7 @@
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtler",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -5729,28 +5849,28 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-warning/property-background/emphasis-subtlest."
+      },
+      "supersededBy": "m-bb287f6628eb"
     },
     {
       "id": "m-bb287f6628eb",
       "token": "color.background.warning.default.default",
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtlest",
       "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "warning status background. Contrast rank in the warning background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'default' ranks as subtlest (ADR 0018), close because the word disagrees with the rank.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-warning/property-background/emphasis-subtler."
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Deterministic: contrast against the page in every mode."
       }
     },
     {
@@ -5794,12 +5914,31 @@
       }
     },
     {
+      "id": "m-b1d6a424db76",
+      "token": "color.background.warning.subtle.default",
+      "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
       "id": "m-e69a40667584",
       "token": "color.background.warning.subtle.default",
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-default",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -5808,7 +5947,27 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-warning/property-background/emphasis-subtle."
+      },
+      "supersededBy": "m-b1d6a424db76"
+    },
+    {
+      "id": "m-26b74932afd8",
+      "token": "color.background.warning.subtler.default",
+      "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtler",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:48:39.386Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:48:39.386Z",
         "note": "Deterministic: contrast against the page in every mode."
       }
     },
@@ -5818,7 +5977,7 @@
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
       "match": "close",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -5827,9 +5986,10 @@
       },
       "review": {
         "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
+        "at": "2026-11-01T15:48:39.386Z",
+        "note": "Re-derived by contrast rank: dsi:concept/color/intent-warning/property-background/emphasis-subtler."
+      },
+      "supersededBy": "m-26b74932afd8"
     },
     {
       "id": "m-f8a4c4c2bd82",
