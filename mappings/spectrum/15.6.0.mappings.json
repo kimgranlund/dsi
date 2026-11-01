@@ -12515,14 +12515,18 @@
       "token": "track-color",
       "concept": "dsi:concept/color/component-progress-bar/part-track/property-background",
       "match": "narrow",
-      "confidence": 0.55,
+      "confidence": 0.5,
       "status": "proposed",
-      "rationale": "Track fill behind the progress of progress bars and meters; the token also serves other tracked controls. Evidence: name; value (gray-300 light, #393939 dark).",
+      "rationale": "The unfilled track channel behind a meter or progress fill, and the token also serves progress circles and sliders. Evidence: docs https://github.com/adobe/spectrum-design-data/pull/373 (meter tokens shared by progress bars, progress circles and sliders); value (gray-300 per theme).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:13:30+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:02.325Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:02.331Z",
+        "note": "New concept dsi:concept/color/component-progress-bar/part-track/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {

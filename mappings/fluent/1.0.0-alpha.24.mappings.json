@@ -11288,12 +11288,16 @@
       "match": "close",
       "confidence": 0.55,
       "status": "proposed",
-      "rationale": "Translucent scrollbar thumb fill drawn over content; close because it serves overlay scrollbars only. Evidence: name; value (black at 0.5 light, white at 0.6 dark, white in high contrast).",
+      "rationale": "The thumb of an overlay-style scrollbar, a translucent neutral over content; the nuance is the overlay style. Evidence: name; value (blackAlpha.50 light, whiteAlpha.60 dark, hcButtonFace in high contrast); docs https://github.com/microsoft/fluentui/blob/master/packages/tokens/src/alias/lightColor.ts.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:57+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.873Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:00.879Z",
+        "note": "New concept dsi:concept/color/component-scrollbar/part-thumb/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -12507,16 +12511,15 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Deliberately unpainted background slot of transparent controls. Evidence: name; value (black at 0 in every theme).",
+      "rationale": "A deliberately unpainted background slot that stays transparent in standard themes. Evidence: value (transparent in all seven themes); docs https://github.com/microsoft/fluentui/blob/master/packages/tokens/src/alias/lightColor.ts.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:57+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.873Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.486Z",
+        "at": "2026-11-01T21:38:00.879Z",
         "note": "New concept dsi:concept/color/usage-transparent/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -12547,16 +12550,15 @@
       "match": "exact",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Hover background of transparent controls, clear in standard themes and painted in high contrast. Evidence: name; value (black at 0 standard, #1aebff high contrast).",
+      "rationale": "The hovered step of the unpainted background slot, which paints only in high contrast. Evidence: value (transparent in standard themes, hcHighlight in teams-high-contrast); name.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:57+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.873Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.486Z",
+        "at": "2026-11-01T21:38:00.879Z",
         "note": "New concept dsi:concept/color/usage-transparent/property-background/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -12587,16 +12589,15 @@
       "match": "exact",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Pressed background of transparent controls, clear in standard themes and painted in high contrast. Evidence: name; value (black at 0 standard, #1aebff high contrast).",
+      "rationale": "The pressed step of the unpainted background slot, which paints only in high contrast. Evidence: value (transparent in standard themes, hcHighlight in teams-high-contrast); name.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:57+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.873Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.486Z",
+        "at": "2026-11-01T21:38:00.879Z",
         "note": "New concept dsi:concept/color/usage-transparent/property-background/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -12647,16 +12648,15 @@
       "match": "exact",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Selected background of transparent controls, clear in standard themes and painted in high contrast. Evidence: name; value (black at 0 standard, #1aebff high contrast).",
+      "rationale": "The selected step of the unpainted background slot, which paints only in high contrast. Evidence: value (transparent in standard themes, hcHighlight in teams-high-contrast); name.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:57+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.873Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.486Z",
+        "at": "2026-11-01T21:38:00.879Z",
         "note": "New concept dsi:concept/color/usage-transparent/property-background/state-selected: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -12667,16 +12667,15 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Deliberately unpainted border slot of transparent controls, painted only in high contrast. Evidence: name; value (black at 0 standard, white high contrast).",
+      "rationale": "A deliberately unpainted border slot that paints only in high contrast. Evidence: value (transparent in standard themes, hcCanvasText in teams-high-contrast); docs https://github.com/microsoft/fluentui/blob/master/packages/tokens/src/alias/lightColor.ts.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:57+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.873Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.486Z",
+        "at": "2026-11-01T21:38:00.879Z",
         "note": "New concept dsi:concept/color/usage-transparent/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -12727,16 +12726,15 @@
       "match": "exact",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Border slot of disabled transparent controls, painted only in high contrast. Evidence: name; value (black at 0 standard, #3ff23f high contrast).",
+      "rationale": "The disabled step of the unpainted border slot, which paints only in high contrast. Evidence: value (transparent in standard themes, hcDisabled in teams-high-contrast); name.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:57+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.873Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.486Z",
+        "at": "2026-11-01T21:38:00.879Z",
         "note": "New concept dsi:concept/color/usage-transparent/property-border/state-disabled: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -12746,13 +12744,18 @@
       "concept": "dsi:concept/color/intent-accent/usage-transparent/property-border",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Border slot of interactive transparent controls, painted only in high contrast; close because interactive maps to accent. Evidence: name; value (#1aebff high contrast); convention (ADR 0008 interactive).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T21:12:57+00:00",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:00.873Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-transparent/property-border broad."
       }
     },
     {
@@ -12765,9 +12768,13 @@
       "rationale": "Unpainted border slot of interactive elements; the interaction state is not stated. Evidence: name; value (alpha 0 in every theme).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T21:14:14Z",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.873Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:00.879Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {

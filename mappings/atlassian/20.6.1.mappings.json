@@ -4485,16 +4485,15 @@
       "match": "exact",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Background of a whole added line in a code diff. Evidence: description (\"Use for added code lines\"); value (Green200 at 0.4 light).",
+      "rationale": "Line background of added code in a diff. Evidence: description (\"Use for added code lines\"); value (Green200 at 40 percent light); convention (ADR 0018: line-level diffs bind part line).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.396Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/usage-code-surface/syntax-inserted/part-line/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -4525,16 +4524,15 @@
       "match": "exact",
       "confidence": 0.9,
       "status": "proposed",
-      "rationale": "Background of the code gutter column beside the lines. Evidence: description (\"background of code gutters\").",
+      "rationale": "Background of a code gutter. Evidence: description (\"background of code gutters\"); value (Neutral200 light, DarkNeutral200 dark).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.396Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/usage-code-surface/part-gutter/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -4595,16 +4593,15 @@
       "match": "exact",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Background of a whole removed line in a code diff. Evidence: description (\"Use for removed code lines\"); value (Red200 at 0.4 light).",
+      "rationale": "Line background of removed code in a diff. Evidence: description (\"Use for removed code lines\"); value (Red200 at 40 percent light); convention (ADR 0018: line-level diffs bind part line).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.396Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/usage-code-surface/syntax-deleted/part-line/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -4929,17 +4926,17 @@
       "token": "color.background.discovery.bold.hovered",
       "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-hover",
       "match": "close",
-      "confidence": 1,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "rationale": "Hovered step of the vibrant discovery background used in onboarding spotlights; the nuance is that the family words contradict its contrast order. Evidence: description; value (Purple800 light, Purple300 dark, above the bold rest step); convention (ADR 0018: bold keeps strong).",
       "provenance": {
         "agent": "dsi-mapper",
-        "at": "2026-11-01T21:16:36.915Z",
-        "method": "emphasis-rank-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:36.923Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -4968,17 +4965,17 @@
       "token": "color.background.discovery.bold.pressed",
       "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-active",
       "match": "close",
-      "confidence": 1,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "rationale": "Pressed step of the vibrant discovery background used in onboarding spotlights; the nuance is that the family words contradict its contrast order. Evidence: description; value (Purple850 light, Purple250 dark, above the bold rest step); convention (ADR 0018: bold keeps strong).",
       "provenance": {
         "agent": "dsi-mapper",
-        "at": "2026-11-01T21:16:36.915Z",
-        "method": "emphasis-rank-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:36.923Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-strong/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -5007,17 +5004,17 @@
       "token": "color.background.discovery.default.default",
       "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtlest",
       "match": "close",
-      "confidence": 1,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "rationale": "The lightest discovery background, for section messages; the nuance is that the word default names the weakest step. Evidence: value (Purple100, 1.13:1 light and 1.16:1 dark, below subtler and bold); convention (ADR 0018: anchor at subtlest).",
       "provenance": {
         "agent": "dsi-mapper",
-        "at": "2026-11-01T21:16:36.915Z",
-        "method": "emphasis-rank-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:36.923Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtlest: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -5028,16 +5025,15 @@
       "match": "close",
       "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Hover state of the lightest discovery background; close because default ranks subtlest by contrast. Evidence: description; value (Purple200); convention (ADR 0018 anchor at subtlest).",
+      "rationale": "Hovered step of the lightest discovery background; the nuance is that the word default names the weakest step. Evidence: description; value (Purple200 light, Purple900 dark); convention (ADR 0018: anchor at subtlest).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.396Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtlest/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -5048,16 +5044,15 @@
       "match": "close",
       "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Pressed state of the lightest discovery background; close because default ranks subtlest by contrast. Evidence: description; value (Purple250); convention (ADR 0018 anchor at subtlest).",
+      "rationale": "Pressed step of the lightest discovery background; the nuance is that the word default names the weakest step. Evidence: description; value (Purple250 light, Purple850 dark); convention (ADR 0018: anchor at subtlest).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.396Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtlest/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -5105,17 +5100,17 @@
       "token": "color.background.discovery.subtler.default",
       "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtler",
       "match": "close",
-      "confidence": 1,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "rationale": "Discovery background for lozenges and badges, the second-lightest step; the nuance is that the family words contradict its contrast order. Evidence: value (Purple200, 1.33:1 light and 1.32:1 dark, between default and bold); convention (ADR 0018: anchor at subtlest).",
       "provenance": {
         "agent": "dsi-mapper",
-        "at": "2026-11-01T21:16:36.915Z",
-        "method": "emphasis-rank-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:36.923Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtler: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -5144,17 +5139,17 @@
       "token": "color.background.discovery.subtler.hovered",
       "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-hover",
       "match": "close",
-      "confidence": 1,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "rationale": "Hovered step of the second-lightest discovery background; the nuance is that the family words contradict its contrast order. Evidence: description; value (Purple250 light, Purple850 dark); convention (ADR 0018: anchor at subtlest).",
       "provenance": {
         "agent": "dsi-mapper",
-        "at": "2026-11-01T21:16:36.915Z",
-        "method": "emphasis-rank-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:36.923Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -5203,17 +5198,17 @@
       "token": "color.background.discovery.subtler.pressed",
       "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-active",
       "match": "close",
-      "confidence": 1,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle < bold) (ADR 0018).",
+      "rationale": "Pressed step of the second-lightest discovery background; the nuance is that the family words contradict its contrast order. Evidence: description; value (Purple300 light, Purple800 dark); convention (ADR 0018: anchor at subtlest).",
       "provenance": {
         "agent": "dsi-mapper",
-        "at": "2026-11-01T21:16:36.915Z",
-        "method": "emphasis-rank-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:36.923Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-background/emphasis-subtler/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -7387,16 +7382,15 @@
       "match": "exact",
       "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Border communicating change or something new, such as onboarding spotlight borders. Evidence: description; sibling (color.border.discovery.default has the same description).",
+      "rationale": "Legacy alias of color.border.discovery.default, a border communicating change or something new. Evidence: description (identical to the default sibling); name (the alias predates the [default] convention); value (unresolved in this build).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.396Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -7405,18 +7399,18 @@
       "token": "color.border.discovery.default",
       "concept": "dsi:concept/color/intent-discovery/property-border",
       "match": "exact",
-      "confidence": 1,
-      "status": "proposed",
-      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "confidence": 0.85,
+      "status": "rejected",
+      "rationale": "Border communicating change or something new, such as onboarding spotlights; the only discovery border, so no emphasis. Evidence: description; value (Purple600 light, Purple500 dark); convention (ADR 0021 B1: a lone token binds no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
-        "at": "2026-11-01T21:16:36.915Z",
-        "method": "emphasis-rank-v1"
+        "at": "2026-11-01T21:37:59.966Z",
+        "method": "two-of-three-v1"
       },
       "review": {
-        "by": "registry-gate",
-        "at": "2026-11-01T21:16:36.923Z",
-        "note": "New concept dsi:concept/color/intent-discovery/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:00.140Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-discovery/property-border broad."
       }
     },
     {
@@ -7437,6 +7431,25 @@
         "by": "rank-rule",
         "at": "2026-11-01T21:16:36.915Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-discovery/property-border."
+      }
+    },
+    {
+      "id": "m-7f2079cf66eb",
+      "token": "color.border.discovery.default",
+      "concept": "dsi:concept/color/intent-discovery/property-border",
+      "match": "broad",
+      "confidence": 0.65,
+      "status": "proposed",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/intent-discovery/property-border.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:00.156Z",
+        "note": "New concept dsi:concept/color/intent-discovery/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -8630,17 +8643,17 @@
       "token": "color.chart.discovery.default.default",
       "concept": "dsi:concept/color/intent-discovery/usage-data-viz",
       "match": "exact",
-      "confidence": 1,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "rationale": "Chart mark color for new statuses. Evidence: description (\"data visualisation communicating 'new' statuses\"); sibling (chart.danger.default.default approved exact).",
       "provenance": {
         "agent": "dsi-mapper",
-        "at": "2026-11-01T21:16:36.915Z",
-        "method": "emphasis-rank-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-two-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:36.923Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/usage-data-viz: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -11712,16 +11725,15 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Icon color communicating change or something new, such as discovery section messages. Evidence: description.",
+      "rationale": "Icon color communicating change or something new, such as discovery section messages. Evidence: description; value (Purple600 light, Purple500 dark).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.396Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-icon: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -13328,13 +13340,18 @@
       "concept": "dsi:concept/color/usage-code-surface/property-text",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Additional syntax-highlighting text color, one of several accent colors in code. Evidence: description; sibling (code.accent.2).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:37:59.966Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -13343,13 +13360,18 @@
       "concept": "dsi:concept/color/usage-code-surface/property-text",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Additional syntax-highlighting text color, one of several accent colors in code. Evidence: description; sibling (code.accent.1).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:37:59.966Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -13438,16 +13460,15 @@
       "match": "exact",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Text in the code gutter, mainly line numbers. Evidence: description (\"line numbers and other code gutter text\").",
+      "rationale": "Text in a code gutter, such as line numbers. Evidence: description (\"line numbers and other code gutter text\"); value (Neutral700 light, DarkNeutral700 dark).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.396Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/usage-code-surface/part-gutter/property-text: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -13685,18 +13706,17 @@
       "token": "color.text.discovery",
       "concept": "dsi:concept/color/intent-discovery/property-text",
       "match": "exact",
-      "confidence": 0.75,
+      "confidence": 0.7,
       "status": "proposed",
-      "rationale": "Text emphasizing change or something new, such as new lozenges. Evidence: description; sibling (color.text.discovery.default has the same description).",
+      "rationale": "Legacy alias of color.text.discovery.default, text emphasizing change or something new. Evidence: description (identical to the default sibling); name (the alias predates the [default] convention); value (unresolved in this build).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.396Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-text: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -13737,16 +13757,15 @@
       "match": "exact",
       "confidence": 0.8,
       "status": "proposed",
-      "rationale": "Text emphasizing change or something new, such as new lozenges. Evidence: description; value (Purple800 light, Purple200 dark).",
+      "rationale": "Text color emphasizing change or something new, such as new lozenges. Evidence: description; convention (Atlassian ships color.icon.*, so text per ADR 0021 B6); value (Purple800 light, Purple300 dark).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:00.140Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.396Z",
+        "at": "2026-11-01T21:38:00.156Z",
         "note": "New concept dsi:concept/color/intent-discovery/property-text: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -17392,28 +17411,6 @@
       }
     },
     {
-      "token": "color.text.code.accent.1",
-      "status": "proposed",
-      "rationale": "Spare syntax-highlighting text color with no assigned code role; no syntax value names an unassigned slot. Evidence: description (\"an additional syntax-highlighting text color\").",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "token": "color.text.code.accent.2",
-      "status": "proposed",
-      "rationale": "Spare syntax-highlighting text color with no assigned code role; no syntax value names an unassigned slot. Evidence: description (\"an additional syntax-highlighting text color\").",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:14:35+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
       "token": "color.text.code.default",
       "status": "rejected",
       "rationale": "Default (unhighlighted) text in code blocks and diffs; no Lezer tag and no code usage; missing concept: code base text.",
@@ -17491,6 +17488,36 @@
         "by": "owner-decision",
         "at": "2026-11-01T21:09:42.556Z",
         "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
+      }
+    },
+    {
+      "token": "color.text.code.accent.1",
+      "status": "approved",
+      "rationale": "An extra syntax-highlighting text color with no named role; no syntax value covers an unassigned accent slot, and hue binds only with categorical or terminal usage. Evidence: description (\"an additional syntax-highlighting text color\"); value (Magenta800 light, Magenta300 dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:37:59.966Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:37:59.966Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
+      }
+    },
+    {
+      "token": "color.text.code.accent.2",
+      "status": "approved",
+      "rationale": "An extra syntax-highlighting text color with no named role; no syntax value covers an unassigned accent slot, and hue binds only with categorical or terminal usage. Evidence: description (\"an additional syntax-highlighting text color\"); value (Blue800 light, Blue300 dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:37:59.966Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:37:59.966Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     }
   ]

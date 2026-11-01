@@ -2332,9 +2332,13 @@
       "rationale": "Near-clear fill for elements such as tabs that sit on varying backgrounds; close because it carries a 2% tint, not full transparency. Evidence: description; value (black at 0.02 light, white at 0.11 dark).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.602Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -2347,9 +2351,13 @@
       "rationale": "Pressed fill of the near-clear element fill, where paint appears on press. Evidence: description (\"active state (on press) color\"); value (black at 0.08 light).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.602Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -2362,9 +2370,13 @@
       "rationale": "Hover fill of the near-clear element fill, where paint appears under the pointer. Evidence: description (\"hover state color\"); value (black at 0.05 light).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.602Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -2494,9 +2506,13 @@
       "rationale": "Selected fill of the near-clear element fill, such as the chosen tab. Evidence: description (\"selected state color... like tabs\"); value (black at 0.08 light).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.602Z",
+        "note": "New concept dsi:concept/color/usage-transparent/property-background/state-selected: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3921,16 +3937,15 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Fully transparent background slot for elements that paint nothing. Evidence: description (\"fully transparent background\"); value (black at 0 in every theme).",
+      "rationale": "A fully transparent background slot. Evidence: description (\"fully transparent background\"); value (alpha 0 in every theme); docs https://github.com/Shopify/polaris/blob/main/polaris-tokens/src/themes/base/color.ts.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.372Z",
+        "at": "2026-11-01T21:38:01.602Z",
         "note": "New concept dsi:concept/color/usage-transparent/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -4703,13 +4718,12 @@
       "rationale": "Fill of a disabled checkbox box. Evidence: name; value (black at 0.08 in every theme).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-two-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.372Z",
+        "at": "2026-11-01T21:38:01.602Z",
         "note": "New concept dsi:concept/color/component-checkbox/property-background/state-disabled: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -4719,13 +4733,18 @@
       "concept": "dsi:concept/color/component-checkbox/property-icon/state-disabled",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Check mark color of a disabled checkbox. Evidence: name; value (white on the disabled fill).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.427Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4738,9 +4757,13 @@
       "rationale": "Check mark color inside a disabled checkbox. Evidence: name; value (white in every theme).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.602Z",
+        "note": "New concept dsi:concept/color/component-checkbox/part-icon/property-icon/state-disabled: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -5546,13 +5569,12 @@
       "rationale": "Fill of a disabled radio button. Evidence: name; value (black at 0.08 in every theme).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-two-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.372Z",
+        "at": "2026-11-01T21:38:01.602Z",
         "note": "New concept dsi:concept/color/component-radio/property-background/state-disabled: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -5593,16 +5615,15 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Fill of the scrollbar thumb. Evidence: name; value (gray.11 in every theme).",
+      "rationale": "Scrollbar thumb fill. Evidence: name; value (gray 11 in every theme); docs (Polaris global stylesheet uses the hover sibling for scrollbar-color).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.372Z",
+        "at": "2026-11-01T21:38:01.602Z",
         "note": "New concept dsi:concept/color/component-scrollbar/part-thumb/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -5613,16 +5634,15 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Fill of the scrollbar thumb under the pointer. Evidence: name; value (gray.12, darker than the rest value gray.11).",
+      "rationale": "Hovered scrollbar thumb fill. Evidence: name; value (gray 12, darker than the rest step); docs (Polaris global stylesheet sets scrollbar-color with it).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.372Z",
+        "at": "2026-11-01T21:38:01.602Z",
         "note": "New concept dsi:concept/color/component-scrollbar/part-thumb/property-background/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -6123,17 +6143,17 @@
       "token": "color-text-emphasis-on-bg-fill-active",
       "concept": "dsi:concept/color/intent-highlight/usage-on-fill/property-text/state-active",
       "match": "close",
-      "confidence": 0.7,
+      "confidence": 0.6,
       "status": "proposed",
-      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "rationale": "Content on the pressed highlight fill; close because the description also names icons. Evidence: description (\"text and icons on bg-fill-emphasis-active\"); sibling (text-brand-on-bg-fill-active approved as on-fill text).",
       "provenance": {
         "agent": "dsi-mapper",
-        "at": "2026-11-01T21:16:38.085Z",
-        "method": "boundary-rule-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-two-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:38.781Z",
+        "at": "2026-11-01T21:38:01.602Z",
         "note": "New concept dsi:concept/color/intent-highlight/usage-on-fill/property-text/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -6182,17 +6202,17 @@
       "token": "color-text-emphasis-on-bg-fill-hover",
       "concept": "dsi:concept/color/intent-highlight/usage-on-fill/property-text/state-hover",
       "match": "close",
-      "confidence": 0.7,
+      "confidence": 0.6,
       "status": "proposed",
-      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "rationale": "Content on the hovered highlight fill; close because the description also names icons. Evidence: description (\"text and icons on bg-fill-emphasis-hover\"); sibling (text-brand-on-bg-fill-hover approved as on-fill text).",
       "provenance": {
         "agent": "dsi-mapper",
-        "at": "2026-11-01T21:16:38.085Z",
-        "method": "boundary-rule-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-two-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:38.781Z",
+        "at": "2026-11-01T21:38:01.602Z",
         "note": "New concept dsi:concept/color/intent-highlight/usage-on-fill/property-text/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -6791,18 +6811,17 @@
       "token": "color-tooltip-tail-down-border",
       "concept": "dsi:concept/color/component-tooltip/part-tail/property-border",
       "match": "broad",
-      "confidence": 0.8,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Border of a tooltip tail that points down, one of two tail directions. Evidence: description (\"border color for tooltip tails pointing down\").",
+      "rationale": "Border of a tooltip tail that points down, one of two tail directions. Evidence: description; docs (Polaris TooltipOverlay fills the outer tail path with it); sibling (color-tooltip-tail-up-border).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.372Z",
+        "at": "2026-11-01T21:38:01.602Z",
         "note": "New concept dsi:concept/color/component-tooltip/part-tail/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -6811,18 +6830,17 @@
       "token": "color-tooltip-tail-up-border",
       "concept": "dsi:concept/color/component-tooltip/part-tail/property-border",
       "match": "broad",
-      "confidence": 0.8,
+      "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Border of a tooltip tail that points up, one of two tail directions. Evidence: description (\"border color for tooltip tails pointing up\").",
+      "rationale": "Border of a tooltip tail that points up, one of two tail directions. Evidence: description; docs (Polaris TooltipOverlay fills the outer tail path with it); sibling (color-tooltip-tail-down-border).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:12:42+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.595Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.372Z",
+        "at": "2026-11-01T21:38:01.602Z",
         "note": "New concept dsi:concept/color/component-tooltip/part-tail/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },

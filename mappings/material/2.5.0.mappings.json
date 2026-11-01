@@ -500,7 +500,7 @@
       "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Answers normalized by the boundary tests (B1 filter) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -508,9 +508,28 @@
         "method": "boundary-rule-v1"
       },
       "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.229Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground broad."
+      }
+    },
+    {
+      "id": "m-f712efb6cc08",
+      "token": "md.sys.color.on-primary-fixed-variant",
+      "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground",
+      "match": "broad",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:38:01.229Z",
+        "method": "settle-broad-v1"
+      },
+      "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:38.558Z",
-        "note": "New concept dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler: not in the concept registry, so it needs owner approval (ADR 0019)."
+        "at": "2026-11-01T21:38:01.240Z",
+        "note": "New concept dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -597,7 +616,7 @@
       "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Answers normalized by the boundary tests (B1 filter) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -605,9 +624,9 @@
         "method": "boundary-rule-v1"
       },
       "review": {
-        "by": "registry-gate",
-        "at": "2026-11-01T21:16:38.558Z",
-        "note": "New concept dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler: not in the concept registry, so it needs owner approval (ADR 0019)."
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.229Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground broad."
       }
     },
     {
@@ -616,18 +635,17 @@
       "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground",
       "match": "broad",
       "confidence": 0.6,
-      "status": "rejected",
-      "rationale": "Text and icons on the secondary fixed fill, a variant of on-secondary-fixed; same value in every theme. Evidence: description (stronger hue variant for text and icons on fixed color); value (identical in all themes); convention (ADR 0008).",
+      "status": "proposed",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T21:14:14Z",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.229Z",
+        "method": "settle-broad-v1"
       },
       "review": {
-        "by": "boundary-rule",
-        "at": "2026-11-01T21:16:38.085Z",
-        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler broad."
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.240Z",
+        "note": "New concept dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -772,18 +790,17 @@
       "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground",
       "match": "broad",
       "confidence": 0.6,
-      "status": "rejected",
-      "rationale": "Text and icons on the tertiary fixed fill, a variant of on-tertiary-fixed; same value in every theme. Evidence: description (stronger hue variant for text and icons on fixed color); value (identical in all themes); convention (ADR 0008).",
+      "status": "proposed",
+      "rationale": "All three agents agree on every facet but emphasis; the rank does not compute, so the token is one member of dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T21:14:14Z",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.229Z",
+        "method": "settle-broad-v1"
       },
       "review": {
-        "by": "boundary-rule",
-        "at": "2026-11-01T21:16:38.085Z",
-        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler broad."
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.240Z",
+        "note": "New concept dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -792,7 +809,7 @@
       "concept": "dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Answers normalized by the boundary tests (B1 filter) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -800,9 +817,9 @@
         "method": "boundary-rule-v1"
       },
       "review": {
-        "by": "registry-gate",
-        "at": "2026-11-01T21:16:38.558Z",
-        "note": "New concept dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground/emphasis-subtler: not in the concept registry, so it needs owner approval (ADR 0019)."
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.229Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/usage-fixed+on-fill/property-foreground broad."
       }
     },
     {

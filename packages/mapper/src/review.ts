@@ -19,13 +19,15 @@ export interface QueueItem {
 export const decisionKey = (product: string, token: string) => `${product}__${token}`;
 
 /** Collect the queue: tokens with Proposed records and nothing Approved. Token details come from the run's packets. */
-export function collectQueue(root: string, scope: Scope, runDir: string): QueueItem[] {
+export function collectQueue(root: string, scope: Scope, runDir: string | string[]): QueueItem[] {
+  // Several map runs may hold queued tokens (a re-opened set mapped later); a later run's packet wins.
+  const dirs = Array.isArray(runDir) ? runDir : [runDir];
   const items: QueueItem[] = [];
   for (const [product, { version }] of Object.entries(scope.products)) {
     const m = readMappings(root, product, version) as any;
     if (!m) continue;
-    const packet = JSON.parse(fs.readFileSync(path.join(runDir, `${product}.a.packet.json`), 'utf8'));
-    const info = new Map<string, any>(packet.tokens.map((t: any) => [t.token, t]));
+    const info = new Map<string, any>();
+    for (const d of dirs) { const f = path.join(d, `${product}.a.packet.json`); if (fs.existsSync(f)) for (const t of JSON.parse(fs.readFileSync(f, 'utf8')).tokens) info.set(t.token, t); }
     const settled = new Set([...(m.mappings ?? []).filter((x: any) => x.status === 'approved').map((x: any) => x.token), ...(m.unmapped ?? []).filter((x: any) => x.status === 'approved').map((x: any) => x.token)]);
     const byToken = new Map<string, QueueItem['candidates']>();
     const push = (t: string, c: QueueItem['candidates'][number]) => (byToken.get(t) ?? byToken.set(t, []).get(t)!).push(c);
@@ -33,7 +35,7 @@ export function collectQueue(root: string, scope: Scope, runDir: string): QueueI
     for (const x of m.unmapped ?? []) if (x.status === 'proposed' && !settled.has(x.token)) push(x.token, { id: 'u-' + crypto.createHash('sha1').update(x.token + x.provenance.model).digest('hex').slice(0, 12), kind: 'unmapped', model: x.provenance.model, rationale: x.rationale });
     for (const [token, candidates] of [...byToken].sort(([a], [b]) => a.localeCompare(b))) {
       const t = info.get(token);
-      if (!t) throw new Error(`${product}: queued token ${token} is missing from ${runDir}; pass the latest run`);
+      if (!t) throw new Error(`${product}: queued token ${token} is missing from ${dirs.join(', ')}; pass the latest run`);
       items.push({ key: decisionKey(product, token), product, version, token, nativeName: t.nativeName, description: t.description, themes: t.themes, candidates });
     }
   }

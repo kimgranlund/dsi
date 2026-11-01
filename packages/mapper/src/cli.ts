@@ -139,16 +139,21 @@ if (cmd === 'prepare') {
   const thirdRun = process.argv.includes('--third') ? process.argv[process.argv.indexOf('--third') + 1] : undefined;
   const sets = new Map<string, NativeSet>();
   const setOf = (p: string) => sets.get(p) ?? sets.set(p, loadNative(root, p, scope.products[p].version)).get(p)!;
+  // --third may list several runs, comma-separated; a later run's answer wins for a token both answered.
   const third = (p: string) => {
-    const f = thirdRun && path.join(root, '.cache/mapper', thirdRun, `${p}.c.proposals.json`);
-    if (!f || !fs.existsSync(f)) return new Map<string, any>();
-    const j = JSON.parse(fs.readFileSync(f, 'utf8'));
-    return new Map<string, any>(j.proposals.map((x: any) => [x.token, { ...x, ...(x.concept ? { concept: normalizeConcept(x.concept) } : {}), model: j.model }]));
+    const out = new Map<string, any>();
+    for (const r of (thirdRun ?? '').split(',').filter(Boolean)) {
+      const f = path.join(root, '.cache/mapper', r, `${p}.c.proposals.json`);
+      if (!fs.existsSync(f)) continue;
+      const j = JSON.parse(fs.readFileSync(f, 'utf8'));
+      for (const x of j.proposals) out.set(x.token, { ...x, ...(x.concept ? { concept: normalizeConcept(x.concept) } : {}), model: j.model });
+    }
+    return out;
   };
   const hexIn = (p: string, t: string, mode: string) => { const s = setOf(p); const r = resolveToken(s, s.themes.includes(mode) ? mode : s.themes[0] ?? '', t); return r.value ? showValue(r.type, r.value) : undefined; };
   const near = (p: string, t: string) => { const s = setOf(p); return [...s.tokens.keys()].filter((k) => k === t || k.startsWith(t + '.') || k.startsWith(t + '-')); };
   const lex = readLexicon(root);
-  const items = wordsOnly ? [] : enrichQueue(root, scope, collectQueue(root, scope, runDir), third, hexIn, near, (c) => { const p = parseConcept(ontology, c); return { name: typeof p === 'string' ? undefined : conceptName(lex, p), registered: isRegistered(ontology, c) }; });
+  const items = wordsOnly ? [] : enrichQueue(root, scope, collectQueue(root, scope, run.split(',').map((r) => path.join(root, '.cache/mapper', r))), third, hexIn, near, (c) => { const p = parseConcept(ontology, c); return { name: typeof p === 'string' ? undefined : conceptName(lex, p), registered: isRegistered(ontology, c) }; });
   // --jev: Jev's two-stage pick per card (G9, 2026-11-01). It preselects only when no precedent or majority did and its
   // confidence is at least SUGGEST_AT; a pick outside the answers shows as its own option. It never approves.
   if (process.argv.includes('--jev') && items.length) {
@@ -172,7 +177,7 @@ if (cmd === 'prepare') {
   const termItems = [...(vocabRun && !vocabRun.startsWith('--') ? vocabRun.split(',').flatMap((r) => collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', r))) : [])
     .reduce((m, t) => { const prev = m.get(t.key); if (!prev || (!prev.examples.length && t.examples.length)) m.set(t.key, t); return m; }, new Map<string, any>()).values()];
   const disputes = collectDisputes(root, scope, termFindingsFor(), valuesOf);
-  const packet = JSON.parse(fs.readFileSync(path.join(runDir, `${Object.keys(scope.products)[0]}.a.packet.json`), 'utf8'));
+  const packet = JSON.parse(fs.readFileSync(path.join(root, '.cache/mapper', run.split(',')[0], `${Object.keys(scope.products)[0]}.a.packet.json`), 'utf8'));
   fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true });
   // --definitions <drafts.json>: drafted L4 definitions for lexicon words ({ "<iri>": "<text>" }), shown with the current text.
   const defFile = process.argv.includes('--definitions') ? process.argv[process.argv.indexOf('--definitions') + 1] : undefined;

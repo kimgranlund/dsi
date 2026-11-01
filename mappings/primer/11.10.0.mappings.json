@@ -8,14 +8,18 @@
       "token": "ansi.black",
       "concept": "dsi:concept/color/usage-terminal/hue-gray",
       "match": "broad",
-      "confidence": 0.7,
+      "confidence": 0.65,
       "status": "proposed",
       "rationale": "ANSI black slot for terminal text and backgrounds, one of five neutral terminal slots. Evidence: description (\"ANSI black for terminal text and backgrounds\"); value (neutral.13 light, #2f3742 dark).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-gray: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -24,13 +28,18 @@
       "concept": "dsi:concept/color/usage-terminal",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI black slot of the terminal palette; no canonical hue names black. Evidence: description; ontology (hue list has no black or white).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-terminal/hue-gray broad."
       }
     },
     {
@@ -59,13 +68,18 @@
       "concept": "dsi:concept/color/usage-terminal/brightness-bright",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI black bright slot of the terminal palette; no canonical hue names black. Evidence: description; ontology (hue list has no black or white).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-terminal/hue-gray broad."
       }
     },
     {
@@ -73,14 +87,37 @@
       "token": "ansi.blackBright",
       "concept": "dsi:concept/color/usage-terminal/hue-gray",
       "match": "broad",
-      "confidence": 0.7,
+      "confidence": 0.65,
       "status": "proposed",
       "rationale": "ANSI bright black slot for dimmed terminal text, one of five neutral terminal slots. Evidence: description (\"ANSI bright black (dark gray)\"); value (neutral.11 light).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-gray: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-35ae4f1f7938",
+      "token": "ansi.blue",
+      "concept": "dsi:concept/color/usage-terminal/hue-blue",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "The blue slot of the sixteen-slot ANSI terminal palette, one of its blue slots, used for text and backgrounds. Evidence: description (\"informational terminal text\"); value (blue 5 light, blue 3 dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-blue: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -109,7 +146,7 @@
       "concept": "dsi:concept/color/usage-terminal/hue-blue",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI blue slot for terminal text. Evidence: description (\"ANSI blue for informational terminal text\"); value (#0969da light, #58a6ff dark).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -118,9 +155,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.446Z",
-        "note": "New concept dsi:concept/color/usage-terminal/hue-blue: not in the concept registry, so it needs owner approval (ADR 0019)."
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-terminal/hue-blue broad."
       }
     },
     {
@@ -129,13 +166,18 @@
       "concept": "dsi:concept/color/usage-terminal/hue-blue/brightness-bright",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI blue bright slot of the terminal palette. Evidence: description; name.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -163,14 +205,37 @@
       "token": "ansi.blueBright",
       "concept": "dsi:concept/color/usage-terminal/hue-blue",
       "match": "broad",
-      "confidence": 0.75,
+      "confidence": 0.7,
       "status": "proposed",
       "rationale": "ANSI bright blue slot, the brighter of the two terminal blues. Evidence: description (\"ANSI bright blue for highlighted info in terminal\"); value (#218bff light).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-blue: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-4715ea1e9957",
+      "token": "ansi.cyan",
+      "concept": "dsi:concept/color/usage-terminal/hue-cyan",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "The cyan slot of the sixteen-slot ANSI terminal palette, one of its cyan slots, used for text and backgrounds. Evidence: description (\"terminal text\"); value (#1b7c83 light, #39c5cf dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-cyan: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -179,7 +244,7 @@
       "concept": "dsi:concept/color/usage-terminal/hue-cyan",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI cyan slot for terminal text. Evidence: description (\"ANSI cyan for terminal text\"); value (#1b7c83 light).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -188,9 +253,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.446Z",
-        "note": "New concept dsi:concept/color/usage-terminal/hue-cyan: not in the concept registry, so it needs owner approval (ADR 0019)."
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-terminal/hue-cyan broad."
       }
     },
     {
@@ -239,13 +304,18 @@
       "concept": "dsi:concept/color/usage-terminal/hue-cyan/brightness-bright",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI cyan bright slot of the terminal palette. Evidence: description; name.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -253,14 +323,18 @@
       "token": "ansi.cyanBright",
       "concept": "dsi:concept/color/usage-terminal/hue-cyan",
       "match": "broad",
-      "confidence": 0.75,
+      "confidence": 0.7,
       "status": "proposed",
       "rationale": "ANSI bright cyan slot, the brighter of the two terminal cyans. Evidence: description (\"ANSI bright cyan for highlighted terminal text\"); value (#3192aa light).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-cyan: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -269,13 +343,18 @@
       "concept": "dsi:concept/color/usage-terminal/hue-gray",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI gray slot of the terminal palette. Evidence: description; value (neutral slate gray).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -285,12 +364,16 @@
       "match": "broad",
       "confidence": 0.7,
       "status": "proposed",
-      "rationale": "ANSI gray slot for secondary terminal text, one of five neutral terminal slots. Evidence: description (\"ANSI gray for secondary terminal text\"); value (neutral.9 light).",
+      "rationale": "The gray slot of the sixteen-slot ANSI terminal palette, one of its gray slots, used for text and backgrounds. Evidence: description (\"secondary terminal text\"); value (neutral 9 light, neutral 8 dark).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-gray: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -311,6 +394,25 @@
         "by": "two-of-three",
         "at": "2026-11-01T15:31:10.000Z",
         "note": "Two of three agents agreed no concept fits."
+      }
+    },
+    {
+      "id": "m-29b22e63dc52",
+      "token": "ansi.green",
+      "concept": "dsi:concept/color/usage-terminal/hue-green",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "The green slot of the sixteen-slot ANSI terminal palette, one of its green slots, used for text and backgrounds. Evidence: description (\"success indicators in terminal\"); value (green 6 light, green 3 dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-green: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -339,7 +441,7 @@
       "concept": "dsi:concept/color/usage-terminal/hue-green",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI green slot for terminal text. Evidence: description (\"ANSI green for success indicators in terminal\"); value (#116329 light, #3fb950 dark).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -348,9 +450,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.446Z",
-        "note": "New concept dsi:concept/color/usage-terminal/hue-green: not in the concept registry, so it needs owner approval (ADR 0019)."
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-terminal/hue-green broad."
       }
     },
     {
@@ -359,13 +461,18 @@
       "concept": "dsi:concept/color/usage-terminal/hue-green/brightness-bright",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI green bright slot of the terminal palette. Evidence: description; name.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -393,14 +500,18 @@
       "token": "ansi.greenBright",
       "concept": "dsi:concept/color/usage-terminal/hue-green",
       "match": "broad",
-      "confidence": 0.75,
+      "confidence": 0.7,
       "status": "proposed",
       "rationale": "ANSI bright green slot, the brighter of the two terminal greens. Evidence: description (\"ANSI bright green for highlighted success\"); value (#1a7f37 light).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-green: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -409,13 +520,18 @@
       "concept": "dsi:concept/color/usage-terminal/hue-magenta",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI magenta slot of the terminal palette. The light-theme value is violet. Evidence: description; value (light theme differs from the named hue).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-terminal/hue-magenta broad."
       }
     },
     {
@@ -439,18 +555,42 @@
       }
     },
     {
+      "id": "m-ddd8e749c5cd",
+      "token": "ansi.magenta",
+      "concept": "dsi:concept/color/usage-terminal/hue-magenta",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "The magenta slot of the sixteen-slot ANSI terminal palette, one of its magenta slots, used for text and backgrounds. Evidence: name (magenta); value (purple 5 light, purple 3 dark); convention (ADR 0017: hue from the native name).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-magenta: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-f3a5b7530d8c",
       "token": "ansi.magenta",
       "concept": "dsi:concept/color/usage-terminal/hue-magenta",
       "match": "exact",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI magenta slot for terminal text. Evidence: name; description (\"ANSI magenta for special terminal text\"); value (#8250df light).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T21:16:09+00:00",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-terminal/hue-magenta broad."
       }
     },
     {
@@ -463,9 +603,13 @@
       "rationale": "ANSI bright magenta slot, the brighter of the two terminal magentas. Evidence: description (\"ANSI bright magenta for highlighted special text\"); value (#a475f9 light).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-magenta: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -494,13 +638,37 @@
       "concept": "dsi:concept/color/usage-terminal/hue-magenta/brightness-bright",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI magenta bright slot of the terminal palette. The light-theme value is violet. Evidence: description; value (light theme differs from the named hue).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
+      }
+    },
+    {
+      "id": "m-13fa7d70a8ce",
+      "token": "ansi.red",
+      "concept": "dsi:concept/color/usage-terminal/hue-red",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "The red slot of the sixteen-slot ANSI terminal palette, one of its red slots, used for text and backgrounds. Evidence: description (\"errors and alerts in terminal output\"); value (red 5 light, red 3 dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-red: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -529,7 +697,7 @@
       "concept": "dsi:concept/color/usage-terminal/hue-red",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI red slot for terminal text. Evidence: description (\"ANSI red for errors and alerts in terminal output\"); value (#cf222e light, #ff7b72 dark).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -538,9 +706,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.446Z",
-        "note": "New concept dsi:concept/color/usage-terminal/hue-red: not in the concept registry, so it needs owner approval (ADR 0019)."
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-terminal/hue-red broad."
       }
     },
     {
@@ -549,13 +717,18 @@
       "concept": "dsi:concept/color/usage-terminal/hue-red/brightness-bright",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI red bright slot of the terminal palette. The light-theme value is darker than plain red. Evidence: description; value (#a40e26 against #cf222e).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -583,14 +756,18 @@
       "token": "ansi.redBright",
       "concept": "dsi:concept/color/usage-terminal/hue-red",
       "match": "broad",
-      "confidence": 0.75,
+      "confidence": 0.7,
       "status": "proposed",
       "rationale": "ANSI bright red slot, the second of the two terminal reds. Evidence: description (\"ANSI bright red for highlighted errors\"); value (#a40e26 light).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-red: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -598,14 +775,18 @@
       "token": "ansi.white",
       "concept": "dsi:concept/color/usage-terminal/hue-gray",
       "match": "broad",
-      "confidence": 0.7,
+      "confidence": 0.65,
       "status": "proposed",
       "rationale": "ANSI white slot for terminal text, one of five neutral terminal slots. Evidence: description (\"ANSI white for terminal text\"); value (neutral.9 light, #f0f6fc dark).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-gray: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -614,13 +795,18 @@
       "concept": "dsi:concept/color/usage-terminal",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI white slot of the terminal palette; no canonical hue names white. Evidence: description; ontology (hue list has no black or white).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-terminal/hue-gray broad."
       }
     },
     {
@@ -629,13 +815,18 @@
       "concept": "dsi:concept/color/usage-terminal/brightness-bright",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI white bright slot of the terminal palette; no canonical hue names white. Evidence: description; ontology (hue list has no black or white).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-terminal/hue-gray broad."
       }
     },
     {
@@ -643,14 +834,18 @@
       "token": "ansi.whiteBright",
       "concept": "dsi:concept/color/usage-terminal/hue-gray",
       "match": "broad",
-      "confidence": 0.7,
+      "confidence": 0.65,
       "status": "proposed",
       "rationale": "ANSI bright white slot for emphasized terminal text, one of five neutral terminal slots. Evidence: description (\"ANSI bright white\"); value (neutral.8 light, white dark).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-gray: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -679,13 +874,37 @@
       "concept": "dsi:concept/color/usage-terminal/hue-yellow",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI yellow slot for terminal text. Evidence: description (\"ANSI yellow for warnings in terminal output\"); value (#4d2d00 light, #d29922 dark).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T21:16:09+00:00",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-terminal/hue-yellow broad."
+      }
+    },
+    {
+      "id": "m-d641910c72ff",
+      "token": "ansi.yellow",
+      "concept": "dsi:concept/color/usage-terminal/hue-yellow",
+      "match": "broad",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "The yellow slot of the sixteen-slot ANSI terminal palette, one of its yellow slots, used for text and backgrounds. Evidence: description (\"warnings in terminal output\"); value (yellow 8 light, yellow 3 dark).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-yellow: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -694,13 +913,18 @@
       "concept": "dsi:concept/color/usage-terminal/hue-yellow",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI yellow slot of the terminal palette. The light-theme value is dark brown. Evidence: description; value (light theme differs from the named hue).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-terminal/hue-yellow broad."
       }
     },
     {
@@ -728,14 +952,18 @@
       "token": "ansi.yellowBright",
       "concept": "dsi:concept/color/usage-terminal/hue-yellow",
       "match": "broad",
-      "confidence": 0.75,
+      "confidence": 0.7,
       "status": "proposed",
       "rationale": "ANSI bright yellow slot, the second of the two terminal yellows. Evidence: description (\"ANSI bright yellow for highlighted warnings\"); value (#633c01 light).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-terminal/hue-yellow: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -744,13 +972,18 @@
       "concept": "dsi:concept/color/usage-terminal/hue-yellow/brightness-bright",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "ANSI yellow bright slot of the terminal palette. The light-theme value is dark brown. Evidence: description; value (light theme differs from the named hue).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -915,13 +1148,18 @@
       "concept": "dsi:concept/color/usage-fixed/property-background",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Black background that stays dark in light and dark themes. Evidence: description (pure black background); value (#1f2328 light, #010409 dark).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-fixed/property-background broad."
       }
     },
     {
@@ -929,14 +1167,18 @@
       "token": "bgColor.black",
       "concept": "dsi:concept/color/usage-fixed/property-background",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.6,
       "status": "proposed",
-      "rationale": "Black background that stays black in every theme, one of two fixed backgrounds. Evidence: description (\"Pure black background\"); value (#1f2328 light, #010409 dark).",
+      "rationale": "Raw black background that ignores theme preference, one of the two fixed raw fills; the value shifts between near-blacks per theme. Evidence: description (\"Pure black background\"); docs https://github.com/primer/primitives/blob/main/DESIGN_TOKENS_SPEC.md (\"Raw black/white ignore theme preferences\"); value (neutral 13).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-fixed/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -1102,16 +1344,15 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Strong background for completed or merged state badges and labels. Evidence: description (\"Strong background for completed/done state badges\"); sibling (bgColor.success.emphasis approved strong).",
+      "rationale": "Strong background for completed or merged state badges, the emphasis step of a two-step ladder. Evidence: description; value (purple 5, 5.1:1 against the page in light and 4.1:1 in dark); docs https://github.com/primer/primitives/blob/main/DESIGN_TOKENS_SPEC.md.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.446Z",
+        "at": "2026-11-01T21:38:01.975Z",
         "note": "New concept dsi:concept/color/intent-done/property-background/emphasis-strong: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -1122,16 +1363,15 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Subtle background for completed or merged state indicators. Evidence: description (\"Subtle background for completed/done state indicators\"); sibling (bgColor.success.muted approved subtle).",
+      "rationale": "Subtle background for completed or merged state indicators, the muted step of a two-step ladder. Evidence: description; value (purple 0 light, 1.1:1 against the page; emphasis step is 5.1:1); docs https://github.com/primer/primitives/blob/main/DESIGN_TOKENS_SPEC.md.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.446Z",
+        "at": "2026-11-01T21:38:01.975Z",
         "note": "New concept dsi:concept/color/intent-done/property-background/emphasis-subtle: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -1543,16 +1783,15 @@
       "match": "exact",
       "confidence": 0.9,
       "status": "proposed",
-      "rationale": "Fully transparent background slot. Evidence: description (\"Fully transparent background\"); value (white at 0 in every theme).",
+      "rationale": "A fully transparent background slot. Evidence: description (\"Fully transparent background\"); value (alpha 0 in every theme).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.446Z",
+        "at": "2026-11-01T21:38:01.975Z",
         "note": "New concept dsi:concept/color/usage-transparent/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -1602,13 +1841,18 @@
       "concept": "dsi:concept/color/usage-fixed/property-background",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "White background that stays white in light and dark themes. Evidence: description (pure white background); value (white in nearly every theme).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-fixed/property-background broad."
       }
     },
     {
@@ -1616,14 +1860,18 @@
       "token": "bgColor.white",
       "concept": "dsi:concept/color/usage-fixed/property-background",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.6,
       "status": "proposed",
-      "rationale": "White background that stays white in every theme, one of two fixed backgrounds. Evidence: description (\"Pure white background\"); value (#ffffff light and dark).",
+      "rationale": "Raw white background that ignores theme preference, one of the two fixed raw fills. Evidence: description (\"Pure white background\"); value (#ffffff in every theme); docs https://github.com/primer/primitives/blob/main/DESIGN_TOKENS_SPEC.md.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-fixed/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -1984,16 +2232,15 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Strong border for completed or merged state badges. Evidence: description (\"Strong border for completed/done state badges\"); sibling (borderColor.success.emphasis approved strong).",
+      "rationale": "Strong border for completed or merged state badges, the emphasis step of a two-step ladder. Evidence: description; value (purple 5, 5.1:1 against the page in light); docs https://github.com/primer/primitives/blob/main/DESIGN_TOKENS_SPEC.md.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.446Z",
+        "at": "2026-11-01T21:38:01.975Z",
         "note": "New concept dsi:concept/color/intent-done/property-border/emphasis-strong: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -2004,16 +2251,15 @@
       "match": "exact",
       "confidence": 0.85,
       "status": "proposed",
-      "rationale": "Subtle border for completed or merged state indicators. Evidence: description (\"Subtle border for completed/done state indicators\"); value (purple at 0.4 alpha).",
+      "rationale": "Subtle border for completed or merged state indicators, the muted step of a two-step ladder. Evidence: description; value (purple 3 at 40 percent alpha, lower contrast than the emphasis step in every theme); docs https://github.com/primer/primitives/blob/main/DESIGN_TOKENS_SPEC.md.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.446Z",
+        "at": "2026-11-01T21:38:01.975Z",
         "note": "New concept dsi:concept/color/intent-done/property-border/emphasis-subtle: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -2376,16 +2622,15 @@
       "match": "exact",
       "confidence": 0.9,
       "status": "proposed",
-      "rationale": "Fully transparent border slot. Evidence: description (\"Fully transparent border\"); value (white at 0 in every theme).",
+      "rationale": "A fully transparent border slot. Evidence: description (\"Fully transparent border\"); value (alpha 0 in every theme).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
       },
       "review": {
         "by": "registry-gate",
-        "at": "2026-11-01T21:16:28.446Z",
+        "at": "2026-11-01T21:38:01.975Z",
         "note": "New concept dsi:concept/color/usage-transparent/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
@@ -3313,9 +3558,13 @@
       "rationale": "Empty-level cell fill of the contribution graph heatmap, one step of a sequential ramp; the step stays native. Evidence: name; value (neutral.2 light, #151b23 dark); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3324,13 +3573,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/property-background",
       "match": "broad",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Empty-day cell of the contribution graph, a gray level. Evidence: value (gray #eff2f5); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3343,9 +3597,13 @@
       "rationale": "Level-1 cell fill of the green contribution graph heatmap; the step stays native. Evidence: name; value (green.1 light, #033a16 dark); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3354,13 +3612,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/property-background",
       "match": "broad",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 1 of a green ramp. Evidence: value (green ramp, darker with each level); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3373,9 +3636,13 @@
       "rationale": "Level-2 cell fill of the green contribution graph heatmap; the step stays native. Evidence: name; value (green.3 light); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3384,13 +3651,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/property-background",
       "match": "broad",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 2 of a green ramp. Evidence: value (green ramp, darker with each level); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3403,9 +3675,13 @@
       "rationale": "Level-3 cell fill of the green contribution graph heatmap; the step stays native. Evidence: name; value (green.4 light); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3414,13 +3690,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/property-background",
       "match": "broad",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 3 of a green ramp. Evidence: value (green ramp, darker with each level); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3429,13 +3710,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/property-background",
       "match": "broad",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 4 of a green ramp. Evidence: value (green ramp, darker with each level); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3448,9 +3734,13 @@
       "rationale": "Level-4 cell fill of the green contribution graph heatmap; the step stays native. Evidence: name; value (green.6 light, #56d364 dark); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3460,12 +3750,16 @@
       "match": "broad",
       "confidence": 0.6,
       "status": "proposed",
-      "rationale": "Cell border of the contribution graph at level 0, one of five identical level borders. Evidence: name; value (#1f2328 at 0.051 light, same for every level).",
+      "rationale": "Cell outline of the contribution graph heatmap at intensity 0, one level of a chart cell border. Evidence: name; value (black at 5 percent alpha, the same at every level, solid in high contrast); docs https://github.com/primer/primitives/blob/main/src/tokens/component/contribution.json5.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3475,12 +3769,16 @@
       "match": "broad",
       "confidence": 0.6,
       "status": "proposed",
-      "rationale": "Cell border of the contribution graph at level 1, one of five identical level borders. Evidence: name; value (#1f2328 at 0.051 light, same for every level).",
+      "rationale": "Cell outline of the contribution graph heatmap at intensity 1, one level of a chart cell border. Evidence: name; value (black at 5 percent alpha, the same at every level, solid in high contrast); docs https://github.com/primer/primitives/blob/main/src/tokens/component/contribution.json5.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3490,12 +3788,16 @@
       "match": "broad",
       "confidence": 0.6,
       "status": "proposed",
-      "rationale": "Cell border of the contribution graph at level 2, one of five identical level borders. Evidence: name; value (#1f2328 at 0.051 light, same for every level).",
+      "rationale": "Cell outline of the contribution graph heatmap at intensity 2, one level of a chart cell border. Evidence: name; value (black at 5 percent alpha, the same at every level, solid in high contrast); docs https://github.com/primer/primitives/blob/main/src/tokens/component/contribution.json5.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3505,12 +3807,16 @@
       "match": "broad",
       "confidence": 0.6,
       "status": "proposed",
-      "rationale": "Cell border of the contribution graph at level 3, one of five identical level borders. Evidence: name; value (#1f2328 at 0.051 light, same for every level).",
+      "rationale": "Cell outline of the contribution graph heatmap at intensity 3, one level of a chart cell border. Evidence: name; value (black at 5 percent alpha, the same at every level, solid in high contrast); docs https://github.com/primer/primitives/blob/main/src/tokens/component/contribution.json5.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3520,12 +3826,16 @@
       "match": "broad",
       "confidence": 0.6,
       "status": "proposed",
-      "rationale": "Cell border of the contribution graph at level 4, one of five identical level borders. Evidence: name; value (#1f2328 at 0.051 light, same for every level).",
+      "rationale": "Cell outline of the contribution graph heatmap at intensity 4, one level of a chart cell border. Evidence: name; value (black at 5 percent alpha, the same at every level, solid in high contrast); docs https://github.com/primer/primitives/blob/main/src/tokens/component/contribution.json5.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-border: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3538,9 +3848,13 @@
       "rationale": "Level-1 cell fill of the Halloween contribution graph heatmap; the step stays native. Evidence: name; value (#f0db3d in every theme); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3549,13 +3863,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/property-background",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 1 of the Halloween ramp, in yellow. Evidence: value (#f0db3d); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3568,9 +3887,13 @@
       "rationale": "Level-2 cell fill of the Halloween contribution graph heatmap; the step stays native. Evidence: name; value (#ffd642 in every theme); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3579,13 +3902,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/property-background",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 2 of the Halloween ramp, in yellow. Evidence: value (#ffd642); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3598,9 +3926,13 @@
       "rationale": "Level-3 cell fill of the Halloween contribution graph heatmap; the step stays native. Evidence: name; value (#f68c41 in every theme); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3609,13 +3941,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/property-background",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 3 of the Halloween ramp, in orange. Evidence: value (#f68c41); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3624,13 +3961,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/property-background",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 4 of the Halloween ramp, near-black; no canonical hue names black. Evidence: value (#1f2328); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3643,9 +3985,13 @@
       "rationale": "Level-4 cell fill of the Halloween contribution graph heatmap; the step stays native. Evidence: name; value (black light, #e3d04f dark); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3654,13 +4000,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/property-background",
       "match": "broad",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 1 of the Winter blue ramp. Evidence: value (#b6e3ff); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3673,9 +4024,13 @@
       "rationale": "Level-1 cell fill of the winter contribution graph heatmap; the step stays native. Evidence: name; value (#b6e3ff light, #0c2d6b dark); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3684,13 +4039,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/property-background",
       "match": "broad",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 2 of the Winter blue ramp. Evidence: value (#54aeff); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3703,9 +4063,13 @@
       "rationale": "Level-2 cell fill of the winter contribution graph heatmap; the step stays native. Evidence: name; value (#54aeff light); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3714,13 +4078,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/property-background",
       "match": "broad",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 3 of the Winter blue ramp. Evidence: value (#0969da); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3733,9 +4102,13 @@
       "rationale": "Level-3 cell fill of the winter contribution graph heatmap; the step stays native. Evidence: name; value (#0969da light); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3744,13 +4117,18 @@
       "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/property-background",
       "match": "broad",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Contribution graph cell fill at level 4 of the Winter blue ramp. Evidence: value (#0a3069); convention (ADR 0018 numbered ramps are broad, no emphasis).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-two-v1): dsi:concept/color/usage-data-viz/property-background broad."
       }
     },
     {
@@ -3763,9 +4141,13 @@
       "rationale": "Level-4 cell fill of the winter contribution graph heatmap; the step stays native. Evidence: name; value (#0a3069 light, #cae8ff dark); convention (ADR 0018 ramp rule).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-two-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-data-viz/property-background: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -14104,13 +14486,18 @@
       "concept": "dsi:concept/color/usage-fixed/property-foreground",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Black text and icon color that stays dark in every theme. Evidence: description (pure black text); value (near-black in light and dark).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-fixed/property-foreground broad."
       }
     },
     {
@@ -14118,14 +14505,18 @@
       "token": "fgColor.black",
       "concept": "dsi:concept/color/usage-fixed/property-foreground",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.55,
       "status": "proposed",
-      "rationale": "Black text and icons that stay black in every theme, one of two fixed foregrounds. Evidence: description (\"Pure black text\"); value (#1f2328 light, #010409 dark).",
+      "rationale": "Raw black text and icon color that ignores theme preference, one of the two fixed raw foregrounds; the value shifts between near-blacks per theme. Evidence: description (\"Pure black text\"); docs https://github.com/primer/primitives/blob/main/DESIGN_TOKENS_SPEC.md (\"Raw black/white ignore theme preferences\"); value (neutral 13).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-fixed/property-foreground: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -14281,13 +14672,17 @@
       "concept": "dsi:concept/color/intent-done/property-foreground",
       "match": "exact",
       "confidence": 0.85,
-      "status": "proposed",
-      "rationale": "Text and icon color for completed or merged state indicators. Evidence: description (\"Text color for completed/done state indicators\"); sibling (fgColor.success approved as foreground).",
+      "status": "rejected",
+      "rationale": "Text and icon color for completed or merged state indicators. Evidence: description; docs https://github.com/primer/primitives/blob/main/DESIGN_TOKENS_SPEC.md (\"done: Completed/merged state indicators\"); convention (fgColor binds foreground, ADR 0021 B6).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.792Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/intent-done/property-foreground close."
       }
     },
     {
@@ -14297,12 +14692,16 @@
       "match": "close",
       "confidence": 0.75,
       "status": "proposed",
-      "rationale": "Text color for completed state indicators; Primer fgColor also colors icons. Evidence: description (text color); convention (ADR 0008 foreground when one token colors text and icons).",
+      "rationale": "Text and icon color for completed or merged state indicators. Evidence: description; docs https://github.com/primer/primitives/blob/main/DESIGN_TOKENS_SPEC.md (\"done: Completed/merged state indicators\"); convention (fgColor binds foreground, ADR 0021 B6).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T21:14:14Z",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/intent-done/property-foreground: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -14626,14 +15025,18 @@
       "token": "fgColor.white",
       "concept": "dsi:concept/color/usage-fixed/property-foreground",
       "match": "broad",
-      "confidence": 0.65,
+      "confidence": 0.55,
       "status": "proposed",
-      "rationale": "White text and icons that stay white in every theme, one of two fixed foregrounds. Evidence: description (\"Pure white text\"); value (#ffffff light and dark).",
+      "rationale": "Raw white text and icon color that ignores theme preference, one of the two fixed raw foregrounds. Evidence: description (\"Pure white text\"); value (#ffffff in every theme); docs https://github.com/primer/primitives/blob/main/DESIGN_TOKENS_SPEC.md.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.968Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T21:38:01.975Z",
+        "note": "New concept dsi:concept/color/usage-fixed/property-foreground: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -14642,13 +15045,18 @@
       "concept": "dsi:concept/color/usage-fixed/property-foreground",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "White text and icon color that stays white in nearly every theme. Evidence: description (pure white text); value (white in nearly every theme).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T21:38:01.968Z",
+        "note": "Settled (settle-three-v1): dsi:concept/color/usage-fixed/property-foreground broad."
       }
     },
     {
@@ -15314,13 +15722,18 @@
       "concept": "dsi:concept/color/usage-code-surface/syntax-invalid/property-background",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Background that flags carriage return characters in diffs as invalid whitespace. This deprecated name aliases the camelCase token. Evidence: description; value (red fill, as for errors).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -15329,13 +15742,18 @@
       "concept": "dsi:concept/color/usage-code-surface/syntax-invalid/property-text",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Text on the flagged carriage return marker in diffs. This deprecated name aliases the camelCase token. Evidence: description; value (near-white on red).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -15364,13 +15782,18 @@
       "concept": "dsi:concept/color/usage-code-surface/syntax-invalid/property-background",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Background that flags carriage return characters in diffs as invalid whitespace. Evidence: description; value (red fill, as for errors).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -15419,13 +15842,18 @@
       "concept": "dsi:concept/color/usage-code-surface/syntax-invalid/property-text",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Text on the flagged carriage return marker in diffs. Evidence: description; value (near-white on red).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -15852,13 +16280,18 @@
       "concept": "dsi:concept/color/usage-code-surface/property-background",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Background of ignored content in diffs, one case of a code-surface background. Evidence: description; value (blue fill).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -15867,13 +16300,18 @@
       "concept": "dsi:concept/color/usage-code-surface/property-text",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Text of ignored content in diffs, one case of code-surface text. Evidence: description; value (light gray on blue).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T21:14:14Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -18422,69 +18860,93 @@
       }
     },
     {
-      "token": "prettylights.syntax.carriage.return.bg",
-      "status": "proposed",
-      "rationale": "Deprecated alias of the carriage-return marker background in diffs; no syntax or code-surface value names control-character markers. Evidence: description (\"Deprecated. Use prettylights.syntax.carriageReturn.bg\").",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
-      "token": "prettylights.syntax.carriage.return.text",
-      "status": "proposed",
-      "rationale": "Deprecated alias of the carriage-return marker text in diffs; no syntax or code-surface value names control-character markers. Evidence: description (\"Deprecated. Use prettylights.syntax.carriageReturn.text\").",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
-      }
-    },
-    {
       "token": "prettylights.syntax.carriageReturn.bg",
-      "status": "proposed",
-      "rationale": "Background of carriage-return character markers in diffs; no syntax or code-surface value names control-character markers. Evidence: description (\"Background color for carriage return characters in diffs\").",
+      "status": "approved",
+      "rationale": "Background behind carriage return markers in diffs. No syntax value covers a rendered control character such as a carriage return marker; no Lezer tag names it. Evidence: description; value (red 5 light, red 6 dark); docs https://github.com/primer/primitives/blob/main/src/tokens/functional/color/syntax.json5.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.792Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "prettylights.syntax.carriageReturn.text",
-      "status": "proposed",
-      "rationale": "Text of carriage-return character markers in diffs; no syntax or code-surface value names control-character markers. Evidence: description (\"Text color for carriage return characters in diffs\").",
+      "status": "approved",
+      "rationale": "Text of carriage return markers in diffs. No syntax value covers a rendered control character such as a carriage return marker; no Lezer tag names it. Evidence: description; value (neutral 1 light, neutral 12 dark); docs https://github.com/primer/primitives/blob/main/src/tokens/functional/color/syntax.json5.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.792Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
+      }
+    },
+    {
+      "token": "prettylights.syntax.carriage.return.bg",
+      "status": "approved",
+      "rationale": "Deprecated alias of prettylights.syntax.carriageReturn.bg. No syntax value covers a rendered control character such as a carriage return marker; no Lezer tag names it. Evidence: description (\"Deprecated. Use prettylights.syntax.carriageReturn.bg instead.\"); value (same alias chain).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:38:01.792Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
+      }
+    },
+    {
+      "token": "prettylights.syntax.carriage.return.text",
+      "status": "approved",
+      "rationale": "Deprecated alias of prettylights.syntax.carriageReturn.text. No syntax value covers a rendered control character such as a carriage return marker; no Lezer tag names it. Evidence: description (\"Deprecated. Use prettylights.syntax.carriageReturn.text instead.\"); value (same alias chain).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T21:38:01.792Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "prettylights.syntax.markup.ignored.bg",
-      "status": "proposed",
-      "rationale": "Background of ignored content in diffs; the diff syntax values cover inserted, deleted and changed only. Evidence: description (\"Background color for ignored content in diffs\").",
+      "status": "approved",
+      "rationale": "Background of ignored content in diffs; no syntax value covers ignored diff content, and meta or deleted do not mean it. Evidence: description (\"ignored content in diffs\"); value (blue 6 in every theme); docs https://github.com/primer/primitives/blob/main/src/tokens/functional/color/syntax.json5.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.792Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "prettylights.syntax.markup.ignored.text",
-      "status": "proposed",
-      "rationale": "Text of ignored content in diffs; the diff syntax values cover inserted, deleted and changed only. Evidence: description (\"Text color for ignored content in diffs\").",
+      "status": "approved",
+      "rationale": "Text of ignored content in diffs; no syntax value covers ignored diff content, and meta or deleted do not mean it. Evidence: description (\"ignored content in diffs\"); value (neutral 6 light, neutral 12 dark); docs https://github.com/primer/primitives/blob/main/src/tokens/functional/color/syntax.json5.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T21:16:09+00:00",
-        "method": "color-v1"
+        "at": "2026-11-01T21:38:01.792Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T21:38:01.792Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     }
   ]
