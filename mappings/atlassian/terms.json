@@ -1130,7 +1130,7 @@
       "term": "inverse",
       "concept": "dsi:usage/inverse",
       "match": "exact",
-      "status": "approved",
+      "status": "rejected",
       "note": "Opposite-lightness surfaces.",
       "provenance": {
         "agent": "dsi-classify",
@@ -1140,7 +1140,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T07:29:04.031Z"
+        "at": "2026-11-01T23:49:00.000Z",
+        "note": "Atlassian \"inverse\" is content on bold backgrounds (ADR 0018), not a surface that flips between modes."
       },
       "votes": [
         {
@@ -1148,6 +1149,23 @@
           "confidence": 0.95
         }
       ]
+    },
+    {
+      "term": "inverse",
+      "concept": "dsi:usage/on-fill",
+      "match": "close",
+      "status": "approved",
+      "note": "Atlassian \"inverse\" is content on bold backgrounds (ADR 0018), not a surface that flips between modes.",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T23:49:00.000Z",
+        "method": "owner-rule"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T23:49:00.000Z",
+        "note": "Owner decision, 2026-11-01."
+      }
     },
     {
       "term": "inverse",

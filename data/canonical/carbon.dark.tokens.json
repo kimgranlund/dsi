@@ -358,7 +358,7 @@
       }
     },
     "ai-scrim-background": {
-      "$description": "AI scrim background",
+      "$description": "AI backdrop background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/usage-scrim/property-background",
@@ -684,6 +684,145 @@
           0.223529
         ],
         "hex": "#393939"
+      }
+    },
+    "caution": {
+      "$description": "Caution color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-caution",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-minor",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "support-caution-minor",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.945098,
+          0.760784,
+          0.105882
+        ],
+        "hex": "#f1c21b"
+      }
+    },
+    "caution-background": {
+      "$description": "Caution background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-caution/property-background",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-minor",
+          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-caution",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-caution-minor",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.945098,
+          0.760784,
+          0.105882
+        ],
+        "hex": "#f1c21b"
+      }
+    },
+    "caution-border": {
+      "$description": "Caution border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-caution/property-border",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-minor",
+          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-caution",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-caution-minor",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.945098,
+          0.760784,
+          0.105882
+        ],
+        "hex": "#f1c21b"
+      }
+    },
+    "caution-icon": {
+      "$description": "Caution icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-caution/property-icon",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-minor",
+          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-caution",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-caution-minor",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.945098,
+          0.760784,
+          0.105882
+        ],
+        "hex": "#f1c21b"
+      }
+    },
+    "caution-text": {
+      "$description": "Caution text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-caution/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-minor",
+          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-caution",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-caution-minor",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.945098,
+          0.760784,
+          0.105882
+        ],
+        "hex": "#f1c21b"
       }
     },
     "code-angle-bracket-text": {
@@ -4348,7 +4487,7 @@
       }
     },
     "scrim": {
-      "$description": "Scrim color",
+      "$description": "Backdrop color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-scrim",
@@ -4376,7 +4515,7 @@
       }
     },
     "scrim-background": {
-      "$description": "Scrim background",
+      "$description": "Backdrop background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-scrim/property-background",
@@ -5205,13 +5344,13 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning",
-          "match": "exact",
+          "match": "close",
           "mode": "dark",
-          "nativeName": "--cds-support-caution-minor",
+          "nativeName": "--cds-support-warning",
           "product": "carbon",
           "status": "match",
           "theme": "g100",
-          "token": "support-caution-minor",
+          "token": "support-warning",
           "version": "11.84.0",
           "via": "direct"
         }
@@ -5232,14 +5371,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-background",
-          "match": "exact",
+          "match": "close",
           "mode": "dark",
-          "nativeName": "--cds-support-caution-minor",
-          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-warning",
+          "nativeName": "--cds-support-warning",
+          "note": "no direct mapping; support-warning maps to the broader dsi:concept/color/intent-warning",
           "product": "carbon",
           "status": "nearest",
           "theme": "g100",
-          "token": "support-caution-minor",
+          "token": "support-warning",
           "version": "11.84.0",
           "via": "less-specific"
         }
@@ -5260,14 +5399,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-border",
-          "match": "exact",
+          "match": "close",
           "mode": "dark",
-          "nativeName": "--cds-support-caution-minor",
-          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-warning",
+          "nativeName": "--cds-support-warning",
+          "note": "no direct mapping; support-warning maps to the broader dsi:concept/color/intent-warning",
           "product": "carbon",
           "status": "nearest",
           "theme": "g100",
-          "token": "support-caution-minor",
+          "token": "support-warning",
           "version": "11.84.0",
           "via": "less-specific"
         }
@@ -5288,14 +5427,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-foreground",
-          "match": "exact",
+          "match": "close",
           "mode": "dark",
-          "nativeName": "--cds-support-caution-minor",
-          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-warning",
+          "nativeName": "--cds-support-warning",
+          "note": "no direct mapping; support-warning maps to the broader dsi:concept/color/intent-warning",
           "product": "carbon",
           "status": "nearest",
           "theme": "g100",
-          "token": "support-caution-minor",
+          "token": "support-warning",
           "version": "11.84.0",
           "via": "less-specific"
         }
@@ -5316,14 +5455,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-graphic",
-          "match": "exact",
+          "match": "close",
           "mode": "dark",
-          "nativeName": "--cds-support-caution-minor",
-          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-warning",
+          "nativeName": "--cds-support-warning",
+          "note": "no direct mapping; support-warning maps to the broader dsi:concept/color/intent-warning",
           "product": "carbon",
           "status": "nearest",
           "theme": "g100",
-          "token": "support-caution-minor",
+          "token": "support-warning",
           "version": "11.84.0",
           "via": "less-specific"
         }
@@ -5344,14 +5483,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-icon",
-          "match": "exact",
+          "match": "close",
           "mode": "dark",
-          "nativeName": "--cds-support-caution-minor",
-          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-warning",
+          "nativeName": "--cds-support-warning",
+          "note": "no direct mapping; support-warning maps to the broader dsi:concept/color/intent-warning",
           "product": "carbon",
           "status": "nearest",
           "theme": "g100",
-          "token": "support-caution-minor",
+          "token": "support-warning",
           "version": "11.84.0",
           "via": "less-specific"
         }
@@ -5427,14 +5566,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-text",
-          "match": "exact",
+          "match": "close",
           "mode": "dark",
-          "nativeName": "--cds-support-caution-minor",
-          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-warning",
+          "nativeName": "--cds-support-warning",
+          "note": "no direct mapping; support-warning maps to the broader dsi:concept/color/intent-warning",
           "product": "carbon",
           "status": "nearest",
           "theme": "g100",
-          "token": "support-caution-minor",
+          "token": "support-warning",
           "version": "11.84.0",
           "via": "less-specific"
         }

@@ -1339,6 +1339,34 @@
         "hex": "#b5b5b5"
       }
     },
+    "caution": {
+      "$description": "Caution color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-caution",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--p-color-bg-fill-caution",
+          "note": "no direct mapping; color-bg-fill-caution maps to the more specific dsi:concept/color/intent-caution/property-background",
+          "product": "polaris",
+          "status": "nearest",
+          "theme": "light",
+          "token": "color-bg-fill-caution",
+          "version": "9.4.2",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.902,
+          0
+        ],
+        "hex": "#ffe600"
+      }
+    },
     "caution-background": {
       "$description": "Caution background",
       "$extensions": {
@@ -4020,7 +4048,7 @@
       }
     },
     "scrim": {
-      "$description": "Scrim color",
+      "$description": "Backdrop color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-scrim",
@@ -4049,7 +4077,7 @@
       }
     },
     "scrim-background": {
-      "$description": "Scrim background",
+      "$description": "Backdrop background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-scrim/property-background",

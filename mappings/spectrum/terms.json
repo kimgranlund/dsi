@@ -506,7 +506,7 @@
       "term": "celery",
       "concept": "dsi:hue/green",
       "match": "close",
-      "status": "approved",
+      "status": "rejected",
       "note": "Spectrum celery sits at about 95 deg between lime (80) and green (120), with chartreuse already taking the lime slot and Spectrum green at 153 deg; nearest canonical reading used by designers is a yellow-green, mapped green.",
       "provenance": {
         "agent": "dsi-classify",
@@ -515,9 +515,26 @@
         "method": "terms-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:42:31.486Z",
-        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+        "by": "kimgranlund",
+        "at": "2026-11-01T23:49:00.000Z",
+        "note": "Celery is about 95 degrees, nearer lime than green; its three approved mappings bind lime."
+      }
+    },
+    {
+      "term": "celery",
+      "concept": "dsi:hue/lime",
+      "match": "close",
+      "status": "approved",
+      "note": "Celery is about 95 degrees, nearer lime than green; its three approved mappings bind lime.",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T23:49:00.000Z",
+        "method": "owner-rule"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T23:49:00.000Z",
+        "note": "Owner decision, 2026-11-01."
       }
     },
     {

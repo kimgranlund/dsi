@@ -4148,7 +4148,7 @@
    "definition": "Minor caution color. Use for low-severity warnings or minor issues.",
    "skos:exactMatch": [
     {
-     "id": "dsi:concept/color/intent-warning"
+     "id": "dsi:concept/color/intent-caution"
     }
    ]
   },
@@ -10229,7 +10229,7 @@
      "id": "dsi:property/background"
     }
    ],
-   "prefLabel": "Color: AI · Scrim · Background"
+   "prefLabel": "Color: AI · Backdrop · Background"
   },
   {
    "id": "dsi:concept/color/intent-ai/usage-skeleton/property-background",
@@ -10251,6 +10251,17 @@
     }
    ],
    "prefLabel": "Color: AI · Skeleton · Background"
+  },
+  {
+   "id": "dsi:concept/color/intent-caution",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/caution"
+    }
+   ],
+   "prefLabel": "Color: Caution"
   },
   {
    "id": "dsi:concept/color/intent-danger",
@@ -12475,7 +12486,7 @@
      "id": "dsi:property/background"
     }
    ],
-   "prefLabel": "Color: Scrim · Background"
+   "prefLabel": "Color: Backdrop · Background"
   },
   {
    "id": "dsi:concept/color/usage-skeleton/property-background",
@@ -12884,7 +12895,7 @@
      "id": "dsi:property/spacing"
     }
    ],
-   "prefLabel": "Space: Spacing"
+   "prefLabel": "Space: Margins and gutters"
   },
   {
    "id": "dsi:concept/typography/property-font-family",

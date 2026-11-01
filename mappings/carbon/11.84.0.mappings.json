@@ -5497,7 +5497,7 @@
       "concept": "dsi:concept/color/intent-warning",
       "match": "exact",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Carbon status indicators: yellow = regular warning; same value as support-warning in white (carbondesignsystem.com/patterns/status-indicator-pattern).",
       "provenance": {
         "agent": "dsi-research",
@@ -5506,29 +5506,10 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T04:30:00Z",
-        "note": "Approved in the research round (ADR 0012)."
-      }
-    },
-    {
-      "id": "m-fd7f1abebf9f",
-      "token": "support-caution-minor",
-      "concept": "dsi:concept/color/intent-caution",
-      "match": "exact",
-      "confidence": 0.85,
-      "status": "superseded",
-      "rationale": "Low-severity caution; the ontology example for caution.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:51:14Z",
-        "method": "color-v1"
+        "at": "2026-11-01T23:49:00.000Z",
+        "note": "Minor caution status is milder than warning: intent caution."
       },
-      "review": {
-        "by": "kimgranlund",
-        "at": "2026-11-01T01:03:48.510Z"
-      },
-      "supersededBy": "m-f99a8c9394aa"
+      "supersededBy": "m-fd7f1abebf9f"
     },
     {
       "id": "m-1159fdc2f963",
@@ -17966,6 +17947,25 @@
         "by": "kimgranlund",
         "at": "2026-11-01T23:19:24.000Z",
         "note": "Owner decision (ADR 0025): brand-specific levels stay native."
+      }
+    },
+    {
+      "id": "m-fd7f1abebf9f",
+      "token": "support-caution-minor",
+      "concept": "dsi:concept/color/intent-caution",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "It means exactly “Caution color”. Evidence: description (\"Minor caution status\"); convention (caution is milder than warning, ADR 0024).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T23:49:00.000Z",
+        "method": "owner-rule"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T23:49:00.000Z",
+        "note": "Owner decision, 2026-11-01."
       }
     }
   ],

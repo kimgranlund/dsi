@@ -441,7 +441,7 @@
   {
    "concept": "dsi:concept/color/intent-ai/usage-scrim/property-background",
    "group": "color",
-   "label": "AI scrim background",
+   "label": "AI backdrop background",
    "name": "ai-scrim-background"
   },
   {
@@ -467,6 +467,12 @@
    "group": "color",
    "label": "Hovered AI surface background",
    "name": "ai-surface-background-hover"
+  },
+  {
+   "concept": "dsi:concept/color/intent-caution",
+   "group": "color",
+   "label": "Caution color",
+   "name": "caution"
   },
   {
    "concept": "dsi:concept/color/intent-caution/property-background",
@@ -4725,13 +4731,13 @@
   {
    "concept": "dsi:concept/color/usage-scrim",
    "group": "color",
-   "label": "Scrim color",
+   "label": "Backdrop color",
    "name": "scrim"
   },
   {
    "concept": "dsi:concept/color/usage-scrim/property-background",
    "group": "color",
-   "label": "Scrim background",
+   "label": "Backdrop background",
    "name": "scrim-background"
   },
   {
@@ -12186,6 +12192,99 @@
     }
    }
   },
+  "dsi:concept/color/intent-caution": {
+   "atlassian": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "support-caution-minor",
+     "value": "#f1c21b",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "support-caution-minor",
+     "value": "#f1c21b",
+     "via": "direct"
+    }
+   },
+   "fluent": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "expressive": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "match": "exact",
+     "status": "nearest",
+     "token": "color-bg-fill-caution",
+     "value": "#ffe600",
+     "via": "more-specific"
+    },
+    "increased-contrast": {
+     "match": "exact",
+     "status": "nearest",
+     "token": "color-bg-fill-caution",
+     "value": "#ffe600",
+     "via": "more-specific"
+    },
+    "light": {
+     "match": "exact",
+     "status": "nearest",
+     "token": "color-bg-fill-caution",
+     "value": "#ffe600",
+     "via": "more-specific"
+    }
+   },
+   "primer": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "spectrum": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
   "dsi:concept/color/intent-caution/property-background": {
    "atlassian": {
     "dark": {
@@ -12200,10 +12299,18 @@
    },
    "carbon": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "nearest",
+     "token": "support-caution-minor",
+     "value": "#f1c21b",
+     "via": "less-specific"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "nearest",
+     "token": "support-caution-minor",
+     "value": "#f1c21b",
+     "via": "less-specific"
     }
    },
    "fluent": {
@@ -12540,10 +12647,18 @@
    },
    "carbon": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "nearest",
+     "token": "support-caution-minor",
+     "value": "#f1c21b",
+     "via": "less-specific"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "nearest",
+     "token": "support-caution-minor",
+     "value": "#f1c21b",
+     "via": "less-specific"
     }
    },
    "fluent": {
@@ -12625,10 +12740,18 @@
    },
    "carbon": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "nearest",
+     "token": "support-caution-minor",
+     "value": "#f1c21b",
+     "via": "less-specific"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "nearest",
+     "token": "support-caution-minor",
+     "value": "#f1c21b",
+     "via": "less-specific"
     }
    },
    "fluent": {
@@ -12710,10 +12833,18 @@
    },
    "carbon": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "nearest",
+     "token": "support-caution-minor",
+     "value": "#f1c21b",
+     "via": "less-specific"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "nearest",
+     "token": "support-caution-minor",
+     "value": "#f1c21b",
+     "via": "less-specific"
     }
    },
    "fluent": {
@@ -29740,16 +29871,16 @@
    },
    "carbon": {
     "dark": {
-     "match": "exact",
+     "match": "close",
      "status": "match",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "direct"
     },
     "light": {
-     "match": "exact",
+     "match": "close",
      "status": "match",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "direct"
     }
@@ -29877,16 +30008,16 @@
    },
    "carbon": {
     "dark": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     },
     "light": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     }
@@ -31102,16 +31233,16 @@
    },
    "carbon": {
     "dark": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     },
     "light": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     }
@@ -31401,16 +31532,16 @@
    },
    "carbon": {
     "dark": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     },
     "light": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     }
@@ -31518,16 +31649,16 @@
    },
    "carbon": {
     "dark": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     },
     "light": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     }
@@ -31619,16 +31750,16 @@
    },
    "carbon": {
     "dark": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     },
     "light": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     }
@@ -31756,16 +31887,16 @@
    },
    "carbon": {
     "dark": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     },
     "light": {
-     "match": "exact",
+     "match": "close",
      "status": "nearest",
-     "token": "support-caution-minor",
+     "token": "support-warning",
      "value": "#f1c21b",
      "via": "less-specific"
     }
@@ -80177,7 +80308,7 @@
    "mode": "dark",
    "product": "carbon",
    "theme": "g100",
-   "tokens": 200
+   "tokens": 205
   },
   {
    "css": "carbon.light.css",
@@ -80185,7 +80316,7 @@
    "mode": "light",
    "product": "carbon",
    "theme": "white",
-   "tokens": 200
+   "tokens": 205
   },
   {
    "css": "fluent.dark.css",
@@ -80241,7 +80372,7 @@
    "mode": "dark",
    "product": "polaris",
    "theme": "dark-experimental",
-   "tokens": 196
+   "tokens": 197
   },
   {
    "css": "polaris.increased-contrast.css",
@@ -80249,7 +80380,7 @@
    "mode": "increased-contrast",
    "product": "polaris",
    "theme": "light-high-contrast-experimental",
-   "tokens": 196
+   "tokens": 197
   },
   {
    "css": "polaris.light.css",
@@ -80257,7 +80388,7 @@
    "mode": "light",
    "product": "polaris",
    "theme": "light",
-   "tokens": 196
+   "tokens": 197
   },
   {
    "css": "primer.dark.css",
@@ -80332,10 +80463,10 @@
  ],
  "summary": {
   "cells": {
-   "match": 2657,
-   "nearest": 1243,
-   "unknown": 11623
+   "match": 2659,
+   "nearest": 1254,
+   "unknown": 11629
   },
-  "concepts": 817
+  "concepts": 818
  }
 }
