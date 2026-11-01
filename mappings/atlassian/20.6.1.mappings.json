@@ -85,26 +85,6 @@
       "token": "color.background.accent.blue.bolder.default",
       "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-stronger",
       "match": "exact",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Categorical blue background with no meaning tied to the color (tags). Contrast rank within the blue accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'bolder' -> stronger per the ontology (stronger = Atlassian bolder); note approved hovered/pressed siblings use strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-stronger."
-      }
-    },
-    {
-      "id": "m-42ec91b0b704",
-      "token": "color.background.accent.blue.bolder.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-stronger",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -204,26 +184,6 @@
       "token": "color.background.accent.blue.subtle.default",
       "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical blue background with no meaning tied to the color (tags). Contrast rank within the blue accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-f9396e8fa86a",
-      "token": "color.background.accent.blue.subtle.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtle",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -236,26 +196,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-04c04e3e820e",
-      "token": "color.background.accent.blue.subtle.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtle/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical blue background with no meaning tied to the color (tags). Contrast rank within the blue accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtle/state-hover."
       }
     },
     {
@@ -322,26 +262,6 @@
       "token": "color.background.accent.blue.subtle.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtle/state-active",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical blue background with no meaning tied to the color (tags). Contrast rank within the blue accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtle/state-active."
-      }
-    },
-    {
-      "id": "m-aea86506207e",
-      "token": "color.background.accent.blue.subtle.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtle/state-active",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -368,26 +288,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtler."
-      }
-    },
-    {
-      "id": "m-823841b07820",
-      "token": "color.background.accent.blue.subtler.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtler",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical blue background with no meaning tied to the color (tags). Contrast rank within the blue accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -440,26 +340,6 @@
       "token": "color.background.accent.blue.subtler.hovered",
       "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtler/state-hover",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical blue background with no meaning tied to the color (tags). Contrast rank within the blue accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtler/state-hover."
-      }
-    },
-    {
-      "id": "m-7eaf42e4f89a",
-      "token": "color.background.accent.blue.subtler.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtler/state-hover",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -486,26 +366,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtler/state-active."
-      }
-    },
-    {
-      "id": "m-5110fda0811f",
-      "token": "color.background.accent.blue.subtler.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtler/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical blue background with no meaning tied to the color (tags). Contrast rank within the blue accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -618,26 +478,6 @@
       "token": "color.background.accent.gray.bolder.default",
       "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-stronger",
       "match": "exact",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Categorical gray background with no meaning tied to the color (tags). Contrast rank within the gray accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'bolder' -> stronger per the ontology (stronger = Atlassian bolder); note approved hovered/pressed siblings use strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-stronger."
-      }
-    },
-    {
-      "id": "m-fea2722d896b",
-      "token": "color.background.accent.gray.bolder.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-stronger",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -690,26 +530,6 @@
         "by": "agreement+classifier",
         "at": "2026-11-01T07:29:47.037Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
-      }
-    },
-    {
-      "id": "m-25e71ccadd1a",
-      "token": "color.background.accent.gray.subtle.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical gray background with no meaning tied to the color (tags). Contrast rank within the gray accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle."
       }
     },
     {
@@ -776,26 +596,6 @@
       "token": "color.background.accent.gray.subtle.hovered",
       "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle/state-hover",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical gray background with no meaning tied to the color (tags). Contrast rank within the gray accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle/state-hover."
-      }
-    },
-    {
-      "id": "m-aee7aea7599e",
-      "token": "color.background.accent.gray.subtle.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle/state-hover",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -808,26 +608,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:56.811Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-15d825e7ff27",
-      "token": "color.background.accent.gray.subtle.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical gray background with no meaning tied to the color (tags). Contrast rank within the gray accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle/state-active."
       }
     },
     {
@@ -894,26 +674,6 @@
       "token": "color.background.accent.gray.subtler.default",
       "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtler",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical gray background with no meaning tied to the color (tags). Contrast rank within the gray accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtler."
-      }
-    },
-    {
-      "id": "m-d0a4167b64ce",
-      "token": "color.background.accent.gray.subtler.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtler",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -926,26 +686,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-72612bb72c5f",
-      "token": "color.background.accent.gray.subtler.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtler/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical gray background with no meaning tied to the color (tags). Contrast rank within the gray accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtler/state-hover."
       }
     },
     {
@@ -985,26 +725,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:56.811Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtler/state-hover."
-      }
-    },
-    {
-      "id": "m-80e0d4e60d30",
-      "token": "color.background.accent.gray.subtler.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtler/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical gray background with no meaning tied to the color (tags). Contrast rank within the gray accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtler/state-active."
       }
     },
     {
@@ -1111,26 +831,6 @@
       "token": "color.background.accent.green.bolder.default",
       "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-stronger",
       "match": "exact",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Categorical green background with no meaning tied to the color (tags). Contrast rank within the green accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'bolder' -> stronger per the ontology (stronger = Atlassian bolder); note approved hovered/pressed siblings use strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-stronger."
-      }
-    },
-    {
-      "id": "m-c83154042734",
-      "token": "color.background.accent.green.bolder.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-stronger",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -1230,26 +930,6 @@
       "token": "color.background.accent.green.subtle.default",
       "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical green background with no meaning tied to the color (tags). Contrast rank within the green accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-db38d3a7ed0e",
-      "token": "color.background.accent.green.subtle.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtle",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -1262,26 +942,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-415961448801",
-      "token": "color.background.accent.green.subtle.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtle/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical green background with no meaning tied to the color (tags). Contrast rank within the green accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtle/state-hover."
       }
     },
     {
@@ -1348,26 +1008,6 @@
       "token": "color.background.accent.green.subtle.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtle/state-active",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical green background with no meaning tied to the color (tags). Contrast rank within the green accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtle/state-active."
-      }
-    },
-    {
-      "id": "m-8b6dca1b4978",
-      "token": "color.background.accent.green.subtle.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtle/state-active",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -1394,26 +1034,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtler."
-      }
-    },
-    {
-      "id": "m-b03fb7172ddf",
-      "token": "color.background.accent.green.subtler.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtler",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical green background with no meaning tied to the color (tags). Contrast rank within the green accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -1466,26 +1086,6 @@
       "token": "color.background.accent.green.subtler.hovered",
       "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtler/state-hover",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical green background with no meaning tied to the color (tags). Contrast rank within the green accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtler/state-hover."
-      }
-    },
-    {
-      "id": "m-ff193f08678b",
-      "token": "color.background.accent.green.subtler.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtler/state-hover",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -1512,26 +1112,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtler/state-active."
-      }
-    },
-    {
-      "id": "m-69755d8fa8c3",
-      "token": "color.background.accent.green.subtler.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtler/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical green background with no meaning tied to the color (tags). Contrast rank within the green accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -1624,26 +1204,6 @@
       "token": "color.background.accent.lime.bolder.default",
       "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-stronger",
       "match": "exact",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Categorical lime background with no meaning tied to the color (tags). Contrast rank within the lime accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'bolder' -> stronger per the ontology (stronger = Atlassian bolder); note approved hovered/pressed siblings use strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-stronger."
-      }
-    },
-    {
-      "id": "m-85ce4e7aaa2e",
-      "token": "color.background.accent.lime.bolder.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-stronger",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -1723,26 +1283,6 @@
       "token": "color.background.accent.lime.subtle.default",
       "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical lime background with no meaning tied to the color (tags). Contrast rank within the lime accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-8435affb66e9",
-      "token": "color.background.accent.lime.subtle.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -1775,26 +1315,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-0fe2a020a840",
-      "token": "color.background.accent.lime.subtle.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical lime background with no meaning tied to the color (tags). Contrast rank within the lime accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle/state-hover."
       }
     },
     {
@@ -1841,26 +1361,6 @@
       "token": "color.background.accent.lime.subtle.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle/state-active",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical lime background with no meaning tied to the color (tags). Contrast rank within the lime accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle/state-active."
-      }
-    },
-    {
-      "id": "m-261c15ba9231",
-      "token": "color.background.accent.lime.subtle.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle/state-active",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -1893,26 +1393,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:56.811Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle/state-active."
-      }
-    },
-    {
-      "id": "m-1efbc24f52ae",
-      "token": "color.background.accent.lime.subtler.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtler",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical lime background with no meaning tied to the color (tags). Contrast rank within the lime accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtler."
       }
     },
     {
@@ -1979,26 +1459,6 @@
       "token": "color.background.accent.lime.subtler.hovered",
       "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtler/state-hover",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical lime background with no meaning tied to the color (tags). Contrast rank within the lime accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtler/state-hover."
-      }
-    },
-    {
-      "id": "m-ed9d39a8d8c7",
-      "token": "color.background.accent.lime.subtler.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtler/state-hover",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -2011,26 +1471,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:56.811Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-49890a8e1226",
-      "token": "color.background.accent.lime.subtler.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtler/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical lime background with no meaning tied to the color (tags). Contrast rank within the lime accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtler/state-active."
       }
     },
     {
@@ -2157,26 +1597,6 @@
       "token": "color.background.accent.magenta.bolder.default",
       "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-stronger",
       "match": "exact",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Categorical magenta background with no meaning tied to the color (tags). Contrast rank within the magenta accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'bolder' -> stronger per the ontology (stronger = Atlassian bolder); note approved hovered/pressed siblings use strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-stronger."
-      }
-    },
-    {
-      "id": "m-d53f9f8808c7",
-      "token": "color.background.accent.magenta.bolder.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-stronger",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -2236,26 +1656,6 @@
       "token": "color.background.accent.magenta.subtle.default",
       "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical magenta background with no meaning tied to the color (tags). Contrast rank within the magenta accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-4ddc894e115b",
-      "token": "color.background.accent.magenta.subtle.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -2288,26 +1688,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-2dc37ec8e703",
-      "token": "color.background.accent.magenta.subtle.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical magenta background with no meaning tied to the color (tags). Contrast rank within the magenta accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle/state-hover."
       }
     },
     {
@@ -2374,26 +1754,6 @@
       "token": "color.background.accent.magenta.subtle.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle/state-active",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical magenta background with no meaning tied to the color (tags). Contrast rank within the magenta accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle/state-active."
-      }
-    },
-    {
-      "id": "m-df6f00a0c488",
-      "token": "color.background.accent.magenta.subtle.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle/state-active",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -2433,26 +1793,6 @@
       "token": "color.background.accent.magenta.subtler.default",
       "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtler",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical magenta background with no meaning tied to the color (tags). Contrast rank within the magenta accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtler."
-      }
-    },
-    {
-      "id": "m-8c8b70862aad",
-      "token": "color.background.accent.magenta.subtler.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtler",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -2465,26 +1805,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-b60d185c06f4",
-      "token": "color.background.accent.magenta.subtler.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtler/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical magenta background with no meaning tied to the color (tags). Contrast rank within the magenta accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtler/state-hover."
       }
     },
     {
@@ -2538,26 +1858,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtler/state-active."
-      }
-    },
-    {
-      "id": "m-6237cc9910e7",
-      "token": "color.background.accent.magenta.subtler.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtler/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical magenta background with no meaning tied to the color (tags). Contrast rank within the magenta accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -2650,26 +1950,6 @@
       "token": "color.background.accent.orange.bolder.default",
       "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-stronger",
       "match": "exact",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Categorical orange background with no meaning tied to the color (tags). Contrast rank within the orange accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'bolder' -> stronger per the ontology (stronger = Atlassian bolder); note approved hovered/pressed siblings use strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-stronger."
-      }
-    },
-    {
-      "id": "m-6791abd1ff12",
-      "token": "color.background.accent.orange.bolder.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-stronger",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -2749,26 +2029,6 @@
       "token": "color.background.accent.orange.subtle.default",
       "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical orange background with no meaning tied to the color (tags). Contrast rank within the orange accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-0e53e65600d6",
-      "token": "color.background.accent.orange.subtle.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtle",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -2828,26 +2088,6 @@
       "token": "color.background.accent.orange.subtle.hovered",
       "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtle/state-hover",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical orange background with no meaning tied to the color (tags). Contrast rank within the orange accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtle/state-hover."
-      }
-    },
-    {
-      "id": "m-d4fd96d4d2df",
-      "token": "color.background.accent.orange.subtle.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtle/state-hover",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -2887,26 +2127,6 @@
       "token": "color.background.accent.orange.subtle.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtle/state-active",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical orange background with no meaning tied to the color (tags). Contrast rank within the orange accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtle/state-active."
-      }
-    },
-    {
-      "id": "m-c3e9e7dc8379",
-      "token": "color.background.accent.orange.subtle.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtle/state-active",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -2919,26 +2139,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:56.811Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-6d5554789dad",
-      "token": "color.background.accent.orange.subtler.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtler",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical orange background with no meaning tied to the color (tags). Contrast rank within the orange accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtler."
       }
     },
     {
@@ -2978,26 +2178,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtler."
-      }
-    },
-    {
-      "id": "m-032383cfdb04",
-      "token": "color.background.accent.orange.subtler.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtler/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical orange background with no meaning tied to the color (tags). Contrast rank within the orange accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtler/state-hover."
       }
     },
     {
@@ -3051,26 +2231,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtler/state-active."
-      }
-    },
-    {
-      "id": "m-cb3c8563e9f6",
-      "token": "color.background.accent.orange.subtler.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtler/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical orange background with no meaning tied to the color (tags). Contrast rank within the orange accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -3156,26 +2316,6 @@
         "by": "agreement+classifier",
         "at": "2026-11-01T07:29:47.037Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
-      }
-    },
-    {
-      "id": "m-02351427cb46",
-      "token": "color.background.accent.purple.bolder.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-stronger",
-      "match": "exact",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Categorical purple background with no meaning tied to the color (tags). Contrast rank within the purple accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'bolder' -> stronger per the ontology (stronger = Atlassian bolder); note approved hovered/pressed siblings use strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-stronger."
       }
     },
     {
@@ -3282,26 +2422,6 @@
       "token": "color.background.accent.purple.subtle.default",
       "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical purple background with no meaning tied to the color (tags). Contrast rank within the purple accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-c94e9d9415b4",
-      "token": "color.background.accent.purple.subtle.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtle",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -3314,26 +2434,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-7a014f3a0928",
-      "token": "color.background.accent.purple.subtle.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtle/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical purple background with no meaning tied to the color (tags). Contrast rank within the purple accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtle/state-hover."
       }
     },
     {
@@ -3380,26 +2480,6 @@
       "token": "color.background.accent.purple.subtle.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtle/state-active",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical purple background with no meaning tied to the color (tags). Contrast rank within the purple accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtle/state-active."
-      }
-    },
-    {
-      "id": "m-b389c48f8fe3",
-      "token": "color.background.accent.purple.subtle.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtle/state-active",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -3439,26 +2519,6 @@
       "token": "color.background.accent.purple.subtler.default",
       "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtler",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical purple background with no meaning tied to the color (tags). Contrast rank within the purple accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtler."
-      }
-    },
-    {
-      "id": "m-2520cb767e32",
-      "token": "color.background.accent.purple.subtler.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtler",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -3491,26 +2551,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtler."
-      }
-    },
-    {
-      "id": "m-32860b5e0f02",
-      "token": "color.background.accent.purple.subtler.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtler/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical purple background with no meaning tied to the color (tags). Contrast rank within the purple accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtler/state-hover."
       }
     },
     {
@@ -3564,26 +2604,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtler/state-active."
-      }
-    },
-    {
-      "id": "m-af9a317a19c6",
-      "token": "color.background.accent.purple.subtler.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtler/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical purple background with no meaning tied to the color (tags). Contrast rank within the purple accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -3676,26 +2696,6 @@
       "token": "color.background.accent.red.bolder.default",
       "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-stronger",
       "match": "exact",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Categorical red background with no meaning tied to the color (tags). Contrast rank within the red accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'bolder' -> stronger per the ontology (stronger = Atlassian bolder); note approved hovered/pressed siblings use strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-stronger."
-      }
-    },
-    {
-      "id": "m-97d8351ed2e7",
-      "token": "color.background.accent.red.bolder.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-stronger",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -3775,26 +2775,6 @@
       "token": "color.background.accent.red.subtle.default",
       "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical red background with no meaning tied to the color (tags). Contrast rank within the red accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-1f8b3f30f33f",
-      "token": "color.background.accent.red.subtle.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtle",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -3827,26 +2807,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-14674865fab7",
-      "token": "color.background.accent.red.subtle.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtle/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical red background with no meaning tied to the color (tags). Contrast rank within the red accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtle/state-hover."
       }
     },
     {
@@ -3913,26 +2873,6 @@
       "token": "color.background.accent.red.subtle.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtle/state-active",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical red background with no meaning tied to the color (tags). Contrast rank within the red accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtle/state-active."
-      }
-    },
-    {
-      "id": "m-9b9cb8a8acba",
-      "token": "color.background.accent.red.subtle.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtle/state-active",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -3959,26 +2899,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtler."
-      }
-    },
-    {
-      "id": "m-668f0289c38d",
-      "token": "color.background.accent.red.subtler.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtler",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical red background with no meaning tied to the color (tags). Contrast rank within the red accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -4031,26 +2951,6 @@
       "token": "color.background.accent.red.subtler.hovered",
       "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtler/state-hover",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical red background with no meaning tied to the color (tags). Contrast rank within the red accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtler/state-hover."
-      }
-    },
-    {
-      "id": "m-8be5e8318cfb",
-      "token": "color.background.accent.red.subtler.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtler/state-hover",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -4077,26 +2977,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtler/state-active."
-      }
-    },
-    {
-      "id": "m-d00aff176f4d",
-      "token": "color.background.accent.red.subtler.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtler/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical red background with no meaning tied to the color (tags). Contrast rank within the red accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -4189,26 +3069,6 @@
       "token": "color.background.accent.teal.bolder.default",
       "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-stronger",
       "match": "exact",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Categorical teal background with no meaning tied to the color (tags). Contrast rank within the teal accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'bolder' -> stronger per the ontology (stronger = Atlassian bolder); note approved hovered/pressed siblings use strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-stronger."
-      }
-    },
-    {
-      "id": "m-5ba678e843ca",
-      "token": "color.background.accent.teal.bolder.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-stronger",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -4288,26 +3148,6 @@
       "token": "color.background.accent.teal.subtle.default",
       "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical teal background with no meaning tied to the color (tags). Contrast rank within the teal accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-0b9b2c4888be",
-      "token": "color.background.accent.teal.subtle.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtle",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -4340,26 +3180,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-43afd7a1b3ad",
-      "token": "color.background.accent.teal.subtle.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtle/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical teal background with no meaning tied to the color (tags). Contrast rank within the teal accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtle/state-hover."
       }
     },
     {
@@ -4426,26 +3246,6 @@
       "token": "color.background.accent.teal.subtle.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtle/state-active",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical teal background with no meaning tied to the color (tags). Contrast rank within the teal accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtle/state-active."
-      }
-    },
-    {
-      "id": "m-cb2e7f67d4fd",
-      "token": "color.background.accent.teal.subtle.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtle/state-active",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -4458,26 +3258,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:56.811Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-1da57987547b",
-      "token": "color.background.accent.teal.subtler.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtler",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical teal background with no meaning tied to the color (tags). Contrast rank within the teal accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtler."
       }
     },
     {
@@ -4524,26 +3304,6 @@
       "token": "color.background.accent.teal.subtler.hovered",
       "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtler/state-hover",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical teal background with no meaning tied to the color (tags). Contrast rank within the teal accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtler/state-hover."
-      }
-    },
-    {
-      "id": "m-188f81d6e52e",
-      "token": "color.background.accent.teal.subtler.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtler/state-hover",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -4576,26 +3336,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:56.811Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtler/state-hover."
-      }
-    },
-    {
-      "id": "m-33ebc09f8e60",
-      "token": "color.background.accent.teal.subtler.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtler/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical teal background with no meaning tied to the color (tags). Contrast rank within the teal accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtler/state-active."
       }
     },
     {
@@ -4722,26 +3462,6 @@
       "token": "color.background.accent.yellow.bolder.default",
       "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-stronger",
       "match": "exact",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Categorical yellow background with no meaning tied to the color (tags). Contrast rank within the yellow accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'bolder' -> stronger per the ontology (stronger = Atlassian bolder); note approved hovered/pressed siblings use strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-stronger."
-      }
-    },
-    {
-      "id": "m-f03cc441e00f",
-      "token": "color.background.accent.yellow.bolder.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-stronger",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -4821,26 +3541,6 @@
       "token": "color.background.accent.yellow.subtle.default",
       "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtle",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical yellow background with no meaning tied to the color (tags). Contrast rank within the yellow accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtle."
-      }
-    },
-    {
-      "id": "m-d7dbc92965a0",
-      "token": "color.background.accent.yellow.subtle.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtle",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -4880,26 +3580,6 @@
       "token": "color.background.accent.yellow.subtle.hovered",
       "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtle/state-hover",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical yellow background with no meaning tied to the color (tags). Contrast rank within the yellow accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtle/state-hover."
-      }
-    },
-    {
-      "id": "m-e6360f9040f8",
-      "token": "color.background.accent.yellow.subtle.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtle/state-hover",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -4912,26 +3592,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:56.811Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-a8d9ccc9a379",
-      "token": "color.background.accent.yellow.subtle.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtle/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical yellow background with no meaning tied to the color (tags). Contrast rank within the yellow accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtle' -> subtle; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtle/state-active."
       }
     },
     {
@@ -4998,26 +3658,6 @@
       "token": "color.background.accent.yellow.subtler.default",
       "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtler",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical yellow background with no meaning tied to the color (tags). Contrast rank within the yellow accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtler."
-      }
-    },
-    {
-      "id": "m-9edcfe828f30",
-      "token": "color.background.accent.yellow.subtler.default",
-      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtler",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -5030,26 +3670,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-3da4659108c8",
-      "token": "color.background.accent.yellow.subtler.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtler/state-hover",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical yellow background with no meaning tied to the color (tags). Contrast rank within the yellow accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; hovered state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtler/state-hover."
       }
     },
     {
@@ -5103,26 +3723,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtler/state-active."
-      }
-    },
-    {
-      "id": "m-b3ce04b9a6ee",
-      "token": "color.background.accent.yellow.subtler.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtler/state-active",
-      "match": "exact",
-      "confidence": 0.88,
-      "status": "rejected",
-      "rationale": "Categorical yellow background with no meaning tied to the color (tags). Contrast rank within the yellow accent backgrounds (subtlest < subtler < subtle < bolder in light and dark) agrees with the word; 'subtler' -> subtler; pressed state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -5582,26 +4182,6 @@
       "token": "color.background.danger.subtle.default",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-default",
       "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "danger status background. Contrast rank in the danger background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'subtle' ranks as default (ADR 0018), close because the word disagrees with the rank.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-danger/property-background/emphasis-default."
-      }
-    },
-    {
-      "id": "m-c80c9f54453d",
-      "token": "color.background.danger.subtle.default",
-      "concept": "dsi:concept/color/intent-danger/property-background/emphasis-default",
-      "match": "close",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
@@ -5614,26 +4194,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-8dcafde065f2",
-      "token": "color.background.danger.subtler.default",
-      "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "danger status background. Contrast rank in the danger background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'subtler' ranks as subtle (ADR 0018), close because the word disagrees with the rank.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-danger/property-background/emphasis-subtle."
       }
     },
     {
@@ -5849,26 +4409,6 @@
       "token": "color.background.information.subtle.default",
       "concept": "dsi:concept/color/intent-info/property-background/emphasis-default",
       "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "information status background. Contrast rank in the information background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'subtle' ranks as default (ADR 0018), close because the word disagrees with the rank.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-info/property-background/emphasis-default."
-      }
-    },
-    {
-      "id": "m-b4126e7795e4",
-      "token": "color.background.information.subtle.default",
-      "concept": "dsi:concept/color/intent-info/property-background/emphasis-default",
-      "match": "close",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
@@ -5881,26 +4421,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-ebcb824ebf3e",
-      "token": "color.background.information.subtler.default",
-      "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "information status background. Contrast rank in the information background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'subtler' ranks as subtle (ADR 0018), close because the word disagrees with the rank.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-info/property-background/emphasis-subtle."
       }
     },
     {
@@ -6566,26 +5086,6 @@
       "token": "color.background.success.subtle.default",
       "concept": "dsi:concept/color/intent-success/property-background/emphasis-default",
       "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "success status background. Contrast rank in the success background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'subtle' ranks as default (ADR 0018), close because the word disagrees with the rank.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-success/property-background/emphasis-default."
-      }
-    },
-    {
-      "id": "m-9a3d56cc1c49",
-      "token": "color.background.success.subtle.default",
-      "concept": "dsi:concept/color/intent-success/property-background/emphasis-default",
-      "match": "close",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
@@ -6598,26 +5098,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-c7cc9e8b3a7e",
-      "token": "color.background.success.subtler.default",
-      "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "success status background. Contrast rank in the success background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'subtler' ranks as subtle (ADR 0018), close because the word disagrees with the rank.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-success/property-background/emphasis-subtle."
       }
     },
     {
@@ -6813,26 +5293,6 @@
       "token": "color.background.warning.subtle.default",
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-default",
       "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "warning status background. Contrast rank in the warning background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'subtle' ranks as default (ADR 0018), close because the word disagrees with the rank.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-warning/property-background/emphasis-default."
-      }
-    },
-    {
-      "id": "m-e69a40667584",
-      "token": "color.background.warning.subtle.default",
-      "concept": "dsi:concept/color/intent-warning/property-background/emphasis-default",
-      "match": "close",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native words contradict contrast order in light and dark; step by rank (default < subtler < subtle) (ADR 0018).",
@@ -6845,26 +5305,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T14:56:48.862Z",
         "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
-      "id": "m-c82f7da258e7",
-      "token": "color.background.warning.subtler.default",
-      "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "warning status background. Contrast rank in the warning background family: default (lightest in light, darkest in dark) < subtler < subtle < bold, so 'subtler' ranks as subtle (ADR 0018), close because the word disagrees with the rank.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-warning/property-background/emphasis-subtle."
       }
     },
     {
@@ -8371,26 +6811,6 @@
       "token": "color.chart.danger.bold.default",
       "concept": "dsi:concept/color/intent-danger/usage-data-viz/emphasis-strong",
       "match": "exact",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Stronger danger chart color: higher contrast than the default in both modes, rank agrees with 'bold' -> strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-danger/usage-data-viz/emphasis-strong."
-      }
-    },
-    {
-      "id": "m-af11340406cc",
-      "token": "color.chart.danger.bold.default",
-      "concept": "dsi:concept/color/intent-danger/usage-data-viz/emphasis-strong",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -8417,26 +6837,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-danger/usage-data-viz/emphasis-strong/state-hover."
-      }
-    },
-    {
-      "id": "m-b92cae16fe75",
-      "token": "color.chart.danger.bold.hovered",
-      "concept": "dsi:concept/color/intent-danger/usage-data-viz/emphasis-strong/state-hover",
-      "match": "exact",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Hovered bold danger chart color.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -8578,26 +6978,6 @@
       "token": "color.chart.information.bold.default",
       "concept": "dsi:concept/color/intent-info/usage-data-viz/emphasis-strong",
       "match": "exact",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Stronger information chart color: higher contrast than the default in both modes, rank agrees with 'bold' -> strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-info/usage-data-viz/emphasis-strong."
-      }
-    },
-    {
-      "id": "m-c4bc79dddacd",
-      "token": "color.chart.information.bold.default",
-      "concept": "dsi:concept/color/intent-info/usage-data-viz/emphasis-strong",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -8624,26 +7004,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-info/usage-data-viz/emphasis-strong/state-hover."
-      }
-    },
-    {
-      "id": "m-f91bacf7757c",
-      "token": "color.chart.information.bold.hovered",
-      "concept": "dsi:concept/color/intent-info/usage-data-viz/emphasis-strong/state-hover",
-      "match": "exact",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Hovered bold information chart color.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -8845,26 +7205,6 @@
       "token": "color.chart.success.bold.default",
       "concept": "dsi:concept/color/intent-success/usage-data-viz/emphasis-strong",
       "match": "exact",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Stronger success chart color: higher contrast than the default in both modes, rank agrees with 'bold' -> strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-success/usage-data-viz/emphasis-strong."
-      }
-    },
-    {
-      "id": "m-be2726947016",
-      "token": "color.chart.success.bold.default",
-      "concept": "dsi:concept/color/intent-success/usage-data-viz/emphasis-strong",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -8891,26 +7231,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-success/usage-data-viz/emphasis-strong/state-hover."
-      }
-    },
-    {
-      "id": "m-c8f4186b85e9",
-      "token": "color.chart.success.bold.hovered",
-      "concept": "dsi:concept/color/intent-success/usage-data-viz/emphasis-strong/state-hover",
-      "match": "exact",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Hovered bold success chart color.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
@@ -9032,26 +7352,6 @@
       "token": "color.chart.warning.bold.default",
       "concept": "dsi:concept/color/intent-warning/usage-data-viz/emphasis-strong",
       "match": "exact",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Stronger warning chart color: higher contrast than the default in both modes, rank agrees with 'bold' -> strong.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:48.862Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-warning/usage-data-viz/emphasis-strong."
-      }
-    },
-    {
-      "id": "m-5be6af031f31",
-      "token": "color.chart.warning.bold.default",
-      "concept": "dsi:concept/color/intent-warning/usage-data-viz/emphasis-strong",
-      "match": "exact",
       "confidence": 1,
       "status": "approved",
       "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
@@ -9098,26 +7398,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T14:56:56.811Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-warning/usage-data-viz/emphasis-strong/state-hover."
-      }
-    },
-    {
-      "id": "m-7c3d3e324ad4",
-      "token": "color.chart.warning.bold.hovered",
-      "concept": "dsi:concept/color/intent-warning/usage-data-viz/emphasis-strong/state-hover",
-      "match": "exact",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Hovered bold warning chart color.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
         "method": "color-v1"
       },
       "review": {
