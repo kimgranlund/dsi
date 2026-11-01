@@ -276,8 +276,20 @@ function disputeCard(item) {
     const label = { kept: 'Kept the current answer', suggestion: "Took the auditor's suggestion", custom: 'Custom answer saved', 'reject-term': 'Term rejected' }[d.action];
     right.append(el('div', { class: 'decision' + (d.action === 'reject-term' ? ' reject' : '') }, el('span', { text: label }), el('button', { text: 'Undo', disabled: !canWrite, onclick: () => undo(item, 'dispute-decisions') })));
   }
+  // Plain question: what is approved, what the auditor says instead, and the one or two things that differ.
+  if (item.kind === 'mapping' && item.suggested) {
+    const ca = atoms(item.current.concept), sa = atoms(item.suggested.concept);
+    const F = { property: 'what part it colors', usage: 'where it is used', emphasis: 'how strong it is', intent: 'what it signals', hue: 'which hue', state: 'which state', component: 'which component', part: 'which part' };
+    const facets = [...new Set([...ca, ...sa].filter((a) => !(ca.includes(a) && sa.includes(a))).map((a) => a.split(':')[0]))];
+    const side = (as, f) => as.filter((a) => a.split(':')[0] === f).map(atomLabel).join(' + ') || 'none';
+    const diffs = facets.map((f) => (F[f] || f) + ': ' + side(ca, f) + ' now, ' + side(sa, f) + ' suggested');
+    if (item.current.match !== item.suggested.match) diffs.push('how closely it matches: ' + item.current.match + ' now, ' + item.suggested.match + ' suggested');
+    right.append(el('div', { class: 'q' }, el('h3', { text: 'Is ' + item.subject + ' mapped right?' }),
+      el('p', { text: 'An evidence auditor thinks the approved answer is wrong. ' + (diffs.length ? 'The only difference is ' + diffs.join('; ') + '.' : 'Both answers bind the same facets.') + ' Read the evidence below, then keep the current answer or take the suggestion.' })));
+  }
+  const BY = { 'agreement+classifier': 'two models and the classifier agreed', agreement: 'two models agreed', 'settle-rule': 'a settle rule', 'rank-rule': 'contrast rank', 'two-of-three': 'two of three models', 'boundary-rule': 'a boundary test', kimgranlund: 'you' };
   right.append(el('div', { class: 'vs' },
-    el('div', { class: 'cand' + (d && d.action === 'kept' ? ' chosen' : '') }, el('div', { class: 'cand-head' }, el('span', { class: 'model', text: 'Current (approved by ' + item.current.by + ')' }), el('span', { class: 'pill ' + item.current.match, text: item.current.match })), anyChips(item.current.concept)),
+    el('div', { class: 'cand' + (d && d.action === 'kept' ? ' chosen' : '') }, el('div', { class: 'cand-head' }, el('span', { class: 'model', text: 'Approved now (' + (BY[item.current.by] || item.current.by) + ')' }), el('span', { class: 'pill ' + item.current.match, text: item.current.match })), anyChips(item.current.concept)),
     item.suggested ? el('div', { class: 'cand' + (d && d.action === 'suggestion' ? ' chosen' : '') }, el('div', { class: 'cand-head' }, el('span', { class: 'model', text: 'Auditor suggests' }), el('span', { class: 'pill ' + item.suggested.match, text: item.suggested.match })), anyChips(item.suggested.concept)) : null));
   right.append(el('ul', { class: 'evidence' }, item.evidence.map((e) => el('li', {}, el('span', { text: e.says }), el('small', { text: e.kind + ' · ' + e.source })))));
   if (item.note) right.append(el('p', { class: 'why', text: item.note }));

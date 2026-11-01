@@ -70,7 +70,7 @@ export function canonicalNameOf(p: ParsedConcept): string {
 }
 
 /** Lexicon entry: a facet value's label and, when it differs inside names, its name form (docs/controlled-language.md). */
-export interface Word { label: string; nameForm?: string; definition?: string }
+export interface Word { label: string; nameForm?: string; definition?: string; phrase?: string }
 
 /** Read the lexicon (every prefLabel in ontology/schemes) without the full RDF load. */
 export function readLexicon(root: string): Map<string, Word> {
@@ -78,7 +78,7 @@ export function readLexicon(root: string): Map<string, Word> {
   const out = new Map<string, Word>();
   for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.jsonld') && f !== 'concepts.jsonld'))
     for (const c of JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'))['@graph'] as any[])
-      if (c.prefLabel) out.set(c.id, { label: c.prefLabel, ...(c.nameForm ? { nameForm: c.nameForm } : {}), ...(c.definition ? { definition: c.definition } : {}) });
+      if (c.prefLabel) out.set(c.id, { label: c.prefLabel, ...(c.nameForm ? { nameForm: c.nameForm } : {}), ...(c.phrase ? { phrase: c.phrase } : {}), ...(c.definition ? { definition: c.definition } : {}) });
   return out;
 }
 
@@ -107,17 +107,32 @@ export function conceptName(lex: Map<string, Word>, p: ParsedConcept): string {
 }
 
 /**
- * L4 generated definition: "The <head>[ used for <usage>][ of <component>[ <part>]][ for <syntax> code][, signaling
- * <intent>][, in <hue>][, <style> style][, <brightness>][, at <emphasis> emphasis][, when <state>]."
+ * L4 generated definition (ADR 0019 amendment, 2026-11-01), genus first:
+ * - color with a property: "The color of <property phrase>"; color without one: "A color";
+ *   other domains: "The <property>" (or "A <domain noun>").
+ * - a concept with one facet outside the color domain takes that value's own definition (never circular).
+ * - then "[ that signals <intent>][ <usage phrase>][ of the <component>[ <part>]][ for <syntax definition> in code]
+ *   [, in <hue>][, <style> style][, <brightness>][, at <emphasis> emphasis][, when <state>]."
  */
 export function conceptDefinition(lex: Map<string, Word>, p: ParsedConcept): string {
-  const f = p.facets, w = (k: string, v?: string) => (v ? String(v).split('+').map((x) => form(lex, k, x)).join(' and ') : '');
-  let s = `The ${headOf(lex, p)}`;
-  if (f.usage) s += ` for ${w('usage', f.usage)} use`;
+  const f = p.facets, keys = Object.keys(f) as (keyof typeof f)[];
+  const word = (k: string, v: string) => lex.get(`dsi:${k}/${v}`);
+  const w = (k: string, v?: string) => (v ? String(v).split('+').map((x) => form(lex, k, x)).join(' and ') : '');
+  const phrase = (k: string, v: string) => String(v).split('+').map((x) => word(k, x)?.phrase ?? `for ${form(lex, k, x)} use`).join(' and ');
+  if (p.domain !== 'color' && keys.length === 1) { const d = word(keys[0], String(f[keys[0]]))?.definition; if (d) return d; }
+  const prop = f.property ? String(f.property) : undefined;
+  let s = p.domain === 'color'
+    ? (prop ? `The color of ${word('property', prop)?.phrase ?? form(lex, 'property', prop)}` : 'A color')
+    : (prop ? `The ${form(lex, 'property', prop)}` : `A ${form(lex, 'domain', p.domain)}`);
+  if (f.part && !f.component) s += ` of the ${w('part', f.part)}`; // code-surface parts: "of the gutter on code surfaces"
+  if (f.intent) s += ` that signals ${w('intent', f.intent)}`;
+  if (f.usage) s += ` ${phrase('usage', f.usage)}`;
   if (f.component) s += ` of the ${w('component', f.component)}${f.part ? ` ${w('part', f.part)}` : ''}`;
-  else if (f.part) s += ` of the ${w('part', f.part)}`;
-  if (f.syntax) s += ` for ${w('syntax', f.syntax)} code`;
-  if (f.intent) s += `, signaling ${w('intent', f.intent)}`;
+  if (f.syntax) {
+    const d = word('syntax', String(f.syntax))?.definition;
+    const np = d ? d.split(/[,.]/)[0].replace(/^(A|An|The) /, (m) => m.toLowerCase()) : `“${w('syntax', f.syntax)}”`;
+    s += ` for ${/^(a|an|the) /.test(np) ? np : np.charAt(0).toLowerCase() + np.slice(1)} in code`;
+  }
   if (f.hue) s += `, in ${w('hue', f.hue)}`;
   if (f.style) s += `, ${w('style', f.style)} style`;
   if (f.brightness) s += `, ${w('brightness', f.brightness)}`;

@@ -35,6 +35,7 @@ The lexicon is the set of facet values in `ontology/schemes/facets.jsonld`, `cat
 | IRI | `dsi:<facet>/<value>`; the value is lowercase kebab-case ASCII. |
 | prefLabel | Sentence case, one to three words, no system names. |
 | name form | The form used inside L3 names when it differs from the label (see L3). Recorded as `dsi:nameForm`. |
+| phrase | The phrase used inside L4 generated definitions (usage values and color properties). Recorded as `dsi:phrase`. |
 | definition | An L4 facet definition. |
 | altLabel | Optional synonyms (Material "pressed", Primer "muted"). Search only. |
 | scopeNote | Optional system-specific notes and boundary cases. |
@@ -107,13 +108,17 @@ Definitions follow the genus-differentia form: what kind of thing it is, then wh
 - Opens with the genus as a noun phrase ("Brand or primary emphasis that ..."), and is not circular: it does not define the word by itself.
 - No system names; those go in scopeNote. No examples; those go in `skos:example`.
 
-**Registered concept definitions** are generated from this frame:
+**Registered concept definitions** are generated from this frame (amended 2026-11-01, ADR 0019):
 
 ```
-The <head>[ for <usage> use][ of the <component>[ <part>]][ for <syntax> code][, signaling <intent>][, in <hue>][, <style> style][, <brightness>][, at <emphasis> emphasis][, when <state>].
+<genus>[ of the <part>][ that signals <intent>][ <usage phrase>][ of the <component>[ <part>]][ for <syntax> in code][, in <hue>][, <style> style][, <brightness>][, at <emphasis> emphasis][, when <state>].
 ```
 
-For example: "The background for page use, signaling danger, when hovered." A reviewer may replace it with a hand-written definition, which then follows the facet rules above.
+- **Genus.** In the color domain, "The color of <property phrase>" ("The color of text", "The color of backgrounds"), or "A color" with no property. In other domains, "The <property>", or "A <domain noun>".
+- **No circular definitions.** A concept outside the color domain that binds one facet takes that value's own definition ("Duration": "Length of an animation.").
+- **Phrases.** Usage and color properties read as the phrase recorded on the word (`dsi:phrase`): usage/categorical "in a categorical set", property/foreground "text and icons". Syntax reads as its definition's noun phrase ("for a literal color value in code").
+
+For example: "The color of backgrounds that signals danger on the page, when hovered." A reviewer may replace it with a hand-written definition, which then follows the facet rules above.
 
 ## 7. L5 Match statement
 

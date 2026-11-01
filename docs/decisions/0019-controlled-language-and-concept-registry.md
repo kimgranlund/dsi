@@ -23,3 +23,7 @@ Facet words are a closed list enforced by `parseConcept`, but which combinations
 
 The lexicon still held `emphasis/default`, defined as "not implied by an unbound facet", the opposite of this ADR's rule, and Atlassian's term `default` was approved to it. The owner retired the value: `emphasis/default` is `deprecated`, and `default` is a noise word for Primer and Atlassian (their term mappings to it are rejected). The validator refuses any proposed or approved term mapping to a deprecated value; rejected records keep their history.
 
+## Amendment, 2026-11-01: L4 generated definitions
+
+The first frame ("The <head> for <usage> use, signaling <intent>...") followed the rules by the letter, but it defined the thing instead of its color ("The text, signaling danger") and was circular for one-facet concepts ("Duration: The duration."). The owner approved a new frame (docs/controlled-language.md section 6): a domain-aware genus ("The color of text..."), one-facet concepts take their value's own definition, and usage and color properties read as a phrase stored on the word (`dsi:phrase`). All registered definitions were regenerated; the longest is 20 words.
+
