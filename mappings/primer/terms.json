@@ -1,6 +1,32 @@
 {
   "product": "primer",
-  "noise": [],
+  "noise": [
+    "block",
+    "body-line",
+    "border",
+    "box",
+    "control-min",
+    "control-stack",
+    "font",
+    "height",
+    "index",
+    "inline",
+    "line",
+    "min",
+    "motion",
+    "outline-focus",
+    "range",
+    "stack",
+    "state",
+    "stroke",
+    "target",
+    "text",
+    "text-body-line",
+    "text-title-line",
+    "title-line",
+    "viewport",
+    "z"
+  ],
   "scopes": [
     {
       "pathPrefix": "base.",
@@ -139,6 +165,1525 @@
       "scope": "foundation"
     }
   ],
-  "steps": [],
-  "terms": []
+  "steps": [
+    "auto",
+    "behind",
+    "coarse",
+    "condensed",
+    "default",
+    "dropdown",
+    "enter",
+    "exit",
+    "fine",
+    "full",
+    "landscape",
+    "large",
+    "lg",
+    "linear",
+    "long",
+    "md",
+    "medium",
+    "micro",
+    "modal",
+    "monospace",
+    "move",
+    "narrow",
+    "normal",
+    "overlay",
+    "popover",
+    "portrait",
+    "regular",
+    "sans",
+    "sans-serif",
+    "serif",
+    "short",
+    "sm",
+    "small",
+    "spacious",
+    "sticky",
+    "system",
+    "thick",
+    "thicker",
+    "thin",
+    "wide",
+    "xl",
+    "xlarge",
+    "xs",
+    "xsmall",
+    "xxlarge",
+    "xxs"
+  ],
+  "terms": [
+    {
+      "term": "body",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "approved",
+      "note": "Body type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "body-line-height",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typography line height.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "body-size",
+      "concept": "dsi:property/font-size",
+      "match": "exact",
+      "status": "approved",
+      "note": "text.<role>.size is a typescale font size.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "border-radius",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "approved",
+      "note": "Corner rounding.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "border-width",
+      "concept": "dsi:property/border-width",
+      "match": "exact",
+      "status": "approved",
+      "note": "Border thickness.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "box-shadow",
+      "concept": "dsi:property/shadow",
+      "match": "close",
+      "status": "proposed",
+      "note": "Primer boxShadow values are inset ring shadows used as borders. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "box-shadow",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Shadow. (confidence 0.95; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "breakpoint",
+      "concept": "dsi:property/breakpoint",
+      "match": "exact",
+      "status": "approved",
+      "note": "Viewport breakpoint widths.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "control-large-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "control-medium-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "control-min-target",
+      "concept": "dsi:property/size",
+      "match": "close",
+      "status": "proposed",
+      "note": "Minimum interactive target size. (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.5",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "control-small-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "control-xlarge-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "control-xsmall-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "display",
+      "concept": "dsi:usage/display",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Display type role. (confidence 0.85); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "duration",
+      "concept": "dsi:property/duration",
+      "match": "exact",
+      "status": "approved",
+      "note": "Motion duration.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "easing",
+      "concept": "dsi:property/easing",
+      "match": "exact",
+      "status": "approved",
+      "note": "Motion easing curves.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "focus",
+      "concept": "dsi:state/focus",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Focus outline. (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.7",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "font-stack",
+      "concept": "dsi:property/font-family",
+      "match": "exact",
+      "status": "approved",
+      "note": "Font stacks are font families.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "font-stack-sans",
+      "concept": "dsi:property/font-family",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Font stacks are font families. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Gap between items in a control or stack.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "gap-auto",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Gap between items in a control or stack.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "gap-condensed",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Gap between items in a control or stack.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "gap-spacious",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Gap between items in a control or stack.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "hover",
+      "concept": "dsi:state/hover",
+      "match": "close",
+      "status": "proposed",
+      "note": "Easing/transition for hover interactions. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hover state (hover easing/transition). (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "large-gap",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Gap between items in a control or stack.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "large-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "large-padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "large-padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Padding of large control. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "line-height",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typography line height.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "line-height-large",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typography line height.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "line-height-medium",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typography line height.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "line-height-small",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typography line height.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "medium-gap",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Gap between items in a control or stack.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "medium-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "medium-padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "medium-padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Padding of medium control. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "min-target",
+      "concept": "dsi:property/size",
+      "match": "close",
+      "status": "proposed",
+      "note": "Minimum interactive target size. (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.5",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "motion-duration",
+      "concept": "dsi:property/duration",
+      "match": "exact",
+      "status": "approved",
+      "note": "Motion duration.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "motion-easing",
+      "concept": "dsi:property/easing",
+      "match": "exact",
+      "status": "approved",
+      "note": "Motion easing curves.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "motion-transition",
+      "concept": "dsi:property/transition",
+      "match": "exact",
+      "status": "approved",
+      "note": "Composite transition tokens.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "padding-block",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-block",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Vertical padding. (confidence 0.95; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Horizontal padding. (confidence 0.95; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-inline-condensed",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-inline-condensed",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Padding at condensed density. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-inline-normal",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-inline-normal",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Padding at normal density. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-inline-spacious",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-inline-spacious",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Padding at spacious density. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "radius",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "approved",
+      "note": "Corner rounding.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "range-narrow",
+      "concept": "dsi:property/breakpoint",
+      "match": "close",
+      "status": "proposed",
+      "note": "Viewport media-query ranges built on breakpoints. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "shadow",
+      "concept": "dsi:property/shadow",
+      "match": "close",
+      "status": "proposed",
+      "note": "Primer boxShadow values are inset ring shadows used as borders. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "shadow",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Shadow. (confidence 0.95; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "small-gap",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Gap between items in a control or stack.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "small-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "small-padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "small-padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Padding of small control. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "space",
+      "concept": "dsi:property/spacing",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer functional space scale.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "spinner-size",
+      "concept": "dsi:property/size",
+      "match": "exact",
+      "status": "approved",
+      "note": "Spinner dimension.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stack-gap",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Gap between items in a control or stack.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stack-large-gap",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Gap between items in a control or stack.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stack-medium-gap",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Gap between items in a control or stack.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stack-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stack-small-gap",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Gap between items in a control or stack.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "subtitle",
+      "concept": "dsi:usage/title",
+      "match": "close",
+      "status": "proposed",
+      "note": "Secondary heading under a title; nearest usage is title. (confidence 0.5; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-body",
+      "concept": "dsi:usage/body",
+      "match": "exact",
+      "status": "approved",
+      "note": "Body type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "text-body-size",
+      "concept": "dsi:property/font-size",
+      "match": "exact",
+      "status": "approved",
+      "note": "text.<role>.size is a typescale font size.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "text-display",
+      "concept": "dsi:usage/display",
+      "match": "exact",
+      "status": "approved",
+      "note": "Display type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "text-subtitle",
+      "concept": "dsi:usage/title",
+      "match": "close",
+      "status": "proposed",
+      "note": "Secondary heading; nearest usage is title. (confidence 0.5; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-title",
+      "concept": "dsi:usage/title",
+      "match": "exact",
+      "status": "approved",
+      "note": "Title type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "text-title-size",
+      "concept": "dsi:property/font-size",
+      "match": "exact",
+      "status": "approved",
+      "note": "text.<role>.size is a typescale font size.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "text-title-weight",
+      "concept": "dsi:property/font-weight",
+      "match": "exact",
+      "status": "approved",
+      "note": "Only typography tokens carry weight.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "title",
+      "concept": "dsi:usage/title",
+      "match": "exact",
+      "status": "approved",
+      "note": "Title type role.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "title-line-height",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typography line height.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "title-size",
+      "concept": "dsi:property/font-size",
+      "match": "exact",
+      "status": "approved",
+      "note": "text.<role>.size is a typescale font size.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "title-weight",
+      "concept": "dsi:property/font-weight",
+      "match": "exact",
+      "status": "approved",
+      "note": "Only typography tokens carry weight.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "transition",
+      "concept": "dsi:property/transition",
+      "match": "exact",
+      "status": "approved",
+      "note": "Composite transition tokens.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "viewport-range",
+      "concept": "dsi:property/breakpoint",
+      "match": "close",
+      "status": "proposed",
+      "note": "Viewport media-query ranges built on breakpoints. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "viewport-range",
+      "concept": "dsi:property/breakpoint",
+      "match": "related",
+      "status": "proposed",
+      "note": "Named media-query ranges, related to breakpoints. (confidence 0.5; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "viewport-range-narrow",
+      "concept": "dsi:property/breakpoint",
+      "match": "close",
+      "status": "proposed",
+      "note": "Viewport media-query ranges built on breakpoints. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "weight",
+      "concept": "dsi:property/font-weight",
+      "match": "exact",
+      "status": "approved",
+      "note": "Only typography tokens carry weight.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "xlarge-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "xlarge-padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "xlarge-padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Padding of xlarge control. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "xsmall-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Primer padding tokens (control/stack padding).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "xsmall-padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Inline or block padding is a narrower case of padding. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "xsmall-padding-inline",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Padding of xsmall control. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T14:54:18.346Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "z-index",
+      "concept": "dsi:property/z-index",
+      "match": "exact",
+      "status": "approved",
+      "note": "Stacking order.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:54:51Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T14:55:00.203Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    }
+  ]
 }

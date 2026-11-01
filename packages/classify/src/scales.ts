@@ -3,7 +3,7 @@ import { classify, conceptOf, type Facet, type TermsFile } from './classify.ts';
 
 /** DTCG types each role accepts. A role whose type does not fit is a leftover, never auto-mapped. */
 export const ROLE_TYPES: Record<string, string[]> = {
-  spacing: ['dimension'], 'corner-radius': ['dimension', ''], 'border-width': ['dimension'], height: ['dimension'], width: ['dimension'], size: ['dimension'], 'icon-size': ['dimension'],
+  spacing: ['dimension'], padding: ['dimension'], gap: ['dimension'], margin: ['dimension'], 'corner-radius': ['dimension', ''], 'border-width': ['dimension'], height: ['dimension'], width: ['dimension'], size: ['dimension'], 'icon-size': ['dimension'],
   'container-width': ['dimension'], breakpoint: ['dimension'], 'z-index': ['number', 'keyword'], 'elevation-level': ['number', 'dimension'], opacity: ['number'], shadow: ['shadow', 'keyword', ''],
   'font-family': ['fontFamily'], 'font-weight': ['fontWeight', 'number'], 'font-size': ['dimension'], 'line-height': ['dimension', 'number'], 'letter-spacing': ['dimension'],
   duration: ['duration'], easing: ['cubicBezier'], 'spring-stiffness': ['number'], 'spring-damping': ['number'], 'corner-shape': [''], 'corner-radius-percent': [''], transition: ['transition'], keyframes: [''],
