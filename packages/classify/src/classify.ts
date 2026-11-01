@@ -6,7 +6,7 @@ const MULTI = new Set<Facet>(['usage', 'state']);
 const MAX_GRAM = 4;
 
 /** A native naming word mapped (SKOS) to a facet-value concept, e.g. { term: "critical", concept: "dsi:intent/danger", match: "exact" }. */
-export interface Term { term: string; concept: string; match: string; status: string; evidence?: { support: number; agree: number; precision: number }; provenance: { agent: string; model?: string; at: string; method?: string }; review?: { by: string; at: string; note?: string }; note?: string }
+export interface Term { term: string; concept: string; match: string; status: string; evidence?: { support: number; agree: number; precision: number }; provenance: { agent: string; model?: string; at: string; method?: string }; review?: { by: string; at: string; note?: string }; note?: string; votes?: { model: string; confidence?: number }[] }
 
 /** Facet and value of a facet-value concept IRI (dsi:intent/danger -> intent, danger). */
 export function facetValue(concept: string): { facet: Facet; value: string } | undefined {

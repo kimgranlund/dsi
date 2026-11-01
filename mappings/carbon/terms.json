@@ -445,7 +445,7 @@
       "concept": "dsi:property/height",
       "match": "close",
       "status": "approved",
-      "note": "Carbon container-01..05 (24..64px) size container/component heights. (confidence 0.6; the other agent disagreed)",
+      "note": "Carbon container-01..05 (24..64px) size container/component heights.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -455,14 +455,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:27:28.103Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "container",
       "concept": "dsi:property/size",
       "match": "close",
       "status": "rejected",
-      "note": "Carbon container-01.. are component container dimensions, not max widths. (confidence 0.4; the other agent disagreed)",
+      "note": "Carbon container-01.. are component container dimensions, not max widths.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
@@ -472,7 +478,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:27:28.103Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.4
+        }
+      ]
     },
     {
       "term": "disabled",
@@ -587,7 +599,7 @@
       "concept": "dsi:style/expressive",
       "match": "exact",
       "status": "approved",
-      "note": "Type style family expressive-heading-01..06 (ADR 0014). (confidence 0.9); both agents gave this, claude-sonnet-5-5 at confidence 0.75",
+      "note": "Type style family expressive-heading-01..06 (ADR 0014).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -597,14 +609,24 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:54:56.083Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.9
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.75
+        }
+      ]
     },
     {
       "term": "expressive-paragraph",
       "concept": "dsi:style/expressive",
       "match": "exact",
       "status": "approved",
-      "note": "Type style family expressive-paragraph-01 (ADR 0014). (confidence 0.85; the other agent disagreed)",
+      "note": "Type style family expressive-paragraph-01 (ADR 0014).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -614,14 +636,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:54:56.881Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "field",
       "concept": "dsi:property/background",
       "match": "close",
       "status": "approved",
-      "note": "Field tokens are input background fills. (confidence 0.7; the other agent disagreed)",
+      "note": "Field tokens are input background fills.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -631,7 +659,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:12:04.053Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "term": "field",
@@ -890,7 +924,7 @@
       "concept": "dsi:intent/accent",
       "match": "close",
       "status": "approved",
-      "note": "Carbon interactive is the brand-blue interactive color. (confidence 0.65); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "note": "Carbon interactive is the brand-blue interactive color.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -900,7 +934,17 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:12:06.236Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.65
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "inverse",
@@ -943,7 +987,7 @@
       "concept": "dsi:property/background",
       "match": "close",
       "status": "approved",
-      "note": "Layer tokens are fills of those surfaces. (confidence 0.75; the other agent disagreed)",
+      "note": "Layer tokens are fills of those surfaces.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -953,7 +997,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:12:07.669Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.75
+        }
+      ]
     },
     {
       "term": "layer",
@@ -978,7 +1028,7 @@
       "concept": "dsi:property/spacing",
       "match": "broad",
       "status": "approved",
-      "note": "Carbon layout-01..07 are large spacing values for layout gaps (v10 layout scale). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "note": "Carbon layout-01..07 are large spacing values for layout gaps (v10 layout scale).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -988,7 +1038,17 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:27:33.659Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.7
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "letter-spacing",
@@ -1031,7 +1091,7 @@
       "concept": "dsi:property/text",
       "match": "close",
       "status": "approved",
-      "note": "Link tokens color link text. (confidence 0.75; the other agent disagreed)",
+      "note": "Link tokens color link text.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1041,7 +1101,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:12:19.582Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.75
+        }
+      ]
     },
     {
       "term": "link",
@@ -1086,7 +1152,7 @@
       "concept": "dsi:property/spacing",
       "match": "close",
       "status": "approved",
-      "note": "Grid margin per breakpoint. (confidence 0.55; the other agent disagreed)",
+      "note": "Grid margin per breakpoint.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
@@ -1096,7 +1162,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:54:57.706Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.55
+        }
+      ]
     },
     {
       "term": "on",
@@ -1123,7 +1195,7 @@
       "concept": "dsi:usage/on-fill",
       "match": "exact",
       "status": "approved",
-      "note": "on-color: content placed on colored fills. (confidence 0.85); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "note": "on-color: content placed on colored fills.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1133,7 +1205,17 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:12:30.294Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.8
+        }
+      ]
     },
     {
       "term": "on",
@@ -1178,7 +1260,7 @@
       "concept": "dsi:usage/overlay",
       "match": "exact",
       "status": "rejected",
-      "note": "Overlay scrim/layer color. (confidence 0.9; the other agent disagreed)",
+      "note": "Overlay scrim/layer color.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
@@ -1189,14 +1271,20 @@
         "by": "kimgranlund",
         "at": "2026-11-01T05:54:20.615Z",
         "note": "Rejected after audit: most of its own approved tokens disagree."
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.9
+        }
+      ]
     },
     {
       "term": "overlay",
       "concept": "dsi:usage/scrim",
       "match": "exact",
       "status": "rejected",
-      "note": "Carbon's overlay token is the dimming backdrop behind modals. (confidence 0.85; the other agent disagreed)",
+      "note": "Carbon's overlay token is the dimming backdrop behind modals.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1206,14 +1294,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:12:42.269Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "paragraph",
       "concept": "dsi:usage/body",
       "match": "close",
       "status": "approved",
-      "note": "expressive/fluid-paragraph-01: large running text, a body style. (confidence 0.7; the other agent disagreed)",
+      "note": "expressive/fluid-paragraph-01: large running text, a body style.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1223,14 +1317,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:54:58.432Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "term": "popover",
       "concept": "dsi:usage/overlay",
       "match": "broad",
       "status": "approved",
-      "note": "A popover is one kind of floating overlay. (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.7",
+      "note": "A popover is one kind of floating overlay.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1240,14 +1340,24 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:12:43.427Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.7
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "term": "primary",
       "concept": "dsi:emphasis/default",
       "match": "close",
       "status": "rejected",
-      "note": "text-primary/icon-primary are the default-contrast content tokens, not brand. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "note": "text-primary/icon-primary are the default-contrast content tokens, not brand.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1258,7 +1368,17 @@
         "by": "kimgranlund",
         "at": "2026-11-01T01:44:31.694Z",
         "note": "Rejected after audit: most of its own approved tokens disagree."
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "productive",
@@ -1283,7 +1403,7 @@
       "concept": "dsi:style/productive",
       "match": "exact",
       "status": "approved",
-      "note": "Type style family productive-heading-01..07 (ADR 0014). (confidence 0.9); both agents gave this, claude-sonnet-5-5 at confidence 0.75",
+      "note": "Type style family productive-heading-01..07 (ADR 0014).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1293,14 +1413,24 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:54:59.164Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.9
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.75
+        }
+      ]
     },
     {
       "term": "secondary",
       "concept": "dsi:emphasis/subtle",
       "match": "exact",
       "status": "approved",
-      "note": "text/icon-secondary: lower-contrast content. (confidence 0.85; the other agent disagreed)",
+      "note": "text/icon-secondary: lower-contrast content.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1310,7 +1440,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:12:52.531Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "secondary",
@@ -1337,7 +1473,7 @@
       "concept": "dsi:emphasis/subtle",
       "match": "close",
       "status": "rejected",
-      "note": "Second-level emphasis. (confidence 0.75; the other agent disagreed)",
+      "note": "Second-level emphasis.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
@@ -1347,7 +1483,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:12:52.531Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.75
+        }
+      ]
     },
     {
       "term": "selected",
@@ -1410,7 +1552,7 @@
       "concept": "dsi:property/height",
       "match": "close",
       "status": "approved",
-      "note": "Carbon size-xs..2xl (24..80px) are component heights; icon-size disambiguates icons. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.5",
+      "note": "Carbon size-xs..2xl (24..80px) are component heights; icon-size disambiguates icons.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1420,14 +1562,24 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:27:37.626Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.5
+        }
+      ]
     },
     {
       "term": "size-size",
       "concept": "dsi:property/height",
       "match": "close",
       "status": "approved",
-      "note": "group.name sequence of the component size scale; disambiguates from icon-size. (confidence 0.6; the other agent disagreed)",
+      "note": "group.name sequence of the component size scale; disambiguates from icon-size.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1437,14 +1589,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:27:38.726Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "skeleton",
       "concept": "dsi:property/background",
       "match": "close",
       "status": "approved",
-      "note": "Skeleton tokens are placeholder fills. (confidence 0.7; the other agent disagreed)",
+      "note": "Skeleton tokens are placeholder fills.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1454,7 +1612,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:12:58.594Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "term": "skeleton",
@@ -1571,7 +1735,7 @@
       "concept": "dsi:property/transition",
       "match": "close",
       "status": "approved",
-      "note": "surface.contextual/disclosure/expand/invoke are composite motion transitions for surfaces. (confidence 0.55; the other agent disagreed)",
+      "note": "surface.contextual/disclosure/expand/invoke are composite motion transitions for surfaces.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1581,14 +1745,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:27:39.203Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.55
+        }
+      ]
     },
     {
       "term": "surface",
       "concept": "dsi:property/transition",
       "match": "broad",
       "status": "rejected",
-      "note": "Surface transitions (contextual, disclosure, expand, invoke). (confidence 0.4; the other agent disagreed)",
+      "note": "Surface transitions (contextual, disclosure, expand, invoke).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
@@ -1598,7 +1768,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:27:39.203Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.4
+        }
+      ]
     },
     {
       "term": "text",
@@ -1623,7 +1799,7 @@
       "concept": "dsi:property/font-size",
       "match": "exact",
       "status": "approved",
-      "note": "Carbon type scale type-scale.1..23 is the font-size ramp. (confidence 0.9; the other agent disagreed)",
+      "note": "Carbon type scale type-scale.1..23 is the font-size ramp.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1633,14 +1809,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:54:59.829Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.9
+        }
+      ]
     },
     {
       "term": "type-scale",
       "concept": "dsi:property/font-size",
       "match": "close",
       "status": "rejected",
-      "note": "type-scale.N are the numeric font-size steps. (confidence 0.7; the other agent disagreed)",
+      "note": "type-scale.N are the numeric font-size steps.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
@@ -1650,7 +1832,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:54:59.829Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "term": "visited",
@@ -1693,7 +1881,7 @@
       "concept": "dsi:property/width",
       "match": "exact",
       "status": "approved",
-      "note": "Only in breakpoint.<step>.width; the longer breakpoint term sets the role there. (confidence 0.75; the other agent disagreed)",
+      "note": "Only in breakpoint.<step>.width; the longer breakpoint term sets the role there.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1703,7 +1891,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T05:55:00.644Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.75
+        }
+      ]
     },
     {
       "term": "z-index",

@@ -79,8 +79,8 @@ export function mergeTermProposals(file: TermsFile, a: TermProposalFile, b: Term
       if (approvedKeys.has(facetKey(t.term, t.concept)) || settled.has(facetKey(t.term, t.concept))) continue;
       // Both agents agreeing below the confidence bar is one queued record, not two.
       const same = kept.find((x) => x.status === 'proposed' && x.provenance.method === 'terms-v1' && x.term === t.term && x.concept === t.concept && x.match === t.match);
-      if (same) { if (same.provenance.model !== pf.model && !/both agents/.test(same.note ?? '')) same.note = `${same.note}; both agents gave this, ${pf.model} at confidence ${t.confidence}`; continue; }
-      kept.push({ term: t.term, concept: t.concept, match: t.match!, status: 'proposed', note: `${t.rationale} (confidence ${t.confidence}${other.has(key(t)) ? '' : '; the other agent disagreed'})`, provenance: prov(pf) } as Term);
+      if (same) { const v = (same.votes ??= []); if (!v.some((x) => x.model === pf.model)) v.push({ model: pf.model, confidence: t.confidence }); continue; }
+      kept.push({ term: t.term, concept: t.concept, match: t.match!, status: 'proposed', note: t.rationale, votes: [{ model: pf.model, confidence: t.confidence }], provenance: prov(pf) } as Term);
       queued.add(t.term);
     }
   }

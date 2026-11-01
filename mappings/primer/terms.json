@@ -255,13 +255,23 @@
       "concept": "dsi:part/line",
       "match": "close",
       "status": "proposed",
-      "note": "The current line of the editor. (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.65",
+      "note": "The current line of the editor.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.7
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "term": "addition",
@@ -304,13 +314,19 @@
       "concept": "dsi:usage/categorical",
       "match": "close",
       "status": "proposed",
-      "note": "Terminal 16-color palette: named hues whose hue is the meaning; not a status. (confidence 0.6; the other agent disagreed)",
+      "note": "Terminal 16-color palette: named hues whose hue is the meaning; not a status.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "attention",
@@ -677,26 +693,38 @@
       "concept": "dsi:syntax/link",
       "match": "close",
       "status": "proposed",
-      "note": "Overrides constant: markdown reference links. (confidence 0.75; the other agent disagreed)",
+      "note": "Overrides constant: markdown reference links.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.75
+        }
+      ]
     },
     {
       "term": "contribution",
       "concept": "dsi:usage/data-viz",
       "match": "exact",
       "status": "proposed",
-      "note": "Contribution graph (heatmap) cell colors. (confidence 0.85; the other agent disagreed)",
+      "note": "Contribution graph (heatmap) cell colors.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "control-large-padding",
@@ -883,7 +911,7 @@
       "concept": "dsi:emphasis/default",
       "match": "exact",
       "status": "rejected",
-      "note": "fgColor.default, bgColor.default, borderColor.default: the unmodified step. (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "note": "fgColor.default, bgColor.default, borderColor.default: the unmodified step.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -894,7 +922,17 @@
         "by": "owner-decision",
         "at": "2026-11-01T22:31:42.000Z",
         "note": "emphasis/default is retired: the bare concept is the default step, so \"default\" is a noise word (ADR 0019 amendment)."
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.8
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.8
+        }
+      ]
     },
     {
       "term": "deleted",
@@ -937,26 +975,38 @@
       "concept": "dsi:usage/code-surface",
       "match": "exact",
       "status": "proposed",
-      "note": "diffBlob.*: diff view surfaces (ADR 0018). (confidence 0.85; the other agent disagreed)",
+      "note": "diffBlob.*: diff view surfaces (ADR 0018).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "diff",
       "concept": "dsi:usage/code-surface",
       "match": "close",
       "status": "proposed",
-      "note": "diffBlob tokens color diff lines in a code view; in prettylights meta.diff it is a syntax scope. (confidence 0.6; the other agent disagreed)",
+      "note": "diffBlob tokens color diff lines in a code view; in prettylights meta.diff it is a syntax scope.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "disabled",
@@ -1053,13 +1103,23 @@
       "concept": "dsi:syntax/name",
       "match": "close",
       "status": "proposed",
-      "note": "TextMate entity.name.*: function/class names. (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "note": "TextMate entity.name.*: function/class names.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.7
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "entity-tag",
@@ -1282,13 +1342,23 @@
       "concept": "dsi:part/header",
       "match": "exact",
       "status": "proposed",
-      "note": "page.header: header part. (confidence 0.75); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "note": "page.header: header part.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.75
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "heading",
@@ -1349,13 +1419,23 @@
       "concept": "dsi:syntax/meta",
       "match": "close",
       "status": "proposed",
-      "note": "Diff hunk header (@@), TextMate meta.diff.range. (confidence 0.55); both agents gave this, claude-sonnet-5-5 at confidence 0.5",
+      "note": "Diff hunk header (@@), TextMate meta.diff.range.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.55
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.5
+        }
+      ]
     },
     {
       "term": "icon",
@@ -1380,26 +1460,46 @@
       "concept": "dsi:syntax/invalid",
       "match": "close",
       "status": "proposed",
-      "note": "invalid.illegal. (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "note": "invalid.illegal.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.8
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.8
+        }
+      ]
     },
     {
       "term": "import",
       "concept": "dsi:syntax/module-keyword",
       "match": "close",
       "status": "proposed",
-      "note": "storage.modifier.import: import keyword. (confidence 0.75); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "note": "storage.modifier.import: import keyword.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.75
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "indigo",
@@ -1442,13 +1542,19 @@
       "concept": "dsi:usage/surface",
       "match": "close",
       "status": "proposed",
-      "note": "Recessed surface background. (confidence 0.6; the other agent disagreed)",
+      "note": "Recessed surface background.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "invalid",
@@ -1707,26 +1813,38 @@
       "concept": "dsi:part/line",
       "match": "close",
       "status": "proposed",
-      "note": "codeMirror.lines.bgColor: area of the code lines. (confidence 0.7; the other agent disagreed)",
+      "note": "codeMirror.lines.bgColor: area of the code lines.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "term": "lines",
       "concept": "dsi:part/line",
       "match": "exact",
       "status": "proposed",
-      "note": "Plural of line. (confidence 0.8; the other agent disagreed)",
+      "note": "Plural of line.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.8
+        }
+      ]
     },
     {
       "term": "link",
@@ -1787,26 +1905,38 @@
       "concept": "dsi:part/indicator",
       "match": "close",
       "status": "proposed",
-      "note": "Linter gutter mark. (confidence 0.5; the other agent disagreed)",
+      "note": "Linter gutter mark.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.5
+        }
+      ]
     },
     {
       "term": "marker",
       "concept": "dsi:part/indicator",
       "match": "close",
       "status": "proposed",
-      "note": "Gutter marker indicator. (confidence 0.55; the other agent disagreed)",
+      "note": "Gutter marker indicator.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.55
+        }
+      ]
     },
     {
       "term": "medium-gap",
@@ -2047,26 +2177,38 @@
       "concept": "dsi:usage/on-fill",
       "match": "close",
       "status": "proposed",
-      "note": "fgColor.onEmphasis: content on bold fills; also onInverse, where inverse adds the surface. (confidence 0.75; the other agent disagreed)",
+      "note": "fgColor.onEmphasis: content on bold fills; also onInverse, where inverse adds the surface.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.75
+        }
+      ]
     },
     {
       "term": "on",
       "concept": "dsi:usage/on-fill",
       "match": "exact",
       "status": "proposed",
-      "note": "onEmphasis, onInverse: content on a solid fill. (confidence 0.85; the other agent disagreed)",
+      "note": "onEmphasis, onInverse: content on a solid fill.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "orange",
@@ -2145,26 +2287,38 @@
       "concept": "dsi:usage/page",
       "match": "close",
       "status": "proposed",
-      "note": "page.header.bgColor: the page header band. (confidence 0.6; the other agent disagreed)",
+      "note": "page.header.bgColor: the page header band.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "page",
       "concept": "dsi:usage/page",
       "match": "exact",
       "status": "proposed",
-      "note": "page.header: application page. (confidence 0.85; the other agent disagreed)",
+      "note": "page.header: application page.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "pine",
@@ -2297,13 +2451,23 @@
       "concept": "dsi:intent/highlight",
       "match": "close",
       "status": "proposed",
-      "note": "Text selection background. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.65",
+      "note": "Text selection background.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "term": "severe",
@@ -2490,39 +2654,57 @@
       "concept": "dsi:syntax/keyword",
       "match": "close",
       "status": "proposed",
-      "note": "TextMate storage: declaration keywords and modifiers. (confidence 0.6; the other agent disagreed)",
+      "note": "TextMate storage: declaration keywords and modifiers.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "storage",
       "concept": "dsi:syntax/modifier",
       "match": "close",
       "status": "proposed",
-      "note": "TextMate storage (modifiers, types, var/class keywords). (confidence 0.5; the other agent disagreed)",
+      "note": "TextMate storage (modifiers, types, var/class keywords).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T12:00:00Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.5
+        }
+      ]
     },
     {
       "term": "storage-modifier-import",
       "concept": "dsi:syntax/module-keyword",
       "match": "close",
       "status": "proposed",
-      "note": "Overrides storage and modifier: import keyword. (confidence 0.75; the other agent disagreed)",
+      "note": "Overrides storage and modifier: import keyword.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.75
+        }
+      ]
     },
     {
       "term": "string",
@@ -2583,13 +2765,23 @@
       "concept": "dsi:syntax/standard",
       "match": "close",
       "status": "proposed",
-      "note": "TextMate support: library-provided names. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.55",
+      "note": "TextMate support: library-provided names.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:56:06.267Z",
         "method": "terms-v1"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.55
+        }
+      ]
     },
     {
       "term": "tag",

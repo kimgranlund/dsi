@@ -133,6 +133,27 @@
           "concept": {
             "$ref": "common.schema.json#/$defs/conceptRef",
             "description": "A facet value concept, e.g. dsi:intent/danger. The term is the subject of a SKOS mapping to it; the facet is the concept's scheme."
+          },
+          "votes": {
+            "type": "array",
+            "description": "The agents that proposed this value and their confidence (vocabulary runs).",
+            "items": {
+              "type": "object",
+              "required": [
+                "model"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "model": {
+                  "type": "string"
+                },
+                "confidence": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
+            }
           }
         },
         "if": {

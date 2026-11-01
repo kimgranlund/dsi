@@ -22,6 +22,13 @@ export const decisionKey = (product: string, token: string) => `${product}__${to
 // A rule-settled answer the registry gate held (ADR 0019) has no single model: name the rule that agreed.
 const agreedBy = (x: any) => ({ 'settle-three-v1': 'all three models', 'settle-two-v1': 'two of three models', 'two-of-three-v1': 'two of three models', 'emphasis-rank-v1': 'contrast rank' } as Record<string, string>)[x.provenance?.method] ?? x.provenance?.method ?? x.provenance?.agent ?? 'rule';
 
+/** L6 rationale for an owner-confirmed audit change: claim, then whole evidence items (never cut mid-item), at most 300 characters. */
+export function auditRationale(model: string, evidence: { kind: string; source: string; says: string }[]): string {
+  const items: string[] = [];
+  for (const e of evidence) { const one = `${e.kind} (${e.source}): ${e.says.replace(/[.\s]+$/, '')}`; if ([...items, one].join('; ').length > 240 && items.length) break; items.push(one); }
+  return `Changed after the evidence audit (${model}). Evidence: ${items.join('; ')}.`;
+}
+
 export function collectQueue(root: string, scope: Scope, runDir: string | string[]): QueueItem[] {
   // Several map runs may hold queued tokens (a re-opened set mapped later); a later run's packet wins.
   const dirs = Array.isArray(runDir) ? runDir : [runDir];
@@ -129,7 +136,7 @@ export function collectTermQueue(root: string, products: string[], vocabRunDir: 
       out.push({
         key: termDecisionKey(product, term), product, term, count: v?.count, examples: v?.examples ?? [],
         approved: terms.filter((t) => t.term === term && t.status === 'approved').map(({ concept, match }) => ({ concept, match })),
-        candidates: terms.filter((t) => t.term === term && t.status === 'proposed').map((t) => ({ id: termCandidateId(t), concept: t.concept, match: t.match, by: t.provenance.model ?? 'evidence from approved mappings', note: t.note, evidence: t.evidence })),
+        candidates: terms.filter((t) => t.term === term && t.status === 'proposed').map((t) => ({ id: termCandidateId(t), concept: t.concept, match: t.match, by: t.votes?.length ? t.votes.map((v: { model: string; confidence?: number }) => `${v.model}${v.confidence != null ? ' ' + v.confidence : ''}`).join(' · ') : t.provenance.model ?? 'evidence from approved mappings', note: t.note, evidence: t.evidence })),
       });
     }
   }
@@ -247,7 +254,7 @@ export function applyDisputes(root: string, scope: Scope, decisions: DisputeDeci
         const id = 'm-' + crypto.createHash('sha1').update([d.subject, target.concept, target.match].join('|')).digest('hex').slice(0, 12);
         if (id === cur.id) { counts.skipped++; continue; }
         m.mappings = m.mappings.filter((x: any) => x.id !== id);
-        m.mappings.push({ id, token: d.subject, concept: target.concept, match: target.match, confidence: 1, status: 'approved', rationale: d.note || `Changed after evidence audit (${audit.model}): ${v.evidence.map((e: any) => e.says).join(' ').slice(0, 300)}`, provenance: { agent: reviewer, at: d.at, method: 'audit-review' }, review });
+        m.mappings.push({ id, token: d.subject, concept: target.concept, match: target.match, confidence: 1, status: 'approved', rationale: d.note || auditRationale(audit.model, v.evidence), provenance: { agent: reviewer, at: d.at, method: 'audit-review' }, review });
         Object.assign(cur, { status: 'superseded', supersededBy: id });
       }
       v.resolution = { by: reviewer, at: d.at, action: d.action, ...(d.note ? { note: d.note } : {}) };

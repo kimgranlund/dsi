@@ -122,7 +122,7 @@
       "concept": "dsi:usage/categorical",
       "match": "exact",
       "status": "approved",
-      "note": "Atlassian accent colors are a set of non-semantic hues (blue, green, ...) assigned to tags, labels and identities; the hue word names the slot (ADR 0017). (confidence 0.85; the other agent disagreed)",
+      "note": "Atlassian accent colors are a set of non-semantic hues (blue, green, ...) assigned to tags, labels and identities; the hue word names the slot (ADR 0017).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -132,14 +132,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:47.593Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "accent",
       "concept": "dsi:usage/categorical",
       "match": "close",
       "status": "rejected",
-      "note": "Atlassian accent.<hue> is the set of distinct hue colors, each slot a different color. (confidence 0.7; the other agent disagreed)",
+      "note": "Atlassian accent.<hue> is the set of distinct hue colors, each slot a different color.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
@@ -149,7 +155,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:47.593Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "term": "background",
@@ -174,7 +186,7 @@
       "concept": "dsi:property/background",
       "match": "exact",
       "status": "approved",
-      "note": "Blanket tokens are translucent fills. (confidence 0.8; the other agent disagreed)",
+      "note": "Blanket tokens are translucent fills.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -184,7 +196,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:50.243Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.8
+        }
+      ]
     },
     {
       "term": "blanket",
@@ -245,7 +263,7 @@
       "concept": "dsi:emphasis/strong",
       "match": "close",
       "status": "approved",
-      "note": "The bold (solid, high-contrast) step above default. (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "note": "The bold (solid, high-contrast) step above default.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -255,14 +273,24 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:51.798Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.8
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.8
+        }
+      ]
     },
     {
       "term": "bolder",
       "concept": "dsi:emphasis/stronger",
       "match": "close",
       "status": "approved",
-      "note": "Step above bold on the subtlest..boldest scale; no separate canonical value between strong and strongest. (confidence 0.75); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "note": "Step above bold on the subtlest..boldest scale; no separate canonical value between strong and strongest.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -273,14 +301,24 @@
         "by": "kimgranlund",
         "at": "2026-11-01T15:30:58.000Z",
         "note": "Updated after ADR 0018 added the stronger step (was emphasis/strong)."
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.75
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "boldest",
       "concept": "dsi:emphasis/strongest",
       "match": "close",
       "status": "approved",
-      "note": "Strongest end of the subtlest..boldest scale. (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "note": "Strongest end of the subtlest..boldest scale.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -290,7 +328,17 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:53.401Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.8
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.8
+        }
+      ]
     },
     {
       "term": "border",
@@ -369,7 +417,7 @@
       "concept": "dsi:usage/categorical",
       "match": "close",
       "status": "approved",
-      "note": "Chart hue slots are a categorical series palette. (confidence 0.55; the other agent disagreed)",
+      "note": "Chart hue slots are a categorical series palette.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
@@ -379,14 +427,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:54.342Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.55
+        }
+      ]
     },
     {
       "term": "chart-blue",
       "concept": "dsi:usage/categorical",
       "match": "exact",
       "status": "approved",
-      "note": "color.chart.blue.*: a hue slot of the chart's categorical series palette. (confidence 0.85; the other agent disagreed)",
+      "note": "color.chart.blue.*: a hue slot of the chart's categorical series palette.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -396,14 +450,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:54.992Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "chart-gray",
       "concept": "dsi:usage/categorical",
       "match": "exact",
       "status": "approved",
-      "note": "color.chart.gray.*: a hue slot of the chart's categorical series palette. (confidence 0.85; the other agent disagreed)",
+      "note": "color.chart.gray.*: a hue slot of the chart's categorical series palette.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -413,14 +473,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:55.493Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "chart-green",
       "concept": "dsi:usage/categorical",
       "match": "exact",
       "status": "approved",
-      "note": "color.chart.green.*: a hue slot of the chart's categorical series palette. (confidence 0.85; the other agent disagreed)",
+      "note": "color.chart.green.*: a hue slot of the chart's categorical series palette.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -430,14 +496,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:56.267Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "chart-lime",
       "concept": "dsi:usage/categorical",
       "match": "exact",
       "status": "approved",
-      "note": "color.chart.lime.*: a hue slot of the chart's categorical series palette. (confidence 0.85; the other agent disagreed)",
+      "note": "color.chart.lime.*: a hue slot of the chart's categorical series palette.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -447,14 +519,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:56.684Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "chart-magenta",
       "concept": "dsi:usage/categorical",
       "match": "exact",
       "status": "approved",
-      "note": "color.chart.magenta.*: a hue slot of the chart's categorical series palette. (confidence 0.85; the other agent disagreed)",
+      "note": "color.chart.magenta.*: a hue slot of the chart's categorical series palette.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -464,14 +542,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:57.043Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "chart-orange",
       "concept": "dsi:usage/categorical",
       "match": "exact",
       "status": "approved",
-      "note": "color.chart.orange.*: a hue slot of the chart's categorical series palette. (confidence 0.85; the other agent disagreed)",
+      "note": "color.chart.orange.*: a hue slot of the chart's categorical series palette.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -481,14 +565,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:57.376Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "chart-purple",
       "concept": "dsi:usage/categorical",
       "match": "exact",
       "status": "approved",
-      "note": "color.chart.purple.*: a hue slot of the chart's categorical series palette. (confidence 0.85; the other agent disagreed)",
+      "note": "color.chart.purple.*: a hue slot of the chart's categorical series palette.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -498,14 +588,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:57.867Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "chart-red",
       "concept": "dsi:usage/categorical",
       "match": "exact",
       "status": "approved",
-      "note": "color.chart.red.*: a hue slot of the chart's categorical series palette. (confidence 0.85; the other agent disagreed)",
+      "note": "color.chart.red.*: a hue slot of the chart's categorical series palette.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -515,14 +611,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:58.493Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "chart-teal",
       "concept": "dsi:usage/categorical",
       "match": "exact",
       "status": "approved",
-      "note": "color.chart.teal.*: a hue slot of the chart's categorical series palette. (confidence 0.85; the other agent disagreed)",
+      "note": "color.chart.teal.*: a hue slot of the chart's categorical series palette.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -532,14 +634,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:58.967Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "chart-yellow",
       "concept": "dsi:usage/categorical",
       "match": "exact",
       "status": "approved",
-      "note": "color.chart.yellow.*: a hue slot of the chart's categorical series palette. (confidence 0.85; the other agent disagreed)",
+      "note": "color.chart.yellow.*: a hue slot of the chart's categorical series palette.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -549,7 +657,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:28:59.142Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "danger",
@@ -574,7 +688,7 @@
       "concept": "dsi:emphasis/default",
       "match": "close",
       "status": "rejected",
-      "note": "Middle level between subtle and bold where the family has a default variant. (confidence 0.6; the other agent disagreed)",
+      "note": "Middle level between subtle and bold where the family has a default variant.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
@@ -585,14 +699,20 @@
         "by": "owner-decision",
         "at": "2026-11-01T22:31:42.000Z",
         "note": "emphasis/default is retired: the bare concept is the default step, so \"default\" is a noise word (ADR 0019 amendment)."
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "default-default",
       "concept": "dsi:emphasis/default",
       "match": "close",
       "status": "rejected",
-      "note": "The first default in danger.default.default is the middle step between subtle and bold. (confidence 0.6; the other agent disagreed)",
+      "note": "The first default in danger.default.default is the middle step between subtle and bold.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -603,14 +723,20 @@
         "by": "owner-decision",
         "at": "2026-11-01T22:32:00.000Z",
         "note": "emphasis/default is retired: the bare concept is the default step, so \"default\" is a noise word (ADR 0019 amendment)."
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "default-hovered",
       "concept": "dsi:emphasis/default",
       "match": "close",
       "status": "rejected",
-      "note": "default followed by a state is the middle emphasis step (danger.default.hovered). (confidence 0.6; the other agent disagreed)",
+      "note": "default followed by a state is the middle emphasis step (danger.default.hovered).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -621,14 +747,20 @@
         "by": "owner-decision",
         "at": "2026-11-01T22:32:00.000Z",
         "note": "emphasis/default is retired: the bare concept is the default step, so \"default\" is a noise word (ADR 0019 amendment)."
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "default-pressed",
       "concept": "dsi:emphasis/default",
       "match": "close",
       "status": "rejected",
-      "note": "default followed by a state is the middle emphasis step (danger.default.pressed). (confidence 0.6; the other agent disagreed)",
+      "note": "default followed by a state is the middle emphasis step (danger.default.pressed).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -639,7 +771,13 @@
         "by": "owner-decision",
         "at": "2026-11-01T22:32:00.000Z",
         "note": "emphasis/default is retired: the bare concept is the default step, so \"default\" is a noise word (ADR 0019 amendment)."
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "disabled",
@@ -970,7 +1108,7 @@
       "concept": "dsi:usage/state-layer",
       "match": "exact",
       "status": "approved",
-      "note": "color.interaction.hovered/pressed are translucent interaction overlays. (confidence 0.85; the other agent disagreed)",
+      "note": "color.interaction.hovered/pressed are translucent interaction overlays.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -980,14 +1118,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:29:00.992Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "inverse",
       "concept": "dsi:usage/inverse",
       "match": "exact",
       "status": "approved",
-      "note": "Opposite-lightness surfaces. (confidence 0.95; the other agent disagreed)",
+      "note": "Opposite-lightness surfaces.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
@@ -997,14 +1141,20 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:29:04.031Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.95
+        }
+      ]
     },
     {
       "term": "inverse",
       "concept": "dsi:usage/on-fill",
       "match": "close",
       "status": "rejected",
-      "note": "Atlassian inverse tokens (text.inverse, border.inverse, background.inverse.subtle) are used on bold fills, not on opposite-lightness surfaces. (confidence 0.65; the other agent disagreed)",
+      "note": "Atlassian inverse tokens (text.inverse, border.inverse, background.inverse.subtle) are used on bold fills, not on opposite-lightness surfaces.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1014,7 +1164,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:29:04.031Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.65
+        }
+      ]
     },
     {
       "term": "keyframe",
@@ -1057,7 +1213,7 @@
       "concept": "dsi:property/text",
       "match": "close",
       "status": "approved",
-      "note": "color.link.* colors link text. (confidence 0.7; the other agent disagreed)",
+      "note": "color.link.* colors link text.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1067,7 +1223,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:29:05.019Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "term": "link",
@@ -1326,7 +1488,7 @@
       "concept": "dsi:hue/yellow",
       "match": "close",
       "status": "approved",
-      "note": "Rovo saffron is a deep yellow-orange; nearest canonical hue is yellow (ADR 0017 maps native hue names close to the nearest hue). (confidence 0.6; the other agent disagreed)",
+      "note": "Rovo saffron is a deep yellow-orange; nearest canonical hue is yellow (ADR 0017 maps native hue names close to the nearest hue).",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1336,7 +1498,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:29:05.676Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "selected",
@@ -1379,7 +1547,7 @@
       "concept": "dsi:property/background",
       "match": "close",
       "status": "approved",
-      "note": "Skeleton tokens are placeholder fills. (confidence 0.7; the other agent disagreed)",
+      "note": "Skeleton tokens are placeholder fills.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1389,7 +1557,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:29:06.572Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.7
+        }
+      ]
     },
     {
       "term": "skeleton",
@@ -1468,7 +1642,7 @@
       "concept": "dsi:emphasis/subtle",
       "match": "close",
       "status": "approved",
-      "note": "Step between subtle and subtlest on the 7-step emphasis scale. (confidence 0.75); both agents gave this, claude-sonnet-5-5 at confidence 0.55",
+      "note": "Step between subtle and subtlest on the 7-step emphasis scale.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1478,7 +1652,17 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:29:07.813Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.75
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "confidence": 0.55
+        }
+      ]
     },
     {
       "term": "subtlest",
@@ -1521,7 +1705,7 @@
       "concept": "dsi:property/background",
       "match": "exact",
       "status": "approved",
-      "note": "Surface tokens are fills. (confidence 0.85; the other agent disagreed)",
+      "note": "Surface tokens are fills.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1531,7 +1715,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:29:08.569Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.85
+        }
+      ]
     },
     {
       "term": "surface",
@@ -1556,7 +1746,7 @@
       "concept": "dsi:usage/page",
       "match": "close",
       "status": "approved",
-      "note": "elevation.surface.default is the base app background behind raised surfaces and overlays. (confidence 0.6; the other agent disagreed)",
+      "note": "elevation.surface.default is the base app background behind raised surfaces and overlays.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -1566,7 +1756,13 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T07:29:09.339Z"
-      }
+      },
+      "votes": [
+        {
+          "model": "claude-opus-5-5",
+          "confidence": 0.6
+        }
+      ]
     },
     {
       "term": "teal",
