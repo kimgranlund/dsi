@@ -64,11 +64,14 @@ export function tokenTile(opts: { href: string; name: string; full: string; show
     const ink = alpha && Number(alpha) < 0.5 ? 'var(--ink)' : inkOn(hex);
     block.append(fill, el('span', { class: 'tile-hex', text: opts.shown, style: `color:${ink}` }));
   } else block.append(el('span', { class: 'tile-hex', text: 'no value' }));
+  // Other modes as inset circles on the right, ringed in the block's ink so they read on any fill.
+  const ring = hex ? (inkOn(hex) === '#000000' ? 'rgb(0 0 0 / 0.35)' : 'rgb(255 255 255 / 0.45)') : 'var(--line)';
   if (opts.others.length) block.append(el('span', { class: 'tile-modes' }, opts.others.map((o) => {
     const h = o.display && /^#[0-9a-f]{6}/i.exec(o.display)?.[0];
-    const strip = el('i', { title: `${o.mode}: ${o.display ?? 'no value'}` });
-    if (h) strip.style.background = h;
-    return strip;
+    const dot = el('i', { title: `${o.mode}: ${o.display ?? 'no value'}`, 'aria-label': `${o.mode} mode ${o.display ?? 'no value'}`, role: 'img' });
+    dot.style.boxShadow = `0 0 0 2px ${ring}`;
+    if (h) dot.style.background = h; else dot.classList.add('gap');
+    return dot;
   })));
   return el('a', { class: 'tile' + (opts.muted ? ' muted' : ''), href: opts.href, 'data-link': true, title: opts.full },
     block,

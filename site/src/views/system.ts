@@ -40,8 +40,8 @@ export async function systemView(main: HTMLElement, p: Product) {
   const byIri = new Map(cs.map((c) => [c.iri, c]));
   const byPath = new Map(ts.map((t) => [t.p, t]));
   const modeNames = orderModes(Object.keys(p.modes));
-  const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
-  const modePick = el('select', { id: 'tok-mode', 'aria-label': 'Swatch mode' }, modeNames.map((mode) => el('option', { value: mode, text: `Swatches: ${mode}`, selected: mode === (prefersDark && p.modes.dark ? 'dark' : modeNames[0]) || undefined })));
+  // Tiles show light mode, with the other modes as inset circles; the picker flips which mode fills the tile.
+  const modePick = el('select', { id: 'tok-mode', 'aria-label': 'Swatch mode' }, modeNames.map((mode) => el('option', { value: mode, text: `Swatches: ${mode}`, selected: mode === modeNames[0] || undefined })));
   const themeOf = () => p.modes[modePick.value] ?? Object.values(p.modes)[0] ?? 'all';
   const filter = el('input', { type: 'search', id: 'tok-filter', placeholder: 'Filter tokens', 'aria-label': 'Filter tokens' });
   const status = el('select', { id: 'tok-status', 'aria-label': 'Mapping status' }, el('option', { value: '', text: 'All tokens' }), el('option', { value: 'mapped', text: 'Mapped' }), el('option', { value: 'unmapped', text: 'No concept fits' }));
