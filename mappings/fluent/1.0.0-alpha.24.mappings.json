@@ -1842,13 +1842,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest/state-hover",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background1; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6). white in light, #292929 in dark; the primary surface layer. Hover state (hover).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-hover broad."
       }
     },
     {
@@ -1857,13 +1862,17 @@
       "concept": "dsi:concept/color/property-background/state-hover",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Hover of the default neutral background; not specific to one surface.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -1872,13 +1881,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest/state-active",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background1; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6). white in light, #292929 in dark; the primary surface layer. Pressed state (pressed = active).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-active broad."
       }
     },
     {
@@ -1887,13 +1901,17 @@
       "concept": "dsi:concept/color/property-background/state-active",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Pressed of the default neutral background.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -1902,13 +1920,17 @@
       "concept": "dsi:concept/color/property-background/state-selected",
       "match": "broad",
       "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Selected of the default neutral background.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -1917,13 +1939,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest/state-selected",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background1; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6). white in light, #292929 in dark; the primary surface layer. Selected state (selected).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-selected broad."
       }
     },
     {
@@ -1991,13 +2018,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background2; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6).  Hover state (hover).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-hover broad."
       }
     },
     {
@@ -2006,13 +2038,17 @@
       "concept": "dsi:concept/color/property-background/state-hover",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Hover of neutral background 2.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2021,13 +2057,17 @@
       "concept": "dsi:concept/color/property-background/state-active",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Pressed of neutral background 2.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2036,13 +2076,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background2; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6).  Pressed state (pressed = active).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-active broad."
       }
     },
     {
@@ -2051,13 +2096,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-selected",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background2; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6).  Selected state (selected).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-selected broad."
       }
     },
     {
@@ -2066,13 +2116,17 @@
       "concept": "dsi:concept/color/property-background/state-selected",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Selected of neutral background 2.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2140,13 +2194,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background3; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6).  Hover state (hover).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-hover broad."
       }
     },
     {
@@ -2155,13 +2214,17 @@
       "concept": "dsi:concept/color/property-background/state-hover",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Hover of neutral background 3.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2170,13 +2233,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/state-active",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background3; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6).  Pressed state (pressed = active).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-active broad."
       }
     },
     {
@@ -2185,13 +2253,17 @@
       "concept": "dsi:concept/color/property-background/state-active",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Pressed of neutral background 3.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2200,13 +2272,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background3; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6).  Selected state (selected).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-selected broad."
       }
     },
     {
@@ -2215,13 +2292,17 @@
       "concept": "dsi:concept/color/property-background/state-selected",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Selected of neutral background 3.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2465,13 +2546,17 @@
       "concept": "dsi:concept/color/property-background/state-hover",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Hover of neutral background 5.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2480,13 +2565,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-stronger/state-hover",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background5; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6).  Hover state (hover).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-hover broad."
       }
     },
     {
@@ -2495,13 +2585,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-stronger/state-active",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background5; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6).  Pressed state (pressed = active).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-active broad."
       }
     },
     {
@@ -2510,13 +2605,17 @@
       "concept": "dsi:concept/color/property-background/state-active",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Pressed of neutral background 5.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2525,13 +2624,17 @@
       "concept": "dsi:concept/color/property-background/state-selected",
       "match": "broad",
       "confidence": 0.55,
-      "status": "proposed",
-      "rationale": "Selected of neutral background 5.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2540,13 +2643,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-stronger/state-selected",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background5; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6).  Selected state (selected).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-selected broad."
       }
     },
     {
@@ -2555,13 +2663,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strongest",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral surface layer Background6; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6). darkest in light (#e6e6e6); in dark (#333333) it is lighter than Background1, so ranks disagree across modes.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background close."
       }
     },
     {
@@ -2570,13 +2683,37 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong",
       "match": "close",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "#e6e6e6 / #333333, highest contrast of the surface ladder in light; in dark it lightens instead of darkening.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background close."
+      }
+    },
+    {
+      "id": "m-d9ad63896f4e",
+      "token": "colorNeutralBackground6",
+      "concept": "dsi:concept/color/property-background",
+      "match": "close",
+      "confidence": 0.45,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2585,13 +2722,17 @@
       "concept": "dsi:concept/color/property-background",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
-      "rationale": "Fully transparent resting fill for subtle controls; no intent.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2600,13 +2741,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-subtlest",
       "match": "close",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Transparent at rest with neutral grey hover/pressed (subtle-appearance layer); no transparent-surface concept, closest is the subtlest neutral background.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background broad."
       }
     },
     {
@@ -2693,13 +2839,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-subtlest/state-selected",
       "match": "close",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Transparent at rest with neutral grey hover/pressed (subtle-appearance layer); no transparent-surface concept, closest is the subtlest neutral background. Selected state (selected).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-selected broad."
       }
     },
     {
@@ -2708,13 +2859,17 @@
       "concept": "dsi:concept/color/property-background/state-selected",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
-      "rationale": "Selected of background 7; still transparent in web themes.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2782,13 +2937,17 @@
       "concept": "dsi:concept/color/property-background",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
-      "rationale": "Translucent neutral (#fff 0.5 / #1a1a1a 0.5) laid over content.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -2797,13 +2956,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Translucent neutral surface (white 50% light, #1a1a1a 50% dark); less opaque member of the Alpha pair.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background broad."
       }
     },
     {
@@ -2812,13 +2976,18 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Translucent neutral surface (white 80% light, #1f1f1f 70% dark); more opaque member of the Alpha pair.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background broad."
       }
     },
     {
@@ -2827,13 +2996,17 @@
       "concept": "dsi:concept/color/property-background",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
-      "rationale": "More opaque translucent neutral laid over content.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B3) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -4207,18 +4380,42 @@
       }
     },
     {
+      "id": "m-9fa7a3ebcb1b",
+      "token": "colorNeutralForegroundInvertedLink",
+      "concept": "dsi:concept/color/usage-inverse+link/property-foreground",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T17:44:18.972Z",
+        "note": "New concept dsi:concept/color/usage-inverse+link/property-foreground: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-a8a3bf3eaa2a",
       "token": "colorNeutralForegroundInvertedLink",
       "concept": "dsi:concept/color/usage-inverse+link/property-foreground",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Link on an inverse surface (ADR 0008, Carbon link-inverse).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-inverse+link/property-foreground close."
       }
     },
     {
@@ -4227,13 +4424,18 @@
       "concept": "dsi:concept/color/usage-inverse+link/property-text",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Link on inverted surfaces (white in both light and dark web themes, so it does not flip with the surface in dark; nuance noted).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-inverse+link/property-foreground close."
       }
     },
     {
@@ -4242,13 +4444,37 @@
       "concept": "dsi:concept/color/usage-inverse+link/property-text/state-hover",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Link on inverted surfaces (white in both light and dark web themes, so it does not flip with the surface in dark; nuance noted). Hover state (hover).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-inverse+link/property-foreground/state-hover close."
+      }
+    },
+    {
+      "id": "m-c22a0cfe492d",
+      "token": "colorNeutralForegroundInvertedLinkHover",
+      "concept": "dsi:concept/color/usage-inverse+link/property-foreground/state-hover",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T17:44:18.972Z",
+        "note": "New concept dsi:concept/color/usage-inverse+link/property-foreground/state-hover: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -4257,13 +4483,18 @@
       "concept": "dsi:concept/color/usage-inverse+link/property-foreground/state-hover",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover of link on inverse surface.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-inverse+link/property-foreground/state-hover close."
       }
     },
     {
@@ -4272,13 +4503,18 @@
       "concept": "dsi:concept/color/usage-inverse+link/property-text/state-active",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Link on inverted surfaces (white in both light and dark web themes, so it does not flip with the surface in dark; nuance noted). Pressed state (pressed = active).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-inverse+link/property-foreground/state-active close."
       }
     },
     {
@@ -4287,13 +4523,56 @@
       "concept": "dsi:concept/color/usage-inverse+link/property-foreground/state-active",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Pressed of link on inverse surface.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-inverse+link/property-foreground/state-active close."
+      }
+    },
+    {
+      "id": "m-c262615a9e8f",
+      "token": "colorNeutralForegroundInvertedLinkPressed",
+      "concept": "dsi:concept/color/usage-inverse+link/property-foreground/state-active",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T17:44:18.972Z",
+        "note": "New concept dsi:concept/color/usage-inverse+link/property-foreground/state-active: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
+      "id": "m-0cdaf455e079",
+      "token": "colorNeutralForegroundInvertedLinkSelected",
+      "concept": "dsi:concept/color/usage-inverse+link/property-foreground/state-selected",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T17:44:18.972Z",
+        "note": "New concept dsi:concept/color/usage-inverse+link/property-foreground/state-selected: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -4302,13 +4581,18 @@
       "concept": "dsi:concept/color/usage-inverse+link/property-foreground/state-selected",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Selected link on inverse surface.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-inverse+link/property-foreground/state-selected close."
       }
     },
     {
@@ -4317,13 +4601,18 @@
       "concept": "dsi:concept/color/usage-inverse+link/property-text/state-selected",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Link on inverted surfaces (white in both light and dark web themes, so it does not flip with the surface in dark; nuance noted). Selected state (selected).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-inverse+link/property-foreground/state-selected close."
       }
     },
     {
@@ -11780,13 +12069,17 @@
       "concept": "dsi:concept/color/property-background",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
-      "rationale": "Transparent resting background of subtle buttons and list items.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -11795,13 +12088,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-subtlest",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Background for subtle-appearance controls: transparent at rest, light neutral on interaction. No transparent/ghost concept; closest is subtlest neutral background.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background broad."
       }
     },
     {
@@ -11969,13 +12267,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-subtlest/state-hover",
       "match": "close",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Subtle-control hover background as a translucent light layer (white alpha light, #242424 alpha dark) for use on tinted surfaces.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-hover broad."
       }
     },
     {
@@ -11984,13 +12287,17 @@
       "concept": "dsi:concept/color/property-background/state-hover",
       "match": "broad",
       "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Translucent hover (white 0.7 / #242424 0.8) over light-alpha surfaces.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -11999,13 +12306,17 @@
       "concept": "dsi:concept/color/property-background/state-active",
       "match": "broad",
       "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Translucent pressed fill.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -12014,13 +12325,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-subtlest/state-active",
       "match": "close",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Subtle-control pressed background as a translucent light layer (white alpha light, #242424 alpha dark) for use on tinted surfaces.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-active broad."
       }
     },
     {
@@ -12029,13 +12345,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-subtlest/state-selected",
       "match": "close",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Subtle-control selected background as a translucent light layer (white alpha light, #242424 alpha dark) for use on tinted surfaces.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-background/state-selected broad."
       }
     },
     {
@@ -12044,13 +12365,17 @@
       "concept": "dsi:concept/color/property-background/state-selected",
       "match": "broad",
       "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Selected, transparent in web themes.",
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {

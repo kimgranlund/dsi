@@ -25,6 +25,7 @@ const USAGE = `usage:
   dsi-map tiebreak <scope> <run> <product> <first run>   two of three: approve where a third model agrees with one of the first two
   dsi-map settle <scope> <run> <product> <first run>     settle rules: three agree (cautious match), emphasis-only splits (rank or broad), two of three at 0.5
   dsi-map reconcile <scope> [--dry]               fold single-system concepts into shared ones where one facet separates them (ADR 0019)
+  dsi-map boundary-rules <scope> [--dry]          apply the deciding tests B1, B3, B4, B6 to the queue (ADR 0021)
   dsi-map boundaries <scope> [--top N] [--jev <run>]  rank the vocabulary boundaries answers disagree on
   dsi-map rank-emphasis <scope> <run> <product>   settle emphasis by contrast rank where both agents agree on the rest (ADR 0018)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
@@ -333,6 +334,55 @@ if (cmd === 'prepare') {
     if (!dry) { file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id)); fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n'); }
   }
   console.log(`reconcile${dry ? ' (dry run)' : ''}: ${JSON.stringify(counts)}`);
+} else if (cmd === 'boundary-rules') {
+  // ADR 0021: apply the deciding tests B1, B3, B4, B6. Queued tokens: normalize every answer; when all normalized
+  // answers agree (or one is left after B1 filtering), approve it (most cautious match, registry gate). Approved
+  // mappings are never changed; ones that break a test are listed. --dry only reports.
+  const { BoundaryTests, normalize } = await import('./boundary-rules.ts');
+  const dry = process.argv.includes('--dry');
+  const RANK: Record<string, number> = { exact: 0, close: 1, broad: 2, narrow: 2 };
+  const at = new Date().toISOString();
+  const totals: Record<string, number> = { settled: 0, stillOpen: 0, approvedBreaking: 0 };
+  const conflicts: string[] = [];
+  for (const [product, { version }] of Object.entries(scope.products)) {
+    const mf = path.join(root, 'mappings', product, `${version}.mappings.json`);
+    if (!fs.existsSync(mf)) continue;
+    const file = JSON.parse(fs.readFileSync(mf, 'utf8'));
+    const pageTok = file.mappings.find((m: any) => m.status === 'approved' && m.concept === 'dsi:concept/color/usage-page/property-background')?.token;
+    const t = new BoundaryTests(root, product, version, pageTok);
+    const by = new Map<string, any[]>();
+    for (const m of file.mappings) if (m.concept.startsWith('dsi:concept/color/')) (by.get(m.token) ?? by.set(m.token, []).get(m.token)!).push(m);
+    const breaking: string[] = [];
+    let settled = 0, open = 0;
+    for (const [token, ms] of by) {
+      const ap = ms.find((m) => m.status === 'approved');
+      if (ap) { const n = normalize(t, token, ap.concept, !!pageTok); if (n.applied.length && !n.applied.every((r) => r === 'B1' && /usage-categorical/.test(ap.concept))) breaking.push(`${token}: ${n.applied.join(',')} -> ${n.concept.replace('dsi:concept/color/', '')}`); continue; }
+      const props = ms.filter((m) => m.status === 'proposed');
+      if (props.length < 1) continue;
+      const norm = props.map((m) => ({ m, n: normalize(t, token, m.concept, !!pageTok) }));
+      let keep = norm;
+      if (norm.some((x) => x.n.needsEmphasis)) { const withE = norm.filter((x) => /emphasis-/.test(x.n.concept)); if (withE.length) keep = withE; }
+      const concepts = [...new Set(keep.map((x) => x.n.concept))];
+      if (concepts.length !== 1 || !keep.some((x) => x.n.applied.length) && new Set(props.map((m) => m.concept)).size === 1) { open++; continue; }
+      const concept = concepts[0];
+      const matches = keep.map((x) => x.m.match);
+      if (matches.includes('related') || (matches.includes('broad') && matches.includes('narrow')) || typeof parseConcept(ontology, concept) === 'string') { open++; continue; }
+      const match = matches.reduce((a, b) => (RANK[b] > RANK[a] ? b : a));
+      settled++;
+      if (dry) { console.log(`  ${product} ${token} -> ${concept.replace('dsi:concept/color/', '')} ${match} [${[...new Set(keep.flatMap((x) => x.n.applied))].join(',') || 'filter'}]`); continue; }
+      const id = 'm-' + crypto.createHash('sha1').update([token, concept, match].join('|')).digest('hex').slice(0, 12);
+      for (const m of props) if (m.id !== id) { m.status = 'rejected'; m.review = { by: 'boundary-rule', at, note: `Settled by boundary tests (ADR 0021): ${concept} ${match}.` }; }
+      file.mappings = file.mappings.filter((m: any) => m.id !== id);
+      file.mappings.push({ id, token, concept, match, confidence: Math.min(...keep.map((x) => x.m.confidence ?? 1)), status: 'approved', rationale: `Answers normalized by the boundary tests (${[...new Set(keep.flatMap((x) => x.n.applied))].join(', ') || 'B1 filter'}) agree. Evidence: values and names (ADR 0021).`, provenance: { agent: 'dsi-mapper', at, method: 'boundary-rule-v1' }, review: { by: 'boundary-rule', at, note: 'Deterministic boundary tests (ADR 0021).' } });
+    }
+    totals.settled += settled; totals.stillOpen += open; totals.approvedBreaking += breaking.length;
+    conflicts.push(...breaking.map((b) => `${product} ${b}`));
+    console.log(`${product}: ${settled} settled, ${open} still open, ${breaking.length} approved mappings break a test`);
+    for (const b of breaking.slice(0, 3)) console.log('    breaks: ' + b);
+    if (!dry && settled) { const held = gateUnregistered(ontology, file); if (held.length) console.log(`  ${held.length} held: new concepts`); file.mappings.sort((a: any, b: any) => a.token.localeCompare(b.token) || a.id.localeCompare(b.id)); fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n'); }
+  }
+  fs.writeFileSync(path.join(root, '.cache/boundary-conflicts.txt'), conflicts.join('\n') + '\n');
+  console.log(`boundary-rules${dry ? ' (dry run)' : ''}: ${JSON.stringify(totals)}; approved conflicts -> .cache/boundary-conflicts.txt`);
 } else if (cmd === 'boundaries') {
   // Rank the vocabulary boundaries the answers disagree on (docs/planning/boundaries.md; one owner decision per pair).
   const { mineBoundaries } = await import('./boundaries.ts');

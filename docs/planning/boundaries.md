@@ -10,6 +10,10 @@ Counts per pair:
 
 Score = 3 × open + 2 × audit + decided + jev / 2 + systems.
 
+## Decided (ADR 0021)
+
+B1, B3, B4 and B6 are decided and implemented as tests (`dsi-map boundary-rules`). First run: 42 queued tokens settled (19 held as new concepts), 97 approved mappings listed as conflicts in `.cache/boundary-conflicts.txt`. Open: B2, B5, B7, B8.
+
 ## Themes (pairs grouped by the question they share)
 
 | # | Boundary | Pairs | Open | Decided | Audit | Jev | Systems | Deciding test proposed | Computable |

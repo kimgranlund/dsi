@@ -106,3 +106,11 @@ Use `"unmapped": true` when no allowed combination captures the token (syntax hi
 - **Rationale (L6).** One or two sentences, at most 40 words, active voice, present tense. Sentence one says what the token is for. Sentence two starts `Evidence:` and names its kind: name, description, value, docs (with URL), sibling, or convention (with ADR number). A `close` match states its nuance. No hedging words (probably, seems, maybe): put uncertainty in `confidence`.
   Example: "Icon color on subtle gray accent fills, such as file-type icons. Evidence: description; sibling (accent.blue and 8 others are categorical icons)."
 
+## Boundary tests (ADR 0021)
+
+Apply these before choosing; the merge step re-checks them.
+- **Emphasis** only when the token is one step of a ladder whose siblings differ by a strength word or number and order by contrast in every mode. A lone token, or a family whose order flips between modes, gets no emphasis.
+- **Surface** usage only when the system has a page token this one differs from; otherwise leave usage unbound.
+- **On-fill** only for content on a bold (solid) fill it contrasts with at 4.5:1. Content on subtle tinted backgrounds is not on-fill.
+- **Text** when the system ships a separate icon family (color.icon.* beside color.text.*); **foreground** when one token colors both.
+

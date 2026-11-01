@@ -2393,13 +2393,37 @@
       "concept": "dsi:concept/color/syntax-bracket/property-text",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Color for the bracket matching the one at the cursor; a bracket highlight rather than a syntax role.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:57:07Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/syntax-bracket/property-foreground close."
+      }
+    },
+    {
+      "id": "m-9cf11c324e25",
+      "token": "codeMirror.matchingBracket.fgColor",
+      "concept": "dsi:concept/color/syntax-bracket/property-foreground",
+      "match": "close",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T17:44:18.621Z",
+        "note": "New concept dsi:concept/color/syntax-bracket/property-foreground: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -2448,13 +2472,37 @@
       "concept": "dsi:concept/color/syntax-constant/property-text",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "CodeMirror syntax color for TextMate scope constant -> Lezer constant.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:57:07Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/syntax-constant/property-foreground close."
+      }
+    },
+    {
+      "id": "m-a6518f49435d",
+      "token": "codeMirror.syntax.fgColor.constant",
+      "concept": "dsi:concept/color/syntax-constant/property-foreground",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T17:44:18.621Z",
+        "note": "New concept dsi:concept/color/syntax-constant/property-foreground: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -2463,13 +2511,18 @@
       "concept": "dsi:concept/color/syntax-constant/property-text",
       "match": "exact",
       "confidence": 0.88,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Constant color.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:57:08.231Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/syntax-constant/property-foreground close."
       }
     },
     {
@@ -3753,13 +3806,18 @@
       "concept": "dsi:concept/color/usage-code-surface/syntax-inserted/property-text",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Text on added line. Part (line/gutter/line-number) cannot bind without a component; ontology gap, mapped to code surface.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:57:08.231Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-code-surface/syntax-inserted/property-foreground broad."
       }
     },
     {
@@ -3768,13 +3826,37 @@
       "concept": "dsi:concept/color/usage-code-surface/syntax-inserted/property-text",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Diff addition line text. Intended part-line (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:57:07Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-code-surface/syntax-inserted/property-foreground broad."
+      }
+    },
+    {
+      "id": "m-ceab36502254",
+      "token": "diffBlob.additionLine.fgColor",
+      "concept": "dsi:concept/color/usage-code-surface/syntax-inserted/property-foreground",
+      "match": "broad",
+      "confidence": 0.5,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T17:44:18.621Z",
+        "note": "New concept dsi:concept/color/usage-code-surface/syntax-inserted/property-foreground: not in the concept registry, so it needs owner approval (ADR 0019)."
       }
     },
     {
@@ -3886,18 +3968,42 @@
       }
     },
     {
+      "id": "m-1398d27c781d",
+      "token": "diffBlob.deletionLine.fgColor",
+      "concept": "dsi:concept/color/usage-code-surface/syntax-deleted/property-foreground",
+      "match": "broad",
+      "confidence": 0.5,
+      "status": "proposed",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "registry-gate",
+        "at": "2026-11-01T17:44:18.621Z",
+        "note": "New concept dsi:concept/color/usage-code-surface/syntax-deleted/property-foreground: not in the concept registry, so it needs owner approval (ADR 0019)."
+      }
+    },
+    {
       "id": "m-7920f8483dee",
       "token": "diffBlob.deletionLine.fgColor",
       "concept": "dsi:concept/color/usage-code-surface/syntax-deleted/property-text",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Text on deleted line. Part (line/gutter/line-number) cannot bind without a component; ontology gap, mapped to code surface.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:57:08.231Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-code-surface/syntax-deleted/property-foreground broad."
       }
     },
     {
@@ -3906,13 +4012,18 @@
       "concept": "dsi:concept/color/usage-code-surface/syntax-deleted/property-text",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Diff deletion line text. Intended part-line (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:57:07Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/usage-code-surface/syntax-deleted/property-foreground broad."
       }
     },
     {
@@ -12819,13 +12930,18 @@
       "concept": "dsi:concept/color/intent-warning/property-text",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Attention (yellow warning) text.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:57:08.231Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-warning/property-foreground close."
       }
     },
     {
@@ -12834,13 +12950,37 @@
       "concept": "dsi:concept/color/intent-warning/property-foreground",
       "match": "exact",
       "confidence": 0.9,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Primer attention is its warning status. Primer fgColor colors text and icons; single member, emphasis unbound.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T14:57:07Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/intent-warning/property-foreground close."
+      }
+    },
+    {
+      "id": "m-e8a4c497ef8b",
+      "token": "fgColor.attention",
+      "concept": "dsi:concept/color/intent-warning/property-foreground",
+      "match": "close",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -12917,14 +13057,18 @@
       "token": "fgColor.default",
       "concept": "dsi:concept/color/property-foreground",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Default text color for primary content; Primer fgColor colors text and icons. Base left unbound as for Carbon text-primary.",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B6) agree. Evidence: values and names (ADR 0021).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
+        "at": "2026-11-01T17:44:18.167Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
       }
     },
     {
@@ -12933,13 +13077,18 @@
       "concept": "dsi:concept/color/property-text",
       "match": "exact",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Default primary text; middle of default/muted.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:57:08.231Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T17:44:18.167Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-foreground exact."
       }
     },
     {
@@ -13819,64 +13968,6 @@
       }
     },
     {
-      "id": "m-635f78a453f1",
-      "token": "prettylights.syntax.bracketHighlighterAngle",
-      "concept": "dsi:concept/color/syntax-angle-bracket/property-text",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "rejected",
-      "rationale": "Prettylights syntax highlighting: Bracket-highlighter color for angle brackets. (ADR 0012 Lezer tag).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:57:07Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
-      }
-    },
-    {
-      "id": "m-98027faf9fcf",
-      "token": "prettylights.syntax.bracketHighlighterAngle",
-      "concept": "dsi:concept/color/syntax-angle-bracket/property-text",
-      "match": "exact",
-      "confidence": 0.85,
-      "status": "approved",
-      "rationale": "'Syntax highlighting color for angle brackets' (neutral.9); Lezer angleBracket (ADR 0012).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "at": "2026-11-01T15:21:36.872Z",
-        "method": "two-of-three-v1"
-      },
-      "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
-      }
-    },
-    {
-      "id": "m-42a8f1e1b896",
-      "token": "prettylights.syntax.bracketHighlighterUnmatched",
-      "concept": "dsi:concept/color/syntax-invalid/property-text",
-      "match": "close",
-      "confidence": 0.5,
-      "status": "approved",
-      "rationale": "'Syntax highlighting color for unmatched brackets' (red.7 / red.4): an error marking in code; Lezer invalid covers erroneous code. Nuance: limited to brackets.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "at": "2026-11-01T15:52:51.456Z",
-        "method": "settle-three-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:51.456Z",
-        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
-      }
-    },
-    {
       "id": "m-b3ba14326291",
       "token": "prettylights.syntax.brackethighlighter.angle",
       "concept": "dsi:concept/color/syntax-angle-bracket/property-text",
@@ -13923,6 +14014,64 @@
       "confidence": 0.5,
       "status": "approved",
       "rationale": "Deprecated alias of prettylights.syntax.bracketHighlighterUnmatched (same value in every theme). 'Syntax highlighting color for unmatched brackets' (red.7 / red.4): an error marking in code; Lezer invalid covers erroneous code. Nuance: limited to brackets.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:52:51.456Z",
+        "method": "settle-three-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.456Z",
+        "note": "All three agents (claude-opus-5-5, claude-sonnet-5-5, claude-fable-5-1) agree on the concept; most cautious match."
+      }
+    },
+    {
+      "id": "m-635f78a453f1",
+      "token": "prettylights.syntax.bracketHighlighterAngle",
+      "concept": "dsi:concept/color/syntax-angle-bracket/property-text",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "rejected",
+      "rationale": "Prettylights syntax highlighting: Bracket-highlighter color for angle brackets. (ADR 0012 Lezer tag).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T14:57:07Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:21:36.872Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
+      }
+    },
+    {
+      "id": "m-98027faf9fcf",
+      "token": "prettylights.syntax.bracketHighlighterAngle",
+      "concept": "dsi:concept/color/syntax-angle-bracket/property-text",
+      "match": "exact",
+      "confidence": 0.85,
+      "status": "approved",
+      "rationale": "'Syntax highlighting color for angle brackets' (neutral.9); Lezer angleBracket (ADR 0012).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:21:36.872Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:21:36.872Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
+      }
+    },
+    {
+      "id": "m-42a8f1e1b896",
+      "token": "prettylights.syntax.bracketHighlighterUnmatched",
+      "concept": "dsi:concept/color/syntax-invalid/property-text",
+      "match": "close",
+      "confidence": 0.5,
+      "status": "approved",
+      "rationale": "'Syntax highlighting color for unmatched brackets' (red.7 / red.4): an error marking in code; Lezer invalid covers erroneous code. Nuance: limited to brackets.",
       "provenance": {
         "agent": "dsi-mapper",
         "at": "2026-11-01T15:52:51.456Z",
@@ -14669,13 +14818,13 @@
       }
     },
     {
-      "id": "m-06c48b8bffe6",
-      "token": "prettylights.syntax.sublimeLinterGutterMark",
+      "id": "m-033697e25f95",
+      "token": "prettylights.syntax.sublimelinter.gutter.mark",
       "concept": "dsi:concept/color/usage-code-surface/property-foreground",
       "match": "broad",
       "confidence": 0.5,
       "status": "approved",
-      "rationale": "Linter mark shown in the editor gutter. Intended part-gutter (ADR 0018) dropped: the concept validator rejects part without a component.",
+      "rationale": "Deprecated alias of prettylights.syntax.sublimeLinterGutterMark; same meaning. Linter mark shown in the editor gutter. Intended part-gutter (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
         "at": "2026-11-01T15:52:51.456Z",
@@ -14688,13 +14837,13 @@
       }
     },
     {
-      "id": "m-033697e25f95",
-      "token": "prettylights.syntax.sublimelinter.gutter.mark",
+      "id": "m-06c48b8bffe6",
+      "token": "prettylights.syntax.sublimeLinterGutterMark",
       "concept": "dsi:concept/color/usage-code-surface/property-foreground",
       "match": "broad",
       "confidence": 0.5,
       "status": "approved",
-      "rationale": "Deprecated alias of prettylights.syntax.sublimeLinterGutterMark; same meaning. Linter mark shown in the editor gutter. Intended part-gutter (ADR 0018) dropped: the concept validator rejects part without a component.",
+      "rationale": "Linter mark shown in the editor gutter. Intended part-gutter (ADR 0018) dropped: the concept validator rejects part without a component.",
       "provenance": {
         "agent": "dsi-mapper",
         "at": "2026-11-01T15:52:51.456Z",

@@ -13,7 +13,8 @@ The authority for how DSI writes meaning: the controlled natural languages (CNLs
 7. L5 Match statement
 8. L6 Rationale
 9. L7 Review question
-10. Concept registry
+10. Boundary tests (9a)
+11. Concept registry
 11. Enforcement
 12. Classification and prior art
 
@@ -151,6 +152,15 @@ The models agree it is about "<shared name>". They differ on <differences>. Pick
 ```
 
 Differences are listed in this order, in these words: what it signals (intent), where it is used (usage), which hue, which component, which part, what part it colors (property), how strong it is (emphasis), which state, how closely it matches, and whether any concept fits. The options are L5 statements.
+
+## 9a. Boundary tests (ADR 0021)
+
+Where two facet values meet, a deciding test on shipped facts says which side a token is on. The tests are code (`packages/mapper/src/boundary-rules.ts`); their wording here and in ADR 0021 is the authority for prompts and option descriptions:
+
+- **Emphasis** binds only in a contrast-ordered ladder (B1).
+- **Surface** requires a page token the token differs from (B3).
+- **On-fill** means on a bold fill, at 4.5:1 (B4).
+- **Text** applies when the system ships a separate icon family; otherwise **foreground** (B6).
 
 ## 10. Concept registry
 

@@ -4,7 +4,7 @@
   "dsi:usage/overlay": "Content floating above the page, such as menus, popovers and dialogs; not containers sitting in the page.",
   "dsi:usage/scrim": "The dimming layer behind a dialog; not the dialog itself.",
   "dsi:usage/inverse": "Surfaces with the opposite lightness of the theme (a dark tooltip in light mode) and the content on them; not content on a colored fill.",
-  "dsi:usage/on-fill": "Text or icons placed on a filled colored background (a solid button) that must contrast with that fill; not inverse surfaces.",
+  "dsi:usage/on-fill": "Text or icons on a bold, solid colored fill (a filled button) that must contrast with it at 4.5:1; not content on subtle tinted backgrounds, not inverse surfaces.",
   "dsi:usage/field": "Form inputs such as text fields and selects; not buttons or plain surfaces.",
   "dsi:usage/link": "Inline navigational text links; not buttons or plain text.",
   "dsi:usage/categorical": "Members of a set of distinct named colors for tags, avatars or series, where the hue is the meaning; not status colors.",
@@ -16,6 +16,8 @@
   "none:usage": "General purpose: used across the interface, not tied to the page, cards, overlays, code, charts or any one context. Most text, icon and border tokens are general.",
   "none:intent": "No signal: neutral or structural color with no status, brand or action meaning, such as default text, borders and surfaces.",
   "none:hue": "Not a member of a named categorical color set: almost every token, including gray text and blue buttons, is none here.",
-  "none:emphasis": "Not one step of a strength ladder: the token has no subtle, default or strong siblings.",
-  "none:state": "The resting state: not hover, pressed, focus, selected, disabled, dragged or visited."
+  "none:emphasis": "Not one step of a contrast-ordered ladder: the token has no subtle, default or strong siblings that order by contrast in every mode.",
+  "none:state": "The resting state: not hover, pressed, focus, selected, disabled, dragged or visited.",
+  "dsi:property/text": "Text color only, in a system that ships separate icon colors; not a token that colors both text and icons.",
+  "dsi:property/foreground": "One token that colors both text and icons; not a text-only token in a system with separate icon colors."
 }
