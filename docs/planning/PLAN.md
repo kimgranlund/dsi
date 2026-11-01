@@ -82,6 +82,9 @@ Show a consistent canonical label (e.g. "Danger") and how each design system rep
 - **Form**: public, searchable website hosted on Cloudflare at `dsi.nonoun.io`. Ontology IRIs use `https://dsi.nonoun.io/ontology/`.
 - **Mapping authorship**: AI agents propose and write mappings through a pipeline: ingest -> map (against the SKOS scheme) -> store as DTCG-compatible data.
 - **Approval rule (decided)**: two Claude Code agents on different models map each packet blind; a mapping is approved when both give the same concept and match type with confidence >= 0.85. Disagreements go to a human queue. The public site shows approved mappings only.
+- **Concept resolution policy (decided)**: approved exact/close mappings answer; broad/narrow (or an exact mapping to a more specific concept) answer only as flagged "nearest"; related never; otherwise "absent" (approved noEquivalent) or "unknown". No invented values. Implemented in `packages/resolve`.
+- **Modes**: each source declares which native theme represents each canonical mode (Carbon light=white, dark=g100), from the product's shipped color-scheme metadata.
+- **Pipelines**: Resolver first (done), then a Classifier: per-product term mappings (native word -> facet value, reviewed once) plus deterministic name decomposition, used for scope, packet hints and as a third vote.
 - **Concepts are compositional**: `dsi:concept/<domain>/<facet>-<value>/...` in a fixed facet order, validated against the facet schemes.
 - **License**: MIT for this project.
 - **Component Libraries** are a full category with token ingestion, like Design Systems.
@@ -99,7 +102,6 @@ Show a consistent canonical label (e.g. "Danger") and how each design system rep
 
 - Canonical hue names (scale facet) and usage values: deferred to the color concepts work.
 
-- Unmatched canonical tokens: leave unresolved, fall back to the broader match with a flag, or derive a value.
 - Upstream licenses of ingested token values (MIT covers our code and mappings, not third-party values).
 - Component anatomy vocabulary: whose part names become canonical.
 - Entry depth for Headless Primitives, Styling Engines, Token Tooling, Token Formats (catalog entry only vs ingestion).

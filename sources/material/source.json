@@ -1,9 +1,26 @@
 {
   "product": "material",
   "implementation": "material-web",
-  "package": { "registry": "npm", "name": "@material/web", "version": "2.5.0" },
-  "entries": [{ "path": "tokens", "format": "scss" }],
-  "themes": ["light", "dark"],
+  "package": {
+    "registry": "npm",
+    "name": "@material/web",
+    "version": "2.5.0"
+  },
+  "entries": [
+    {
+      "path": "tokens",
+      "format": "scss"
+    }
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "modes": {
+    "light": "light",
+    "dark": "dark"
+  },
+  "modesNote": "Material ships values-light and values-dark.",
   "adapter": "material",
   "license": {
     "spdx": "Apache-2.0",

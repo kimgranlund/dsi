@@ -1,18 +1,43 @@
 {
   "product": "polaris",
   "implementation": "polaris-tokens",
-  "package": { "registry": "npm", "name": "@shopify/polaris-tokens", "version": "9.4.2" },
+  "package": {
+    "registry": "npm",
+    "name": "@shopify/polaris-tokens",
+    "version": "9.4.2"
+  },
   "entries": [
-    { "path": "dist/css/styles.css", "format": "css" },
-    { "path": "dist/esm/src", "format": "js-module" }
+    {
+      "path": "dist/css/styles.css",
+      "format": "css"
+    },
+    {
+      "path": "dist/esm/src",
+      "format": "js-module"
+    }
   ],
-  "themes": ["light", "dark-experimental", "light-high-contrast-experimental", "light-mobile"],
+  "themes": [
+    "light",
+    "dark-experimental",
+    "light-high-contrast-experimental",
+    "light-mobile"
+  ],
+  "modes": {
+    "light": "light",
+    "dark": "dark-experimental",
+    "increased-contrast": "light-high-contrast-experimental"
+  },
+  "modesNote": "Polaris sets color-scheme light/dark per theme in styles.css; light-mobile is a platform variant, not a mode.",
   "adapter": "polaris",
   "license": {
     "spdx": "LicenseRef-Shopify-Polaris",
     "url": "https://github.com/Shopify/polaris/blob/main/polaris-tokens/LICENSE.md",
     "redistribution": "restricted",
     "notes": "MIT text plus a restriction: rights may only be exercised to develop and distribute applications that integrate or interoperate with Shopify software or services.",
-    "publishOverride": { "by": "kimgranlund", "at": "2026-10-31", "note": "Owner chose to ingest and publish Polaris token values in the index despite the restriction, accepting the license risk." }
+    "publishOverride": {
+      "by": "kimgranlund",
+      "at": "2026-10-31",
+      "note": "Owner chose to ingest and publish Polaris token values in the index despite the restriction, accepting the license risk."
+    }
   }
 }

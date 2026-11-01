@@ -41,6 +41,8 @@ design-system-index/
 │  ├─ schema/                JSON Schemas + TS types (catalog, source, mapping, DTCG $extensions)
 │  ├─ ingest/                adapters/<product>.ts: sources -> data/native
 │  ├─ mapper/                Agent mapping pipeline: ontology + native -> mappings
+│  ├─ resolve/               token and concept resolution shared by every consumer
+│  ├─ classify/              (planned) deterministic classification from per-product term mappings
 │  ├─ canon/                 ontology + mappings -> data/canonical
 │  ├─ db/                    builds the SQLite query database (D1) from the repo files
 │  └─ cli/                   `dsi ingest | map | build | validate`
@@ -71,6 +73,6 @@ Mapping files are plain JSON validated by `@dsi/schema`; their SKOS/RDF form is 
 2. `ontology/schemes` (done) + `packages/schema` (done).
 3. `sources/` + `packages/ingest`: Material, Carbon, Polaris done.
 4. `packages/mapper` + color-v1 scope: 3 agent rounds done; human review of the remaining queue in progress.
-5. `packages/canon`, `data/canonical`.
+5. `packages/resolve` (done), `packages/classify`, then `packages/canon` + `data/canonical`.
 6. `packages/db`: SQLite build in CI, D1 deploy, FTS5 search.
 7. `site/`, then the remaining concept domains and component tokens.

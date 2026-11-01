@@ -77,7 +77,7 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
   for (const f of walk(path.join(root, 'sources'), 'source.json')) {
     const data = read(f);
     if (data === undefined || !shape('source.schema.json', f, data)) continue;
-    const s = data as { product: string; implementation?: string; themes?: string[]; entries: { theme?: string }[] };
+    const s = data as { product: string; implementation?: string; themes?: string[]; modes?: Record<string, string>; entries: { theme?: string }[] };
     const at = rel(f);
     if (path.basename(path.dirname(f)) !== s.product) issues.push({ file: at, message: `folder must equal product "${s.product}"` });
     const p = catalog.get(s.product);
@@ -86,6 +86,10 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
     if (p.entry.category === 'dsi:category/design-system' && !s.implementation) issues.push({ file: at, message: 'Design Systems are ingested through an implementation (shipped code is the source of truth)' });
     if (s.implementation && implOf.get(s.implementation) !== s.product) issues.push({ file: at, message: `implementation "${s.implementation}" is not an implementation of "${s.product}"` });
     for (const en of s.entries) if (en.theme && !(s.themes ?? []).includes(en.theme)) issues.push({ file: at, message: `entry theme "${en.theme}" is not listed in themes` });
+    for (const [mode, theme] of Object.entries(s.modes ?? {})) {
+      if (!inScheme(ontology, `dsi:mode/${mode}`, 'dsi:scheme/mode')) issues.push({ file: at, message: `modes: "${mode}" is not in dsi:scheme/mode` });
+      if (!(s.themes ?? []).includes(theme)) issues.push({ file: at, message: `modes.${mode}: theme "${theme}" is not listed in themes` });
+    }
   }
 
   // Mappings

@@ -26,6 +26,22 @@ importers:
 
   packages/mapper:
     dependencies:
+      '@dsi/resolve':
+        specifier: workspace:*
+        version: link:../resolve
+      '@dsi/schema':
+        specifier: workspace:*
+        version: link:../schema
+    devDependencies:
+      '@types/node':
+        specifier: 24.0.0
+        version: 24.0.0
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
+  packages/resolve:
+    dependencies:
       '@dsi/schema':
         specifier: workspace:*
         version: link:../schema

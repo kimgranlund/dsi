@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { CONCEPT_FACETS, DSI, type Ontology } from '@dsi/schema';
-import { loadNative, resolve, showValue, type NativeSet } from './native.ts';
+import { loadNative, resolve, showValue, type NativeSet } from '@dsi/resolve';
 
 export interface Scope {
   id: string;
@@ -63,7 +63,7 @@ export function preparePacket(root: string, o: Ontology, scope: Scope, product: 
       ...(t.deprecated ? { deprecated: t.deprecated } : {}),
       themes: Object.fromEntries(themes.map((th) => {
         const r = resolve(set, th, p);
-        return [th || 'all', { aliases: r.chain, value: showValue(r.literal) }];
+        return [th || 'all', { aliases: r.chain, value: showValue(r.type, r.value) }];
       })),
     };
   });

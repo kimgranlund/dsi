@@ -23,7 +23,7 @@ const base = (): Files => ({
   'sources/material/source.json': {
     product: 'material', implementation: 'material-web', adapter: 'material',
     package: { registry: 'npm', name: '@material/web', version: '2.4.0' },
-    entries: [{ path: 'tokens/_md-sys-color.scss', format: 'scss', theme: 'light' }], themes: ['light', 'dark'],
+    entries: [{ path: 'tokens/_md-sys-color.scss', format: 'scss', theme: 'light' }], themes: ['light', 'dark'], modes: { light: 'light', dark: 'dark' },
     license: { spdx: 'Apache-2.0', redistribution: 'permitted' },
   },
   'mappings/material/2.4.0.mappings.json': {
@@ -72,6 +72,8 @@ const negatives: [string, (f: Record<string, any>) => void, RegExp][] = [
   ['ingesting a styling engine', (f) => (f['sources/tailwind/source.json'] = { ...f['sources/material/source.json'], product: 'tailwind', implementation: undefined }), /not an ingested category/],
   ['design system without implementation', (f) => delete f['sources/material/source.json'].implementation, /through an implementation/],
   ['version range instead of exact', (f) => (f['sources/material/source.json'].package.version = '^2.4.0'), /\/package\/version must match pattern/],
+  ['mode that is not canonical', (f) => (f['sources/material/source.json'].modes = { night: 'dark' }), /"night" is not in dsi:scheme\/mode/],
+  ['mode pointing at an unknown theme', (f) => (f['sources/material/source.json'].modes = { dark: 'g100' }), /theme "g100" is not listed/],
   ['entry theme not declared', (f) => (f['sources/material/source.json'].entries[0].theme = 'g100'), /entry theme "g100"/],
   ['unknown match type', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[0].match = 'equivalent'), /match "equivalent" is not in dsi:scheme\/match-types/],
   ['unknown review status', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[0].status = 'accepted'), /status "accepted"/],

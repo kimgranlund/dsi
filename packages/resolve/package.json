@@ -1,0 +1,17 @@
+{
+  "name": "@dsi/resolve",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "bin": { "dsi-resolve": "./src/cli.ts" },
+  "scripts": {
+    "check": "tsc -p . && node --test \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@dsi/schema": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.0",
+    "typescript": "5.8.3"
+  }
+}

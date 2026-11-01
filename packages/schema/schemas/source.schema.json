@@ -173,6 +173,20 @@
           }
         }
       }
+    },
+    "modes": {
+      "type": "object",
+      "description": "Which native theme represents each canonical mode (keys: slugs of dsi:scheme/mode; values: names from themes). Chosen from the product's own shipped metadata (e.g. Carbon's color-scheme extension); the canonical resolver answers a mode with this theme.",
+      "propertyNames": {
+        "$ref": "common.schema.json#/$defs/slug"
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "modesNote": {
+      "type": "string",
+      "description": "Evidence for the modes choice."
     }
   }
 }

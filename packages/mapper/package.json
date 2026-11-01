@@ -2,12 +2,15 @@
   "name": "@dsi/mapper",
   "private": true,
   "type": "module",
-  "bin": { "dsi-map": "./src/cli.ts" },
+  "bin": {
+    "dsi-map": "./src/cli.ts"
+  },
   "scripts": {
     "check": "tsc -p . && node --test \"test/**/*.test.ts\""
   },
   "dependencies": {
-    "@dsi/schema": "workspace:*"
+    "@dsi/schema": "workspace:*",
+    "@dsi/resolve": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "24.0.0",
