@@ -34,7 +34,7 @@ function refsIn(v: unknown): string[] {
 const sub = (type: string, v: unknown) => isRef(v) || valueIssue({ $type: type, $value: v }) === undefined;
 
 /** Minimal DTCG 2025.10 value-shape checks for the types the adapters emit. */
-function valueIssue(t: Tok): string | undefined {
+export function valueIssue(t: { $type?: string; $value: unknown }): string | undefined {
   const v = t.$value as Record<string, unknown>;
   switch (t.$type) {
     case 'color':

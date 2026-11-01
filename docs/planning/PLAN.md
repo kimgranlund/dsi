@@ -22,7 +22,7 @@ Ratified decisions live in [docs/decisions](../decisions/README.md); this plan k
 - Mapping conventions from review: [0008](../decisions/0008-mapping-conventions.md)
 - Polaris license override: [0009](../decisions/0009-polaris-license.md)
 
-Product: public, searchable explorer at `dsi.nonoun.io` on Cloudflare; audience is the owner, designers, developers and AI agents; v1 is done when the searchable site is live. Stack: TypeScript pnpm monorepo, Vite + vanilla site, SQLite built in CI and served from D1. Project license MIT; upstream licenses recorded per source. v1 systems: Material Web 2.5.0, Carbon Elements 11.84.0, Polaris tokens 9.4.2 (all ingested; 508 semantic color tokens mapped).
+Product: public, searchable explorer at `dsi.nonoun.io` on Cloudflare; audience is the owner, designers, developers and AI agents; v1 is done when the searchable site is live. Stack: TypeScript pnpm monorepo, Vite + vanilla site, SQLite built in CI. v1 serves static exports (site data + search index) from Cloudflare static assets; D1 + a Worker come with the agent API. Project license MIT; upstream licenses recorded per source. v1 systems: Material Web 2.5.0, Carbon Elements 11.84.0, Polaris tokens 9.4.2 (all ingested; 508 semantic color tokens mapped).
 
 ## 3. Open questions
 

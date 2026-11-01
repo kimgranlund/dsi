@@ -73,6 +73,6 @@ Mapping files are plain JSON validated by `@dsi/schema`; their SKOS/RDF form is 
 2. `ontology/schemes` (done) + `packages/schema` (done).
 3. `sources/` + `packages/ingest`: Material, Carbon, Polaris done.
 4. `packages/mapper` + color-v1 scope: done. All 508 semantic color tokens settled (350 mapped, 158 unmapped).
-5. `packages/resolve` (done), `packages/classify` (done; terms need review), then `packages/canon` + `data/canonical`.
-6. `packages/db`: SQLite build in CI, D1 deploy, FTS5 search.
+5. `packages/resolve`, `packages/classify`, `packages/canon` + `data/canonical`: done.
+6. `packages/db`: SQLite built in CI with FTS5; v1 serves static exports, D1 + Worker later for the agent API.
 7. `site/`, then the remaining concept domains and component tokens.

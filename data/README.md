@@ -11,7 +11,7 @@ Generated, committed so that upstream changes show up as reviewable diffs and th
 | `native/<product>/<version>/` | `@dsi/ingest` | `sources/<product>/source.json` + the npm package |
 | `classified/<product>/<version>.json` | `@dsi/classify run` | `mappings/<product>/terms.json` + `native/` |
 | `skos/<product>/<version>.jsonld` | `@dsi/resolve` (`skos-cli.ts`) | approved records in `mappings/` + `native/` + `ontology/` |
-| `canonical/` | `@dsi/canon` (planned) | `ontology/` + `mappings/` + `native/` |
+| `canonical/` | `@dsi/canon` | `ontology/` + approved `mappings/` + `native/` via `@dsi/resolve` |
 | SQLite / D1 (not in git) | `@dsi/db` (planned) | everything above + `catalog/` + `ontology/` |
 
 ## Checks

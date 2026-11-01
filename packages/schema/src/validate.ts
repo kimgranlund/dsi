@@ -5,7 +5,7 @@ import { createRequire } from 'node:module';
 import type { Ajv2020 } from 'ajv/dist/2020.js';
 import type { FormatsPlugin } from 'ajv-formats';
 import { DSI, expand, inScheme, loadOntology, toQuads, type Issue, type Ontology } from './ontology.ts';
-import { validateNative } from './native.ts';
+import { validateNative, valueIssue } from './native.ts';
 import { parseConcept } from './concepts.ts';
 
 // ajv and ajv-formats are CommonJS with a `default` export; load them through require for correct interop.
@@ -131,6 +131,33 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
 
   // Native tokens
   validateNative(root, ajv, issues);
+
+  // Canonical set: each token's value is a valid DTCG value, its concept a valid concept whose facet values form the
+  // token's name, its status match or nearest (never invented), and the manifest lists every file with its count.
+  const canonDir = path.join(root, 'data/canonical');
+  if (fs.existsSync(path.join(canonDir, 'manifest.json'))) {
+    const man = JSON.parse(fs.readFileSync(path.join(canonDir, 'manifest.json'), 'utf8')) as { files: { file: string; tokens: number }[] };
+    const listed = new Set(man.files.map((f) => f.file));
+    for (const f of fs.readdirSync(canonDir).filter((f) => f.endsWith('.tokens.json'))) if (!listed.has(f)) issues.push({ file: rel(path.join(canonDir, f)), message: 'not listed in manifest.json' });
+    for (const entry of man.files) {
+      const fp = path.join(canonDir, entry.file);
+      if (!fs.existsSync(fp)) { issues.push({ file: rel(fp), message: 'listed in manifest.json but missing' }); continue; }
+      const tree = JSON.parse(fs.readFileSync(fp, 'utf8')) as Record<string, Record<string, { $type?: string; $value: unknown; $extensions?: Record<string, any> }>>;
+      let n = 0;
+      for (const [group, tokens] of Object.entries(tree)) for (const [name, t] of Object.entries(tokens)) {
+        n++;
+        const at = `${group}.${name}`, x = t.$extensions?.['io.nonoun.dsi'];
+        const vi = valueIssue(t);
+        if (vi) issues.push({ file: rel(fp), message: `${at}: ${vi}` });
+        if (!x || (x.status !== 'match' && x.status !== 'nearest')) { issues.push({ file: rel(fp), message: `${at}: status must be match or nearest` }); continue; }
+        const ci = conceptIssue(ontology, x.concept);
+        if (ci) { issues.push({ file: rel(fp), message: `${at}: concept ${x.concept} ${ci}` }); continue; }
+        const pc = parseConcept(ontology, x.concept);
+        if (typeof pc !== 'string' && (pc.domain !== group || Object.values(pc.facets).map(String).join('-') !== name)) issues.push({ file: rel(fp), message: `${at}: name does not match concept ${x.concept}` });
+      }
+      if (n !== entry.tokens) issues.push({ file: rel(fp), message: `manifest says ${entry.tokens} tokens, file has ${n}` });
+    }
+  }
 
   // SKOS exports: valid JSON-LD; every dsi: IRI they reference is defined by the ontology or by the file itself,
   // and every mapping object is a valid concept.
