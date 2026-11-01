@@ -25,7 +25,8 @@ const USAGE = `usage:
   dsi-map tiebreak <scope> <run> <product> <first run>   two of three: approve where a third model agrees with one of the first two
   dsi-map settle <scope> <run> <product> <first run>     settle rules: three agree (cautious match), emphasis-only splits (rank or broad), two of three at 0.5
   dsi-map reconcile <scope> [--dry]               fold single-system concepts into shared ones where one facet separates them (ADR 0019)
-  dsi-map boundary-rules <scope> [--dry]          apply the deciding tests B1, B3, B4, B6 to the queue (ADR 0021)
+  dsi-map boundary-rules <scope> [--dry] [--jev]  apply the deciding tests B1, B3, B4, B6 to the queue (ADR 0021); --jev judges B4 where code cannot
+  dsi-map triage-conflicts <scope>                Jev judges approved boundary conflicts (B4, B6): test or approval likely right
   dsi-map boundaries <scope> [--top N] [--jev <run>]  rank the vocabulary boundaries answers disagree on
   dsi-map rank-emphasis <scope> <run> <product>   settle emphasis by contrast rank where both agents agree on the rest (ADR 0018)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
@@ -131,6 +132,9 @@ if (cmd === 'prepare') {
       if (it.preselect == null && s.confidence >= SUGGEST_AT && idx >= 0) { it.preselect = idx; it.preselectWhy = `Jev ${s.confidence.toFixed(2)} (${s.model})`; }
     }
     console.log(`jev: ${picks.size} picks, ${[...picks.values()].filter((s) => s.confidence >= SUGGEST_AT).length} at ${SUGGEST_AT} or more`);
+    // Kept so apply-review can grade Jev against the owner's decisions.
+    fs.mkdirSync(path.join(root, '.cache/jev'), { recursive: true });
+    fs.writeFileSync(path.join(root, '.cache/jev/review-picks.json'), JSON.stringify({ at: new Date().toISOString(), suggestAt: SUGGEST_AT, picks: Object.fromEntries(picks) }, null, 1));
   }
   // Several vocabulary runs: one card per word, examples from the first run that counted it.
   const termItems = [...(vocabRun && !vocabRun.startsWith('--') ? vocabRun.split(',').flatMap((r) => collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', r))) : [])
@@ -149,6 +153,32 @@ if (cmd === 'prepare') {
   if (!file || !reviewer) { console.error(USAGE); process.exit(2); }
   const raw = JSON.parse(fs.readFileSync(file, 'utf8'));
   const all = (Array.isArray(raw) ? raw : raw.documents ?? raw.docs ?? []).map((d: any) => d.data ?? d);
+  // Grade Jev's review picks against the owner's token decisions (ADR 0020 follow-up): before applying, while the
+  // chosen candidate records still read as proposed. Appends to packages/jev/experiments/OWNER-SCORES.md.
+  const picksFile = path.join(root, '.cache/jev/review-picks.json');
+  const tokenDecisions = all.filter((d: any) => 'token' in d && !('iri' in d));
+  if (fs.existsSync(picksFile) && tokenDecisions.length) {
+    const pk = JSON.parse(fs.readFileSync(picksFile, 'utf8'));
+    const rows: { product: string; confident: boolean; right: boolean }[] = [];
+    for (const d of tokenDecisions) {
+      const p = pk.picks[d.key];
+      if (!p) continue;
+      let owner: string | undefined;
+      if (d.action === 'custom') owner = d.concept;
+      else if (d.action === 'accept') { const m = (readMappings(root, d.product, scope.products[d.product].version) as any)?.mappings.find((x: any) => x.id === d.candidateId); owner = m?.concept; }
+      else if (d.action === 'unmapped') owner = '(none)';
+      if (!owner) continue;
+      rows.push({ product: d.product, confident: p.confidence >= pk.suggestAt, right: p.concept === owner });
+    }
+    if (rows.length) {
+      const pct = (xs: typeof rows) => (xs.length ? `${Math.round((1000 * xs.filter((x) => x.right).length) / xs.length) / 10}% of ${xs.length}` : '-');
+      const f = path.join(root, 'packages/jev/experiments/OWNER-SCORES.md');
+      if (!fs.existsSync(f)) fs.writeFileSync(f, '# Jev picks graded against owner decisions\n\nAppended by `apply-review` (picks from `review --jev`).\n\n| Date | Picks graded | All picks right | Confident picks right | By product (confident) |\n|---|---|---|---|---|\n');
+      const byP = [...new Set(rows.map((r) => r.product))].map((p) => `${p} ${pct(rows.filter((r) => r.product === p && r.confident))}`).join('; ');
+      fs.appendFileSync(f, `| ${new Date().toISOString().slice(0, 10)} | ${rows.length} | ${pct(rows)} | ${pct(rows.filter((r) => r.confident))} | ${byP} |\n`);
+      console.log(`jev graded: all ${pct(rows)}, confident ${pct(rows.filter((r) => r.confident))}`);
+    }
+  }
   // Token decisions and term decisions may come in one export; term decisions carry a `term` field.
   console.log('tokens', JSON.stringify(applyDecisions(root, scope, all.filter((d: any) => 'token' in d) as Decision[], reviewer)));
   console.log('terms ', JSON.stringify(applyTermDecisions(root, all.filter((d: any) => 'term' in d && !('kind' in d) && !('iri' in d)) as TermDecision[], reviewer)));
@@ -344,6 +374,7 @@ if (cmd === 'prepare') {
   const at = new Date().toISOString();
   const totals: Record<string, number> = { settled: 0, stillOpen: 0, approvedBreaking: 0 };
   const conflicts: string[] = [];
+  const judgeFn = process.argv.includes('--jev') ? await (await import('@dsi/jev/roles')).boundaryJudge(root, ontology) : undefined;
   for (const [product, { version }] of Object.entries(scope.products)) {
     const mf = path.join(root, 'mappings', product, `${version}.mappings.json`);
     if (!fs.existsSync(mf)) continue;
@@ -352,14 +383,17 @@ if (cmd === 'prepare') {
     const t = new BoundaryTests(root, product, version, pageTok);
     const by = new Map<string, any[]>();
     for (const m of file.mappings) if (m.concept.startsWith('dsi:concept/color/')) (by.get(m.token) ?? by.set(m.token, []).get(m.token)!).push(m);
+    // --jev: B4 statement judgements for queued tokens the code test cannot decide (ADR 0021 amended).
+    const jevB4 = new Map<string, boolean | undefined>();
+    if (judgeFn) await Promise.all([...by].filter(([tok, ms]) => !ms.some((m) => m.status === 'approved') && ms.some((m) => m.status === 'proposed' && /on-fill/.test(m.concept)) && t.onFill(tok) === undefined).map(async ([tok]) => { const j = await judgeFn!(product, version, tok, 'B4'); jevB4.set(tok, j.decided); }));
     const breaking: string[] = [];
     let settled = 0, open = 0;
     for (const [token, ms] of by) {
       const ap = ms.find((m) => m.status === 'approved');
-      if (ap) { const n = normalize(t, token, ap.concept, !!pageTok); if (n.applied.length && !n.applied.every((r) => r === 'B1' && /usage-categorical/.test(ap.concept))) breaking.push(`${token}: ${n.applied.join(',')} -> ${n.concept.replace('dsi:concept/color/', '')}`); continue; }
+      if (ap) { const n = normalize(t, token, ap.concept, !!pageTok, jevB4); if (n.applied.length && !n.applied.every((r) => r === 'B1' && /usage-categorical/.test(ap.concept))) breaking.push(`${token}: ${n.applied.join(',')} -> ${n.concept.replace('dsi:concept/color/', '')}`); continue; }
       const props = ms.filter((m) => m.status === 'proposed');
       if (props.length < 1) continue;
-      const norm = props.map((m) => ({ m, n: normalize(t, token, m.concept, !!pageTok) }));
+      const norm = props.map((m) => ({ m, n: normalize(t, token, m.concept, !!pageTok, jevB4) }));
       let keep = norm;
       if (norm.some((x) => x.n.needsEmphasis)) { const withE = norm.filter((x) => /emphasis-/.test(x.n.concept)); if (withE.length) keep = withE; }
       const concepts = [...new Set(keep.map((x) => x.n.concept))];
@@ -383,6 +417,16 @@ if (cmd === 'prepare') {
   }
   fs.writeFileSync(path.join(root, '.cache/boundary-conflicts.txt'), conflicts.join('\n') + '\n');
   console.log(`boundary-rules${dry ? ' (dry run)' : ''}: ${JSON.stringify(totals)}; approved conflicts -> .cache/boundary-conflicts.txt`);
+} else if (cmd === 'triage-conflicts') {
+  // ADR 0021 amended: Jev's statement judgement on approved mappings that break a boundary test (B4, B6 only).
+  const { triageConflicts } = await import('./triage.ts');
+  const { boundaryJudge } = await import('@dsi/jev/roles');
+  const list = await triageConflicts(root, scope, await boundaryJudge(root, ontology));
+  fs.writeFileSync(path.join(root, '.cache/boundary-triage.json'), JSON.stringify(list, null, 1));
+  const c: Record<string, number> = {};
+  for (const x of list) c[x.verdict] = (c[x.verdict] ?? 0) + 1;
+  console.log(`triage: ${JSON.stringify(c)} -> .cache/boundary-triage.json`);
+  for (const x of list.filter((x) => x.verdict !== 'owner').slice(0, 40)) console.log(`  ${x.verdict.padEnd(8)} ${x.product} ${x.token} [${x.rules}] ${x.detail}`);
 } else if (cmd === 'boundaries') {
   // Rank the vocabulary boundaries the answers disagree on (docs/planning/boundaries.md; one owner decision per pair).
   const { mineBoundaries } = await import('./boundaries.ts');

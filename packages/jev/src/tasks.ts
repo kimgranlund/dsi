@@ -26,6 +26,7 @@ export interface Experiment {
     | { kind: 'staged'; first: string[]; then: string[]; criteria?: 'definition' | 'label' }
     | { kind: 'merged'; jevTop: number }
     | { kind: 'words' }
+    | { kind: 'predicate'; boundary: 'B4' | 'B7' | 'B8' | 'B6' | 'B1' | 'B3'; margin?: number }
     | { kind: 'noul'; neighbors?: number }
     | { kind: 'usage-noul'; threshold?: number };
 }

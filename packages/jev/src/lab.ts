@@ -7,7 +7,7 @@ import { loadOntology } from '@dsi/schema';
 import { Jev, type Request, type Response } from './client.ts';
 import { Context, loadGold, loadOwnerChoices, loadWords, sample, type Experiment, type GoldItem } from './tasks.ts';
 import { confusions, isCorrect, summarize, type Scored } from './metrics.ts';
-import { prescreen } from './roles.ts';
+import { prescreen, STATEMENTS } from './roles.ts';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const resultsDir = path.join(root, '.cache/jev/results');
@@ -21,10 +21,29 @@ const USAGE = `usage:
   dsi-jev errors <name> [facet]                 most common confusions
   dsi-jev show <name> <token>                   one item: state, gold, answers
   dsi-jev gaps [--products fluent,spectrum]      Jev's pick for sample-card parts a system has no approved token for
+  dsi-jev contrast                              generate contrastive option descriptions from .cache/boundaries.json
   dsi-jev prescreen [--margin 0.2] [--offline]  audit pre-screen: write .cache/jev/prescreen.json for audit-prepare --only`;
 
 const o = await loadOntology(path.join(root, 'ontology'));
 const gold = loadGold(root, o);
+
+/** Ground truth of a boundary statement for an approved mapping. */
+function predicateTruth(b: string, g: GoldItem): boolean {
+  const f = g.facets;
+  if (b === 'B4') return (f.usage ?? '').split('+').includes('on-fill');
+  if (b === 'B7') return (f.usage ?? '').split('+').includes('code-surface') || !!f.syntax;
+  if (b === 'B8') return f.intent === 'neutral';
+  if (b === 'B6') return f.property === 'foreground';
+  if (b === 'B3') return (f.usage ?? '').split('+').includes('surface');
+  return !!f.emphasis; // B1
+}
+function predicatePool(b: string, gold: GoldItem[]): GoldItem[] {
+  const content = (g: GoldItem) => ['text', 'icon', 'foreground'].includes(g.facets.property ?? '');
+  if (b === 'B4' || b === 'B6') return gold.filter(content);
+  if (b === 'B8') return gold.filter((g) => !g.facets.hue && (g.facets.intent === 'neutral' || !g.facets.intent));
+  if (b === 'B3') return gold.filter((g) => ['background', 'fill'].includes(g.facets.property ?? '') && !(g.facets.usage ?? '').split('+').some((u) => ['page', 'overlay', 'scrim', 'inverse', 'categorical', 'data-viz', 'code-surface'].includes(u)));
+  return gold;
+}
 
 /** Concepts the mapping agents proposed for a token (any status), excluding owner-authored records. */
 function loadAgentAnswers(g: GoldItem): string[] {
@@ -41,6 +60,7 @@ function build(ctx: Context, e: Experiment, g: GoldItem): { req: Request; key?: 
   const model = e.model ?? 'jev-latest';
   const q = e.questions;
   if (q.kind === 'facets' || q.kind === 'two-stage') return { req: { model, state, questions: ctx.facetQuestions(q.facets, q.criteria, q.kind === 'facets' ? q.instructions : 'plain', q.noneKey) } };
+  if (q.kind === 'predicate') { const st = STATEMENTS[q.boundary]; return { req: { model, state, questions: { yes: { type: 'noul', instructions: st.yes }, no: { type: 'noul', instructions: st.no } } } }; }
   if (q.kind === 'staged') return { req: { model, state, questions: ctx.facetQuestions(q.first, q.criteria) } };
   if (q.kind === 'words') {
     const w = (g as any).word;
@@ -95,6 +115,12 @@ function score(e: Experiment, g: GoldItem, b: ReturnType<typeof build>, r: Respo
     const a = extra?.answers.concept; const pred = b.key?.[a?.choice ?? ''] ?? '(none)';
     return [{ ...base, facet: 'recall@k', gold: g.concept, pred: b.key && Object.values(b.key).includes(g.concept) ? g.concept : '(missed)', confidence: 1, correct: !!b.key && Object.values(b.key).includes(g.concept) }, { ...base, facet: 'concept', gold: g.concept, pred, confidence: a?.confidence ?? 0, correct: pred === g.concept }];
   }
+  if (q.kind === 'predicate') {
+    const truth = predicateTruth(q.boundary, g);
+    const m = (r.answers.yes?.noul ?? 0) - (r.answers.no?.noul ?? 0);
+    const decided = Math.abs(m) >= (q.margin ?? 0.3);
+    return [{ ...base, facet: 'pairwise', gold: String(truth), pred: String(m > 0), confidence: Math.min(1, Math.abs(m)), correct: (m > 0) === truth }, ...(decided ? [{ ...base, facet: 'decided@margin', gold: String(truth), pred: String(m > 0), confidence: Math.min(1, Math.abs(m)), correct: (m > 0) === truth }] : [])];
+  }
   if (q.kind === 'staged') { const pf = postFacets({ ...e, post: { grammar: true, ...(e.post ?? {}) } }, { ...r.answers, ...(extra?.answers ?? {}) }, [...q.first, ...q.then], 'none'); return [...q.first, ...q.then].map((f) => ({ ...base, facet: f, gold: g.facets[f] ?? '', pred: pf[f].pred, confidence: pf[f].confidence, correct: isCorrect(g.facets[f], pf[f].pred) })); }
   if (q.kind === 'words') {
     const w = g as any; const fa = r.answers.facet; const fp = fa?.choice ?? 'none';
@@ -131,7 +157,9 @@ if (cmd === 'gold') {
   if (!file) { console.error(USAGE); process.exit(2); }
   const e = JSON.parse(fs.readFileSync(file, 'utf8')) as Experiment;
   const wordsAsGold = () => loadWords(root).map((w) => ({ product: w.product, version: w.version, token: `${w.term}`, concept: '', facets: {}, tier: w.tier as GoldItem['tier'], method: '', word: w.term, wordFacet: w.facet, wordValue: w.value } as GoldItem));
-  const items = sample(e.questions.kind === 'owner-choice' || e.questions.kind === 'merged' ? loadOwnerChoices(root, o) : e.questions.kind === 'words' ? wordsAsGold() : gold, e.sample);
+  // Predicate runs balance true and false cases so pairwise accuracy is not a base-rate artifact.
+  const balanced = (b: string) => { const pool = predicatePool(b, gold); const t = sample(pool.filter((g) => predicateTruth(b, g)), { ...e.sample, n: Math.floor(e.sample.n / 2) }); const f = sample(pool.filter((g) => !predicateTruth(b, g)), { ...e.sample, n: Math.ceil(e.sample.n / 2) }); return [...t, ...f]; };
+  const items = e.questions.kind === 'predicate' ? balanced(e.questions.boundary) : sample(e.questions.kind === 'owner-choice' || e.questions.kind === 'merged' ? loadOwnerChoices(root, o) : e.questions.kind === 'words' ? wordsAsGold() : gold, e.sample);
   const ctx = new Context(root, o, gold);
   if (e.criteriaFile) ctx.override = Object.assign({}, ...e.criteriaFile.split(',').map((f) => JSON.parse(fs.readFileSync(path.resolve(root, f), 'utf8'))));
   const built = items.map((g) => ({ g, b: build(ctx, e, g) }));
@@ -206,6 +234,25 @@ if (cmd === 'gold') {
   const ctx = new Context(root, o, gold);
   if (g) console.log(ctx.state(g, r.experiment.state.kind, r.experiment.state.format), '\ngold:', g.concept);
   console.log(JSON.stringify(r.raw.find((x: any) => x.token === args[1])?.answers, null, 1));
+} else if (cmd === 'contrast') {
+  // Generate contrastive option descriptions from the mined boundaries (.cache/boundaries.json): each value's
+  // definition plus "not <neighbor>" for its two most-confused neighbors; "none" names what it is confused with.
+  const pairs = JSON.parse(fs.readFileSync(path.join(root, '.cache/boundaries.json'), 'utf8')) as { facet: string; a: { value: string }; b: { value: string }; score: number }[];
+  const ctx = new Context(root, o, gold);
+  const out: Record<string, string> = {};
+  const short = (f: string, v: string) => { const w = ctx.lex.get(`dsi:${f}/${v}`); return w ? `${w.label.toLowerCase()} (${(w.definition ?? '').replace(/\.$/, '').split(/[,;:]/)[0].toLowerCase()})` : v; };
+  for (const f of ['intent', 'usage', 'hue', 'property', 'emphasis', 'state']) {
+    for (const v of [...ctx.usedValues(f), 'none']) {
+      const nb = pairs.filter((p) => p.facet === f && (p.a.value === v || p.b.value === v)).sort((x, y) => y.score - x.score).map((p) => (p.a.value === v ? p.b.value : p.a.value)).filter((x) => x !== v && !x.includes('+')).slice(0, 2);
+      if (!nb.length) continue;
+      const nots = nb.map((x) => (x === 'none' ? 'not general-purpose' : `not ${short(f, x)}`)).join('; ');
+      if (v === 'none') out[`none:${f}`] = `Not specific to this dimension; ${nb.map((x) => `not ${short(f, x)}`).join('; ')}.`;
+      else { const w = ctx.lex.get(`dsi:${f}/${v}`); if (w) out[`dsi:${f}/${v}`] = `${(w.definition ?? w.label).replace(/\.$/, '')}; ${nots}.`; }
+    }
+  }
+  const file = path.join(root, 'packages/jev/experiments/criteria-generated.json');
+  fs.writeFileSync(file, JSON.stringify(out, null, 2) + '\n');
+  console.log(`${Object.keys(out).length} contrastive descriptions -> ${path.relative(root, file)}`);
 } else if (cmd === 'prescreen') {
   const r = await prescreen(root, o, { margin: opt('--margin') ? Number(opt('--margin')) : undefined, offline: flag('--offline') });
   const out = path.join(root, '.cache/jev/prescreen.json');

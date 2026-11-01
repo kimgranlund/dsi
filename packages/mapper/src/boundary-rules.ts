@@ -113,7 +113,8 @@ export class BoundaryTests {
     if (i < 0) return /fg|foreground|content/i.test(token) ? false : undefined;
     // The system ships a separate icon family at the same place in the name (color.icon.* beside color.text.*).
     const prefix = [...ws.slice(0, i), ws[i][0] === 'T' ? 'Icon' : 'icon'].join('');
-    return this.names.some((n) => n.startsWith(prefix));
+    // ... or anywhere in its names (Spectrum icon-color-* beside *-text-color).
+    return this.names.some((n) => n.startsWith(prefix) || /(^|[.\-_])icon[.\-_]?colou?r|(^|[.\-_])icon([.\-_]|$)/i.test(n));
   }
 }
 
@@ -123,7 +124,7 @@ const ORDER = ['intent', 'usage', 'hue', 'syntax', 'component', 'part', 'propert
 export const conceptOf = (domain: string, f: Map<string, string[]>) => `dsi:concept/${domain}/` + ORDER.filter((k) => f.get(k)?.length).map((k) => `${k}-${[...new Set(f.get(k)!)].sort().join('+')}`).join('/');
 
 /** Normalize one answer's boundary facets by the tests. Returns the concept and which rules changed it. */
-export function normalize(t: BoundaryTests, token: string, concept: string, hasPage: boolean): { concept: string; applied: string[]; needsEmphasis: boolean } {
+export function normalize(t: BoundaryTests, token: string, concept: string, hasPage: boolean, jevB4?: Map<string, boolean | undefined>): { concept: string; applied: string[]; needsEmphasis: boolean } {
   const domain = concept.split('/')[1];
   const f = facetsOf(concept);
   const applied: string[] = [];
@@ -144,10 +145,16 @@ export function normalize(t: BoundaryTests, token: string, concept: string, hasP
     f.set('usage', [...u]);
   }
   // B4
-  if ((f.get('usage') ?? []).includes('on-fill') && ['text', 'icon', 'foreground'].some((p) => f.get('property')?.includes(p)) && t.onFill(token) === false) { f.set('usage', (f.get('usage') ?? []).filter((x) => x !== 'on-fill')); applied.push('B4'); }
+  if ((f.get('usage') ?? []).includes('on-fill') && ['text', 'icon', 'foreground'].some((p) => f.get('property')?.includes(p))) {
+    const code = t.onFill(token);
+    const decided = code ?? jevB4?.get(token); // the code test first; Jev's statement judgement only where code finds no evidence
+    if (decided === false) { f.set('usage', (f.get('usage') ?? []).filter((x) => x !== 'on-fill')); applied.push(code === undefined ? 'B4/jev' : 'B4'); }
+  }
   // B6
   const prop = f.get('property')?.[0];
-  if (prop === 'text' || prop === 'foreground') {
+  // Syntax, code-surface and link colors are text by nature whatever the name says (triage, 2026-11-01): B6 skips them.
+  const textByNature = f.has('syntax') || (f.get('usage') ?? []).some((u) => u === 'code-surface' || u === 'link');
+  if ((prop === 'text' || prop === 'foreground') && !textByNature) {
     const txt = t.textNotForeground(token);
     if (txt === true && prop === 'foreground') { f.set('property', ['text']); applied.push('B6'); }
     if (txt === false && prop === 'text') { f.set('property', ['foreground']); applied.push('B6'); }

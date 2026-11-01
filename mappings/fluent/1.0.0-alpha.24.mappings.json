@@ -3500,18 +3500,42 @@
       }
     },
     {
+      "id": "m-398402953b36",
+      "token": "colorNeutralForeground1Static",
+      "concept": "dsi:concept/color/property-foreground",
+      "match": "close",
+      "confidence": 0.45,
+      "status": "approved",
+      "rationale": "Answers normalized by the boundary tests (B1, B4/jev) agree. Evidence: values and names (ADR 0021).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T18:49:14.210Z",
+        "method": "boundary-rule-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T18:49:14.210Z",
+        "note": "Deterministic boundary tests (ADR 0021)."
+      }
+    },
+    {
       "id": "m-6072860fca9b",
       "token": "colorNeutralForeground1Static",
       "concept": "dsi:concept/color/property-foreground/emphasis-strong",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Foreground1 value (#242424) fixed across themes, for content on light surfaces in any theme. Invariance is not a concept (ADR 0010).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T18:49:14.210Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-foreground close."
       }
     },
     {
@@ -3520,13 +3544,18 @@
       "concept": "dsi:concept/color/usage-on-fill/property-foreground",
       "match": "close",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Fixed dark text (#242424 both modes) for static light surfaces and fills.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "boundary-rule",
+        "at": "2026-11-01T18:49:14.210Z",
+        "note": "Settled by boundary tests (ADR 0021): dsi:concept/color/property-foreground close."
       }
     },
     {

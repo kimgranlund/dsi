@@ -46,3 +46,13 @@ Appended by `dsi-jev run`. Full results: `.cache/jev/results/<name>.json`.
 | r5-f-staged | jev-1.14.0 | 140 | 30.7 | property 91.4, usage 60, intent 77.9, hue 84.3, emphasis 72.1, state 95 | 5.8 | 100 (0.7) | 281 (0) | 376417/80820 |
 | r5-g-merged | jev-1.14.0 | 84 | 45.2 | recall 90.5, concept 54.8, agent-baseline 60.7 | 20.2 | 70 (35.7) | 157 (12) | 212138/46679 |
 | r5-h-words | jev-1.14.0 | 198 | 39.4 | word-facet 57.5, word-value 39.5 | 14.2 | 79.7 (37.4) | 201 (0) | 487939/127997 |
+| r6-pred-B4 | jev-1.14.0 | 89 | 84.3 | pairwise 84.3, decided@margin 98.4 | 38.5 | 100 (2.2) | 90 (0) | 38725/3224 |
+| r6-pred-B7 | jev-1.14.0 | 120 | 99.2 | pairwise 99.2, decided@margin 100 | 25.9 | 100 (37.5) | 121 (0) | 50341/4340 |
+| r6-pred-B8 | jev-1.14.0 | 65 | 52.3 | pairwise 52.3, decided@margin 50 | 28.2 | null (0) | 66 (0) | 27607/2360 |
+| r6-pred-B6 | jev-1.14.0 | 120 | 79.2 | pairwise 79.2, decided@margin 100 | 46.2 | 100 (2.5) | 121 (0) | 48948/4340 |
+| r6-pred-B1 | jev-1.14.0 | 120 | 65 | pairwise 65, decided@margin 76.1 | 24.7 | 88.9 (7.5) | 121 (0) | 49915/4340 |
+| r6-pred-B3 | jev-1.14.0 | 117 | 71.8 | pairwise 71.8, decided@margin 88.6 | 43.3 | 100 (1.7) | 118 (0) | 49426/4232 |
+| r6-a-lexicon | jev-1.14.0 | 140 | 25 | intent 77.9, usage 52.1, hue 84.3, property 90.7, emphasis 69.3, state 96.4 | 4.4 | null (0) | 47 (94) | 98953/26428 |
+| r6-b-hand | jev-1.14.0 | 140 | 32.1 | intent 78.6, usage 58.6, hue 85.7, property 93.6, emphasis 68.6, state 96.4 | 5.1 | 100 (0.7) | 141 (0) | 330154/80379 |
+| r6-c-generated | jev-1.14.0 | 140 | 17.9 | intent 65, usage 50.7, hue 85, property 92.1, emphasis 71.4, state 96.4 | 4.5 | null (0) | 141 (0) | 391334/80408 |
+| r6-d-both | jev-1.14.0 | 140 | 33.6 | intent 78.6, usage 59.3, hue 85.7, property 93.6, emphasis 67.9, state 96.4 | 5 | 33.3 (2.1) | 141 (0) | 383774/80374 |

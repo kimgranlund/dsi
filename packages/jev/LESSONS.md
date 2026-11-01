@@ -71,3 +71,26 @@ Fresh, convention-free sample of 140 (seed 3), e12 settings as the baseline (joi
 ### Where this leaves the roles
 
 Jev is a good **checker** (pairwise Noul, 94 to 96%) and a good **confident suggester** (Choice at 0.85 or more is right 93 to 99% of the time). It is not a better **judge of hard cases** than the agents. The levers that worked were all about the question: limiting options to the domain, contrastive descriptions, enforcing the grammar afterwards, and comparing instead of thresholding.
+
+## Round 6 (2026-11-01): boundary statements, conflict triage, generated contrast
+
+- **Boundary statements are Jev's best use so far.** Each statement is scored against its negation on balanced true/false approved mappings (seed 4). Accuracy when it answers, at margin 0.3:
+
+  | Boundary | Both directions right | Answered | Accuracy |
+  |---|---|---|---|
+  | B7 "colors code" | 99.2% | 98% | 100% |
+  | B4 "on a bold fill" | 84% | 72% | 98% |
+  | B6 "colors both text and icons" | 79% | 48% | 100% |
+  | B1 "one step of a ladder" | 65% | 59% | 76% |
+  | B3 "a container on the page" | 72% | 38% | 89% |
+  | B8 "neutral member of a status set" | 52% | 46% | 50% |
+
+  B3 is one-sided: it is right on 95% of surfaces but only half the non-surfaces. Use Jev for B4, B6 and B7; not for B1, B3 or B8.
+- **B4 tie-break in `boundary-rules --jev`.** Where the code test finds no fill, Jev's B4 judgement decides. It settled one more token on its first run, since most open on-fill tokens already had code evidence.
+- **Conflict triage found test bugs first.** `dsi-map triage-conflicts` had Jev judge the B4 and B6 conflicts. It sided with the approvals on 23 of them, and they were a misfiring test:
+  - Syntax, code and link colors are text whatever their names say.
+  - Spectrum names icon colors `icon-color-*`, not in the same name position as text.
+
+  After the fixes, approved conflicts fell from 97 to 76: 59 B1 and 11 B3 for the owner, plus 6 Polaris `color-text-*-on-bg-fill`, where Jev says foreground against the test's text.
+- **Generated contrastive descriptions lose to hand-written ones.** Mechanical "<definition>; not <neighbor>; not general-purpose" text built from the boundary list gives 17.9% joint vs 25% for plain definitions and 32.1% for the hand-written set; intent drops from 78 to 65%. Combined, with hand-written text winning where both exist, it scores 33.6%, within noise. Contrast helps only when it is written as a real distinction.
+- **Owner grading is wired.** `review --jev` saves its picks (`.cache/jev/review-picks.json`), and `apply-review` grades them against the owner's token decisions in `experiments/OWNER-SCORES.md`.

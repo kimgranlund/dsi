@@ -71,3 +71,41 @@ export async function suggest(root: string, o: Ontology, items: { product: strin
   }));
   return out;
 }
+
+/**
+ * Deciding statements for boundaries (ADR 0021): a statement and its negation, scored by Noul in one request and
+ * compared, never thresholded alone (raw Noul is poorly calibrated; the pilot's pairwise accuracy is 94 to 96%).
+ */
+export const STATEMENTS: Record<string, { yes: string; no: string }> = {
+  B4: { yes: 'This token colors text or icons placed on a bold, solid colored fill, such as the label of a filled button.', no: 'This token colors text or icons on the page, a card or a subtle tinted background, not on a solid colored fill.' },
+  B5: { yes: 'This token paints non-text graphics such as icons, status dots, illustrations, or chart and meter fills.', no: 'This token paints one specific part of an element: its text, background or border.' },
+  B7: { yes: 'This token colors code: syntax, code blocks, editors, diffs or line numbers.', no: 'This token colors ordinary interface elements, not code.' },
+  B8: { yes: 'This token is the neutral member of a set of status colors, beside danger, success, warning or info versions of the same role.', no: 'This token is a plain gray for structure, with no status meaning.' },
+  B1: { yes: 'This token is one step of a strength ladder: its family has weaker and stronger siblings of the same role.', no: 'This token stands alone: it has no weaker or stronger siblings of the same role.' },
+  B3: { yes: 'This token colors a container placed on the page, such as a card, panel or layer.', no: 'This token is not specific to containers on the page; it applies anywhere or to the page itself.' },
+  B6: { yes: 'This one token colors both text and icons.', no: 'This token colors text only; the system has separate icon colors.' },
+};
+export const JUDGE_MARGIN = 0.3;
+
+export interface Judgement { yes: number; no: number; margin: number; decided?: boolean; model: string }
+
+export async function judge(jev: Jev, state: unknown, boundary: string, margin = JUDGE_MARGIN): Promise<Judgement> {
+  const s = STATEMENTS[boundary];
+  const r = await jev.ask({ model: 'jev-latest', state, questions: { yes: { type: 'noul', instructions: s.yes }, no: { type: 'noul', instructions: s.no } } });
+  const yes = r.answers.yes?.noul ?? 0, no = r.answers.no?.noul ?? 0;
+  return { yes, no, margin: yes - no, decided: Math.abs(yes - no) >= margin ? yes > no : undefined, model: r.model };
+}
+
+/**
+ * A boundary judge bound to one repo state: judge(product, version, token, boundary). Used by boundary-rules for
+ * tokens a code test cannot decide (B4) and to triage approved conflicts (B4, B6). Benchmarks (round 6): B7 99%,
+ * B4 98% at margin 0.3 (72% decided), B6 100% at margin (48% decided); B1 76% and B3 89% one-sided: not used; B8 50%.
+ */
+export const RELIABLE = new Set(['B4', 'B6', 'B7']);
+export async function boundaryJudge(root: string, o: Ontology, opts: { offline?: boolean } = {}) {
+  const gold = loadGold(root, o);
+  const ctx = new Context(root, o, gold);
+  const jev = new Jev(root, { offline: opts.offline });
+  await jev.version();
+  return (product: string, version: string, token: string, boundary: string) => judge(jev, ctx.state({ product, version, token, concept: '', facets: {}, tier: 'agent', method: '' }, 'full+siblings', 'text'), boundary);
+}

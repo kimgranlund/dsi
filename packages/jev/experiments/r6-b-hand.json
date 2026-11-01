@@ -1,0 +1,35 @@
+{
+  "name": "r6-b-hand",
+  "hypothesis": "Hand-written contrastive usage and none descriptions (r5 winner).",
+  "sample": {
+    "n": 140,
+    "seed": 3,
+    "tier": "no-convention"
+  },
+  "state": {
+    "kind": "full+siblings",
+    "format": "text"
+  },
+  "post": {
+    "grammar": true,
+    "noneBoost": {
+      "intent": 0.3,
+      "usage": 0.3,
+      "hue": 0.3,
+      "emphasis": 0.2
+    }
+  },
+  "questions": {
+    "kind": "facets",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "criteria": "definition"
+  },
+  "criteriaFile": "packages/jev/experiments/criteria-contrastive.json"
+}

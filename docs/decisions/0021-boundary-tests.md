@@ -19,3 +19,10 @@ Each test reads only names, descriptions and values per mode (`packages/mapper/s
 - First run: 42 queued tokens settled. 19 of them use new concepts, which the registry gate holds for the owner. 97 approved mappings conflict with a test; the largest groups are Primer `fgColor`/codeMirror text vs foreground (13) and emphasis on families that are not contrast-ordered ladders (Polaris 12, Fluent 12, Atlassian 10).
 - The tests' wording goes into the mapping prompt and Jev's option descriptions. A validator check is deferred until the conflicts are reviewed, so that `pnpm check` does not fail on decisions taken before this ADR.
 - B2 (word vs contrast order), B5 (graphics without a property), B7 (code surface) and B8 (neutral intent) remain open.
+
+## Amendment, 2026-11-01 (owner decision: Jev in boundary tests)
+
+- **B4 tie-break.** Where the code test finds no fill to pair with, `boundary-rules --jev` uses Jev's judgement of "this token colors text or icons on a bold, solid fill" against its negation, decided at a margin of 0.3 (98% accurate on 72% of balanced cases).
+- **B6 refinements from triage.** Syntax, code-surface and link colors are text by nature, so B6 skips them. A system "ships icon colors" when any token name has an icon-color segment, not only at the same name position.
+- **Conflict triage.** `dsi-map triage-conflicts` has Jev judge approved conflicts on B4 and B6 only. B1 and B3 stay for the owner: Jev's accuracy there is 76% and one-sided. After the refinements, 76 approved conflicts remain (59 B1, 11 B3, 6 B6).
+- B7 can use Jev's "colors code" judgement (99 to 100%) as its deciding test once the owner decides B7.
