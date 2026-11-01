@@ -16,6 +16,7 @@ A public, searchable index of design-system tokens. Each system's shipped tokens
 | Scope, priorities, open questions | `docs/planning/PLAN.md` | `docs/decisions/README.md` |
 | Repo structure, where a file goes | `docs/planning/repo-layout.md` | area README |
 | Add a design system or component library | `catalog/README.md`, `sources/README.md` | `packages/ingest/README.md` |
+| Add a design system (end to end) | `.claude/skills/add-design-system/SKILL.md` | its `references/runbook.md` |
 | Wrong or missing ingested token | `sources/<product>/source.json` | `packages/ingest/README.md` |
 | Add or change a concept, facet, tier, category | `docs/glossary.md`, `ontology/README.md` | `docs/decisions/` |
 | Write, review or fix mappings | `mappings/README.md`, `docs/decisions/0008-mapping-conventions.md` | `packages/mapper/README.md` |
