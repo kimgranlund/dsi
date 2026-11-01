@@ -25,6 +25,7 @@ const USAGE = `usage:
   dsi-map tiebreak <scope> <run> <product> <first run>   two of three: approve where a third model agrees with one of the first two
   dsi-map settle <scope> <run> <product> <first run>     settle rules: three agree (cautious match), emphasis-only splits (rank or broad), two of three at 0.5
   dsi-map reconcile <scope> [--dry]               fold single-system concepts into shared ones where one facet separates them (ADR 0019)
+  dsi-map boundaries <scope> [--top N] [--jev <run>]  rank the vocabulary boundaries answers disagree on
   dsi-map rank-emphasis <scope> <run> <product>   settle emphasis by contrast rank where both agents agree on the rest (ADR 0018)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
 
@@ -332,6 +333,16 @@ if (cmd === 'prepare') {
     if (!dry) { file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id)); fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n'); }
   }
   console.log(`reconcile${dry ? ' (dry run)' : ''}: ${JSON.stringify(counts)}`);
+} else if (cmd === 'boundaries') {
+  // Rank the vocabulary boundaries the answers disagree on (docs/planning/boundaries.md; one owner decision per pair).
+  const { mineBoundaries } = await import('./boundaries.ts');
+  const jevRun = process.argv.includes('--jev') ? process.argv[process.argv.indexOf('--jev') + 1] : 'r5-c-contrastive';
+  const list = mineBoundaries(root, scope, jevRun);
+  const out = path.join(root, '.cache/boundaries.json');
+  fs.writeFileSync(out, JSON.stringify(list, null, 1));
+  const top = Number(process.argv.includes('--top') ? process.argv[process.argv.indexOf('--top') + 1] : 25);
+  console.log(`${list.length} boundary pairs -> ${path.relative(root, out)}`);
+  for (const b of list.slice(0, top)) console.log(`${b.score.toFixed(0).padStart(4)}  ${b.key}  open ${b.open}, decided ${b.history} (${b.a.value} ${b.a.won} : ${b.b.value} ${b.b.won}), audit ${b.audit}, jev ${b.jev}, ${b.systems.length} systems`);
 } else if (cmd === 'rank-emphasis') {
   // ADR 0018: settle emphasis by contrast rank where both agents agree on everything else.
   const product = process.argv[5];
