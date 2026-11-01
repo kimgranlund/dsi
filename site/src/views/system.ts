@@ -1,5 +1,5 @@
 import { concepts, groups as loadGroups, meta, tokens, type Product, type Token } from '../data';
-import { el, orderModes, pill, setTitle, swatch, tokenHref } from '../ui';
+import { el, inkOn, orderModes, pill, setTitle, swatch, tokenHref, tokenTile } from '../ui';
 
 type ViewGroup = { id: string; label: string; meaning?: string; native?: string; note?: string; tokens: string[]; subgroups: { label: string; tokens: string[] }[] };
 const FACET_PRIORITY = ['usage', 'intent', 'syntax', 'property'] as const;
@@ -29,13 +29,6 @@ function sourceOf(chain: string[]): { family: string; step?: number; path: strin
   const family = (m?.[1] ?? segs[0]).replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
   const stepStr = m?.[2] ?? segs[1];
   return { family, step: stepStr !== undefined && /^\d+$/.test(stepStr) ? Number(stepStr) : undefined, path: end };
-}
-/** Black or white text, whichever contrasts more with a hex background (WCAG relative luminance). */
-function inkOn(hex: string) {
-  const lin = (c: number) => (c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4);
-  const [r, g, b] = [1, 3, 5].map((i) => lin(parseInt(hex.slice(i, i + 2), 16) / 255));
-  const L = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-  return (L + 0.05) / 0.05 > 1.05 / (L + 0.05) ? '#000000' : '#ffffff';
 }
 const title = (s: string) => s.replace(/(^|[\s-])([a-z])/g, (_, a, b) => a + b.toUpperCase()).replace(/-/g, ' ').replace(/^Ai\b/, 'AI');
 
@@ -68,10 +61,11 @@ export async function systemView(main: HTMLElement, p: Product) {
   })();
   const short = (p: string) => (prefix && p.startsWith(prefix) ? p.slice(prefix.length) : p);
   const card = (t: Token) => {
+    const shownMode = modePick.value;
     const v = t.v?.[themeOf()] ?? t.v?.all ?? Object.values(t.v ?? {})[0];
     const c = t.m[0] && byIri.get(t.m[0][0]);
-    return el('a', { class: 'row-card', href: tokenHref(p.id, t.p), 'data-link': true }, swatch(v?.[0]),
-      el('div', { class: 'meta' }, el('span', { class: 'name mono', text: short(t.p), title: t.p }), el('span', { class: 'sub', text: c ? `→ ${c.label}` : t.u ? 'no concept fits' : t.n })));
+    const others = modeNames.filter((mo) => mo !== shownMode && t.v?.[p.modes[mo]]).map((mo) => ({ mode: mo, display: t.v![p.modes[mo]][0] }));
+    return tokenTile({ href: tokenHref(p.id, t.p), name: short(t.p), full: `${t.n}${c ? ` → ${c.label}` : ''}`, shown: v?.[0], others, concept: c ? c.label : t.u ? 'No concept fits' : '', muted: !c });
   };
   /** Palette view: one row per step, one swatch, the tokens that use it as name chips. */
   const ramp = (sub: { label: string; tokens: string[] }, items: Token[]) => {
@@ -200,10 +194,10 @@ export async function systemView(main: HTMLElement, p: Product) {
         el('div', { class: 'group-head' },
           el('h3', { id: `${id}-h` }, g.label, g.meaning ? el('span', { class: 'meaning', text: ` means ${g.meaning}` }) : null),
           el('span', { class: 'none-note', text: `${n} token${n === 1 ? '' : 's'}${g.note ? ` · ${g.note}` : ''}${g.native && g.native !== g.label.toLowerCase() ? ` · ${g.native}-` : ''}${g.properties?.length ? ` · paints ${g.properties.join(', ')}` : ''}` })),
-        main.length ? (groupBy.value === 'source' ? el('div', { class: 'tok-chips' }, main.map((t) => el('a', { class: 'tok-chip', href: tokenHref(p.id, t.p), 'data-link': true, title: t.p, text: short(t.p) }))) : el('div', { class: 'list' }, main.map(card))) : null,
+        main.length ? (groupBy.value === 'source' ? el('div', { class: 'tok-chips' }, main.map((t) => el('a', { class: 'tok-chip', href: tokenHref(p.id, t.p), 'data-link': true, title: t.p, text: short(t.p) }))) : el('div', { class: 'tiles' }, main.map(card))) : null,
         groupBy.value === 'source'
           ? el('div', { class: 'ramp' }, subs.map(({ s, items }) => ramp(s, items)))
-          : subs.map(({ s, items }) => el('div', { class: 'subgroup' }, el('h4', { text: s.label }), el('div', { class: 'list' }, items.map(card))))));
+          : subs.map(({ s, items }) => el('div', { class: 'subgroup' }, el('h4', { text: s.label }), el('div', { class: 'tiles' }, items.map(card))))));
     }
     jump.replaceChildren(...chips);
     body.replaceChildren(...(sections.length ? sections : [el('p', { class: 'none-note', text: 'No tokens match this filter.' })]));
