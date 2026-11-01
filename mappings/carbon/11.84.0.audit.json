@@ -1,0 +1,2339 @@
+{
+  "packet": "audit-color-v1/carbon@11.84.0",
+  "model": "claude-fable-5-1",
+  "at": "2026-11-01T01:31:46.980Z",
+  "checks": [
+    {
+      "token": "ai-overlay",
+      "finding": "terms-contradict-mapping: usage: scrim vs terms overlay (terms: ai, overlay)"
+    },
+    {
+      "token": "icon-primary",
+      "finding": "terms-contradict-mapping: emphasis: (unbound) vs terms default (terms: icon, primary)"
+    },
+    {
+      "token": "layer-background-01",
+      "finding": "terms-contradict-mapping: usage: page vs terms surface (terms: layer, background)"
+    },
+    {
+      "token": "link-primary",
+      "finding": "terms-contradict-mapping: emphasis: (unbound) vs terms default (terms: link, primary)"
+    },
+    {
+      "token": "link-primary-hover",
+      "finding": "terms-contradict-mapping: emphasis: (unbound) vs terms default (terms: link, primary, hover)"
+    },
+    {
+      "token": "overlay",
+      "finding": "terms-contradict-mapping: usage: scrim vs terms overlay (terms: overlay)"
+    },
+    {
+      "token": "support-caution-major",
+      "finding": "hue-vs-intent: intent caution but #ff832b has hue 25° (white)"
+    },
+    {
+      "token": "support-caution-minor",
+      "finding": "same-value-different-intent: support-caution-minor, support-warning, support-warning-inverse resolve to the same tokens in every theme but map to intents caution, warning"
+    },
+    {
+      "token": "text-primary",
+      "finding": "terms-contradict-mapping: emphasis: (unbound) vs terms default (terms: text, primary)"
+    }
+  ],
+  "verdicts": [
+    {
+      "token": "ai-aura-end",
+      "mappingId": "m-25653bd7c1e1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-aura-end",
+          "says": "End color for AI aura gradient effect. Creates a fade-to-transparent effect at the edge of AI-enhanced elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Gradient end for all AI layers"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Gradient stops and decorative AI layers -> intent-ai/property-background, broad"
+        }
+      ]
+    },
+    {
+      "token": "ai-aura-hover-background",
+      "mappingId": "m-cb4b2a1c6b0f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-aura-hover-background",
+          "says": "Background color for AI aura on hover. Use when user hovers over AI-enhanced interactive elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover background for AI layers"
+        }
+      ]
+    },
+    {
+      "token": "ai-aura-hover-end",
+      "mappingId": "m-4354bfd253b2",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-aura-hover-end",
+          "says": "End color for AI aura gradient on hover. Creates hover state fade effect for AI elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Gradient end for the AI aura hover"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Gradient stops and decorative AI layers -> intent-ai/property-background, broad"
+        }
+      ]
+    },
+    {
+      "token": "ai-aura-hover-start",
+      "mappingId": "m-e1ec08bc13fd",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-aura-hover-start",
+          "says": "Start color for AI aura gradient on hover. Provides the vibrant blue beginning of the hover gradient."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Gradient start for the AI aura hover"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Gradient stops and decorative AI layers -> intent-ai/property-background, broad"
+        }
+      ]
+    },
+    {
+      "token": "ai-aura-start",
+      "mappingId": "m-15196dc3bd28",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-aura-start",
+          "says": "Start color for AI aura gradient effect. Provides the vibrant blue beginning of the gradient for AI-enhanced elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Gradient start for large AI layers"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Gradient stops and decorative AI layers -> intent-ai/property-background, broad (Carbon ai-aura-*)"
+        }
+      ]
+    },
+    {
+      "token": "ai-aura-start-sm",
+      "mappingId": "m-5d5855c93f70",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-aura-start-sm",
+          "says": "Start color for small AI aura gradient. Use for compact AI indicators or smaller UI elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Gradient start for small AI layers"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Gradient stops and decorative AI layers -> intent-ai/property-background, broad"
+        }
+      ]
+    },
+    {
+      "token": "ai-border-end",
+      "mappingId": "m-c0cc12d99c2d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-border-end",
+          "says": "End color for AI border gradient. Creates the lighter edge of gradient borders on AI elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Gradient end for AI borders"
+        }
+      ]
+    },
+    {
+      "token": "ai-border-start",
+      "mappingId": "m-c9e65f95d26a",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-border-start",
+          "says": "Start color for AI border gradient. Creates the darker edge of gradient borders on AI elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Gradient start for AI borders"
+        }
+      ]
+    },
+    {
+      "token": "ai-border-strong",
+      "mappingId": "m-2df334242f5f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-border-strong",
+          "says": "Strong border color for AI elements. Use for high-emphasis AI borders that need clear definition."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Medium-contrast border for AI elements; 3:1 non-text contrast"
+        }
+      ]
+    },
+    {
+      "token": "ai-drop-shadow",
+      "mappingId": "m-b5ebac7d403d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-drop-shadow",
+          "says": "Drop shadow color for AI elements. Provides depth and elevation for AI-enhanced components."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Drop shadow for the AI layer"
+        }
+      ]
+    },
+    {
+      "token": "ai-inner-shadow",
+      "mappingId": "m-589bc8b0fba8",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-inner-shadow",
+          "says": "Inner shadow color for AI elements. Creates inset depth effect for AI-enhanced surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Inner shadow for the AI layer"
+        }
+      ]
+    },
+    {
+      "token": "ai-overlay",
+      "mappingId": "m-42c55771a315",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-overlay",
+          "says": "Overlay color for AI modal backgrounds. Use to dim content behind AI dialogs or popovers."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Background overlay for AI components"
+        }
+      ],
+      "note": "Check flags terms 'overlay'; the ontology's scrim is 'the dimming layer behind a modal overlay', which the description says verbatim ('dim content behind AI dialogs')."
+    },
+    {
+      "token": "ai-popover-background",
+      "mappingId": "m-ab4127d5cd1b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-popover-background",
+          "says": "Background color for AI popovers and tooltips. Provides the base surface for AI-generated content displays."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Background for the AI explainability popover"
+        }
+      ]
+    },
+    {
+      "token": "ai-popover-caret-bottom",
+      "mappingId": "m-1c09eda410d9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-popover-caret-bottom",
+          "says": "Bottom caret color for AI popovers. Creates the gradient pointer at the bottom of AI tooltips."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Gradient stops and decorative AI layers -> intent-ai/property-background, broad"
+        }
+      ]
+    },
+    {
+      "token": "ai-popover-caret-bottom-background",
+      "mappingId": "m-58b33f69c37f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-popover-caret-bottom-background",
+          "says": "Background color for bottom caret of AI popovers. Provides the base color for the popover pointer."
+        }
+      ]
+    },
+    {
+      "token": "ai-popover-caret-bottom-background-actions",
+      "mappingId": "m-65ae487bb075",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-popover-caret-bottom-background-actions",
+          "says": "Background color for action area in AI popover bottom caret. Use for interactive sections within AI tooltips."
+        }
+      ]
+    },
+    {
+      "token": "ai-popover-caret-center",
+      "mappingId": "m-966060a462a8",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-popover-caret-center",
+          "says": "Center color for AI popover caret gradient. Creates the vibrant middle of the gradient pointer."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Gradient stops and decorative AI layers -> intent-ai/property-background, broad"
+        }
+      ]
+    },
+    {
+      "token": "ai-popover-shadow-outer-01",
+      "mappingId": "m-c10aa2521188",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-popover-shadow-outer-01",
+          "says": "Primary outer shadow for AI popovers. Provides the first layer of depth for elevated AI elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "First of two shadow colors for the AI explainability popover"
+        }
+      ]
+    },
+    {
+      "token": "ai-popover-shadow-outer-02",
+      "mappingId": "m-e94bd52992a4",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-popover-shadow-outer-02",
+          "says": "Secondary outer shadow for AI popovers. Adds additional depth layer for AI element elevation."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Second of two shadow colors for the AI explainability popover"
+        }
+      ]
+    },
+    {
+      "token": "ai-skeleton-background",
+      "mappingId": "m-c760638463bf",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-skeleton-background",
+          "says": "Background color for AI skeleton loaders. Use while AI-generated content is loading."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Skeleton color for AI containers"
+        }
+      ]
+    },
+    {
+      "token": "ai-skeleton-element-background",
+      "mappingId": "m-aad5844ab9f3",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "ai-skeleton-element-background",
+          "says": "Element background color for AI skeleton loaders. Provides the animated shimmer effect for loading AI content."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Only $ai-skeleton-background is listed: 'Skeleton color for AI containers'; the element token is not on the page."
+        },
+        {
+          "kind": "sibling",
+          "source": "ai-skeleton-background",
+          "says": "Also mapped exact to intent-ai/usage-skeleton/property-background; the element token is the narrower 'element background ... shimmer' case."
+        },
+        {
+          "kind": "value",
+          "source": "ai-skeleton-element-background",
+          "says": "blue.50 vs ai-skeleton-background blue.20 (white): the stronger element shapes on the AI skeleton base."
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-ai/usage-skeleton/property-background",
+        "match": "broad"
+      },
+      "note": "Same reasoning as skeleton-element: concept holds, match is broad."
+    },
+    {
+      "token": "background",
+      "mappingId": "m-82288567034e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "background",
+          "says": "Default page background color. Use as the base surface for the entire application or page."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Default page background; UI Shell base color"
+        }
+      ]
+    },
+    {
+      "token": "background-active",
+      "mappingId": "m-d1ff13e51889",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "background-active",
+          "says": "Background color for active/pressed state. Use when user clicks or presses interactive elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Active color for $background"
+        }
+      ],
+      "note": "Docs tie it to $background but values are translucent gray usable on any background; description is generic 'interactive elements'."
+    },
+    {
+      "token": "background-brand",
+      "mappingId": "m-217f51b4a65d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "background-brand",
+          "says": "Brand color for backgrounds. Use for branded sections, headers, or promotional areas."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Feature background color"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close"
+        }
+      ]
+    },
+    {
+      "token": "background-hover",
+      "mappingId": "m-8f67b795609c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "background-hover",
+          "says": "Background color for hover state. Use when user hovers over interactive elements to provide visual feedback."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $background; Hover color for transparent backgrounds"
+        }
+      ],
+      "note": "Docs also list 'hover color for transparent backgrounds', so the usage is not page-specific."
+    },
+    {
+      "token": "background-inverse",
+      "mappingId": "m-4cf287d593a0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "background-inverse",
+          "says": "Inverse background color for dark UI elements. Use for tooltips, inverse buttons, or dark-themed sections."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "High contrast backgrounds; High contrast elements"
+        }
+      ]
+    },
+    {
+      "token": "background-inverse-hover",
+      "mappingId": "m-f3b33a7f5ab0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "background-inverse-hover",
+          "says": "Hover state for inverse backgrounds. Use when user hovers over dark UI elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $background-inverse"
+        }
+      ]
+    },
+    {
+      "token": "background-selected",
+      "mappingId": "m-dde5e3cd1f40",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "background-selected",
+          "says": "Background color for selected state. Use to highlight currently selected items or active states."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Selected color for $background"
+        }
+      ]
+    },
+    {
+      "token": "background-selected-hover",
+      "mappingId": "m-389aeee41483",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "background-selected-hover",
+          "says": "Hover state for selected backgrounds. Use when user hovers over already-selected items."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $background-selected"
+        }
+      ]
+    },
+    {
+      "token": "border-disabled",
+      "mappingId": "m-a6b4c3e04522",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-disabled",
+          "says": "Border color for disabled elements. Use when borders need to indicate unavailable or inactive state."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Disabled border color (excluding border-subtles)"
+        }
+      ]
+    },
+    {
+      "token": "border-interactive",
+      "mappingId": "m-297e860dcf95",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-interactive",
+          "says": "Border color for interactive elements. Use for focused inputs, active selections, or clickable borders."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Selected and active borders; 3:1 contrast"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"interactive\" -> intent-accent, close (Carbon border-interactive)"
+        }
+      ]
+    },
+    {
+      "token": "border-inverse",
+      "mappingId": "m-36b82aa718af",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-inverse",
+          "says": "Border color for inverse/dark UI elements. Use for borders on dark backgrounds or inverse components."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "High-contrast border; 4.5:1 non-text contrast"
+        }
+      ],
+      "note": "Description says 'borders on dark backgrounds' but values are gray.100 in light themes (same as text-primary): an inverse-colored border, which fits the ontology's inverse (opposite lightness of the theme)."
+    },
+    {
+      "token": "border-strong-01",
+      "mappingId": "m-ee39f2a0884a",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-strong-01",
+          "says": "Strong border color for layer 01. Use for high-contrast borders that need clear definition on first layer."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Medium-contrast border; bottom border paired with $field-01; 3:1 non-text contrast"
+        }
+      ],
+      "note": "Docs say 'medium contrast' overall but it is the strong step of the subtle/strong border pair, and the description says 'high-contrast borders'."
+    },
+    {
+      "token": "border-strong-02",
+      "mappingId": "m-3b5fc9f1c417",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-strong-02",
+          "says": "Strong border color for layer 02. Use for high-contrast borders on second layer surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Medium-contrast border; bottom border paired with $field-02; 3:1 non-text contrast"
+        }
+      ]
+    },
+    {
+      "token": "border-strong-03",
+      "mappingId": "m-47280a707c6d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-strong-03",
+          "says": "Strong border color for layer 03. Use for high-contrast borders on third layer surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Medium-contrast border; bottom border paired with $field-03; 3:1 non-text contrast"
+        }
+      ]
+    },
+    {
+      "token": "border-subtle-00",
+      "mappingId": "m-9d8eeb8abefc",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-subtle-00",
+          "says": "Subtle border color for base layer. Use for low-contrast borders on page background."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Subtle borders paired with $background"
+        }
+      ]
+    },
+    {
+      "token": "border-subtle-01",
+      "mappingId": "m-b3a6df7c3fbe",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-subtle-01",
+          "says": "Subtle border color for layer 01. Use for low-contrast borders on first layer surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Subtle borders paired with $layer-01"
+        }
+      ]
+    },
+    {
+      "token": "border-subtle-02",
+      "mappingId": "m-c8098101f9b1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-subtle-02",
+          "says": "Subtle border color for layer 02. Use for low-contrast borders on second layer surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Subtle borders paired with $layer-02"
+        }
+      ]
+    },
+    {
+      "token": "border-subtle-03",
+      "mappingId": "m-6d9861d6cb8d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-subtle-03",
+          "says": "Subtle border color for layer 03. Use for low-contrast borders on third layer surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Subtle borders paired with $layer-03"
+        }
+      ]
+    },
+    {
+      "token": "border-subtle-selected-01",
+      "mappingId": "m-63cf09dcebb7",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-subtle-selected-01",
+          "says": "Subtle border for selected items on layer 01. Use for low-contrast borders on selected elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Selected color for $border-subtle-01"
+        }
+      ]
+    },
+    {
+      "token": "border-subtle-selected-02",
+      "mappingId": "m-cda94bb1f0d0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-subtle-selected-02",
+          "says": "Subtle border for selected items on layer 02. Use for low-contrast borders on selected elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Selected color for $border-subtle-02"
+        }
+      ]
+    },
+    {
+      "token": "border-subtle-selected-03",
+      "mappingId": "m-4ca2c72f3b9a",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-subtle-selected-03",
+          "says": "Subtle border for selected items on layer 03. Use for low-contrast borders on selected elements."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Selected color for $border-subtle-03"
+        }
+      ]
+    },
+    {
+      "token": "border-tile-01",
+      "mappingId": "m-5b63e2e91ff4",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-tile-01",
+          "says": "Border color for tiles on layer 01. Use for card or tile borders on first layer."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Operable tile indicator paired with $layer-01"
+        }
+      ]
+    },
+    {
+      "token": "border-tile-02",
+      "mappingId": "m-30585bc5b786",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-tile-02",
+          "says": "Border color for tiles on layer 02. Use for card or tile borders on second layer."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Operable tile indicator paired with $layer-02"
+        }
+      ]
+    },
+    {
+      "token": "border-tile-03",
+      "mappingId": "m-fccbfcdf4b3c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "border-tile-03",
+          "says": "Border color for tiles on layer 03. Use for card or tile borders on third layer."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Operable tile indicator paired with $layer-03"
+        }
+      ]
+    },
+    {
+      "token": "field-01",
+      "mappingId": "m-10c6c6e7f0d7",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "field-01",
+          "says": "Background color for form fields on layer 01. Use for input fields, text areas, and selects on first layer."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Default input fields on the background"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'There are four layers within a theme: base layer, layer 01, layer 02, and layer 03.' 'A field is considered a layer on top of the background it is placed on.'"
+        }
+      ]
+    },
+    {
+      "token": "field-02",
+      "mappingId": "m-30ee9b66cb1b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "field-02",
+          "says": "Background color for form fields on layer 02. Use for input fields on second layer surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Secondary input fields on $layer-01"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'There are four layers within a theme: base layer, layer 01, layer 02, and layer 03.' 'A field is considered a layer on top of the background it is placed on.'"
+        }
+      ]
+    },
+    {
+      "token": "field-03",
+      "mappingId": "m-f419a2435622",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "field-03",
+          "says": "Background color for form fields on layer 03. Use for input fields on third layer surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Tertiary input fields on $layer-02"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'There are four layers within a theme: base layer, layer 01, layer 02, and layer 03.' 'A field is considered a layer on top of the background it is placed on.'"
+        }
+      ]
+    },
+    {
+      "token": "field-hover-01",
+      "mappingId": "m-4ca37d0d907c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "field-hover-01",
+          "says": "Hover background for fields on layer 01. Use when user hovers over input fields on first layer."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $field-01"
+        }
+      ]
+    },
+    {
+      "token": "field-hover-02",
+      "mappingId": "m-fe11858682f8",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "field-hover-02",
+          "says": "Hover background for fields on layer 02. Use when user hovers over input fields on second layer."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $field-02"
+        }
+      ]
+    },
+    {
+      "token": "field-hover-03",
+      "mappingId": "m-16ced78afd7a",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "field-hover-03",
+          "says": "Hover background for fields on layer 03. Use when user hovers over input fields on third layer."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $field-03"
+        }
+      ]
+    },
+    {
+      "token": "focus",
+      "mappingId": "m-56bc113b07e2",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "focus",
+          "says": "Focus indicator color. Use for focus rings and outlines on interactive elements for keyboard navigation."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Focus border; Focus underline"
+        }
+      ]
+    },
+    {
+      "token": "focus-inset",
+      "mappingId": "m-2cce52fbb5eb",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "focus-inset",
+          "says": "Inset focus indicator color. Use for inner focus rings on elements with colored backgrounds."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Contrast border paired with $focus"
+        }
+      ],
+      "note": "Docs: contrast border paired with $focus; it is the inner ring of the focus pair, hence broad."
+    },
+    {
+      "token": "focus-inverse",
+      "mappingId": "m-64fccea2e482",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "focus-inverse",
+          "says": "Focus indicator for inverse/dark elements. Use for focus rings on dark backgrounds."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Focus indicator on high-contrast surfaces"
+        }
+      ]
+    },
+    {
+      "token": "icon-disabled",
+      "mappingId": "m-d4989c68a1b3",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "icon-disabled",
+          "says": "Icon color for disabled state. Use when icons need to indicate unavailable or inactive functionality."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Disabled icon color"
+        }
+      ]
+    },
+    {
+      "token": "icon-interactive",
+      "mappingId": "m-7900e222cb04",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "icon-interactive",
+          "says": "Icon color for interactive elements. Use for clickable icons, buttons, and actionable items."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Icons that indicate operability"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"interactive\" -> intent-accent, close"
+        }
+      ],
+      "note": "Follows the 'interactive' convention; note g90/g100 resolve to white (same as focus), so the accent reading rests on meaning (operability), not hue."
+    },
+    {
+      "token": "icon-inverse",
+      "mappingId": "m-3e93b0647c29",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "icon-inverse",
+          "says": "Icon color for inverse/dark backgrounds. Use for icons on dark surfaces or inverse components."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Inverse icon color"
+        }
+      ]
+    },
+    {
+      "token": "icon-on-color",
+      "mappingId": "m-7377892e2a93",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "icon-on-color",
+          "says": "Icon color for colored backgrounds. Use for icons on brand colors, buttons, or colored surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Icons on interactive colors; Icons on non-layer colors"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Content on a filled background -> usage-on-fill + property, exact"
+        }
+      ]
+    },
+    {
+      "token": "icon-on-color-disabled",
+      "mappingId": "m-e50fba3b903a",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "icon-on-color-disabled",
+          "says": "Disabled icon color on colored backgrounds. Use when icons on colored surfaces are inactive."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Disabled color for $icon-on-color"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Content on a filled background -> usage-on-fill + property, exact"
+        }
+      ]
+    },
+    {
+      "token": "icon-primary",
+      "mappingId": "m-4d0077408070",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "icon-primary",
+          "says": "Primary icon color. Use for main icons with highest visual priority and emphasis."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Primary icons"
+        }
+      ],
+      "note": "Check wants emphasis-default from 'primary'; color-v1 leaves emphasis unbound for the base token of a family, and 'default' is only for an explicitly named middle step."
+    },
+    {
+      "token": "icon-secondary",
+      "mappingId": "m-1825e6fded72",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "icon-secondary",
+          "says": "Secondary icon color. Use for supporting icons with less emphasis than primary."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Secondary icons"
+        }
+      ]
+    },
+    {
+      "token": "interactive",
+      "mappingId": "m-5919e8b95673",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "interactive",
+          "says": "Interactive element color. Use for clickable elements, links, and actionable items."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "3:1 AA contrast; Selected elements; Active elements; Accent icons"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"interactive\" -> intent-accent, close (Carbon interactive)"
+        }
+      ]
+    },
+    {
+      "token": "layer-01",
+      "mappingId": "m-ca2e4323593b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-01",
+          "says": "Primary layer background"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Container on $background; secondary page background"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Ordered levels of one family -> subtle/default/strong, close (Carbon layer-01..03)"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'There are four layers within a theme: base layer, layer 01, layer 02, and layer 03.' 'A field is considered a layer on top of the background it is placed on.'"
+        }
+      ]
+    },
+    {
+      "token": "layer-02",
+      "mappingId": "m-306401089cb6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-02",
+          "says": "Secondary layer background"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Container on $layer-01"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Ordered levels of one family -> subtle/default/strong, close (Carbon layer-01..03)"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'There are four layers within a theme: base layer, layer 01, layer 02, and layer 03.' 'A field is considered a layer on top of the background it is placed on.'"
+        }
+      ]
+    },
+    {
+      "token": "layer-03",
+      "mappingId": "m-891d227c909b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-03",
+          "says": "Tertiary layer background"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Container on $layer-02"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Ordered levels of one family -> subtle/default/strong, close (Carbon layer-01..03)"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'There are four layers within a theme: base layer, layer 01, layer 02, and layer 03.' 'A field is considered a layer on top of the background it is placed on.'"
+        }
+      ]
+    },
+    {
+      "token": "layer-accent-01",
+      "mappingId": "m-43154cb39284",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-accent-01",
+          "says": "Primary accent layer"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Tertiary background paired with $layer-01"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'$layer-accent-01 which is not considered a proper layer but a supporting color for $layer inside of components.'"
+        }
+      ],
+      "note": "Docs call it a 'tertiary background' that supports $layer inside components; values sit one gray step beyond the paired layer in every theme, so a stronger surface step is defensible, and broad covers the single-level scope."
+    },
+    {
+      "token": "layer-accent-02",
+      "mappingId": "m-0d08385c614e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-accent-02",
+          "says": "Secondary accent layer"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Tertiary background paired with $layer-02"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'$layer-accent-01 which is not considered a proper layer but a supporting color for $layer inside of components.'"
+        }
+      ],
+      "note": "See layer-accent-01: 'tertiary background paired with the matching layer'; one gray step beyond layer-02 in every theme."
+    },
+    {
+      "token": "layer-accent-03",
+      "mappingId": "m-6f963594982c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-accent-03",
+          "says": "Tertiary accent layer"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Tertiary background paired with $layer-03"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'$layer-accent-01 which is not considered a proper layer but a supporting color for $layer inside of components.'"
+        }
+      ],
+      "note": "See layer-accent-01; one gray step beyond layer-03 in every theme."
+    },
+    {
+      "token": "layer-accent-active-01",
+      "mappingId": "m-85bee61b6651",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-accent-active-01",
+          "says": "Active state for accent layer 01"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Active color for $layer-accent-01"
+        }
+      ]
+    },
+    {
+      "token": "layer-accent-active-02",
+      "mappingId": "m-60030e86e1af",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-accent-active-02",
+          "says": "Active state for accent layer 02"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Active color for $layer-accent-02"
+        }
+      ]
+    },
+    {
+      "token": "layer-accent-active-03",
+      "mappingId": "m-ffa3e7eab17b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-accent-active-03",
+          "says": "Active state for accent layer 03"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Active color for $layer-accent-03"
+        }
+      ]
+    },
+    {
+      "token": "layer-accent-hover-01",
+      "mappingId": "m-c030ac30853d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-accent-hover-01",
+          "says": "Hover state for accent layer 01"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $layer-accent-01"
+        }
+      ]
+    },
+    {
+      "token": "layer-accent-hover-02",
+      "mappingId": "m-3015c4230021",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-accent-hover-02",
+          "says": "Hover state for accent layer 02"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $layer-accent-02"
+        }
+      ]
+    },
+    {
+      "token": "layer-accent-hover-03",
+      "mappingId": "m-a03b616386a9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-accent-hover-03",
+          "says": "Hover state for accent layer 03"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $layer-accent-03"
+        }
+      ]
+    },
+    {
+      "token": "layer-active-01",
+      "mappingId": "m-3de1bb323606",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-active-01",
+          "says": "Active state for layer 01"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Active color for $layer-01"
+        }
+      ]
+    },
+    {
+      "token": "layer-active-02",
+      "mappingId": "m-11e49edcf532",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-active-02",
+          "says": "Active state for layer 02"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Active color for $layer-02"
+        }
+      ]
+    },
+    {
+      "token": "layer-active-03",
+      "mappingId": "m-e33dbf101912",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-active-03",
+          "says": "Active state for layer 03"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Active color for $layer-03"
+        }
+      ]
+    },
+    {
+      "token": "layer-background-01",
+      "mappingId": "m-7b3868880f9e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-background-01",
+          "says": "Background behind layer 01"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Default page background that adapts to the contextual layer"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'There are four layers within a theme: base layer, layer 01, layer 02, and layer 03.' 'A field is considered a layer on top of the background it is placed on.'"
+        }
+      ],
+      "note": "Check flags terms 'surface'; docs call it a page background that adapts to the contextual layer, which is the nuance 'close' carries."
+    },
+    {
+      "token": "layer-background-02",
+      "mappingId": "m-056d1ee1bb13",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-background-02",
+          "says": "Background behind layer 02"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Container on $layer-background-01; adapts to the contextual layer"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'There are four layers within a theme: base layer, layer 01, layer 02, and layer 03.' 'A field is considered a layer on top of the background it is placed on.'"
+        }
+      ]
+    },
+    {
+      "token": "layer-background-03",
+      "mappingId": "m-2984ba168af5",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-background-03",
+          "says": "Background behind layer 03"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Container on $layer-background-02; adapts to the contextual layer"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/usage/",
+          "says": "'There are four layers within a theme: base layer, layer 01, layer 02, and layer 03.' 'A field is considered a layer on top of the background it is placed on.'"
+        }
+      ]
+    },
+    {
+      "token": "layer-hover-01",
+      "mappingId": "m-4fd19346399c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-hover-01",
+          "says": "Hover state for layer 01"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $layer-01"
+        }
+      ]
+    },
+    {
+      "token": "layer-hover-02",
+      "mappingId": "m-35b161d9c630",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-hover-02",
+          "says": "Hover state for layer 02"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $layer-02"
+        }
+      ]
+    },
+    {
+      "token": "layer-hover-03",
+      "mappingId": "m-1f328d917b28",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-hover-03",
+          "says": "Hover state for layer 03"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $layer-03"
+        }
+      ]
+    },
+    {
+      "token": "layer-selected-01",
+      "mappingId": "m-27d16d169ff7",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-selected-01",
+          "says": "Selected state for layer 01"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Selected color for $layer-01"
+        }
+      ]
+    },
+    {
+      "token": "layer-selected-02",
+      "mappingId": "m-0ef390486903",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-selected-02",
+          "says": "Selected state for layer 02"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Selected color for $layer-02"
+        }
+      ]
+    },
+    {
+      "token": "layer-selected-03",
+      "mappingId": "m-67c817243f4c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-selected-03",
+          "says": "Selected state for layer 03"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Selected color for $layer-03"
+        }
+      ]
+    },
+    {
+      "token": "layer-selected-disabled",
+      "mappingId": "m-f8c4b107ec4c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-selected-disabled",
+          "says": "Disabled. Token for disabled in the design system."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Disabled color for selected layers"
+        }
+      ]
+    },
+    {
+      "token": "layer-selected-hover-01",
+      "mappingId": "m-90d28492689b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-selected-hover-01",
+          "says": "Hover state for selected layer 01"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $layer-selected-01"
+        }
+      ]
+    },
+    {
+      "token": "layer-selected-hover-02",
+      "mappingId": "m-fd38693706d2",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-selected-hover-02",
+          "says": "Hover state for selected layer 02"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $layer-selected-02"
+        }
+      ]
+    },
+    {
+      "token": "layer-selected-hover-03",
+      "mappingId": "m-393a42dda55e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-selected-hover-03",
+          "says": "Hover state for selected layer 03"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $layer-selected-03"
+        }
+      ]
+    },
+    {
+      "token": "layer-selected-inverse",
+      "mappingId": "m-6c328efe364e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "layer-selected-inverse",
+          "says": "Inverse. Token for inverse in the design system."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "High-contrast elements; 4.5:1 AA element contrast"
+        }
+      ],
+      "note": "Docs only say high-contrast element; 'selected' comes from the name and Carbon's selected-indicator use. Values match border-inverse/text-primary (opposite lightness), so inverse fits."
+    },
+    {
+      "token": "link-inverse",
+      "mappingId": "m-77b3b54cc7af",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "link-inverse",
+          "says": "Link color for dark backgrounds. Use for links on inverse or dark surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Links on $background-inverse backgrounds"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Links on inverse surfaces -> usage-inverse+link, exact (Carbon link-inverse-*)"
+        }
+      ]
+    },
+    {
+      "token": "link-inverse-active",
+      "mappingId": "m-4d0ba5a14375",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "link-inverse-active",
+          "says": "Active state for inverse links. Use when user clicks links on dark backgrounds."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Active color for links on $background-inverse backgrounds"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Links on inverse surfaces -> usage-inverse+link, exact"
+        }
+      ]
+    },
+    {
+      "token": "link-inverse-hover",
+      "mappingId": "m-f0c765c64285",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "link-inverse-hover",
+          "says": "Hover state for inverse links. Use when hovering over links on dark backgrounds."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for links on $background-inverse backgrounds"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Links on inverse surfaces -> usage-inverse+link, exact"
+        }
+      ]
+    },
+    {
+      "token": "link-inverse-visited",
+      "mappingId": "m-9c8a553180d6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "link-inverse-visited",
+          "says": "Visited link color for dark backgrounds. Use for previously clicked links on inverse surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Color for visited links on $background-inverse backgrounds"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Links on inverse surfaces -> usage-inverse+link, exact"
+        }
+      ]
+    },
+    {
+      "token": "link-primary",
+      "mappingId": "m-47ece74389b4",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "link-primary",
+          "says": "Primary link color. Use for standard hyperlinks and navigation links."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Primary links"
+        }
+      ],
+      "note": "'primary' is the base link token; emphasis stays unbound per color-v1."
+    },
+    {
+      "token": "link-primary-hover",
+      "mappingId": "m-3f7c80a5a924",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "link-primary-hover",
+          "says": "Hover color for primary links. Use when user hovers over standard links."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Hover color for $link-primary"
+        }
+      ],
+      "note": "Base link token's hover; emphasis unbound. Same value as link-secondary, which carries the emphasis-subtle nuance instead."
+    },
+    {
+      "token": "link-secondary",
+      "mappingId": "m-1da37fc9f2e8",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "link-secondary",
+          "says": "Secondary link color. Use for less prominent links or alternative link styles."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Secondary link color for lower-contrast backgrounds"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, close (Carbon link-secondary)"
+        }
+      ]
+    },
+    {
+      "token": "link-visited",
+      "mappingId": "m-c41c340b5a63",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "link-visited",
+          "says": "Color for visited links. Use to indicate previously clicked links."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Color for visited links"
+        }
+      ]
+    },
+    {
+      "token": "overlay",
+      "mappingId": "m-ad44175d8ede",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "overlay",
+          "says": "Overlay color for modal backgrounds. Use to dim content behind dialogs and modals."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Background overlay"
+        }
+      ],
+      "note": "Check flags terms 'overlay'; the ontology names Carbon overlay as the scrim example and the description is 'dim content behind dialogs and modals'."
+    },
+    {
+      "token": "shadow",
+      "mappingId": "m-928980fd4474",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "shadow",
+          "says": "Shadow color for elevation. Provides depth and layering for elevated components."
+        }
+      ]
+    },
+    {
+      "token": "skeleton-background",
+      "mappingId": "m-98370bac59c2",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "skeleton-background",
+          "says": "Background color for skeleton loaders. Use as base for loading placeholders."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Skeleton color for containers"
+        }
+      ],
+      "note": "Ontology's own example for usage-skeleton."
+    },
+    {
+      "token": "skeleton-element",
+      "mappingId": "m-8e5cc56331b0",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "skeleton-element",
+          "says": "Element color for skeleton loaders. Provides the animated shimmer effect for loading states."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Skeleton color for text and UI elements"
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "$skeleton-element: 'Skeleton color for text and UI elements'; $skeleton-background: 'Skeleton color for containers'. Two distinct roles under one concept."
+        },
+        {
+          "kind": "sibling",
+          "source": "skeleton-background",
+          "says": "Also mapped exact to usage-skeleton/property-background; two tokens with different roles cannot both be exact to one concept."
+        },
+        {
+          "kind": "value",
+          "source": "skeleton-element",
+          "says": "gray.30 vs skeleton-background gray.10-hover (white); #525252 vs #333333 (g90): the element shapes, not the base placeholder."
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/usage-skeleton/property-background",
+        "match": "broad"
+      },
+      "note": "Concept holds; match is broad: the token is one case (the shimmering element shapes) of the skeleton background concept, whose base case is skeleton-background (the ontology's example). An emphasis-strong step would be the alternative if the family is treated as ordered."
+    },
+    {
+      "token": "support-caution-major",
+      "mappingId": "m-2c34534da6bb",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "support-caution-major",
+          "says": "Major caution color. Use for high-severity warnings or significant issues."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Major caution status"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Severity between warning and danger -> intent-caution, broad (Carbon support-caution-major)"
+        }
+      ],
+      "note": "Hue finding (orange, 25deg) is expected: Carbon places caution-major between yellow warning and red error."
+    },
+    {
+      "token": "support-caution-minor",
+      "mappingId": "m-fd7f1abebf9f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "support-caution-minor",
+          "says": "Minor caution color. Use for low-severity warnings or minor issues."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Minor caution status"
+        }
+      ],
+      "note": "Same value as support-warning; Carbon still ships it as a distinct 'Minor caution status', which is the ontology's own example for caution."
+    },
+    {
+      "token": "support-error",
+      "mappingId": "m-1159fdc2f963",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "support-error",
+          "says": "Error color for critical states. Use for error messages, failed validations, and critical alerts."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Error; Invalid state"
+        }
+      ]
+    },
+    {
+      "token": "support-error-inverse",
+      "mappingId": "m-89a14755019c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "support-error-inverse",
+          "says": "Error color for dark backgrounds. Use for error indicators on inverse surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Error in high contrast moments"
+        }
+      ]
+    },
+    {
+      "token": "support-info",
+      "mappingId": "m-99842028c7e0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "support-info",
+          "says": "Info color for informational states. Use for helpful tips, neutral information, and guidance."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Information"
+        }
+      ]
+    },
+    {
+      "token": "support-info-inverse",
+      "mappingId": "m-5f5d50c218e3",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "support-info-inverse",
+          "says": "Info color for dark backgrounds. Use for info indicators on inverse surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Information in high contrast moments"
+        }
+      ]
+    },
+    {
+      "token": "support-success",
+      "mappingId": "m-e60820f82b9f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "support-success",
+          "says": "Success color for positive states. Use for success messages, completed actions, and confirmations."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Success; On"
+        }
+      ]
+    },
+    {
+      "token": "support-success-inverse",
+      "mappingId": "m-4d7366556233",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "support-success-inverse",
+          "says": "Success color for dark backgrounds. Use for success indicators on inverse surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Success in high contrast moments"
+        }
+      ]
+    },
+    {
+      "token": "support-warning",
+      "mappingId": "m-e9812994ecd8",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "support-warning",
+          "says": "Warning color for caution states. Use for warnings, potential issues, and items needing attention."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Warning"
+        }
+      ]
+    },
+    {
+      "token": "support-warning-inverse",
+      "mappingId": "m-b494c9d07c56",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "support-warning-inverse",
+          "says": "Warning color for dark backgrounds. Use for warning indicators on inverse surfaces."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Warning in high contrast moments"
+        }
+      ]
+    },
+    {
+      "token": "text-disabled",
+      "mappingId": "m-e659b784507b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "text-disabled",
+          "says": "Disabled. Token for disabled in the design system."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Disabled text color"
+        }
+      ]
+    },
+    {
+      "token": "text-error",
+      "mappingId": "m-71e7e9cbabdb",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "text-error",
+          "says": "Error. Token for error in the design system."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Error message text"
+        }
+      ]
+    },
+    {
+      "token": "text-helper",
+      "mappingId": "m-0bc77fda0b2f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "text-helper",
+          "says": "Helper. Token for helper in the design system."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Tertiary text, such as help text"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Helper and placeholder text -> property-text/emphasis-subtle, close (Carbon text-helper)"
+        }
+      ]
+    },
+    {
+      "token": "text-inverse",
+      "mappingId": "m-23ab18ae4df5",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "text-inverse",
+          "says": "Inverse. Token for inverse in the design system."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Inverse text color"
+        }
+      ]
+    },
+    {
+      "token": "text-on-color",
+      "mappingId": "m-7f5678fc1051",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "text-on-color",
+          "says": "Color. Token for color in the design system."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Text on interactive colors, such as buttons"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Content on a filled background -> usage-on-fill + property, exact (Carbon text-on-color)"
+        }
+      ]
+    },
+    {
+      "token": "text-on-color-disabled",
+      "mappingId": "m-844bd3a5efcf",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "text-on-color-disabled",
+          "says": "Disabled. Token for disabled in the design system."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Disabled color for $text-on-color"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Content on a filled background -> usage-on-fill + property, exact"
+        }
+      ]
+    },
+    {
+      "token": "text-placeholder",
+      "mappingId": "m-7595a6c8cf05",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "text-placeholder",
+          "says": "Placeholder. Token for placeholder in the design system."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Placeholder text"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Helper and placeholder text -> property-text/emphasis-subtle, placeholder adds usage-field, close"
+        }
+      ]
+    },
+    {
+      "token": "text-primary",
+      "mappingId": "m-c94089a3260b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "text-primary",
+          "says": "Primary. Token for primary in the design system."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Primary text; Body copy; Headers"
+        }
+      ],
+      "note": "Same as icon-primary: 'primary' is the base token, emphasis stays unbound."
+    },
+    {
+      "token": "text-secondary",
+      "mappingId": "m-3e0f98476d0c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "text-secondary",
+          "says": "Secondary. Token for secondary in the design system."
+        },
+        {
+          "kind": "docs",
+          "source": "https://carbondesignsystem.com/elements/color/tokens/",
+          "says": "Secondary text; Input labels"
+        }
+      ]
+    }
+  ]
+}

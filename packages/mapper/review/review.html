@@ -110,6 +110,10 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 .tabs a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .examples { display: grid; gap: 2px; font: 0.72rem/1.35 var(--font-mono); color: var(--muted); word-break: break-word; }
 .ev { font: 0.72rem var(--font-mono); color: var(--muted); }
+.evidence { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.evidence li { font-size: 0.83rem; display: grid; gap: 1px; }
+.evidence li small { font: 0.7rem var(--font-mono); color: var(--muted); word-break: break-all; }
+.vs { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 8px; }
 .empty { text-align: center; color: var(--muted); padding: 40px 0; }
 @media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
 </style>
@@ -123,6 +127,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
     <nav class="tabs" aria-label="Review queues">
       <a href="#tokens" id="tab-tokens">Tokens</a>
       <a href="#terms" id="tab-terms">Naming terms</a>
+      <a href="#disputes" id="tab-disputes">Disputes</a>
     </nav>
     <div class="progress" id="progress"></div>
     <div class="filters">
@@ -151,7 +156,9 @@ const MATCH_HINT = { exact: 'same meaning', close: 'same, with a nuance', broad:
 let decisions = new Map();
 let termDecisions = new Map();
 const TERMS = DATA.termItems || [];
-const view = () => (location.hash === '#terms' ? 'terms' : 'tokens');
+const DISPUTES = DATA.disputes || [];
+let disputeDecisions = new Map();
+const view = () => (location.hash === '#terms' ? 'terms' : location.hash === '#disputes' ? 'disputes' : 'tokens');
 let db = null;
 let canWrite = false;
 const openCustom = new Set();
@@ -195,7 +202,7 @@ function swatch(theme, t) {
 function clean(o) { return Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined)); }
 function decide(item, body, collection = 'decisions') {
   if (!db || !canWrite) return;
-  const who = collection === 'decisions' ? { token: item.token } : { term: item.term };
+  const who = collection === 'decisions' ? { token: item.token } : collection === 'term-decisions' ? { term: item.term } : { kind: item.kind, subject: item.subject };
   const doc = clean({ key: item.key, product: item.product, ...who, at: new Date().toISOString(), ...body });
   db.collection(collection).doc(item.key).set(doc).catch((e) => showNotice('Could not save the decision: ' + (e && e.message || 'unknown error') + '. Try again.'));
 }
@@ -209,6 +216,57 @@ function conceptChip(concept) {
   const m = /^dsi:([a-z]+)\/([a-z0-9-]+)$/.exec(concept);
   if (!m) return el('span', { class: 'facet', text: concept });
   return el('span', { class: 'facet' }, el('small', { text: m[1] }), LABEL[m[1] + ':' + m[2]] || m[2]);
+}
+
+function anyChips(concept) { return /^dsi:concept\//.test(concept) ? facetChips(concept) : el('div', { class: 'facets' }, conceptChip(concept)); }
+
+function disputeCard(item) {
+  const d = disputeDecisions.get(item.key);
+  const left = el('div', { class: 'tok' },
+    el('span', { class: 'product', text: item.product + ' · ' + (item.kind === 'term' ? 'naming term' : 'token mapping') }),
+    el('div', { class: 'tok-name', text: item.subject }),
+    item.description ? el('p', { class: 'desc', text: item.description }) : null,
+    item.themes ? el('div', { class: 'swatches' }, Object.entries(item.themes).map(([th, t]) => swatch(th, t))) : null);
+  const right = el('div', { class: 'answers' });
+  if (d) {
+    const label = { kept: 'Kept the current answer', suggestion: "Took the auditor's suggestion", custom: 'Custom answer saved', 'reject-term': 'Term rejected' }[d.action];
+    right.append(el('div', { class: 'decision' + (d.action === 'reject-term' ? ' reject' : '') }, el('span', { text: label }), el('button', { text: 'Undo', disabled: !canWrite, onclick: () => undo(item, 'dispute-decisions') })));
+  }
+  right.append(el('div', { class: 'vs' },
+    el('div', { class: 'cand' + (d && d.action === 'kept' ? ' chosen' : '') }, el('div', { class: 'cand-head' }, el('span', { class: 'model', text: 'Current (approved by ' + item.current.by + ')' }), el('span', { class: 'pill ' + item.current.match, text: item.current.match })), anyChips(item.current.concept)),
+    item.suggested ? el('div', { class: 'cand' + (d && d.action === 'suggestion' ? ' chosen' : '') }, el('div', { class: 'cand-head' }, el('span', { class: 'model', text: 'Auditor suggests' }), el('span', { class: 'pill ' + item.suggested.match, text: item.suggested.match })), anyChips(item.suggested.concept)) : null));
+  right.append(el('ul', { class: 'evidence' }, item.evidence.map((e) => el('li', {}, el('span', { text: e.says }), el('small', { text: e.kind + ' · ' + e.source })))));
+  if (item.note) right.append(el('p', { class: 'why', text: item.note }));
+  if (!d) {
+    const acts = [el('button', { text: 'Keep current', disabled: !canWrite, onclick: () => decide(item, { action: 'kept' }, 'dispute-decisions') })];
+    if (item.kind === 'mapping') {
+      if (item.suggested) acts.unshift(el('button', { class: 'primary', text: 'Take suggestion', disabled: !canWrite, onclick: () => decide(item, { action: 'suggestion' }, 'dispute-decisions') }));
+      acts.push(el('button', { text: 'Write my own', disabled: !canWrite, onclick: () => { openCustom.add(item.key); render(); } }));
+    } else acts.unshift(el('button', { class: 'primary', text: 'Reject term', disabled: !canWrite, onclick: () => decide(item, { action: 'reject-term' }, 'dispute-decisions') }));
+    if (openCustom.has(item.key)) right.append(disputeBuilder(item));
+    right.append(el('div', { class: 'actions' }, acts));
+  }
+  return el('article', { class: 'card' + (d ? ' decided' : '') }, left, right);
+}
+
+function disputeBuilder(item) {
+  const id = (f) => 'dc-' + item.key.replace(/[^a-z0-9]/gi, '-') + '-' + f;
+  const sels = {};
+  const grid = el('div', { class: 'custom-grid' });
+  const start = (item.suggested || item.current).concept;
+  for (const f of FACET_ORDER) {
+    const cur = (start.split('/').find((x) => x.startsWith(f + '-')) || '').slice(f.length + 1);
+    const s = el('select', { id: id(f) }, el('option', { value: '', text: '(unbound)' }), (ONT.facets[f] || []).map((v) => { const o = el('option', { value: v.value, text: v.label }); if (v.value === cur) o.selected = true; return o; }));
+    sels[f] = s; grid.append(el('label', { for: id(f) }, f, s));
+  }
+  const match = el('select', { id: id('match') }, MATCHES.map((m) => el('option', { value: m, text: m + ' (' + MATCH_HINT[m] + ')' })));
+  match.value = (item.suggested || item.current).match;
+  grid.append(el('label', { for: id('match') }, 'match', match));
+  const note = el('input', { id: id('note'), type: 'text', placeholder: 'Why (optional)' });
+  const build = () => { const segs = FACET_ORDER.filter((f) => sels[f].value).map((f) => f + '-' + sels[f].value); return segs.length ? 'dsi:concept/color/' + segs.join('/') : ''; };
+  return el('div', { class: 'custom' }, grid, el('label', { for: id('note') }, 'note', note), el('div', { class: 'actions' },
+    el('button', { class: 'primary', text: 'Save', disabled: !canWrite, onclick: () => { const c = build(); if (c) { decide(item, { action: 'custom', concept: c, match: match.value, note: note.value.trim() || undefined }, 'dispute-decisions'); openCustom.delete(item.key); } } }),
+    el('button', { text: 'Cancel', onclick: () => { openCustom.delete(item.key); render(); } })));
 }
 
 function termBuilder(item) {
@@ -330,11 +388,14 @@ function render() {
   const v = view();
   $('#tab-tokens').setAttribute('aria-current', v === 'tokens' ? 'page' : 'false');
   $('#tab-terms').setAttribute('aria-current', v === 'terms' ? 'page' : 'false');
-  const items = v === 'terms' ? TERMS : DATA.items, done = v === 'terms' ? termDecisions : decisions, name = (i) => (v === 'terms' ? i.term : i.token);
+  $('#tab-disputes').setAttribute('aria-current', v === 'disputes' ? 'page' : 'false');
+  const items = v === 'terms' ? TERMS : v === 'disputes' ? DISPUTES : DATA.items;
+  const done = v === 'terms' ? termDecisions : v === 'disputes' ? disputeDecisions : decisions;
+  const name = (i) => (v === 'terms' ? i.term : v === 'disputes' ? i.subject : i.token);
   const product = $('#f-product').value, status = $('#f-status').value, q = $('#f-search').value.trim().toLowerCase();
   const list = $('#list');
   const shown = items.filter((i) => (!product || i.product === product) && (status === 'all' || (status === 'open') !== done.has(i.key)) && (!q || name(i).toLowerCase().includes(q)));
-  list.replaceChildren(...(shown.length ? shown.map(v === 'terms' ? termCard : card) : [el('p', { class: 'empty', text: status === 'open' ? 'Nothing left to decide here.' : 'Nothing matches these filters.' })]));
+  list.replaceChildren(...(shown.length ? shown.map(v === 'terms' ? termCard : v === 'disputes' ? disputeCard : card) : [el('p', { class: 'empty', text: status === 'open' ? 'Nothing left to decide here.' : 'Nothing matches these filters.' })]));
   const prog = $('#progress');
   const products = [...new Set(items.map((i) => i.product))];
   prog.replaceChildren(...products.map((p) => {
@@ -347,10 +408,11 @@ function render() {
 function showNotice(text) { const n = $('#notice'); n.textContent = text; n.hidden = !text; }
 
 window.addEventListener('hashchange', render);
-for (const p of [...new Set([...DATA.items, ...TERMS].map((i) => i.product))]) $('#f-product').append(el('option', { value: p, text: p }));
+for (const p of [...new Set([...DATA.items, ...TERMS, ...DISPUTES].map((i) => i.product))]) $('#f-product').append(el('option', { value: p, text: p }));
 for (const s of ['#f-product', '#f-status']) $(s).addEventListener('change', render);
 $('#f-search').addEventListener('input', render);
-$('#generated').textContent = DATA.items.length + ' tokens and ' + TERMS.length + ' naming terms to review · ' + new Date(DATA.generatedAt).toLocaleString();
+$('#generated').textContent = [DATA.items.length + ' tokens', TERMS.length + ' naming terms', DISPUTES.length + ' disputes'].join(' · ') + ' · ' + new Date(DATA.generatedAt).toLocaleString();
+if (!location.hash && !DATA.items.length && !TERMS.length && DISPUTES.length) location.hash = '#disputes';
 render();
 
 (async () => {
@@ -368,6 +430,7 @@ render();
       render();
     }, lost);
     db.collection('term-decisions').onSnapshot((snap) => { termDecisions = new Map(snap.docs.map((d) => [d.id, d.data()])); render(); }, lost);
+    db.collection('dispute-decisions').onSnapshot((snap) => { disputeDecisions = new Map(snap.docs.map((d) => [d.id, d.data()])); render(); }, lost);
     render();
   } catch (e) {
     clearTimeout(timer);

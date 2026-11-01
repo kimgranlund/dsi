@@ -88,9 +88,9 @@ export function applyDecisions(root: string, scope: Scope, decisions: Decision[]
 }
 
 /** Render the review page from the template, embedding the queue and allowed facet values. */
-export function renderPage(root: string, items: QueueItem[], ontology: unknown, generatedAt: string, termItems: TermQueueItem[] = []): string {
+export function renderPage(root: string, items: QueueItem[], ontology: unknown, generatedAt: string, termItems: TermQueueItem[] = [], disputes: DisputeItem[] = []): string {
   const tpl = fs.readFileSync(path.join(root, 'packages/mapper/review/review.html'), 'utf8');
-  const data = JSON.stringify({ generatedAt, items, termItems, ontology }).replaceAll('</', '<\\/');
+  const data = JSON.stringify({ generatedAt, items, termItems, disputes, ontology }).replaceAll('</', '<\\/');
   return tpl.replace('/*__DATA__*/null', data);
 }
 
@@ -164,6 +164,91 @@ export function applyTermDecisions(root: string, decisions: TermDecision[], revi
     }
     file.terms.sort((a: any, b: any) => a.term.localeCompare(b.term) || a.concept.localeCompare(b.concept) || a.status.localeCompare(b.status));
     fs.writeFileSync(f, JSON.stringify(file, null, 2) + '\n');
+  }
+  return counts;
+}
+
+/** A disputed approved mapping (auditor contradicted it) or a suspect approved term, with the evidence. */
+export interface DisputeItem {
+  key: string;
+  kind: 'mapping' | 'term';
+  product: string;
+  version: string;
+  subject: string;
+  current: { concept: string; match: string; by: string; id?: string };
+  suggested?: { concept: string; match: string };
+  evidence: { kind: string; source: string; says: string }[];
+  themes?: Record<string, { aliases: string[]; value: string }>;
+  description?: string;
+  note?: string;
+}
+
+export const disputeKey = (product: string, kind: string, subject: string) => `${product}__${kind}__${subject}`;
+
+export function collectDisputes(root: string, scope: Scope, termFindings: { product: string; term: string; detail: string }[], valuesOf: (product: string, token: string) => { themes: Record<string, { aliases: string[]; value: string }>; description?: string }): DisputeItem[] {
+  const out: DisputeItem[] = [];
+  for (const [product, { version }] of Object.entries(scope.products)) {
+    const af = path.join(root, 'mappings', product, `${version}.audit.json`);
+    if (!fs.existsSync(af)) continue;
+    const audit = JSON.parse(fs.readFileSync(af, 'utf8'));
+    const m = readMappings(root, product, version) as any;
+    for (const v of audit.verdicts.filter((x: any) => x.verdict === 'contradicted' && !x.resolution)) {
+      const cur = m.mappings.find((x: any) => x.id === v.mappingId && x.status === 'approved');
+      if (!cur) continue;
+      out.push({ key: disputeKey(product, 'mapping', v.token), kind: 'mapping', product, version, subject: v.token, current: { concept: cur.concept, match: cur.match, by: cur.review?.by ?? 'unknown', id: cur.id }, suggested: v.suggested, evidence: v.evidence, note: v.note, ...valuesOf(product, v.token) });
+    }
+    const tf = path.join(root, 'mappings', product, 'terms.json');
+    const terms = fs.existsSync(tf) ? JSON.parse(fs.readFileSync(tf, 'utf8')).terms : [];
+    for (const f of termFindings.filter((x) => x.product === product)) {
+      const t = terms.find((x: any) => x.term === f.term && x.status === 'approved' && f.detail.includes(x.concept));
+      if (!t) continue;
+      out.push({ key: disputeKey(product, 'term', f.term), kind: 'term', product, version, subject: f.term, current: { concept: t.concept, match: t.match, by: t.review?.by ?? 'unknown' }, evidence: [{ kind: 'sibling', source: `mappings/${product}/${version}.mappings.json`, says: f.detail }] });
+    }
+  }
+  return out;
+}
+
+export interface DisputeDecision { key: string; kind: 'mapping' | 'term'; product: string; subject: string; action: 'kept' | 'suggestion' | 'custom' | 'reject-term'; concept?: string; match?: string; note?: string; at: string }
+
+/**
+ * kept: the approved record stays; the verdict records the resolution. suggestion/custom: the approved mapping is
+ * Superseded by a new Approved mapping from the reviewer. reject-term: the term becomes Rejected.
+ */
+export function applyDisputes(root: string, scope: Scope, decisions: DisputeDecision[], reviewer: string, suggestions: Map<string, { concept: string; match: string }>): Record<string, number> {
+  const counts: Record<string, number> = { kept: 0, suggestion: 0, custom: 0, 'reject-term': 0, skipped: 0 };
+  for (const [product, { version }] of Object.entries(scope.products)) {
+    const mine = decisions.filter((d) => d.product === product);
+    if (!mine.length) continue;
+    const mp = path.join(root, 'mappings', product, `${version}.mappings.json`), ap = path.join(root, 'mappings', product, `${version}.audit.json`), tp = path.join(root, 'mappings', product, 'terms.json');
+    const m = JSON.parse(fs.readFileSync(mp, 'utf8')), audit = fs.existsSync(ap) ? JSON.parse(fs.readFileSync(ap, 'utf8')) : { verdicts: [] }, terms = fs.existsSync(tp) ? JSON.parse(fs.readFileSync(tp, 'utf8')) : { terms: [] };
+    for (const d of mine) {
+      const review = { by: reviewer, at: d.at, ...(d.note ? { note: d.note } : {}) };
+      if (d.kind === 'term') {
+        const t = terms.terms.find((x: any) => x.term === d.subject && x.status === 'approved');
+        if (!t) { counts.skipped++; continue; }
+        if (d.action === 'reject-term') Object.assign(t, { status: 'rejected', review: { ...review, note: d.note ?? 'Rejected after audit: most of its own approved tokens disagree.' } });
+        counts[d.action]++;
+        continue;
+      }
+      const v = audit.verdicts.find((x: any) => x.token === d.subject && x.verdict === 'contradicted');
+      const cur = v && m.mappings.find((x: any) => x.id === v.mappingId && x.status === 'approved');
+      if (!cur) { counts.skipped++; continue; }
+      if (d.action !== 'kept') {
+        const target = d.action === 'suggestion' ? suggestions.get(d.key) : d.concept && d.match ? { concept: d.concept, match: d.match } : undefined;
+        if (!target) { counts.skipped++; continue; }
+        const id = 'm-' + crypto.createHash('sha1').update([d.subject, target.concept, target.match].join('|')).digest('hex').slice(0, 12);
+        if (id === cur.id) { counts.skipped++; continue; }
+        m.mappings = m.mappings.filter((x: any) => x.id !== id);
+        m.mappings.push({ id, token: d.subject, concept: target.concept, match: target.match, confidence: 1, status: 'approved', rationale: d.note || `Changed after evidence audit (${audit.model}): ${v.evidence.map((e: any) => e.says).join(' ').slice(0, 300)}`, provenance: { agent: reviewer, at: d.at, method: 'audit-review' }, review });
+        Object.assign(cur, { status: 'superseded', supersededBy: id });
+      }
+      v.resolution = { by: reviewer, at: d.at, action: d.action, ...(d.note ? { note: d.note } : {}) };
+      counts[d.action]++;
+    }
+    m.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
+    fs.writeFileSync(mp, JSON.stringify(m, null, 2) + '\n');
+    if (fs.existsSync(ap)) fs.writeFileSync(ap, JSON.stringify(audit, null, 2) + '\n');
+    if (fs.existsSync(tp)) fs.writeFileSync(tp, JSON.stringify(terms, null, 2) + '\n');
   }
   return counts;
 }

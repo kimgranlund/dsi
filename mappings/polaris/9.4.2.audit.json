@@ -1,0 +1,2961 @@
+{
+  "packet": "audit-color-v1/polaris@9.4.2",
+  "model": "claude-fable-5-1",
+  "at": "2026-11-01T01:31:59Z",
+  "checks": [
+    {
+      "token": "color-bg-fill-brand",
+      "finding": "terms-contradict-mapping: usage: (unbound) vs terms on-fill (terms: bg, fill, brand)"
+    },
+    {
+      "token": "color-bg-fill-brand-active",
+      "finding": "terms-contradict-mapping: usage: (unbound) vs terms on-fill (terms: bg, fill, brand, active)"
+    },
+    {
+      "token": "color-bg-fill-brand-disabled",
+      "finding": "terms-contradict-mapping: usage: (unbound) vs terms on-fill (terms: bg, fill, brand, disabled)"
+    },
+    {
+      "token": "color-bg-fill-brand-hover",
+      "finding": "terms-contradict-mapping: usage: (unbound) vs terms on-fill (terms: bg, fill, brand, hover)"
+    },
+    {
+      "token": "color-bg-fill-brand-selected",
+      "finding": "terms-contradict-mapping: usage: (unbound) vs terms on-fill (terms: bg, fill, brand, selected)"
+    },
+    {
+      "token": "color-bg-surface-brand",
+      "finding": "terms-contradict-mapping: usage: surface vs terms on-fill+surface (terms: bg, surface, brand)"
+    },
+    {
+      "token": "color-bg-surface-brand-active",
+      "finding": "terms-contradict-mapping: usage: surface vs terms on-fill+surface (terms: bg, surface, brand, active)"
+    },
+    {
+      "token": "color-bg-surface-brand-hover",
+      "finding": "terms-contradict-mapping: usage: surface vs terms on-fill+surface (terms: bg, surface, brand, hover)"
+    },
+    {
+      "token": "color-bg-surface-brand-selected",
+      "finding": "terms-contradict-mapping: usage: surface vs terms on-fill+surface (terms: bg, surface, brand, selected)"
+    },
+    {
+      "token": "color-border-brand",
+      "finding": "terms-contradict-mapping: usage: (unbound) vs terms on-fill (terms: border, brand)"
+    },
+    {
+      "token": "color-border-focus",
+      "finding": "terms-contradict-mapping: property: focus-ring vs terms border; state: (unbound) vs terms focus (terms: border, focus)"
+    },
+    {
+      "token": "color-icon-brand",
+      "finding": "terms-contradict-mapping: usage: (unbound) vs terms on-fill (terms: icon, brand)"
+    },
+    {
+      "token": "color-input-bg-surface",
+      "finding": "terms-contradict-mapping: usage: field vs terms field+surface (terms: input, bg, surface)"
+    },
+    {
+      "token": "color-input-bg-surface-active",
+      "finding": "terms-contradict-mapping: usage: field vs terms field+surface (terms: input, bg, surface, active)"
+    },
+    {
+      "token": "color-input-bg-surface-hover",
+      "finding": "terms-contradict-mapping: usage: field vs terms field+surface (terms: input, bg, surface, hover)"
+    },
+    {
+      "token": "color-nav-bg-surface",
+      "finding": "terms-contradict-mapping: usage: navigation vs terms navigation+surface (terms: nav, bg, surface)"
+    },
+    {
+      "token": "color-nav-bg-surface-active",
+      "finding": "terms-contradict-mapping: usage: navigation vs terms navigation+surface (terms: nav, bg, surface, active)"
+    },
+    {
+      "token": "color-nav-bg-surface-hover",
+      "finding": "terms-contradict-mapping: usage: navigation vs terms navigation+surface (terms: nav, bg, surface, hover)"
+    },
+    {
+      "token": "color-nav-bg-surface-selected",
+      "finding": "terms-contradict-mapping: usage: navigation vs terms navigation+surface (terms: nav, bg, surface, selected)"
+    },
+    {
+      "token": "color-text-brand",
+      "finding": "terms-contradict-mapping: usage: (unbound) vs terms on-fill (terms: text, brand)"
+    },
+    {
+      "token": "color-text-brand-hover",
+      "finding": "terms-contradict-mapping: usage: (unbound) vs terms on-fill (terms: text, brand, hover)"
+    },
+    {
+      "token": "color-text-brand-on-bg-fill-active",
+      "finding": "on-fill-contrast: contrast 1.5:1 against color-bg-fill-brand-active in dark-experimental (WCAG AA text needs 4.5:1)"
+    },
+    {
+      "token": "color-text-brand-on-bg-fill-hover",
+      "finding": "on-fill-contrast: contrast 1.16:1 against color-bg-fill-brand-hover in dark-experimental (WCAG AA text needs 4.5:1)"
+    },
+    {
+      "token": "color-text-caution-on-bg-fill",
+      "finding": "terms-contradict-mapping: property: foreground vs terms text (terms: on-bg-fill, text, caution, on, bg, fill)"
+    },
+    {
+      "token": "color-text-critical-on-bg-fill",
+      "finding": "terms-contradict-mapping: property: foreground vs terms text (terms: on-bg-fill, text, critical, on, bg, fill)"
+    },
+    {
+      "token": "color-text-info-on-bg-fill",
+      "finding": "terms-contradict-mapping: property: foreground vs terms text (terms: on-bg-fill, text, info, on, bg, fill)"
+    },
+    {
+      "token": "color-text-magic-on-bg-fill",
+      "finding": "terms-contradict-mapping: property: foreground vs terms text (terms: on-bg-fill, text, magic, on, bg, fill)"
+    },
+    {
+      "token": "color-text-success-on-bg-fill",
+      "finding": "terms-contradict-mapping: property: foreground vs terms text (terms: on-bg-fill, text, success, on, bg, fill)"
+    },
+    {
+      "token": "color-text-warning-on-bg-fill",
+      "finding": "terms-contradict-mapping: property: foreground vs terms text (terms: on-bg-fill, text, warning, on, bg, fill)"
+    }
+  ],
+  "verdicts": [
+    {
+      "token": "color-backdrop-bg",
+      "mappingId": "m-5c4236e76b53",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component background colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-backdrop-bg",
+          "says": "black at 71% alpha in every theme: a translucent overlay, which is what a scrim is"
+        }
+      ]
+    },
+    {
+      "token": "color-bg",
+      "mappingId": "m-e3b8b490f36b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg",
+          "says": "The default background color of the admin."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill",
+      "mappingId": "m-866cbb56729b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill",
+          "says": "The background color of contained elements with a smaller surface area, like a button."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-active",
+      "mappingId": "m-ff3caa456e06",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-active",
+          "says": "The active state (on press) color of contained elements with a smaller surface area, like a button."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-brand",
+      "mappingId": "m-9a3fdace7965",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-brand",
+          "says": "The background color of main actions, like primary buttons."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close (example color-bg-fill-brand)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-brand-active",
+      "mappingId": "m-301128c1bc00",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-brand-active",
+          "says": "The active state (on press) color of main actions, like primary buttons."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close (example color-bg-fill-brand)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-brand-disabled",
+      "mappingId": "m-39376f309bf5",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-brand-disabled",
+          "says": "The disabled state color of main actions, like primary buttons."
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-fill-brand, color-bg-fill-brand-hover, color-bg-fill-brand-active",
+          "says": "the same family is approved at close"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-accent/property-background/state-disabled",
+        "match": "close"
+      },
+      "note": "Polaris brand is a neutral key color (gray/white), not an accent hue; the family is close, not exact."
+    },
+    {
+      "token": "color-bg-fill-brand-hover",
+      "mappingId": "m-6779de360e17",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-brand-hover",
+          "says": "The hover state color of main actions, like primary buttons."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close (example color-bg-fill-brand)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-brand-selected",
+      "mappingId": "m-d450d1f5022a",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-brand-selected",
+          "says": "The selected state color of main actions, like primary buttons."
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-fill-brand, color-bg-fill-brand-hover, color-bg-fill-brand-active",
+          "says": "the same family is approved at close"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-accent/property-background/state-selected",
+        "match": "close"
+      },
+      "note": "Polaris brand is a neutral key color (gray/white), not an accent hue; the family is close, not exact."
+    },
+    {
+      "token": "color-bg-fill-caution",
+      "mappingId": "m-d2aca4721e4b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-caution",
+          "says": "Use for backgrounds communicating caution on elements with a smaller surface area, like a badge or a banner."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-caution-active",
+      "mappingId": "m-ee58a32360b3",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-caution-active",
+          "says": "The active state (on press) color for communicating caution on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-caution-hover",
+      "mappingId": "m-774a92f2324f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-caution-hover",
+          "says": "The hover state color for communicating caution on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-caution-secondary",
+      "mappingId": "m-9d0e100aaefc",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-caution-secondary",
+          "says": "Use for backgrounds communicating caution on elements with a smaller surface area, with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-critical",
+      "mappingId": "m-444f4f6c000f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-critical",
+          "says": "Use for backgrounds communicating critical information on elements with a smaller surface area, like a badge or a banner."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-critical-active",
+      "mappingId": "m-e149397480e0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-critical-active",
+          "says": "The active state (on press) color for communicating critical information on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-critical-hover",
+      "mappingId": "m-b6b94d5ecdc0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-critical-hover",
+          "says": "The hover state color for communicating critical information on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-critical-secondary",
+      "mappingId": "m-46974e8ed09b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-critical-secondary",
+          "says": "Use for backgrounds communicating critical information on elements with a smaller surface area, with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-critical-selected",
+      "mappingId": "m-4334d504c76b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-critical-selected",
+          "says": "The selected state color for communicating critical information on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-disabled",
+      "mappingId": "m-e2cfb338a118",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-disabled",
+          "says": "The disabled state color of contained elements with a smaller surface area, like a button."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-emphasis",
+      "mappingId": "m-cbc425af95de",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-emphasis",
+          "says": "Use for backgrounds indicating areas of focus in editors on elements with a smaller surface area, like a button or a badge."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-emphasis-active",
+      "mappingId": "m-1f2b21e80690",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-emphasis-active",
+          "says": "The active state (on press) color for indicating areas of focus in editors on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-emphasis-hover",
+      "mappingId": "m-e2304b2c2be1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-emphasis-hover",
+          "says": "The hover state color for indicating areas of focus in editors on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-hover",
+      "mappingId": "m-821ef9687587",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-hover",
+          "says": "The hover state color of contained elements with a smaller surface area, like a button."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-info",
+      "mappingId": "m-e36cefd4bacd",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-info",
+          "says": "Use for backgrounds communicating important information on elements with a smaller surface area, like a badge or button."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-info-active",
+      "mappingId": "m-8c50464fc615",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-info-active",
+          "says": "The active state (on press) color for communicating important information on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-info-hover",
+      "mappingId": "m-d5bff38f2c84",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-info-hover",
+          "says": "The hover state color for communicating important information on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-info-secondary",
+      "mappingId": "m-091e9db8e561",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-info-secondary",
+          "says": "Use for backgrounds communicating important information on elements with a smaller surface area, with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-inverse",
+      "mappingId": "m-89b7c4dfd566",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-inverse",
+          "says": "The background color of elements with a smaller surface area on an inverse background."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-inverse-active",
+      "mappingId": "m-350cafdb2972",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-inverse-active",
+          "says": "The active state (on press) color of elements with a smaller surface area on an inverse background."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-inverse-hover",
+      "mappingId": "m-c8ba33567f35",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-inverse-hover",
+          "says": "The hover state color of elements with a smaller surface area on an inverse background."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-magic",
+      "mappingId": "m-ec4ce000fa63",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-magic",
+          "says": "The background color of elements suggested by magic AI, like a badge or a banner."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-magic-secondary",
+      "mappingId": "m-aa1418081a15",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-magic-secondary",
+          "says": "The background color of elements suggested by magic AI, with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-magic-secondary-active",
+      "mappingId": "m-c3a2b5ecb15e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-magic-secondary-active",
+          "says": "The active state (on press) color of elements suggested by magic AI, with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-magic-secondary-hover",
+      "mappingId": "m-028b6ced91fc",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-magic-secondary-hover",
+          "says": "The hover state color of elements suggested by magic AI, with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-secondary",
+      "mappingId": "m-d0251baf037a",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-secondary",
+          "says": "The background color of elements with a smaller surface area and a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-secondary-active",
+      "mappingId": "m-2bf8b3813d49",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-secondary-active",
+          "says": "The active state (on press) color of elements with a smaller surface area and a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-secondary-hover",
+      "mappingId": "m-a78c39b542c9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-secondary-hover",
+          "says": "The hover state color of elements with a smaller surface area and a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-secondary-selected",
+      "mappingId": "m-3ecf2d3cb345",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-secondary-selected",
+          "says": "The selected state (on press) color of elements with a smaller surface area and a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-selected",
+      "mappingId": "m-49fdc6954e70",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-selected",
+          "says": "The selected state color of contained elements with a smaller surface area, like a button or checkbox."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-success",
+      "mappingId": "m-b1aa630f5eee",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-success",
+          "says": "Use for backgrounds communicating success on elements with a smaller surface area, like a badge or a banner."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-success-active",
+      "mappingId": "m-0ee1f81d6469",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-success-active",
+          "says": "The active state (on press) color for communicating success on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-success-hover",
+      "mappingId": "m-029a48717bbc",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-success-hover",
+          "says": "The hover state color for communicating success on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-success-secondary",
+      "mappingId": "m-2cd414754e1c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-success-secondary",
+          "says": "Use for backgrounds communicating success on elements with a smaller surface area, with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-tertiary",
+      "mappingId": "m-abe0edf6d222",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-tertiary",
+          "says": "The background color of elements with a smaller surface area and a third level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"tertiary\" variant -> emphasis-subtle, broad (example color-bg-fill-tertiary)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-tertiary-active",
+      "mappingId": "m-ef7f81070d9c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-tertiary-active",
+          "says": "The active state (on press) color of elements with a smaller surface area and a third level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"tertiary\" variant -> emphasis-subtle, broad (example color-bg-fill-tertiary)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-tertiary-hover",
+      "mappingId": "m-dbb8631d60e6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-tertiary-hover",
+          "says": "The hover state color of elements with a smaller surface area and a third level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Neutral fills with no intent -> property-background, broad (example color-bg-fill)"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"tertiary\" variant -> emphasis-subtle, broad (example color-bg-fill-tertiary)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-warning",
+      "mappingId": "m-2ea14643b95c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-warning",
+          "says": "Use for backgrounds communicating warning on elements with a smaller surface area, like a badge or a banner."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-warning-active",
+      "mappingId": "m-d3bcc0044cdc",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-warning-active",
+          "says": "The active state (on press) color for communicating warning on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-warning-hover",
+      "mappingId": "m-6f72b05ef9ce",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-warning-hover",
+          "says": "The hover state color for communicating warning on elements with a smaller surface area."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-fill-warning-secondary",
+      "mappingId": "m-dd02c0f628ba",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-fill-warning-secondary",
+          "says": "Use for backgrounds communicating warning on elements with a smaller surface area, with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-inverse",
+      "mappingId": "m-61e6f0e56f01",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-inverse",
+          "says": "Use for high contrast page or component backgrounds."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface",
+      "mappingId": "m-b444185bec91",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface",
+          "says": "The background color for elements with the highest level of prominence, like a card."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-active",
+      "mappingId": "m-cd03e3dc0785",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-active",
+          "says": "The active state (on press) color for elements with the highest level of prominence."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-brand",
+      "mappingId": "m-85c0c878b172",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-brand",
+          "says": "Use to apply the key color to elements."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close (example color-bg-fill-brand)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-brand-active",
+      "mappingId": "m-2afd67005020",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-brand-active",
+          "says": "The active state (on press) color for key elements."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close (example color-bg-fill-brand)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-brand-hover",
+      "mappingId": "m-2885ff6bedea",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-brand-hover",
+          "says": "The hover state color for key elements."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close (example color-bg-fill-brand)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-brand-selected",
+      "mappingId": "m-537c6ef98f05",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-brand-selected",
+          "says": "The selected state color for key elements."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close (example color-bg-fill-brand)"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-caution",
+      "mappingId": "m-66d067ded68f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-caution",
+          "says": "Use for backgrounds communicating caution, like banners."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-caution-active",
+      "mappingId": "m-439dee802b5d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-caution-active",
+          "says": "The active state (on press) color for communicating caution."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-caution-hover",
+      "mappingId": "m-cd30c058bbd1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-caution-hover",
+          "says": "The hover state for communicating caution."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-critical",
+      "mappingId": "m-f182f5bbfbd4",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-critical",
+          "says": "Use for backgrounds communicating critical information, like banners or input errors."
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-surface-caution, color-bg-surface-info, color-bg-surface-success, color-bg-surface-warning",
+          "says": "parallel descriptions (\"Use for backgrounds communicating X, like banners\") approved exact"
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-fill-critical, color-border-critical, color-text-critical",
+          "says": "critical -> intent-danger approved exact elsewhere"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-danger/usage-surface/property-background",
+        "match": "exact"
+      },
+      "note": "Nothing in the description narrows or widens it relative to the other intent surfaces."
+    },
+    {
+      "token": "color-bg-surface-critical-active",
+      "mappingId": "m-7737661643f3",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-critical-active",
+          "says": "The active state (on press) color for communicating critical information."
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-surface-caution, color-bg-surface-info, color-bg-surface-success, color-bg-surface-warning",
+          "says": "parallel descriptions (\"Use for backgrounds communicating X, like banners\") approved exact"
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-fill-critical, color-border-critical, color-text-critical",
+          "says": "critical -> intent-danger approved exact elsewhere"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-danger/usage-surface/property-background/state-active",
+        "match": "exact"
+      },
+      "note": "Nothing in the description narrows or widens it relative to the other intent surfaces."
+    },
+    {
+      "token": "color-bg-surface-critical-hover",
+      "mappingId": "m-cc0e60d0f717",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-critical-hover",
+          "says": "The hover state color for communicating critical information."
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-surface-caution, color-bg-surface-info, color-bg-surface-success, color-bg-surface-warning",
+          "says": "parallel descriptions (\"Use for backgrounds communicating X, like banners\") approved exact"
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-fill-critical, color-border-critical, color-text-critical",
+          "says": "critical -> intent-danger approved exact elsewhere"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-danger/usage-surface/property-background/state-hover",
+        "match": "exact"
+      },
+      "note": "Nothing in the description narrows or widens it relative to the other intent surfaces."
+    },
+    {
+      "token": "color-bg-surface-disabled",
+      "mappingId": "m-3d483e100939",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-disabled",
+          "says": "The disabled state color for elements."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-emphasis",
+      "mappingId": "m-7edf56adc30c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-emphasis",
+          "says": "Use for backgrounds indicating areas of focus in editors, such as the theme editor."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-emphasis-active",
+      "mappingId": "m-3d940473a64e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-emphasis-active",
+          "says": "The active state (on press) color for elements indicating areas of focus in editors."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-emphasis-hover",
+      "mappingId": "m-2088c82e1e4f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-emphasis-hover",
+          "says": "The hover state color for elements indicating areas of focus in editors."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-hover",
+      "mappingId": "m-39431131ca02",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-hover",
+          "says": "The hover state color for elements with the highest level of prominence."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-info",
+      "mappingId": "m-96fb74436950",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-info",
+          "says": "Use for backgrounds communicating important information, like banners."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-info-active",
+      "mappingId": "m-1b19afa66abd",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-info-active",
+          "says": "The active state (on press) color for communicating important information."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-info-hover",
+      "mappingId": "m-f1cba7fd12fd",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-info-hover",
+          "says": "The hover state color for communicating important information."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-inverse",
+      "mappingId": "m-b1a7427cf4e8",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-inverse",
+          "says": "Use for elements on bg-inverse."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-magic",
+      "mappingId": "m-65a10f210a2c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-magic",
+          "says": "Use for backgrounds of elements suggested by magic AI."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-magic-active",
+      "mappingId": "m-c69e79c796f2",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-magic-active",
+          "says": "The active state (on press) color for elements suggested by magic AI."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-magic-hover",
+      "mappingId": "m-03769fabaa8e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-magic-hover",
+          "says": "The hover state color for elements suggested by magic AI."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-secondary",
+      "mappingId": "m-603f5fa1fbbd",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-secondary",
+          "says": "The background color for elements with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-secondary-active",
+      "mappingId": "m-b0797f3378ef",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-secondary-active",
+          "says": "The active state (on press) color for elements with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-secondary-hover",
+      "mappingId": "m-9c9d96cbd506",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-secondary-hover",
+          "says": "The hover state color for elements with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-secondary-selected",
+      "mappingId": "m-ad0ca8885a00",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-secondary-selected",
+          "says": "The selected state color for elements with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-selected",
+      "mappingId": "m-00f203cf5185",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-selected",
+          "says": "The selected state color for elements with the highest level of prominence."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-success",
+      "mappingId": "m-2f676d87896d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-success",
+          "says": "Use for backgrounds communicating success, like banners."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-success-active",
+      "mappingId": "m-759b876397e6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-success-active",
+          "says": "The active state (on press) color for communicating success."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-success-hover",
+      "mappingId": "m-5cb62fc2f8e3",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-success-hover",
+          "says": "The hover state color for communicating success."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-tertiary",
+      "mappingId": "m-17a3aea46e40",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-tertiary",
+          "says": "The background color for elements with a third level of prominence."
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-surface, color-bg-surface-secondary",
+          "says": "the surface family has three levels (highest, secondary, third); subtlest is reserved for the ends of 4+ step families"
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-fill-tertiary",
+          "says": "same \"third level of prominence\" wording approved as emphasis-subtle, broad"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"tertiary\" variant -> emphasis-subtle, broad"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle",
+        "match": "broad"
+      }
+    },
+    {
+      "token": "color-bg-surface-tertiary-active",
+      "mappingId": "m-53f8b07773a5",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-tertiary-active",
+          "says": "The active state (on press) color for elements with a third level of prominence."
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-surface, color-bg-surface-secondary",
+          "says": "the surface family has three levels (highest, secondary, third); subtlest is reserved for the ends of 4+ step families"
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-fill-tertiary",
+          "says": "same \"third level of prominence\" wording approved as emphasis-subtle, broad"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"tertiary\" variant -> emphasis-subtle, broad"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active",
+        "match": "broad"
+      }
+    },
+    {
+      "token": "color-bg-surface-tertiary-hover",
+      "mappingId": "m-4804d22753d9",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-tertiary-hover",
+          "says": "The hover state color for elements with a third level of prominence."
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-surface, color-bg-surface-secondary",
+          "says": "the surface family has three levels (highest, secondary, third); subtlest is reserved for the ends of 4+ step families"
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-fill-tertiary",
+          "says": "same \"third level of prominence\" wording approved as emphasis-subtle, broad"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"tertiary\" variant -> emphasis-subtle, broad"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover",
+        "match": "broad"
+      }
+    },
+    {
+      "token": "color-bg-surface-warning",
+      "mappingId": "m-b264f5cdb356",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-warning",
+          "says": "Use for backgrounds communicating warning, like banners."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-warning-active",
+      "mappingId": "m-58d780b5cb18",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-warning-active",
+          "says": "The active state (on press) color for communicating warning."
+        }
+      ]
+    },
+    {
+      "token": "color-bg-surface-warning-hover",
+      "mappingId": "m-ff59054999ab",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-bg-surface-warning-hover",
+          "says": "The hover state color for communicating warning."
+        }
+      ]
+    },
+    {
+      "token": "color-border",
+      "mappingId": "m-3e76f583ef24",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border",
+          "says": "The default color for borders on any element."
+        }
+      ]
+    },
+    {
+      "token": "color-border-brand",
+      "mappingId": "m-e68d38655230",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-brand",
+          "says": "Use for borders paired with brand colors."
+        },
+        {
+          "kind": "value",
+          "source": "color-border-brand",
+          "says": "identical to color-border (#e3e3e3) in every theme: a neutral border, not a distinct accent border"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-accent/property-border",
+        "match": "close"
+      }
+    },
+    {
+      "token": "color-border-caution",
+      "mappingId": "m-7d4368eb77c8",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-caution",
+          "says": "Use for borders communicating caution."
+        }
+      ]
+    },
+    {
+      "token": "color-border-critical",
+      "mappingId": "m-b2f6112ec244",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-critical",
+          "says": "Use for borders communicating critical information."
+        }
+      ]
+    },
+    {
+      "token": "color-border-critical-secondary",
+      "mappingId": "m-eb64f6fbb1e2",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-critical-secondary",
+          "says": "Use for borders communicating critical information, such as borders on invalid text fields."
+        },
+        {
+          "kind": "value",
+          "source": "color-border-critical-secondary",
+          "says": "#8e0b21 (red.14) vs color-border-critical #fec1c7 (red.8): the \"secondary\" border is the darker, stronger one"
+        },
+        {
+          "kind": "sibling",
+          "source": "color-text-critical",
+          "says": "identical value, the full-strength critical text color"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-danger/property-border/emphasis-strong",
+        "match": "close"
+      },
+      "note": "Here \"secondary\" is the stronger step, so emphasis-subtle is the wrong direction."
+    },
+    {
+      "token": "color-border-disabled",
+      "mappingId": "m-c79f5f14d28e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-disabled",
+          "says": "The disabled color for borders on any element."
+        }
+      ]
+    },
+    {
+      "token": "color-border-emphasis",
+      "mappingId": "m-8ee403f3b5ef",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-emphasis",
+          "says": "Use for borders indicating areas of focus."
+        }
+      ]
+    },
+    {
+      "token": "color-border-emphasis-active",
+      "mappingId": "m-4c3390754b3d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-emphasis-active",
+          "says": "The active state (on press) color for borders indicating areas of focus."
+        }
+      ]
+    },
+    {
+      "token": "color-border-emphasis-hover",
+      "mappingId": "m-42a79a240ac6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-emphasis-hover",
+          "says": "The hover state color for borders indicating areas of focus."
+        }
+      ]
+    },
+    {
+      "token": "color-border-focus",
+      "mappingId": "m-689d0898dfa5",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-focus",
+          "says": "The focus ring for any interactive element in a focused state."
+        }
+      ]
+    },
+    {
+      "token": "color-border-hover",
+      "mappingId": "m-76b857055e27",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-hover",
+          "says": "The hover color for borders on any element."
+        }
+      ]
+    },
+    {
+      "token": "color-border-info",
+      "mappingId": "m-a3a9244f87f0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-info",
+          "says": "Use for borders communicating information."
+        }
+      ]
+    },
+    {
+      "token": "color-border-inverse",
+      "mappingId": "m-c13eebbebb1b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-inverse",
+          "says": "Use for borders on an inverse background, such as borders on the global search."
+        }
+      ]
+    },
+    {
+      "token": "color-border-inverse-active",
+      "mappingId": "m-3c1c59b5619e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-inverse-active",
+          "says": "The active state (on press) color for borders on an inverse background."
+        }
+      ]
+    },
+    {
+      "token": "color-border-inverse-hover",
+      "mappingId": "m-827b490e3435",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-inverse-hover",
+          "says": "The hover state color for borders on an inverse background."
+        }
+      ]
+    },
+    {
+      "token": "color-border-magic",
+      "mappingId": "m-a606b399bfca",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-magic",
+          "says": "Use for borders suggested by magic AI."
+        }
+      ]
+    },
+    {
+      "token": "color-border-magic-secondary",
+      "mappingId": "m-9103268a8953",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-magic-secondary",
+          "says": "Use for borders suggested by magic AI, such as borders on text fields."
+        },
+        {
+          "kind": "value",
+          "source": "color-border-magic-secondary",
+          "says": "#9474ff (colors.purple.11) vs color-border-magic #e4deff (purple.6): the \"secondary\" border is the saturated, stronger one"
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-fill-magic, color-icon-magic",
+          "says": "color-border-magic-secondary-hover shares their full-strength #8051ff"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-ai/property-border/emphasis-strong",
+        "match": "close"
+      },
+      "note": "As with color-border-critical-secondary, \"secondary\" marks the stronger step for borders."
+    },
+    {
+      "token": "color-border-magic-secondary-hover",
+      "mappingId": "m-6f682cffd5ed",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-magic-secondary-hover",
+          "says": "Use for borders suggested by magic AI, such as borders on text fields."
+        },
+        {
+          "kind": "value",
+          "source": "color-border-magic-secondary-hover",
+          "says": "#8051ff (colors.purple.12) vs color-border-magic #e4deff (purple.6): the \"secondary\" border is the saturated, stronger one"
+        },
+        {
+          "kind": "sibling",
+          "source": "color-bg-fill-magic, color-icon-magic",
+          "says": "color-border-magic-secondary-hover shares their full-strength #8051ff"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-ai/property-border/emphasis-strong/state-hover",
+        "match": "close"
+      },
+      "note": "As with color-border-critical-secondary, \"secondary\" marks the stronger step for borders."
+    },
+    {
+      "token": "color-border-secondary",
+      "mappingId": "m-9e99abc34704",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-secondary",
+          "says": "The color for hr elements or any visual dividers."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-border-success",
+      "mappingId": "m-bb60034c8cf4",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-success",
+          "says": "Use for borders communicating success."
+        }
+      ]
+    },
+    {
+      "token": "color-border-tertiary",
+      "mappingId": "m-af9abc504f4f",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-tertiary",
+          "says": "The border color on any element. Pair with bg-surface-tertiary or bg-fill-tertiary."
+        },
+        {
+          "kind": "value",
+          "source": "color-border-tertiary",
+          "says": "#cccccc (gray.10): darker than color-border #e3e3e3 and color-border-secondary #ebebeb, so the most prominent neutral border, not the subtlest"
+        },
+        {
+          "kind": "sibling",
+          "source": "color-border-hover",
+          "says": "identical value, approved as the hover (stronger) border"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/property-border/emphasis-strong",
+        "match": "close"
+      },
+      "note": "Three-step family (border, secondary, tertiary) and the value is the strongest step."
+    },
+    {
+      "token": "color-border-warning",
+      "mappingId": "m-81449cef3fef",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-border-warning",
+          "says": "Use for borders communicating warning."
+        }
+      ]
+    },
+    {
+      "token": "color-icon",
+      "mappingId": "m-2fe87df893e4",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon",
+          "says": "The default color for icons."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-active",
+      "mappingId": "m-6ffe361f3552",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-active",
+          "says": "The active state (on press) color for icons."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-brand",
+      "mappingId": "m-0cd74110086b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-brand",
+          "says": "Use for icons that need to pull more focus."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close (example color-bg-fill-brand)"
+        }
+      ]
+    },
+    {
+      "token": "color-icon-caution",
+      "mappingId": "m-dc0d06c0c021",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-caution",
+          "says": "Use for icons communicating caution."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-critical",
+      "mappingId": "m-3750f7ce6ecc",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-critical",
+          "says": "Use for icons communicating critical information."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-disabled",
+      "mappingId": "m-0cd63781ab1e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-disabled",
+          "says": "The disabled state color for icons."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-emphasis",
+      "mappingId": "m-b68c6c1e7a5c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-emphasis",
+          "says": "Use for icons indicating areas of focus in editors, like the theme editor."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-emphasis-active",
+      "mappingId": "m-afb6b44b46b7",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-emphasis-active",
+          "says": "The active state (on press) color for icons indicating areas of focus in editors."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-emphasis-hover",
+      "mappingId": "m-0f23ca4a4f61",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-emphasis-hover",
+          "says": "The hover color for icons indicating areas of focus in editors."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-hover",
+      "mappingId": "m-6ec62fa17ccb",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-hover",
+          "says": "The hover state color for icons."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-info",
+      "mappingId": "m-c803ae6f21ce",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-info",
+          "says": "Use for icons communicating information."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-inverse",
+      "mappingId": "m-a8e2850c6bc5",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-inverse",
+          "says": "Use for icons on an inverse background."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-magic",
+      "mappingId": "m-f3f6b8b3962e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-magic",
+          "says": "Use for icons suggested by magic AI."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-secondary",
+      "mappingId": "m-5aac9ac31fb9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-secondary",
+          "says": "Use for secondary icons."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-icon-secondary-active",
+      "mappingId": "m-f7df346e818b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-secondary-active",
+          "says": "The active state (on press) color for secondary icons."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-icon-secondary-hover",
+      "mappingId": "m-d84194b76082",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-secondary-hover",
+          "says": "The hover state color for secondary icons."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-icon-success",
+      "mappingId": "m-be004f20e904",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-success",
+          "says": "Use for icons communicating success."
+        }
+      ]
+    },
+    {
+      "token": "color-icon-warning",
+      "mappingId": "m-361b22d6fe3c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-icon-warning",
+          "says": "Use for icons communicating warning."
+        }
+      ]
+    },
+    {
+      "token": "color-input-bg-surface",
+      "mappingId": "m-04da72082991",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component background colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-input-bg-surface",
+          "says": "light #fdfdfd (colors.gray.2)"
+        }
+      ]
+    },
+    {
+      "token": "color-input-bg-surface-active",
+      "mappingId": "m-86520c19f5ea",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component background colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-input-bg-surface-active",
+          "says": "light #f7f7f7 (colors.gray.4)"
+        }
+      ]
+    },
+    {
+      "token": "color-input-bg-surface-hover",
+      "mappingId": "m-3e842c076644",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component background colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-input-bg-surface-hover",
+          "says": "light #fafafa (colors.gray.3)"
+        }
+      ]
+    },
+    {
+      "token": "color-input-border",
+      "mappingId": "m-aa4471b1c6c2",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component border colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-input-border",
+          "says": "light #8a8a8a (colors.gray.12)"
+        }
+      ]
+    },
+    {
+      "token": "color-input-border-active",
+      "mappingId": "m-a446b6e558c7",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component border colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-input-border-active",
+          "says": "light #1a1a1a (colors.gray.16)"
+        }
+      ]
+    },
+    {
+      "token": "color-input-border-hover",
+      "mappingId": "m-27022149d6f7",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component border colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-input-border-hover",
+          "says": "light #616161 (colors.gray.13)"
+        }
+      ]
+    },
+    {
+      "token": "color-nav-bg",
+      "mappingId": "m-a2185818732e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component background colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-nav-bg",
+          "says": "light #ebebeb (colors.gray.7)"
+        }
+      ]
+    },
+    {
+      "token": "color-nav-bg-surface",
+      "mappingId": "m-15a39e0f2cd7",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component background colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-nav-bg-surface",
+          "says": "light #000000 @ 0.02 (colors.blackAlpha.3)"
+        }
+      ]
+    },
+    {
+      "token": "color-nav-bg-surface-active",
+      "mappingId": "m-767d700c400b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component background colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-nav-bg-surface-active",
+          "says": "light #fafafa (colors.gray.3)"
+        }
+      ]
+    },
+    {
+      "token": "color-nav-bg-surface-hover",
+      "mappingId": "m-3a83a43c7e02",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component background colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-nav-bg-surface-hover",
+          "says": "light #f1f1f1 (colors.gray.6)"
+        }
+      ]
+    },
+    {
+      "token": "color-nav-bg-surface-selected",
+      "mappingId": "m-72ed6eaa1530",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://github.com/Shopify/polaris-react-archive/blob/main/polaris-tokens/src/themes/base/color.ts",
+          "says": "listed under \"Specialty and component background colors\"; the docs page (https://github.com/Shopify/polaris-react-archive/blob/main/polaris.shopify.com/content/tokens/color.mdx) renders only the shipped token list, no further description"
+        },
+        {
+          "kind": "value",
+          "source": "color-nav-bg-surface-selected",
+          "says": "light #fafafa (colors.gray.3)"
+        }
+      ]
+    },
+    {
+      "token": "color-text",
+      "mappingId": "m-441915ae6b9f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text",
+          "says": "The default text color."
+        }
+      ]
+    },
+    {
+      "token": "color-text-brand",
+      "mappingId": "m-82cd6e4a60bf",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-brand",
+          "says": "Use for text that needs to pull attention."
+        },
+        {
+          "kind": "value",
+          "source": "color-text-brand",
+          "says": "neutral gray #4a4a4a in every theme"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-accent/property-text",
+        "match": "close"
+      }
+    },
+    {
+      "token": "color-text-brand-hover",
+      "mappingId": "m-b376dfa384f6",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-brand-hover",
+          "says": "The hover state color for text that needs to pull attention."
+        },
+        {
+          "kind": "value",
+          "source": "color-text-brand-hover",
+          "says": "neutral gray #303030 in every theme"
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"brand\" -> intent-accent, close"
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-accent/property-text/state-hover",
+        "match": "close"
+      }
+    },
+    {
+      "token": "color-text-brand-on-bg-fill",
+      "mappingId": "m-1087f51f093f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-brand-on-bg-fill",
+          "says": "Use for text on bg-fill-brand, like primary buttons."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "A token coloring only text where the name says on-bg-fill -> usage-on-fill/property-text, exact"
+        }
+      ]
+    },
+    {
+      "token": "color-text-brand-on-bg-fill-active",
+      "mappingId": "m-8b00fee7706c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-brand-on-bg-fill-active",
+          "says": "The active state (on press) color for text on bg-fill-brand."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "A token coloring only text where the name says on-bg-fill -> usage-on-fill/property-text, exact"
+        }
+      ]
+    },
+    {
+      "token": "color-text-brand-on-bg-fill-disabled",
+      "mappingId": "m-60e234b48c61",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-brand-on-bg-fill-disabled",
+          "says": "The disabled state color for text on bg-fill-brand-disabled."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "A token coloring only text where the name says on-bg-fill -> usage-on-fill/property-text, exact"
+        }
+      ]
+    },
+    {
+      "token": "color-text-brand-on-bg-fill-hover",
+      "mappingId": "m-6138e877c556",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-brand-on-bg-fill-hover",
+          "says": "The hover state color for text on bg-fill-brand-hover."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "A token coloring only text where the name says on-bg-fill -> usage-on-fill/property-text, exact"
+        }
+      ]
+    },
+    {
+      "token": "color-text-caution",
+      "mappingId": "m-51d160ab711f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-caution",
+          "says": "Use for text communicating caution."
+        }
+      ]
+    },
+    {
+      "token": "color-text-caution-active",
+      "mappingId": "m-6270cb77aca1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-caution-active",
+          "says": "The active state (on press) color for text communicating caution."
+        }
+      ]
+    },
+    {
+      "token": "color-text-caution-hover",
+      "mappingId": "m-60ef60d2d6c1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-caution-hover",
+          "says": "The hover state color for text communicating caution."
+        }
+      ]
+    },
+    {
+      "token": "color-text-caution-on-bg-fill",
+      "mappingId": "m-8f4d25f689ad",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-caution-on-bg-fill",
+          "says": "Use for text and icons on bg-fill-caution."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "One token for text and icons -> property-foreground; content on a filled background -> usage-on-fill, exact"
+        }
+      ]
+    },
+    {
+      "token": "color-text-caution-secondary",
+      "mappingId": "m-c298c2dcff38",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-caution-secondary",
+          "says": "Use for text communicating caution with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-text-critical",
+      "mappingId": "m-2fa9e04b3393",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-critical",
+          "says": "Use for text communicating critical information."
+        }
+      ]
+    },
+    {
+      "token": "color-text-critical-active",
+      "mappingId": "m-a2eb71ae2133",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-critical-active",
+          "says": "The active state (on press) color for text communicating critical information."
+        }
+      ]
+    },
+    {
+      "token": "color-text-critical-hover",
+      "mappingId": "m-62f868c65ee1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-critical-hover",
+          "says": "The hover state color for text communicating critical information."
+        }
+      ]
+    },
+    {
+      "token": "color-text-critical-on-bg-fill",
+      "mappingId": "m-52ba354f91f9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-critical-on-bg-fill",
+          "says": "Use for text and icons on bg-fill-critical."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "One token for text and icons -> property-foreground; content on a filled background -> usage-on-fill, exact"
+        }
+      ]
+    },
+    {
+      "token": "color-text-critical-secondary",
+      "mappingId": "m-f2bb27a79111",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-critical-secondary",
+          "says": "Use for text communicating critical information with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-text-disabled",
+      "mappingId": "m-4b023af3c76e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-disabled",
+          "says": "Use for text in a disabled state."
+        }
+      ]
+    },
+    {
+      "token": "color-text-emphasis",
+      "mappingId": "m-3cc4c25da76b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-emphasis",
+          "says": "Use for text indicating areas of focus in editors, like the theme editor."
+        }
+      ]
+    },
+    {
+      "token": "color-text-emphasis-active",
+      "mappingId": "m-61a60f07d2f6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-emphasis-active",
+          "says": "The active state (on press) color for text indicating areas of focus."
+        }
+      ]
+    },
+    {
+      "token": "color-text-emphasis-hover",
+      "mappingId": "m-3a93451a1618",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-emphasis-hover",
+          "says": "The hover state color for text indicating areas of focus."
+        }
+      ]
+    },
+    {
+      "token": "color-text-info",
+      "mappingId": "m-3686d85fc2e1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-info",
+          "says": "Use for text communicating important information."
+        }
+      ]
+    },
+    {
+      "token": "color-text-info-active",
+      "mappingId": "m-8b3905884d0d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-info-active",
+          "says": "The active state (on press) color for text communicating important information."
+        }
+      ]
+    },
+    {
+      "token": "color-text-info-hover",
+      "mappingId": "m-7fad03c87237",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-info-hover",
+          "says": "The hover state color for text communicating important information."
+        }
+      ]
+    },
+    {
+      "token": "color-text-info-on-bg-fill",
+      "mappingId": "m-0e827d9075ef",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-info-on-bg-fill",
+          "says": "Use for text and icons on bg-fill-info."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "One token for text and icons -> property-foreground; content on a filled background -> usage-on-fill, exact"
+        }
+      ]
+    },
+    {
+      "token": "color-text-info-secondary",
+      "mappingId": "m-9f79360ad691",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-info-secondary",
+          "says": "Use for text communicating important information with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-text-inverse",
+      "mappingId": "m-ba92f2688cde",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-inverse",
+          "says": "Use for text on an inverse background."
+        }
+      ]
+    },
+    {
+      "token": "color-text-inverse-secondary",
+      "mappingId": "m-a59b4580e4c9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-inverse-secondary",
+          "says": "Use for secondary text on an inverse background."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-text-link",
+      "mappingId": "m-eeaaac9ccc6a",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-link",
+          "says": "Use for text links."
+        }
+      ]
+    },
+    {
+      "token": "color-text-link-active",
+      "mappingId": "m-681d3c7a669a",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-link-active",
+          "says": "The active state (on press) color for text links."
+        }
+      ]
+    },
+    {
+      "token": "color-text-link-hover",
+      "mappingId": "m-282cbb2a53ef",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-link-hover",
+          "says": "The hover state color for text links."
+        }
+      ]
+    },
+    {
+      "token": "color-text-link-inverse",
+      "mappingId": "m-6ed6ebe4d434",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-link-inverse",
+          "says": "Use for text links on an inverse background."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Links on inverse surfaces -> usage-inverse+link, exact"
+        }
+      ]
+    },
+    {
+      "token": "color-text-magic",
+      "mappingId": "m-3a92efe5fee7",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-magic",
+          "says": "Use for text suggested by magic AI."
+        }
+      ]
+    },
+    {
+      "token": "color-text-magic-on-bg-fill",
+      "mappingId": "m-5d1440e80a05",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-magic-on-bg-fill",
+          "says": "Use for text and icons on bg-fill-magic."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "One token for text and icons -> property-foreground; content on a filled background -> usage-on-fill, exact"
+        }
+      ]
+    },
+    {
+      "token": "color-text-magic-secondary",
+      "mappingId": "m-a5ad37cd4460",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-magic-secondary",
+          "says": "Use for text suggested by magic AI with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-text-secondary",
+      "mappingId": "m-72312927ce63",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-secondary",
+          "says": "Use for text with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-text-success",
+      "mappingId": "m-c902706888ad",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-success",
+          "says": "Use for text communicating success."
+        }
+      ]
+    },
+    {
+      "token": "color-text-success-active",
+      "mappingId": "m-a3927ac57a82",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-success-active",
+          "says": "The active state (on press) color for text communicating success."
+        }
+      ]
+    },
+    {
+      "token": "color-text-success-hover",
+      "mappingId": "m-1bd0dcf8f8ce",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-success-hover",
+          "says": "The hover state color for text communicating success."
+        }
+      ]
+    },
+    {
+      "token": "color-text-success-on-bg-fill",
+      "mappingId": "m-b0eb141f08c3",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-success-on-bg-fill",
+          "says": "Use for text and icons on bg-fill-success."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "One token for text and icons -> property-foreground; content on a filled background -> usage-on-fill, exact"
+        }
+      ]
+    },
+    {
+      "token": "color-text-success-secondary",
+      "mappingId": "m-fb6f293c1ce9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-success-secondary",
+          "says": "Use for text communicating success with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    },
+    {
+      "token": "color-text-warning",
+      "mappingId": "m-f237a5322b4b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-warning",
+          "says": "Use for text communicating warning."
+        }
+      ]
+    },
+    {
+      "token": "color-text-warning-active",
+      "mappingId": "m-4ec2b58de239",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-warning-active",
+          "says": "The active state (on press) color for text communicating warning."
+        }
+      ]
+    },
+    {
+      "token": "color-text-warning-hover",
+      "mappingId": "m-73e5817113ce",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-warning-hover",
+          "says": "The hover state color for text communicating warning."
+        }
+      ]
+    },
+    {
+      "token": "color-text-warning-on-bg-fill",
+      "mappingId": "m-04a898b33d40",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-warning-on-bg-fill",
+          "says": "Use for text and icons on bg-fill-warning."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "One token for text and icons -> property-foreground; content on a filled background -> usage-on-fill, exact"
+        }
+      ]
+    },
+    {
+      "token": "color-text-warning-secondary",
+      "mappingId": "m-efaa90951e72",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "color-text-warning-secondary",
+          "says": "Use for text communicating warning with a secondary level of prominence."
+        },
+        {
+          "kind": "docs",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "\"secondary\" variant -> emphasis-subtle, exact for Polaris"
+        }
+      ]
+    }
+  ]
+}

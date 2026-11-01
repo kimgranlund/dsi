@@ -83,7 +83,7 @@ Your probability that a careful designer familiar with this system would accept 
 ## Special cases
 
 - **Secondary and tertiary accents** (Material `secondary`, `tertiary` and their containers): map to the accent concept with `broad`; there is one accent intent.
-- **Theme-invariant "fixed" tokens** (Material `*-fixed`, `*-fixed-dim`): give the same concept **and the same match type** as the non-fixed counterpart would get (so `secondary-fixed` is `broad` to accent, like `secondary`), and say "fixed across themes" in the rationale. Invariance is visible in the values; it is not a concept.
+- **Theme-invariant "fixed" tokens** (Material `*-fixed`, `*-fixed-dim`, `on-*-fixed`): the counterpart is the **container** role, frozen at its light-theme value (`primary-fixed` = `primary-container` in light; `on-primary-fixed` = `on-primary-container`). Give the container's concept and match (`primary-fixed` -> accent background, subtle emphasis), and say "fixed across themes" in the rationale. Check the values: they show the counterpart. Invariance itself is not a concept (ADR 0010).
 - **Content on intent containers** (Material `on-error-container`, `on-primary-container`): `usage-on-fill` with `emphasis-subtle`, property `foreground`.
 - **Syntax highlighting** (Carbon `syntax-*`): always `unmapped`; there is no syntax-role vocabulary yet.
 

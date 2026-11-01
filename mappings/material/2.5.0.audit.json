@@ -1,0 +1,812 @@
+{
+  "packet": "audit-color-v1/material@2.5.0",
+  "model": "claude-fable-5-1",
+  "at": "2026-11-01T01:29:04Z",
+  "checks": [
+    {
+      "token": "md.sys.color.inverse-on-surface",
+      "finding": "terms-contradict-mapping: usage: inverse vs terms inverse+surface (terms: on-surface, inverse, on, surface)"
+    },
+    {
+      "token": "md.sys.color.inverse-surface",
+      "finding": "terms-contradict-mapping: usage: inverse vs terms inverse+surface (terms: inverse, surface)"
+    },
+    {
+      "token": "md.sys.color.on-surface-variant",
+      "finding": "terms-contradict-mapping: usage: (unbound) vs terms surface (terms: on-surface, on, surface, variant)"
+    },
+    {
+      "token": "md.sys.color.scrim",
+      "finding": "terms-contradict-mapping: property: (unbound) vs terms background (terms: scrim)"
+    }
+  ],
+  "verdicts": [
+    {
+      "token": "md.sys.color.background",
+      "mappingId": "m-4776df5a88f6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://api.flutter.dev/flutter/material/ColorScheme-class.html",
+          "says": "background: A color that typically appears behind scrollable content."
+        },
+        {
+          "kind": "sibling",
+          "source": "md.sys.color.surface",
+          "says": "Identical values in both themes; surface is mapped narrow because it also serves as the page background. background is the page-only role."
+        },
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "The M3 roles page no longer lists background as a role; surface is 'Default color for backgrounds'."
+        }
+      ],
+      "note": "Legacy role retained by material-web; page background is the only documented meaning."
+    },
+    {
+      "token": "md.sys.color.error",
+      "mappingId": "m-473ab6bf1842",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Error: Attention-grabbing color against surface for fills, icons, and text, indicating urgency"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.badge.color; md.comp.filled-field.error-focus-label-text-color",
+          "says": "58 uses across text (30), icon (8), border (6) and badge fills: no single property, so bare intent is right."
+        }
+      ],
+      "note": "narrow matches color-v1.md: error also colors destructive and badge fills beyond danger status."
+    },
+    {
+      "token": "md.sys.color.error-container",
+      "mappingId": "m-0bdc8b8c2249",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Error container: Attention-grabbing fill color against surface"
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.error-container",
+          "says": "error90 light / error30 dark: a light tonal fill, lower emphasis than error (error40/error80)."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.inverse-on-surface",
+      "mappingId": "m-0ef8404a88f1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Inverse on surface: Text and icons against inverse surface"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.outlined-icon-button.selected-icon-color",
+          "says": "Icon (4) and state-layer (2) roles on the inverse-surface selected container: foreground."
+        }
+      ],
+      "note": "The terms check flags 'surface', but the docs place the role on inverse surface; usage-inverse/property-foreground is the right reading."
+    },
+    {
+      "token": "md.sys.color.inverse-primary",
+      "mappingId": "m-25e7a40fd4dd",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Inverse primary: Actionable elements, such as text buttons, against inverse surface"
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.inverse-primary",
+          "says": "primary80 light / primary40 dark: the primary tone swapped across themes."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.inverse-surface",
+      "mappingId": "m-8e598eba8f2f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Inverse surface: Background fills for elements which contrast against surface"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.outlined-icon-button.selected-container-color",
+          "says": "Used as a container (background) color."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.on-background",
+      "mappingId": "m-ea886d36e616",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://api.flutter.dev/flutter/material/ColorScheme-class.html",
+          "says": "onBackground: A color that's clearly legible when drawn on background."
+        },
+        {
+          "kind": "sibling",
+          "source": "md.sys.color.on-surface",
+          "says": "Identical values; on-surface -> usage-surface/property-foreground (exact), so the page counterpart is usage-page/property-foreground."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.on-error",
+      "mappingId": "m-c8171c5a2243",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "On error: Text and icons against error"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.badge.large-label-text-color",
+          "says": "Label text on the error-filled badge."
+        },
+        {
+          "kind": "description",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Content on a filled background -> usage-on-fill + property, exact; on-error is the listed example."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.on-error-container",
+      "mappingId": "m-28669a4d862d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "On error container: Text and icons against error container"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.filled-field.error-hover-label-text-color",
+          "says": "Text (6), icon (4), border (3): foreground on the light error container."
+        },
+        {
+          "kind": "description",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "emphasis-subtle for light containers; on-error-container is the listed example."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.on-primary",
+      "mappingId": "m-baee9c077bfc",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "On primary: Text and icons against primary"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.filled-button.focus-label-text-color; md.comp.checkbox.selected-icon-color",
+          "says": "Icon (16) and text (5) on primary-filled components."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.on-primary-container",
+      "mappingId": "m-7030113c1715",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "On primary container: Text and icons against primary container"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.fab.primary-icon-color; md.comp.fab.primary-focus-label-text-color",
+          "says": "Icon (8) and text (4) on the primary-container FAB."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.on-primary-fixed",
+      "mappingId": "m-25fd4a062b4f",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "On fixed colors are used for text and icons which sit on top of the corresponding Fixed color; Primary fixed ... are fill colors used against surface."
+        },
+        {
+          "kind": "docs",
+          "source": "https://api.flutter.dev/flutter/material/ColorScheme-class.html",
+          "says": "primaryFixed: A substitute for primaryContainer that's the same color for the dark and light themes."
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.on-primary-fixed",
+          "says": "primary10 #21005d in both themes = on-primary-container light (primary10), not on-primary (primary100 #ffffff)."
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground/emphasis-subtle",
+        "match": "exact"
+      },
+      "note": "The fixed convention is right but the counterpart is on-primary-container, not on-primary; the mapping drops emphasis-subtle."
+    },
+    {
+      "token": "md.sys.color.on-secondary",
+      "mappingId": "m-d46bdd9dee91",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Secondary: Less prominent fills, text, and icons against surface; on-<role> is text and icons against that role."
+        },
+        {
+          "kind": "description",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Secondary and tertiary accent roles -> intent-accent, broad."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.on-secondary-container",
+      "mappingId": "m-9909a511c671",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Secondary container: Less prominent fill color against surface, for recessive components like tonal buttons"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.fab.secondary-icon-color; md.comp.fab.secondary-focus-label-text-color",
+          "says": "Icon (40) and text (25) on secondary-container fills."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.on-secondary-fixed",
+      "mappingId": "m-4a9854006e6b",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "On fixed colors are used for text and icons which sit on top of the corresponding Fixed color; fixed roles are fill colors used against surface."
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.on-secondary-fixed",
+          "says": "secondary10 #1d192b in both themes = on-secondary-container light, not on-secondary (secondary100 #ffffff)."
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground/emphasis-subtle",
+        "match": "broad"
+      },
+      "note": "Counterpart is on-secondary-container (broad per the secondary convention), so emphasis-subtle belongs."
+    },
+    {
+      "token": "md.sys.color.on-surface",
+      "mappingId": "m-cb6f7cde7ee0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "On surface: Text and icons against any surface or surface container color"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.assist-chip.focus-label-text-color; md.comp.assist-chip.disabled-leading-icon-color",
+          "says": "236 uses, text (88) and icon (49) dominate; one token for text and icons -> property-foreground."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.on-surface-variant",
+      "mappingId": "m-6385922d1983",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "On surface variant: Lower-emphasis color for text and icons against any surface or surface container color"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.dialog.supporting-text-color; md.comp.checkbox.outline-color",
+          "says": "Text (50) and icon (62) in supporting roles: subtle foreground."
+        }
+      ],
+      "note": "Docs place it on surfaces exactly like on-surface; dsi:concept/color/usage-surface/property-foreground/emphasis-subtle exists and would be the tighter concept. Not wrong, only less specific."
+    },
+    {
+      "token": "md.sys.color.on-tertiary",
+      "mappingId": "m-a2d236eaa35b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Tertiary: Complementary fills, text, and icons against surface; on-<role> is text and icons against that role."
+        },
+        {
+          "kind": "description",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Secondary and tertiary accent roles -> intent-accent, broad."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.on-tertiary-container",
+      "mappingId": "m-fb86632d5799",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Tertiary container: Complementary container color against surface, for components like input fields"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.fab.tertiary-icon-color; md.comp.fab.tertiary-focus-label-text-color",
+          "says": "Icon (4) and text (4) on the tertiary-container FAB."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.on-tertiary-fixed",
+      "mappingId": "m-e591b013c191",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "On fixed colors are used for text and icons which sit on top of the corresponding Fixed color; fixed roles are fill colors used against surface."
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.on-tertiary-fixed",
+          "says": "tertiary10 #31111d in both themes = on-tertiary-container light, not on-tertiary (tertiary100 #ffffff)."
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground/emphasis-subtle",
+        "match": "broad"
+      },
+      "note": "Counterpart is on-tertiary-container, so emphasis-subtle belongs."
+    },
+    {
+      "token": "md.sys.color.outline",
+      "mappingId": "m-168919a6692e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Outline: Important boundaries, such as a text field outline"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.outlined-button.outline-color; md.comp.outlined-field.outline-color",
+          "says": "15 of 16 uses are border roles."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.outline-variant",
+      "mappingId": "m-e15da71a643e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Outline variant: Decorative elements, such as dividers, and when other elements provide 4.5:1 contrast"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.divider.color; md.comp.outlined-card.outline-color",
+          "says": "Divider and card outline: low-emphasis borders."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.primary",
+      "mappingId": "m-efb4dedfa6d9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Primary: High-emphasis fills, texts, and icons against surface"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.assist-chip.leading-icon-color; md.comp.checkbox.selected-container-color",
+          "says": "148 uses across icon, text, background, border: the brand accent with no single property."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.primary-container",
+      "mappingId": "m-b156d2c10008",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Primary container: Standout fill color against surface, for key components like FAB"
+        },
+        {
+          "kind": "docs",
+          "source": "https://api.flutter.dev/flutter/material/ColorScheme-class.html",
+          "says": "primaryContainer: A color used for elements needing less emphasis than primary."
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.fab.primary-container-color",
+          "says": "Container (background) fill."
+        }
+      ],
+      "note": "close is apt: a tonal accent fill, lower emphasis than primary but still a standout fill."
+    },
+    {
+      "token": "md.sys.color.primary-fixed",
+      "mappingId": "m-bb8b79d491d0",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Primary fixed ... are fill colors used against surface."
+        },
+        {
+          "kind": "docs",
+          "source": "https://api.flutter.dev/flutter/material/ColorScheme-class.html",
+          "says": "primaryFixed: A substitute for primaryContainer that's the same color for the dark and light themes."
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.primary-fixed",
+          "says": "primary90 #eaddff in both themes = primary-container light, not primary (primary40 #6750a4)."
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+        "match": "close"
+      },
+      "note": "Fixed convention applies, but the counterpart is primary-container (a fill), not primary; exact to bare intent-accent overstates a light tonal fill."
+    },
+    {
+      "token": "md.sys.color.scrim",
+      "mappingId": "m-271f1668787f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://api.flutter.dev/flutter/material/ColorScheme-class.html",
+          "says": "scrim: A color use to paint the scrim around of modal components."
+        },
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Named as a role in the 'Scrim and Shadow roles' figure."
+        }
+      ],
+      "note": "The property check wants background; usage-scrim already names the modal backdrop, so leaving property unbound is fine."
+    },
+    {
+      "token": "md.sys.color.secondary",
+      "mappingId": "m-685d34c8f253",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Secondary: Less prominent fills, text, and icons against surface"
+        },
+        {
+          "kind": "description",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Secondary and tertiary accent roles -> intent-accent, broad."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.secondary-container",
+      "mappingId": "m-72207d09589f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Secondary container: Less prominent fill color against surface, for recessive components like tonal buttons"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.filled-tonal-button.container-color; md.comp.filter-chip.selected-container-color",
+          "says": "9 of 11 uses are container (background) fills."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.secondary-fixed",
+      "mappingId": "m-0b52d960f8e5",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Fixed roles are fill colors used against surface, the same tone in light and dark themes."
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.secondary-fixed",
+          "says": "secondary90 #e8def8 in both themes = secondary-container light, not secondary (secondary40 #625b71)."
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+        "match": "broad"
+      },
+      "note": "Counterpart is secondary-container, which maps to the accent subtle background, broad."
+    },
+    {
+      "token": "md.sys.color.shadow",
+      "mappingId": "m-c107c1843ec0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://api.flutter.dev/flutter/material/ColorScheme-class.html",
+          "says": "shadow: A color use to paint the drop shadows of elevated components."
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.elevation.shadow-color; md.comp.elevated-card.container-shadow-color",
+          "says": "All 14 uses are *-shadow-color tokens."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.surface",
+      "mappingId": "m-b13a2ab02e83",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Surface: Default color for backgrounds"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.list.container-color; md.comp.navigation-drawer.standard-container-color",
+          "says": "7 of 9 uses are container backgrounds."
+        },
+        {
+          "kind": "sibling",
+          "source": "md.sys.color.background",
+          "says": "Identical values; surface also serves as the page background, so it covers more than usage-surface: narrow."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.surface-bright",
+      "mappingId": "m-7186012b183c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Surface bright: Brightest surface color in light and dark themes"
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.surface-bright",
+          "says": "neutral98 light / neutral24 dark: one specific surface level -> broad."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.surface-container",
+      "mappingId": "m-f1a52798e72b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Surface container: Default container color"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.menu.container-color; md.comp.navigation-bar.container-color",
+          "says": "All 3 uses are container backgrounds."
+        }
+      ],
+      "note": "Middle level of the ordered family; dsi:concept/color/usage-surface/property-background/emphasis-default exists and would let it sit beside the low/high siblings with close."
+    },
+    {
+      "token": "md.sys.color.surface-container-high",
+      "mappingId": "m-ffce9d42b5be",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Surface container high: High-emphasis container color"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.dialog.container-color; md.comp.fab.container-color",
+          "says": "All 3 uses are container backgrounds."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.surface-container-highest",
+      "mappingId": "m-14b5afe8969d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Surface container highest: Highest-emphasis container color"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.filled-card.container-color; md.comp.filled-text-field.container-color",
+          "says": "Container backgrounds (6); icon uses are disabled-state tints."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.surface-container-low",
+      "mappingId": "m-9af1e50f7b53",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Surface container low: Low-emphasis container color"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.elevated-card.container-color; md.comp.elevated-button.container-color",
+          "says": "All 8 uses are container backgrounds."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.surface-container-lowest",
+      "mappingId": "m-981c5f6f96d9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Surface container lowest: Lowest-emphasis container color"
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.surface-container-lowest",
+          "says": "neutral100 light / neutral4 dark: the end of the 5-step family -> subtlest."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.surface-dim",
+      "mappingId": "m-d75da7202dab",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Surface dim: Dimmest surface color in light and dark themes"
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.surface-dim",
+          "says": "neutral87 light / neutral6 dark: one specific surface level -> broad."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.surface-variant",
+      "mappingId": "m-eb401777db1d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://api.flutter.dev/flutter/material/ColorScheme-class.html",
+          "says": "surfaceVariant: A color variant of surface that can be used for differentiation against a component using surface."
+        },
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "No longer listed as a role on the M3 roles page (superseded by surface container levels)."
+        }
+      ],
+      "note": "Legacy role still shipped by material-web; one surface variant -> broad."
+    },
+    {
+      "token": "md.sys.color.tertiary",
+      "mappingId": "m-8c6cd4ad6136",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Tertiary: Complementary fills, text, and icons against surface"
+        },
+        {
+          "kind": "description",
+          "source": "docs/decisions/0008-mapping-conventions.md",
+          "says": "Secondary and tertiary accent roles -> intent-accent, broad."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.tertiary-container",
+      "mappingId": "m-771ebb4ccf63",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Tertiary container: Complementary container color against surface, for components like input fields"
+        },
+        {
+          "kind": "usage",
+          "source": "md.comp.fab.tertiary-container-color",
+          "says": "Container (background) fill."
+        }
+      ]
+    },
+    {
+      "token": "md.sys.color.tertiary-fixed",
+      "mappingId": "m-6338229019d0",
+      "verdict": "contradicted",
+      "evidence": [
+        {
+          "kind": "docs",
+          "source": "https://m3.material.io/styles/color/roles",
+          "says": "Fixed roles are fill colors used against surface, the same tone in light and dark themes."
+        },
+        {
+          "kind": "value",
+          "source": "md.sys.color.tertiary-fixed",
+          "says": "tertiary90 #ffd8e4 in both themes = tertiary-container light, not tertiary (tertiary40 #7d5260)."
+        }
+      ],
+      "suggested": {
+        "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+        "match": "broad"
+      },
+      "note": "Counterpart is tertiary-container, which maps to the accent subtle background, broad."
+    }
+  ]
+}

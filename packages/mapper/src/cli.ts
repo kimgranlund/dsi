@@ -6,8 +6,9 @@ import { merge, readProposals, APPROVE_AT, APPROVE_WITH_CLASSIFIER_AT, type Clas
 import { classify, type TermsFile } from '@dsi/classify';
 import { loadNative } from '@dsi/resolve';
 import { preparePacket, readMappings, type Scope } from './packet.ts';
-import { prepareAudit, readVerdicts } from './audit.ts';
-import { applyDecisions, applyTermDecisions, collectQueue, collectTermQueue, renderPage, type Decision, type TermDecision } from './review.ts';
+import { auditTerms, prepareAudit, readVerdicts } from './audit.ts';
+import { resolve as resolveToken, showValue } from '@dsi/resolve';
+import { applyDecisions, applyDisputes, applyTermDecisions, collectDisputes, collectQueue, collectTermQueue, disputeKey, renderPage, type Decision, type DisputeDecision, type TermDecision } from './review.ts';
 
 const USAGE = `usage:
   dsi-map prepare <scope> <run>   write <product>.{a,b}.packet.json for every product in the scope
@@ -21,6 +22,24 @@ const USAGE = `usage:
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
 
 const [cmd, scopeId, run] = process.argv.slice(2);
+
+/** Values and description of a token, for review cards. */
+function valuesOf(product: string, token: string) {
+  const set = loadNative(root, product, scope.products[product].version);
+  const themes = set.themes.length ? set.themes : [''];
+  return { themes: Object.fromEntries(themes.map((th) => { const r = resolveToken(set, th, token); return [th || 'all', { aliases: r.chain, value: showValue(r.type, r.value) }]; })), description: set.tokens.get(token)?.description };
+}
+/** Approved terms most of their own approved tokens disagree with. */
+function termFindingsFor() {
+  const out: { product: string; term: string; detail: string }[] = [];
+  for (const [product, { version }] of Object.entries(scope.products)) {
+    const tp = path.join(root, 'mappings', product, 'terms.json');
+    const m = readMappings(root, product, version) as any;
+    if (!fs.existsSync(tp) || !m) continue;
+    for (const f of auditTerms(ontology, JSON.parse(fs.readFileSync(tp, 'utf8')), m.mappings.filter((x: any) => x.status === 'approved'))) out.push({ product, term: f.token.replace(/^term:/, ''), detail: f.detail });
+  }
+  return out;
+}
 const root = process.cwd();
 if (!cmd || !scopeId) { console.error(USAGE); process.exit(2); }
 const scope = JSON.parse(fs.readFileSync(path.join(root, 'packages/mapper/scopes', `${scopeId}.json`), 'utf8')) as Scope;
@@ -68,10 +87,11 @@ if (cmd === 'prepare') {
   if (!run || !out) { console.error(USAGE); process.exit(2); }
   const items = collectQueue(root, scope, runDir);
   const termItems = vocabRun ? collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', vocabRun)) : [];
+  const disputes = collectDisputes(root, scope, termFindingsFor(), valuesOf);
   const packet = JSON.parse(fs.readFileSync(path.join(runDir, `${Object.keys(scope.products)[0]}.a.packet.json`), 'utf8'));
   fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true });
-  fs.writeFileSync(out, renderPage(root, items, packet.ontology, new Date().toISOString(), termItems));
-  console.log(`${items.length} queued tokens, ${termItems.length} queued words -> ${out}`);
+  fs.writeFileSync(out, renderPage(root, items, packet.ontology, new Date().toISOString(), termItems, disputes));
+  console.log(`${items.length} queued tokens, ${termItems.length} queued words, ${disputes.length} disputes -> ${out}`);
 } else if (cmd === 'apply-review') {
   const [file, reviewer] = [process.argv[4], process.argv[5]];
   if (!file || !reviewer) { console.error(USAGE); process.exit(2); }
@@ -79,7 +99,12 @@ if (cmd === 'prepare') {
   const all = (Array.isArray(raw) ? raw : raw.documents ?? raw.docs ?? []).map((d: any) => d.data ?? d);
   // Token decisions and term decisions may come in one export; term decisions carry a `term` field.
   console.log('tokens', JSON.stringify(applyDecisions(root, scope, all.filter((d: any) => !('term' in d)) as Decision[], reviewer)));
-  console.log('terms ', JSON.stringify(applyTermDecisions(root, all.filter((d: any) => 'term' in d) as TermDecision[], reviewer)));
+  console.log('terms ', JSON.stringify(applyTermDecisions(root, all.filter((d: any) => 'term' in d && !('kind' in d)) as TermDecision[], reviewer)));
+  const disputeDecisions = all.filter((d: any) => 'kind' in d && 'subject' in d) as DisputeDecision[];
+  if (disputeDecisions.length) {
+    const suggestions = new Map(collectDisputes(root, scope, termFindingsFor(), valuesOf).filter((x) => x.suggested).map((x) => [x.key, x.suggested!]));
+    console.log('disputes', JSON.stringify(applyDisputes(root, scope, disputeDecisions, reviewer, suggestions)));
+  }
 } else if (cmd === 'audit-prepare') {
   if (!run) { console.error(USAGE); process.exit(2); }
   const dir = path.join(root, '.cache/audit', run);

@@ -75,3 +75,41 @@ test('term decisions approve, reject and add noise, and the result validates', a
   const issues = await validateRepo({ root, ontologyDir: path.join(REPO, 'ontology') });
   assert.deepEqual(issues.filter((i) => i.file.includes('terms')), []);
 });
+
+import { applyDisputes, collectDisputes, disputeKey } from '../src/review.ts';
+
+test('disputes: suggestion supersedes the approved mapping, kept records a resolution, reject-term rejects', async () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'dsi-disputes-'));
+  fs.cpSync(path.join(REPO, 'catalog'), path.join(root, 'catalog'), { recursive: true });
+  fs.mkdirSync(path.join(root, 'mappings/material'), { recursive: true });
+  const prov = { agent: 'dsi-mapper', model: 'opus', at: '2026-11-01T00:00:00Z' };
+  const review = { by: 'agreement', at: '2026-11-01T00:00:00Z' };
+  fs.writeFileSync(path.join(root, 'mappings/material/2.5.0.mappings.json'), JSON.stringify({ product: 'material', implementation: 'material-web', sourceVersion: '2.5.0', mappings: [
+    { id: 'm-a', token: 'md.sys.color.primary-fixed', concept: 'dsi:concept/color/intent-accent', match: 'exact', confidence: 0.9, status: 'approved', rationale: 'r', provenance: prov, review },
+    { id: 'm-b', token: 'md.sys.color.outline', concept: 'dsi:concept/color/property-border', match: 'exact', confidence: 0.9, status: 'approved', rationale: 'r', provenance: prov, review },
+  ] }));
+  fs.writeFileSync(path.join(root, 'mappings/material/2.5.0.audit.json'), JSON.stringify({ packet: 'p', model: 'fable', at: '2026-11-01T01:00:00Z', verdicts: [
+    { token: 'md.sys.color.primary-fixed', mappingId: 'm-a', verdict: 'contradicted', evidence: [{ kind: 'value', source: 'md.sys.color.primary-container', says: 'same value in light' }], suggested: { concept: 'dsi:concept/color/intent-accent/property-background/emphasis-subtle', match: 'close' } },
+    { token: 'md.sys.color.outline', mappingId: 'm-b', verdict: 'contradicted', evidence: [{ kind: 'docs', source: 'https://m3.material.io/', says: 'x' }], suggested: { concept: 'dsi:concept/color/property-border/emphasis-strong', match: 'close' } },
+  ] }));
+  fs.writeFileSync(path.join(root, 'mappings/material/terms.json'), JSON.stringify({ product: 'material', terms: [{ term: 'fixed', concept: 'dsi:intent/accent', match: 'exact', status: 'approved', provenance: prov, review }] }));
+  const scope = { id: 'color-v1', domain: 'color', prompt: '', products: { material: { version: '2.5.0' } } };
+  const items = collectDisputes(root, scope, [{ product: 'material', term: 'fixed', detail: 'fixed -> dsi:intent/accent, but only 0 of 4 agree' }], () => ({ themes: {} }));
+  assert.deepEqual(items.map((i) => [i.kind, i.subject]), [['mapping', 'md.sys.color.primary-fixed'], ['mapping', 'md.sys.color.outline'], ['term', 'fixed']]);
+  const at = '2026-11-01T02:00:00Z';
+  const counts = applyDisputes(root, scope, [
+    { key: disputeKey('material', 'mapping', 'md.sys.color.primary-fixed'), kind: 'mapping', product: 'material', subject: 'md.sys.color.primary-fixed', action: 'suggestion', at },
+    { key: disputeKey('material', 'mapping', 'md.sys.color.outline'), kind: 'mapping', product: 'material', subject: 'md.sys.color.outline', action: 'kept', at },
+    { key: disputeKey('material', 'term', 'fixed'), kind: 'term', product: 'material', subject: 'fixed', action: 'reject-term', at },
+  ], 'kimgranlund', new Map(items.filter((i) => i.suggested).map((i) => [i.key, i.suggested!])));
+  assert.deepEqual(counts, { kept: 1, suggestion: 1, custom: 0, 'reject-term': 1, skipped: 0 });
+  const m = JSON.parse(fs.readFileSync(path.join(root, 'mappings/material/2.5.0.mappings.json'), 'utf8'));
+  const pf = m.mappings.filter((x: any) => x.token === 'md.sys.color.primary-fixed').map((x: any) => [x.status, x.concept.replace('dsi:concept/color/', '')]).sort();
+  assert.deepEqual(pf, [['approved', 'intent-accent/property-background/emphasis-subtle'], ['superseded', 'intent-accent']]);
+  const audit = JSON.parse(fs.readFileSync(path.join(root, 'mappings/material/2.5.0.audit.json'), 'utf8'));
+  assert.deepEqual(audit.verdicts.map((v: any) => v.resolution?.action), ['suggestion', 'kept']);
+  assert.equal(JSON.parse(fs.readFileSync(path.join(root, 'mappings/material/terms.json'), 'utf8')).terms[0].status, 'rejected');
+  assert.equal(collectDisputes(root, scope, [], () => ({ themes: {} })).length, 0, 'resolved disputes leave the queue');
+  const issues = await validateRepo({ root, ontologyDir: path.join(REPO, 'ontology') });
+  assert.deepEqual(issues.filter((i) => i.file.startsWith('mappings')), []);
+});
