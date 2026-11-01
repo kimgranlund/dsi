@@ -1,7 +1,7 @@
 import { expand, inScheme, type Ontology } from './ontology.ts';
 
 /** Fixed facet order of compositional concept IRIs. */
-export const CONCEPT_FACETS = ['intent', 'usage', 'syntax', 'component', 'part', 'property', 'style', 'emphasis', 'brightness', 'state'] as const;
+export const CONCEPT_FACETS = ['intent', 'usage', 'hue', 'syntax', 'component', 'part', 'property', 'style', 'emphasis', 'brightness', 'state'] as const;
 /** Facets that may combine values with '+', sorted alphabetically so one combination has one IRI. */
 export const MULTI_VALUED = new Set(['usage', 'state']);
 
@@ -39,6 +39,7 @@ export function parseConcept(o: Ontology, ref: string): ParsedConcept | string {
     facets[facet] = value;
   }
   if (facets.part && !facets.component) return 'part needs a component';
+  if (facets.hue && !String(facets.usage ?? '').split('+').includes('categorical')) return 'hue needs usage categorical';
   return { domain, facets };
 }
 

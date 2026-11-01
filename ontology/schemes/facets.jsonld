@@ -59,6 +59,12 @@
       "definition": "What the token communicates, independent of hue: status, brand emphasis or action consequence."
     },
     {
+      "id": "dsi:facet/hue", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Hue", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/hue", "bindingProperty": "dsi:hasHue",
+      "definition": "The named hue of a member of a categorical color set (tag, avatar, chart and user-chosen colors), where the hue itself is the meaning. Binds only together with usage/categorical (ADR 0017).",
+      "scopeNote": "Not for status or brand colors: Danger is an intent, whatever its hue."
+    },
+    {
       "id": "dsi:facet/syntax", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
       "prefLabel": "Syntax", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/syntax", "bindingProperty": "dsi:hasSyntax",
       "definition": "The code or document syntax role a token colors (keyword, string, comment...). Values are the @lezer/highlight tags (ontology/schemes/syntax.jsonld)."
@@ -222,6 +228,22 @@
     { "id": "dsi:property/spring-damping", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Spring damping", "definition": "Damping ratio of a physics spring (1 = no overshoot).", "dsi:inDomain": { "id": "dsi:domain/motion" } },
     { "id": "dsi:property/transition", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Transition", "definition": "A composite of duration, delay and easing.", "dsi:inDomain": { "id": "dsi:domain/motion" } },
     { "id": "dsi:property/keyframes", "type": "Concept", "inScheme": "dsi:scheme/property", "topConceptOf": "dsi:scheme/property", "prefLabel": "Keyframes", "definition": "A named animation sequence.", "dsi:inDomain": { "id": "dsi:domain/motion" } },
+
+    { "id": "dsi:scheme/hue", "type": "ConceptScheme", "prefLabel": "Hue values", "scopeNote": "A small canonical set for categorical colors. Native hue names outside it (coral, plum, pine, olive, lemon, auburn, cool-gray) map close to the nearest value by hue angle; neutrals map to gray." },
+    { "id": "dsi:hue/red", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Red", "definition": "Hue around 0°." },
+    { "id": "dsi:hue/orange", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Orange", "definition": "Hue around 30°." },
+    { "id": "dsi:hue/yellow", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Yellow", "definition": "Hue around 55°." },
+    { "id": "dsi:hue/lime", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Lime", "definition": "Hue around 80°." },
+    { "id": "dsi:hue/green", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Green", "definition": "Hue around 120°." },
+    { "id": "dsi:hue/teal", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Teal", "definition": "Hue around 170°." },
+    { "id": "dsi:hue/cyan", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Cyan", "definition": "Hue around 190°." },
+    { "id": "dsi:hue/blue", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Blue", "definition": "Hue around 215°." },
+    { "id": "dsi:hue/indigo", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Indigo", "definition": "Hue around 240°." },
+    { "id": "dsi:hue/purple", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Purple", "definition": "Hue around 270°." },
+    { "id": "dsi:hue/magenta", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Magenta", "definition": "Hue around 300°." },
+    { "id": "dsi:hue/pink", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Pink", "definition": "Hue around 330°." },
+    { "id": "dsi:hue/brown", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Brown", "definition": "Low-saturation warm hue around 25°, darker than orange." },
+    { "id": "dsi:hue/gray", "type": "Concept", "inScheme": "dsi:scheme/hue", "topConceptOf": "dsi:scheme/hue", "prefLabel": "Gray", "definition": "Neutral: no dominant hue (includes cool and warm grays)." },
 
     { "id": "dsi:scheme/style", "type": "ConceptScheme", "prefLabel": "Style values", "scopeNote": "Carbon names its two motion and type styles productive and expressive; Material names its easing sets standard and emphasized. Both splits mean quick and utilitarian versus noticeable, so native names map here with close." },
     { "id": "dsi:style/productive", "type": "Concept", "inScheme": "dsi:scheme/style", "topConceptOf": "dsi:scheme/style", "prefLabel": "Productive", "altLabel": "Standard", "definition": "Quick, subtle motion or compact type for everyday task work.", "editorialNote": "Source: https://carbondesignsystem.com/elements/motion/overview/" },

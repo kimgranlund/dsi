@@ -16,7 +16,7 @@ const one = (sql: string, ...a: any[]) => db.prepare(sql).get(...a) as Record<st
 
 test('only approved records reach the database', () => {
   let approved = 0, other = 0;
-  for (const p of ['carbon', 'material', 'polaris']) {
+  for (const p of fs.readdirSync(path.join(REPO, 'sources')).filter((d) => fs.existsSync(path.join(REPO, 'sources', d, 'source.json')))) {
     const v = JSON.parse(fs.readFileSync(path.join(REPO, 'sources', p, 'source.json'), 'utf8')).package.version;
     for (const m of JSON.parse(fs.readFileSync(path.join(REPO, 'mappings', p, `${v}.mappings.json`), 'utf8')).mappings) m.status === 'approved' ? approved++ : other++;
   }

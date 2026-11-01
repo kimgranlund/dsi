@@ -34,7 +34,7 @@ Layers in a stack. Classify products, not organizations.
 |---|---|
 | Native token | A token as the product ships it, stored in DTCG with its native name |
 | Concept | A canonical meaning: a facet combination with a compositional IRI, e.g. `dsi:concept/color/intent-danger/property-background` (Danger background) |
-| Facet | One dimension of a concept: domain, scale, step, emphasis, intent, property, style, usage, component, part, state (identity facets) and mode (context facet) |
+| Facet | One dimension of a concept: domain, scale, step, emphasis, intent, property, style, hue, usage, component, part, state (identity facets) and mode (context facet) |
 | Mapping | A typed SKOS link between a native token and a concept |
 | Match type | `match/exact`, `close`, `broad`, `narrow`, `related` (SKOS mapping properties; subject is always the native token) |
 | Intent | Hue-independent meaning, e.g. `intent/danger` (status) vs `intent/destructive` (action), linked as related; `intent/ai` marks AI content; `intent/caution` is narrower than warning; `intent/highlight` marks editor focus and selection |
@@ -45,6 +45,7 @@ Layers in a stack. Classify products, not organizations.
 | Emphasis | `subtlest`, `subtle`, `default`, `strong`, `strongest`: relative strength within a family |
 | Domain | `facet/domain`: the token family a concept belongs to: color, space, size, shape, typography, elevation, motion, opacity, layout (breakpoints, z-index) |
 | Role | A `property` value naming a whole non-color scale (spacing, corner-radius, font-size, duration...); each names its domain with `dsi:inDomain`. Scale tokens map to the role with `narrow` (ADR 0013) |
+| Hue | `hue/*`: the named hue of a categorical color (tags, avatars, user-chosen colors); binds only with `usage/categorical` (ADR 0017) |
 | Style | `style/productive`, `style/expressive`: quick, utilitarian versus noticeable motion or type (Carbon productive/expressive; Material standard/emphasized) |
 | Component, Part | `component/*` and `part/*`: only components and parts a product's shipped tokens name (Polaris `shadow-button`, `space-table-cell-padding`) |
 | Expressive mode | `mode/expressive`: a product's newer token set shipped beside the one its components consume (Material Web `versions/latest`); it extends light |

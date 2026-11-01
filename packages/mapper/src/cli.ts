@@ -18,7 +18,7 @@ const USAGE = `usage:
   dsi-map audit-prepare <scope> <run>            deterministic checks + auditor packets for every approved mapping
   dsi-map audit-check <scope> <run> <product>    validate an auditor's verdicts
   dsi-map audit-merge <scope> <run>              write mappings/<product>/<version>.audit.json and list disputes
-  dsi-map review <scope> <run> <out.html> [vocab run]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
+  dsi-map review <scope> <run> <out.html> [vocab run[,run]] [--words-only]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
 
 const [cmd, scopeId, run] = process.argv.slice(2);
@@ -57,6 +57,8 @@ if (cmd === 'prepare') {
 } else if (cmd === 'merge') {
   if (!run) { console.error(USAGE); process.exit(2); }
   for (const [product, { version }] of Object.entries(scope.products)) {
+    // A run may cover only some products (a newly added system): skip those with no proposals.
+    if (!fs.existsSync(path.join(runDir, `${product}.a.proposals.json`)) && !fs.existsSync(path.join(runDir, `${product}.b.proposals.json`))) { console.log(`${product}: no proposals in this run, skipped`); continue; }
     const packet = JSON.parse(fs.readFileSync(path.join(runDir, `${product}.a.packet.json`), 'utf8'));
     const tokens = new Set<string>(packet.tokens.map((t: { token: string }) => t.token));
     const a = readProposals(path.join(runDir, `${product}.a.proposals.json`), ontology, tokens);
@@ -85,8 +87,10 @@ if (cmd === 'prepare') {
 } else if (cmd === 'review') {
   const [out, vocabRun] = [process.argv[5], process.argv[6]];
   if (!run || !out) { console.error(USAGE); process.exit(2); }
-  const items = collectQueue(root, scope, runDir);
-  const termItems = vocabRun ? collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', vocabRun)) : [];
+  // --words-only leaves the token queue out (a round that settles naming terms first); vocab runs may be comma-separated.
+  const wordsOnly = process.argv.includes('--words-only');
+  const items = wordsOnly ? [] : collectQueue(root, scope, runDir);
+  const termItems = vocabRun && !vocabRun.startsWith('--') ? vocabRun.split(',').flatMap((r) => collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', r))) : [];
   const disputes = collectDisputes(root, scope, termFindingsFor(), valuesOf);
   const packet = JSON.parse(fs.readFileSync(path.join(runDir, `${Object.keys(scope.products)[0]}.a.packet.json`), 'utf8'));
   fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true });

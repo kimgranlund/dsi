@@ -20,3 +20,4 @@ ADRs, one per file: `NNNN-short-title.md` with Status, Context, Decision, Conseq
 | [0014](0014-style-components-expressive.md) | Style facet, component values, and Material's expressive token set as a mode |
 | [0015](0015-token-applications.md) | The component tier is shown through token applications read from shipped component styles |
 | [0016](0016-atlassian-license.md) | Publish Atlassian token values under the npm package Apache-2.0 |
+| [0017](0017-hue-facet.md) | Categorical colors bind a canonical hue |
