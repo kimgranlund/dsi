@@ -29,24 +29,23 @@
   --dsi-color-danger-background-strong-active: var(--ds-background-danger-bold-pressed, #872821);
   --dsi-color-danger-background-strong-hover: var(--ds-background-danger-bold-hovered, #ae2e24);
   --dsi-color-danger-background-subtle: var(--ds-background-danger-subtle, #fd9891);
-  --dsi-color-danger-background-subtle-active: var(--ds-background-danger-subtler-pressed, #fd9891);
-  --dsi-color-danger-background-subtle-hover: var(--ds-background-danger-subtler-hovered, #ffb8b2);
   --dsi-color-danger-background-subtler: var(--ds-background-danger-subtler, #ffd5d2);
+  --dsi-color-danger-background-subtler-active: var(--ds-background-danger-subtler-pressed, #fd9891);
+  --dsi-color-danger-background-subtler-hover: var(--ds-background-danger-subtler-hovered, #ffb8b2);
   --dsi-color-danger-background-subtlest: var(--ds-background-danger, #ffeceb);
   --dsi-color-danger-background-subtlest-active: var(--ds-background-danger-pressed, #ffb8b2);
   --dsi-color-danger-background-subtlest-hover: var(--ds-background-danger-hovered, #ffd5d2);
-  --dsi-color-danger-background-active: var(--ds-background-danger-bold-pressed, #872821); /* nearest: exact */
-  --dsi-color-danger-background-hover: var(--ds-background-danger-bold-hovered, #ae2e24); /* nearest: exact */
+  --dsi-color-danger-background-active: var(--ds-background-danger-subtler-pressed, #fd9891); /* nearest: exact */
+  --dsi-color-danger-background-hover: var(--ds-background-danger-subtler-hovered, #ffb8b2); /* nearest: exact */
   --dsi-color-danger-border: var(--ds-border-danger, #e2483d);
   --dsi-color-danger-border-subtle: var(--ds-border-danger-subtle, #fd9891);
   --dsi-color-danger-icon: var(--ds-icon-danger, #c9372c);
   --dsi-color-danger-text: var(--ds-text-danger, #ae2e24);
-  --dsi-color-danger-text-subtle: var(--ds-text-danger-bolder, #5d1f1a); /* nearest: close */
   --dsi-color-danger-data-viz: var(--ds-chart-danger, #e2483d);
   --dsi-color-danger-data-viz-strong: var(--ds-chart-danger-bold, #872821);
   --dsi-color-danger-data-viz-strong-hover: var(--ds-chart-danger-bold-hovered, #5d1f1a);
   --dsi-color-danger-data-viz-hover: var(--ds-chart-danger-hovered, #c9372c); /* nearest: broad */
-  --dsi-color-danger-on-fill-text-subtle: var(--ds-text-danger-bolder, #5d1f1a);
+  --dsi-color-danger-on-fill-text-stronger: var(--ds-text-danger-bolder, #5d1f1a);
   --dsi-color-danger-state-layer-background: var(--ds-blanket-danger, #ef5c48);
   --dsi-color-discovery-background-strong: var(--ds-background-discovery-bold, #964ac0);
   --dsi-color-discovery-background-subtle: var(--ds-background-discovery-subtle, #d8a0f7);
@@ -59,24 +58,23 @@
   --dsi-color-info-background-strong-active: var(--ds-background-information-bold-pressed, #144794);
   --dsi-color-info-background-strong-hover: var(--ds-background-information-bold-hovered, #1558bc);
   --dsi-color-info-background-subtle: var(--ds-background-information-subtle, #8fb8f6);
-  --dsi-color-info-background-subtle-active: var(--ds-background-information-subtler-pressed, #8fb8f6);
-  --dsi-color-info-background-subtle-hover: var(--ds-background-information-subtler-hovered, #adcbfb);
   --dsi-color-info-background-subtler: var(--ds-background-information-subtler, #cfe1fd);
+  --dsi-color-info-background-subtler-active: var(--ds-background-information-subtler-pressed, #8fb8f6);
+  --dsi-color-info-background-subtler-hover: var(--ds-background-information-subtler-hovered, #adcbfb);
   --dsi-color-info-background-subtlest: var(--ds-background-information, #e9f2fe);
   --dsi-color-info-background-subtlest-active: var(--ds-background-information-pressed, #adcbfb);
   --dsi-color-info-background-subtlest-hover: var(--ds-background-information-hovered, #cfe1fd);
-  --dsi-color-info-background-active: var(--ds-background-information-bold-pressed, #144794); /* nearest: exact */
-  --dsi-color-info-background-hover: var(--ds-background-information-bold-hovered, #1558bc); /* nearest: exact */
+  --dsi-color-info-background-active: var(--ds-background-information-subtler-pressed, #8fb8f6); /* nearest: exact */
+  --dsi-color-info-background-hover: var(--ds-background-information-subtler-hovered, #adcbfb); /* nearest: exact */
   --dsi-color-info-border: var(--ds-border-information, #357de8);
   --dsi-color-info-border-subtle: var(--ds-border-information-subtle, #8fb8f6);
   --dsi-color-info-icon: var(--ds-icon-information, #357de8);
   --dsi-color-info-text: var(--ds-text-information, #1558bc);
-  --dsi-color-info-text-subtle: var(--ds-text-information-bolder, #123263); /* nearest: close */
   --dsi-color-info-data-viz: var(--ds-chart-information, #357de8);
   --dsi-color-info-data-viz-strong: var(--ds-chart-information-bold, #1558bc);
   --dsi-color-info-data-viz-strong-hover: var(--ds-chart-information-bold-hovered, #123263);
   --dsi-color-info-data-viz-hover: var(--ds-chart-information-hovered, #1868db); /* nearest: broad */
-  --dsi-color-info-on-fill-text-subtle: var(--ds-text-information-bolder, #123263);
+  --dsi-color-info-on-fill-text-stronger: var(--ds-text-information-bolder, #123263);
   --dsi-color-neutral-background: var(--ds-background-neutral, #051524);
   --dsi-color-neutral-background-strong: var(--ds-background-neutral-bold, #292a2e);
   --dsi-color-neutral-background-strong-active: var(--ds-background-neutral-bold-pressed, #505258);
@@ -94,59 +92,56 @@
   --dsi-color-success-background-strong-active: var(--ds-background-success-bold-pressed, #3f5224);
   --dsi-color-success-background-strong-hover: var(--ds-background-success-bold-hovered, #4c6b1f);
   --dsi-color-success-background-subtle: var(--ds-background-success-subtle, #b3df72);
-  --dsi-color-success-background-subtle-active: var(--ds-background-success-subtler-pressed, #b3df72);
-  --dsi-color-success-background-subtle-hover: var(--ds-background-success-subtler-hovered, #bde97c);
   --dsi-color-success-background-subtler: var(--ds-background-success-subtler, #d3f1a7);
+  --dsi-color-success-background-subtler-active: var(--ds-background-success-subtler-pressed, #b3df72);
+  --dsi-color-success-background-subtler-hover: var(--ds-background-success-subtler-hovered, #bde97c);
   --dsi-color-success-background-subtlest: var(--ds-background-success, #efffd6);
   --dsi-color-success-background-subtlest-active: var(--ds-background-success-pressed, #bde97c);
   --dsi-color-success-background-subtlest-hover: var(--ds-background-success-hovered, #d3f1a7);
-  --dsi-color-success-background-active: var(--ds-background-success-bold-pressed, #3f5224); /* nearest: exact */
-  --dsi-color-success-background-hover: var(--ds-background-success-bold-hovered, #4c6b1f); /* nearest: exact */
+  --dsi-color-success-background-active: var(--ds-background-success-subtler-pressed, #b3df72); /* nearest: exact */
+  --dsi-color-success-background-hover: var(--ds-background-success-subtler-hovered, #bde97c); /* nearest: exact */
   --dsi-color-success-border: var(--ds-border-success, #6a9a23);
   --dsi-color-success-border-subtle: var(--ds-border-success-subtle, #b3df72);
   --dsi-color-success-icon: var(--ds-icon-success, #6a9a23);
   --dsi-color-success-text: var(--ds-text-success, #4c6b1f);
-  --dsi-color-success-text-subtle: var(--ds-text-success-bolder, #37471f); /* nearest: close */
   --dsi-color-success-data-viz: var(--ds-chart-success, #82b536);
   --dsi-color-success-data-viz-strong: var(--ds-chart-success-bold, #5b7f24);
   --dsi-color-success-data-viz-strong-hover: var(--ds-chart-success-bold-hovered, #4c6b1f);
   --dsi-color-success-data-viz-hover: var(--ds-chart-success-hovered, #6a9a23); /* nearest: broad */
-  --dsi-color-success-on-fill-text-subtle: var(--ds-text-success-bolder, #37471f);
+  --dsi-color-success-on-fill-text-stronger: var(--ds-text-success-bolder, #37471f);
   --dsi-color-warning: var(--ds-chart-warning, #f68909); /* nearest: exact */
-  --dsi-color-warning-strong: var(--ds-chart-warning-bold, #bd5b00); /* nearest: exact */
   --dsi-color-warning-background: var(--ds-background-warning-bold, #fbc828); /* nearest: exact */
   --dsi-color-warning-background-strong: var(--ds-background-warning-bold, #fbc828);
   --dsi-color-warning-background-strong-active: var(--ds-background-warning-bold-pressed, #f68909);
   --dsi-color-warning-background-strong-hover: var(--ds-background-warning-bold-hovered, #fca700);
   --dsi-color-warning-background-subtle: var(--ds-background-warning-subtle, #fbd779);
-  --dsi-color-warning-background-subtle-active: var(--ds-background-warning-subtler-pressed, #fbc828);
-  --dsi-color-warning-background-subtle-hover: var(--ds-background-warning-subtler-hovered, #fbd779);
   --dsi-color-warning-background-subtler: var(--ds-background-warning-subtler, #fce4a6);
+  --dsi-color-warning-background-subtler-active: var(--ds-background-warning-subtler-pressed, #fbc828);
+  --dsi-color-warning-background-subtler-hover: var(--ds-background-warning-subtler-hovered, #fbd779);
   --dsi-color-warning-background-subtlest: var(--ds-background-warning, #fff5db);
   --dsi-color-warning-background-subtlest-active: var(--ds-background-warning-pressed, #fbd779);
   --dsi-color-warning-background-subtlest-hover: var(--ds-background-warning-hovered, #fce4a6);
-  --dsi-color-warning-background-active: var(--ds-background-warning-bold-pressed, #f68909); /* nearest: exact */
-  --dsi-color-warning-background-hover: var(--ds-background-warning-bold-hovered, #fca700); /* nearest: exact */
+  --dsi-color-warning-background-active: var(--ds-background-warning-subtler-pressed, #fbc828); /* nearest: exact */
+  --dsi-color-warning-background-hover: var(--ds-background-warning-subtler-hovered, #fbd779); /* nearest: exact */
   --dsi-color-warning-border: var(--ds-border-warning, #e06c00);
   --dsi-color-warning-border-subtle: var(--ds-border-warning-subtle, #fbc828);
   --dsi-color-warning-icon: var(--ds-icon-warning, #e06c00);
   --dsi-color-warning-text: var(--ds-text-warning, #9e4c00);
-  --dsi-color-warning-text-subtle: var(--ds-text-warning-bolder, #693200); /* nearest: close */
   --dsi-color-warning-data-viz: var(--ds-chart-warning, #f68909);
   --dsi-color-warning-data-viz-strong: var(--ds-chart-warning-bold, #bd5b00);
   --dsi-color-warning-data-viz-strong-hover: var(--ds-chart-warning-bold-hovered, #9e4c00);
   --dsi-color-warning-data-viz-hover: var(--ds-chart-warning-hovered, #e06c00); /* nearest: broad */
   --dsi-color-warning-on-fill-icon: var(--ds-icon-warning-inverse, #292a2e);
   --dsi-color-warning-on-fill-text: var(--ds-text-warning-inverse, #292a2e);
-  --dsi-color-warning-on-fill-text-subtle: var(--ds-text-warning-bolder, #693200);
+  --dsi-color-warning-on-fill-text-stronger: var(--ds-text-warning-bolder, #693200);
   --dsi-color-background: var(--ds-background-code-default, #ffffff); /* nearest: exact */
   --dsi-color-background-strong: var(--ds-background-brand-bold, #1868db); /* nearest: exact */
   --dsi-color-background-strong-active_selected: var(--ds-background-selected-bold-pressed, #123263);
   --dsi-color-background-strong-hover_selected: var(--ds-background-selected-bold-hovered, #1558bc);
   --dsi-color-background-strong-selected: var(--ds-background-selected-bold, #1868db);
   --dsi-color-background-subtle: var(--ds-background-danger-subtle, #fd9891); /* nearest: close */
-  --dsi-color-background-subtle-active: var(--ds-background-danger-subtler-pressed, #fd9891); /* nearest: close */
-  --dsi-color-background-subtle-hover: var(--ds-background-danger-subtler-hovered, #ffb8b2); /* nearest: close */
+  --dsi-color-background-subtle-active: var(--ds-background-neutral-subtle-pressed, #0b120e); /* nearest: close */
+  --dsi-color-background-subtle-hover: var(--ds-background-neutral-subtle-hovered, #051524); /* nearest: close */
   --dsi-color-background-active: var(--ds-interaction-pressed, #000000); /* nearest: exact */
   --dsi-color-background-active_selected: var(--ds-background-selected-pressed, #8fb8f6);
   --dsi-color-background-disabled: var(--ds-background-disabled, #051524);

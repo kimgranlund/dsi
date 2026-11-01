@@ -4133,9 +4133,9 @@
    "prefLabel": "support-caution-major",
    "notation": "--cds-support-caution-major",
    "definition": "Major caution color. Use for high-severity warnings or significant issues.",
-   "skos:closeMatch": [
+   "skos:exactMatch": [
     {
-     "id": "dsi:concept/color/intent-warning/emphasis-strong"
+     "id": "dsi:concept/color/intent-severe"
     }
    ]
   },
@@ -10339,6 +10339,17 @@
    "prefLabel": "Color: Info · Inverse"
   },
   {
+   "id": "dsi:concept/color/intent-severe",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/severe"
+    }
+   ],
+   "prefLabel": "Color: Severe"
+  },
+  {
    "id": "dsi:concept/color/intent-success",
    "type": "Concept",
    "inScheme": "dsi:scheme/canonical/color",
@@ -10375,22 +10386,6 @@
     }
    ],
    "prefLabel": "Color: Warning"
-  },
-  {
-   "id": "dsi:concept/color/intent-warning/emphasis-strong",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasIntent": [
-    {
-     "id": "dsi:intent/warning"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/strong"
-    }
-   ],
-   "prefLabel": "Color: Warning · Strong"
   },
   {
    "id": "dsi:concept/color/intent-warning/usage-inverse",

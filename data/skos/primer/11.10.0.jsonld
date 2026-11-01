@@ -3020,9 +3020,9 @@
    "prefLabel": "bgColor.severe.emphasis",
    "notation": "--bgColor-severe-emphasis",
    "definition": "Strong severe background for prominent high-priority warnings",
-   "skos:broadMatch": [
+   "skos:exactMatch": [
     {
-     "id": "dsi:concept/color/intent-warning/property-background/emphasis-strong"
+     "id": "dsi:concept/color/intent-severe/property-background/emphasis-strong"
     }
    ]
   },
@@ -3033,9 +3033,9 @@
    "prefLabel": "bgColor.severe.muted",
    "notation": "--bgColor-severe-muted",
    "definition": "Subtle severe background for high-priority warnings",
-   "skos:broadMatch": [
+   "skos:exactMatch": [
     {
-     "id": "dsi:concept/color/intent-warning/property-background/emphasis-subtle"
+     "id": "dsi:concept/color/intent-severe/property-background/emphasis-subtle"
     }
    ]
   },
@@ -3591,9 +3591,9 @@
    "prefLabel": "borderColor.severe.emphasis",
    "notation": "--borderColor-severe-emphasis",
    "definition": "Strong severe border for prominent high-priority warnings",
-   "skos:broadMatch": [
+   "skos:exactMatch": [
     {
-     "id": "dsi:concept/color/intent-warning/property-border/emphasis-strong"
+     "id": "dsi:concept/color/intent-severe/property-border/emphasis-strong"
     }
    ]
   },
@@ -3604,9 +3604,9 @@
    "prefLabel": "borderColor.severe.muted",
    "notation": "--borderColor-severe-muted",
    "definition": "Subtle severe border for high-priority warnings",
-   "skos:broadMatch": [
+   "skos:exactMatch": [
     {
-     "id": "dsi:concept/color/intent-warning/property-border/emphasis-subtle"
+     "id": "dsi:concept/color/intent-severe/property-border/emphasis-subtle"
     }
    ]
   },
@@ -10464,9 +10464,9 @@
    "prefLabel": "fgColor.severe",
    "notation": "--fgColor-severe",
    "definition": "Severe text for high-priority warnings",
-   "skos:closeMatch": [
+   "skos:exactMatch": [
     {
-     "id": "dsi:concept/color/intent-warning/property-foreground"
+     "id": "dsi:concept/color/intent-severe/property-foreground"
     }
    ]
   },
@@ -14505,9 +14505,9 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/vocab/primer",
    "prefLabel": "severe",
-   "skos:broadMatch": [
+   "skos:exactMatch": [
     {
-     "id": "dsi:intent/caution"
+     "id": "dsi:intent/severe"
     }
    ]
   },
@@ -15321,6 +15321,106 @@
     }
    ],
    "prefLabel": "Color: Neutral · Foreground"
+  },
+  {
+   "id": "dsi:concept/color/intent-severe/property-background/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/severe"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Severe · Background · Strong"
+  },
+  {
+   "id": "dsi:concept/color/intent-severe/property-background/emphasis-subtle",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/severe"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/subtle"
+    }
+   ],
+   "prefLabel": "Color: Severe · Background · Subtle"
+  },
+  {
+   "id": "dsi:concept/color/intent-severe/property-border/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/severe"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/border"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Severe · Border · Strong"
+  },
+  {
+   "id": "dsi:concept/color/intent-severe/property-border/emphasis-subtle",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/severe"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/border"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/subtle"
+    }
+   ],
+   "prefLabel": "Color: Severe · Border · Subtle"
+  },
+  {
+   "id": "dsi:concept/color/intent-severe/property-foreground",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/severe"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/foreground"
+    }
+   ],
+   "prefLabel": "Color: Severe · Foreground"
   },
   {
    "id": "dsi:concept/color/intent-success/property-background/emphasis-strong",

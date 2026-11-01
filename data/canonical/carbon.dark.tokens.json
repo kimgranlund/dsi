@@ -4598,6 +4598,61 @@
         ]
       }
     },
+    "severe": {
+      "$description": "Severe color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-severe",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-major",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "support-caution-major",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.513725,
+          0.168627
+        ],
+        "hex": "#ff832b"
+      }
+    },
+    "severe-foreground": {
+      "$description": "Severe foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-severe/property-foreground",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-major",
+          "note": "no direct mapping; support-caution-major maps to the broader dsi:concept/color/intent-severe",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "g100",
+          "token": "support-caution-major",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.513725,
+          0.168627
+        ],
+        "hex": "#ff832b"
+      }
+    },
     "shadow": {
       "$description": "Shadow color",
       "$extensions": {
@@ -5582,34 +5637,6 @@
         "hex": "#f1c21b"
       }
     },
-    "warning-background-strong": {
-      "$description": "Strong warning background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-background/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--cds-support-caution-major",
-          "note": "no direct mapping; support-caution-major maps to the broader dsi:concept/color/intent-warning/emphasis-strong",
-          "product": "carbon",
-          "status": "nearest",
-          "theme": "g100",
-          "token": "support-caution-major",
-          "version": "11.84.0",
-          "via": "less-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          0.513725,
-          0.168627
-        ],
-        "hex": "#ff832b"
-      }
-    },
     "warning-border": {
       "$description": "Warning border",
       "$extensions": {
@@ -5638,34 +5665,6 @@
         "hex": "#f1c21b"
       }
     },
-    "warning-border-strong": {
-      "$description": "Strong warning border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-border/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--cds-support-caution-major",
-          "note": "no direct mapping; support-caution-major maps to the broader dsi:concept/color/intent-warning/emphasis-strong",
-          "product": "carbon",
-          "status": "nearest",
-          "theme": "g100",
-          "token": "support-caution-major",
-          "version": "11.84.0",
-          "via": "less-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          0.513725,
-          0.168627
-        ],
-        "hex": "#ff832b"
-      }
-    },
     "warning-foreground": {
       "$description": "Warning foreground",
       "$extensions": {
@@ -5692,34 +5691,6 @@
           0.105882
         ],
         "hex": "#f1c21b"
-      }
-    },
-    "warning-foreground-strong": {
-      "$description": "Strong warning foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--cds-support-caution-major",
-          "note": "no direct mapping; support-caution-major maps to the broader dsi:concept/color/intent-warning/emphasis-strong",
-          "product": "carbon",
-          "status": "nearest",
-          "theme": "g100",
-          "token": "support-caution-major",
-          "version": "11.84.0",
-          "via": "less-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          0.513725,
-          0.168627
-        ],
-        "hex": "#ff832b"
       }
     },
     "warning-graphic": {
@@ -5831,33 +5802,6 @@
           0.105882
         ],
         "hex": "#f1c21b"
-      }
-    },
-    "warning-strong": {
-      "$description": "Strong warning color",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--cds-support-caution-major",
-          "product": "carbon",
-          "status": "match",
-          "theme": "g100",
-          "token": "support-caution-major",
-          "version": "11.84.0",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          0.513725,
-          0.168627
-        ],
-        "hex": "#ff832b"
       }
     },
     "warning-text": {

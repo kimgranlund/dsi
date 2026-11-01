@@ -969,25 +969,26 @@
           "concept": "dsi:concept/color/property-background/emphasis-subtle/state-active",
           "match": "close",
           "mode": "increased-contrast",
-          "nativeName": "--ds-background-danger-subtler-pressed",
-          "note": "no direct mapping; color.background.danger.subtler.pressed maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-active",
+          "nativeName": "--ds-background-neutral-subtle-pressed",
+          "note": "no direct mapping; color.background.neutral.subtle.pressed maps to the more specific dsi:concept/color/intent-neutral/property-background/emphasis-subtle/state-active",
           "product": "atlassian",
           "status": "nearest",
           "theme": "light-increased-contrast",
-          "token": "color.background.danger.subtler.pressed",
+          "token": "color.background.neutral.subtle.pressed",
           "version": "20.6.1",
           "via": "more-specific"
         }
       },
       "$type": "color",
       "$value": {
+        "alpha": 0.1412,
         "colorSpace": "srgb",
         "components": [
-          0.9922,
-          0.5961,
-          0.5686
+          0.0431,
+          0.0706,
+          0.0549
         ],
-        "hex": "#fd9891"
+        "hex": "#0b120e"
       }
     },
     "background-subtle-hover": {
@@ -997,25 +998,26 @@
           "concept": "dsi:concept/color/property-background/emphasis-subtle/state-hover",
           "match": "close",
           "mode": "increased-contrast",
-          "nativeName": "--ds-background-danger-subtler-hovered",
-          "note": "no direct mapping; color.background.danger.subtler.hovered maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-hover",
+          "nativeName": "--ds-background-neutral-subtle-hovered",
+          "note": "no direct mapping; color.background.neutral.subtle.hovered maps to the more specific dsi:concept/color/intent-neutral/property-background/emphasis-subtle/state-hover",
           "product": "atlassian",
           "status": "nearest",
           "theme": "light-increased-contrast",
-          "token": "color.background.danger.subtler.hovered",
+          "token": "color.background.neutral.subtle.hovered",
           "version": "20.6.1",
           "via": "more-specific"
         }
       },
       "$type": "color",
       "$value": {
+        "alpha": 0.0588,
         "colorSpace": "srgb",
         "components": [
-          1,
-          0.7216,
-          0.698
+          0.0196,
+          0.0824,
+          0.1412
         ],
-        "hex": "#ffb8b2"
+        "hex": "#051524"
       }
     },
     "border": {
@@ -6346,12 +6348,12 @@
           "concept": "dsi:concept/color/intent-danger/property-background/state-active",
           "match": "exact",
           "mode": "increased-contrast",
-          "nativeName": "--ds-background-danger-bold-pressed",
-          "note": "no direct mapping; color.background.danger.bold.pressed maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-strong/state-active",
+          "nativeName": "--ds-background-danger-subtler-pressed",
+          "note": "no direct mapping; color.background.danger.subtler.pressed maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-subtler/state-active",
           "product": "atlassian",
           "status": "nearest",
           "theme": "light-increased-contrast",
-          "token": "color.background.danger.bold.pressed",
+          "token": "color.background.danger.subtler.pressed",
           "version": "20.6.1",
           "via": "more-specific"
         }
@@ -6360,11 +6362,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.2863,
-          0.0706,
-          0.0471
+          0.9922,
+          0.5961,
+          0.5686
         ],
-        "hex": "#49120c"
+        "hex": "#fd9891"
       }
     },
     "danger-background-hover": {
@@ -6374,12 +6376,12 @@
           "concept": "dsi:concept/color/intent-danger/property-background/state-hover",
           "match": "exact",
           "mode": "increased-contrast",
-          "nativeName": "--ds-background-danger-bold-hovered",
-          "note": "no direct mapping; color.background.danger.bold.hovered maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-strong/state-hover",
+          "nativeName": "--ds-background-danger-subtler-hovered",
+          "note": "no direct mapping; color.background.danger.subtler.hovered maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-subtler/state-hover",
           "product": "atlassian",
           "status": "nearest",
           "theme": "light-increased-contrast",
-          "token": "color.background.danger.bold.hovered",
+          "token": "color.background.danger.subtler.hovered",
           "version": "20.6.1",
           "via": "more-specific"
         }
@@ -6388,11 +6390,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.2588,
-          0.1333,
-          0.1216
+          1,
+          0.7216,
+          0.698
         ],
-        "hex": "#42221f"
+        "hex": "#ffb8b2"
       }
     },
     "danger-background-strong": {
@@ -6503,60 +6505,6 @@
         "hex": "#fd9891"
       }
     },
-    "danger-background-subtle-active": {
-      "$description": "Pressed subtle danger background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-active",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-background-danger-subtler-pressed",
-          "product": "atlassian",
-          "status": "match",
-          "theme": "light-increased-contrast",
-          "token": "color.background.danger.subtler.pressed",
-          "version": "20.6.1",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9922,
-          0.5961,
-          0.5686
-        ],
-        "hex": "#fd9891"
-      }
-    },
-    "danger-background-subtle-hover": {
-      "$description": "Hovered subtle danger background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-hover",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-background-danger-subtler-hovered",
-          "product": "atlassian",
-          "status": "match",
-          "theme": "light-increased-contrast",
-          "token": "color.background.danger.subtler.hovered",
-          "version": "20.6.1",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          0.7216,
-          0.698
-        ],
-        "hex": "#ffb8b2"
-      }
-    },
     "danger-background-subtler": {
       "$description": "Subtler danger background",
       "$extensions": {
@@ -6582,6 +6530,60 @@
           0.8235
         ],
         "hex": "#ffd5d2"
+      }
+    },
+    "danger-background-subtler-active": {
+      "$description": "Pressed subtler danger background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtler/state-active",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--ds-background-danger-subtler-pressed",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "light-increased-contrast",
+          "token": "color.background.danger.subtler.pressed",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9922,
+          0.5961,
+          0.5686
+        ],
+        "hex": "#fd9891"
+      }
+    },
+    "danger-background-subtler-hover": {
+      "$description": "Hovered subtler danger background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtler/state-hover",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--ds-background-danger-subtler-hovered",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "light-increased-contrast",
+          "token": "color.background.danger.subtler.hovered",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.7216,
+          0.698
+        ],
+        "hex": "#ffb8b2"
       }
     },
     "danger-background-subtlest": {
@@ -6855,11 +6857,11 @@
         "hex": "#c9372c"
       }
     },
-    "danger-on-fill-text-subtle": {
-      "$description": "Subtle danger on-fill text",
+    "danger-on-fill-text-stronger": {
+      "$description": "Stronger danger on-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/usage-on-fill/property-text/emphasis-subtle",
+          "concept": "dsi:concept/color/intent-danger/usage-on-fill/property-text/emphasis-stronger",
           "match": "close",
           "mode": "increased-contrast",
           "nativeName": "--ds-text-danger-bolder",
@@ -6935,34 +6937,6 @@
           0.102
         ],
         "hex": "#5d1f1a"
-      }
-    },
-    "danger-text-subtle": {
-      "$description": "Subtle danger text",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-text/emphasis-subtle",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-text-danger-bolder",
-          "note": "no direct mapping; color.text.danger.bolder maps to the more specific dsi:concept/color/intent-danger/usage-on-fill/property-text/emphasis-subtle",
-          "product": "atlassian",
-          "status": "nearest",
-          "theme": "light-increased-contrast",
-          "token": "color.text.danger.bolder",
-          "version": "20.6.1",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.2588,
-          0.1333,
-          0.1216
-        ],
-        "hex": "#42221f"
       }
     },
     "discovery-background-strong": {
@@ -7435,12 +7409,12 @@
           "concept": "dsi:concept/color/intent-info/property-background/state-active",
           "match": "exact",
           "mode": "increased-contrast",
-          "nativeName": "--ds-background-information-bold-pressed",
-          "note": "no direct mapping; color.background.information.bold.pressed maps to the more specific dsi:concept/color/intent-info/property-background/emphasis-strong/state-active",
+          "nativeName": "--ds-background-information-subtler-pressed",
+          "note": "no direct mapping; color.background.information.subtler.pressed maps to the more specific dsi:concept/color/intent-info/property-background/emphasis-subtler/state-active",
           "product": "atlassian",
           "status": "nearest",
           "theme": "light-increased-contrast",
-          "token": "color.background.information.bold.pressed",
+          "token": "color.background.information.subtler.pressed",
           "version": "20.6.1",
           "via": "more-specific"
         }
@@ -7449,11 +7423,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.0078,
-          0.1373,
-          0.3255
+          0.5608,
+          0.7216,
+          0.9647
         ],
-        "hex": "#022353"
+        "hex": "#8fb8f6"
       }
     },
     "info-background-hover": {
@@ -7463,12 +7437,12 @@
           "concept": "dsi:concept/color/intent-info/property-background/state-hover",
           "match": "exact",
           "mode": "increased-contrast",
-          "nativeName": "--ds-background-information-bold-hovered",
-          "note": "no direct mapping; color.background.information.bold.hovered maps to the more specific dsi:concept/color/intent-info/property-background/emphasis-strong/state-hover",
+          "nativeName": "--ds-background-information-subtler-hovered",
+          "note": "no direct mapping; color.background.information.subtler.hovered maps to the more specific dsi:concept/color/intent-info/property-background/emphasis-subtler/state-hover",
           "product": "atlassian",
           "status": "nearest",
           "theme": "light-increased-contrast",
-          "token": "color.background.information.bold.hovered",
+          "token": "color.background.information.subtler.hovered",
           "version": "20.6.1",
           "via": "more-specific"
         }
@@ -7477,11 +7451,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.1098,
-          0.1686,
-          0.2588
+          0.6784,
+          0.7961,
+          0.9843
         ],
-        "hex": "#1c2b42"
+        "hex": "#adcbfb"
       }
     },
     "info-background-strong": {
@@ -7592,60 +7566,6 @@
         "hex": "#8fb8f6"
       }
     },
-    "info-background-subtle-active": {
-      "$description": "Pressed subtle info background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle/state-active",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-background-information-subtler-pressed",
-          "product": "atlassian",
-          "status": "match",
-          "theme": "light-increased-contrast",
-          "token": "color.background.information.subtler.pressed",
-          "version": "20.6.1",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.5608,
-          0.7216,
-          0.9647
-        ],
-        "hex": "#8fb8f6"
-      }
-    },
-    "info-background-subtle-hover": {
-      "$description": "Hovered subtle info background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle/state-hover",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-background-information-subtler-hovered",
-          "product": "atlassian",
-          "status": "match",
-          "theme": "light-increased-contrast",
-          "token": "color.background.information.subtler.hovered",
-          "version": "20.6.1",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.6784,
-          0.7961,
-          0.9843
-        ],
-        "hex": "#adcbfb"
-      }
-    },
     "info-background-subtler": {
       "$description": "Subtler info background",
       "$extensions": {
@@ -7671,6 +7591,60 @@
           0.9922
         ],
         "hex": "#cfe1fd"
+      }
+    },
+    "info-background-subtler-active": {
+      "$description": "Pressed subtler info background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtler/state-active",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--ds-background-information-subtler-pressed",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "light-increased-contrast",
+          "token": "color.background.information.subtler.pressed",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.5608,
+          0.7216,
+          0.9647
+        ],
+        "hex": "#8fb8f6"
+      }
+    },
+    "info-background-subtler-hover": {
+      "$description": "Hovered subtler info background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtler/state-hover",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--ds-background-information-subtler-hovered",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "light-increased-contrast",
+          "token": "color.background.information.subtler.hovered",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6784,
+          0.7961,
+          0.9843
+        ],
+        "hex": "#adcbfb"
       }
     },
     "info-background-subtlest": {
@@ -7944,11 +7918,11 @@
         "hex": "#1558bc"
       }
     },
-    "info-on-fill-text-subtle": {
-      "$description": "Subtle info on-fill text",
+    "info-on-fill-text-stronger": {
+      "$description": "Stronger info on-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-info/usage-on-fill/property-text/emphasis-subtle",
+          "concept": "dsi:concept/color/intent-info/usage-on-fill/property-text/emphasis-stronger",
           "match": "close",
           "mode": "increased-contrast",
           "nativeName": "--ds-text-information-bolder",
@@ -7996,34 +7970,6 @@
           0.3882
         ],
         "hex": "#123263"
-      }
-    },
-    "info-text-subtle": {
-      "$description": "Subtle info text",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-info/property-text/emphasis-subtle",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-text-information-bolder",
-          "note": "no direct mapping; color.text.information.bolder maps to the more specific dsi:concept/color/intent-info/usage-on-fill/property-text/emphasis-subtle",
-          "product": "atlassian",
-          "status": "nearest",
-          "theme": "light-increased-contrast",
-          "token": "color.text.information.bolder",
-          "version": "20.6.1",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.1098,
-          0.1686,
-          0.2588
-        ],
-        "hex": "#1c2b42"
       }
     },
     "link-text": {
@@ -9024,12 +8970,12 @@
           "concept": "dsi:concept/color/intent-success/property-background/state-active",
           "match": "exact",
           "mode": "increased-contrast",
-          "nativeName": "--ds-background-success-bold-pressed",
-          "note": "no direct mapping; color.background.success.bold.pressed maps to the more specific dsi:concept/color/intent-success/property-background/emphasis-strong/state-active",
+          "nativeName": "--ds-background-success-subtler-pressed",
+          "note": "no direct mapping; color.background.success.subtler.pressed maps to the more specific dsi:concept/color/intent-success/property-background/emphasis-subtler/state-active",
           "product": "atlassian",
           "status": "nearest",
           "theme": "light-increased-contrast",
-          "token": "color.background.success.bold.pressed",
+          "token": "color.background.success.subtler.pressed",
           "version": "20.6.1",
           "via": "more-specific"
         }
@@ -9038,11 +8984,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.0588,
-          0.2,
-          0.1412
+          0.702,
+          0.8745,
+          0.4471
         ],
-        "hex": "#0f3324"
+        "hex": "#b3df72"
       }
     },
     "success-background-hover": {
@@ -9052,12 +8998,12 @@
           "concept": "dsi:concept/color/intent-success/property-background/state-hover",
           "match": "exact",
           "mode": "increased-contrast",
-          "nativeName": "--ds-background-success-bold-hovered",
-          "note": "no direct mapping; color.background.success.bold.hovered maps to the more specific dsi:concept/color/intent-success/property-background/emphasis-strong/state-hover",
+          "nativeName": "--ds-background-success-subtler-hovered",
+          "note": "no direct mapping; color.background.success.subtler.hovered maps to the more specific dsi:concept/color/intent-success/property-background/emphasis-subtler/state-hover",
           "product": "atlassian",
           "status": "nearest",
           "theme": "light-increased-contrast",
-          "token": "color.background.success.bold.hovered",
+          "token": "color.background.success.subtler.hovered",
           "version": "20.6.1",
           "via": "more-specific"
         }
@@ -9066,11 +9012,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.1098,
-          0.2,
-          0.1608
+          0.7412,
+          0.9137,
+          0.4863
         ],
-        "hex": "#1c3329"
+        "hex": "#bde97c"
       }
     },
     "success-background-strong": {
@@ -9181,60 +9127,6 @@
         "hex": "#b3df72"
       }
     },
-    "success-background-subtle-active": {
-      "$description": "Pressed subtle success background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle/state-active",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-background-success-subtler-pressed",
-          "product": "atlassian",
-          "status": "match",
-          "theme": "light-increased-contrast",
-          "token": "color.background.success.subtler.pressed",
-          "version": "20.6.1",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.702,
-          0.8745,
-          0.4471
-        ],
-        "hex": "#b3df72"
-      }
-    },
-    "success-background-subtle-hover": {
-      "$description": "Hovered subtle success background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle/state-hover",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-background-success-subtler-hovered",
-          "product": "atlassian",
-          "status": "match",
-          "theme": "light-increased-contrast",
-          "token": "color.background.success.subtler.hovered",
-          "version": "20.6.1",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.7412,
-          0.9137,
-          0.4863
-        ],
-        "hex": "#bde97c"
-      }
-    },
     "success-background-subtler": {
       "$description": "Subtler success background",
       "$extensions": {
@@ -9260,6 +9152,60 @@
           0.6549
         ],
         "hex": "#d3f1a7"
+      }
+    },
+    "success-background-subtler-active": {
+      "$description": "Pressed subtler success background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtler/state-active",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--ds-background-success-subtler-pressed",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "light-increased-contrast",
+          "token": "color.background.success.subtler.pressed",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.702,
+          0.8745,
+          0.4471
+        ],
+        "hex": "#b3df72"
+      }
+    },
+    "success-background-subtler-hover": {
+      "$description": "Hovered subtler success background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtler/state-hover",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--ds-background-success-subtler-hovered",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "light-increased-contrast",
+          "token": "color.background.success.subtler.hovered",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7412,
+          0.9137,
+          0.4863
+        ],
+        "hex": "#bde97c"
       }
     },
     "success-background-subtlest": {
@@ -9533,11 +9479,11 @@
         "hex": "#216e4e"
       }
     },
-    "success-on-fill-text-subtle": {
-      "$description": "Subtle success on-fill text",
+    "success-on-fill-text-stronger": {
+      "$description": "Stronger success on-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/usage-on-fill/property-text/emphasis-subtle",
+          "concept": "dsi:concept/color/intent-success/usage-on-fill/property-text/emphasis-stronger",
           "match": "close",
           "mode": "increased-contrast",
           "nativeName": "--ds-text-success-bolder",
@@ -9585,34 +9531,6 @@
           0.2078
         ],
         "hex": "#164b35"
-      }
-    },
-    "success-text-subtle": {
-      "$description": "Subtle success text",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/property-text/emphasis-subtle",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-text-success-bolder",
-          "note": "no direct mapping; color.text.success.bolder maps to the more specific dsi:concept/color/intent-success/usage-on-fill/property-text/emphasis-subtle",
-          "product": "atlassian",
-          "status": "nearest",
-          "theme": "light-increased-contrast",
-          "token": "color.text.success.bolder",
-          "version": "20.6.1",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.1098,
-          0.2,
-          0.1608
-        ],
-        "hex": "#1c3329"
       }
     },
     "surface-background": {
@@ -9898,12 +9816,12 @@
           "concept": "dsi:concept/color/intent-warning/property-background/state-active",
           "match": "exact",
           "mode": "increased-contrast",
-          "nativeName": "--ds-background-warning-bold-pressed",
-          "note": "no direct mapping; color.background.warning.bold.pressed maps to the more specific dsi:concept/color/intent-warning/property-background/emphasis-strong/state-active",
+          "nativeName": "--ds-background-warning-subtler-pressed",
+          "note": "no direct mapping; color.background.warning.subtler.pressed maps to the more specific dsi:concept/color/intent-warning/property-background/emphasis-subtler/state-active",
           "product": "atlassian",
           "status": "nearest",
           "theme": "light-increased-contrast",
-          "token": "color.background.warning.bold.pressed",
+          "token": "color.background.warning.subtler.pressed",
           "version": "20.6.1",
           "via": "more-specific"
         }
@@ -9912,11 +9830,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.2039,
-          0.1569,
-          0
+          0.9843,
+          0.7843,
+          0.1569
         ],
-        "hex": "#342800"
+        "hex": "#fbc828"
       }
     },
     "warning-background-hover": {
@@ -9926,12 +9844,12 @@
           "concept": "dsi:concept/color/intent-warning/property-background/state-hover",
           "match": "exact",
           "mode": "increased-contrast",
-          "nativeName": "--ds-background-warning-bold-hovered",
-          "note": "no direct mapping; color.background.warning.bold.hovered maps to the more specific dsi:concept/color/intent-warning/property-background/emphasis-strong/state-hover",
+          "nativeName": "--ds-background-warning-subtler-hovered",
+          "note": "no direct mapping; color.background.warning.subtler.hovered maps to the more specific dsi:concept/color/intent-warning/property-background/emphasis-subtler/state-hover",
           "product": "atlassian",
           "status": "nearest",
           "theme": "light-increased-contrast",
-          "token": "color.background.warning.bold.hovered",
+          "token": "color.background.warning.subtler.hovered",
           "version": "20.6.1",
           "via": "more-specific"
         }
@@ -9940,11 +9858,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.2,
-          0.1804,
-          0.1059
+          0.9843,
+          0.8431,
+          0.4745
         ],
-        "hex": "#332e1b"
+        "hex": "#fbd779"
       }
     },
     "warning-background-strong": {
@@ -10055,60 +9973,6 @@
         "hex": "#fbd779"
       }
     },
-    "warning-background-subtle-active": {
-      "$description": "Pressed subtle warning background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle/state-active",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-background-warning-subtler-pressed",
-          "product": "atlassian",
-          "status": "match",
-          "theme": "light-increased-contrast",
-          "token": "color.background.warning.subtler.pressed",
-          "version": "20.6.1",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9843,
-          0.7843,
-          0.1569
-        ],
-        "hex": "#fbc828"
-      }
-    },
-    "warning-background-subtle-hover": {
-      "$description": "Hovered subtle warning background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle/state-hover",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-background-warning-subtler-hovered",
-          "product": "atlassian",
-          "status": "match",
-          "theme": "light-increased-contrast",
-          "token": "color.background.warning.subtler.hovered",
-          "version": "20.6.1",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9843,
-          0.8431,
-          0.4745
-        ],
-        "hex": "#fbd779"
-      }
-    },
     "warning-background-subtler": {
       "$description": "Subtler warning background",
       "$extensions": {
@@ -10134,6 +9998,60 @@
           0.651
         ],
         "hex": "#fce4a6"
+      }
+    },
+    "warning-background-subtler-active": {
+      "$description": "Pressed subtler warning background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtler/state-active",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--ds-background-warning-subtler-pressed",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "light-increased-contrast",
+          "token": "color.background.warning.subtler.pressed",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9843,
+          0.7843,
+          0.1569
+        ],
+        "hex": "#fbc828"
+      }
+    },
+    "warning-background-subtler-hover": {
+      "$description": "Hovered subtler warning background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtler/state-hover",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--ds-background-warning-subtler-hovered",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "light-increased-contrast",
+          "token": "color.background.warning.subtler.hovered",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9843,
+          0.8431,
+          0.4745
+        ],
+        "hex": "#fbd779"
       }
     },
     "warning-background-subtlest": {
@@ -10461,11 +10379,11 @@
         "hex": "#ffffff"
       }
     },
-    "warning-on-fill-text-subtle": {
-      "$description": "Subtle warning on-fill text",
+    "warning-on-fill-text-stronger": {
+      "$description": "Stronger warning on-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/usage-on-fill/property-text/emphasis-subtle",
+          "concept": "dsi:concept/color/intent-warning/usage-on-fill/property-text/emphasis-stronger",
           "match": "close",
           "mode": "increased-contrast",
           "nativeName": "--ds-text-warning-bolder",
@@ -10486,34 +10404,6 @@
           0.1216
         ],
         "hex": "#3a2c1f"
-      }
-    },
-    "warning-strong": {
-      "$description": "Strong warning color",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/emphasis-strong",
-          "match": "exact",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-chart-warning-bold",
-          "note": "no direct mapping; color.chart.warning.bold.default maps to the more specific dsi:concept/color/intent-warning/usage-data-viz/emphasis-strong",
-          "product": "atlassian",
-          "status": "nearest",
-          "theme": "light-increased-contrast",
-          "token": "color.chart.warning.bold.default",
-          "version": "20.6.1",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.3255,
-          0.2471,
-          0.0157
-        ],
-        "hex": "#533f04"
       }
     },
     "warning-text": {
@@ -10541,34 +10431,6 @@
           0
         ],
         "hex": "#693200"
-      }
-    },
-    "warning-text-subtle": {
-      "$description": "Subtle warning text",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-text/emphasis-subtle",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--ds-text-warning-bolder",
-          "note": "no direct mapping; color.text.warning.bolder maps to the more specific dsi:concept/color/intent-warning/usage-on-fill/property-text/emphasis-subtle",
-          "product": "atlassian",
-          "status": "nearest",
-          "theme": "light-increased-contrast",
-          "token": "color.text.warning.bolder",
-          "version": "20.6.1",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.2275,
-          0.1725,
-          0.1216
-        ],
-        "hex": "#3a2c1f"
       }
     }
   }
