@@ -50,6 +50,8 @@
     "bold",
     "circular",
     "decelerate",
+    "ease",
+    "easy",
     "easy-ease",
     "fast",
     "faster",
@@ -58,6 +60,7 @@
     "hero700",
     "hero800",
     "hero900",
+    "horizontal",
     "l",
     "large",
     "linear",
@@ -83,6 +86,7 @@
     "thickest",
     "thin",
     "ultra",
+    "vertical",
     "xl",
     "xlarge",
     "xs",
@@ -1284,13 +1288,18 @@
       "term": "family",
       "concept": "dsi:property/font-family",
       "match": "exact",
-      "status": "proposed",
-      "note": "Only fontFamily tokens carry family. (confidence 0.9; the other agent disagreed)",
+      "status": "approved",
+      "note": "fontFamily* is the only use of family.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:59:45Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.672Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -2215,13 +2224,18 @@
       "term": "radius",
       "concept": "dsi:property/corner-radius",
       "match": "exact",
-      "status": "proposed",
-      "note": "Corner rounding. (confidence 0.95; the other agent disagreed)",
+      "status": "approved",
+      "note": "borderRadius* is Fluent's corner rounding scale (0..40px, Circular).",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:59:45Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.672Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -3156,13 +3170,18 @@
       "term": "weight",
       "concept": "dsi:property/font-weight",
       "match": "exact",
-      "status": "proposed",
-      "note": "Only fontWeight tokens carry weight. (confidence 0.9; the other agent disagreed)",
+      "status": "approved",
+      "note": "fontWeight* is the only use of weight in Fluent's names.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:59:45Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.672Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {

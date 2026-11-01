@@ -171,7 +171,9 @@ if (cmd === 'derive') {
       const pick = [...(ma.get(c.term) ?? []), ...(mb.get(c.term) ?? [])].find((x) => k(x) === k(c) && (!c.concept || ((x.confidence ?? 0) >= 0.7 && (c.confidence ?? 0) >= 0.7)));
       if (!pick) continue;
       if (!c.concept) {
-        if (c.ignore === 'step') { stepSet.add(c.term); steps++; } else { noiseSet.add(c.term); noise++; }
+        // Only noise and step answers become explained words; an agreed no-concept (or component) stays out of the
+        // noise list, so the classifier never treats a meaningful word as explained.
+        if (c.ignore === 'step') { stepSet.add(c.term); steps++; } else if (c.ignore === 'noise') { noiseSet.add(c.term); noise++; } else continue;
         terms.terms = terms.terms.filter((t) => !(t.term === c.term && t.status === 'proposed'));
         continue;
       }

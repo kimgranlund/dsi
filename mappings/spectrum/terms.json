@@ -136,6 +136,7 @@
     "target-dash",
     "text-to",
     "text-underline",
+    "to",
     "to-alert",
     "to-alert-icon",
     "to-back",
@@ -219,16 +220,21 @@
     "affixed",
     "black",
     "bold",
+    "bottom",
     "center",
+    "cjk",
     "compact",
     "default",
     "down",
     "elevated",
     "emphasized",
+    "end",
     "extra",
     "extra-large",
     "extra-small",
     "full",
+    "genai",
+    "horizontal",
     "italic",
     "l",
     "large",
@@ -238,12 +244,18 @@
     "medium",
     "minimum",
     "none",
+    "premium",
     "quiet",
     "regular",
     "s",
+    "sans",
+    "serif",
     "small",
     "spacious",
+    "start",
+    "top",
     "uniform",
+    "vertical",
     "xl",
     "xs"
   ],
@@ -420,13 +432,18 @@
       "term": "bottom-to-text",
       "concept": "dsi:property/padding",
       "match": "close",
-      "status": "proposed",
-      "note": "Distance from a component edge to its content is padding. (confidence 0.75; the other agent disagreed)",
+      "status": "approved",
+      "note": "component-bottom-to-text-*: block padding below text.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:02:38Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.492Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -806,26 +823,36 @@
       "term": "edge-to-text",
       "concept": "dsi:property/padding",
       "match": "close",
-      "status": "proposed",
-      "note": "Distance from a component edge to its content is padding. (confidence 0.75; the other agent disagreed)",
+      "status": "approved",
+      "note": "component-edge-to-text-*: distance from the component edge to its text, i.e. inline padding.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:02:38Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.492Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
       "term": "edge-to-visual",
       "concept": "dsi:property/padding",
       "match": "close",
-      "status": "proposed",
-      "note": "Distance from a component edge to its content is padding. (confidence 0.75; the other agent disagreed)",
+      "status": "approved",
+      "note": "component-edge-to-visual-*: distance from edge to the icon, i.e. inline padding.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:02:38Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.492Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -845,13 +872,18 @@
       "term": "family",
       "concept": "dsi:property/font-family",
       "match": "exact",
-      "status": "proposed",
-      "note": "Only font-family tokens carry family. (confidence 0.9; the other agent disagreed)",
+      "status": "approved",
+      "note": "*-font-family is the only use of family.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:02:38Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.492Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -1771,13 +1803,18 @@
       "term": "radius",
       "concept": "dsi:property/corner-radius",
       "match": "exact",
-      "status": "proposed",
-      "note": "Only corner-radius tokens carry radius. (confidence 0.9; the other agent disagreed)",
+      "status": "approved",
+      "note": "corner-radius-* is the only use of radius in Spectrum's names.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:02:38Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.492Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -2030,26 +2067,36 @@
       "term": "text-to-control",
       "concept": "dsi:property/gap",
       "match": "close",
-      "status": "proposed",
-      "note": "Distance between two children of a component is a gap. (confidence 0.75; the other agent disagreed)",
+      "status": "approved",
+      "note": "text-to-control-*: distance between label text and control, a gap.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:02:38Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.492Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
       "term": "text-to-visual",
       "concept": "dsi:property/gap",
       "match": "close",
-      "status": "proposed",
-      "note": "Distance between two children of a component is a gap. (confidence 0.75; the other agent disagreed)",
+      "status": "approved",
+      "note": "text-to-visual-*: distance between text and icon children, a gap.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:02:38Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.492Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -2058,19 +2105,6 @@
       "match": "close",
       "status": "proposed",
       "note": "Line thickness of focus indicators, underlines and strikethroughs. (confidence 0.6; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:02:38Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "to",
-      "concept": "dsi:property/spacing",
-      "match": "close",
-      "status": "proposed",
-      "note": "Spectrum X-to-Y names a distance between two parts. (confidence 0.7; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
@@ -2095,13 +2129,18 @@
       "term": "top-to-text",
       "concept": "dsi:property/padding",
       "match": "close",
-      "status": "proposed",
-      "note": "Distance from a component edge to its content is padding. (confidence 0.75; the other agent disagreed)",
+      "status": "approved",
+      "note": "component-top-to-text-*: distance from top edge to text, i.e. block padding.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:02:38Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.492Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -2121,13 +2160,18 @@
       "term": "weight",
       "concept": "dsi:property/font-weight",
       "match": "exact",
-      "status": "proposed",
-      "note": "Only font-weight tokens carry weight. (confidence 0.9; the other agent disagreed)",
+      "status": "approved",
+      "note": "*-font-weight is the only use of weight in Spectrum's names.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:02:38Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.492Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -2147,13 +2191,18 @@
       "term": "workflow-icon-size",
       "concept": "dsi:property/icon-size",
       "match": "exact",
-      "status": "proposed",
-      "note": "Workflow icon size. (confidence 0.85; the other agent disagreed)",
+      "status": "approved",
+      "note": "Size scale of Spectrum's workflow icon set.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:34.306Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:11.492Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {

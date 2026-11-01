@@ -183,6 +183,7 @@
   "steps": [
     "auto",
     "behind",
+    "change",
     "coarse",
     "condensed",
     "default",
@@ -212,6 +213,7 @@
     "sans-serif",
     "serif",
     "short",
+    "skip",
     "sm",
     "small",
     "spacious",
@@ -743,6 +745,24 @@
       }
     },
     {
+      "term": "control-min-target",
+      "concept": "dsi:property/size",
+      "match": "close",
+      "status": "approved",
+      "note": "control.minTarget.* is the minimum square hit target (16/44px) for pointer coarseness.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:04.724Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
       "term": "control-small-padding",
       "concept": "dsi:property/padding",
       "match": "exact",
@@ -958,28 +978,20 @@
     },
     {
       "term": "display",
-      "concept": "dsi:usage/categorical",
+      "concept": "dsi:usage/display",
       "match": "exact",
-      "status": "proposed",
-      "note": "display.<hue>.*: categorical label/tag colors where the hue is the meaning. (confidence 0.92; the other agent disagreed)",
+      "status": "approved",
+      "note": "text.display.* is Primer's largest type style; fontStack.sansSerifDisplay is the stack for display text.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:56:06.267Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
-      }
-    },
-    {
-      "term": "display",
-      "concept": "dsi:usage/categorical",
-      "match": "close",
-      "status": "proposed",
-      "note": "Primer display.<hue> is its categorical decorative palette (labels, avatars), not the Display type usage. (confidence 0.7; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T12:00:00Z",
-        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:04.724Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -1077,28 +1089,20 @@
     },
     {
       "term": "focus",
-      "concept": "dsi:property/focus-ring",
-      "match": "exact",
-      "status": "proposed",
-      "note": "focus.outlineColor colors the focus indicator. (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:56:06.267Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "focus",
       "concept": "dsi:state/focus",
       "match": "exact",
-      "status": "proposed",
-      "note": "Focus state. (confidence 0.9; the other agent disagreed)",
+      "status": "approved",
+      "note": "outline.focus.* is the focus state outline.",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T12:00:00Z",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:04.724Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -1844,6 +1848,24 @@
         "by": "agreement",
         "at": "2026-11-01T14:57:51.432Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "min-target",
+      "concept": "dsi:property/size",
+      "match": "close",
+      "status": "approved",
+      "note": "Minimum square hit-target dimension.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:04.724Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -2832,6 +2854,24 @@
         "by": "agreement",
         "at": "2026-11-01T14:57:51.432Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "viewport-range",
+      "concept": "dsi:property/breakpoint",
+      "match": "close",
+      "status": "approved",
+      "note": "viewportRange.* are the media-query ranges (narrow, regular, wide, portrait) at which layouts change; values are media queries rather than widths.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:37:57Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:04.724Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
