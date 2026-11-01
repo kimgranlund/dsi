@@ -19,3 +19,4 @@ ADRs, one per file: `NNNN-short-title.md` with Status, Context, Decision, Conseq
 | [0013](0013-scale-roles.md) | Geometry, typography and motion map as roles; steps stay native and align by value |
 | [0014](0014-style-components-expressive.md) | Style facet, component values, and Material's expressive token set as a mode |
 | [0015](0015-token-applications.md) | The component tier is shown through token applications read from shipped component styles |
+| [0016](0016-atlassian-license.md) | Publish Atlassian token values under the npm package Apache-2.0 |

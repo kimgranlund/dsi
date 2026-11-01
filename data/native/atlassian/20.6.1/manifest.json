@@ -1,0 +1,129 @@
+{
+  "product": "atlassian",
+  "implementation": "atlaskit-tokens",
+  "package": {
+    "registry": "npm",
+    "name": "@atlaskit/tokens",
+    "version": "20.6.1",
+    "integrity": "sha512-ZuyRwjlDWhcM7kmMumkAC0AxYBTl4NLN/99d9p6iu/S0OuKk4MPsFWSPgXV87XmmNaLvwHi0GZRDPwtRdRf4rw=="
+  },
+  "adapter": "atlassian",
+  "themes": [
+    "light",
+    "dark",
+    "light-increased-contrast",
+    "dark-increased-contrast",
+    "legacy-light",
+    "legacy-dark",
+    "light-brand-refresh",
+    "dark-brand-refresh"
+  ],
+  "modes": {
+    "light": "light",
+    "dark": "dark",
+    "increased-contrast": "light-increased-contrast"
+  },
+  "files": [
+    {
+      "file": "motion.tokens.json",
+      "tokens": 80
+    },
+    {
+      "file": "palette.dark-brand-refresh.tokens.json",
+      "theme": "dark-brand-refresh",
+      "tokens": 132
+    },
+    {
+      "file": "palette.light-brand-refresh.tokens.json",
+      "theme": "light-brand-refresh",
+      "tokens": 132
+    },
+    {
+      "file": "palette.tokens.json",
+      "tokens": 401
+    },
+    {
+      "file": "shape.tokens.json",
+      "tokens": 11
+    },
+    {
+      "file": "spacing.tokens.json",
+      "tokens": 30
+    },
+    {
+      "file": "tokens.dark-brand-refresh.tokens.json",
+      "theme": "dark-brand-refresh",
+      "tokens": 390
+    },
+    {
+      "file": "tokens.dark-increased-contrast.tokens.json",
+      "theme": "dark-increased-contrast",
+      "tokens": 467
+    },
+    {
+      "file": "tokens.dark.tokens.json",
+      "theme": "dark",
+      "tokens": 467
+    },
+    {
+      "file": "tokens.legacy-dark.tokens.json",
+      "theme": "legacy-dark",
+      "tokens": 410
+    },
+    {
+      "file": "tokens.legacy-light.tokens.json",
+      "theme": "legacy-light",
+      "tokens": 410
+    },
+    {
+      "file": "tokens.light-brand-refresh.tokens.json",
+      "theme": "light-brand-refresh",
+      "tokens": 390
+    },
+    {
+      "file": "tokens.light-increased-contrast.tokens.json",
+      "theme": "light-increased-contrast",
+      "tokens": 467
+    },
+    {
+      "file": "tokens.light.tokens.json",
+      "theme": "light",
+      "tokens": 467
+    },
+    {
+      "file": "typography.tokens.json",
+      "tokens": 23
+    }
+  ],
+  "counts": {
+    "tokens": 4277,
+    "aliases": 3255,
+    "literals": 357,
+    "untyped": 33,
+    "palette": 665,
+    "aliasRejected": 18
+  },
+  "notes": [
+    "value.opacity.Opacity20: repeated in dist/esm/artifacts/palettes-raw/legacy-palette.js with the same value",
+    "value.opacity.Opacity40: repeated in dist/esm/artifacts/palettes-raw/legacy-palette.js with the same value",
+    "motion.keyframe.fade.in: original FadeIn0to100 = {\"0%\":{\"opacity\":0},\"100%\":{\"opacity\":1}} differs from \"FadeIn0to100\"; stored as literal",
+    "motion.keyframe.fade.out: original FadeOut100to0 = {\"0%\":{\"opacity\":1},\"100%\":{\"opacity\":0}} differs from \"FadeOut100to0\"; stored as literal",
+    "motion.keyframe.grid.column.in: original GridColumnIn80to100 = {\"0%\":{\"grid-template-columns\":\"minmax(0, 0.8fr)\"},\"100%\":{\"grid-template-columns\":\"minmax(0, 1fr)\"}} differs from \"GridColumnIn80to100\"; stored as literal",
+    "motion.keyframe.grid.column.out: original GridColumnOut100to0 = {\"0%\":{\"grid-template-columns\":\"minmax(0, 1fr)\"},\"100%\":{\"grid-template-columns\":\"minmax(0, 0fr)\"}} differs from \"GridColumnOut100to0\"; stored as literal",
+    "motion.keyframe.scale.in.medium: original ScaleIn80to100 = {\"0%\":{\"transform\":\"scale(0.8)\"},\"100%\":{\"transform\":\"scale(1)\"}} differs from \"ScaleIn80to100\"; stored as literal",
+    "motion.keyframe.scale.in.small: original ScaleIn95to100 = {\"0%\":{\"transform\":\"scale(0.95)\"},\"100%\":{\"transform\":\"scale(1)\"}} differs from \"ScaleIn95to100\"; stored as literal",
+    "motion.keyframe.scale.out.medium: original ScaleOut100to80 = {\"0%\":{\"transform\":\"scale(1)\"},\"100%\":{\"transform\":\"scale(0.8)\"}} differs from \"ScaleOut100to80\"; stored as literal",
+    "motion.keyframe.scale.out.small: original ScaleOut100to95 = {\"0%\":{\"transform\":\"scale(1)\"},\"100%\":{\"transform\":\"scale(0.95)\"}} differs from \"ScaleOut100to95\"; stored as literal",
+    "motion.keyframe.slide.in.bottom.short: original SlideInBottom8px = {\"0%\":{\"transform\":\"translateY(-8px)\"},\"100%\":{\"transform\":\"translateY(0px)\"}} differs from \"SlideInBottom8px\"; stored as literal",
+    "motion.keyframe.slide.in.left.half: original SlideIn50PercentLeft = {\"0%\":{\"transform\":\"translateX(-50%)\",\"transform-origin\":\"left\"},\"100%\":{\"transform\":\"translateX(0px)\",\"transform-origin\":\"left\"}} differs from \"SlideIn50PercentLeft\"; stored as literal",
+    "motion.keyframe.slide.in.left.short: original SlideInLeft8px = {\"0%\":{\"transform\":\"translateX(8px)\"},\"100%\":{\"transform\":\"translateX(0px)\"}} differs from \"SlideInLeft8px\"; stored as literal",
+    "motion.keyframe.slide.in.right.short: original SlideInRight8px = {\"0%\":{\"transform\":\"translateX(-8px)\"},\"100%\":{\"transform\":\"translateX(0px)\"}} differs from \"SlideInRight8px\"; stored as literal",
+    "motion.keyframe.slide.in.top.short: original SlideInTop8px = {\"0%\":{\"transform\":\"translateY(8px)\"},\"100%\":{\"transform\":\"translateY(0px)\"}} differs from \"SlideInTop8px\"; stored as literal",
+    "motion.keyframe.slide.out.bottom.short: original SlideOutBottom4px = {\"0%\":{\"transform\":\"translateY(0px)\"},\"100%\":{\"transform\":\"translateY(-4px)\"}} differs from \"SlideOutBottom4px\"; stored as literal",
+    "motion.keyframe.slide.out.left.half: original SlideOut15PercentLeft = {\"0%\":{\"transform\":\"translateX(0px)\",\"transform-origin\":\"left\"},\"100%\":{\"transform\":\"translateX(-15%)\",\"transform-origin\":\"left\"}} differs from \"SlideOut15PercentLeft\"; stored as literal",
+    "motion.keyframe.slide.out.left.short: original SlideOutLeft4px = {\"0%\":{\"transform\":\"translateX(0px)\"},\"100%\":{\"transform\":\"translateX(4px)\"}} differs from \"SlideOutLeft4px\"; stored as literal",
+    "motion.keyframe.slide.out.right.short: original SlideOutRight4px = {\"0%\":{\"transform\":\"translateX(0px)\"},\"100%\":{\"transform\":\"translateX(-4px)\"}} differs from \"SlideOutRight4px\"; stored as literal",
+    "motion.keyframe.slide.out.top.short: original SlideOutTop4px = {\"0%\":{\"transform\":\"translateY(0px)\"},\"100%\":{\"transform\":\"translateY(4px)\"}} differs from \"SlideOutTop4px\"; stored as literal",
+    "Font shorthands (font.heading.*, font.body.*) are stored untyped as shipped; their palette parts are in the typography palette."
+  ]
+}

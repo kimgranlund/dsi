@@ -1,0 +1,377 @@
+{
+  "font": {
+    "body": {
+      "default": {
+        "$description": "Use in short descriptions or labels. The default size for text in components. Migrate instances of Paragraph Default and UI Text to Body M.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-body",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 400 14px/20px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 400 14px/20px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      },
+      "large": {
+        "$description": "For long-form text, such as in blogs.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-body-large",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 400 16px/24px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 400 16px/24px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      },
+      "small": {
+        "$description": "Use in secondary level content such as fine print or semantic messaging. Use sparingly. Migrate instances of Small text to Body S.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-body-small",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 400 12px/16px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 400 12px/16px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      }
+    },
+    "code": {
+      "default": {
+        "$description": "For representing code only, either inline or in code blocks.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-code",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 400 0.875em/1 \"Atlassian Mono\", ui-monospace, Menlo, \"Segoe UI Mono\", \"Ubuntu Mono\", monospace",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 400 0.875em/1 \"Atlassian Mono\", ui-monospace, Menlo, \"Segoe UI Mono\", \"Ubuntu Mono\", monospace"
+      }
+    },
+    "family": {
+      "body": {
+        "$description": "For our default UI body text.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-family-body",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "\"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{typography.fontFamily.FontFamilyWebSansRefreshed}"
+      },
+      "brand": {
+        "body": {
+          "$description": "For our brand body text. Uses Charlie Text.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-font-family-brand-body",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "\"Charlie Text\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+              "version": "20.6.1"
+            }
+          },
+          "$value": "{typography.fontFamily.FontFamilyCharlieText}"
+        },
+        "heading": {
+          "$description": "For our brand heading text. Uses Charlie Display.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-font-family-brand-heading",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "\"Charlie Display\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+              "version": "20.6.1"
+            }
+          },
+          "$value": "{typography.fontFamily.FontFamilyCharlieDisplay}"
+        }
+      },
+      "code": {
+        "$description": "For representing code only.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-family-code",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "\"Atlassian Mono\", ui-monospace, Menlo, \"Segoe UI Mono\", \"Ubuntu Mono\", monospace",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{typography.fontFamily.FontFamilyWebMonoRefreshed}"
+      },
+      "heading": {
+        "$description": "For our default UI heading text.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-family-heading",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "\"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{typography.fontFamily.FontFamilyWebSansRefreshed}"
+      }
+    },
+    "heading": {
+      "large": {
+        "$description": "App page titles, such as forms. Migrate instances of H700 to Heading L.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-heading-large",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 653 24px/28px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 653 24px/28px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      },
+      "medium": {
+        "$description": "Headers in large components, such as modal dialogs. Migrate instances of H600 to Heading M.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-heading-medium",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 653 20px/24px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 653 20px/24px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      },
+      "small": {
+        "$description": "For headers in small components where space is limited. Migrate instances of H500 to Heading S.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-heading-small",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 653 16px/20px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 653 16px/20px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      },
+      "xlarge": {
+        "$description": "For overlapping brand with app promotions, such as marketplace content. Migrate instances of H800 to Heading XL.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-heading-xlarge",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 653 28px/32px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 653 28px/32px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      },
+      "xsmall": {
+        "$description": "For headers in small components where space is limited. Migrate instances of H400 to Heading XS.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-heading-xsmall",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 653 14px/20px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 653 14px/20px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      },
+      "xxlarge": {
+        "$description": "For overlapping brand with app promotions, such as marketplace content. Migrate instances of H900 to Heading XXL.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-heading-xxlarge",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 653 32px/36px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 653 32px/36px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      },
+      "xxsmall": {
+        "$description": "For headers in fine print or tight spaces. Use sparingly. Migrate instances of H100, H200 and H300 to Heading XXS.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-heading-xxsmall",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 653 12px/16px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 653 12px/16px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      }
+    },
+    "metric": {
+      "large": {
+        "$description": "Use to emphasize a number within a large donut.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-metric-large",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 653 28px/32px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 653 28px/32px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      },
+      "medium": {
+        "$description": "Use to emphasize a number within a medium donut.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-metric-medium",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 653 24px/28px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 653 24px/28px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      },
+      "small": {
+        "$description": "Use to emphasize a number and words in single-value tiles, or small donuts.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-metric-small",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "normal 653 16px/20px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "normal 653 16px/20px \"Atlassian Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Ubuntu, \"Helvetica Neue\", sans-serif"
+      }
+    },
+    "weight": {
+      "bold": {
+        "$description": "Use sparingly for emphasising text, such as in a lozenge.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-weight-bold",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "653",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{typography.fontWeight.FontWeight653}"
+      },
+      "medium": {
+        "$description": "For all text that may appear beside iconography, such as in a button.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-weight-medium",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "500",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{typography.fontWeight.FontWeight500}"
+      },
+      "regular": {
+        "$description": "Default font weight for body text styles.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-weight-regular",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "400",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{typography.fontWeight.FontWeight400}"
+      },
+      "semibold": {
+        "$description": "Use with caution as fallback fonts do not support this font weight and will default to bold weight.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-font-weight-semibold",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "600",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{typography.fontWeight.FontWeight600}"
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "product": "atlassian",
+  "implementation": "atlaskit-tokens",
+  "package": {
+    "registry": "npm",
+    "name": "@atlaskit/tokens",
+    "version": "20.6.1"
+  },
+  "entries": [
+    {
+      "path": "dist/esm/artifacts/token-names.js",
+      "format": "atlassian-names"
+    },
+    {
+      "path": "dist/esm/artifacts/palettes-raw/palette.js",
+      "format": "atlassian-palette"
+    },
+    {
+      "path": "dist/esm/artifacts/palettes-raw/legacy-palette.js",
+      "format": "atlassian-palette"
+    },
+    {
+      "path": "dist/esm/artifacts/palettes-raw/palette-brand-refresh.js",
+      "format": "atlassian-palette",
+      "theme": "light-brand-refresh"
+    },
+    {
+      "path": "dist/esm/artifacts/palettes-raw/palette-brand-refresh.js",
+      "format": "atlassian-palette",
+      "theme": "dark-brand-refresh"
+    },
+    {
+      "path": "dist/esm/artifacts/palettes-raw/spacing-scale.js",
+      "format": "atlassian-palette"
+    },
+    {
+      "path": "dist/esm/artifacts/palettes-raw/typography-palette.js",
+      "format": "atlassian-palette"
+    },
+    {
+      "path": "dist/esm/artifacts/palettes-raw/shape-palette.js",
+      "format": "atlassian-palette"
+    },
+    {
+      "path": "dist/esm/artifacts/palettes-raw/motion-palette.js",
+      "format": "atlassian-palette"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-spacing.js",
+      "format": "atlassian-tokens"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-typography.js",
+      "format": "atlassian-tokens"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-shape.js",
+      "format": "atlassian-tokens"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+      "format": "atlassian-tokens"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-light.js",
+      "format": "atlassian-tokens",
+      "theme": "light"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-dark.js",
+      "format": "atlassian-tokens",
+      "theme": "dark"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-light-increased-contrast.js",
+      "format": "atlassian-tokens",
+      "theme": "light-increased-contrast"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-dark-increased-contrast.js",
+      "format": "atlassian-tokens",
+      "theme": "dark-increased-contrast"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-legacy-light.js",
+      "format": "atlassian-tokens",
+      "theme": "legacy-light"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-legacy-dark.js",
+      "format": "atlassian-tokens",
+      "theme": "legacy-dark"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-light-brand-refresh.js",
+      "format": "atlassian-tokens",
+      "theme": "light-brand-refresh"
+    },
+    {
+      "path": "dist/esm/artifacts/tokens-raw/atlassian-dark-brand-refresh.js",
+      "format": "atlassian-tokens",
+      "theme": "dark-brand-refresh"
+    }
+  ],
+  "themes": [
+    "light",
+    "dark",
+    "light-increased-contrast",
+    "dark-increased-contrast",
+    "legacy-light",
+    "legacy-dark",
+    "light-brand-refresh",
+    "dark-brand-refresh"
+  ],
+  "modes": {
+    "light": "light",
+    "dark": "dark",
+    "increased-contrast": "light-increased-contrast"
+  },
+  "modesNote": "theme-config.js marks light-increased-contrast and dark-increased-contrast as increasesContrastFor light and dark. Legacy and brand-refresh themes are kept as native themes; finesse/future partial overrides and UNSAFE test themes are not ingested.",
+  "adapter": "atlassian",
+  "license": {
+    "spdx": "Apache-2.0",
+    "url": "https://www.npmjs.com/package/@atlaskit/tokens?activeTab=code",
+    "redistribution": "permitted",
+    "notes": "The npm package is Apache-2.0 (package/LICENSE, Copyright 2019 Atlassian Pty Ltd). The separate atlassian.design license ties ADS use to Atlassian add-ons, but its Section 8 lets open-source code be used outside the ADS; values are redistributed under the package's Apache-2.0 with attribution (ADR 0016)."
+  }
+}

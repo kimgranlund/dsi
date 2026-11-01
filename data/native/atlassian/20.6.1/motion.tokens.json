@@ -1,0 +1,2381 @@
+{
+  "motion": {
+    "avatar": {
+      "enter": {
+        "$description": "Use for avatar group enter transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "backwards",
+            "keyframes": [
+              "ScaleIn80to100",
+              "FadeIn0to100"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-avatar-enter",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"keyframes\":[\"ScaleIn80to100\",\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 150
+          },
+          "timingFunction": [
+            0.4,
+            1,
+            0.6,
+            1
+          ]
+        }
+      },
+      "exit": {
+        "$description": "Use for avatar group exit transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "forwards",
+            "keyframes": [
+              "ScaleOut100to80",
+              "FadeOut100to0"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-avatar-exit",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":100,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"ScaleOut100to80\",\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 100
+          },
+          "timingFunction": [
+            0.6,
+            0,
+            0.8,
+            0.6
+          ]
+        }
+      },
+      "hovered": {
+        "$description": "Use for hover state on avatar elements.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": null,
+            "keyframes": []
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-avatar-hovered",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":250,\"curve\":\"linear(0, 0.021, 0.058, 0.107, 0.164, 0.227, 0.292, 0.359, 0.425, 0.49, 0.552, 0.61, 0.664, 0.714, 0.759, 0.8, 0.837, 0.869, 0.898, 0.922, 0.943, 0.961, 0.976, 0.988, 0.998, 1.006, 1.013, 1.017, 1.02, 1.023, 1.024, 1.024, 1.024, 1.024, 1.023, 1.022, 1.02, 1.019, 1.017, 1.015, 1.014, 1.012, 1.011, 1.009, 1.008, 1.007, 1.006, 1.005, 1.004, 1.003, 1.002, 1.002, 1.001, 1.001, 1.001, 1, 1, 1, 1, 1, 0.999, 0.999, 0.999, 0.999, 1)\",\"properties\":[\"transform\"]}",
+            "untyped": true,
+            "version": "20.6.1"
+          }
+        },
+        "$value": "250ms linear(0, 0.021, 0.058, 0.107, 0.164, 0.227, 0.292, 0.359, 0.425, 0.49, 0.552, 0.61, 0.664, 0.714, 0.759, 0.8, 0.837, 0.869, 0.898, 0.922, 0.943, 0.961, 0.976, 0.988, 0.998, 1.006, 1.013, 1.017, 1.02, 1.023, 1.024, 1.024, 1.024, 1.024, 1.023, 1.022, 1.02, 1.019, 1.017, 1.015, 1.014, 1.012, 1.011, 1.009, 1.008, 1.007, 1.006, 1.005, 1.004, 1.003, 1.002, 1.002, 1.001, 1.001, 1.001, 1, 1, 1, 1, 1, 0.999, 0.999, 0.999, 0.999, 1)"
+      }
+    },
+    "blanket": {
+      "enter": {
+        "$description": "Use for blanket enter transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "backwards",
+            "keyframes": [
+              "FadeIn0to100"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-blanket-enter",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":250,\"curve\":\"cubic-bezier(0.4, 0, 0, 1)\",\"keyframes\":[\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 250
+          },
+          "timingFunction": [
+            0.4,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "exit": {
+        "$description": "Use for blanket exit transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "forwards",
+            "keyframes": [
+              "FadeOut100to0"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-blanket-exit",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":200,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 200
+          },
+          "timingFunction": [
+            0.6,
+            0,
+            0.8,
+            0.6
+          ]
+        }
+      }
+    },
+    "button": {
+      "hovered": {
+        "$description": "Use for button hover state transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": null,
+            "keyframes": []
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-button-hovered",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"properties\":[\"background-color\",\"border-color\"]}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 150
+          },
+          "timingFunction": [
+            0.4,
+            1,
+            0.6,
+            1
+          ]
+        }
+      },
+      "pressed": {
+        "$description": "Use for button pressed state transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": null,
+            "keyframes": []
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-button-pressed",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"properties\":[\"background-color\",\"border-color\"]}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 150
+          },
+          "timingFunction": [
+            0.4,
+            1,
+            0.6,
+            1
+          ]
+        }
+      }
+    },
+    "duration": {
+      "instant": {
+        "$description": "Use for instant feedback with no perceptible delay, such as list item hover, selected and focus states.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-duration-instant",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "0ms",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{motion.duration.Duration000}"
+      },
+      "long": {
+        "$description": "Use for medium entrance transitions, such as modal enter and flag enter.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-duration-long",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "250ms",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{motion.duration.Duration250}"
+      },
+      "medium": {
+        "$description": "Use for medium exit transitions, such as modal exit and flag exit.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-duration-medium",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "200ms",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{motion.duration.Duration200}"
+      },
+      "short": {
+        "$description": "Use for interactive state emphasis and small entrances, such as button hover and pressed states, popup enter, and avatar appear.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-duration-short",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "150ms",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{motion.duration.Duration150}"
+      },
+      "xlong": {
+        "$description": "Use for large transitions, such as panel enter/exit, page transitions, and full-screen overlays.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-duration-xlong",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "400ms",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{motion.duration.Duration400}"
+      },
+      "xshort": {
+        "$description": "Use for subtle pressed states and quick exits, such as component press feedback, popup dismiss, and avatar transitions.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-duration-xshort",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "100ms",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{motion.duration.Duration100}"
+      },
+      "xxlong": {
+        "$description": "Use for large transitions, such as onboarding steps and full-screen overlays.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-duration-xxlong",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "600ms",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{motion.duration.Duration600}"
+      },
+      "xxshort": {
+        "$description": "Use for instant feedback, such as list item hover, selected and focus states.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-duration-xxshort",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "50ms",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{motion.duration.Duration050}"
+      }
+    },
+    "easing": {
+      "in": {
+        "practical": {
+          "$description": "Starts slowly and accelerates away. Best for exit transitions where elements leaving the screen should feel like they are getting out of the way.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-easing-in-practical",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "cubic-bezier(0.6, 0, 0.8, 0.6)",
+              "version": "20.6.1"
+            }
+          },
+          "$value": "{motion.curve.EasePracticalIn}"
+        }
+      },
+      "inout": {
+        "bold": {
+          "$description": "The bold in-out curve pairs naturally with scale and repositioning of elements. It controls both the start and end of the motion.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-easing-inout-bold",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "cubic-bezier(0.4, 0, 0, 1)",
+              "version": "20.6.1"
+            }
+          },
+          "$value": "{motion.curve.EaseBoldInOut}"
+        }
+      },
+      "out": {
+        "bold": {
+          "$description": "Elements arrive quickly and decelerate to a stop. The fast start grabs attention and the gentle landing feels controlled.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-easing-out-bold",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "cubic-bezier(0, 0.4, 0, 1)",
+              "version": "20.6.1"
+            }
+          },
+          "$value": "{motion.curve.EaseBoldOut}"
+        },
+        "practical": {
+          "$description": "A practical, everyday enter curve. Less dramatic than the bold variant, good for subtle transitions like content swaps, tab changes, and list reordering.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-easing-out-practical",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "cubic-bezier(0.4, 1, 0.6, 1)",
+              "version": "20.6.1"
+            }
+          },
+          "$value": "{motion.curve.EasePracticalOut}"
+        }
+      },
+      "spring": {
+        "$description": "A spring curve that overshoots slightly before settling. Use for playful, tactile feedback on small branded elements such as avatar hover, where the slight overshoot reinforces a sense of life.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-easing-spring",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "linear(0, 0.021, 0.058, 0.107, 0.164, 0.227, 0.292, 0.359, 0.425, 0.49, 0.552, 0.61, 0.664, 0.714, 0.759, 0.8, 0.837, 0.869, 0.898, 0.922, 0.943, 0.961, 0.976, 0.988, 0.998, 1.006, 1.013, 1.017, 1.02, 1.023, 1.024, 1.024, 1.024, 1.024, 1.023, 1.022, 1.02, 1.019, 1.017, 1.015, 1.014, 1.012, 1.011, 1.009, 1.008, 1.007, 1.006, 1.005, 1.004, 1.003, 1.002, 1.002, 1.001, 1.001, 1.001, 1, 1, 1, 1, 1, 0.999, 0.999, 0.999, 0.999, 1)",
+            "version": "20.6.1"
+          }
+        },
+        "$value": "{motion.curve.EaseSpring}"
+      }
+    },
+    "flag": {
+      "enter": {
+        "$description": "Use for flag enter transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "backwards",
+            "keyframes": [
+              "SlideIn50PercentLeft",
+              "FadeIn0to100"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-flag-enter",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":250,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideIn50PercentLeft\",\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 250
+          },
+          "timingFunction": [
+            0,
+            0.4,
+            0,
+            1
+          ]
+        }
+      },
+      "exit": {
+        "$description": "Use for flag exit transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "forwards",
+            "keyframes": [
+              "SlideOut15PercentLeft",
+              "FadeOut100to0"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-flag-exit",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":200,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"SlideOut15PercentLeft\",\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 200
+          },
+          "timingFunction": [
+            0.6,
+            0,
+            0.8,
+            0.6
+          ]
+        }
+      },
+      "reposition": {
+        "$description": "Use for repositioning flag elements.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": null,
+            "keyframes": []
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-flag-reposition",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":250,\"curve\":\"cubic-bezier(0.4, 0, 0, 1)\",\"properties\":[\"transform\"]}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 250
+          },
+          "timingFunction": [
+            0.4,
+            0,
+            0,
+            1
+          ]
+        }
+      }
+    },
+    "form": {
+      "message": {
+        "enter": {
+          "$description": "Use when a form message enters.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "backwards",
+              "keyframes": [
+                "SlideInBottom2px",
+                "FadeIn0to100"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-form-message-enter",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"keyframes\":[\"SlideInBottom2px\",\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 150
+            },
+            "timingFunction": [
+              0.4,
+              1,
+              0.6,
+              1
+            ]
+          }
+        },
+        "exit": {
+          "$description": "Use when a form message exits.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "forwards",
+              "keyframes": [
+                "SlideOutBottom2px",
+                "FadeOut100to0"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-form-message-exit",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":100,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"SlideOutBottom2px\",\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 100
+            },
+            "timingFunction": [
+              0.6,
+              0,
+              0.8,
+              0.6
+            ]
+          }
+        }
+      }
+    },
+    "input": {
+      "default": {
+        "$description": "Use for input hover, focus, and error state transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": null,
+            "keyframes": []
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-input",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"properties\":[\"background-color\",\"border-color\",\"box-shadow\"]}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 150
+          },
+          "timingFunction": [
+            0.4,
+            1,
+            0.6,
+            1
+          ]
+        }
+      },
+      "selection": {
+        "$description": "Use for checkbox and radio surface, border and indicator state cross-fades.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": null,
+            "keyframes": []
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-input-selection",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"properties\":[\"background-color\",\"border-color\",\"color\",\"fill\",\"stroke\",\"opacity\"]}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 150
+          },
+          "timingFunction": [
+            0.4,
+            1,
+            0.6,
+            1
+          ]
+        }
+      },
+      "toggle": {
+        "$description": "Use for toggle track colour, handle slide and icon transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": null,
+            "keyframes": []
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-input-toggle",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"properties\":[\"background-color\",\"color\",\"transform\",\"opacity\"]}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 150
+          },
+          "timingFunction": [
+            0.4,
+            1,
+            0.6,
+            1
+          ]
+        }
+      }
+    },
+    "keyframe": {
+      "fade": {
+        "in": {
+          "$description": "Use for fade-in transitions where an element goes from fully transparent to fully opaque.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-keyframe-fade-in",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "FadeIn0to100",
+              "untyped": true,
+              "version": "20.6.1"
+            }
+          },
+          "$value": "FadeIn0to100"
+        },
+        "out": {
+          "$description": "Use for fade-out transitions where an element goes from fully opaque to fully transparent.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-keyframe-fade-out",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "FadeOut100to0",
+              "untyped": true,
+              "version": "20.6.1"
+            }
+          },
+          "$value": "FadeOut100to0"
+        }
+      },
+      "grid": {
+        "column": {
+          "in": {
+            "$description": "Use to expand an inline grid column from 80% to full size on enter.",
+            "$extensions": {
+              "io.nonoun.dsi": {
+                "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                "implementation": "atlaskit-tokens",
+                "nativeName": "--ds-keyframe-grid-column-in",
+                "package": "@atlaskit/tokens",
+                "product": "atlassian",
+                "rawValue": "GridColumnIn80to100",
+                "untyped": true,
+                "version": "20.6.1"
+              }
+            },
+            "$value": "GridColumnIn80to100"
+          },
+          "out": {
+            "$description": "Use to collapse an inline grid column from full size to zero on exit.",
+            "$extensions": {
+              "io.nonoun.dsi": {
+                "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                "implementation": "atlaskit-tokens",
+                "nativeName": "--ds-keyframe-grid-column-out",
+                "package": "@atlaskit/tokens",
+                "product": "atlassian",
+                "rawValue": "GridColumnOut100to0",
+                "untyped": true,
+                "version": "20.6.1"
+              }
+            },
+            "$value": "GridColumnOut100to0"
+          }
+        }
+      },
+      "scale": {
+        "in": {
+          "medium": {
+            "$description": "Use for medium scale-in transitions where an element grows from 80% to full size on enter.",
+            "$extensions": {
+              "io.nonoun.dsi": {
+                "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                "implementation": "atlaskit-tokens",
+                "nativeName": "--ds-keyframe-scale-in-medium",
+                "package": "@atlaskit/tokens",
+                "product": "atlassian",
+                "rawValue": "ScaleIn80to100",
+                "untyped": true,
+                "version": "20.6.1"
+              }
+            },
+            "$value": "ScaleIn80to100"
+          },
+          "small": {
+            "$description": "Use for small scale-in transitions where an element grows from 95% to full size on enter.",
+            "$extensions": {
+              "io.nonoun.dsi": {
+                "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                "implementation": "atlaskit-tokens",
+                "nativeName": "--ds-keyframe-scale-in-small",
+                "package": "@atlaskit/tokens",
+                "product": "atlassian",
+                "rawValue": "ScaleIn95to100",
+                "untyped": true,
+                "version": "20.6.1"
+              }
+            },
+            "$value": "ScaleIn95to100"
+          }
+        },
+        "out": {
+          "medium": {
+            "$description": "Use for medium scale-out transitions where an element shrinks from full size to 80% on exit.",
+            "$extensions": {
+              "io.nonoun.dsi": {
+                "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                "implementation": "atlaskit-tokens",
+                "nativeName": "--ds-keyframe-scale-out-medium",
+                "package": "@atlaskit/tokens",
+                "product": "atlassian",
+                "rawValue": "ScaleOut100to80",
+                "untyped": true,
+                "version": "20.6.1"
+              }
+            },
+            "$value": "ScaleOut100to80"
+          },
+          "small": {
+            "$description": "Use for small scale-out transitions where an element shrinks from full size to 95% on exit.",
+            "$extensions": {
+              "io.nonoun.dsi": {
+                "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                "implementation": "atlaskit-tokens",
+                "nativeName": "--ds-keyframe-scale-out-small",
+                "package": "@atlaskit/tokens",
+                "product": "atlassian",
+                "rawValue": "ScaleOut100to95",
+                "untyped": true,
+                "version": "20.6.1"
+              }
+            },
+            "$value": "ScaleOut100to95"
+          }
+        }
+      },
+      "slide": {
+        "in": {
+          "bottom": {
+            "short": {
+              "$description": "Use for short slide-in transitions where an element enters from below its final position by 8px.",
+              "$extensions": {
+                "io.nonoun.dsi": {
+                  "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                  "implementation": "atlaskit-tokens",
+                  "nativeName": "--ds-keyframe-slide-in-bottom-short",
+                  "package": "@atlaskit/tokens",
+                  "product": "atlassian",
+                  "rawValue": "SlideInBottom8px",
+                  "untyped": true,
+                  "version": "20.6.1"
+                }
+              },
+              "$value": "SlideInBottom8px"
+            }
+          },
+          "left": {
+            "half": {
+              "$description": "Use for slide-in transitions where an element enters from the left of its final position by 50%.",
+              "$extensions": {
+                "io.nonoun.dsi": {
+                  "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                  "implementation": "atlaskit-tokens",
+                  "nativeName": "--ds-keyframe-slide-in-left-half",
+                  "package": "@atlaskit/tokens",
+                  "product": "atlassian",
+                  "rawValue": "SlideIn50PercentLeft",
+                  "untyped": true,
+                  "version": "20.6.1"
+                }
+              },
+              "$value": "SlideIn50PercentLeft"
+            },
+            "short": {
+              "$description": "Use for short slide-in transitions where an element enters from the left of its final position by 8px.",
+              "$extensions": {
+                "io.nonoun.dsi": {
+                  "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                  "implementation": "atlaskit-tokens",
+                  "nativeName": "--ds-keyframe-slide-in-left-short",
+                  "package": "@atlaskit/tokens",
+                  "product": "atlassian",
+                  "rawValue": "SlideInLeft8px",
+                  "untyped": true,
+                  "version": "20.6.1"
+                }
+              },
+              "$value": "SlideInLeft8px"
+            }
+          },
+          "right": {
+            "short": {
+              "$description": "Use for short slide-in transitions where an element enters from the right of its final position by 8px.",
+              "$extensions": {
+                "io.nonoun.dsi": {
+                  "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                  "implementation": "atlaskit-tokens",
+                  "nativeName": "--ds-keyframe-slide-in-right-short",
+                  "package": "@atlaskit/tokens",
+                  "product": "atlassian",
+                  "rawValue": "SlideInRight8px",
+                  "untyped": true,
+                  "version": "20.6.1"
+                }
+              },
+              "$value": "SlideInRight8px"
+            }
+          },
+          "top": {
+            "short": {
+              "$description": "Use for short slide-in transitions where an element enters from above its final position by 8px.",
+              "$extensions": {
+                "io.nonoun.dsi": {
+                  "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                  "implementation": "atlaskit-tokens",
+                  "nativeName": "--ds-keyframe-slide-in-top-short",
+                  "package": "@atlaskit/tokens",
+                  "product": "atlassian",
+                  "rawValue": "SlideInTop8px",
+                  "untyped": true,
+                  "version": "20.6.1"
+                }
+              },
+              "$value": "SlideInTop8px"
+            }
+          }
+        },
+        "out": {
+          "bottom": {
+            "short": {
+              "$description": "Use for short slide-out transitions where an element exits downward by 8px from its starting position.",
+              "$extensions": {
+                "io.nonoun.dsi": {
+                  "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                  "implementation": "atlaskit-tokens",
+                  "nativeName": "--ds-keyframe-slide-out-bottom-short",
+                  "package": "@atlaskit/tokens",
+                  "product": "atlassian",
+                  "rawValue": "SlideOutBottom4px",
+                  "untyped": true,
+                  "version": "20.6.1"
+                }
+              },
+              "$value": "SlideOutBottom4px"
+            }
+          },
+          "left": {
+            "half": {
+              "$description": "Use for slide-out transitions where an element exits to the left of its starting position by 15%.",
+              "$extensions": {
+                "io.nonoun.dsi": {
+                  "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                  "implementation": "atlaskit-tokens",
+                  "nativeName": "--ds-keyframe-slide-out-left-half",
+                  "package": "@atlaskit/tokens",
+                  "product": "atlassian",
+                  "rawValue": "SlideOut15PercentLeft",
+                  "untyped": true,
+                  "version": "20.6.1"
+                }
+              },
+              "$value": "SlideOut15PercentLeft"
+            },
+            "short": {
+              "$description": "Use for short slide-out transitions where an element exits to the left by 8px from its starting position.",
+              "$extensions": {
+                "io.nonoun.dsi": {
+                  "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                  "implementation": "atlaskit-tokens",
+                  "nativeName": "--ds-keyframe-slide-out-left-short",
+                  "package": "@atlaskit/tokens",
+                  "product": "atlassian",
+                  "rawValue": "SlideOutLeft4px",
+                  "untyped": true,
+                  "version": "20.6.1"
+                }
+              },
+              "$value": "SlideOutLeft4px"
+            }
+          },
+          "right": {
+            "short": {
+              "$description": "Use for short slide-out transitions where an element exits to the right by 8px from its starting position.",
+              "$extensions": {
+                "io.nonoun.dsi": {
+                  "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                  "implementation": "atlaskit-tokens",
+                  "nativeName": "--ds-keyframe-slide-out-right-short",
+                  "package": "@atlaskit/tokens",
+                  "product": "atlassian",
+                  "rawValue": "SlideOutRight4px",
+                  "untyped": true,
+                  "version": "20.6.1"
+                }
+              },
+              "$value": "SlideOutRight4px"
+            }
+          },
+          "top": {
+            "short": {
+              "$description": "Use for short slide-out transitions where an element exits upward by 8px from its starting position.",
+              "$extensions": {
+                "io.nonoun.dsi": {
+                  "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                  "implementation": "atlaskit-tokens",
+                  "nativeName": "--ds-keyframe-slide-out-top-short",
+                  "package": "@atlaskit/tokens",
+                  "product": "atlassian",
+                  "rawValue": "SlideOutTop4px",
+                  "untyped": true,
+                  "version": "20.6.1"
+                }
+              },
+              "$value": "SlideOutTop4px"
+            }
+          }
+        }
+      }
+    },
+    "label": {
+      "enter": {
+        "$description": "Use for label enter transitions (e.g. tag component).",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "backwards",
+            "keyframes": [
+              "GridColumnIn80to100",
+              "FadeIn0to100"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-label-enter",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"keyframes\":[\"GridColumnIn80to100\",\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 150
+          },
+          "timingFunction": [
+            0.4,
+            1,
+            0.6,
+            1
+          ]
+        }
+      },
+      "exit": {
+        "$description": "Use for label exit transitions (e.g. tag component).",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "forwards",
+            "keyframes": [
+              "GridColumnOut100to0",
+              "FadeOut100to0"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-label-exit",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":100,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"GridColumnOut100to0\",\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 100
+          },
+          "timingFunction": [
+            0.6,
+            0,
+            0.8,
+            0.6
+          ]
+        }
+      }
+    },
+    "listitem": {
+      "hovered": {
+        "$description": "Use for list item hover state transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": null,
+            "keyframes": []
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-listitem-hovered",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":50,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"properties\":[\"background-color\",\"border-color\",\"color\",\"text-decoration-color\"]}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 50
+          },
+          "timingFunction": [
+            0.4,
+            1,
+            0.6,
+            1
+          ]
+        }
+      },
+      "pressed": {
+        "$description": "Use for list item pressed state transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": null,
+            "keyframes": []
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-listitem-pressed",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":100,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"properties\":[\"background-color\",\"border-color\",\"color\",\"text-decoration-color\"]}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 100
+          },
+          "timingFunction": [
+            0.4,
+            1,
+            0.6,
+            1
+          ]
+        }
+      },
+      "selected": {
+        "$description": "Use for list item selected state transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": null,
+            "keyframes": []
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-listitem-selected",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":100,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"properties\":[\"background-color\",\"border-color\",\"color\",\"text-decoration-color\"]}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 100
+          },
+          "timingFunction": [
+            0.4,
+            1,
+            0.6,
+            1
+          ]
+        }
+      }
+    },
+    "modal": {
+      "enter": {
+        "$description": "Use for modal enter transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "backwards",
+            "keyframes": [
+              "ScaleIn95to100"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-modal-enter",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":250,\"curve\":\"cubic-bezier(0.4, 0, 0, 1)\",\"keyframes\":[\"ScaleIn95to100\"],\"fill\":\"backwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 250
+          },
+          "timingFunction": [
+            0.4,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "exit": {
+        "$description": "Use for modal exit transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "forwards",
+            "keyframes": [
+              "ScaleOut100to95"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-modal-exit",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":200,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"ScaleOut100to95\"],\"fill\":\"forwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 200
+          },
+          "timingFunction": [
+            0.6,
+            0,
+            0.8,
+            0.6
+          ]
+        }
+      }
+    },
+    "panel": {
+      "content": {
+        "enter": {
+          "$description": "Use for panel content enter.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "backwards",
+              "keyframes": [
+                "FadeIn0to100"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-panel-content-enter",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"keyframes\":[\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 150
+            },
+            "timingFunction": [
+              0.4,
+              1,
+              0.6,
+              1
+            ]
+          }
+        },
+        "exit": {
+          "$description": "Use for panel content exit.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "forwards",
+              "keyframes": [
+                "FadeOut100to0"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-panel-content-exit",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":50,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 50
+            },
+            "timingFunction": [
+              0.6,
+              0,
+              0.8,
+              0.6
+            ]
+          }
+        }
+      },
+      "enter": {
+        "default": {
+          "$description": "Use for panel enter transitions.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "backwards",
+              "keyframes": [
+                "SlideIn100PercentRight"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-panel-enter",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":250,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideIn100PercentRight\"],\"fill\":\"backwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 250
+            },
+            "timingFunction": [
+              0,
+              0.4,
+              0,
+              1
+            ]
+          }
+        },
+        "left": {
+          "$description": "Use for panel enter from the left.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "backwards",
+              "keyframes": [
+                "SlideIn100PercentLeft"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-panel-enter-left",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":250,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideIn100PercentLeft\"],\"fill\":\"backwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 250
+            },
+            "timingFunction": [
+              0,
+              0.4,
+              0,
+              1
+            ]
+          }
+        },
+        "right": {
+          "$description": "Use for panel enter from the right.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "backwards",
+              "keyframes": [
+                "SlideIn100PercentRight"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-panel-enter-right",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":250,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideIn100PercentRight\"],\"fill\":\"backwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 250
+            },
+            "timingFunction": [
+              0,
+              0.4,
+              0,
+              1
+            ]
+          }
+        }
+      },
+      "exit": {
+        "default": {
+          "$description": "Use for panel exit transitions.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "forwards",
+              "keyframes": [
+                "SlideOut100PercentRight"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-panel-exit",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":200,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideOut100PercentRight\"],\"fill\":\"forwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 200
+            },
+            "timingFunction": [
+              0,
+              0.4,
+              0,
+              1
+            ]
+          }
+        },
+        "left": {
+          "$description": "Use for panel exit towards the left.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "forwards",
+              "keyframes": [
+                "SlideOut100PercentLeft"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-panel-exit-left",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":200,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideOut100PercentLeft\"],\"fill\":\"forwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 200
+            },
+            "timingFunction": [
+              0,
+              0.4,
+              0,
+              1
+            ]
+          }
+        },
+        "right": {
+          "$description": "Use for panel exit towards the right.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "forwards",
+              "keyframes": [
+                "SlideOut100PercentRight"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-panel-exit-right",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":200,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideOut100PercentRight\"],\"fill\":\"forwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 200
+            },
+            "timingFunction": [
+              0,
+              0.4,
+              0,
+              1
+            ]
+          }
+        }
+      }
+    },
+    "popup": {
+      "enter": {
+        "bottom": {
+          "$description": "Use for popup enter from the bottom.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "backwards",
+              "keyframes": [
+                "SlideInBottom8px",
+                "FadeIn0to100"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-popup-enter-bottom",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"keyframes\":[\"SlideInBottom8px\",\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 150
+            },
+            "timingFunction": [
+              0.4,
+              1,
+              0.6,
+              1
+            ]
+          }
+        },
+        "left": {
+          "$description": "Use for popup enter from the left.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "backwards",
+              "keyframes": [
+                "SlideInLeft8px",
+                "FadeIn0to100"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-popup-enter-left",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"keyframes\":[\"SlideInLeft8px\",\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 150
+            },
+            "timingFunction": [
+              0.4,
+              1,
+              0.6,
+              1
+            ]
+          }
+        },
+        "right": {
+          "$description": "Use for popup enter from the right.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "backwards",
+              "keyframes": [
+                "SlideInRight8px",
+                "FadeIn0to100"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-popup-enter-right",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"keyframes\":[\"SlideInRight8px\",\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 150
+            },
+            "timingFunction": [
+              0.4,
+              1,
+              0.6,
+              1
+            ]
+          }
+        },
+        "top": {
+          "$description": "Use for popup enter from the top: popup, tooltip, dropdown, inline message, inline dialog.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "backwards",
+              "keyframes": [
+                "SlideInTop8px",
+                "FadeIn0to100"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-popup-enter-top",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"keyframes\":[\"SlideInTop8px\",\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 150
+            },
+            "timingFunction": [
+              0.4,
+              1,
+              0.6,
+              1
+            ]
+          }
+        }
+      },
+      "exit": {
+        "bottom": {
+          "$description": "Use for popup exit toward the bottom.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "forwards",
+              "keyframes": [
+                "SlideOutBottom4px",
+                "FadeOut100to0"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-popup-exit-bottom",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":100,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"SlideOutBottom4px\",\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 100
+            },
+            "timingFunction": [
+              0.6,
+              0,
+              0.8,
+              0.6
+            ]
+          }
+        },
+        "left": {
+          "$description": "Use for popup exit toward the left.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "forwards",
+              "keyframes": [
+                "SlideOutLeft4px",
+                "FadeOut100to0"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-popup-exit-left",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":100,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"SlideOutLeft4px\",\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 100
+            },
+            "timingFunction": [
+              0.6,
+              0,
+              0.8,
+              0.6
+            ]
+          }
+        },
+        "right": {
+          "$description": "Use for popup exit toward the right.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "forwards",
+              "keyframes": [
+                "SlideOutRight4px",
+                "FadeOut100to0"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-popup-exit-right",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":100,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"SlideOutRight4px\",\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 100
+            },
+            "timingFunction": [
+              0.6,
+              0,
+              0.8,
+              0.6
+            ]
+          }
+        },
+        "top": {
+          "$description": "Use for popup exit toward the top.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "forwards",
+              "keyframes": [
+                "SlideOutTop4px",
+                "FadeOut100to0"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-popup-exit-top",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":100,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"SlideOutTop4px\",\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 100
+            },
+            "timingFunction": [
+              0.6,
+              0,
+              0.8,
+              0.6
+            ]
+          }
+        }
+      }
+    },
+    "sidenav": {
+      "enter": {
+        "left": {
+          "$description": "Use for side nav enter from the left.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "backwards",
+              "keyframes": [
+                "SlideIn100PercentLeft"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-sidenav-enter-left",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":250,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideIn100PercentLeft\"],\"fill\":\"backwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 250
+            },
+            "timingFunction": [
+              0,
+              0.4,
+              0,
+              1
+            ]
+          }
+        },
+        "right": {
+          "$description": "Use for side nav enter from the right.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "backwards",
+              "keyframes": [
+                "SlideIn100PercentRight"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-sidenav-enter-right",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":250,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideIn100PercentRight\"],\"fill\":\"backwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 250
+            },
+            "timingFunction": [
+              0,
+              0.4,
+              0,
+              1
+            ]
+          }
+        }
+      },
+      "exit": {
+        "left": {
+          "$description": "Use for side nav exit towards the left.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "forwards",
+              "keyframes": [
+                "SlideOut100PercentLeft"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-sidenav-exit-left",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":200,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideOut100PercentLeft\"],\"fill\":\"forwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 200
+            },
+            "timingFunction": [
+              0,
+              0.4,
+              0,
+              1
+            ]
+          }
+        },
+        "right": {
+          "$description": "Use for side nav exit towards the right.",
+          "$extensions": {
+            "com.atlassian": {
+              "fill": "forwards",
+              "keyframes": [
+                "SlideOut100PercentRight"
+              ]
+            },
+            "io.nonoun.dsi": {
+              "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+              "implementation": "atlaskit-tokens",
+              "nativeName": "--ds-sidenav-exit-right",
+              "package": "@atlaskit/tokens",
+              "product": "atlassian",
+              "rawValue": "{\"duration\":200,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideOut100PercentRight\"],\"fill\":\"forwards\"}",
+              "version": "20.6.1"
+            }
+          },
+          "$type": "transition",
+          "$value": {
+            "delay": {
+              "unit": "ms",
+              "value": 0
+            },
+            "duration": {
+              "unit": "ms",
+              "value": 200
+            },
+            "timingFunction": [
+              0,
+              0.4,
+              0,
+              1
+            ]
+          }
+        }
+      }
+    },
+    "spotlight": {
+      "enter": {
+        "$description": "Use for spotlight enter transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "backwards",
+            "keyframes": [
+              "ScaleIn95to100",
+              "FadeIn0to100"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-spotlight-enter",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":250,\"curve\":\"cubic-bezier(0.4, 0, 0, 1)\",\"keyframes\":[\"ScaleIn95to100\",\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 250
+          },
+          "timingFunction": [
+            0.4,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "exit": {
+        "$description": "Use for spotlight exit transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": "forwards",
+            "keyframes": [
+              "ScaleOut100to95",
+              "FadeOut100to0"
+            ]
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-spotlight-exit",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":200,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"ScaleOut100to95\",\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 200
+          },
+          "timingFunction": [
+            0.6,
+            0,
+            0.8,
+            0.6
+          ]
+        }
+      }
+    },
+    "tab": {
+      "default": {
+        "$description": "Use for tab text color and neutral indicator opacity transitions.",
+        "$extensions": {
+          "com.atlassian": {
+            "fill": null,
+            "keyframes": []
+          },
+          "io.nonoun.dsi": {
+            "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+            "implementation": "atlaskit-tokens",
+            "nativeName": "--ds-tab",
+            "package": "@atlaskit/tokens",
+            "product": "atlassian",
+            "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0.4, 1, 0.6, 1)\",\"properties\":[\"color\",\"opacity\"]}",
+            "version": "20.6.1"
+          }
+        },
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": {
+            "unit": "ms",
+            "value": 150
+          },
+          "timingFunction": [
+            0.4,
+            1,
+            0.6,
+            1
+          ]
+        }
+      },
+      "indicator": {
+        "enter": {
+          "left": {
+            "$description": "Use for tab indicators entering from the left.",
+            "$extensions": {
+              "com.atlassian": {
+                "fill": "backwards",
+                "keyframes": [
+                  "SlideInRight8px",
+                  "FadeIn0to100"
+                ]
+              },
+              "io.nonoun.dsi": {
+                "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                "implementation": "atlaskit-tokens",
+                "nativeName": "--ds-tab-indicator-enter-left",
+                "package": "@atlaskit/tokens",
+                "product": "atlassian",
+                "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideInRight8px\",\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+                "version": "20.6.1"
+              }
+            },
+            "$type": "transition",
+            "$value": {
+              "delay": {
+                "unit": "ms",
+                "value": 0
+              },
+              "duration": {
+                "unit": "ms",
+                "value": 150
+              },
+              "timingFunction": [
+                0,
+                0.4,
+                0,
+                1
+              ]
+            }
+          },
+          "right": {
+            "$description": "Use for tab indicators entering from the right.",
+            "$extensions": {
+              "com.atlassian": {
+                "fill": "backwards",
+                "keyframes": [
+                  "SlideInLeft8px",
+                  "FadeIn0to100"
+                ]
+              },
+              "io.nonoun.dsi": {
+                "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                "implementation": "atlaskit-tokens",
+                "nativeName": "--ds-tab-indicator-enter-right",
+                "package": "@atlaskit/tokens",
+                "product": "atlassian",
+                "rawValue": "{\"duration\":150,\"curve\":\"cubic-bezier(0, 0.4, 0, 1)\",\"keyframes\":[\"SlideInLeft8px\",\"FadeIn0to100\"],\"fill\":\"backwards\"}",
+                "version": "20.6.1"
+              }
+            },
+            "$type": "transition",
+            "$value": {
+              "delay": {
+                "unit": "ms",
+                "value": 0
+              },
+              "duration": {
+                "unit": "ms",
+                "value": 150
+              },
+              "timingFunction": [
+                0,
+                0.4,
+                0,
+                1
+              ]
+            }
+          }
+        },
+        "exit": {
+          "left": {
+            "$description": "Use for tab indicators exiting toward the left.",
+            "$extensions": {
+              "com.atlassian": {
+                "fill": "forwards",
+                "keyframes": [
+                  "SlideOutLeft8px",
+                  "FadeOut100to0"
+                ]
+              },
+              "io.nonoun.dsi": {
+                "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                "implementation": "atlaskit-tokens",
+                "nativeName": "--ds-tab-indicator-exit-left",
+                "package": "@atlaskit/tokens",
+                "product": "atlassian",
+                "rawValue": "{\"duration\":100,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"SlideOutLeft8px\",\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+                "version": "20.6.1"
+              }
+            },
+            "$type": "transition",
+            "$value": {
+              "delay": {
+                "unit": "ms",
+                "value": 0
+              },
+              "duration": {
+                "unit": "ms",
+                "value": 100
+              },
+              "timingFunction": [
+                0.6,
+                0,
+                0.8,
+                0.6
+              ]
+            }
+          },
+          "right": {
+            "$description": "Use for tab indicators exiting toward the right.",
+            "$extensions": {
+              "com.atlassian": {
+                "fill": "forwards",
+                "keyframes": [
+                  "SlideOutRight8px",
+                  "FadeOut100to0"
+                ]
+              },
+              "io.nonoun.dsi": {
+                "file": "dist/esm/artifacts/tokens-raw/atlassian-motion.js",
+                "implementation": "atlaskit-tokens",
+                "nativeName": "--ds-tab-indicator-exit-right",
+                "package": "@atlaskit/tokens",
+                "product": "atlassian",
+                "rawValue": "{\"duration\":100,\"curve\":\"cubic-bezier(0.6, 0, 0.8, 0.6)\",\"keyframes\":[\"SlideOutRight8px\",\"FadeOut100to0\"],\"fill\":\"forwards\"}",
+                "version": "20.6.1"
+              }
+            },
+            "$type": "transition",
+            "$value": {
+              "delay": {
+                "unit": "ms",
+                "value": 0
+              },
+              "duration": {
+                "unit": "ms",
+                "value": 100
+              },
+              "timingFunction": [
+                0.6,
+                0,
+                0.8,
+                0.6
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

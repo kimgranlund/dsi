@@ -28,7 +28,7 @@ export const readMappings = (root: string, product: string, version: string): Ma
 export function inScope(scope: Scope, product: string, set: NativeSet): string[] {
   const s = scope.products[product];
   return [...set.tokens.values()]
-    .filter((t) => (!s.pathPrefix || s.pathPrefix.some((p) => t.path.startsWith(p))) && (!s.provenanceFile || s.provenanceFile.some((f) => String(t.prov.file).endsWith(f))) && !(s.exclude ?? []).includes(t.path))
+    .filter((t) => (!s.pathPrefix || s.pathPrefix.some((p) => t.path.startsWith(p))) && (!s.provenanceFile || s.provenanceFile.some((f) => String(t.prov.file).endsWith(f))) && !(s.exclude ?? []).some((x) => (x.endsWith('.') ? t.path.startsWith(x) : t.path === x)))
     .map((t) => t.path)
     .sort();
 }

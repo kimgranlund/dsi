@@ -4,8 +4,36 @@
   "domain": "color",
   "prompt": "packages/mapper/prompts/color-v1.md",
   "products": {
-    "material": { "version": "2.5.0", "pathPrefix": ["md.sys.color."] },
-    "carbon": { "version": "11.84.0", "provenanceFile": ["theme.tokens.json"] },
-    "polaris": { "version": "9.4.2", "pathPrefix": ["color-"], "exclude": ["color-scheme"] }
+    "material": {
+      "version": "2.5.0",
+      "pathPrefix": [
+        "md.sys.color."
+      ]
+    },
+    "carbon": {
+      "version": "11.84.0",
+      "provenanceFile": [
+        "theme.tokens.json"
+      ]
+    },
+    "polaris": {
+      "version": "9.4.2",
+      "pathPrefix": [
+        "color-"
+      ],
+      "exclude": [
+        "color-scheme"
+      ]
+    },
+    "atlassian": {
+      "version": "20.6.1",
+      "pathPrefix": [
+        "color.",
+        "elevation.surface."
+      ],
+      "exclude": [
+        "color.palette."
+      ]
+    }
   }
 }

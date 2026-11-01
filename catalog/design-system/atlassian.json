@@ -1,0 +1,22 @@
+{
+  "id": "atlassian",
+  "name": "Atlassian Design System",
+  "category": "dsi:category/design-system",
+  "organization": "Atlassian",
+  "description": "Atlassian's design system for Jira, Confluence and Trello: foundations, tokens and components.",
+  "homepage": "https://atlassian.design/",
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+  "license": "Apache-2.0",
+  "implementations": [
+    {
+      "id": "atlaskit-tokens",
+      "name": "Atlaskit Tokens",
+      "package": "@atlaskit/tokens",
+      "license": "Apache-2.0",
+      "targets": [
+        "dsi:target/css",
+        "dsi:target/react"
+      ]
+    }
+  ]
+}
