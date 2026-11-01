@@ -12,6 +12,7 @@ Agent-authored, human-reviewable. Written by `@dsi/mapper merge`; never regenera
 |---|---|
 | `mappings[]` | token -> concept with a SKOS match type, confidence, rationale, provenance, status |
 | `unmapped[]` | tokens no canonical concept fits yet (ontology backlog) |
+| `<version>.audit.json` | an auditor's evidence verdicts on approved mappings, plus deterministic check findings |
 | `terms.json` (per product) | native naming words -> facet values, used by `@dsi/classify` |
 | `noEquivalent[]` | concepts this product version has no token for (absence of a record means unknown) |
 

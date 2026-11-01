@@ -99,6 +99,14 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
     issues.push(...checkMappingSemantics(ontology, data as MappingFile, rel(f), catalog.has.bind(catalog)));
   }
 
+  // Audit files: auditor verdicts on approved mappings (agent-authored, kept beside the mappings they judge).
+  for (const f of walk(path.join(root, 'mappings'), '.audit.json')) {
+    const data = read(f);
+    if (data === undefined || !shape('audit.schema.json', f, data)) continue;
+    for (const [i, x] of ((data as { verdicts: { suggested?: { concept: string } }[] }).verdicts).entries())
+      if (x.suggested) { const ci = conceptIssue(ontology, x.suggested.concept); if (ci) issues.push({ file: rel(f), message: `verdicts[${i}]: suggested ${x.suggested.concept} ${ci}` }); }
+  }
+
   // Term mappings
   for (const f of walk(path.join(root, 'mappings'), 'terms.json')) {
     const data = read(f);

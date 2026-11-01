@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dsi.nonoun.io/schema/audit.schema.json",
+  "title": "Mapping audit",
+  "description": "An auditor agent's verdicts on approved mappings, judged blind to who approved them. Agent output: .cache/audit/<run>/<product>.verdicts.json. Merged copy: mappings/<product>/<version>.audit.json.",
+  "type": "object",
+  "required": ["packet", "model", "at", "verdicts"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "packet": { "type": "string" },
+    "model": { "type": "string", "minLength": 1 },
+    "at": { "type": "string", "format": "date-time" },
+    "checks": { "type": "array", "description": "Deterministic check findings, copied in by audit-merge.", "items": { "type": "object" } },
+    "verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["token", "mappingId", "verdict", "evidence"],
+        "additionalProperties": false,
+        "properties": {
+          "token": { "type": "string", "minLength": 1 },
+          "mappingId": { "type": "string", "minLength": 1 },
+          "verdict": { "enum": ["supported", "contradicted", "insufficient"] },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["kind", "source", "says"],
+              "additionalProperties": false,
+              "properties": {
+                "kind": { "enum": ["usage", "description", "docs", "value", "sibling"] },
+                "source": { "type": "string", "minLength": 1, "description": "Token path, file, or https URL the evidence comes from." },
+                "says": { "type": "string", "minLength": 1, "description": "What it shows, quoted or summarized." }
+              }
+            }
+          },
+          "suggested": {
+            "type": "object",
+            "required": ["concept", "match"],
+            "additionalProperties": false,
+            "properties": { "concept": { "$ref": "common.schema.json#/$defs/conceptRef" }, "match": { "enum": ["exact", "close", "broad", "narrow", "related"] } },
+            "description": "Required for contradicted: what the evidence supports instead."
+          },
+          "note": { "type": "string" }
+        },
+        "if": { "properties": { "verdict": { "const": "contradicted" } } },
+        "then": { "required": ["suggested"] }
+      }
+    }
+  }
+}

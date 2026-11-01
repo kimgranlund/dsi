@@ -6,6 +6,7 @@ import { merge, readProposals, APPROVE_AT, APPROVE_WITH_CLASSIFIER_AT, type Clas
 import { classify, type TermsFile } from '@dsi/classify';
 import { loadNative } from '@dsi/resolve';
 import { preparePacket, readMappings, type Scope } from './packet.ts';
+import { prepareAudit, readVerdicts } from './audit.ts';
 import { applyDecisions, applyTermDecisions, collectQueue, collectTermQueue, renderPage, type Decision, type TermDecision } from './review.ts';
 
 const USAGE = `usage:
@@ -13,6 +14,9 @@ const USAGE = `usage:
   dsi-map merge <scope> <run>     merge <product>.{a,b}.proposals.json into mappings/ by two-agent agreement
   dsi-map check <scope> <run> <product> <role>   validate one proposals file against its packet
   dsi-map queue <scope>           list tokens whose mappings still need a human decision
+  dsi-map audit-prepare <scope> <run>            deterministic checks + auditor packets for every approved mapping
+  dsi-map audit-check <scope> <run> <product>    validate an auditor's verdicts
+  dsi-map audit-merge <scope> <run>              write mappings/<product>/<version>.audit.json and list disputes
   dsi-map review <scope> <run> <out.html> [vocab run]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
 
@@ -76,6 +80,35 @@ if (cmd === 'prepare') {
   // Token decisions and term decisions may come in one export; term decisions carry a `term` field.
   console.log('tokens', JSON.stringify(applyDecisions(root, scope, all.filter((d: any) => !('term' in d)) as Decision[], reviewer)));
   console.log('terms ', JSON.stringify(applyTermDecisions(root, all.filter((d: any) => 'term' in d) as TermDecision[], reviewer)));
+} else if (cmd === 'audit-prepare') {
+  if (!run) { console.error(USAGE); process.exit(2); }
+  const dir = path.join(root, '.cache/audit', run);
+  for (const product of Object.keys(scope.products)) {
+    const r = prepareAudit(root, ontology, scope, product, dir);
+    const by: Record<string, number> = {};
+    for (const f of r.findings) by[f.check] = (by[f.check] ?? 0) + 1;
+    console.log(`${product}: ${r.count} approved mappings to audit; check findings ${JSON.stringify(by)}`);
+    for (const f of r.findings.slice(0, 50)) console.log(`  ${f.check}  ${f.token}: ${f.detail}`);
+  }
+} else if (cmd === 'audit-check' || cmd === 'audit-merge') {
+  if (!run) { console.error(USAGE); process.exit(2); }
+  const dir = path.join(root, '.cache/audit', run);
+  const products = cmd === 'audit-check' ? [process.argv[5]] : Object.keys(scope.products);
+  for (const product of products) {
+    const packet = JSON.parse(fs.readFileSync(path.join(dir, `${product}.audit-packet.json`), 'utf8'));
+    const expected = new Map<string, string>(packet.items.map((i: any) => [i.token, i.mappingId]));
+    try {
+      const v = readVerdicts(path.join(dir, `${product}.verdicts.json`), ontology, expected);
+      const c: Record<string, number> = {};
+      for (const x of v.verdicts) c[x.verdict] = (c[x.verdict] ?? 0) + 1;
+      if (cmd === 'audit-check') { console.log(`OK: ${v.verdicts.length} verdicts ${JSON.stringify(c)}`); continue; }
+      const checks = packet.items.flatMap((i: any) => i.checks.map((d: string) => ({ token: i.token, finding: d })));
+      const out = path.join(root, 'mappings', product, `${scope.products[product].version}.audit.json`);
+      fs.writeFileSync(out, JSON.stringify({ packet: v.packet, model: v.model, at: v.at, checks, verdicts: v.verdicts.sort((a: any, b: any) => a.token.localeCompare(b.token)) }, null, 2) + '\n');
+      console.log(`${product}: ${JSON.stringify(c)} -> ${path.relative(root, out)}`);
+      for (const x of v.verdicts.filter((x: any) => x.verdict === 'contradicted')) console.log(`  disputed ${x.token}: ${packet.items.find((i: any) => i.token === x.token).mapping.concept.replace('dsi:concept/color/', '')} -> ${x.suggested.concept.replace('dsi:concept/color/', '')} ${x.suggested.match}`);
+    } catch (e) { console.error(`FAIL: ${(e as Error).message}`); process.exit(1); }
+  }
 } else if (cmd === 'queue') {
   for (const [product, { version }] of Object.entries(scope.products)) {
     const m = readMappings(root, product, version) as any;
