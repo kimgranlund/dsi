@@ -56,6 +56,15 @@ export function exportSite(root: string, dbFile: string, outDir: string): Record
       u: unm.get(t.path) ?? undefined,
     }));
     sizes[`tokens.${p.id}.json`] = write(`tokens.${p.id}.json`, tokens);
+    // Groups and order from the structure stage (shipped groups, shipped order, or name families), limited to exported tokens.
+    const sp = path.join(root, 'data/structure', p.id, `${p.version}.json`);
+    if (fs.existsSync(sp)) {
+      const st = JSON.parse(fs.readFileSync(sp, 'utf8'));
+      const have = new Set(tokens.map((t) => t.p));
+      const keep = (ts: string[]) => ts.filter((t) => have.has(t));
+      const groups = st.groups.map((g: Row) => ({ ...g, tokens: keep(g.tokens), subgroups: g.subgroups.map((x: Row) => ({ ...x, tokens: keep(x.tokens) })).filter((x: Row) => x.tokens.length) })).filter((g: Row) => g.tokens.length || g.subgroups.length);
+      sizes[`groups.${p.id}.json`] = write(`groups.${p.id}.json`, { kind: st.kind, groups });
+    }
   }
 
   sizes['search.json'] = write('search.json', all('SELECT kind, key, title, body FROM search').map((r) => [r.kind, r.key, r.title, r.body]));

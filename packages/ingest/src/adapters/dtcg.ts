@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import type { Adapter, OutputSet } from '../adapter.ts';
 import { EXT, isAlias, type Provenance, type Token } from '../dtcg.ts';
+import { carbonTokenGroups } from '../structure.ts';
 
 /**
  * For products that already ship DTCG 2025.10 files. Source entries:
@@ -114,5 +115,7 @@ export const dtcg: Adapter = (pkgs, source) => {
       sets.push(set);
     }
   }
-  return { sets, report: { notes, counts } };
+  const groupsEntry = source.entries.find((e) => e.format === 'ts-token-groups');
+  const structure = groupsEntry ? carbonTokenGroups(path.join(pkgs[pkgOf(groupsEntry)].dir, groupsEntry.path), groupsEntry.path) : undefined;
+  return { sets, structure, report: { notes, counts } };
 };

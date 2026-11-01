@@ -149,3 +149,15 @@ td.num { font-variant-numeric: tabular-nums; text-align: right; }
 .empty { color: var(--muted); }
 .loading { color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* grouped token lists */
+.groups { display: grid; gap: 28px; }
+.group { display: grid; gap: 12px; padding-top: 18px; border-top: 1px solid var(--line); scroll-margin-top: 84px; }
+.group-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px; }
+.group-head h3 { font: 700 1.1rem/1.2 var(--font-display); }
+.group-head .meaning { font: 400 0.86rem var(--font-body); color: var(--muted); }
+.subgroup { display: grid; gap: 8px; padding-left: 12px; border-left: 2px solid var(--line); }
+.subgroup h4 { margin: 0; font: 600 0.78rem var(--font-body); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.jump { position: sticky; top: 61px; z-index: 5; background: var(--bg); padding-block: 8px; }
+@media (max-width: 640px) { .jump { position: static; } }
+.jump .chip { gap: 6px; }

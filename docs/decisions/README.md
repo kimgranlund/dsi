@@ -14,3 +14,4 @@ ADRs, one per file: `NNNN-short-title.md` with Status, Context, Decision, Conseq
 | [0008](0008-mapping-conventions.md) | Mapping conventions from color-v1 review |
 | [0009](0009-polaris-license.md) | Publish Polaris values despite its license restriction |
 | [0010](0010-fixed-tokens-and-secondary-direction.md) | Fixed tokens follow their container role; secondary direction checked per property |
+| [0011](0011-token-structure.md) | Token groups and order come from the best shipped evidence |

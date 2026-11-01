@@ -19,7 +19,7 @@ if (!adapter) { console.error(`no adapter "${source.adapter}"`); process.exit(2)
 
 const fetched = [source.package, ...(source.dependencies ?? [])].map((p) => ({ ...p, ...fetchNpm(path.join(root, '.cache'), p.name, p.version) }));
 const pkgs = Object.fromEntries(fetched.map((p) => [p.name, { dir: p.dir, version: p.version }]));
-const { sets, report, defaultTheme } = await adapter(pkgs, source);
+const { sets, report, defaultTheme, structure } = await adapter(pkgs, source);
 
 const fileThemes = new Set(sets.map((s) => s.theme).filter(Boolean));
 for (const t of source.themes ?? []) if (!fileThemes.has(t) && t !== defaultTheme) throw new Error(`theme "${t}" from source.json produced no file and is not the default theme`);
@@ -45,7 +45,9 @@ const manifest = {
   files: sets.map((s) => ({ file: s.file, ...(s.theme ? { theme: s.theme } : {}), tokens: s.tokens.size })).sort((a, b) => a.file.localeCompare(b.file)),
   counts: report.counts,
   notes: report.notes,
+  ...(structure ? { structure: { file: 'structure.json', kind: structure.kind, groups: structure.groups.length } } : {}),
 };
+if (structure) fs.writeFileSync(path.join(out, 'structure.json'), JSON.stringify(structure, null, 1) + '\n');
 fs.writeFileSync(path.join(out, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
 console.log(`${source.product}@${source.package.version}: ${JSON.stringify(report.counts)}`);
 if (report.notes.length) console.log(`${report.notes.length} note(s) in ${path.relative(root, path.join(out, 'manifest.json'))}`);

@@ -15,6 +15,8 @@ export interface OutputSet { file: string; theme?: string; tokens: Map<string, T
 
 export interface AdapterResult {
   sets: OutputSet[];
+  /** Shipped grouping and ordering evidence, written to structure.json. */
+  structure?: import('./structure.ts').ShippedStructure;
   /** Theme whose values live in the mode-independent files rather than a theme file (Polaris: light). */
   defaultTheme?: string;
   /** Counts and per-token notes for the ingest report. */

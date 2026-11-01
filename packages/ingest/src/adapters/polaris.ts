@@ -123,8 +123,11 @@ export const polaris: Adapter = (pkgs, source) => {
   // Claims from token modules: base for the default theme, one partial per other theme.
   const baseDir = path.join(esm, 'themes/base');
   const baseTokens: ModuleTokens = { claims: new Map(), descriptions: new Map() };
-  for (const f of fs.readdirSync(baseDir).filter((f) => f.endsWith('.mjs') && f !== 'index.mjs')) {
+  // Shipped order: each base module is one group, its tokens in authored order (the base, then states, then variants).
+  const structure = { kind: 'shipped-order' as const, file: 'dist/esm/src/themes/base', groups: [] as { label: string; tokens: string[]; groups: [] }[] };
+  for (const f of fs.readdirSync(baseDir).filter((f) => f.endsWith('.mjs') && f !== 'index.mjs').sort()) {
     const t = tokensIn(path.join(baseDir, f), scaleOf);
+    structure.groups.push({ label: f.replace(/\.mjs$/, ''), tokens: [...t.claims.keys()], groups: [] });
     t.claims.forEach((v, k) => baseTokens.claims.set(k, v));
     t.descriptions.forEach((v, k) => baseTokens.descriptions.set(k, v));
   }
@@ -168,5 +171,5 @@ export const polaris: Adapter = (pkgs, source) => {
     }
     sets.push(set);
   }
-  return { sets, defaultTheme, report: { notes, counts } };
+  return { sets, defaultTheme, structure, report: { notes, counts } };
 };

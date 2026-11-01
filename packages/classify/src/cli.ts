@@ -6,11 +6,14 @@ import { loadNative, resolve, themeFor } from '@dsi/resolve';
 import { classify, type TermsFile } from './classify.ts';
 import { deriveTerms, mergeTerms, type ApprovedMapping } from './derive.ts';
 import { mergeTermProposals, packetPath, readTermProposals, vocabulary } from './vocab.ts';
+import { buildStructure, type ShippedStructure } from './structure.ts';
+import { parseConcept } from '@dsi/schema';
 
 const USAGE = `usage (from the repo root):
   dsi-classify derive <product>   learn candidate terms from approved mappings into mappings/<product>/terms.json
   dsi-classify eval <product>     leave-one-out accuracy of the classifier on approved color mappings
   dsi-classify run <product>      classify every native token -> data/classified/<product>/<version>.json
+  dsi-classify structure <product>  group and order tokens -> data/structure/<product>/<version>.json
   dsi-classify vocab-prepare <product> <run>   write term packets .cache/classify/<run>/<product>.{a,b}.packet.json
   dsi-classify vocab-check <product> <run> <role>   validate one agent's term proposals
   dsi-classify vocab-merge <product> <run>     merge both agents' term proposals into mappings/<product>/terms.json`;
@@ -65,6 +68,25 @@ if (cmd === 'derive') {
   const full = out.filter((c) => c.domain === 'color' && c.concept && c.explained === 1).length;
   fs.writeFileSync(path.join(dir, `${version}.json`), JSON.stringify({ product, version, terms: 'mappings/' + product + '/terms.json', summary: { scopes: summary, colorTokensFullyExplained: full }, tokens: out }, null, 1) + '\n');
   console.log(`${product}: scopes ${JSON.stringify(summary)}; ${full} color tokens fully explained by terms -> data/classified/${product}/${version}.json`);
+} else if (cmd === 'structure') {
+  const shippedPath = path.join(root, 'data/native', product, version, 'structure.json');
+  const shipped = fs.existsSync(shippedPath) ? (JSON.parse(fs.readFileSync(shippedPath, 'utf8')) as ShippedStructure) : undefined;
+  const mappedConcept = new Map(approved.map((m) => [m.token, m.concept]));
+  const scoped = [...set.tokens.keys()].filter((p) => mappedConcept.has(p) || (classify(terms, p, fileOf(p), 'color').scope === 'semantic' && domainOf(p) === 'color')).sort();
+  const facetsOf = (t: string) => {
+    const c = mappedConcept.get(t);
+    const p = c ? parseConcept(o, c) : undefined;
+    if (p && typeof p !== 'string') return p.facets as Record<string, string>;
+    return classify(terms, t, fileOf(t), 'color').facets;
+  };
+  const st = buildStructure(scoped, terms, facetsOf, shipped);
+  const dir = path.join(root, 'data/structure', product);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, `${version}.json`), JSON.stringify({ product, version, ...st }, null, 1) + '\n');
+  const n = st.groups.reduce((a, g) => a + g.tokens.length + g.subgroups.reduce((b, s) => b + s.tokens.length, 0), 0);
+  if (n !== scoped.length) { console.error(`structure placed ${n} of ${scoped.length} tokens`); process.exit(1); }
+  console.log(`${product}: ${st.kind}; ${st.groups.length} groups for ${scoped.length} tokens -> data/structure/${product}/${version}.json`);
+  for (const g of st.groups) console.log(`  ${g.label}${g.meaning ? ` = ${g.meaning}` : ''}${g.native && g.native !== g.label.toLowerCase() ? ` (${g.native})` : ''} [${g.source}, ${g.order}] ${g.tokens.length}${g.subgroups.length ? ' + ' + g.subgroups.map((s) => `${s.label}:${s.tokens.length}`).join(', ') : ''}`);
 } else if (cmd === 'vocab-prepare' || cmd === 'vocab-check' || cmd === 'vocab-merge') {
   if (!run) { console.error(USAGE); process.exit(2); }
   const runDir = path.join(root, '.cache/classify', run);

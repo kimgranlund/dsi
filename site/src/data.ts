@@ -24,3 +24,7 @@ export async function facetLabel(facet: string, value: string) {
   const m = await meta();
   return value.split('+').map((v) => m.facets[facet]?.find((x) => x.value === v)?.label ?? v).join(' + ');
 }
+
+export interface Group { id: string; label: string; native?: string; meaning?: string; source: 'shipped-group' | 'name-family'; order: 'shipped' | 'progression'; properties?: string[]; tokens: string[]; subgroups: { label: string; tokens: string[] }[] }
+export interface Groups { kind: 'shipped-groups' | 'shipped-order' | 'name-family'; groups: Group[] }
+export const groups = (product: string) => load<Groups>(`groups.${product}.json`).catch(() => undefined);

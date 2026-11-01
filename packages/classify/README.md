@@ -26,6 +26,10 @@ From the repo root:
 
 `vocab-prepare <product> <run>` writes a packet per agent with every word in the product's semantic color token names; two agents on different models answer every word blind (`prompts/terms-v1.md`), each checking its file with `vocab-check`; `vocab-merge` approves agreements (same term, concept and match, both confidence >= 0.85), adds agreed noise words, and queues the rest.
 
+## Structure
+
+`node packages/classify/src/cli.ts structure <product>` groups and orders the semantic and mapped tokens (ADR 0011): shipped groups, then shipped source order, then name families with pairing prefixes found from the data, ordered by the canonical progression (ramps for two-way families). Output: `data/structure/<product>/<version>.json`.
+
 ## How it decides
 
 Every term found anywhere in the name contributes (not a greedy split, which let `fill-critical` swallow `critical`). Per facet the longest term wins; equal-length disagreement is a conflict on single-valued facets and combines on usage and state. Only approved terms count as a vote; proposed terms may be used as hints.
