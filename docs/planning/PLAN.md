@@ -8,91 +8,23 @@ Terms: [glossary](../glossary.md) is authoritative. Repo organization: [repo-lay
 
 Document token-level details of popular design systems (Material, Carbon, Polaris, ...), normalized so the same concept (e.g. "Danger") can be compared across systems that natively call it "Critical", "Error", "Destructive", etc.
 
-## 2. Category taxonomy (decided)
+## 2. Decided (see ADRs)
 
-Layers in a stack. Each product gets one primary category; products relate through typed relations. Classify products, not organizations (Radix spans Headless Primitives, Component Libraries, Token Sets).
+Ratified decisions live in [docs/decisions](../decisions/README.md); this plan keeps only what is open.
 
-| Category | Definition | Examples |
-|---|---|---|
-| Token Formats | Specs for expressing tokens | DTCG |
-| Token Tooling | Transforms tokens, ships no values | Style Dictionary, Terrazzo, Tokens Studio |
-| Token Sets | Standalone token values, no components | Open Props, Radix Colors |
-| Styling Engines | Turn tokens into styles; may ship a default token set | PandaCSS, Tailwind, StyleX |
-| Headless Primitives | Behavior and accessibility, no visual opinion | Radix Primitives, Melt, Zag, React Aria |
-| Component Libraries | Styled components without a governing design language | shadcn/ui, Chakra, Mantine, MUI |
-| Design Systems | Governed design language: tokens, guidance, components | Material, Carbon, Polaris |
-| UI Frameworks | **Excluded.** Recorded only as an Implementation's `targets` attribute | React, Vue, Svelte, SolidJS, Web Components |
+- Categories as layers, products not organizations: [0001](../decisions/0001-product-categories.md)
+- Native / concept / mapping layers, shipped code wins: [0002](../decisions/0002-normalization-layers.md)
+- Tiers derived from facets: [0003](../decisions/0003-tiers-from-facets.md)
+- Compositional concepts, permanent IRIs at `https://dsi.nonoun.io/ontology/`: [0004](../decisions/0004-compositional-concepts.md)
+- Mapping approval (two agents, classifier vote, human review): [0005](../decisions/0005-mapping-approval.md)
+- Concept resolution and modes: [0006](../decisions/0006-concept-resolution.md)
+- SKOS everywhere: [0007](../decisions/0007-skos-everywhere.md)
+- Mapping conventions from review: [0008](../decisions/0008-mapping-conventions.md)
+- Polaris license override: [0009](../decisions/0009-polaris-license.md)
 
-Sub-entity: **Implementation** of a Design System (e.g. Material Web, Angular Material), since shipped tokens can diverge from the spec.
+Product: public, searchable explorer at `dsi.nonoun.io` on Cloudflare; audience is the owner, designers, developers and AI agents; v1 is done when the searchable site is live. Stack: TypeScript pnpm monorepo, Vite + vanilla site, SQLite built in CI and served from D1. Project license MIT; upstream licenses recorded per source. v1 systems: Material Web 2.5.0, Carbon Elements 11.84.0, Polaris tokens 9.4.2 (all ingested; 508 semantic color tokens mapped).
 
-Relations (initial): `implements`, `built-on`, `consumes-tokens-from`, `uses-format`, `provides-token-set`.
-
-## 3. Token normalization architecture (decided)
-
-Three layers:
-
-1. **Native layer**: each system's tokens in DTCG, native names and values preserved, provenance in `$extensions`. Never renamed.
-2. **Concept layer**: canonical ontology, built with `/context:knowledge-modeling`.
-3. **Mapping layer**: typed, bidirectional links native token <-> concept.
-
-Decisions:
-- **Faceted concepts**: intent x property x emphasis x state x mode (e.g. Danger / bg / strong / hover / dark).
-- **Typed matches**: SKOS-style `exact`, `close`, `broader`, `narrower`, `related`.
-- Primitives (e.g. `red-60`) map to scales, not intents, unless a system has only primitives.
-- **Danger and Destructive are two intents**, linked as related. Danger views list Destructive tokens as related, not equal.
-- Schemes are modeled in `ontology/` (categories, targets, tiers, facets, match types, review status).
-
-### 3a. Tier ladder (decided)
-
-| # | Tier | Binds | Example |
-|---|---|---|---|
-| 1 | Source | raw value | `--plum-12`, `md.ref.palette.error40`, Carbon `$red-60` |
-| 2 | Scale (optional) | hue + relative step | `--plum-strong` |
-| 3 | Semantic | intent (danger, accent, neutral) | `--danger-strong`, `md.sys.color.error`, Polaris `bg-fill-critical` |
-| 4 | System | usage (heading-text, surface) | `--system-heading-text`, Carbon `text-primary` |
-| 5 | Component | component + part | `--button-danger-bg`, `md.comp.filled-button.*` |
-
-Rules:
-- **Tier is derived from bound facets**, not hand-labeled. A token may span tiers (Material `on-error-container` = Semantic + System).
-- **Chains may skip tiers**; most systems go Source -> Semantic.
-- **Alias edges are mode-scoped**: (token, mode) -> token, via DTCG aliases + resolver/modes.
-- **Two graphs**: the *alias graph* (vertical, within one system, ingested from source) and the *mapping graph* (horizontal, across systems via concepts, curated).
-
-### 3b. Canonical token set (decided)
-
-The concept layer is published as its own DTCG token set (e.g. canonical `--danger-strong`). Each ingested design system acts as a theme/resolver supplying values through mappings, enabling "render this in Carbon vs Polaris".
-
-## 4. Sources, depth, versions (decided)
-
-- **Source of truth: shipped code.** Ingest from published packages/repos. Spec divergence is recorded as a note, not a second native layer.
-- **Depth: everything, including component tokens** (e.g. `md.comp.filled-button.container.color`). Consequence: the concept layer needs a component anatomy facet (component x part, e.g. Button / container) on top of intent x property x emphasis x state x mode.
-- **Versions: pin latest major, keep history.** Every record carries source package + version + extraction date so older majors can be added later.
-- **v1 scope: 3 systems**: Material, Carbon, Polaris. Ingested: Material Web 2.5.0, Carbon Elements (@carbon/themes 11.84.0), Polaris tokens 9.4.2.
-- **Polaris license (decided 2026-10-31)**: the Polaris license limits use to apps that integrate with Shopify. The owner chose to ingest and publish anyway, accepting the risk; recorded as `publishOverride` in `sources/polaris/source.json`.
-- **Internal tokens count**: shipped-but-not-public tokens (Polaris palette, size scale) are ingested with `visibility: internal`, because they are the real Source tier.
-
-## 5. Explorer UI (intent)
-
-Show a consistent canonical label (e.g. "Danger") and how each design system represents it, including native name, value, and match type.
-
-## 6. Product and operations (decided)
-
-- **Audience**: the author, designers, developers, AI agents.
-- **Query database (decided)**: SQLite built in CI from the repo files and served from Cloudflare D1, with FTS5 full-text search and recursive CTEs for alias chains and mappings. Git files stay the source of truth; the database is a projection. An RDF store (SPARQL) is deferred until external users need it.
-- **Form**: public, searchable website hosted on Cloudflare at `dsi.nonoun.io`. Ontology IRIs use `https://dsi.nonoun.io/ontology/`.
-- **Mapping authorship**: AI agents propose and write mappings through a pipeline: ingest -> map (against the SKOS scheme) -> store as DTCG-compatible data.
-- **Approval rule (decided)**: two Claude Code agents on different models map each packet blind; a mapping is approved when both give the same concept and match type with confidence >= 0.85. Disagreements go to a human queue. The public site shows approved mappings only.
-- **Concept resolution policy (decided)**: approved exact/close mappings answer; broad/narrow (or an exact mapping to a more specific concept) answer only as flagged "nearest"; related never; otherwise "absent" (approved noEquivalent) or "unknown". No invented values. Implemented in `packages/resolve`.
-- **Modes**: each source declares which native theme represents each canonical mode (Carbon light=white, dark=g100), from the product's shipped color-scheme metadata.
-- **Pipelines**: Resolver first (done), then a Classifier: per-product term mappings (native word -> facet value, reviewed once) plus deterministic name decomposition, used for scope, packet hints and as a third vote.
-- **Third vote (decided)**: two agents agreeing on an exact/close concept plus the classifier (approved terms only, whole name explained) approve at confidence >= 0.6. Term vocabularies are drafted by two agents, agreements approved, the rest reviewed by the owner.
-- **SKOS everywhere (decided)**: token mappings and term mappings are SKOS mappings (native subject, canonical object); the RDF form is exported to `data/skos/` and validated.
-- **Concepts are compositional**: `dsi:concept/<domain>/<facet>-<value>/...` in a fixed facet order, validated against the facet schemes.
-- **License**: MIT for this project.
-- **Component Libraries** are a full category with token ingestion, like Design Systems.
-- **v1 done when**: a searchable website is live.
-
-## 7. Open questions
+## 3. Open questions
 
 - Color ontology backlog from color-v1 rounds 1-3 (each raised by 2+ agents): a `control` usage for interactive fills (Polaris bg-fill, Carbon interactive); a tertiary emphasis step in three-step families; a layer index beyond emphasis (Carbon layer 01-03 borders and fields); helper and placeholder text roles; severity between warning and danger (Carbon caution-major); gradient stops; surface brightness (Material surface-bright, -dim, -variant); syntax-highlighting roles; avatar and categorical palettes; translucent tint fills.
 

@@ -10,6 +10,10 @@ You map one design system's **naming vocabulary** (the words its color token nam
 - `vocabulary`: every word and two/three-word sequence that appears in the product's semantic color token names, with how many tokens use it and example tokens. Noise words already known are removed.
 - `derived`: candidate terms learned from approved token mappings, with evidence (support = tokens containing the term, agree = how many bind that value). Evidence, not instructions: drop a candidate that is a coincidence.
 
+## Conventions
+
+Read `docs/decisions/0008-mapping-conventions.md`: terms must agree with the conventions settled in review (for example `secondary` -> `dsi:emphasis/subtle`, `brand` and `interactive` -> `dsi:intent/accent`).
+
 ## Output
 
 Write only the JSON file named in the packet's `output`, valid against `packages/schema/schemas/term-proposals.schema.json`:

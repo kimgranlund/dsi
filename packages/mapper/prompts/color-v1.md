@@ -10,6 +10,10 @@ The packet (`<product>.packet.json`) has:
 - `tokens`: each token's path, native name, `$description` (when shipped), and for every theme the alias chain and the final color.
 - `rejected`: earlier (token, concept, match) answers a reviewer rejected. Never give one of these again.
 
+## Conventions
+
+Read `docs/decisions/0008-mapping-conventions.md` first. It records how recurring patterns were settled in review (secondary, tertiary, layers, on-fill, fixed tokens, links on inverse, neutral fills). Follow it unless the token's own evidence clearly contradicts it, and say so in the rationale when you depart.
+
 ## Output
 
 Write **only** a JSON file at the path the packet names in `output`, valid against `packages/schema/schemas/mapper-proposals.schema.json`:
