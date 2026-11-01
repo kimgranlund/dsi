@@ -9,7 +9,7 @@ import { loadNative, type NativeSet } from '@dsi/resolve';
 import { preparePacket, readMappings, type Scope } from './packet.ts';
 import { auditTerms, prepareAudit, readVerdicts } from './audit.ts';
 import { rankEmphasis } from './rank.ts';
-import { conceptName, gateUnregistered, isRegistered, parseConcept, readLexicon, registerConcepts } from '@dsi/schema';
+import { applyDefinitions, conceptName, gateUnregistered, isRegistered, parseConcept, readLexicon, registerConcepts } from '@dsi/schema';
 import { resolve as resolveToken, showValue } from '@dsi/resolve';
 import { applyDecisions, applyDisputes, applyTermDecisions, collectDisputes, collectQueue, collectTermQueue, disputeKey, enrichQueue, renderPage, type Decision, type DisputeDecision, type TermDecision } from './review.ts';
 
@@ -21,7 +21,7 @@ const USAGE = `usage:
   dsi-map audit-prepare <scope> <run>            deterministic checks + auditor packets for every approved mapping
   dsi-map audit-check <scope> <run> <product>    validate an auditor's verdicts
   dsi-map audit-merge <scope> <run>              write mappings/<product>/<version>.audit.json and list disputes
-  dsi-map review <scope> <run> <out.html> [vocab run[,run]] [--words-only] [--third <run>]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
+  dsi-map review <scope> <run> <out.html> [vocab run[,run]] [--words-only] [--third <run>] [--definitions <drafts.json>]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
   dsi-map tiebreak <scope> <run> <product> <first run>   two of three: approve where a third model agrees with one of the first two
   dsi-map settle <scope> <run> <product> <first run>     settle rules: three agree (cautious match), emphasis-only splits (rank or broad), two of three at 0.5
   dsi-map reconcile <scope> [--dry]               fold single-system concepts into shared ones where one facet separates them (ADR 0019)
@@ -120,8 +120,12 @@ if (cmd === 'prepare') {
   const disputes = collectDisputes(root, scope, termFindingsFor(), valuesOf);
   const packet = JSON.parse(fs.readFileSync(path.join(runDir, `${Object.keys(scope.products)[0]}.a.packet.json`), 'utf8'));
   fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true });
-  fs.writeFileSync(out, renderPage(root, items, packet.ontology, new Date().toISOString(), termItems, disputes));
-  console.log(`${items.length} queued tokens, ${termItems.length} queued words, ${disputes.length} disputes -> ${out}`);
+  // --definitions <drafts.json>: drafted L4 definitions for lexicon words ({ "<iri>": "<text>" }), shown with the current text.
+  const defFile = process.argv.includes('--definitions') ? process.argv[process.argv.indexOf('--definitions') + 1] : undefined;
+  const lexNow = readLexicon(root);
+  const definitions = defFile ? Object.entries(JSON.parse(fs.readFileSync(defFile, 'utf8')) as Record<string, string>).map(([iri, text]) => ({ key: iri.replace(/[^a-z0-9-]/gi, '_'), product: iri.split('/')[0].replace('dsi:', ''), iri, label: lexNow.get(iri)?.label ?? iri, current: lexNow.get(iri)?.definition ?? null, proposed: text })) : [];
+  fs.writeFileSync(out, renderPage(root, items, packet.ontology, new Date().toISOString(), termItems, disputes, definitions));
+  console.log(`${items.length} queued tokens, ${termItems.length} queued words, ${disputes.length} disputes, ${definitions.length} definitions -> ${out}`);
 } else if (cmd === 'apply-review') {
   const [file, reviewer] = [process.argv[4], process.argv[5]];
   if (!file || !reviewer) { console.error(USAGE); process.exit(2); }
@@ -129,7 +133,7 @@ if (cmd === 'prepare') {
   const all = (Array.isArray(raw) ? raw : raw.documents ?? raw.docs ?? []).map((d: any) => d.data ?? d);
   // Token decisions and term decisions may come in one export; term decisions carry a `term` field.
   console.log('tokens', JSON.stringify(applyDecisions(root, scope, all.filter((d: any) => 'token' in d) as Decision[], reviewer)));
-  console.log('terms ', JSON.stringify(applyTermDecisions(root, all.filter((d: any) => 'term' in d && !('kind' in d)) as TermDecision[], reviewer)));
+  console.log('terms ', JSON.stringify(applyTermDecisions(root, all.filter((d: any) => 'term' in d && !('kind' in d) && !('iri' in d)) as TermDecision[], reviewer)));
   const disputeDecisions = all.filter((d: any) => 'kind' in d && 'subject' in d) as DisputeDecision[];
   if (disputeDecisions.length) {
     const open = collectDisputes(root, scope, termFindingsFor(), valuesOf);
@@ -137,6 +141,9 @@ if (cmd === 'prepare') {
     const disputedTerms = new Map(open.filter((x) => x.kind === 'term').map((x) => [x.key, x.current.concept]));
     console.log('disputes', JSON.stringify(applyDisputes(root, scope, disputeDecisions, reviewer, suggestions, disputedTerms)));
   }
+  // Lexicon definitions (L4) reviewed on the Definitions tab carry an `iri`.
+  const defDecisions = all.filter((d: any) => 'iri' in d);
+  if (defDecisions.length) console.log('definitions', JSON.stringify(applyDefinitions(root, defDecisions)));
   // ADR 0019: what the owner approved is registered (generated name and definition; edit concepts.jsonld to refine).
   const fresh: string[] = [];
   for (const [product, { version }] of Object.entries(scope.products)) { const m = readMappings(root, product, version) as any; for (const x of m?.mappings ?? []) if (x.status === 'approved' && !isRegistered(ontology, x.concept)) fresh.push(x.concept); }

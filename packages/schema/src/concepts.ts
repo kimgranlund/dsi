@@ -153,3 +153,41 @@ export function gateUnregistered(o: Ontology, file: { mappings: any[] }, at = ne
     }
   return held;
 }
+
+/**
+ * Apply reviewed L4 definitions to the lexicon files, editing text in place so hand formatting survives. approve and
+ * edit set the definition; a replaced definition moves to the scope note. reject leaves the entry as it is.
+ */
+export function applyDefinitions(root: string, decisions: { iri: string; action: 'approve' | 'edit' | 'reject'; text?: string }[]): Record<string, number> {
+  const counts = { applied: 0, kept: 0, missing: 0 };
+  const dir = path.join(root, 'ontology/schemes');
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.jsonld') && f !== 'concepts.jsonld').map((f) => path.join(dir, f));
+  const text = new Map(files.map((f) => [f, fs.readFileSync(f, 'utf8')]));
+  const str = (v: string) => JSON.stringify(v);
+  for (const d of decisions) {
+    if (d.action === 'reject' || !d.text) { counts.kept++; continue; }
+    const def: string = d.text;
+    const f = files.find((x) => text.get(x)!.includes(`"id": ${str(d.iri)}`));
+    if (!f) { counts.missing++; continue; }
+    let s = text.get(f)!;
+    const at = s.indexOf(`"id": ${str(d.iri)}`);
+    const start = s.lastIndexOf('{', at);
+    let depth = 0, end = start, inStr = false;
+    for (let i = start; i < s.length; i++) { const ch = s[i]; if (inStr) { if (ch === '\\') i++; else if (ch === '"') inStr = false; } else if (ch === '"') inStr = true; else if (ch === '{') depth++; else if (ch === '}' && --depth === 0) { end = i; break; } }
+    let obj = s.slice(start, end + 1);
+    const entry = JSON.parse(obj);
+    const old: string | undefined = entry.definition;
+    const field = (o: string, k: string) => new RegExp(`"${k}":\\s*"(?:[^"\\\\]|\\\\.)*"`);
+    if (old !== undefined) obj = obj.replace(field(obj, 'definition'), `"definition": ${str(def)}`);
+    else obj = obj.replace(field(obj, 'prefLabel'), (m) => `${m}, "definition": ${str(def)}`);
+    if (old && old !== def) {
+      const note = entry.scopeNote ? `${entry.scopeNote} Earlier definition: ${old}` : old;
+      obj = entry.scopeNote !== undefined ? obj.replace(field(obj, 'scopeNote'), `"scopeNote": ${str(note)}`) : obj.replace(field(obj, 'definition'), (m) => `${m}, "scopeNote": ${str(note)}`);
+    }
+    JSON.parse(obj); // still valid
+    text.set(f, s.slice(0, start) + obj + s.slice(end + 1));
+    counts.applied++;
+  }
+  for (const [f, s] of text) { JSON.parse(s); fs.writeFileSync(f, s); }
+  return counts;
+}

@@ -167,6 +167,7 @@ kbd { font: 600 0.7rem var(--font-mono); padding: 1px 6px; border: 1px solid var
       <a href="#tokens" id="tab-tokens">Tokens</a>
       <a href="#terms" id="tab-terms">Naming terms</a>
       <a href="#disputes" id="tab-disputes">Disputes</a>
+      <a href="#definitions" id="tab-definitions">Definitions</a>
     </nav>
     <div class="title-row"><span class="total" id="total"></span><span class="keys" id="keys"></span></div>
     <div class="progress" id="progress"></div>
@@ -198,7 +199,9 @@ let termDecisions = new Map();
 const TERMS = DATA.termItems || [];
 const DISPUTES = DATA.disputes || [];
 let disputeDecisions = new Map();
-const view = () => (location.hash === '#terms' ? 'terms' : location.hash === '#disputes' ? 'disputes' : 'tokens');
+const view = () => (location.hash === '#terms' ? 'terms' : location.hash === '#disputes' ? 'disputes' : location.hash === '#definitions' ? 'definitions' : 'tokens');
+const DEFS = DATA.definitions || [];
+let defDecisions = new Map();
 let db = null;
 let canWrite = false;
 const openCustom = new Set();
@@ -242,7 +245,7 @@ function swatch(theme, t) {
 function clean(o) { return Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined)); }
 function decide(item, body, collection = 'decisions') {
   if (!db || !canWrite) return;
-  const who = collection === 'decisions' ? { token: item.token } : collection === 'term-decisions' ? { term: item.term } : { kind: item.kind, subject: item.subject };
+  const who = collection === 'decisions' ? { token: item.token } : collection === 'term-decisions' ? { term: item.term } : collection === 'definition-decisions' ? { iri: item.iri } : { kind: item.kind, subject: item.subject };
   const doc = clean({ key: item.key, product: item.product, ...who, at: new Date().toISOString(), ...body });
   db.collection(collection).doc(item.key).set(doc).catch((e) => showNotice('Could not save the decision: ' + (e && e.message || 'unknown error') + '. Try again.'));
 }
@@ -531,13 +534,19 @@ document.addEventListener('keydown', (e) => {
   const k = e.key.toLowerCase();
   if (k === 'j' || k === 'k') { idx = Math.max(0, Math.min(cards.length - 1, idx < 0 ? 0 : idx + (k === 'j' ? 1 : -1))); activeKey = cards[idx].dataset.key; markActive(true); e.preventDefault(); return; }
   if (idx < 0) return;
-  const pool = v === 'terms' ? TERMS : DATA.items;
+  const pool = v === 'terms' ? TERMS : v === 'definitions' ? DEFS : DATA.items;
   const item = pool.find((i) => i.key === activeKey);
   if (!item) return;
-  const done = (v === 'terms' ? termDecisions : decisions).has(item.key);
-  if (k === 'u' && done) { undo(item, v === 'terms' ? 'term-decisions' : 'decisions'); return; }
+  const coll = v === 'terms' ? 'term-decisions' : v === 'definitions' ? 'definition-decisions' : 'decisions';
+  const done = (v === 'terms' ? termDecisions : v === 'definitions' ? defDecisions : decisions).has(item.key);
+  if (k === 'u' && done) { undo(item, coll); return; }
   if (done || !canWrite) return;
-  if (v === 'terms') {
+  if (v === 'definitions') {
+    if (k === 'enter') { activeKey = nextOpen(item.key); decide(item, { action: 'approve', text: item.proposed }, coll); }
+    else if (k === 'x') { activeKey = nextOpen(item.key); decide(item, { action: 'reject' }, coll); }
+    else if (k === 'w') { openCustom.add(item.key); render(); }
+    else return;
+  } else if (v === 'terms') {
     if (/^[1-9]$/.test(k) && item.candidates[+k - 1]) { activeKey = nextOpen(item.key); decide(item, { action: 'accept', candidateId: item.candidates[+k - 1].id }, 'term-decisions'); }
     else if (k === 'n') { activeKey = nextOpen(item.key); decide(item, { action: 'ignore', ignore: 'no-concept' }, 'term-decisions'); }
     else if (k === 'i') { activeKey = nextOpen(item.key); decide(item, { action: 'ignore', ignore: 'noise' }, 'term-decisions'); }
@@ -553,14 +562,46 @@ document.addEventListener('keydown', (e) => {
   e.preventDefault();
 });
 
+// Definitions (L4, docs/controlled-language.md): approve the draft, edit it, or keep the current text.
+function wordCount(t) { return t.trim().split(/\s+/).filter(Boolean).length; }
+function defCard(item) {
+  const d = defDecisions.get(item.key);
+  const left = el('div', { class: 'tok' },
+    el('span', { class: 'product', text: item.product }),
+    el('div', { class: 'tok-name', text: item.label }),
+    el('div', { class: 'tok-meta', text: item.iri }));
+  const right = el('div', { class: 'answers' });
+  right.append(el('div', { class: 'q' }, el('h3', { text: 'Is this a good definition of “' + item.label + '”?' }),
+    el('p', { text: 'One sentence, at most 25 words, kind of thing first, no system names. ' + (item.current ? 'The current text moves to the scope note if you approve.' : 'There is no definition today.') })));
+  if (d) right.append(el('div', { class: 'decision' + (d.action === 'reject' ? ' reject' : '') }, el('span', { text: d.action === 'approve' ? 'Approved' : d.action === 'edit' ? 'Saved your wording' : 'Kept the current text' }), el('button', { text: 'Undo', disabled: !canWrite, onclick: () => { activeKey = item.key; undo(item, 'definition-decisions'); } })));
+  if (item.current) right.append(el('div', { class: 'opt' }, el('span'), el('div', { class: 'body' }, el('div', { class: 'voters', text: 'Current (' + wordCount(item.current) + ' words)' }), el('div', { text: item.current })), el('span')));
+  const text = d && d.action === 'edit' ? d.text : item.proposed;
+  right.append(el('div', { class: 'opt suggested' + (d && d.action !== 'reject' ? ' chosen' : '') }, el('kbd', { text: '⏎' }), el('div', { class: 'body' }, el('div', { class: 'voters', text: (d && d.action === 'edit' ? 'Your wording' : 'Draft') + ' (' + wordCount(text) + ' words)' }), el('div', { class: 'say', text })), !d ? el('button', { class: 'primary', text: 'Approve', disabled: !canWrite, onclick: () => { activeKey = nextOpen(item.key); decide(item, { action: 'approve', text: item.proposed }, 'definition-decisions'); } }) : el('span')));
+  if (!d) {
+    if (openCustom.has(item.key)) {
+      const ta = el('textarea', { rows: '2', style: 'width:100%;font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)' }); ta.value = item.proposed;
+      const count = el('span', { class: 'voters', text: wordCount(ta.value) + ' words' });
+      ta.addEventListener('input', () => { count.textContent = wordCount(ta.value) + ' words' + (wordCount(ta.value) > 25 ? ' (over 25)' : ''); });
+      right.append(el('div', { class: 'custom' }, ta, count, el('div', { class: 'actions' },
+        el('button', { class: 'primary', text: 'Save', disabled: !canWrite, onclick: () => { const t = ta.value.trim(); if (t) { activeKey = nextOpen(item.key); openCustom.delete(item.key); decide(item, { action: 'edit', text: t }, 'definition-decisions'); } } }),
+        el('button', { text: 'Cancel', onclick: () => { openCustom.delete(item.key); render(); } }))));
+    }
+    right.append(el('div', { class: 'actions' },
+      el('button', { text: 'Edit ', disabled: !canWrite, onclick: () => { openCustom.add(item.key); render(); } }, el('kbd', { text: 'W' })),
+      el('button', { text: item.current ? 'Keep current ' : 'Skip for now ', disabled: !canWrite, onclick: () => { activeKey = nextOpen(item.key); decide(item, { action: 'reject' }, 'definition-decisions'); } }, el('kbd', { text: 'X' }))));
+  }
+  return el('article', { class: 'card' + (d ? ' decided' : ''), 'data-key': item.key, onclick: () => { if (activeKey !== item.key) { activeKey = item.key; markActive(); } } }, left, right);
+}
+
 function render() {
   const v = view();
   $('#tab-tokens').setAttribute('aria-current', v === 'tokens' ? 'page' : 'false');
   $('#tab-terms').setAttribute('aria-current', v === 'terms' ? 'page' : 'false');
   $('#tab-disputes').setAttribute('aria-current', v === 'disputes' ? 'page' : 'false');
-  const items = v === 'terms' ? TERMS : v === 'disputes' ? DISPUTES : DATA.items;
-  const done = v === 'terms' ? termDecisions : v === 'disputes' ? disputeDecisions : decisions;
-  const name = (i) => (v === 'terms' ? i.term : v === 'disputes' ? i.subject : i.token);
+  $('#tab-definitions').setAttribute('aria-current', v === 'definitions' ? 'page' : 'false');
+  const items = v === 'terms' ? TERMS : v === 'disputes' ? DISPUTES : v === 'definitions' ? DEFS : DATA.items;
+  const done = v === 'terms' ? termDecisions : v === 'disputes' ? disputeDecisions : v === 'definitions' ? defDecisions : decisions;
+  const name = (i) => (v === 'terms' ? i.term : v === 'disputes' ? i.subject : v === 'definitions' ? i.label + ' ' + i.iri : i.token);
   const product = $('#f-product').value, status = $('#f-status').value, q = $('#f-search').value.trim().toLowerCase();
   const list = $('#list');
   const shown = items.filter((i) => (!product || i.product === product) && (status === 'all' || (status === 'open') !== done.has(i.key)) && (!q || name(i).toLowerCase().includes(q)));
@@ -571,7 +612,7 @@ function render() {
     for (const i of shown) { const k = i.family ? i.family.key : i.key; (fams.get(k) || fams.set(k, []).get(k)).push(i); }
     const groups = [...fams.values()].sort((a, b) => b.length - a.length || a[0].token.localeCompare(b[0].token));
     nodes = groups.flatMap((g) => { const all = DATA.items.filter((i) => i.family && g[0].family && i.family.key === g[0].family.key); return [all.length > 1 ? familyHeader(g[0].family, all) : null, ...g.map(card)].filter(Boolean); });
-  } else nodes = shown.map(v === 'terms' ? termCard : disputeCard);
+  } else nodes = shown.map(v === 'terms' ? termCard : v === 'definitions' ? defCard : disputeCard);
   list.replaceChildren(...(nodes.length ? nodes : [el('p', { class: 'empty', text: status === 'open' ? 'Nothing left to decide here.' : 'Nothing matches these filters.' })]));
   for (const n of list.querySelectorAll('article.card')) { if (!n.dataset.key) { const it = items.find((i) => 'card-' + i.key.replace(/[^a-z0-9]/gi, '-') === n.id); if (it) n.dataset.key = it.key; } }
   const cardsNow = [...list.querySelectorAll('article.card')];
@@ -579,7 +620,7 @@ function render() {
   markActive(true);
   const doneAll = items.filter((i) => done.has(i.key)).length;
   $('#total').textContent = doneAll + ' of ' + items.length + ' decided · ' + (items.length - doneAll) + ' left';
-  $('#keys').replaceChildren(...(v === 'disputes' ? [] : (v === 'terms' ? [['J/K', 'move'], ['1–9', 'accept'], ['N', 'no concept'], ['I', 'noise'], ['U', 'undo']] : [['J/K', 'move'], ['Enter', 'suggested'], ['1–9', 'pick'], ['N', 'no concept'], ['W', 'write'], ['X', 'reject'], ['U', 'undo']]).map(([a, b]) => el('span', {}, el('kbd', { text: a }), ' ' + b))));
+  $('#keys').replaceChildren(...(v === 'disputes' ? [] : (v === 'definitions' ? [['J/K', 'move'], ['Enter', 'approve'], ['W', 'edit'], ['X', 'keep current'], ['U', 'undo']] : v === 'terms' ? [['J/K', 'move'], ['1–9', 'accept'], ['N', 'no concept'], ['I', 'noise'], ['U', 'undo']] : [['J/K', 'move'], ['Enter', 'suggested'], ['1–9', 'pick'], ['N', 'no concept'], ['W', 'write'], ['X', 'reject'], ['U', 'undo']]).map(([a, b]) => el('span', {}, el('kbd', { text: a }), ' ' + b))));
   const prog = $('#progress');
   const products = [...new Set(items.map((i) => i.product))];
   prog.replaceChildren(...products.map((p) => {
@@ -592,10 +633,10 @@ function render() {
 function showNotice(text) { const n = $('#notice'); n.textContent = text; n.hidden = !text; }
 
 window.addEventListener('hashchange', render);
-for (const p of [...new Set([...DATA.items, ...TERMS, ...DISPUTES].map((i) => i.product))]) $('#f-product').append(el('option', { value: p, text: p }));
+for (const p of [...new Set([...DATA.items, ...TERMS, ...DISPUTES, ...DEFS].map((i) => i.product))]) $('#f-product').append(el('option', { value: p, text: p }));
 for (const s of ['#f-product', '#f-status']) $(s).addEventListener('change', render);
 $('#f-search').addEventListener('input', render);
-$('#generated').textContent = [DATA.items.length + ' tokens', TERMS.length + ' naming terms', DISPUTES.length + ' disputes'].join(' · ') + ' · ' + new Date(DATA.generatedAt).toLocaleString();
+$('#generated').textContent = [DATA.items.length + ' tokens', TERMS.length + ' naming terms', DISPUTES.length + ' disputes', DEFS.length + ' definitions'].join(' · ') + ' · ' + new Date(DATA.generatedAt).toLocaleString();
 if (!location.hash && !DATA.items.length && !TERMS.length && DISPUTES.length) location.hash = '#disputes';
 render();
 
@@ -615,6 +656,7 @@ render();
     }, lost);
     db.collection('term-decisions').onSnapshot((snap) => { termDecisions = new Map(snap.docs.map((d) => [d.id, d.data()])); render(); }, lost);
     db.collection('dispute-decisions').onSnapshot((snap) => { disputeDecisions = new Map(snap.docs.map((d) => [d.id, d.data()])); render(); }, lost);
+    db.collection('definition-decisions').onSnapshot((snap) => { defDecisions = new Map(snap.docs.map((d) => [d.id, d.data()])); render(); }, lost);
     render();
   } catch (e) {
     clearTimeout(timer);

@@ -88,9 +88,9 @@ export function applyDecisions(root: string, scope: Scope, decisions: Decision[]
 }
 
 /** Render the review page from the template, embedding the queue and allowed facet values. */
-export function renderPage(root: string, items: QueueItem[], ontology: unknown, generatedAt: string, termItems: TermQueueItem[] = [], disputes: DisputeItem[] = []): string {
+export function renderPage(root: string, items: QueueItem[], ontology: unknown, generatedAt: string, termItems: TermQueueItem[] = [], disputes: DisputeItem[] = [], definitions: unknown[] = []): string {
   const tpl = fs.readFileSync(path.join(root, 'packages/mapper/review/review.html'), 'utf8');
-  const data = JSON.stringify({ generatedAt, items, termItems, disputes, ontology }).replaceAll('</', '<\\/');
+  const data = JSON.stringify({ generatedAt, items, termItems, disputes, definitions, ontology }).replaceAll('</', '<\\/');
   return tpl.replace('/*__DATA__*/null', data);
 }
 
