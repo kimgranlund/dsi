@@ -42,6 +42,9 @@ importers:
 
   packages/mapper:
     dependencies:
+      '@dsi/classify':
+        specifier: workspace:*
+        version: link:../classify
       '@dsi/resolve':
         specifier: workspace:*
         version: link:../resolve

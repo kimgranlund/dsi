@@ -2,7 +2,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadOntology } from '@dsi/schema';
-import { merge, readProposals, APPROVE_AT } from './merge.ts';
+import { merge, readProposals, APPROVE_AT, APPROVE_WITH_CLASSIFIER_AT, type ClassifierVotes } from './merge.ts';
+import { classify, type TermsFile } from '@dsi/classify';
+import { loadNative } from '@dsi/resolve';
 import { preparePacket, readMappings, type Scope } from './packet.ts';
 import { applyDecisions, collectQueue, renderPage, type Decision } from './review.ts';
 
@@ -37,10 +39,18 @@ if (cmd === 'prepare') {
     const a = readProposals(path.join(runDir, `${product}.a.proposals.json`), ontology, tokens);
     const b = readProposals(path.join(runDir, `${product}.b.proposals.json`), ontology, tokens);
     const impl = JSON.parse(fs.readFileSync(path.join(root, 'data/native', product, version, 'manifest.json'), 'utf8')).implementation;
-    const r = merge(root, product, version, impl, a, b, scope.id);
-    console.log(`${product}: ${r.approved} approved, ${r.approvedUnmapped} agreed unmapped, ${r.queued} queued for review -> ${r.file}`);
+    // Third vote: the classifier with approved terms only, counted only when it explains the whole name.
+    const votes: ClassifierVotes = new Map();
+    const termsPath = path.join(root, 'mappings', product, 'terms.json');
+    if (fs.existsSync(termsPath)) {
+      const terms = JSON.parse(fs.readFileSync(termsPath, 'utf8')) as TermsFile;
+      const set = loadNative(root, product, version);
+      for (const t of tokens) { const c = classify(terms, t, String(set.tokens.get(t)?.prov.file ?? ''), scope.domain); if (c.concept && c.explained === 1 && !c.conflicts.length) votes.set(t, c.concept); }
+    }
+    const r = merge(root, product, version, impl, a, b, scope.id, undefined, votes);
+    console.log(`${product}: ${r.approved} approved, ${r.approvedWithClassifier} approved with the classifier's vote, ${r.approvedUnmapped} agreed unmapped, ${r.queued} queued for review -> ${r.file}`);
   }
-  console.log(`approval rule: same concept and match from two models, both confidence >= ${APPROVE_AT}`);
+  console.log(`approval rule: same concept and match from two models, both confidence >= ${APPROVE_AT}; or >= ${APPROVE_WITH_CLASSIFIER_AT} when the classifier (approved terms, whole name explained) gives the same concept and the match is exact or close`);
 } else if (cmd === 'check') {
   const [product, role] = process.argv.slice(5);
   if (!run || !product || !role) { console.error(USAGE); process.exit(2); }

@@ -5,6 +5,11 @@ import { createAjv, parseConcept, type Ontology } from '@dsi/schema';
 import { mappingPath, readMappings, type MappingFileShape } from './packet.ts';
 
 export const APPROVE_AT = 0.85;
+/** With the classifier as a third vote (approved terms only, name fully explained, same concept), the bar drops to this. */
+export const APPROVE_WITH_CLASSIFIER_AT = 0.6;
+
+/** The classifier's concept per token, computed from approved terms only and only when the whole name is explained. */
+export type ClassifierVotes = Map<string, string>;
 
 type Proposal = { token: string; concept: string; match: string; confidence: number; rationale: string } | { token: string; unmapped: true; rationale: string };
 export interface ProposalFile { packet: string; role: 'a' | 'b'; model: string; at: string; proposals: Proposal[] }
@@ -29,14 +34,14 @@ export function readProposals(file: string, o: Ontology, expectedTokens: Set<str
   return pf;
 }
 
-export interface MergeResult { approved: number; approvedUnmapped: number; queued: number; skippedSettled: number; file: string }
+export interface MergeResult { approved: number; approvedWithClassifier: number; approvedUnmapped: number; queued: number; skippedSettled: number; file: string }
 
 /**
  * Two-agent agreement. Approved when both agents give the same concept AND match type with confidence >= APPROVE_AT,
  * or both say unmapped. Anything else becomes Proposed records for human review. Approved and rejected records are
  * never modified; an agreement that equals a rejected answer stays Proposed.
  */
-export function merge(root: string, product: string, version: string, implementation: string | undefined, a: ProposalFile, b: ProposalFile, method: string, now = new Date().toISOString()): MergeResult {
+export function merge(root: string, product: string, version: string, implementation: string | undefined, a: ProposalFile, b: ProposalFile, method: string, now = new Date().toISOString(), votes: ClassifierVotes = new Map()): MergeResult {
   if (a.model === b.model) throw new Error(`both proposal files come from ${a.model}; agreement needs two different models`);
   const file: MappingFileShape & { mappings: any[]; unmapped: any[] } = { product, ...(implementation ? { implementation } : {}), sourceVersion: version, mappings: [], unmapped: [], ...(readMappings(root, product, version) ?? {}) } as any;
   file.mappings ??= [];
@@ -46,7 +51,7 @@ export function merge(root: string, product: string, version: string, implementa
   const byToken = (pf: ProposalFile) => new Map(pf.proposals.map((p) => [p.token, p]));
   const A = byToken(a), B = byToken(b);
   const prov = (pf: ProposalFile) => ({ agent: 'dsi-mapper', model: pf.model, at: pf.at, method });
-  const res: MergeResult = { approved: 0, approvedUnmapped: 0, queued: 0, skippedSettled: 0, file: path.relative(root, mappingPath(root, product, version)) };
+  const res: MergeResult = { approved: 0, approvedWithClassifier: 0, approvedUnmapped: 0, queued: 0, skippedSettled: 0, file: path.relative(root, mappingPath(root, product, version)) };
 
   for (const token of [...new Set([...A.keys(), ...B.keys()])].sort()) {
     if (settled.has(token)) { res.skippedSettled++; continue; }
@@ -54,9 +59,13 @@ export function merge(root: string, product: string, version: string, implementa
     // Earlier proposed records for this token are replaced by this run's outcome.
     const fresh: any[] = [];
     const agreementNote = `${a.model} and ${b.model} agreed independently`;
-    if (pa && pb && isMap(pa) && isMap(pb) && pa.concept === pb.concept && pa.match === pb.match && Math.min(pa.confidence, pb.confidence) >= APPROVE_AT && !rejected.has(`${token}|${pa.concept}|${pa.match}`)) {
-      fresh.push({ id: idOf(token, pa.concept, pa.match), token, concept: pa.concept, match: pa.match, confidence: Math.min(pa.confidence, pb.confidence), status: 'approved', rationale: pa.rationale, provenance: prov(a), review: { by: 'agreement', at: now, note: agreementNote } });
-      res.approved++;
+    const agree = pa && pb && isMap(pa) && isMap(pb) && pa.concept === pb.concept && pa.match === pb.match && !rejected.has(`${token}|${pa.concept}|${pa.match}`) ? pa : undefined;
+    const conf = agree && isMap(pb!) ? Math.min(agree.confidence, pb.confidence) : 0;
+    const classifierAgrees = !!agree && (agree.match === 'exact' || agree.match === 'close') && votes.get(token) === agree.concept;
+    if (agree && (conf >= APPROVE_AT || (classifierAgrees && conf >= APPROVE_WITH_CLASSIFIER_AT))) {
+      const third = classifierAgrees && conf < APPROVE_AT;
+      fresh.push({ id: idOf(token, agree.concept, agree.match), token, concept: agree.concept, match: agree.match, confidence: conf, status: 'approved', rationale: agree.rationale, provenance: prov(a), review: { by: third ? 'agreement+classifier' : 'agreement', at: now, note: third ? `${agreementNote}; the classifier reached the same concept from approved terms` : agreementNote } });
+      if (third) res.approvedWithClassifier++; else res.approved++;
     } else if (pa && pb && !isMap(pa) && !isMap(pb)) {
       file.unmapped = file.unmapped.filter((u) => u.token !== token || u.status === 'approved');
       file.unmapped.push({ token, status: 'approved', rationale: pa.rationale, provenance: prov(a), review: { by: 'agreement', at: now, note: `${agreementNote}: no concept fits. Other rationale: ${pb.rationale}` } });

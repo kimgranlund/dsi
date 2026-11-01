@@ -85,6 +85,8 @@ Show a consistent canonical label (e.g. "Danger") and how each design system rep
 - **Concept resolution policy (decided)**: approved exact/close mappings answer; broad/narrow (or an exact mapping to a more specific concept) answer only as flagged "nearest"; related never; otherwise "absent" (approved noEquivalent) or "unknown". No invented values. Implemented in `packages/resolve`.
 - **Modes**: each source declares which native theme represents each canonical mode (Carbon light=white, dark=g100), from the product's shipped color-scheme metadata.
 - **Pipelines**: Resolver first (done), then a Classifier: per-product term mappings (native word -> facet value, reviewed once) plus deterministic name decomposition, used for scope, packet hints and as a third vote.
+- **Third vote (decided)**: two agents agreeing on an exact/close concept plus the classifier (approved terms only, whole name explained) approve at confidence >= 0.6. Term vocabularies are drafted by two agents, agreements approved, the rest reviewed by the owner.
+- **SKOS everywhere (decided)**: token mappings and term mappings are SKOS mappings (native subject, canonical object); the RDF form is exported to `data/skos/` and validated.
 - **Concepts are compositional**: `dsi:concept/<domain>/<facet>-<value>/...` in a fixed facet order, validated against the facet schemes.
 - **License**: MIT for this project.
 - **Component Libraries** are a full category with token ingestion, like Design Systems.

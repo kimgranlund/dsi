@@ -77,3 +77,21 @@ test('proposal files are checked against the packet and the concept grammar', ()
   assert.throws(() => readProposals(write({ ...ok, proposals: [{ ...ok.proposals[0], concept: 'dsi:concept/color/intent-critical' }, ok.proposals[1]] }), o, tokens), /not in dsi:scheme\/intent/);
   assert.throws(() => readProposals(write({ ...ok, proposals: [{ ...ok.proposals[0], match: 'equivalent' }, ok.proposals[1]] }), o, tokens), /must be equal to one of the allowed values|must match/);
 });
+
+test('the classifier as third vote lowers the bar for exact/close agreement only', () => {
+  const root = tmp();
+  const a = pf('a', 'opus', [
+    { token: 't1', concept: D, match: 'close', confidence: 0.7, rationale: 'r' },
+    { token: 't2', concept: D, match: 'broad', confidence: 0.7, rationale: 'r' },
+    { token: 't3', concept: D, match: 'close', confidence: 0.5, rationale: 'r' },
+    { token: 't4', concept: D, match: 'close', confidence: 0.7, rationale: 'r' },
+  ]);
+  const b = pf('b', 'sonnet', a.proposals.map((p: any) => ({ ...p })));
+  const votes = new Map([['t1', D], ['t2', D], ['t3', D], ['t4', BG]]);
+  const r = merge(root, 'x', '1.0.0', undefined, a, b, 'color-v1', '2026-11-01T00:00:00Z', votes);
+  assert.deepEqual([r.approved, r.approvedWithClassifier, r.queued], [0, 1, 3]);
+  const f = read(root);
+  const t1 = f.mappings.find((m: any) => m.token === 't1');
+  assert.deepEqual([t1.status, t1.review.by], ['approved', 'agreement+classifier']);
+  for (const t of ['t2', 't3', 't4']) assert.ok(f.mappings.filter((m: any) => m.token === t).every((m: any) => m.status === 'proposed'), t);
+});
