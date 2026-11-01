@@ -50,6 +50,15 @@ function literal(d: Doc): { $type?: string; $value: unknown } {
   }
   if (type === 'number' || type === 'fontWeight') { const n = Number(typeof ov === 'number' ? ov : d.value); if (!Number.isNaN(n)) return { $type: type, $value: n }; }
   if (type === 'cubicBezier' && Array.isArray(ov)) return { $type: type, $value: ov };
+  if (type === 'transition' && ov && typeof ov === 'object') {
+    const o = ov as { duration?: unknown; delay?: unknown; timingFunction?: unknown };
+    const ms = (x: unknown) => (x && typeof x === 'object' && 'value' in (x as object) ? x : { value: 0, unit: 'ms' });
+    // Parts may be shipped aliases ({motion.duration.medium}): DTCG composites allow them, so keep them.
+    const part = (x: unknown, ok: (y: unknown) => boolean) => (isAlias(x) ? x : ok(x) ? x : undefined);
+    const dur = part(o.duration, (y) => !!y && typeof y === 'object' && 'value' in (y as object));
+    const tf = part(o.timingFunction, Array.isArray);
+    if (dur && tf) return { $type: 'transition', $value: { duration: dur, delay: o.delay === undefined ? { value: 0, unit: 'ms' } : (part(o.delay, (y) => !!y && typeof y === 'object') ?? { value: 0, unit: 'ms' }), timingFunction: tf } };
+  }
   if (type === 'fontFamily') return { $type: type, $value: ov };
   if (typeof d.value === 'string') { const t = inferLiteral(d.value, d.path.at(-1) ?? ''); if (t.$type) return t; return { $value: d.value }; }
   return { $value: JSON.stringify(d.value ?? ov).replace(/^\{/, '(').replace(/\}$/, ')') };

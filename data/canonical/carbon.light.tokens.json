@@ -519,6 +519,34 @@
         ]
       }
     },
+    "background-strong-hover+selected": {
+      "$description": "Background · Strong · Hover + Selected",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-background/emphasis-strong/state-hover+selected",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-layer-selected-hover-03",
+          "note": "no direct mapping; layer-selected-hover-03 maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover+selected",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "layer-selected-hover-03",
+          "version": "11.84.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.819608,
+          0.819608,
+          0.819608
+        ],
+        "hex": "#d1d1d1"
+      }
+    },
     "background-subtle": {
       "$description": "Background · Subtle",
       "$extensions": {
@@ -3983,6 +4011,34 @@
           0.552941
         ],
         "hex": "#8d8d8d"
+      }
+    },
+    "overlay-background": {
+      "$description": "Overlay · Background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-overlay/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--cds-ai-popover-background",
+          "note": "no direct mapping; ai-popover-background maps to the more specific dsi:concept/color/intent-ai/usage-overlay/property-background",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "ai-popover-background",
+          "version": "11.84.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "hex": "#ffffff"
       }
     },
     "page-background": {

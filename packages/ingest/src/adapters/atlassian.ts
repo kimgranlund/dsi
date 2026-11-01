@@ -34,7 +34,8 @@ const hexColor = (hex: string, opacity?: number) => {
   const t = inferLiteral(hex, 'color');
   if (t.$type !== 'color') return undefined;
   const v = { ...(t.$value as Record<string, unknown>) };
-  if (opacity !== undefined && opacity !== 1) v.alpha = Math.round(opacity * (Number(v.alpha ?? 1)) * 10000) / 10000;
+  // The shipped CSS uses the shadow's opacity as the color's alpha (it replaces, not multiplies, a hex8 alpha).
+  if (opacity !== undefined) { if (opacity === 1) delete v.alpha; else v.alpha = Math.round(opacity * 10000) / 10000; }
   return v;
 };
 

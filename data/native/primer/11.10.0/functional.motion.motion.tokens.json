@@ -233,7 +233,6 @@
             "package": "@primer/primitives",
             "product": "primer",
             "rawValue": "{\"duration\":{\"value\":300,\"unit\":\"ms\"},\"timingFunction\":[0.3,0.8,0.6,1]}",
-            "untyped": true,
             "version": "11.10.0"
           },
           "org.primer.llm": {
@@ -247,7 +246,15 @@
             ]
           }
         },
-        "$value": "(\"duration\":{\"value\":300,\"unit\":\"ms\"},\"timingFunction\":[0.3,0.8,0.6,1])"
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": "{motion.duration.medium}",
+          "timingFunction": "{motion.easing.enter}"
+        }
       },
       "exit": {
         "$description": "Transition for elements exiting the viewport, such as closing modals and dismissing dropdowns.",
@@ -259,7 +266,6 @@
             "package": "@primer/primitives",
             "product": "primer",
             "rawValue": "{\"duration\":{\"value\":200,\"unit\":\"ms\"},\"timingFunction\":[0.7,0.1,0.75,0.9]}",
-            "untyped": true,
             "version": "11.10.0"
           },
           "org.primer.llm": {
@@ -273,7 +279,15 @@
             ]
           }
         },
-        "$value": "(\"duration\":{\"value\":200,\"unit\":\"ms\"},\"timingFunction\":[0.7,0.1,0.75,0.9])"
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": "{motion.duration.short}",
+          "timingFunction": "{motion.easing.exit}"
+        }
       },
       "hover": {
         "$description": "Transition for hover state changes on interactive elements like buttons and links.",
@@ -285,7 +299,6 @@
             "package": "@primer/primitives",
             "product": "primer",
             "rawValue": "{\"duration\":{\"value\":100,\"unit\":\"ms\"},\"timingFunction\":[0.25,0.1,0.25,1]}",
-            "untyped": true,
             "version": "11.10.0"
           },
           "org.primer.llm": {
@@ -298,7 +311,15 @@
             ]
           }
         },
-        "$value": "(\"duration\":{\"value\":100,\"unit\":\"ms\"},\"timingFunction\":[0.25,0.1,0.25,1])"
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": "{motion.duration.micro}",
+          "timingFunction": "{motion.easing.hover}"
+        }
       },
       "stateChange": {
         "$description": "Transition for state changes like toggles, expand/collapse, and visibility changes.",
@@ -310,7 +331,6 @@
             "package": "@primer/primitives",
             "product": "primer",
             "rawValue": "{\"duration\":{\"value\":200,\"unit\":\"ms\"},\"timingFunction\":[0.6,0,0.2,1]}",
-            "untyped": true,
             "version": "11.10.0"
           },
           "org.primer.llm": {
@@ -324,7 +344,15 @@
             ]
           }
         },
-        "$value": "(\"duration\":{\"value\":200,\"unit\":\"ms\"},\"timingFunction\":[0.6,0,0.2,1])"
+        "$type": "transition",
+        "$value": {
+          "delay": {
+            "unit": "ms",
+            "value": 0
+          },
+          "duration": "{motion.duration.short}",
+          "timingFunction": "{motion.easing.move}"
+        }
       }
     }
   }
