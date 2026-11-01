@@ -39,6 +39,7 @@ test('valid composites with nested aliases', async () => {
   const d = { value: 0, unit: 'px' };
   f['base.tokens.json'].a.t = { $type: 'transition', $value: { duration: { value: 70, unit: 'ms' }, delay: { value: 0, unit: 'ms' }, timingFunction: [0.2, 0, 0.38, 0.9] }, $extensions: prov() };
   f['base.tokens.json'].a.s = { $type: 'shadow', $value: [{ color: '{a.ref}', offsetX: d, offsetY: { value: 1, unit: 'px' }, blur: d, spread: d }], $extensions: prov() };
+  f['base.tokens.json'].a.ty = { $type: 'typography', $value: { fontFamily: 'Sans', fontSize: { value: 14, unit: 'px' }, fontWeight: 400, letterSpacing: d, lineHeight: 1.5 }, $extensions: prov() };
   assert.deepEqual(await run(f), []);
 });
 
@@ -55,6 +56,7 @@ const cases: [string, (f: Record<string, any>) => void, RegExp][] = [
   ['untyped literal not flagged', (f) => (f['base.tokens.json'].a.ref = { $value: '100%', $extensions: prov() }), /must be marked untyped/],
   ['unchecked type', (f) => (f['base.tokens.json'].a.ref = { $type: 'strokeStyle', $value: 'solid', $extensions: prov() }), /type strokeStyle is not checked yet/],
   ['composite with dangling nested alias', (f) => (f['base.tokens.json'].a.t = { $type: 'transition', $value: { duration: '{a.missing}', delay: { value: 0, unit: 'ms' }, timingFunction: [0, 0, 1, 1] }, $extensions: prov() }), /alias \{a\.missing\} does not resolve/],
+  ['typography missing a part', (f) => (f['base.tokens.json'].a.ty = { $type: 'typography', $value: { fontFamily: 'Sans', fontSize: { value: 14, unit: 'px' }, fontWeight: 400, lineHeight: 1.5 }, $extensions: prov() }), /typography must be/],
   ['malformed shadow', (f) => (f['base.tokens.json'].a.s = { $type: 'shadow', $value: { color: '{a.ref}', offsetX: '1px' }, $extensions: prov() }), /shadow must be/],
 ];
 for (const [name, change, expected] of cases) {

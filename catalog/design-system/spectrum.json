@@ -1,0 +1,30 @@
+{
+  "id": "spectrum",
+  "name": "Spectrum",
+  "category": "dsi:category/design-system",
+  "organization": "Adobe",
+  "description": "Adobe's design system for its creative and document products: Spectrum 2 design tokens and components.",
+  "homepage": "https://spectrum.adobe.com/",
+  "repository": "https://github.com/adobe/spectrum-design-data",
+  "license": "Apache-2.0",
+  "implementations": [
+    {
+      "id": "spectrum-tokens",
+      "name": "Spectrum Tokens",
+      "package": "@adobe/spectrum-tokens",
+      "license": "Apache-2.0",
+      "targets": [
+        "dsi:target/css"
+      ]
+    },
+    {
+      "id": "spectrum-css",
+      "name": "Spectrum CSS",
+      "package": "@spectrum-css/tokens",
+      "license": "Apache-2.0",
+      "targets": [
+        "dsi:target/css"
+      ]
+    }
+  ]
+}

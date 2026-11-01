@@ -1,0 +1,36 @@
+{
+  "product": "spectrum",
+  "implementation": "spectrum-tokens",
+  "package": {
+    "registry": "npm",
+    "name": "@adobe/spectrum-tokens",
+    "version": "15.6.0"
+  },
+  "entries": [
+    {
+      "path": "src",
+      "format": "spectrum"
+    }
+  ],
+  "themes": [
+    "light",
+    "dark",
+    "wireframe",
+    "mobile"
+  ],
+  "themeExtends": {
+    "mobile": "light"
+  },
+  "modes": {
+    "light": "light",
+    "dark": "dark"
+  },
+  "modesNote": "Color sets ship light, dark and wireframe; scale sets ship desktop and mobile. Desktop is the default; mobile is a platform variant theme extending light (as Polaris light-mobile), not a canonical mode. Wireframe is kept as a native theme. Spectrum ships no increased-contrast set.",
+  "adapter": "spectrum",
+  "license": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/adobe/spectrum-design-data/blob/main/LICENSE",
+    "redistribution": "permitted",
+    "notes": "Apache-2.0 (package/LICENSE). The package README calls it generated legacy output of @adobe/spectrum-design-data; chosen as the stable, documented npm surface (owner decision 2026-11-01)."
+  }
+}

@@ -59,6 +59,8 @@ export function valueIssue(t: { $type?: string; $value: unknown }): string | und
       const layers = Array.isArray(t.$value) ? t.$value : [t.$value];
       return layers.every((l: any) => l && sub('color', l.color) && ['offsetX', 'offsetY', 'blur', 'spread'].every((k) => sub('dimension', l[k])) && (l.inset === undefined || typeof l.inset === 'boolean')) ? undefined : 'shadow must be { color, offsetX, offsetY, blur, spread, inset? } or an array of them';
     }
+    case 'typography':
+      return v && sub('fontFamily', v.fontFamily) && sub('dimension', v.fontSize) && sub('fontWeight', v.fontWeight) && sub('dimension', v.letterSpacing) && (sub('number', v.lineHeight) || sub('dimension', v.lineHeight)) ? undefined : 'typography must be { fontFamily, fontSize, fontWeight, letterSpacing, lineHeight }';
     case 'gradient':
       return Array.isArray(t.$value) && t.$value.every((st: any) => st && sub('color', st.color) && (isRef(st.position) || (isNum(st.position) && st.position >= 0 && st.position <= 1))) ? undefined : 'gradient must be [{ color, position 0..1 }]';
     case undefined:
