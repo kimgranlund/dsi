@@ -27,6 +27,7 @@ const USAGE = `usage:
   dsi-map reconcile <scope> [--dry]               fold single-system concepts into shared ones where one facet separates them (ADR 0019)
   dsi-map boundary-rules <scope> [--dry] [--jev]  apply the deciding tests B1, B3, B4, B6 to the queue (ADR 0021); --jev judges B4 where code cannot
   dsi-map triage-conflicts <scope>                Jev judges approved boundary conflicts (B4, B6): test or approval likely right
+  dsi-map usage-check <scope> [product...]         measure the token-usage graph against approved mappings
   dsi-map boundaries <scope> [--top N] [--jev <run>]  rank the vocabulary boundaries answers disagree on
   dsi-map rank-emphasis <scope> <run> <product>   settle emphasis by contrast rank where both agents agree on the rest (ADR 0018)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
@@ -438,6 +439,33 @@ if (cmd === 'prepare') {
   for (const x of list) c[x.verdict] = (c[x.verdict] ?? 0) + 1;
   console.log(`triage: ${JSON.stringify(c)} -> .cache/boundary-triage.json`);
   for (const x of list.filter((x) => x.verdict !== 'owner').slice(0, 40)) console.log(`  ${x.verdict.padEnd(8)} ${x.product} ${x.token} [${x.rules}] ${x.detail}`);
+} else if (cmd === 'usage-check') {
+  // Measure the token-usage graph against approved mappings: coverage and agreement per facet (property, state,
+  // container), plus how many open and conflicting tokens have usage evidence.
+  const { loadUsage, evidenceOf, agrees } = await import('./usage-evidence.ts');
+  for (const product of process.argv.slice(4).length ? process.argv.slice(4) : Object.keys(scope.products)) {
+    const { version } = scope.products[product];
+    const usage = loadUsage(root, product, version);
+    if (!usage) { console.log(`${product}: no usage graph`); continue; }
+    const file = readMappings(root, product, version) as any;
+    const approved = file.mappings.filter((m: any) => m.status === 'approved' && m.concept.startsWith('dsi:concept/color/'));
+    const open = new Set(file.mappings.filter((m: any) => m.status === 'proposed').map((m: any) => m.token));
+    const tally: Record<string, [number, number]> = { property: [0, 0], state: [0, 0], container: [0, 0] };
+    const disagree: string[] = [];
+    let covered = 0;
+    for (const m of approved) {
+      const uses = usage.get(m.token);
+      if (!uses?.length) continue;
+      covered++;
+      const e = evidenceOf(uses);
+      const a = agrees(e, m.concept);
+      for (const k of ['property', 'state', 'container'] as const) if (a[k] !== undefined) { tally[k][1]++; if (a[k]) tally[k][0]++; else if (disagree.length < 400) disagree.push(`${k}: ${m.token} approved ${m.concept.replace('dsi:concept/color/', '')}; usage ${k === 'property' ? e.property : k === 'state' ? e.state ?? 'none' : e.container} (${e.uses} uses: ${e.components.slice(0, 3).join(', ')})`); }
+    }
+    const openCovered = [...open].filter((t) => usage.get(t as string)?.length).length;
+    const pct = ([a, n]: [number, number]) => (n ? `${Math.round((1000 * a) / n) / 10}% of ${n}` : '-');
+    console.log(`${product}: approved color mappings ${approved.length}, with usage ${covered} (${Math.round((100 * covered) / approved.length)}%); agreement property ${pct(tally.property)}, state ${pct(tally.state)}, container ${pct(tally.container)}; open tokens with usage ${openCovered} of ${open.size}`);
+    fs.writeFileSync(path.join(root, `.cache/usage-disagreements.${product}.txt`), disagree.join('\n') + '\n');
+  }
 } else if (cmd === 'boundaries') {
   // Rank the vocabulary boundaries the answers disagree on (docs/planning/boundaries.md; one owner decision per pair).
   const { mineBoundaries } = await import('./boundaries.ts');
