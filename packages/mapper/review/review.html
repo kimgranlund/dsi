@@ -147,6 +147,9 @@ kbd { font: 600 0.7rem var(--font-mono); padding: 1px 6px; border: 1px solid var
 .family .sub { flex: 1; min-width: 12rem; }
 .keys { font-size: 0.75rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 12px; }
 @media (max-width: 720px) { header.top { position: static; } }
+.q h3 { font: 600 1rem/1.3 var(--font-body); margin: 0; word-break: break-word; }
+.q p { margin: 2px 0 0; font-size: 0.85rem; color: var(--muted); }
+.say { font-size: 0.95rem; font-weight: 500; }
 .total { font: 600 0.85rem var(--font-body); font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
 </style>
@@ -383,6 +386,21 @@ const atoms = (c) => !c ? [] : c.replace(/^dsi:concept\/[a-z]+\//, '').split('/'
 const atomLabel = (a) => { const [f, v] = a.split(':'); return LABEL[a] || v.replace(/-/g, ' '); };
 function atomChip(a, cls = '') { return el('span', { class: 'facet ' + cls }, el('small', { text: a.split(':')[0] }), (cls === 'add' ? '+ ' : '') + atomLabel(a)); }
 const short = (c, m) => !c ? 'no concept fits' : atoms(c).map(atomLabel).join(' · ') + ' — ' + m;
+// Plain words: a concept as a name ("Accent icon"), a match as a sentence about the token.
+const nameOf = (c) => { const a = atoms(c); const order = ['intent', 'usage', 'hue', 'component', 'part', 'property', 'emphasis', 'state']; return a.sort((x, y) => order.indexOf(x.split(':')[0]) - order.indexOf(y.split(':')[0])).map((x) => atomLabel(x).toLowerCase()).join(' ').replace(/^./, (ch) => ch.toUpperCase()); };
+const SENTENCE = { exact: (n) => 'It means exactly “' + n + '”.', close: (n) => 'It means “' + n + '”, with a small nuance.', broad: (n) => 'It is one specific kind of “' + n + '”.', narrow: (n) => 'It covers “' + n + '” and more.', related: (n) => 'It is only associated with “' + n + '”.' };
+const sentence = (o) => !o.concept ? 'No shared concept fits it.' : SENTENCE[o.match](nameOf(o.concept));
+function question(item, shared, mapped) {
+  const diffs = [];
+  const facetsDiffer = new Set(mapped.flatMap((o) => atoms(o.concept).filter((a) => !shared.includes(a)).map((a) => a.split(':')[0])));
+  const F = { property: 'what part it colors (text, icon, background…)', usage: 'where it is used', emphasis: 'how strong it is', intent: 'what it signals', hue: 'which hue', state: 'which state', component: 'which component', part: 'which part' };
+  for (const f of facetsDiffer) diffs.push(F[f] || f);
+  if (new Set(mapped.map((o) => o.match)).size > 1) diffs.push('how closely it matches');
+  if (item.options.some((o) => !o.concept)) diffs.push('whether any concept fits');
+  return el('div', { class: 'q' },
+    el('h3', { text: 'What does ' + item.token + ' mean?' }),
+    el('p', {}, shared.length && mapped.length > 1 ? 'The models agree it is about “' + shared.map(atomLabel).join(' ').toLowerCase().replace(/^./, (ch) => ch.toUpperCase()) + '”. ' : '', diffs.length ? 'They differ on ' + (diffs.length > 1 ? diffs.slice(0, -1).join(', ') + ' and ' + diffs.at(-1) : diffs[0]) + '. Pick the sentence that is true.' : 'Pick the sentence that is true.'));
+}
 function css(v) { const m = /^(#[0-9a-f]{6})(?: @ ([\d.]+))?$/i.exec(v || ''); if (!m) return ''; if (!m[2]) return m[1]; const n = parseInt(m[1].slice(1), 16); return 'rgba(' + [n >> 16, (n >> 8) & 255, n & 255, m[2]].join(',') + ')'; }
 const ICON = '<svg viewBox="0 0 18 18" aria-hidden="true"><path fill="currentColor" d="M4 1h7l4 4v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm6 1v4h4z"/></svg>';
 function contextTiles(item) {
@@ -444,7 +462,7 @@ function card(item) {
   const mapped = item.options.filter((o) => o.concept);
   const shared = mapped.length ? atoms(mapped[0].concept).filter((a) => mapped.every((o) => atoms(o.concept).includes(a))) : [];
   const total = item.options.reduce((n, o) => n + o.voters.length, 0);
-  if (mapped.length > 1 && shared.length) right.append(el('div', { class: 'shared' }, el('span', { text: 'All answers agree on' }), shared.map((a) => atomChip(a))));
+  right.append(question(item, shared, mapped));
   item.options.forEach((o, i) => {
     const chosen = d && ((d.action === 'accept' && d.candidateId === o.recordId) || (d.action === 'custom' && d.concept === o.concept && d.match === o.match) || (d.action === 'unmapped' && !o.concept));
     const extra = o.concept ? atoms(o.concept).filter((a) => !(mapped.length > 1 && shared.includes(a))) : [];
@@ -452,9 +470,10 @@ function card(item) {
     right.append(el('div', { class: 'opt' + (sugg && !d ? ' suggested' : '') + (chosen ? ' chosen' : '') },
       el('kbd', { text: String(i + 1) }),
       el('div', { class: 'body' },
+        el('div', { class: 'say', text: sentence(o) }),
         el('div', { class: 'line' },
-          o.concept ? (extra.length ? extra.map((a) => atomChip(a, mapped.length > 1 ? 'add' : '')) : el('span', { class: 'voters', text: 'only the shared facets' })) : el('span', { class: 'pill none', text: 'no concept fits' }),
-          o.concept ? el('span', { class: 'pill ' + o.match, text: o.match }) : null),
+          o.concept ? (extra.length ? extra.map((a) => atomChip(a, mapped.length > 1 ? 'add' : '')) : el('span', { class: 'voters', text: 'nothing beyond what all agree on' })) : el('span', { class: 'pill none', text: 'no concept fits' }),
+          o.concept ? el('span', { class: 'pill ' + o.match, text: o.match, title: MATCH_HINT[o.match] }) : null),
         el('div', { class: 'line' },
           el('span', { class: 'tally', text: o.voters.length + ' of ' + total }),
           el('span', { class: 'voters', text: o.voters.map((v) => v.model.replace(/^claude-/, '') + (v.confidence != null ? ' ' + v.confidence.toFixed(2) : '')).join(' · ') }),
