@@ -143,7 +143,7 @@
       "term": "color",
       "concept": "dsi:property/icon",
       "match": "exact",
-      "status": "proposed",
+      "status": "rejected",
       "evidence": {
         "support": 2,
         "agree": 2,
@@ -153,13 +153,17 @@
         "agent": "dsi-classify",
         "at": "2026-11-01T00:18:57.199Z",
         "method": "derive-from-approved-mappings"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:00.502Z"
       }
     },
     {
       "term": "color",
       "concept": "dsi:usage/on-fill",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "evidence": {
         "support": 2,
         "agree": 2,
@@ -169,6 +173,10 @@
         "agent": "dsi-classify",
         "at": "2026-11-01T00:18:57.199Z",
         "method": "derive-from-approved-mappings"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:00.502Z"
       }
     },
     {
@@ -211,13 +219,17 @@
       "term": "field",
       "concept": "dsi:property/background",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "Field tokens are input background fills. (confidence 0.7; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:18Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:04.053Z"
       }
     },
     {
@@ -332,13 +344,17 @@
       "term": "interactive",
       "concept": "dsi:intent/accent",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "Carbon interactive is the brand-blue interactive color. (confidence 0.65); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:18Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:06.236Z"
       }
     },
     {
@@ -363,13 +379,17 @@
       "term": "layer",
       "concept": "dsi:property/background",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "Layer tokens are fills of those surfaces. (confidence 0.75; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:18Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:07.669Z"
       }
     },
     {
@@ -393,8 +413,25 @@
     {
       "term": "link",
       "concept": "dsi:property/text",
+      "match": "close",
+      "status": "approved",
+      "note": "Link tokens color link text. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:18Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:19.582Z"
+      }
+    },
+    {
+      "term": "link",
+      "concept": "dsi:property/text",
       "match": "exact",
-      "status": "proposed",
+      "status": "rejected",
       "evidence": {
         "support": 2,
         "agree": 2,
@@ -404,19 +441,10 @@
         "agent": "dsi-classify",
         "at": "2026-11-01T00:18:57.199Z",
         "method": "derive-from-approved-mappings"
-      }
-    },
-    {
-      "term": "link",
-      "concept": "dsi:property/text",
-      "match": "close",
-      "status": "proposed",
-      "note": "Link tokens color link text. (confidence 0.75; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T00:41:18Z",
-        "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:19.582Z"
       }
     },
     {
@@ -441,7 +469,7 @@
       "term": "on",
       "concept": "dsi:property/icon",
       "match": "exact",
-      "status": "proposed",
+      "status": "rejected",
       "evidence": {
         "support": 2,
         "agree": 2,
@@ -451,35 +479,47 @@
         "agent": "dsi-classify",
         "at": "2026-11-01T00:18:57.199Z",
         "method": "derive-from-approved-mappings"
-      }
-    },
-    {
-      "term": "on",
-      "concept": "dsi:usage/on-fill",
-      "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 2,
-        "agree": 2,
-        "precision": 1
       },
-      "provenance": {
-        "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.199Z",
-        "method": "derive-from-approved-mappings"
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:30.294Z"
       }
     },
     {
       "term": "on",
       "concept": "dsi:usage/on-fill",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "on-color: content placed on colored fills. (confidence 0.85); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:18Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:30.294Z"
+      }
+    },
+    {
+      "term": "on",
+      "concept": "dsi:usage/on-fill",
+      "match": "exact",
+      "status": "rejected",
+      "evidence": {
+        "support": 2,
+        "agree": 2,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.199Z",
+        "method": "derive-from-approved-mappings"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:30.294Z"
       }
     },
     {
@@ -504,101 +544,92 @@
       "term": "overlay",
       "concept": "dsi:usage/overlay",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "Overlay scrim/layer color. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T00:40:56.383Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:42.269Z"
       }
     },
     {
       "term": "overlay",
       "concept": "dsi:usage/scrim",
       "match": "exact",
-      "status": "proposed",
+      "status": "rejected",
       "note": "Carbon's overlay token is the dimming backdrop behind modals. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:18Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:42.269Z"
       }
     },
     {
       "term": "popover",
       "concept": "dsi:usage/overlay",
       "match": "broad",
-      "status": "proposed",
+      "status": "approved",
       "note": "A popover is one kind of floating overlay. (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.7",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:18Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:43.427Z"
       }
     },
     {
       "term": "primary",
       "concept": "dsi:emphasis/default",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "text-primary/icon-primary are the default-contrast content tokens, not brand. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:18Z",
         "method": "terms-v1"
-      }
-    },
-    {
-      "term": "secondary",
-      "concept": "dsi:emphasis/subtle",
-      "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 2,
-        "agree": 2,
-        "precision": 1
       },
-      "provenance": {
-        "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.199Z",
-        "method": "derive-from-approved-mappings"
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:44.186Z"
       }
     },
     {
       "term": "secondary",
       "concept": "dsi:emphasis/subtle",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "text/icon-secondary: lower-contrast content. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:18Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:52.531Z"
       }
     },
     {
       "term": "secondary",
       "concept": "dsi:emphasis/subtle",
-      "match": "close",
-      "status": "proposed",
-      "note": "Second-level emphasis. (confidence 0.75; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T00:40:56.383Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "selected",
-      "concept": "dsi:property/background",
       "match": "exact",
-      "status": "proposed",
+      "status": "rejected",
       "evidence": {
         "support": 2,
         "agree": 2,
@@ -608,6 +639,47 @@
         "agent": "dsi-classify",
         "at": "2026-11-01T00:18:57.199Z",
         "method": "derive-from-approved-mappings"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:52.531Z"
+      }
+    },
+    {
+      "term": "secondary",
+      "concept": "dsi:emphasis/subtle",
+      "match": "close",
+      "status": "rejected",
+      "note": "Second-level emphasis. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T00:40:56.383Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:52.531Z"
+      }
+    },
+    {
+      "term": "selected",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "evidence": {
+        "support": 2,
+        "agree": 2,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.199Z",
+        "method": "derive-from-approved-mappings"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:53.623Z"
       }
     },
     {
@@ -649,8 +721,25 @@
     {
       "term": "skeleton",
       "concept": "dsi:property/background",
+      "match": "close",
+      "status": "approved",
+      "note": "Skeleton tokens are placeholder fills. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:18Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:58.594Z"
+      }
+    },
+    {
+      "term": "skeleton",
+      "concept": "dsi:property/background",
       "match": "exact",
-      "status": "proposed",
+      "status": "rejected",
       "evidence": {
         "support": 2,
         "agree": 2,
@@ -660,19 +749,10 @@
         "agent": "dsi-classify",
         "at": "2026-11-01T00:18:57.199Z",
         "method": "derive-from-approved-mappings"
-      }
-    },
-    {
-      "term": "skeleton",
-      "concept": "dsi:property/background",
-      "match": "close",
-      "status": "proposed",
-      "note": "Skeleton tokens are placeholder fills. (confidence 0.7; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T00:41:18Z",
-        "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:12:58.594Z"
       }
     },
     {

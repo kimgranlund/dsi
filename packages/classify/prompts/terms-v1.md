@@ -20,7 +20,7 @@ Write only the JSON file named in the packet's `output`, valid against `packages
     { "term": "critical", "concept": "dsi:intent/danger", "match": "exact", "confidence": 0.95, "rationale": "Polaris's name for the danger status." },
     { "term": "bg", "concept": "dsi:property/background", "match": "exact", "confidence": 0.95, "rationale": "Abbreviation of background." },
     { "term": "on-bg-fill", "concept": "dsi:usage/on-fill", "match": "exact", "confidence": 0.9, "rationale": "Content placed on a filled background." },
-    { "term": "on-bg-fill", "concept": "dsi:property/foreground", "match": "exact", "confidence": 0.85, "rationale": "Overrides bg: the token colors the content, not the fill." },
+    { "term": "on-bg-fill", "concept": "dsi:property/text", "match": "exact", "confidence": 0.9, "rationale": "Overrides bg: every Polaris on-bg-fill token colors text, not the fill (approved in review)." },
     { "term": "avatar", "ignore": "no-concept", "rationale": "Avatar palette; no facet fits." }
   ] }
 ```

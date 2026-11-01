@@ -34,13 +34,17 @@
       "term": "background",
       "concept": "dsi:property/background",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "The background role is a fill. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:10:29.311Z"
       }
     },
     {
@@ -65,26 +69,34 @@
       "term": "container",
       "concept": "dsi:property/background",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "X-container roles are fills; on-X-container is overridden by on-X. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:10:56.115Z"
       }
     },
     {
       "term": "container",
       "concept": "dsi:property/background",
       "match": "close",
-      "status": "proposed",
+      "status": "rejected",
       "note": "Container is a fill role behind content. (confidence 0.8; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T00:40:31.302709+00:00",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:10:56.115Z"
       }
     },
     {
@@ -126,27 +138,35 @@
     {
       "term": "high",
       "concept": "dsi:emphasis/strong",
-      "match": "exact",
-      "status": "proposed",
-      "note": "surface-container-high is the second-strongest step. (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T00:41:08Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "high",
-      "concept": "dsi:emphasis/strong",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "Higher step of surface-container family. (confidence 0.7; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T00:40:31.302709+00:00",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:11.099Z"
+      }
+    },
+    {
+      "term": "high",
+      "concept": "dsi:emphasis/strong",
+      "match": "exact",
+      "status": "rejected",
+      "note": "surface-container-high is the second-strongest step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:11.099Z"
       }
     },
     {
@@ -188,27 +208,35 @@
     {
       "term": "low",
       "concept": "dsi:emphasis/subtle",
-      "match": "exact",
-      "status": "proposed",
-      "note": "surface-container-low is the second-weakest step. (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T00:41:08Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "low",
-      "concept": "dsi:emphasis/subtle",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "Lower step of surface-container family. (confidence 0.7; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T00:40:31.302709+00:00",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:13.953Z"
+      }
+    },
+    {
+      "term": "low",
+      "concept": "dsi:emphasis/subtle",
+      "match": "exact",
+      "status": "rejected",
+      "note": "surface-container-low is the second-weakest step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:13.953Z"
       }
     },
     {
@@ -251,26 +279,34 @@
       "term": "on-background",
       "concept": "dsi:property/foreground",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "Overrides background on property: content on the app background. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:20.528Z"
       }
     },
     {
       "term": "on-error",
       "concept": "dsi:property/foreground",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "Overrides container/fill: the token colors the content. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:21.902Z"
       }
     },
     {
@@ -295,13 +331,17 @@
       "term": "on-primary",
       "concept": "dsi:property/foreground",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "Overrides container/fill: the token colors the content. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:22.736Z"
       }
     },
     {
@@ -326,13 +366,17 @@
       "term": "on-secondary",
       "concept": "dsi:property/foreground",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "Overrides container/fill: the token colors the content. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:23.361Z"
       }
     },
     {
@@ -357,26 +401,34 @@
       "term": "on-surface",
       "concept": "dsi:property/foreground",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "Overrides surface on property: text and icons on surfaces. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:24.361Z"
       }
     },
     {
       "term": "on-tertiary",
       "concept": "dsi:property/foreground",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "Overrides container/fill: the token colors the content. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:25.044Z"
       }
     },
     {
@@ -455,13 +507,17 @@
       "term": "scrim",
       "concept": "dsi:property/background",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "A scrim is a fill. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:25.694Z"
       }
     },
     {
@@ -486,26 +542,34 @@
       "term": "secondary",
       "concept": "dsi:intent/accent",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "Secondary is a less prominent brand accent. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:36.528Z"
       }
     },
     {
       "term": "secondary",
       "concept": "dsi:intent/accent",
       "match": "broad",
-      "status": "proposed",
+      "status": "rejected",
       "note": "Lower-emphasis brand accent. (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T00:40:31.302709+00:00",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:36.528Z"
       }
     },
     {
@@ -548,13 +612,17 @@
       "term": "surface",
       "concept": "dsi:property/background",
       "match": "exact",
-      "status": "proposed",
+      "status": "approved",
       "note": "A bare surface role is a fill. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:38.015Z"
       }
     },
     {
@@ -615,26 +683,34 @@
       "term": "tertiary",
       "concept": "dsi:intent/accent",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "Tertiary is a contrasting brand accent. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:47.494Z"
       }
     },
     {
       "term": "tertiary",
       "concept": "dsi:intent/accent",
       "match": "broad",
-      "status": "proposed",
+      "status": "rejected",
       "note": "Contrasting brand accent. (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T00:40:31.302709+00:00",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:47.494Z"
       }
     },
     {
@@ -659,13 +735,17 @@
       "term": "variant",
       "concept": "dsi:emphasis/subtle",
       "match": "close",
-      "status": "proposed",
+      "status": "approved",
       "note": "Variant roles (outline-variant, on-surface-variant) are lower-emphasis versions. (confidence 0.7; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T00:41:08Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:11:50.373Z"
       }
     }
   ]

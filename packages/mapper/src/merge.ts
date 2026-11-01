@@ -89,6 +89,9 @@ export function merge(root: string, product: string, version: string, implementa
     }
     file.mappings = file.mappings.filter((m) => m.token !== token || m.status === 'approved' || m.status === 'rejected' || m.status === 'superseded');
     file.mappings.push(...fresh);
+    // Once a token is settled either way, earlier rounds' proposals of the other kind are stale.
+    if (fresh.some((f) => f.status === 'approved')) file.unmapped = file.unmapped.filter((u) => u.token !== token || u.status !== 'proposed');
+    if (file.unmapped.some((u) => u.token === token && u.status === 'approved')) file.mappings = file.mappings.filter((m) => m.token !== token || m.status !== 'proposed');
   }
   file.mappings.sort((x, y) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
   file.unmapped.sort((x, y) => x.token.localeCompare(y.token));

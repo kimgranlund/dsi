@@ -13100,7 +13100,12 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.inverse-primary",
-   "notation": "--md-sys-color-inverse-primary"
+   "notation": "--md-sys-color-inverse-primary",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/intent-accent/usage-inverse"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.inverse-surface",
@@ -13179,7 +13184,12 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.on-primary-fixed",
-   "notation": "--md-sys-color-on-primary-fixed"
+   "notation": "--md-sys-color-on-primary-fixed",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.on-primary-fixed-variant",
@@ -13217,7 +13227,12 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.on-secondary-fixed",
-   "notation": "--md-sys-color-on-secondary-fixed"
+   "notation": "--md-sys-color-on-secondary-fixed",
+   "skos:broadMatch": [
+    {
+     "id": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.on-secondary-fixed-variant",
@@ -13243,7 +13258,12 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.on-surface-variant",
-   "notation": "--md-sys-color-on-surface-variant"
+   "notation": "--md-sys-color-on-surface-variant",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/property-foreground/emphasis-subtle"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.on-tertiary",
@@ -13274,7 +13294,12 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.on-tertiary-fixed",
-   "notation": "--md-sys-color-on-tertiary-fixed"
+   "notation": "--md-sys-color-on-tertiary-fixed",
+   "skos:broadMatch": [
+    {
+     "id": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.on-tertiary-fixed-variant",
@@ -13288,14 +13313,24 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.outline",
-   "notation": "--md-sys-color-outline"
+   "notation": "--md-sys-color-outline",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-border"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.outline-variant",
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.outline-variant",
-   "notation": "--md-sys-color-outline-variant"
+   "notation": "--md-sys-color-outline-variant",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-border/emphasis-subtle"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.primary",
@@ -13326,7 +13361,12 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.primary-fixed",
-   "notation": "--md-sys-color-primary-fixed"
+   "notation": "--md-sys-color-primary-fixed",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/intent-accent"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.primary-fixed-dim",
@@ -13407,21 +13447,36 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.surface",
-   "notation": "--md-sys-color-surface"
+   "notation": "--md-sys-color-surface",
+   "skos:narrowMatch": [
+    {
+     "id": "dsi:concept/color/usage-surface/property-background"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.surface-bright",
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.surface-bright",
-   "notation": "--md-sys-color-surface-bright"
+   "notation": "--md-sys-color-surface-bright",
+   "skos:broadMatch": [
+    {
+     "id": "dsi:concept/color/usage-surface/property-background"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.surface-container",
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.surface-container",
-   "notation": "--md-sys-color-surface-container"
+   "notation": "--md-sys-color-surface-container",
+   "skos:broadMatch": [
+    {
+     "id": "dsi:concept/color/usage-surface/property-background"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.surface-container-high",
@@ -13476,7 +13531,12 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.surface-dim",
-   "notation": "--md-sys-color-surface-dim"
+   "notation": "--md-sys-color-surface-dim",
+   "skos:broadMatch": [
+    {
+     "id": "dsi:concept/color/usage-surface/property-background"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.surface-tint",
@@ -13490,7 +13550,12 @@
    "type": "Concept",
    "inScheme": "dsi:scheme/native/material/2.5.0",
    "prefLabel": "md.sys.color.surface-variant",
-   "notation": "--md-sys-color-surface-variant"
+   "notation": "--md-sys-color-surface-variant",
+   "skos:broadMatch": [
+    {
+     "id": "dsi:concept/color/usage-surface/property-background"
+    }
+   ]
   },
   {
    "id": "dsi:native/material/2.5.0/md.sys.color.tertiary",
@@ -14312,7 +14377,21 @@
    "prefLabel": "background",
    "skos:exactMatch": [
     {
+     "id": "dsi:property/background"
+    },
+    {
      "id": "dsi:usage/page"
+    }
+   ]
+  },
+  {
+   "id": "dsi:vocab/material/container",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/material",
+   "prefLabel": "container",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:property/background"
     }
    ]
   },
@@ -14339,6 +14418,17 @@
    ]
   },
   {
+   "id": "dsi:vocab/material/high",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/material",
+   "prefLabel": "high",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ]
+  },
+  {
    "id": "dsi:vocab/material/highest",
    "type": "Concept",
    "inScheme": "dsi:scheme/vocab/material",
@@ -14357,6 +14447,17 @@
    "skos:exactMatch": [
     {
      "id": "dsi:usage/inverse"
+    }
+   ]
+  },
+  {
+   "id": "dsi:vocab/material/low",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/material",
+   "prefLabel": "low",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:emphasis/subtle"
     }
    ]
   },
@@ -14383,11 +14484,25 @@
    ]
   },
   {
+   "id": "dsi:vocab/material/on-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/material",
+   "prefLabel": "on-background",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:property/foreground"
+    }
+   ]
+  },
+  {
    "id": "dsi:vocab/material/on-error",
    "type": "Concept",
    "inScheme": "dsi:scheme/vocab/material",
    "prefLabel": "on-error",
    "skos:exactMatch": [
+    {
+     "id": "dsi:property/foreground"
+    },
     {
      "id": "dsi:usage/on-fill"
     }
@@ -14400,6 +14515,9 @@
    "prefLabel": "on-primary",
    "skos:exactMatch": [
     {
+     "id": "dsi:property/foreground"
+    },
+    {
      "id": "dsi:usage/on-fill"
     }
    ]
@@ -14411,7 +14529,21 @@
    "prefLabel": "on-secondary",
    "skos:exactMatch": [
     {
+     "id": "dsi:property/foreground"
+    },
+    {
      "id": "dsi:usage/on-fill"
+    }
+   ]
+  },
+  {
+   "id": "dsi:vocab/material/on-surface",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/material",
+   "prefLabel": "on-surface",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:property/foreground"
     }
    ]
   },
@@ -14421,6 +14553,9 @@
    "inScheme": "dsi:scheme/vocab/material",
    "prefLabel": "on-tertiary",
    "skos:exactMatch": [
+    {
+     "id": "dsi:property/foreground"
+    },
     {
      "id": "dsi:usage/on-fill"
     }
@@ -14466,7 +14601,21 @@
    "prefLabel": "scrim",
    "skos:exactMatch": [
     {
+     "id": "dsi:property/background"
+    },
+    {
      "id": "dsi:usage/scrim"
+    }
+   ]
+  },
+  {
+   "id": "dsi:vocab/material/secondary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/material",
+   "prefLabel": "secondary",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:intent/accent"
     }
    ]
   },
@@ -14499,6 +14648,9 @@
    "prefLabel": "surface",
    "skos:exactMatch": [
     {
+     "id": "dsi:property/background"
+    },
+    {
      "id": "dsi:usage/surface"
     }
    ]
@@ -14518,11 +14670,33 @@
    ]
   },
   {
+   "id": "dsi:vocab/material/tertiary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/material",
+   "prefLabel": "tertiary",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:intent/accent"
+    }
+   ]
+  },
+  {
    "id": "dsi:vocab/material/tertiary-container",
    "type": "Concept",
    "inScheme": "dsi:scheme/vocab/material",
    "prefLabel": "tertiary-container",
    "skos:exactMatch": [
+    {
+     "id": "dsi:emphasis/subtle"
+    }
+   ]
+  },
+  {
+   "id": "dsi:vocab/material/variant",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/vocab/material",
+   "prefLabel": "variant",
+   "skos:closeMatch": [
     {
      "id": "dsi:emphasis/subtle"
     }
@@ -14559,6 +14733,22 @@
     }
    ],
    "prefLabel": "Color: Accent · Background · Subtle"
+  },
+  {
+   "id": "dsi:concept/color/intent-accent/usage-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/accent"
+    }
+   ],
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/inverse"
+    }
+   ],
+   "prefLabel": "Color: Accent · Inverse"
   },
   {
    "id": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground",
@@ -14687,6 +14877,49 @@
    "prefLabel": "Color: Danger · On fill · Foreground · Subtle"
   },
   {
+   "id": "dsi:concept/color/property-border",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/border"
+    }
+   ],
+   "prefLabel": "Color: Border"
+  },
+  {
+   "id": "dsi:concept/color/property-border/emphasis-subtle",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/border"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/subtle"
+    }
+   ],
+   "prefLabel": "Color: Border · Subtle"
+  },
+  {
+   "id": "dsi:concept/color/property-foreground/emphasis-subtle",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/foreground"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/subtle"
+    }
+   ],
+   "prefLabel": "Color: Foreground · Subtle"
+  },
+  {
    "id": "dsi:concept/color/property-shadow",
    "type": "Concept",
    "inScheme": "dsi:scheme/canonical/color",
@@ -14771,6 +15004,22 @@
     }
    ],
    "prefLabel": "Color: Scrim"
+  },
+  {
+   "id": "dsi:concept/color/usage-surface/property-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/surface"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "prefLabel": "Color: Surface · Background"
   },
   {
    "id": "dsi:concept/color/usage-surface/property-background/emphasis-strong",

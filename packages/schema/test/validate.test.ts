@@ -91,6 +91,8 @@ const negatives: [string, (f: Record<string, any>) => void, RegExp][] = [
   ['concept with reserved facet', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color/component-button'), /reserved/],
   ['concept with no facets', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[2].concept = 'dsi:concept/color'), /at least one facet/],
   ['approved unmapped token that also has a mapping', (f) => { const u = f['mappings/material/2.4.0.mappings.json'].unmapped[0]; Object.assign(u, { token: 'md.sys.color.error', status: 'approved', review }); }, /approved as unmapped but also has a live mapping/],
+  ['stale unmapped proposal on an approved token', (f) => f['mappings/material/2.4.0.mappings.json'].unmapped.push({ token: 'md.sys.color.error', status: 'proposed', provenance: prov }), /stale proposal; the token already has an approved mapping/],
+  ['stale mapping proposal on an approved token', (f) => f['mappings/material/2.4.0.mappings.json'].mappings.push({ id: 'm9', token: 'md.sys.color.error', concept: 'dsi:intent/danger', match: 'close', confidence: 0.5, status: 'proposed', provenance: prov }), /stale proposal; the token is already settled/],
   ['part without component', (f) => (f['mappings/material/2.4.0.mappings.json'].bindings[0].facets.part = 'container'), /must have property component when property part is present/],
   ['confidence out of range', (f) => (f['mappings/material/2.4.0.mappings.json'].mappings[0].confidence = 1.5), /must be <= 1/],
   ['stored tier field', (f) => (f['mappings/material/2.4.0.mappings.json'].bindings[0].tier = 'dsi:tier/semantic'), /must NOT have unevaluated properties/],

@@ -194,9 +194,15 @@ function checkMappingSemantics(o: Ontology, m: MappingFile, at: string, productE
     if (ci) err(`noEquivalent[${i}]: concept ${x.concept} ${ci}`);
   });
   const mapped = new Set((m.mappings ?? []).filter((x) => x.status !== 'rejected' && x.status !== 'superseded').map((x) => x.token));
+  const approvedMapping = new Set((m.mappings ?? []).filter((x) => x.status === 'approved').map((x) => x.token));
+  const approvedUnmapped = new Set((m.unmapped ?? []).filter((x) => x.status === 'approved').map((x) => x.token));
   (m.unmapped ?? []).forEach((x, i) => {
     status(x, `unmapped[${i}]`);
     if (x.status === 'approved' && mapped.has(x.token)) err(`unmapped[${i}] ${x.token}: approved as unmapped but also has a live mapping`);
+    if (x.status === 'proposed' && approvedMapping.has(x.token)) err(`unmapped[${i}] ${x.token}: stale proposal; the token already has an approved mapping`);
+  });
+  (m.mappings ?? []).forEach((x, i) => {
+    if (x.status === 'proposed' && (approvedMapping.has(x.token) || approvedUnmapped.has(x.token))) err(`mappings[${i}] ${x.token}: stale proposal; the token is already settled`);
   });
   return out;
 }
