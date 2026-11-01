@@ -1,5 +1,5 @@
 export interface Product { id: string; name: string; organization?: string; homepage?: string; license?: string; description: string; version: string; implementation?: string; redistribution?: string; modes: Record<string, string>; counts: { tokens: number; mapped: number; unmapped: number; answered: number } }
-export interface FacetValue { value: string; label: string; definition: string | null }
+export interface FacetValue { value: string; label: string; definition: string | null; broader?: string }
 export interface Meta { products: Product[]; catalog: { id: string; name: string; category: string; organization?: string; homepage?: string; description: string }[]; facets: Record<string, FacetValue[]>; concepts: number }
 export interface Cell { s: 'match' | 'nearest'; t: string; m: string; via: string; d: string }
 export interface Concept { iri: string; group: string; name: string; label: string; facets: Record<string, string>; cells: Record<string, Record<string, Cell>> }
