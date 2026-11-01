@@ -1,0 +1,3203 @@
+{
+  "packet": "audit-color-v1/spectrum@15.6.0",
+  "model": "claude-haiku-5-5",
+  "at": "2026-11-01T15:44:50.215Z",
+  "checks": [
+    {
+      "token": "accent-background-color-hover",
+      "finding": "same-value-different-intent: accent-background-color-hover, informative-background-color-hover resolve to the same tokens in every theme but map to intents accent, info"
+    },
+    {
+      "token": "focus-indicator-color",
+      "finding": "terms-contradict-mapping: state: (unbound) vs terms focus (terms: focus)"
+    },
+    {
+      "token": "neutral-content-color-selected-key-focus",
+      "finding": "terms-contradict-mapping: state: focus+selected vs terms focus (terms: key-focus, neutral, content, selected, focus)"
+    }
+  ],
+  "verdicts": [
+    {
+      "token": "accent-background-color-default",
+      "mappingId": "m-bcf300092536",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "accent-background-color-default",
+          "says": "used by stack-item-selected-background-color-highlight, stack-item-selected-background-color-emphasized"
+        }
+      ]
+    },
+    {
+      "token": "accent-background-color-hover",
+      "mappingId": "m-c7836d058b26",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "accent-background-color-hover",
+          "says": "name and value only (#274dea); no description, usage or docs state this token's role"
+        }
+      ],
+      "note": "Check same-value-different-intent is expected: Spectrum accent and informative both resolve to blue; token name carries the intent."
+    },
+    {
+      "token": "accent-content-color-default",
+      "mappingId": "m-8a7e4983848c",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "accent-content-color-default",
+          "says": "name and value only (#3b63fb); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "accent-content-color-down",
+      "mappingId": "m-639562b27368",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "accent-content-color-down",
+          "says": "used by accent-content-color-selected"
+        }
+      ]
+    },
+    {
+      "token": "accent-content-color-hover",
+      "mappingId": "m-3101c2fee648",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "accent-content-color-hover",
+          "says": "name and value only (#274dea); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "accent-content-color-key-focus",
+      "mappingId": "m-a9cc01219b85",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "accent-content-color-key-focus",
+          "says": "name and value only (#274dea); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "accent-content-color-selected",
+      "mappingId": "m-22c6db5d4b99",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "accent-content-color-selected",
+          "says": "name and value only (#274dea); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "accent-subtle-background-color-default",
+      "mappingId": "m-fcd0024f035c",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "accent-subtle-background-color-default",
+          "says": "name and value only (#e5f0fe); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "background-base-color",
+      "mappingId": "m-a618bfdaff3a",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "background-base-color",
+          "says": "name and value only (#ffffff); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "base-gap-2x-large",
+      "mappingId": "m-efb73473bee4",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-gap-2x-large",
+          "says": "Spacing between child elements for base UI elements at 2x-large size"
+        }
+      ]
+    },
+    {
+      "token": "base-gap-3x-large",
+      "mappingId": "m-d44b25805ccd",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-gap-3x-large",
+          "says": "Spacing between child elements for base UI elements at 3x-large size"
+        }
+      ]
+    },
+    {
+      "token": "base-gap-4x-large",
+      "mappingId": "m-85700e30d368",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-gap-4x-large",
+          "says": "Spacing between child elements for base UI elements at 4x-large size"
+        }
+      ]
+    },
+    {
+      "token": "base-gap-extra-large",
+      "mappingId": "m-5e10fb4d27b0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-gap-extra-large",
+          "says": "Spacing between child elements for base UI elements at extra-large size"
+        },
+        {
+          "kind": "usage",
+          "source": "base-gap-extra-large",
+          "says": "used by form-item-gap-extra-large"
+        }
+      ]
+    },
+    {
+      "token": "base-gap-extra-small",
+      "mappingId": "m-d4147c2e00e4",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-gap-extra-small",
+          "says": "Spacing between child elements for base UI elements at extra-small size"
+        }
+      ]
+    },
+    {
+      "token": "base-gap-large",
+      "mappingId": "m-cf5858fdc2a3",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-gap-large",
+          "says": "Spacing between child elements for base UI elements at large size"
+        },
+        {
+          "kind": "usage",
+          "source": "base-gap-large",
+          "says": "used by form-item-gap-large"
+        }
+      ]
+    },
+    {
+      "token": "base-gap-medium",
+      "mappingId": "m-14567f2d6c67",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-gap-medium",
+          "says": "Spacing between child elements for base UI elements at medium size"
+        },
+        {
+          "kind": "usage",
+          "source": "base-gap-medium",
+          "says": "used by form-item-gap-medium"
+        }
+      ]
+    },
+    {
+      "token": "base-gap-small",
+      "mappingId": "m-789b6c298efb",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-gap-small",
+          "says": "Spacing between child elements for base UI elements at small size"
+        },
+        {
+          "kind": "usage",
+          "source": "base-gap-small",
+          "says": "used by form-item-gap-small"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-2x-large",
+      "mappingId": "m-6ea469217f0f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-2x-large",
+          "says": "Horizontal internal spacing for base UI elements at 2x-large size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-extra-large",
+      "mappingId": "m-7bb9c639ec0e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-extra-large",
+          "says": "Horizontal internal spacing for base UI elements at extra-large size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-extra-small",
+      "mappingId": "m-f29cbead4f4b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-extra-small",
+          "says": "Horizontal internal spacing for base UI elements at extra-small size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-large",
+      "mappingId": "m-247c6b8aa427",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-large",
+          "says": "Horizontal internal spacing for base UI elements at large size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-medium",
+      "mappingId": "m-9b1e7bedd7d7",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-medium",
+          "says": "Horizontal internal spacing for base UI elements at medium size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-small",
+      "mappingId": "m-9aadc6114f10",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-small",
+          "says": "Horizontal internal spacing for base UI elements at small size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-uniform-2x-large",
+      "mappingId": "m-182c2ad1926d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-uniform-2x-large",
+          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at 2x-large size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-uniform-2x-small",
+      "mappingId": "m-cd379965404d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-uniform-2x-small",
+          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at 2x-small size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-uniform-extra-large",
+      "mappingId": "m-0a2aad843fe1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-uniform-extra-large",
+          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at extra-large size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-uniform-extra-small",
+      "mappingId": "m-509f165f734b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-uniform-extra-small",
+          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at extra-small size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-uniform-large",
+      "mappingId": "m-aa9c2be5acbf",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-uniform-large",
+          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at large size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-uniform-medium",
+      "mappingId": "m-e4e196118028",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-uniform-medium",
+          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at medium size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-horizontal-uniform-small",
+      "mappingId": "m-f07fd4a1bc8d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-horizontal-uniform-small",
+          "says": "Horizontal internal spacing with uniform dimensions for base UI elements at small size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-vertical-2x-large",
+      "mappingId": "m-ef2ff2dc20e4",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-vertical-2x-large",
+          "says": "Vertical internal spacing for base UI elements at 2x-large size"
+        },
+        {
+          "kind": "usage",
+          "source": "base-padding-vertical-2x-large",
+          "says": "used by base-padding-horizontal-uniform-2x-large"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-vertical-2x-small",
+      "mappingId": "m-4a575a664af8",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-vertical-2x-small",
+          "says": "Vertical internal spacing for base UI elements at 2x-small size"
+        },
+        {
+          "kind": "usage",
+          "source": "base-padding-vertical-2x-small",
+          "says": "used by base-padding-horizontal-uniform-2x-small"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-vertical-3x-large",
+      "mappingId": "m-a58c0cc80eb1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-vertical-3x-large",
+          "says": "Vertical internal spacing for base UI elements at 3x-large size"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-vertical-extra-large",
+      "mappingId": "m-a69e1ff2e35f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-vertical-extra-large",
+          "says": "Vertical internal spacing for base UI elements at extra-large size"
+        },
+        {
+          "kind": "usage",
+          "source": "base-padding-vertical-extra-large",
+          "says": "used by base-padding-horizontal-uniform-extra-large"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-vertical-extra-small",
+      "mappingId": "m-9ac166c54299",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-vertical-extra-small",
+          "says": "Vertical internal spacing for base UI elements at extra-small size"
+        },
+        {
+          "kind": "usage",
+          "source": "base-padding-vertical-extra-small",
+          "says": "used by base-padding-horizontal-uniform-extra-small"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-vertical-large",
+      "mappingId": "m-6dee22391503",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-vertical-large",
+          "says": "Vertical internal spacing for base UI elements at large size"
+        },
+        {
+          "kind": "usage",
+          "source": "base-padding-vertical-large",
+          "says": "used by base-padding-horizontal-uniform-large"
+        },
+        {
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "Padding tokens include base-padding-vertical-large (design-tokens page)"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-vertical-medium",
+      "mappingId": "m-bdf37d346a88",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-vertical-medium",
+          "says": "Vertical internal spacing for base UI elements at medium size"
+        },
+        {
+          "kind": "usage",
+          "source": "base-padding-vertical-medium",
+          "says": "used by base-padding-horizontal-uniform-medium"
+        }
+      ]
+    },
+    {
+      "token": "base-padding-vertical-small",
+      "mappingId": "m-db0a0c666428",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "base-padding-vertical-small",
+          "says": "Vertical internal spacing for base UI elements at small size"
+        },
+        {
+          "kind": "usage",
+          "source": "base-padding-vertical-small",
+          "says": "used by base-padding-horizontal-uniform-small"
+        }
+      ]
+    },
+    {
+      "token": "black-font-weight",
+      "mappingId": "m-65d2c7949a98",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "black-font-weight",
+          "says": "used by heading-cjk-emphasized-font-weight, heading-cjk-heavy-emphasized-font-weight, heading-cjk-heavy-strong-emphasized-font-weight, heading-cjk-heavy-strong-font-weight, heading-cjk-strong-emphasized-font-weight, heading-cjk-strong-font-weight"
+        }
+      ]
+    },
+    {
+      "token": "blue-background-color-default",
+      "mappingId": "m-b7ed2e0b83bd",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "blue-background-color-default",
+          "says": "name and value only (#3b63fb); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "blue-subtle-background-color-default",
+      "mappingId": "m-b0db3d1cd83a",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "blue-subtle-background-color-default",
+          "says": "name and value only (#e5f0fe); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "bold-font-weight",
+      "mappingId": "m-4e2c305f07a9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "bold-font-weight",
+          "says": "used by body-sans-serif-strong-emphasized-font-weight, body-sans-serif-strong-font-weight, body-serif-strong-emphasized-font-weight, body-serif-strong-font-weight, code-cjk-emphasized-font-weight, code-cjk-strong-emphasized-font-weight"
+        }
+      ]
+    },
+    {
+      "token": "border-width-100",
+      "mappingId": "m-814d3913f4c6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "border-width-100",
+          "says": "used by avatar-border-width, color-area-border-width, picker-border-width"
+        }
+      ]
+    },
+    {
+      "token": "border-width-200",
+      "mappingId": "m-aae78288e216",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "border-width-200",
+          "says": "used by color-handle-border-width, color-loupe-outer-border-width, segmented-control-selection-border-width"
+        }
+      ]
+    },
+    {
+      "token": "border-width-400",
+      "mappingId": "m-dfaba990c6fc",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "border-width-400",
+          "says": "name and value only (4px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "brown-subtle-background-color-default",
+      "mappingId": "m-beb6541fa5f0",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "brown-subtle-background-color-default",
+          "says": "name and value only (#f7eee1); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "cjk-font-family",
+      "mappingId": "m-466c8582abca",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "cjk-font-family",
+          "says": "used by body-cjk-font-family, detail-cjk-font-family, heading-cjk-font-family, title-cjk-font-family"
+        }
+      ]
+    },
+    {
+      "token": "cjk-line-height-100",
+      "mappingId": "m-d1e19d0957eb",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "cjk-line-height-100",
+          "says": "used by detail-cjk-line-height, heading-cjk-line-height, title-cjk-line-height"
+        }
+      ]
+    },
+    {
+      "token": "cjk-line-height-200",
+      "mappingId": "m-cc51691a21a5",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "cjk-line-height-200",
+          "says": "used by body-cjk-line-height, code-cjk-line-height"
+        }
+      ]
+    },
+    {
+      "token": "component-bottom-to-text-100",
+      "mappingId": "m-374985215475",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-bottom-to-text-100",
+          "says": "used by breadcrumbs-bottom-to-text-compact, table-row-bottom-to-text-medium-compact"
+        }
+      ]
+    },
+    {
+      "token": "component-bottom-to-text-200",
+      "mappingId": "m-99421a88f49f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-bottom-to-text-200",
+          "says": "used by breadcrumbs-bottom-to-text, table-row-bottom-to-text-large-compact"
+        }
+      ]
+    },
+    {
+      "token": "component-bottom-to-text-300",
+      "mappingId": "m-27c41b8b9f2d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-bottom-to-text-300",
+          "says": "used by table-row-bottom-to-text-extra-large-compact"
+        }
+      ]
+    },
+    {
+      "token": "component-bottom-to-text-50",
+      "mappingId": "m-1cc8918cdc9a",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-bottom-to-text-50",
+          "says": "name and value only (3px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-bottom-to-text-75",
+      "mappingId": "m-20f2dae49b6f",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-bottom-to-text-75",
+          "says": "used by table-row-bottom-to-text-small-compact"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-text-100",
+      "mappingId": "m-8c0b0d68420e",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-text-100",
+          "says": "name and value only (12px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-text-200",
+      "mappingId": "m-a736c8081e2e",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-text-200",
+          "says": "name and value only (15px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-text-300",
+      "mappingId": "m-87c0ccb1fa82",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-text-300",
+          "says": "name and value only (18px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-text-50",
+      "mappingId": "m-6ecb619b90b2",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-text-50",
+          "says": "name and value only (8px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-text-75",
+      "mappingId": "m-e4857704f39a",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-text-75",
+          "says": "name and value only (9px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-visual-100",
+      "mappingId": "m-54d3cef0b508",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-visual-100",
+          "says": "name and value only (10px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-visual-200",
+      "mappingId": "m-6eec4db13209",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-visual-200",
+          "says": "name and value only (13px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-visual-300",
+      "mappingId": "m-104c99c73ce1",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-visual-300",
+          "says": "name and value only (15px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-visual-50",
+      "mappingId": "m-d73a43a25928",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-visual-50",
+          "says": "name and value only (6px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-visual-75",
+      "mappingId": "m-4023d2154161",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-visual-75",
+          "says": "name and value only (7px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-visual-only-100",
+      "mappingId": "m-3cb578f457e8",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-visual-only-100",
+          "says": "name and value only (6px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-visual-only-200",
+      "mappingId": "m-c624c096c4e4",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-visual-only-200",
+          "says": "name and value only (9px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-visual-only-300",
+      "mappingId": "m-7b692fd352a3",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-visual-only-300",
+          "says": "name and value only (11px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-visual-only-50",
+      "mappingId": "m-d5966684eb6f",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-visual-only-50",
+          "says": "name and value only (3px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-edge-to-visual-only-75",
+      "mappingId": "m-0a933b4d27cb",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-edge-to-visual-only-75",
+          "says": "name and value only (4px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-height-100",
+      "mappingId": "m-52cac6e8d63c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-height-100",
+          "says": "used by breadcrumbs-height-compact, rating-height-medium, segmented-control-item-height, table-row-height-medium-compact, tab-item-compact-height-medium"
+        }
+      ]
+    },
+    {
+      "token": "component-height-200",
+      "mappingId": "m-aba5e6af3ea6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-height-200",
+          "says": "used by breadcrumbs-height, table-row-height-large-compact, tab-item-compact-height-large, tab-item-height-small"
+        }
+      ]
+    },
+    {
+      "token": "component-height-300",
+      "mappingId": "m-5907a6b96958",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-height-300",
+          "says": "used by table-row-height-extra-large-compact, tab-item-compact-height-extra-large, tab-item-height-medium"
+        }
+      ]
+    },
+    {
+      "token": "component-height-400",
+      "mappingId": "m-e99b801fb4c1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-height-400",
+          "says": "used by action-bar-height, tab-item-height-large"
+        }
+      ]
+    },
+    {
+      "token": "component-height-50",
+      "mappingId": "m-92d3d5e78a1b",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-height-50",
+          "says": "name and value only (20px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-height-500",
+      "mappingId": "m-4a1105f805cf",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-height-500",
+          "says": "used by tab-item-height-extra-large"
+        }
+      ]
+    },
+    {
+      "token": "component-height-75",
+      "mappingId": "m-c0913e43bc96",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-height-75",
+          "says": "used by rating-height-small, table-row-height-small-compact, tab-item-compact-height-small"
+        }
+      ]
+    },
+    {
+      "token": "component-padding-vertical-100",
+      "mappingId": "m-f2fc8049713b",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-padding-vertical-100",
+          "says": "name and value only (7px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-padding-vertical-200",
+      "mappingId": "m-e75692760b32",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-padding-vertical-200",
+          "says": "name and value only (10px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-padding-vertical-300",
+      "mappingId": "m-fde75e7a5dc4",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-padding-vertical-300",
+          "says": "name and value only (13px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-padding-vertical-50",
+      "mappingId": "m-720226eab3fe",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-padding-vertical-50",
+          "says": "name and value only (3px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-padding-vertical-75",
+      "mappingId": "m-0e9f877f232f",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-padding-vertical-75",
+          "says": "name and value only (4px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-top-to-text-100",
+      "mappingId": "m-52a4130ca05d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-top-to-text-100",
+          "says": "used by breadcrumbs-top-to-text-compact, table-row-top-to-text-medium-compact"
+        }
+      ]
+    },
+    {
+      "token": "component-top-to-text-200",
+      "mappingId": "m-25915ae9aaa5",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-top-to-text-200",
+          "says": "used by breadcrumbs-top-to-text, table-row-top-to-text-large-compact"
+        }
+      ]
+    },
+    {
+      "token": "component-top-to-text-300",
+      "mappingId": "m-7c6c8012148b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-top-to-text-300",
+          "says": "used by action-bar-top-to-item-counter, table-row-top-to-text-extra-large-compact"
+        }
+      ]
+    },
+    {
+      "token": "component-top-to-text-50",
+      "mappingId": "m-0958fdcbe60d",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "component-top-to-text-50",
+          "says": "name and value only (3px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "component-top-to-text-75",
+      "mappingId": "m-dbe897a504d9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "component-top-to-text-75",
+          "says": "used by table-row-top-to-text-small-compact"
+        }
+      ]
+    },
+    {
+      "token": "container-gap-2x-large",
+      "mappingId": "m-741c6d1be716",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-gap-2x-large",
+          "says": "Spacing between child elements for containers at 2x-large size"
+        }
+      ]
+    },
+    {
+      "token": "container-gap-2x-small",
+      "mappingId": "m-2632b43f0ce3",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-gap-2x-small",
+          "says": "Spacing between child elements for containers at 2x-small size"
+        }
+      ]
+    },
+    {
+      "token": "container-gap-extra-large",
+      "mappingId": "m-949a5d3eb7c4",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-gap-extra-large",
+          "says": "Spacing between child elements for containers at extra-large size"
+        }
+      ]
+    },
+    {
+      "token": "container-gap-extra-small",
+      "mappingId": "m-a886db1ee75e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-gap-extra-small",
+          "says": "Spacing between child elements for containers at extra-small size"
+        }
+      ]
+    },
+    {
+      "token": "container-gap-large",
+      "mappingId": "m-47bbb8e306a0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-gap-large",
+          "says": "Spacing between child elements for containers at large size"
+        }
+      ]
+    },
+    {
+      "token": "container-gap-medium",
+      "mappingId": "m-c10f6bb379c5",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-gap-medium",
+          "says": "Spacing between child elements for containers at medium size"
+        }
+      ]
+    },
+    {
+      "token": "container-gap-small",
+      "mappingId": "m-a5c565fb225b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-gap-small",
+          "says": "Spacing between child elements for containers at small size"
+        }
+      ]
+    },
+    {
+      "token": "container-padding-2x-large",
+      "mappingId": "m-6675c2c57a4a",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-padding-2x-large",
+          "says": "Internal spacing for containers at 2x-large size"
+        }
+      ]
+    },
+    {
+      "token": "container-padding-2x-small",
+      "mappingId": "m-3e287c7346c0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-padding-2x-small",
+          "says": "Internal spacing for containers at 2x-small size"
+        }
+      ]
+    },
+    {
+      "token": "container-padding-3x-large",
+      "mappingId": "m-f5b9b6d28163",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-padding-3x-large",
+          "says": "Internal spacing for containers at 3x-large size"
+        }
+      ]
+    },
+    {
+      "token": "container-padding-extra-large",
+      "mappingId": "m-962893266773",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-padding-extra-large",
+          "says": "Internal spacing for containers at extra-large size"
+        }
+      ]
+    },
+    {
+      "token": "container-padding-extra-small",
+      "mappingId": "m-a374d75ddeda",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-padding-extra-small",
+          "says": "Internal spacing for containers at extra-small size"
+        }
+      ]
+    },
+    {
+      "token": "container-padding-large",
+      "mappingId": "m-867ea30edcdc",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-padding-large",
+          "says": "Internal spacing for containers at large size"
+        }
+      ]
+    },
+    {
+      "token": "container-padding-medium",
+      "mappingId": "m-ae9e2ab55ff0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-padding-medium",
+          "says": "Internal spacing for containers at medium size"
+        },
+        {
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "Padding tokens include container-padding-medium (design-tokens page)"
+        }
+      ]
+    },
+    {
+      "token": "container-padding-small",
+      "mappingId": "m-f168374ef404",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "container-padding-small",
+          "says": "Internal spacing for containers at small size"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-0",
+      "mappingId": "m-437700c72759",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-0",
+          "says": "used by corner-radius-none"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-100",
+      "mappingId": "m-62856416d181",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-100",
+          "says": "used by corner-radius-small-default, corner-radius-small-size-medium"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-200",
+      "mappingId": "m-adaf179e5067",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-200",
+          "says": "used by corner-radius-small-size-large"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-300",
+      "mappingId": "m-140f5aa5e03e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-300",
+          "says": "used by corner-radius-medium-size-extra-small, corner-radius-small-size-extra-large"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-400",
+      "mappingId": "m-f7c8a6ba2cc6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-400",
+          "says": "used by corner-radius-medium-size-small"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-500",
+      "mappingId": "m-a391908c4ad5",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-500",
+          "says": "used by corner-radius-medium-default, corner-radius-medium-size-medium"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-600",
+      "mappingId": "m-d1b3b8ee4a57",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-600",
+          "says": "used by corner-radius-medium-size-large"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-700",
+      "mappingId": "m-a2869dc9f696",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-700",
+          "says": "used by corner-radius-large-default, corner-radius-medium-size-extra-large"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-75",
+      "mappingId": "m-208553364ada",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-75",
+          "says": "used by corner-radius-small-size-small, thumbnail-corner-radius"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-800",
+      "mappingId": "m-563407b47570",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-800",
+          "says": "used by corner-radius-extra-large-default"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-extra-large-default",
+      "mappingId": "m-7683c3de4501",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-extra-large-default",
+          "says": "name and value only (16px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-large-default",
+      "mappingId": "m-7fb8be630bd1",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-large-default",
+          "says": "name and value only (10px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-medium-default",
+      "mappingId": "m-7173683c7377",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-medium-default",
+          "says": "used by list-view-item-bottom-corner-radius, list-view-item-top-corner-radius"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-medium-size-extra-large",
+      "mappingId": "m-b6e33814b568",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-medium-size-extra-large",
+          "says": "name and value only (10px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-medium-size-extra-small",
+      "mappingId": "m-8e75ed7f1c76",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-medium-size-extra-small",
+          "says": "name and value only (6px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-medium-size-large",
+      "mappingId": "m-707c47b4d913",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-medium-size-large",
+          "says": "name and value only (9px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-medium-size-medium",
+      "mappingId": "m-38ad5c1e87f3",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-medium-size-medium",
+          "says": "name and value only (8px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-medium-size-small",
+      "mappingId": "m-f4c221513e05",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "corner-radius-medium-size-small",
+          "says": "used by color-area-border-rounding, color-slider-border-rounding"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-none",
+      "mappingId": "m-81c79100350d",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-none",
+          "says": "name and value only (0px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-small-default",
+      "mappingId": "m-cba635ef1e26",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-small-default",
+          "says": "name and value only (4px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-small-size-extra-large",
+      "mappingId": "m-9fa37d3a788d",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-small-size-extra-large",
+          "says": "name and value only (6px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-small-size-large",
+      "mappingId": "m-bb98681da151",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-small-size-large",
+          "says": "name and value only (5px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-small-size-medium",
+      "mappingId": "m-d5cf2147133c",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-small-size-medium",
+          "says": "name and value only (4px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "corner-radius-small-size-small",
+      "mappingId": "m-1706ea74f639",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "corner-radius-small-size-small",
+          "says": "name and value only (3px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "cyan-subtle-background-color-default",
+      "mappingId": "m-d01da92ad8fc",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "cyan-subtle-background-color-default",
+          "says": "name and value only (#d9f4fd); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "default-font-family",
+      "mappingId": "m-92511c0151e1",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "default-font-family",
+          "says": "name and value only (Adobe Clean Spectrum VF); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "disabled-background-color",
+      "mappingId": "m-32140e9c43e3",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "disabled-background-color",
+          "says": "name and value only (#e9e9e9); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "disabled-border-color",
+      "mappingId": "m-8c220b329c45",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "disabled-border-color",
+          "says": "name and value only (#dadada); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "disabled-content-color",
+      "mappingId": "m-944f78116bdd",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "disabled-content-color",
+          "says": "name and value only (#c6c6c6); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "disabled-static-black-background-color",
+      "mappingId": "m-c57860b80929",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "disabled-static-black-background-color",
+          "says": "name and value only (#000000 @ 0.09); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "disabled-static-black-border-color",
+      "mappingId": "m-14817d4e0cbd",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "disabled-static-black-border-color",
+          "says": "name and value only (#000000 @ 0.15); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "disabled-static-black-content-color",
+      "mappingId": "m-3c3d15b5498c",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "disabled-static-black-content-color",
+          "says": "name and value only (#000000 @ 0.22); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "drop-shadow-color",
+      "mappingId": "m-b844ffcfa755",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "drop-shadow-color",
+          "says": "used by color-handle-drop-shadow-color"
+        }
+      ]
+    },
+    {
+      "token": "drop-shadow-dragged-color",
+      "mappingId": "m-43e97daac965",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "drop-shadow-dragged-color",
+          "says": "name and value only (#000000 @ 0.2); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "extra-bold-font-weight",
+      "mappingId": "m-545fd7833c40",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "extra-bold-font-weight",
+          "says": "used by body-cjk-emphasized-font-weight, body-cjk-strong-emphasized-font-weight, body-cjk-strong-font-weight, detail-cjk-emphasized-font-weight, detail-cjk-light-strong-emphasized-font-weight, detail-cjk-light-strong-font-weight"
+        }
+      ]
+    },
+    {
+      "token": "focus-indicator-color",
+      "mappingId": "m-134b32fb40cf",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "focus-indicator-color",
+          "says": "name and value only (#4b75ff); no description, usage or docs state this token's role"
+        }
+      ],
+      "note": "Terms check flags state unbound; mapping is property-focus-ring, not a state. Docs do not mention focus-indicator."
+    },
+    {
+      "token": "font-size-100",
+      "mappingId": "m-74239b18cab6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-100",
+          "says": "used by action-bar-counter-font-size, body-cjk-size-m, body-size-s, code-size-s, detail-cjk-size-l, detail-size-m"
+        }
+      ]
+    },
+    {
+      "token": "font-size-1000",
+      "mappingId": "m-0371d84080d5",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-1000",
+          "says": "used by heading-cjk-size-xxl"
+        }
+      ]
+    },
+    {
+      "token": "font-size-1100",
+      "mappingId": "m-615c97f283ae",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-1100",
+          "says": "used by heading-size-xxl"
+        }
+      ]
+    },
+    {
+      "token": "font-size-1200",
+      "mappingId": "m-6173572e8b17",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-1200",
+          "says": "used by heading-cjk-size-xxxl"
+        }
+      ]
+    },
+    {
+      "token": "font-size-1300",
+      "mappingId": "m-8478bbff85f2",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-1300",
+          "says": "used by heading-size-xxxl"
+        }
+      ]
+    },
+    {
+      "token": "font-size-1400",
+      "mappingId": "m-7bafab6a2d35",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-1400",
+          "says": "used by heading-cjk-size-xxxxl"
+        }
+      ]
+    },
+    {
+      "token": "font-size-1500",
+      "mappingId": "m-a0eeeaa0615e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-1500",
+          "says": "used by heading-size-xxxxl"
+        }
+      ]
+    },
+    {
+      "token": "font-size-200",
+      "mappingId": "m-92f8265da923",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-200",
+          "says": "used by body-cjk-size-l, body-size-m, code-size-m, detail-cjk-size-xl, detail-size-l, heading-cjk-size-xs"
+        }
+      ]
+    },
+    {
+      "token": "font-size-25",
+      "mappingId": "m-b4d35ed36304",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-25",
+          "says": "used by body-cjk-size-xxs, detail-cjk-size-xs"
+        }
+      ]
+    },
+    {
+      "token": "font-size-300",
+      "mappingId": "m-0dd10c41df19",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-300",
+          "says": "used by body-cjk-size-xl, body-size-l, code-size-l, detail-size-xl, heading-cjk-size-s, heading-size-xs"
+        }
+      ]
+    },
+    {
+      "token": "font-size-400",
+      "mappingId": "m-a181bf728cfb",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-400",
+          "says": "used by body-cjk-size-xxl, body-size-xl, code-size-xl, heading-cjk-size-m, heading-size-s, title-cjk-size-xxl"
+        }
+      ]
+    },
+    {
+      "token": "font-size-50",
+      "mappingId": "m-949ef3fe05a3",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-50",
+          "says": "used by body-cjk-size-xs, body-size-xxs, detail-cjk-size-s, detail-size-xs, title-cjk-size-xs"
+        }
+      ]
+    },
+    {
+      "token": "font-size-500",
+      "mappingId": "m-5ec0c21c7da0",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-500",
+          "says": "used by body-cjk-size-xxxl, body-size-xxl, heading-size-m, title-cjk-size-xxxl, title-size-xxl"
+        }
+      ]
+    },
+    {
+      "token": "font-size-600",
+      "mappingId": "m-0785118cfb35",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-600",
+          "says": "used by body-size-xxxl, heading-cjk-size-l, title-size-xxxl"
+        }
+      ]
+    },
+    {
+      "token": "font-size-700",
+      "mappingId": "m-582f339793b5",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-700",
+          "says": "used by heading-size-l"
+        }
+      ]
+    },
+    {
+      "token": "font-size-75",
+      "mappingId": "m-30767a476ec6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-75",
+          "says": "used by body-cjk-size-s, body-size-xs, code-size-xs, detail-cjk-size-m, detail-size-s, title-cjk-size-s"
+        }
+      ]
+    },
+    {
+      "token": "font-size-800",
+      "mappingId": "m-4a7a11b074bb",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-800",
+          "says": "used by heading-cjk-size-xl"
+        }
+      ]
+    },
+    {
+      "token": "font-size-900",
+      "mappingId": "m-f7ec2ac59420",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "font-size-900",
+          "says": "used by heading-size-xl"
+        }
+      ]
+    },
+    {
+      "token": "gap-horizontal",
+      "mappingId": "m-7eefa3fa438e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "gap-horizontal",
+          "says": "Spacing between child elements for banner components"
+        }
+      ]
+    },
+    {
+      "token": "gap-regular",
+      "mappingId": "m-096d707869ce",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "gap-regular",
+          "says": "Spacing between child elements for list structures (regular density)"
+        }
+      ]
+    },
+    {
+      "token": "gap-vertical",
+      "mappingId": "m-7984f5bcecb4",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "gap-vertical",
+          "says": "Spacing between child elements for banner components"
+        }
+      ]
+    },
+    {
+      "token": "gray-subtle-background-color-default",
+      "mappingId": "m-93172beeb75c",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "gray-subtle-background-color-default",
+          "says": "name and value only (#e9e9e9); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "green-background-color-default",
+      "mappingId": "m-9ff013aaf31e",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "green-background-color-default",
+          "says": "name and value only (#05834e); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "green-subtle-background-color-default",
+      "mappingId": "m-e2edd046eadb",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "green-subtle-background-color-default",
+          "says": "name and value only (#d7f7e1); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "group-gap-compact",
+      "mappingId": "m-8ae406bccef8",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "group-gap-compact",
+          "says": "Spacing between child elements (compact density)"
+        }
+      ]
+    },
+    {
+      "token": "group-gap-extra-large",
+      "mappingId": "m-d1f6a3fe1058",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "group-gap-extra-large",
+          "says": "Spacing between child elements at extra-large size"
+        }
+      ]
+    },
+    {
+      "token": "group-gap-extra-large-spacious",
+      "mappingId": "m-ced8f51ee1b9",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "group-gap-extra-large-spacious",
+          "says": "name and value only (24px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "group-gap-extra-small",
+      "mappingId": "m-e8cda9e07787",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "group-gap-extra-small",
+          "says": "Spacing between child elements at extra-small size"
+        }
+      ]
+    },
+    {
+      "token": "group-gap-extra-small-spacious",
+      "mappingId": "m-f2d136917e32",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "group-gap-extra-small-spacious",
+          "says": "name and value only (8px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "group-gap-large",
+      "mappingId": "m-50b4389e7066",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "group-gap-large",
+          "says": "Spacing between child elements at large size"
+        }
+      ]
+    },
+    {
+      "token": "group-gap-large-spacious",
+      "mappingId": "m-9a150acaed10",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "group-gap-large-spacious",
+          "says": "name and value only (20px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "group-gap-medium",
+      "mappingId": "m-e2207f2a564c",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "group-gap-medium",
+          "says": "Spacing between child elements at medium size"
+        }
+      ]
+    },
+    {
+      "token": "group-gap-medium-spacious",
+      "mappingId": "m-d85646d9ad9f",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "group-gap-medium-spacious",
+          "says": "name and value only (16px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "group-gap-small",
+      "mappingId": "m-3cce8ba84194",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "group-gap-small",
+          "says": "Spacing between child elements at small size"
+        },
+        {
+          "kind": "docs",
+          "source": "https://spectrum.adobe.com/page/design-tokens/",
+          "says": "Gap tokens include group-gap-small (design-tokens page lists gap tokens by name)"
+        }
+      ]
+    },
+    {
+      "token": "group-gap-small-spacious",
+      "mappingId": "m-f4fda1001ae4",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "group-gap-small-spacious",
+          "says": "name and value only (12px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "icon-color-informative",
+      "mappingId": "m-fca7f3371d97",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "icon-color-informative",
+          "says": "name and value only (#4b75ff); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "icon-color-negative",
+      "mappingId": "m-3b7d3724707e",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "icon-color-negative",
+          "says": "name and value only (#f03823); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "icon-color-neutral",
+      "mappingId": "m-15e6aa73792a",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "icon-color-neutral",
+          "says": "name and value only (#8f8f8f); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "icon-color-notice",
+      "mappingId": "m-f8608766b62a",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "icon-color-notice",
+          "says": "name and value only (#d45b00); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "icon-color-positive",
+      "mappingId": "m-4becd554cbc7",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "icon-color-positive",
+          "says": "name and value only (#079355); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "indigo-background-color-default",
+      "mappingId": "m-fcd1fbd2942d",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "indigo-background-color-default",
+          "says": "name and value only (#7155fa); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "indigo-subtle-background-color-default",
+      "mappingId": "m-4274aa267813",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "indigo-subtle-background-color-default",
+          "says": "name and value only (#ebeeff); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "informative-background-color-default",
+      "mappingId": "m-a2fc0840d676",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "informative-background-color-default",
+          "says": "used by table-selected-row-background-color, tree-view-selected-row-background-color-emphasized"
+        }
+      ]
+    },
+    {
+      "token": "informative-background-color-hover",
+      "mappingId": "m-5d29e124481b",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "informative-background-color-hover",
+          "says": "name and value only (#274dea); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "informative-subtle-background-color-default",
+      "mappingId": "m-402ba7a886b4",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "informative-subtle-background-color-default",
+          "says": "name and value only (#e5f0fe); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "light-font-weight",
+      "mappingId": "m-932c910d64e6",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "light-font-weight",
+          "says": "used by detail-cjk-light-font-weight, heading-cjk-light-font-weight, heading-sans-serif-light-emphasized-font-weight, heading-sans-serif-light-font-weight"
+        }
+      ]
+    },
+    {
+      "token": "line-height-100",
+      "mappingId": "m-598daac76dd8",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "line-height-100",
+          "says": "used by detail-line-height, heading-line-height, title-line-height"
+        }
+      ]
+    },
+    {
+      "token": "line-height-200",
+      "mappingId": "m-7f5fbd1d8f17",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "line-height-200",
+          "says": "used by body-line-height, code-line-height"
+        }
+      ]
+    },
+    {
+      "token": "magenta-subtle-background-color-default",
+      "mappingId": "m-5ccb64aa7765",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "magenta-subtle-background-color-default",
+          "says": "name and value only (#ffe8f0); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "medium-font-weight",
+      "mappingId": "m-ee00c3142297",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "medium-font-weight",
+          "says": "used by detail-sans-serif-font-weight, detail-serif-emphasized-font-weight, detail-serif-font-weight"
+        }
+      ]
+    },
+    {
+      "token": "negative-border-color-default",
+      "mappingId": "m-000d0c00bb29",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "negative-border-color-default",
+          "says": "name and value only (#d73220); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "negative-border-color-down",
+      "mappingId": "m-f1ec7ffe4d6b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "negative-border-color-down",
+          "says": "used by negative-border-color-focus-hover"
+        }
+      ]
+    },
+    {
+      "token": "negative-border-color-focus",
+      "mappingId": "m-c1c59be7e9dd",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "negative-border-color-focus",
+          "says": "name and value only (#b72818); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "negative-border-color-focus-hover",
+      "mappingId": "m-55a7afbf833a",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "negative-border-color-focus-hover",
+          "says": "name and value only (#9c2113); no description, usage or docs state this token's role"
+        }
+      ],
+      "note": "Value equals negative-border-color-down (active); the name's focus+hover state is the only stated basis."
+    },
+    {
+      "token": "negative-border-color-hover",
+      "mappingId": "m-75fcb87b1814",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "negative-border-color-hover",
+          "says": "name and value only (#b72818); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "negative-border-color-key-focus",
+      "mappingId": "m-ce1b0bea3319",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "negative-border-color-key-focus",
+          "says": "name and value only (#b72818); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "negative-content-color-key-focus",
+      "mappingId": "m-c3d39ac9d7ef",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "negative-content-color-key-focus",
+          "says": "name and value only (#b72818); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "negative-subdued-background-color-default",
+      "mappingId": "m-b2f1ca870b2e",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "negative-subdued-background-color-default",
+          "says": "name and value only (#ffebe8); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "negative-subdued-background-color-down",
+      "mappingId": "m-56f3ceec637c",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "negative-subdued-background-color-down",
+          "says": "name and value only (#ffd6d1); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "negative-subdued-background-color-hover",
+      "mappingId": "m-d23bc237a87f",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "negative-subdued-background-color-hover",
+          "says": "name and value only (#ffd6d1); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "negative-subdued-background-color-key-focus",
+      "mappingId": "m-1c7a286b2b29",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "negative-subdued-background-color-key-focus",
+          "says": "name and value only (#ffd6d1); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "negative-subtle-background-color-default",
+      "mappingId": "m-e5d1f2de7c8e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "negative-subtle-background-color-default",
+          "says": "used by negative-subdued-background-color-default"
+        }
+      ]
+    },
+    {
+      "token": "neutral-content-color-key-focus",
+      "mappingId": "m-57e7c9f1b781",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "neutral-content-color-key-focus",
+          "says": "name and value only (#131313); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "neutral-content-color-selected-key-focus",
+      "mappingId": "m-8d9653588d11",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "neutral-content-color-selected-key-focus",
+          "says": "name and value only (#131313); no description, usage or docs state this token's role"
+        }
+      ],
+      "note": "Terms check flags focus+selected vs focus; close match is consistent with name."
+    },
+    {
+      "token": "neutral-subdued-content-color-default",
+      "mappingId": "m-f6de6e98e022",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "neutral-subdued-content-color-default",
+          "says": "name and value only (#505050); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "neutral-subtle-background-color-default",
+      "mappingId": "m-2e967e62fc1d",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "neutral-subtle-background-color-default",
+          "says": "name and value only (#e9e9e9); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "notice-background-color-default",
+      "mappingId": "m-fdbef5f5e144",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "notice-background-color-default",
+          "says": "name and value only (#fc7d00); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "notice-subtle-background-color-default",
+      "mappingId": "m-a31db10fea0d",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "notice-subtle-background-color-default",
+          "says": "name and value only (#ffeccf); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "opacity-disabled",
+      "mappingId": "m-8bf86786e654",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "opacity-disabled",
+          "says": "used by avatar-opacity-disabled, thumbnail-opacity-disabled"
+        }
+      ]
+    },
+    {
+      "token": "orange-background-color-default",
+      "mappingId": "m-aeddc289f6b3",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "orange-background-color-default",
+          "says": "name and value only (#fc7d00); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "orange-subtle-background-color-default",
+      "mappingId": "m-4ec98a3582f7",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "orange-subtle-background-color-default",
+          "says": "name and value only (#ffeccf); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "overlay-color",
+      "mappingId": "m-6715cc648831",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "overlay-color",
+          "says": "name and value only (#000000); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "overlay-opacity",
+      "mappingId": "m-809a067bf0cb",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "overlay-opacity",
+          "says": "name and value only (0.4); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "padding-horizontal",
+      "mappingId": "m-354a6ffc9b20",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "padding-horizontal",
+          "says": "Horizontal internal spacing for banner components"
+        }
+      ]
+    },
+    {
+      "token": "padding-vertical",
+      "mappingId": "m-116ba3d8a36e",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "description",
+          "source": "padding-vertical",
+          "says": "Vertical internal spacing for banner components"
+        }
+      ]
+    },
+    {
+      "token": "pink-background-color-default",
+      "mappingId": "m-f37f2b4dc089",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "pink-background-color-default",
+          "says": "name and value only (#ce2a92); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "pink-subtle-background-color-default",
+      "mappingId": "m-f7440937d2ad",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "pink-subtle-background-color-default",
+          "says": "name and value only (#ffe8f7); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "positive-background-color-default",
+      "mappingId": "m-d1d1c4db1eb6",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "positive-background-color-default",
+          "says": "name and value only (#05834e); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "positive-background-color-hover",
+      "mappingId": "m-641cb136bbd1",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "positive-background-color-hover",
+          "says": "name and value only (#036e45); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "positive-subtle-background-color-default",
+      "mappingId": "m-1ac2f2ca550f",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "positive-subtle-background-color-default",
+          "says": "name and value only (#d7f7e1); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "purple-background-color-default",
+      "mappingId": "m-be2b0ef6ad08",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "purple-background-color-default",
+          "says": "name and value only (#9a47e2); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "purple-subtle-background-color-default",
+      "mappingId": "m-ed5d323b6142",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "purple-subtle-background-color-default",
+          "says": "name and value only (#f4ebfc); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "red-background-color-default",
+      "mappingId": "m-3cc5d11e877d",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "red-background-color-default",
+          "says": "name and value only (#d73220); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "red-subtle-background-color-default",
+      "mappingId": "m-8398e66c3e2a",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "red-subtle-background-color-default",
+          "says": "name and value only (#ffebe8); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "regular-font-weight",
+      "mappingId": "m-ad97874b98ae",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "regular-font-weight",
+          "says": "used by body-cjk-font-weight, body-sans-serif-emphasized-font-weight, body-sans-serif-font-weight, body-serif-emphasized-font-weight, body-serif-font-weight, code-cjk-font-weight"
+        }
+      ]
+    },
+    {
+      "token": "sans-serif-font-family",
+      "mappingId": "m-a7fe0c3aad35",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "sans-serif-font-family",
+          "says": "used by body-sans-serif-font-family, detail-sans-serif-font-family, heading-sans-serif-font-family, title-sans-serif-font-family, default-font-family"
+        }
+      ]
+    },
+    {
+      "token": "seafoam-background-color-default",
+      "mappingId": "m-aa8cfe9c1197",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "seafoam-background-color-default",
+          "says": "name and value only (#07816d); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "seafoam-subtle-background-color-default",
+      "mappingId": "m-e69e3f44359b",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "seafoam-subtle-background-color-default",
+          "says": "name and value only (#d3f6ea); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "serif-font-family",
+      "mappingId": "m-ded366dd9fd2",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "serif-font-family",
+          "says": "used by body-serif-font-family, detail-serif-font-family, heading-serif-font-family, title-serif-font-family"
+        }
+      ]
+    },
+    {
+      "token": "spacing-100",
+      "mappingId": "m-e39b55fe4123",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "spacing-100",
+          "says": "used by action-bar-edge-to-content-area, banner-gap-vertical, banner-padding-horizontal-compact, container-gap-extra-small, container-padding-extra-small, drop-target-dash-length"
+        }
+      ]
+    },
+    {
+      "token": "spacing-1000",
+      "mappingId": "m-7ac4bd5d8fe2",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "spacing-1000",
+          "says": "name and value only (96px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "spacing-200",
+      "mappingId": "m-b8d958439952",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "spacing-200",
+          "says": "used by action-bar-bottom-to-content-area, action-bar-top-to-content-area, banner-padding-vertical, container-gap-small, container-padding-small, group-gap-large"
+        }
+      ]
+    },
+    {
+      "token": "spacing-25",
+      "mappingId": "m-85f7898d7e8a",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "spacing-25",
+          "says": "name and value only (1px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "spacing-300",
+      "mappingId": "m-ae55df3bc625",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "spacing-300",
+          "says": "used by action-bar-label-to-action-group-area, card-description-to-footer, coach-mark-edge-to-content, banner-padding-horizontal, container-gap-medium, container-padding-medium"
+        }
+      ]
+    },
+    {
+      "token": "spacing-350",
+      "mappingId": "m-e301365e5813",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "spacing-350",
+          "says": "used by container-gap-large, container-padding-large, group-gap-large-spacious, tab-gap-horizontal-small"
+        }
+      ]
+    },
+    {
+      "token": "spacing-400",
+      "mappingId": "m-43315031e072",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "spacing-400",
+          "says": "used by coach-mark-edge-to-content, banner-gap-horizontal, container-gap-extra-large, container-padding-extra-large, gap-horizontal, group-gap-extra-large-spacious"
+        }
+      ]
+    },
+    {
+      "token": "spacing-50",
+      "mappingId": "m-33c860ae01ff",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "spacing-50",
+          "says": "used by focus-ring-gap, group-gap-compact, list-gap-compact, list-item-gap-small"
+        }
+      ]
+    },
+    {
+      "token": "spacing-500",
+      "mappingId": "m-7cfbde9f1571",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "spacing-500",
+          "says": "used by container-gap-2x-large, container-padding-2x-large, tab-gap-horizontal-large"
+        }
+      ]
+    },
+    {
+      "token": "spacing-600",
+      "mappingId": "m-932db0b5b853",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "spacing-600",
+          "says": "used by container-padding-3x-large, window-to-edge, tab-gap-horizontal-extra-large"
+        }
+      ]
+    },
+    {
+      "token": "spacing-700",
+      "mappingId": "m-03de844f51bc",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "spacing-700",
+          "says": "name and value only (48px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "spacing-75",
+      "mappingId": "m-c6628047579b",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "spacing-75",
+          "says": "used by card-header-to-description, gap-regular, group-gap-extra-small, list-gap-regular, list-item-padding-vertical-regular, rating-bottom-to-content-area-small"
+        }
+      ]
+    },
+    {
+      "token": "spacing-800",
+      "mappingId": "m-e0a66540f6bd",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "spacing-800",
+          "says": "name and value only (64px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "spacing-85",
+      "mappingId": "m-7e5c90fd7065",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "spacing-85",
+          "says": "used by container-gap-2x-small, container-padding-2x-small, drop-target-dash-gap, group-gap-small, list-item-padding-horizontal"
+        }
+      ]
+    },
+    {
+      "token": "spacing-900",
+      "mappingId": "m-2c9dc18bce49",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "spacing-900",
+          "says": "name and value only (80px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "text-to-control-100",
+      "mappingId": "m-1c3e0c23c450",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "text-to-control-100",
+          "says": "name and value only (10px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "text-to-control-200",
+      "mappingId": "m-60707dace291",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "text-to-control-200",
+          "says": "name and value only (11px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "text-to-control-300",
+      "mappingId": "m-aff34cf72d69",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "text-to-control-300",
+          "says": "name and value only (13px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "text-to-control-50",
+      "mappingId": "m-54cd49a8a60d",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "text-to-control-50",
+          "says": "used by action-bar-close-button-to-counter"
+        }
+      ]
+    },
+    {
+      "token": "text-to-control-75",
+      "mappingId": "m-092de477d0f8",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "text-to-control-75",
+          "says": "name and value only (9px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "text-to-visual-100",
+      "mappingId": "m-6ad5621725e1",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "text-to-visual-100",
+          "says": "used by status-light-text-to-visual-100"
+        }
+      ]
+    },
+    {
+      "token": "text-to-visual-200",
+      "mappingId": "m-764e888ca551",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "text-to-visual-200",
+          "says": "used by status-light-text-to-visual-200"
+        }
+      ]
+    },
+    {
+      "token": "text-to-visual-300",
+      "mappingId": "m-44cb5e4b0af9",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "text-to-visual-300",
+          "says": "used by status-light-text-to-visual-300"
+        }
+      ]
+    },
+    {
+      "token": "text-to-visual-400",
+      "mappingId": "m-c8e686cfd87f",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "text-to-visual-400",
+          "says": "name and value only (9px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "text-to-visual-50",
+      "mappingId": "m-d90e6f7252f0",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "text-to-visual-50",
+          "says": "name and value only (5px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "text-to-visual-75",
+      "mappingId": "m-254d0fbaedbc",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "kind": "usage",
+          "source": "text-to-visual-75",
+          "says": "used by status-light-text-to-visual-75"
+        }
+      ]
+    },
+    {
+      "token": "workflow-icon-size-100",
+      "mappingId": "m-de179a893e20",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "workflow-icon-size-100",
+          "says": "name and value only (20px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "workflow-icon-size-200",
+      "mappingId": "m-35bc57831615",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "workflow-icon-size-200",
+          "says": "name and value only (22px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "workflow-icon-size-300",
+      "mappingId": "m-21466cf0a823",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "workflow-icon-size-300",
+          "says": "name and value only (26px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "workflow-icon-size-50",
+      "mappingId": "m-723a42cfcf56",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "workflow-icon-size-50",
+          "says": "name and value only (14px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "workflow-icon-size-75",
+      "mappingId": "m-1fe7f47d28b3",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "workflow-icon-size-75",
+          "says": "name and value only (16px); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "yellow-background-color-default",
+      "mappingId": "m-6c8fb42ab174",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "yellow-background-color-default",
+          "says": "name and value only (#f5c700); no description, usage or docs state this token's role"
+        }
+      ]
+    },
+    {
+      "token": "yellow-subtle-background-color-default",
+      "mappingId": "m-b217caff331d",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "kind": "value",
+          "source": "yellow-subtle-background-color-default",
+          "says": "name and value only (#fff197); no description, usage or docs state this token's role"
+        }
+      ]
+    }
+  ]
+}
