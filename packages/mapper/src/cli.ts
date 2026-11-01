@@ -141,6 +141,7 @@ if (cmd === 'prepare') {
     const pick = [a.get(p.token), b.get(p.token)].find((x) => same(x, p) && (x.confidence ?? 1) >= APPROVE_AT && (p.confidence ?? 1) >= APPROVE_AT);
     if (!pick) continue;
     if (!p.concept) {
+      for (const m of file.mappings) if (m.token === p.token && m.status === 'proposed') { m.status = 'rejected'; m.review = { by: 'two-of-three', at, note: `Third opinion (${c.model}) agreed no concept fits.` }; }
       file.unmapped = (file.unmapped ?? []).filter((u: any) => u.token !== p.token);
       file.unmapped.push({ token: p.token, status: 'approved', rationale: p.rationale ?? 'No concept fits (two of three agents).', provenance: { agent: 'dsi-mapper', at, method: 'two-of-three-v1' }, review: { by: 'two-of-three', at, note: `${c.model} agreed with an earlier agent` } });
       unmappedN++; continue;

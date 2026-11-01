@@ -21,3 +21,7 @@ Mapping prompts carry the contrast-rank and inverse rules. Atlassian's queued to
 
 ## Amendment, 2026-11-01: computed rank and numbered ladders
 The contrast-rank rule is computed (`dsi-map rank-emphasis`, method `emphasis-rank-v1`) for tokens on which both agents agree on every facet except emphasis. Numbered ladders without emphasis words (Fluent Background1..6) are ranked by contrast and spread over the seven steps (2: subtle, strong; 3: subtle, default, strong; 4: subtler, subtle, strong, stronger; 5: subtler..stronger; 6: all but default; 7: all), always close. A family whose contrast order differs between modes is left to review.
+
+## Amendment, 2026-11-01: ramps and bolder
+- **Numbered ramps** of a categorical hue (Primer `display.<hue>.scale.0..9`) map broad to usage-categorical + hue with no emphasis; the step stays native (owner decision; two of three models agreed on all 190).
+- Atlassian `bolder` maps to `stronger` (the term approved earlier as strong predates the seventh step); its families were re-derived.

@@ -125,6 +125,27 @@
       "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-strong/state-hover",
       "match": "exact",
       "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian blue accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-f8fe05d91292"
+    },
+    {
+      "id": "m-f8fe05d91292",
+      "token": "color.background.accent.blue.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
       "status": "approved",
       "rationale": "Atlassian blue accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
@@ -134,15 +155,36 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
       "id": "m-d24fd6434c10",
       "token": "color.background.accent.blue.bolder.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian blue accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-e7402c9046cf"
+    },
+    {
+      "id": "m-e7402c9046cf",
+      "token": "color.background.accent.blue.bolder.pressed",
+      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-stronger/state-active",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -154,9 +196,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
@@ -498,6 +540,27 @@
       "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-strong/state-hover",
       "match": "exact",
       "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian gray accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-cc97c673e93b"
+    },
+    {
+      "id": "m-cc97c673e93b",
+      "token": "color.background.accent.gray.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
       "status": "approved",
       "rationale": "Atlassian gray accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
@@ -507,15 +570,15 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
-      "id": "m-83d97e0137ca",
+      "id": "m-5b6720d52018",
       "token": "color.background.accent.gray.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-strong/state-active",
+      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-stronger/state-active",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -527,10 +590,31 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
+    },
+    {
+      "id": "m-83d97e0137ca",
+      "token": "color.background.accent.gray.bolder.pressed",
+      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian gray accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-5b6720d52018"
     },
     {
       "id": "m-25e71ccadd1a",
@@ -866,9 +950,9 @@
       }
     },
     {
-      "id": "m-e00dd3e83df5",
+      "id": "m-9d2e7777b32a",
       "token": "color.background.accent.green.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-strong/state-hover",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-stronger/state-hover",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -880,15 +964,57 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
+    },
+    {
+      "id": "m-e00dd3e83df5",
+      "token": "color.background.accent.green.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian green accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-9d2e7777b32a"
     },
     {
       "id": "m-03d7f3394562",
       "token": "color.background.accent.green.bolder.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian green accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-eac590c4cddc"
+    },
+    {
+      "id": "m-eac590c4cddc",
+      "token": "color.background.accent.green.bolder.pressed",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-stronger/state-active",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -900,9 +1026,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
@@ -1239,9 +1365,9 @@
       }
     },
     {
-      "id": "m-f4969db80297",
+      "id": "m-51e1dbf4d451",
       "token": "color.background.accent.lime.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-strong/state-hover",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-stronger/state-hover",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -1253,15 +1379,57 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
+    },
+    {
+      "id": "m-f4969db80297",
+      "token": "color.background.accent.lime.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian lime accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-51e1dbf4d451"
     },
     {
       "id": "m-2b1f3e7b2149",
       "token": "color.background.accent.lime.bolder.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian lime accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-fdb5315f584e"
+    },
+    {
+      "id": "m-fdb5315f584e",
+      "token": "color.background.accent.lime.bolder.pressed",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-stronger/state-active",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -1273,9 +1441,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
@@ -1617,6 +1785,27 @@
       "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-strong/state-hover",
       "match": "exact",
       "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian magenta accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-e474af04c584"
+    },
+    {
+      "id": "m-e474af04c584",
+      "token": "color.background.accent.magenta.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
       "status": "approved",
       "rationale": "Atlassian magenta accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
@@ -1626,15 +1815,15 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
-      "id": "m-d9411b71af88",
+      "id": "m-0b64dddcf7de",
       "token": "color.background.accent.magenta.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-strong/state-active",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-stronger/state-active",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -1646,10 +1835,31 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
+    },
+    {
+      "id": "m-d9411b71af88",
+      "token": "color.background.accent.magenta.bolder.pressed",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian magenta accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-0b64dddcf7de"
     },
     {
       "id": "m-4ddc894e115b",
@@ -1990,6 +2200,27 @@
       "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-strong/state-hover",
       "match": "exact",
       "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian orange accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-75ae7c9c7918"
+    },
+    {
+      "id": "m-75ae7c9c7918",
+      "token": "color.background.accent.orange.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
       "status": "approved",
       "rationale": "Atlassian orange accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
@@ -1999,15 +2230,15 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
-      "id": "m-62d2098f3e77",
+      "id": "m-5013b27ec557",
       "token": "color.background.accent.orange.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-strong/state-active",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-stronger/state-active",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -2019,10 +2250,31 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
+    },
+    {
+      "id": "m-62d2098f3e77",
+      "token": "color.background.accent.orange.bolder.pressed",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian orange accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-5013b27ec557"
     },
     {
       "id": "m-0e53e65600d6",
@@ -2358,9 +2610,9 @@
       }
     },
     {
-      "id": "m-56db6807ab23",
+      "id": "m-4b86a4d0e546",
       "token": "color.background.accent.purple.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-strong/state-hover",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-stronger/state-hover",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -2372,15 +2624,57 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
+    },
+    {
+      "id": "m-56db6807ab23",
+      "token": "color.background.accent.purple.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian purple accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-4b86a4d0e546"
     },
     {
       "id": "m-ad0cc41914c9",
       "token": "color.background.accent.purple.bolder.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian purple accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-f0494ca4fe1b"
+    },
+    {
+      "id": "m-f0494ca4fe1b",
+      "token": "color.background.accent.purple.bolder.pressed",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-stronger/state-active",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -2392,9 +2686,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
@@ -2731,9 +3025,9 @@
       }
     },
     {
-      "id": "m-2811576b62ac",
+      "id": "m-0b59b3bdbb8b",
       "token": "color.background.accent.red.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-strong/state-hover",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-stronger/state-hover",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -2745,15 +3039,36 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
-      "id": "m-8ffdcc764a54",
+      "id": "m-2811576b62ac",
+      "token": "color.background.accent.red.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian red accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-0b59b3bdbb8b"
+    },
+    {
+      "id": "m-1a0cd3990eb7",
       "token": "color.background.accent.red.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-strong/state-active",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-stronger/state-active",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -2765,10 +3080,31 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
+    },
+    {
+      "id": "m-8ffdcc764a54",
+      "token": "color.background.accent.red.bolder.pressed",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian red accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-1a0cd3990eb7"
     },
     {
       "id": "m-1f8b3f30f33f",
@@ -3104,9 +3440,9 @@
       }
     },
     {
-      "id": "m-d88734668b06",
+      "id": "m-bbd64766bc4e",
       "token": "color.background.accent.teal.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-strong/state-hover",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-stronger/state-hover",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -3118,15 +3454,57 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
+    },
+    {
+      "id": "m-d88734668b06",
+      "token": "color.background.accent.teal.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian teal accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-bbd64766bc4e"
     },
     {
       "id": "m-c2f13560d1c3",
       "token": "color.background.accent.teal.bolder.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian teal accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-f9949ea3ad57"
+    },
+    {
+      "id": "m-f9949ea3ad57",
+      "token": "color.background.accent.teal.bolder.pressed",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-stronger/state-active",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -3138,9 +3516,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
@@ -3482,6 +3860,27 @@
       "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-strong/state-hover",
       "match": "exact",
       "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian yellow accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-96219a06801e"
+    },
+    {
+      "id": "m-96219a06801e",
+      "token": "color.background.accent.yellow.bolder.hovered",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-stronger/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
       "status": "approved",
       "rationale": "Atlassian yellow accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
@@ -3491,15 +3890,36 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
       "id": "m-80af6d0ed8f8",
       "token": "color.background.accent.yellow.bolder.pressed",
       "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "superseded",
+      "rationale": "Atlassian yellow accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018)."
+      },
+      "supersededBy": "m-af4491e8c4ff"
+    },
+    {
+      "id": "m-af4491e8c4ff",
+      "token": "color.background.accent.yellow.bolder.pressed",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-stronger/state-active",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -3511,9 +3931,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement+classifier",
-        "at": "2026-11-01T07:29:47.037Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
+        "by": "kimgranlund",
+        "at": "2026-11-01T15:30:58.000Z",
+        "note": "bolder -> stronger (ADR 0018); family re-derived."
       }
     },
     {
@@ -4568,13 +4988,17 @@
       "concept": "dsi:concept/color/usage-on-fill/property-background",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Translucent black/white tint for elements placed on a bold background (spotlight card buttons): content contrasting with a bold fill, so on-fill not inverse (ADR 0018). Only on-fill background in the family, emphasis unbound; close: a translucent tint rather than an opaque fill.",
+      "status": "approved",
+      "rationale": "Description: backgrounds of elements sitting on a bold background (buttons on spotlight cards). Value is a translucent black (light) / white (dark) tint, so it works on any intent or accent bold fill; ADR 0018 names this token on-fill despite the native word inverse. Only member of its family, so no emphasis. Nuance: translucent overlay rather than an opaque fill.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -4583,13 +5007,18 @@
       "concept": "dsi:concept/color/usage-on-fill/property-background/emphasis-subtle",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Translucent bg for elements on a bold fill: on-fill per ADR 0018, not inverse.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4598,13 +5027,17 @@
       "concept": "dsi:concept/color/usage-on-fill/property-background/state-hover",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Translucent black/white tint for elements placed on a bold background (spotlight card buttons): content contrasting with a bold fill, so on-fill not inverse (ADR 0018). Only on-fill background in the family, emphasis unbound; close: a translucent tint rather than an opaque fill; hovered state.",
+      "status": "approved",
+      "rationale": "Description: backgrounds of elements sitting on a bold background (buttons on spotlight cards). Value is a translucent black (light) / white (dark) tint, so it works on any intent or accent bold fill; ADR 0018 names this token on-fill despite the native word inverse. Only member of its family, so no emphasis. Nuance: translucent overlay rather than an opaque fill. Hovered state.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -4613,13 +5046,18 @@
       "concept": "dsi:concept/color/usage-on-fill/property-background/emphasis-subtle/state-hover",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover of on-fill translucent bg.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4628,13 +5066,18 @@
       "concept": "dsi:concept/color/usage-on-fill/property-background/emphasis-subtle/state-active",
       "match": "close",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Pressed of on-fill translucent bg.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4643,13 +5086,17 @@
       "concept": "dsi:concept/color/usage-on-fill/property-background/state-active",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Translucent black/white tint for elements placed on a bold background (spotlight card buttons): content contrasting with a bold fill, so on-fill not inverse (ADR 0018). Only on-fill background in the family, emphasis unbound; close: a translucent tint rather than an opaque fill; pressed state.",
+      "status": "approved",
+      "rationale": "Description: backgrounds of elements sitting on a bold background (buttons on spotlight cards). Value is a translucent black (light) / white (dark) tint, so it works on any intent or accent bold fill; ADR 0018 names this token on-fill despite the native word inverse. Only member of its family, so no emphasis. Nuance: translucent overlay rather than an opaque fill. Pressed state.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -4657,14 +5104,18 @@
       "token": "color.background.neutral.bold.default",
       "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-strong",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Vibrant neutral background (announcement banners); highest contrast of the neutral backgrounds; matches approved hovered/pressed siblings.",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Strongest step of the neutral background family (neutral.subtle transparent < neutral Neutral200A < neutral.bold Neutral1000); word agrees with contrast rank. Although the value flips between modes (dark in light, light in dark) like an inverse surface, ADR 0018 treats Atlassian bold fills and their inverse content as fill/on-fill, so I keep it in the neutral family rather than usage-inverse.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -4673,13 +5124,18 @@
       "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-strong",
       "match": "close",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Vibrant neutral fill, dark in light mode; bold is strong.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4848,13 +5304,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-strong/state-selected",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Bold selected-control fill.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4862,14 +5323,18 @@
       "token": "color.background.selected.bold.default",
       "concept": "dsi:concept/color/property-background/emphasis-strong/state-selected",
       "match": "exact",
-      "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Bold background of selected controls (checked checkbox); stronger than selected.default; matches approved hovered/pressed siblings.",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Bold background of selected controls (checked checkbox, selected radio), paired with text.inverse. Two-step selected family: selected.default Blue100 < selected.bold Blue700; bold is the stronger, word agrees. Selection is a state, not an intent, so no intent is bound even though the hue is brand blue.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -6092,13 +6557,18 @@
       "concept": "dsi:concept/color/property-border/emphasis-strong",
       "match": "close",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral border passing 3:1; strongest neutral border, bold is strong.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -6106,14 +6576,18 @@
       "token": "color.border.bold",
       "concept": "dsi:concept/color/property-border/emphasis-strong",
       "match": "exact",
-      "confidence": 0.85,
-      "status": "proposed",
-      "rationale": "Neutral border passing 3:1; higher contrast than color.border.default in both modes -> strong.",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Neutral border option meeting 3:1 contrast; the stronger of the two generic borders (color.border Neutral300A < color.border.bold Neutral600), word agrees with rank. Carries no status meaning, so intent stays unbound like the base border.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -6382,13 +6856,17 @@
       "concept": "dsi:concept/color/usage-field/property-border",
       "match": "broad",
       "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Border of search inputs only: one kind of form field, so broad of field border.",
+      "status": "approved",
+      "rationale": "Border for search inputs only: one specific kind of form field border (same value as the generic input border, Neutral300A), so the field-border concept is broader.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -6397,13 +6875,18 @@
       "concept": "dsi:concept/color/usage-on-fill/property-border",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Border on bold backgrounds: on-fill per ADR 0018.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -6412,13 +6895,17 @@
       "concept": "dsi:concept/color/usage-on-fill/property-border",
       "match": "exact",
       "confidence": 0.82,
-      "status": "proposed",
-      "rationale": "Borders on bold backgrounds (white in light, near-black in dark): contrasts with a bold fill, on-fill whatever the native word (ADR 0018).",
+      "status": "approved",
+      "rationale": "Borders on bold backgrounds; value is Neutral0 (white in light, near-black in dark), i.e. content contrasting with an intent/accent bold fill. Per ADR 0018 Atlassian 'inverse' content on bold fills is on-fill, not usage-inverse.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -7261,13 +7748,18 @@
       "concept": "dsi:concept/color/intent-neutral/usage-data-viz",
       "match": "close",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Neutral chart color, single member with hover.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -7275,14 +7767,18 @@
       "token": "color.chart.neutral.default",
       "concept": "dsi:concept/color/intent-neutral/usage-data-viz",
       "match": "exact",
-      "confidence": 0.78,
-      "status": "proposed",
-      "rationale": "Neutral chart color: secondary series color or 'to-do' status.",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Gray chart color for data visualisation 'or to communicate to-do statuses' (Jira to-do is the neutral status). Intent neutral + data-viz. No bold sibling, so the family has one member and emphasis stays unbound; 'default' here is the state slot, not an emphasis step.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -7291,13 +7787,18 @@
       "concept": "dsi:concept/color/intent-neutral/usage-data-viz/state-hover",
       "match": "close",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover of chart neutral.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -7305,14 +7806,18 @@
       "token": "color.chart.neutral.hovered",
       "concept": "dsi:concept/color/intent-neutral/usage-data-viz/state-hover",
       "match": "exact",
-      "confidence": 0.78,
-      "status": "proposed",
-      "rationale": "Hovered neutral chart color.",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Hover state of color.chart.neutral (Neutral500 -> Neutral600). Same concept as the base with state-hover.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -8105,13 +8610,18 @@
       "concept": "dsi:concept/color/usage-state-layer/state-hover",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover overlay layer.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -8120,13 +8630,17 @@
       "concept": "dsi:concept/color/usage-state-layer/property-background/state-hover",
       "match": "exact",
       "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Translucent background overlay for hover when the background cannot change: hover state layer.",
+      "status": "approved",
+      "rationale": "Translucent background overlay for hovered elements whose background cannot change (avatars): exactly a state layer for hover.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -8135,13 +8649,18 @@
       "concept": "dsi:concept/color/usage-state-layer/state-active",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Pressed overlay layer.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -8150,13 +8669,17 @@
       "concept": "dsi:concept/color/usage-state-layer/property-background/state-active",
       "match": "exact",
       "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Translucent background overlay for pressed when the background cannot change: pressed state layer.",
+      "status": "approved",
+      "rationale": "Translucent background overlay for pressed elements whose background cannot change (avatars): a state layer for the pressed (active) state.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -9135,13 +9658,18 @@
       "concept": "dsi:concept/color/syntax-function/property-text",
       "match": "exact",
       "confidence": 0.85,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Functions in highlighted code.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -9149,14 +9677,18 @@
       "token": "color.text.code.functions",
       "concept": "dsi:concept/color/syntax-function/property-text",
       "match": "close",
-      "confidence": 0.72,
-      "status": "proposed",
-      "rationale": "Syntax highlighting for functions: Lezer function (ADR 0012); Lezer function is a modifier on names; Atlassian colors function names.",
+      "confidence": 0.7,
+      "status": "approved",
+      "rationale": "Syntax highlighting color for functions in code blocks (Green800). The Lezer role is the function modifier (function(variableName)); Atlassian's Prism-based 'function' token covers function names, so the meaning matches with the nuance that Lezer models it as a modifier of a name.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -9892,13 +10424,18 @@
       "concept": "dsi:concept/color/usage-overlay/property-background/state-hover",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover of overlay surface.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -9907,13 +10444,17 @@
       "concept": "dsi:concept/color/usage-overlay/property-background/state-hover",
       "match": "exact",
       "confidence": 0.85,
-      "status": "proposed",
-      "rationale": "hovered state of the overlay surface (menus, popovers); overlay.default approved exact.",
+      "status": "approved",
+      "rationale": "Hover state of elevation.surface.overlay, the background of modals, dialogs, dropdown menus and other floating elements: overlay usage with state-hover.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -9922,13 +10463,18 @@
       "concept": "dsi:concept/color/usage-overlay/property-background/state-active",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Pressed of overlay surface.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T14:55:00.338Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -9937,13 +10483,17 @@
       "concept": "dsi:concept/color/usage-overlay/property-background/state-active",
       "match": "exact",
       "confidence": 0.85,
-      "status": "proposed",
-      "rationale": "pressed state of the overlay surface (menus, popovers); overlay.default approved exact.",
+      "status": "approved",
+      "rationale": "Pressed state of elevation.surface.overlay (modals, dialogs, dropdowns): overlay usage with the active state.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -9952,13 +10502,17 @@
       "concept": "dsi:concept/color/usage-surface/property-background",
       "match": "broad",
       "confidence": 0.72,
-      "status": "proposed",
-      "rationale": "Raised surface for movable cards: one surface level the concept does not distinguish -> broad.",
+      "status": "approved",
+      "rationale": "Background of movable cards (Jira Kanban cards), combined with elevation.shadow.raised. A surface, but one specific elevation level the concept does not distinguish (Atlassian also has container and overlay levels), so the concept is broader. Neutral0 in light (same as the page), DarkNeutral200 in dark.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -9967,13 +10521,17 @@
       "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
       "match": "broad",
       "confidence": 0.72,
-      "status": "proposed",
-      "rationale": "Raised surface for movable cards: one surface level the concept does not distinguish -> broad; hovered state.",
+      "status": "approved",
+      "rationale": "Hover state of the raised card surface (Neutral0 -> Neutral200); one specific surface level, so broad like its base.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -9982,13 +10540,17 @@
       "concept": "dsi:concept/color/usage-surface/property-background/state-active",
       "match": "broad",
       "confidence": 0.72,
-      "status": "proposed",
-      "rationale": "Raised surface for movable cards: one surface level the concept does not distinguish -> broad; pressed state.",
+      "status": "approved",
+      "rationale": "Pressed state of the raised card surface (Neutral0 -> Neutral300); one specific surface level, so broad like its base.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T14:55:25.906Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:20:39.972Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:20:39.972Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
