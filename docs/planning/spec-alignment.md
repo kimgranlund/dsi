@@ -10,7 +10,7 @@ Closely aligned on structure: definition layers above evidence layers, SKOS cros
 
 | Spec layer | DSI today | Fit |
 |---|---|---|
-| L0 Competency questions | None. Concepts trace to ADRs and owner decisions, not to questions | Gap |
+| L0 Competency questions | 18 questions in `ontology/competency-questions.json` (ADR 0026); the validator refuses a facet value no question needs | Done (values; composed concepts trace through their facets) |
 | L1 Metamodel | Tokens, modes/themes, aliases; component tier through token applications (ADR 0015). No Guideline, Pattern or Platform entities | Partial (token-scoped by design) |
 | L2 Concept registry | `ontology/schemes/concepts.jsonld`: facet-composed IRI as identity, prefLabel, generated L4 definition, broader/related, proposed (registry gate) and deprecated status, owner approval | Strong |
 | L2 `discriminatingTest` | Boundary tests B1–B8 exist as code and ADR 0021, not stored per concept | Partial |
@@ -26,7 +26,7 @@ Closely aligned on structure: definition layers above evidence layers, SKOS cros
 | L3 Determinism | Rules deterministic and approved decisions frozen; agent passes are not | Partial |
 | §6 Query layer | Explorer: concept coverage across systems, value comparison. No gap analysis, contradiction finder or system diff over time | Partial |
 | §7 Governance | Registry gate (new concepts wait for the owner), ADRs, validator. No SemVer on the registry; ontology grows per system | Partial |
-| §8 Golden set, regression gate | Approved mappings serve as Jev's gold; owner grading (`OWNER-SCORES.md`). Nothing re-runs the resolver on change and blocks | Gap |
+| §8 Golden set, regression gate | `evals/`: approved exact/close mappings gate the classifier per product before push and deploy (`corepack pnpm eval`) | Done for the classifier; rules and boundary tests not yet suites |
 | §9 Cross-cutting | Schema checks strong (JSON Schemas, validator); review queue strong; provenance and versioning partial; drift via re-ingest (runbook §11) | Partial |
 | §10 Onboarding | `add-design-system` skill follows the same steps. Ontology still changes per system (ADRs 0023–0025), against the spec's "no L0–L2 changes" criterion | Partial (early phase) |
 

@@ -29,3 +29,4 @@ ADRs, one per file: `NNNN-short-title.md` with Status, Context, Decision, Conseq
 | [0023](0023-gap-words-and-components.md) | Fixed, transparent and terminal usages, done intent; eight components and six parts |
 | [0024](0024-severe-intent.md) | A severe intent between warning and danger |
 | [0025](0025-brand-levels-stay-native.md) | Brand-specific levels stay native |
+| [0026](0026-competency-questions.md) | Competency questions decide which words exist |

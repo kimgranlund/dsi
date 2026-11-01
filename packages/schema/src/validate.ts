@@ -43,6 +43,22 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
       else if (SYSTEMS.test(d)) issues.push({ file: `ontology/schemes/${file}`, message: `${c.id}: definition names a product; move it to scopeNote (L4)` });
     }
   }
+  // L0 (ADR 0026): every facet value is needed by an active competency question, and questions name only live values.
+  const cqFile = path.join(ontologyDir, 'competency-questions.json');
+  if (fs.existsSync(cqFile)) {
+    const qs = (JSON.parse(fs.readFileSync(cqFile, 'utf8')).questions as { id: string; status: string; facets?: string[]; values?: string[] }[]).filter((q) => q.status === 'active');
+    const facets = new Set(qs.flatMap((q) => q.facets ?? [])), values = new Set(qs.flatMap((q) => q.values ?? []));
+    const live = new Set<string>();
+    for (const file of ['facets.jsonld', 'syntax.jsonld']) {
+      for (const c of JSON.parse(fs.readFileSync(path.join(ontologyDir, 'schemes', file), 'utf8'))['@graph'] as any[]) {
+        const m = /^dsi:([a-z-]+)\/([a-z0-9-]+)$/.exec(c.id ?? '');
+        if (c.type !== 'Concept' || !m || ['facet', 'facet-kind', 'domain'].includes(m[1]) || c.deprecated || c['owl:deprecated']) continue;
+        live.add(`${m[1]}/${m[2]}`);
+        if (!facets.has(m[1]) && !values.has(`${m[1]}/${m[2]}`)) issues.push({ file: `ontology/schemes/${file}`, message: `${c.id}: no active competency question needs it (ADR 0026); link it in ontology/competency-questions.json or retire it` });
+      }
+    }
+    for (const q of qs) for (const v of q.values ?? []) if (!live.has(v)) issues.push({ file: 'ontology/competency-questions.json', message: `${q.id}: ${v} is not a live facet value` });
+  }
   const ajv = createAjv();
   const rel = (f: string) => path.relative(root, f);
   const read = (f: string): unknown => {

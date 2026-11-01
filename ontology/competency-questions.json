@@ -1,0 +1,291 @@
+{
+  "note": "L0 competency questions (ADR 0026). Every facet value is needed by at least one question; the validator refuses a value no question needs and a question naming an unknown or deprecated value. A value only a retired question needs is a deletion candidate.",
+  "questions": [
+    {
+      "id": "CQ-001",
+      "question": "Which token does each system use for the same role, and what value does it have in each mode?",
+      "facets": [
+        "mode"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-002",
+      "question": "Which systems name emphasis steps within a role, and how do the steps compare by contrast?",
+      "facets": [
+        "emphasis"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-003",
+      "question": "Which systems ship a token for each interaction state of a role (hover, pressed, focus, disabled, selected, dragged, visited)?",
+      "facets": [
+        "state"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-004",
+      "question": "Which systems color text and icons separately, and which use one foreground?",
+      "values": [
+        "property/text",
+        "property/icon",
+        "property/foreground",
+        "property/graphic"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-005",
+      "question": "Which status levels does each system ship, and how do their colors compare?",
+      "values": [
+        "intent/caution",
+        "intent/warning",
+        "intent/severe",
+        "intent/danger",
+        "intent/success",
+        "intent/info",
+        "intent/neutral",
+        "intent/destructive",
+        "intent/done"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-006",
+      "question": "Which systems ship palettes whose hue carries the meaning, in which hues, and for what (tags, charts, terminals)?",
+      "facets": [
+        "hue"
+      ],
+      "values": [
+        "usage/categorical",
+        "usage/data-viz",
+        "usage/terminal",
+        "brightness/dim",
+        "brightness/bright"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-007",
+      "question": "How do surfaces stack in each system (page, surface, overlay, backdrop), and which surfaces flip between modes?",
+      "values": [
+        "usage/page",
+        "usage/surface",
+        "usage/overlay",
+        "usage/scrim",
+        "usage/inverse",
+        "usage/state-layer",
+        "property/background"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-008",
+      "question": "Which content tokens are made for bold backgrounds, and do they reach 4.5:1 on them?",
+      "values": [
+        "usage/on-fill"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-009",
+      "question": "How do spacing, size, radius and border-width scales compare (base unit, step count, ratio)?",
+      "values": [
+        "property/spacing",
+        "property/padding",
+        "property/gap",
+        "property/margin",
+        "property/inset",
+        "property/height",
+        "property/width",
+        "property/size",
+        "property/icon-size",
+        "property/container-width",
+        "property/breakpoint",
+        "property/corner-radius",
+        "property/corner-shape",
+        "property/border-width",
+        "property/z-index"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-010",
+      "question": "How do type roles compare across systems for each type property?",
+      "values": [
+        "usage/display",
+        "usage/headline",
+        "usage/title",
+        "usage/heading",
+        "usage/body",
+        "usage/label",
+        "property/font-family",
+        "property/font-weight",
+        "property/font-size",
+        "property/line-height",
+        "property/letter-spacing"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-011",
+      "question": "How do motion durations, easings and springs compare, and which systems split productive from expressive motion or type?",
+      "facets": [
+        "style"
+      ],
+      "values": [
+        "property/duration",
+        "property/easing",
+        "property/spring-stiffness",
+        "property/spring-damping",
+        "property/transition",
+        "property/keyframes"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-012",
+      "question": "Which systems define elevation semantically, and which ship only raw shadows?",
+      "values": [
+        "property/shadow",
+        "property/elevation-level",
+        "property/opacity"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-013",
+      "question": "Which tokens does each component use for each of its parts?",
+      "facets": [
+        "component",
+        "part"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-014",
+      "question": "Which code-surface parts and syntax roles does each system color?",
+      "facets": [
+        "syntax"
+      ],
+      "values": [
+        "usage/code-surface"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-015",
+      "question": "Which systems mark AI content, new features, editor highlights and brand accent, and how?",
+      "values": [
+        "intent/ai",
+        "intent/discovery",
+        "intent/highlight",
+        "intent/accent"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-016",
+      "question": "Which systems ship tokens for links, input fields, navigation and loading skeletons?",
+      "values": [
+        "usage/link",
+        "usage/field",
+        "usage/navigation",
+        "usage/skeleton"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-017",
+      "question": "Which tokens keep one value in every theme, and which are deliberately transparent?",
+      "values": [
+        "usage/fixed",
+        "usage/transparent"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    },
+    {
+      "id": "CQ-018",
+      "question": "Where does a focus indicator get its color and width in each system?",
+      "values": [
+        "property/focus-ring",
+        "property/border"
+      ],
+      "status": "active",
+      "approved": {
+        "by": "kimgranlund",
+        "at": "2026-11-01"
+      }
+    }
+  ]
+}
