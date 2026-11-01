@@ -1,0 +1,29 @@
+{
+  "name": "e13-facets-general",
+  "hypothesis": "Name the unbound option 'general' instead of 'none'.",
+  "sample": {
+    "n": 70,
+    "seed": 1,
+    "tier": "all"
+  },
+  "state": {
+    "kind": "full+siblings",
+    "format": "text"
+  },
+  "questions": {
+    "kind": "facets",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "criteria": "definition",
+    "noneKey": "general"
+  },
+  "post": {
+    "grammar": true
+  }
+}

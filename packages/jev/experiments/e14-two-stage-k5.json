@@ -1,0 +1,25 @@
+{
+  "name": "e14-two-stage-k5",
+  "hypothesis": "Realistic reuse-first: candidates come from Jev's facet probabilities (no gold leak); measure recall@5 and the final pick.",
+  "sample": {
+    "n": 70,
+    "seed": 1,
+    "tier": "all"
+  },
+  "state": {
+    "kind": "full+siblings",
+    "format": "text"
+  },
+  "questions": {
+    "kind": "two-stage",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "k": 5
+  }
+}

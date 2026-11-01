@@ -5,7 +5,7 @@ import { loadNative, resolve, showValue, type NativeSet } from '@dsi/resolve';
 import type { Question } from './client.ts';
 
 /** One token with a known answer: an approved exact/close color mapping. Owner-reviewed ones are the gold tier. */
-export interface GoldItem { product: string; version: string; token: string; concept: string; facets: Record<string, string>; tier: 'owner' | 'rule'; method: string }
+export interface GoldItem { product: string; version: string; token: string; concept: string; facets: Record<string, string>; tier: 'owner' | 'rule'; method: string; alts?: string[]; baseline?: string }
 
 export interface Experiment {
   name: string;
@@ -13,9 +13,13 @@ export interface Experiment {
   model?: string;
   sample: { n: number; seed?: number; tier?: 'all' | 'owner' | 'rule'; products?: string[] };
   state: { kind: 'name' | 'name+desc' | 'full' | 'full+siblings'; format?: 'text' | 'json' };
+  /** Post-processing on the answers, free to vary because responses are cached. */
+  post?: { grammar?: boolean; noneBoost?: Record<string, number> };
   questions:
-    | { kind: 'facets'; facets: string[]; criteria?: 'definition' | 'label'; instructions?: 'plain' | 'rich' }
+    | { kind: 'facets'; facets: string[]; criteria?: 'definition' | 'label'; instructions?: 'plain' | 'rich'; noneKey?: string }
+    | { kind: 'two-stage'; facets: string[]; k: number; criteria?: 'definition' | 'label'; noneKey?: string; siblings?: boolean }
     | { kind: 'registry'; k: number }
+    | { kind: 'owner-choice'; extra?: number }
     | { kind: 'noul' };
 }
 
@@ -50,6 +54,36 @@ export function loadGold(root: string, o: Ontology, scopeFile = 'packages/mapper
       if (typeof p === 'string') continue;
       const owner = m.provenance?.method === 'human-review' || m.review?.by === 'kimgranlund';
       out.push({ product, version, token: m.token, concept: m.concept, facets: p.facets as Record<string, string>, tier: owner ? 'owner' : 'rule', method: m.provenance?.method ?? '' });
+    }
+  }
+  return out;
+}
+
+/**
+ * Owner decisions with rejected alternatives on record: the tiebreak benchmark. `alts` are the rejected concepts;
+ * `baseline` is what the agents would pick alone (most proposals, then highest confidence).
+ */
+export function loadOwnerChoices(root: string, o: Ontology, scopeFile = 'packages/mapper/scopes/color-v1.json'): GoldItem[] {
+  const scope = JSON.parse(fs.readFileSync(path.join(root, scopeFile), 'utf8')) as { products: Record<string, { version: string }> };
+  const out: GoldItem[] = [];
+  for (const [product, { version }] of Object.entries(scope.products)) {
+    const f = path.join(root, 'mappings', product, `${version}.mappings.json`);
+    if (!fs.existsSync(f)) continue;
+    const by = new Map<string, any[]>();
+    for (const m of JSON.parse(fs.readFileSync(f, 'utf8')).mappings) (by.get(m.token) ?? by.set(m.token, []).get(m.token)!).push(m);
+    for (const [token, ms] of by) {
+      const ap = ms.find((m) => m.status === 'approved' && (m.review?.by === 'kimgranlund' || m.provenance?.method === 'human-review') && m.concept.startsWith('dsi:concept/color/'));
+      if (!ap) continue;
+      // Decisions applied by an owner rule (ramp rule, bolder -> stronger, migrations) are conventions, not per-token judgments.
+      if (/rule|re-derived|Migrated/i.test(ap.review?.note ?? '')) continue;
+      const alts = [...new Set(ms.filter((m) => (m.status === 'rejected' || m.status === 'superseded') && m.concept !== ap.concept && m.concept.startsWith('dsi:concept/color/') && typeof parseConcept(o, m.concept) !== 'string').map((m) => m.concept as string))];
+      if (!alts.length) continue;
+      const votes = new Map<string, { n: number; c: number }>();
+      for (const m of ms.filter((m) => m.provenance?.model && m.concept.startsWith('dsi:concept/color/'))) { const v = votes.get(m.concept) ?? { n: 0, c: 0 }; v.n++; v.c = Math.max(v.c, m.confidence ?? 0); votes.set(m.concept, v); }
+      const baseline = [...votes].sort((a, b) => b[1].n - a[1].n || b[1].c - a[1].c)[0]?.[0];
+      const p = parseConcept(o, ap.concept);
+      if (typeof p === 'string') continue;
+      out.push({ product, version, token, concept: ap.concept, facets: p.facets as Record<string, string>, tier: 'owner', method: 'human-review', alts, baseline });
     }
   }
   return out;
@@ -108,7 +142,7 @@ export class Context {
     return this.used.get(facet) ?? new Set();
   }
 
-  criteria(facet: string, style: 'definition' | 'label' = 'definition'): Record<string, string> {
+  criteria(facet: string, style: 'definition' | 'label' = 'definition', noneKey = 'none'): Record<string, string> {
     const out: Record<string, string> = {};
     const allowed = this.usedValues(facet);
     for (const [iri, w] of this.lex) {
@@ -117,12 +151,12 @@ export class Context {
       if (facet === 'emphasis' && iri.endsWith('/default')) continue; // ADR 0019: never bound
       out[iri.split('/').pop()!] = style === 'label' ? w.label : `${w.label}: ${w.definition ?? w.label}`;
     }
-    out.none = FACET_NONE[facet] ?? 'Not specific to this facet.';
+    out[noneKey] = FACET_NONE[facet] ?? 'Not specific to this facet.';
     return out;
   }
 
-  facetQuestions(facets: string[], style: 'definition' | 'label' = 'definition', instructions: 'plain' | 'rich' = 'plain'): Record<string, Question> {
-    return Object.fromEntries(facets.map((f) => [f, { type: 'choice' as const, instructions: instructions === 'rich' ? `${FACET_ASK[f]}. This is a design-system color token; answer from its name, description and values. Pick none when the token is not specific to this dimension.` : FACET_ASK[f], criteria: this.criteria(f, style) }]));
+  facetQuestions(facets: string[], style: 'definition' | 'label' = 'definition', instructions: 'plain' | 'rich' = 'plain', noneKey = 'none'): Record<string, Question> {
+    return Object.fromEntries(facets.map((f) => [f, { type: 'choice' as const, instructions: instructions === 'rich' ? `${FACET_ASK[f]}. This is a design-system color token; answer from its name, description and values. Pick ${noneKey} when the token is not specific to this dimension.` : FACET_ASK[f], criteria: this.criteria(f, style, noneKey) }]));
   }
 
   /** k registered candidates: the gold concept plus the k-1 registered concepts sharing the most facet values. */
@@ -135,4 +169,24 @@ export class Context {
     for (let i = all.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [all[i], all[j]] = [all[j], all[i]]; }
     return all;
   }
+
+  /** Approved concepts of the token's family (same prefix), its own excluded: precedent candidates. */
+  familyConcepts(g: GoldItem): string[] {
+    const prefix = g.token.replace(/[.-][^.-]+$/, '');
+    return [...new Set(this.gold.filter((x) => x.product === g.product && x.token !== g.token && x.token.startsWith(prefix)).map((x) => x.concept))];
+  }
+
+  /** Rank registered color concepts by the facet probabilities: product of p(value) for bound facets, p(none) for unbound. */
+  rankByFacets(probs: Record<string, Record<string, number>>, registry: string[], noneKey = 'none'): string[] {
+    const eps = 1e-3;
+    const scored = registry.filter((c) => c.startsWith('dsi:concept/color/')).map((c) => {
+      const bound = new Map<string, string[]>();
+      for (const seg of c.split('/').slice(2)) { const i = seg.indexOf('-'); bound.set(seg.slice(0, i), seg.slice(i + 1).split('+')); }
+      let lp = 0;
+      for (const [f, p] of Object.entries(probs)) { const vs = bound.get(f); lp += vs ? Math.max(...vs.map((v) => Math.log((p[v] ?? 0) + eps))) : Math.log((p[noneKey] ?? 0) + eps); }
+      return { c, lp };
+    });
+    return scored.sort((a, b) => b.lp - a.lp).map((x) => x.c);
+  }
 }
+

@@ -1,0 +1,28 @@
+{
+  "name": "e11-facets-grammar",
+  "hypothesis": "Post-hoc grammar: hue is none unless usage is categorical (ADR 0017). Free: cached answers.",
+  "sample": {
+    "n": 70,
+    "seed": 1,
+    "tier": "all"
+  },
+  "state": {
+    "kind": "full+siblings",
+    "format": "text"
+  },
+  "questions": {
+    "kind": "facets",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "criteria": "definition"
+  },
+  "post": {
+    "grammar": true
+  }
+}

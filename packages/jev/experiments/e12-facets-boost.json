@@ -1,0 +1,34 @@
+{
+  "name": "e12-facets-boost",
+  "hypothesis": "Jev under-picks none: add 0.3 to p(none) for intent, usage, hue and emphasis, plus the grammar.",
+  "sample": {
+    "n": 70,
+    "seed": 1,
+    "tier": "all"
+  },
+  "state": {
+    "kind": "full+siblings",
+    "format": "text"
+  },
+  "questions": {
+    "kind": "facets",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "criteria": "definition"
+  },
+  "post": {
+    "grammar": true,
+    "noneBoost": {
+      "intent": 0.3,
+      "usage": 0.3,
+      "hue": 0.3,
+      "emphasis": 0.2
+    }
+  }
+}

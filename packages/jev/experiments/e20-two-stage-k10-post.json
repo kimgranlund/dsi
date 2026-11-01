@@ -1,0 +1,35 @@
+{
+  "name": "e20-two-stage-k10-post",
+  "hypothesis": "Two-stage ranking with the none boost and the hue grammar applied to the probabilities.",
+  "sample": {
+    "n": 70,
+    "seed": 1,
+    "tier": "all"
+  },
+  "state": {
+    "kind": "full+siblings",
+    "format": "text"
+  },
+  "post": {
+    "grammar": true,
+    "noneBoost": {
+      "intent": 0.3,
+      "usage": 0.3,
+      "hue": 0.3,
+      "emphasis": 0.2
+    }
+  },
+  "questions": {
+    "kind": "two-stage",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "k": 10,
+    "siblings": false
+  }
+}

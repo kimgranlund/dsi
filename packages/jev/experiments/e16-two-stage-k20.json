@@ -1,0 +1,25 @@
+{
+  "name": "e16-two-stage-k20",
+  "hypothesis": "Same with 20 candidates.",
+  "sample": {
+    "n": 70,
+    "seed": 1,
+    "tier": "all"
+  },
+  "state": {
+    "kind": "full+siblings",
+    "format": "text"
+  },
+  "questions": {
+    "kind": "two-stage",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "k": 20
+  }
+}

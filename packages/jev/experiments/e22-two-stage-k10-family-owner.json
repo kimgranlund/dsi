@@ -1,0 +1,35 @@
+{
+  "name": "e22-two-stage-k10-family-owner",
+  "hypothesis": "e21 on the owner tier only: does it hold on hand-reviewed answers?",
+  "sample": {
+    "n": 70,
+    "seed": 1,
+    "tier": "owner"
+  },
+  "state": {
+    "kind": "full+siblings",
+    "format": "text"
+  },
+  "post": {
+    "grammar": true,
+    "noneBoost": {
+      "intent": 0.3,
+      "usage": 0.3,
+      "hue": 0.3,
+      "emphasis": 0.2
+    }
+  },
+  "questions": {
+    "kind": "two-stage",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "k": 10,
+    "siblings": true
+  }
+}

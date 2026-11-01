@@ -1,0 +1,25 @@
+{
+  "name": "e15-two-stage-k10",
+  "hypothesis": "Same with 10 candidates: recall up, choice harder.",
+  "sample": {
+    "n": 70,
+    "seed": 1,
+    "tier": "all"
+  },
+  "state": {
+    "kind": "full+siblings",
+    "format": "text"
+  },
+  "questions": {
+    "kind": "two-stage",
+    "facets": [
+      "intent",
+      "usage",
+      "hue",
+      "property",
+      "emphasis",
+      "state"
+    ],
+    "k": 10
+  }
+}
