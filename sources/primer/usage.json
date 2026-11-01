@@ -1,14 +1,19 @@
 {
   "product": "primer",
-  "note": "Component CSS whose var(--*) uses are the token-usage evidence (usage graph). Read as data; never executed.",
+  "note": "Component CSS of @primer/css and Primer React (CSS modules in dist/) whose var(--*) uses are the token-usage evidence (usage graph). @primer/react 38.41.0 accepts @primer/primitives 10.x or 11.x. Read as data; never executed.",
   "packages": [
     {
       "registry": "npm",
       "name": "@primer/css",
       "version": "22.3.3"
+    },
+    {
+      "registry": "npm",
+      "name": "@primer/react",
+      "version": "38.41.0"
     }
   ],
   "files": [
-    "dist/*.css"
+    "dist/**/*.css"
   ]
 }

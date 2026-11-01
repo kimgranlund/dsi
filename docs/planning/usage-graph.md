@@ -45,3 +45,16 @@ Working note (2026-11-01). Hypothesis: grounding mappings in how each system's o
 ## Re-audit with usage evidence (2026-11-01, run audit-u1)
 
 Audit packets now carry `observedUses` (component, selector, property class, state) when a usage graph exists, and `audit-merge --partial` replaces only the re-audited verdicts, each with a `rerun` record of the verdict it replaced. The 61 Spectrum mappings whose earlier verdict was insufficient and that have observed uses were re-audited blind by claude-haiku-5-5 (a family that mapped none of Spectrum): 60 supported, 1 insufficient (`notice-background-color-default`, a single badge use), 0 contradicted. Spectrum's audit is now 201 supported, 57 insufficient, 1 contradicted. The support is for property and state; usage does not speak to intent or emphasis.
+
+## Wider coverage (2026-11-01)
+
+Usage graphs now cover Carbon (`@carbon/styles` 1.117.0 compiled CSS, component from the `.cds--*` selector), Polaris (`@shopify/polaris` 13.9.5 per-component CSS) and Primer React (`@primer/react` 38.41.0 CSS modules, added to `@primer/css`). `usage-cli` gained `**` globs, hash-stripped component names and `selectorComponent`.
+
+| | Uses | Tokens | Approved color mappings with usage | Property agreement | State agreement |
+|---|---|---|---|---|---|
+| Carbon | 3,345 | 200 | 115 of 210 (55%) | 93.7% of 79 | 83.7% of 92 |
+| Polaris | 2,219 | 302 | 146 of 202 (72%) | 96.5% of 115 | 88.2% of 93 |
+| Primer (+ React) | 8,016 | 454 | 58 of 445 (13%) | 93.2% of 44 | 94.2% of 52 |
+| Spectrum | 7,107 | 727 | 108 of 251 (43%) | 96.8% of 62 | 90.7% of 75 |
+
+Property disagreements are mostly painting techniques, not mapping errors: borders and focus rings drawn with `box-shadow`, gradient borders drawn as backgrounds (Carbon AI), carets drawn with borders. One looks like a real error and is a lead for the next audit: Polaris `color-avatar-text-on-bg-fill` is approved as a categorical background, but its name and its only use (Avatar text) say text. State disagreements are mostly hover and selected states set by JavaScript classes the selector patterns do not know (`IndexTable`, `ResourceItem`). Next: classify inset `box-shadow` as border or focus ring.

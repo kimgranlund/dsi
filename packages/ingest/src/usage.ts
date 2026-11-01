@@ -19,7 +19,7 @@ const STATE: [RegExp, string][] = [
   [/:visited/i, 'visited'],
 ];
 
-export function readUses(files: { file: string; component: string }[], tokenOf: (cssVar: string) => string | undefined): Use[] {
+export function readUses(files: { file: string; component: string }[], tokenOf: (cssVar: string) => string | undefined, componentOf?: (selector: string) => string | undefined): Use[] {
   // Pass 1: custom property definitions anywhere in the package (union over selectors; first token reached wins).
   const defs = new Map<string, Set<string>>();
   const roots: { root: postcss.Root; file: string; component: string }[] = [];
@@ -44,7 +44,7 @@ export function readUses(files: { file: string; component: string }[], tokenOf: 
       const tokensIn = (d: postcss.Declaration) => [...new Set([...d.value.matchAll(VAR)].flatMap((m) => resolve(m[1])))];
       const bg = decls.filter((d) => /^background(-color)?$/.test(d.prop)).flatMap(tokensIn)[0];
       const state = STATE.find(([re]) => re.test(r.selector))?.[1];
-      for (const d of decls) for (const token of tokensIn(d)) uses.push({ token, component, selector: r.selector.slice(0, 200), property: d.prop, ...(state ? { state } : {}), ...(bg && bg !== token && !/^background/.test(d.prop) ? { background: bg } : {}), file: path.basename(file) });
+      for (const d of decls) for (const token of tokensIn(d)) uses.push({ token, component: componentOf?.(r.selector) ?? component, selector: r.selector.slice(0, 200), property: d.prop, ...(state ? { state } : {}), ...(bg && bg !== token && !/^background/.test(d.prop) ? { background: bg } : {}), file: path.basename(file) });
     });
   }
   return uses;
