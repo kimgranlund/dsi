@@ -41,6 +41,7 @@ const manifest = {
   adapter: source.adapter,
   ...(source.themes?.length ? { themes: source.themes } : {}),
   ...(defaultTheme ? { defaultTheme } : {}),
+  ...(source.themeExtends ? { themeExtends: source.themeExtends } : {}),
   ...((source as any).modes ? { modes: (source as any).modes } : {}),
   files: sets.map((s) => ({ file: s.file, ...(s.theme ? { theme: s.theme } : {}), tokens: s.tokens.size })).sort((a, b) => a.file.localeCompare(b.file)),
   counts: report.counts,

@@ -4,6 +4,7 @@ import * as sass from 'sass';
 import type { Adapter, OutputSet } from '../adapter.ts';
 import { EXT, inferLiteral, isAlias, type Token } from '../dtcg.ts';
 import { materialDocGroups } from '../structure.ts';
+import { sassModuleVariables } from '../sass-module.ts';
 
 /**
  * @material/web ships tokens as Sass modules (tokens/_md-{ref,sys,comp}-*.scss). Each exposes values() (or
@@ -141,6 +142,53 @@ export const material: Adapter = (pkgs, source) => {
       set.tokens.set(tokenPath, token);
       counts.tokens++;
     }
+  }
+  // Newer token sets shipped beside the one components consume (tokens/versions/latest): plain `$var: value;` modules
+  // whose `///` comment gives the M3 token name. Stored in their own theme; a token whose name matches a consumed
+  // token's path (md.sys.shape.corner-large) overrides it there, the rest are new. Variable-font axis settings are
+  // not ingested: no DTCG type fits them and no role uses them.
+  const AXES = /-(crsv|fill|grad|hexp|opsz|rond|slnt|wdth|wght)$/;
+  for (const e of source.entries.filter((e) => e.format === 'sass-vars')) {
+    const theme = e.theme!;
+    const file = `md.${theme}.tokens.json`;
+    const set = sets.get(file) ?? sets.set(file, { file, theme, tokens: new Map() }).get(file)!;
+    const nameOf = new Map<string, Map<string, string>>(); // module -> sass var -> token path
+    const valueOf = new Map<string, string>();
+    let axes = 0;
+    for (const mod of e.modules ?? []) {
+      const rel = `${e.path}/_${mod}.scss`;
+      const src = fs.readFileSync(path.join(pkgs[source.package.name].dir, rel), 'utf8');
+      const refs = new Map([...src.matchAll(/^\$([a-z0-9-]+):\s*([a-z0-9-]+)\.\$([a-z0-9-]+);/gm)].map((m) => [m[1], [m[2], m[3]] as const]));
+      const names = new Map<string, string>();
+      nameOf.set(mod, names);
+      for (const v of sassModuleVariables(pkgs, source.package.name, rel)) {
+        const native = v.description?.match(/^(md\.[a-z0-9.-]+)/)?.[1];
+        if (!native) throw new Error(`${rel}: $${v.name} has no md.* name comment`);
+        const [a, b, c, ...rest] = native.split('.');
+        const tokenPath = `${a}.${b}.${c}.${rest.join('-')}`;
+        if (AXES.test(tokenPath)) { axes++; continue; }
+        const raw = String(v.value);
+        names.set(v.name, tokenPath);
+        valueOf.set(tokenPath, raw);
+        const prov = { product: source.product, implementation: source.implementation, package: source.package.name, version: source.package.version, file: rel, nativeName: native, theme, rawValue: raw };
+        const ref = refs.get(v.name);
+        const target = ref && nameOf.get(ref[0])?.get(ref[1]);
+        let token: Token;
+        if (target && valueOf.get(target) === raw) { token = { $value: `{${target}}`, $extensions: { [EXT]: prov } }; counts.aliases++; }
+        else {
+          if (ref) notes.push(`${tokenPath}: references ${ref[0]}.$${ref[1]} but the value could not be proven; stored as literal`);
+          const t = inferLiteral(raw, tokenPath.split('.').pop()!);
+          token = { ...t, $extensions: { [EXT]: t.$type ? prov : { ...prov, untyped: true } } };
+          counts.literals++;
+          if (!t.$type) counts.untyped++;
+        }
+        const group = v.description!.match(/\((.+)\)\s*$/)?.[1];
+        if (group) (token as Token & { $description?: string }).$description = group;
+        set.tokens.set(tokenPath, token);
+        counts.tokens++;
+      }
+    }
+    notes.push(`${e.path}: theme "${theme}" from ${(e.modules ?? []).length} modules; ${axes} variable-font axis tokens not ingested`);
   }
   // Shipped groups and descriptions from the documented token file, when the source lists it.
   const doc = source.entries.find((e) => e.format === 'sass-doc-groups') as (typeof source.entries)[number] & { groupOrder?: string[]; groupOrderSource?: string } | undefined;

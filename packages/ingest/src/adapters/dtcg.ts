@@ -1,13 +1,17 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import type { Adapter, OutputSet } from '../adapter.ts';
-import { EXT, isAlias, type Provenance, type Token } from '../dtcg.ts';
+import { EXT, inferLiteral, isAlias, type Provenance, type Token } from '../dtcg.ts';
+import { sassModuleVariables, type SassValue } from '../sass-module.ts';
 import { carbonTokenGroups } from '../structure.ts';
 
 /**
  * For products that already ship DTCG 2025.10 files. Source entries:
  *   { format: "dtcg", path, package? }           a mode-independent token file
  *   { format: "dtcg-resolver", path, package? }  a resolver whose `theme`-style modifier lists per-context files
+ *   { format: "sass-module", path, package, group, variables?, flatten?, skipKeys? }
+ *       public variables of a shipped Sass module (for packages that ship no DTCG file, e.g. @carbon/type), evaluated
+ *       with Sass and stored under `<group>.<variable>.<map key>...`; `flatten` drops the variable segment
  * Curly-brace aliases are kept as shipped. JSON Pointer `$ref`s inside a value (partial references, e.g. a palette
  * colour with a new alpha) are resolved to a literal against the shipped files, and the token is noted as derived.
  * Group `$type`s are inherited onto tokens. `$description`, `$deprecated` and foreign `$extensions` are kept.
@@ -114,6 +118,38 @@ export const dtcg: Adapter = (pkgs, source) => {
       }
       sets.push(set);
     }
+  }
+  for (const e of source.entries.filter((e) => e.format === 'sass-module')) {
+    const pkg = pkgOf(e);
+    const short = pkg.split('/').at(-1)!;
+    const file = `${short}${e.group === short ? "" : "." + e.group}.tokens.json`;
+    let set = sets.find((x) => x.file === file);
+    if (!set) sets.push((set = { file, tokens: new Map() }));
+    const vars = sassModuleVariables(pkgs, pkg, e.path).filter((v) => !e.variables || e.variables.includes(v.name));
+    if (e.variables) for (const name of e.variables) if (!vars.some((v) => v.name === name)) throw new Error(`${e.path}: no public variable $${name}`);
+    let skipped = 0;
+    const put = (keys: string[], v: SassValue, meta: { description?: string; deprecated?: boolean }, varName: string) => {
+      if (Array.isArray(v) || typeof v === 'object') {
+        for (const [k, x] of Array.isArray(v) ? v.map((x, i) => [String(i + 1), x] as const) : Object.entries(v)) {
+          if (e.skipKeys?.includes(k)) { skipped++; continue; }
+          put([...keys, k], x, meta, varName);
+        }
+        return;
+      }
+      const p = [e.group!, ...(e.flatten ? [] : [varName]), ...keys].join('.');
+      if (set!.tokens.has(p)) throw new Error(`duplicate token ${p} in ${file}`);
+      const lit = inferLiteral(v, [varName, ...keys].join('-'));
+      const prov: Provenance = { product: source.product, implementation: source.implementation, package: pkg, version: pkgs[pkg].version, file: e.path, nativeName: `$${varName}${keys.map((k) => '.' + k).join('')}`, rawValue: v };
+      if (!lit.$type) prov.untyped = true;
+      const token: Token & Record<string, unknown> = { $value: lit.$value, ...(lit.$type ? { $type: lit.$type } : {}), $extensions: { [EXT]: prov } };
+      if (meta.description) token.$description = meta.description;
+      if (meta.deprecated) token.$deprecated = true;
+      set!.tokens.set(p, token);
+      counts.tokens++;
+      counts.literals++;
+    };
+    for (const v of vars) put([], v.value, v, v.name);
+    notes.push(`${e.path}: ${vars.length} Sass variables evaluated to literals (references inside Sass maps are not proven, so no aliases)${skipped ? `; ${skipped} ${e.skipKeys!.join('/')} entries skipped` : ''}`);
   }
   const groupsEntry = source.entries.find((e) => e.format === 'ts-token-groups');
   const structure = groupsEntry ? carbonTokenGroups(path.join(pkgs[pkgOf(groupsEntry)].dir, groupsEntry.path), groupsEntry.path) : undefined;

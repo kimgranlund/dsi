@@ -21,6 +21,21 @@
       "registry": "npm",
       "name": "@carbon/motion",
       "version": "11.55.0"
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/type",
+      "version": "11.70.0"
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/grid",
+      "version": "11.65.0"
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/styles",
+      "version": "1.118.0"
     }
   ],
   "entries": [
@@ -43,6 +58,54 @@
       "package": "@carbon/motion",
       "path": "tokens/surfaces.tokens.json",
       "format": "dtcg"
+    },
+    {
+      "package": "@carbon/type",
+      "path": "scss/_styles.scss",
+      "format": "sass-module",
+      "group": "type",
+      "skipKeys": [
+        "breakpoints"
+      ]
+    },
+    {
+      "package": "@carbon/type",
+      "path": "scss/_font-family.scss",
+      "format": "sass-module",
+      "group": "type",
+      "variables": [
+        "font-families",
+        "font-weights"
+      ]
+    },
+    {
+      "package": "@carbon/type",
+      "path": "scss/_scale.scss",
+      "format": "sass-module",
+      "group": "type",
+      "variables": [
+        "type-scale"
+      ]
+    },
+    {
+      "package": "@carbon/grid",
+      "path": "scss/_config.scss",
+      "format": "sass-module",
+      "group": "breakpoint",
+      "variables": [
+        "grid-breakpoints"
+      ],
+      "flatten": true
+    },
+    {
+      "package": "@carbon/styles",
+      "path": "scss/utilities/_z-index.scss",
+      "format": "sass-module",
+      "group": "z-index",
+      "variables": [
+        "z-indexes"
+      ],
+      "flatten": true
     },
     {
       "path": "tokens/themes.resolver.json",
@@ -70,6 +133,6 @@
     "spdx": "Apache-2.0",
     "url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
     "redistribution": "permitted",
-    "notes": "Apache-2.0 permits redistribution with attribution and the license notice. @carbon/type ships no DTCG file in 11.70.0, so typography is not ingested yet."
+    "notes": "Apache-2.0 permits redistribution with attribution and the license notice. @carbon/type, @carbon/grid and @carbon/styles ship no DTCG file, so their Sass module variables are evaluated (sass-module entries)."
   }
 }

@@ -10,16 +10,26 @@
   "adapter": "material",
   "themes": [
     "light",
-    "dark"
+    "dark",
+    "expressive"
   ],
+  "themeExtends": {
+    "expressive": "light"
+  },
   "modes": {
     "light": "light",
-    "dark": "dark"
+    "dark": "dark",
+    "expressive": "expressive"
   },
   "files": [
     {
       "file": "md.comp.tokens.json",
       "tokens": 1766
+    },
+    {
+      "file": "md.expressive.tokens.json",
+      "theme": "expressive",
+      "tokens": 242
     },
     {
       "file": "md.ref.tokens.json",
@@ -41,10 +51,10 @@
     }
   ],
   "counts": {
-    "tokens": 2070,
-    "aliases": 1516,
-    "literals": 554,
-    "untyped": 13,
+    "tokens": 2312,
+    "aliases": 1578,
+    "literals": 734,
+    "untyped": 26,
     "nullSkipped": 10,
     "aliasRejected": 12,
     "described": 45
@@ -61,7 +71,9 @@
     "md.comp.filled-text-field.container-shape-start-start: placeholder pointed at {md.sys.shape.corner-extra-small-top} but real value 4px != 4px, 4px, 0px, 0px; stored as literal",
     "md.comp.filled-text-field.container-shape-start-end: placeholder pointed at {md.sys.shape.corner-extra-small-top} but real value 4px != 4px, 4px, 0px, 0px; stored as literal",
     "md.comp.filled-text-field.container-shape-end-end: placeholder pointed at {md.sys.shape.corner-extra-small-top} but real value 0px != 4px, 4px, 0px, 0px; stored as literal",
-    "md.comp.filled-text-field.container-shape-end-start: placeholder pointed at {md.sys.shape.corner-extra-small-top} but real value 0px != 4px, 4px, 0px, 0px; stored as literal"
+    "md.comp.filled-text-field.container-shape-end-start: placeholder pointed at {md.sys.shape.corner-extra-small-top} but real value 0px != 4px, 4px, 0px, 0px; stored as literal",
+    "md.sys.elevation.surface-tint-color: references md-sys-color.$primary but the value could not be proven; stored as literal",
+    "tokens/versions/latest/sass: theme \"expressive\" from 8 modules; 270 variable-font axis tokens not ingested"
   ],
   "structure": {
     "file": "structure.json",

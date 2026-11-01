@@ -70,7 +70,9 @@
               "css",
               "scss",
               "ts-token-groups",
-              "sass-doc-groups"
+              "sass-doc-groups",
+              "sass-module",
+              "sass-vars"
             ]
           },
           "theme": {
@@ -97,8 +99,57 @@
             "type": "string",
             "format": "uri",
             "description": "Where groupOrder comes from."
+          },
+          "group": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$",
+            "description": "sass-module: token path prefix and output file group."
+          },
+          "variables": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "description": "sass-module: the public variables to read (all when omitted)."
+          },
+          "flatten": {
+            "type": "boolean",
+            "description": "sass-module: drop the variable name from token paths (one map per group)."
+          },
+          "skipKeys": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "sass-module: map keys not ingested, with a manifest note (e.g. per-breakpoint overrides)."
+          },
+          "modules": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "description": "sass-vars: module names in the directory at path, in dependency order."
           }
-        }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "format": {
+                  "const": "sass-module"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "package",
+                "group"
+              ]
+            }
+          }
+        ]
       }
     },
     "themes": {
@@ -201,6 +252,13 @@
     "modesNote": {
       "type": "string",
       "description": "Evidence for the modes choice."
+    },
+    "themeExtends": {
+      "type": "object",
+      "description": "A theme that only overrides another theme: lookups fall back to that theme, then to the base files (Material expressive extends light).",
+      "additionalProperties": {
+        "type": "string"
+      }
     }
   }
 }

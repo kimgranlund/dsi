@@ -1,0 +1,13 @@
+@use 'scale';
+
+/// Small label text.
+/// @group type
+$label-01: (
+  font-size: nth(scale.$type-scale, 1),
+  font-weight: 400,
+  letter-spacing: 0.32px,
+  breakpoints: (md: (font-size: 1rem)),
+) !default;
+
+/// @deprecated
+$caption-01: (font-size: 0.75rem, line-height: 1.33333) !default;

@@ -25,6 +25,24 @@
       "name": "@carbon/motion",
       "version": "11.55.0",
       "integrity": "sha512-jBjLagm+DvFPcVpZUYuS+lY3FkZWolA69apKe+Oh8Ezulm3Q1DQMkG9Ky+VOa0rptgFTnafP6L6y8vmZ3LJa5g=="
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/type",
+      "version": "11.70.0",
+      "integrity": "sha512-cmxwwhlVD/8L/J6k1N4/U6AhNldrpLynCQ4+Z7wSeGO6Ki0wE1Iczza8PAPa2eMoIw7frzk1q8jrwnI0zHBftw=="
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/grid",
+      "version": "11.65.0",
+      "integrity": "sha512-zuHs9oDYd/gMZQPKV0a/PNJXK/iaYmnMFqcwgbm4zYJ3MnD3kWgJKoqFSSPGuks8xKrg722exFYW4yDdwImIDQ=="
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/styles",
+      "version": "1.118.0",
+      "integrity": "sha512-/a5FktRWkAtrWmWMPO9tpc+GKX91dctdKXFL/pk02BJg47NZxhGCwFBJTDGeLvuEZnlkYaN5nUJXBi6vj4oKjQ=="
     }
   ],
   "adapter": "dtcg",
@@ -44,6 +62,10 @@
       "tokens": 244
     },
     {
+      "file": "grid.breakpoint.tokens.json",
+      "tokens": 15
+    },
+    {
       "file": "layout.tokens.json",
       "tokens": 44
     },
@@ -54,6 +76,10 @@
     {
       "file": "motion.tokens.json",
       "tokens": 12
+    },
+    {
+      "file": "styles.z-index.tokens.json",
+      "tokens": 8
     },
     {
       "file": "theme.g10.tokens.json",
@@ -74,12 +100,16 @@
       "file": "theme.white.tokens.json",
       "theme": "white",
       "tokens": 312
+    },
+    {
+      "file": "type.tokens.json",
+      "tokens": 511
     }
   ],
   "counts": {
-    "tokens": 1546,
+    "tokens": 2080,
     "aliases": 940,
-    "literals": 606,
+    "literals": 1140,
     "derived": 116
   },
   "notes": [
@@ -199,7 +229,12 @@
     "button-disabled (g100): partial $ref resolved to a literal",
     "content-switcher-background (g100): partial $ref resolved to a literal",
     "content-switcher-background-hover (g100): partial $ref resolved to a literal",
-    "content-switcher-selected (g100): partial $ref resolved to a literal"
+    "content-switcher-selected (g100): partial $ref resolved to a literal",
+    "scss/_styles.scss: 59 Sass variables evaluated to literals (references inside Sass maps are not proven, so no aliases); 44 breakpoints entries skipped",
+    "scss/_font-family.scss: 2 Sass variables evaluated to literals (references inside Sass maps are not proven, so no aliases)",
+    "scss/_scale.scss: 1 Sass variables evaluated to literals (references inside Sass maps are not proven, so no aliases)",
+    "scss/_config.scss: 1 Sass variables evaluated to literals (references inside Sass maps are not proven, so no aliases)",
+    "scss/utilities/_z-index.scss: 1 Sass variables evaluated to literals (references inside Sass maps are not proven, so no aliases)"
   ],
   "structure": {
     "file": "structure.json",

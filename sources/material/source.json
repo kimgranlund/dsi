@@ -24,22 +24,42 @@
         "Add-ons"
       ],
       "groupOrderSource": "https://m3.material.io/styles/color/roles"
+    },
+    {
+      "path": "tokens/versions/latest/sass",
+      "format": "sass-vars",
+      "theme": "expressive",
+      "modules": [
+        "md-ref-typeface",
+        "md-sys-shape",
+        "md-sys-motion",
+        "md-sys-state",
+        "md-sys-state-focus-indicator",
+        "md-sys-typescale",
+        "md-sys-typescale-emphasized",
+        "md-sys-elevation"
+      ]
     }
   ],
   "themes": [
     "light",
-    "dark"
+    "dark",
+    "expressive"
   ],
   "modes": {
     "light": "light",
-    "dark": "dark"
+    "dark": "dark",
+    "expressive": "expressive"
   },
-  "modesNote": "Material ships values-light and values-dark.",
+  "modesNote": "Material ships values-light and values-dark. Material Web 2.5.0 also ships the newer M3 token set (tokens/versions/latest, M3 34.0.21: springs, extra corner sizes, emphasized type, tracking) that its components do not consume yet; it is the expressive theme, which extends light.",
   "adapter": "material",
   "license": {
     "spdx": "Apache-2.0",
     "url": "https://github.com/material-components/material-web/blob/main/LICENSE",
     "redistribution": "permitted",
     "notes": "Apache-2.0 permits redistribution with attribution and the license notice. The site must credit Google and link the license."
+  },
+  "themeExtends": {
+    "expressive": "light"
   }
 }

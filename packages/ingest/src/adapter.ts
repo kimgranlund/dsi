@@ -5,7 +5,9 @@ export interface SourceConfig {
   implementation?: string;
   package: { registry: 'npm'; name: string; version: string };
   dependencies?: { registry: 'npm'; name: string; version: string }[];
-  entries: { path: string; format: string; theme?: string; package?: string; nativeName?: string }[];
+  entries: { path: string; format: string; theme?: string; package?: string; nativeName?: string; group?: string; variables?: string[]; flatten?: boolean; skipKeys?: string[]; modules?: string[] }[];
+  /** A theme that only overrides another: its lookups fall back to that theme, then to the base files. */
+  themeExtends?: Record<string, string>;
   themes?: string[];
   adapter: string;
 }

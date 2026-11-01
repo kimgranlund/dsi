@@ -83,7 +83,7 @@ export function validateNative(root: string, ajv: Ajv2020, issues: Issue[]) {
       const at = (f: string) => path.relative(root, path.join(dir, f));
       const manifestPath = path.join(dir, 'manifest.json');
       if (!fs.existsSync(manifestPath)) { issues.push({ file: at(''), message: 'missing manifest.json' }); continue; }
-      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8')) as { product: string; package: { name: string; version: string }; dependencies?: { name: string; version: string }[]; themes?: string[]; defaultTheme?: string; files: { file: string; theme?: string; tokens: number }[] };
+      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8')) as { product: string; package: { name: string; version: string }; dependencies?: { name: string; version: string }[]; themes?: string[]; defaultTheme?: string; themeExtends?: Record<string, string>; files: { file: string; theme?: string; tokens: number }[] };
       const packages = new Map([manifest.package, ...(manifest.dependencies ?? [])].map((p) => [p.name, p.version]));
       if (manifest.product !== product || manifest.package.version !== version) issues.push({ file: at('manifest.json'), message: `manifest says ${manifest.product}@${manifest.package.version}, folder is ${product}/${version}` });
       const listed = new Set(manifest.files.map((f) => f.file));
@@ -119,7 +119,9 @@ export function validateNative(root: string, ajv: Ajv2020, issues: Issue[]) {
       for (const t of themed.keys()) if (manifest.themes && !manifest.themes.includes(t)) issues.push({ file: at('manifest.json'), message: `theme file for "${t}", which is not in themes` });
       for (const t of manifest.themes ?? []) if (!themed.has(t) && t !== manifest.defaultTheme) issues.push({ file: at('manifest.json'), message: `theme "${t}" has no file and is not the defaultTheme` });
       const names = manifest.themes ?? [...themed.keys()];
-      const contexts = names.length ? names.map((name) => ({ name, all: new Map([...base, ...(themed.get(name) ?? [])]) })) : [{ name: '', all: base }];
+      // An extending theme layers on its parent (Material expressive extends light), which layers on the base files.
+      const chain = (name: string): string[] => (manifest.themeExtends?.[name] ? [...chain(manifest.themeExtends[name]), name] : [name]);
+      const contexts = names.length ? names.map((name) => ({ name, all: new Map([...base, ...chain(name).flatMap((t) => [...(themed.get(t) ?? [])])]) })) : [{ name: '', all: base }];
       for (const { name, all } of contexts) {
         for (const [tp, token] of all) {
           // Every reference inside the value must resolve; whole-value aliases are followed to detect cycles.

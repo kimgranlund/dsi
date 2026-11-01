@@ -43,7 +43,7 @@ function leaves(tree: Record<string, unknown>, prefix = ''): [string, RawToken][
 /** Load data/native/<product>/<version>: every token, per theme, with a theme-aware lookup. */
 export function loadNative(root: string, product: string, version: string): NativeSet {
   const dir = path.join(root, 'data/native', product, version);
-  const manifest = JSON.parse(fs.readFileSync(path.join(dir, 'manifest.json'), 'utf8')) as { implementation?: string; themes?: string[]; defaultTheme?: string; modes?: Record<string, string>; files: { file: string; theme?: string }[] };
+  const manifest = JSON.parse(fs.readFileSync(path.join(dir, 'manifest.json'), 'utf8')) as { implementation?: string; themes?: string[]; defaultTheme?: string; modes?: Record<string, string>; themeExtends?: Record<string, string>; files: { file: string; theme?: string }[] };
   const base = new Map<string, RawToken>();
   const themed = new Map<string, Map<string, RawToken>>();
   for (const f of manifest.files) {
@@ -51,7 +51,9 @@ export function loadNative(root: string, product: string, version: string): Nati
     for (const [p, t] of leaves(JSON.parse(fs.readFileSync(path.join(dir, f.file), 'utf8')))) target.set(p, t);
   }
   const themes = manifest.themes ?? [];
-  const lookup = (theme: string, p: string) => themed.get(theme)?.get(p) ?? base.get(p);
+  // An extending theme (Material expressive extends light) falls back to its parent theme before the base files.
+  const parent = manifest.themeExtends ?? {};
+  const lookup = (theme: string, p: string): RawToken | undefined => themed.get(theme)?.get(p) ?? (parent[theme] ? lookup(parent[theme], p) : base.get(p));
   const tokens = new Map<string, NativeToken>();
   const add = (p: string, t: RawToken, theme: string) => {
     const cur = tokens.get(p) ?? { path: p, type: t.$type as string | undefined, description: t.$description as string | undefined, deprecated: t.$deprecated, prov: (t.$extensions as Record<string, Record<string, unknown>>)[EXT], byTheme: new Map() };
@@ -63,7 +65,7 @@ export function loadNative(root: string, product: string, version: string): Nati
   if (themes.length) {
     for (const theme of themes) {
       for (const [p] of base) add(p, lookup(theme, p)!, theme);
-      for (const [p, t] of themed.get(theme) ?? []) add(p, t, theme);
+      for (let t: string | undefined = theme; t; t = parent[t]) for (const [p] of themed.get(t) ?? []) add(p, lookup(theme, p)!, theme);
     }
   } else for (const [p, t] of base) add(p, t, '');
   return { product, version, implementation: manifest.implementation, themes, defaultTheme: manifest.defaultTheme, modes: manifest.modes ?? {}, tokens, lookup };
