@@ -1,10 +1,183 @@
 {
   "product": "spectrum",
   "noise": [
+    "accessory-gap",
+    "accessory-gap-affixed",
+    "accessory-gap-extra",
+    "accessory-item",
+    "accessory-item-padding",
+    "affixed-extra",
+    "alert-icon",
+    "alert-icon-extra",
+    "alert-icon-large",
+    "alert-icon-medium",
+    "alert-icon-small",
     "ambient",
+    "android",
+    "back-icon",
+    "banner-gap",
+    "banner-padding",
+    "banner-padding-horizontal",
+    "base",
+    "bold-font",
+    "bottom-to",
+    "character-count",
+    "character-count-to",
+    "character-count-top",
+    "cjk-line",
     "color",
+    "component",
+    "component-bottom",
+    "component-bottom-to",
+    "component-edge",
+    "component-edge-to",
+    "component-pill",
+    "component-pill-edge",
+    "component-to",
+    "component-to-menu",
+    "container",
+    "control",
+    "corner",
+    "corner-triangle",
+    "corner-triangle-icon",
+    "count-to",
+    "count-to-field",
+    "count-top",
+    "count-top-margin",
+    "disclosure-icon",
+    "disclosure-icon-compact",
+    "disclosure-icon-extra",
+    "disclosure-icon-large",
+    "disclosure-icon-medium",
+    "disclosure-icon-small",
+    "disclosure-icon-spacious",
+    "disclosure-indicator",
+    "disclosure-indicator-top",
     "drop",
-    "key"
+    "drop-target",
+    "drop-target-dash",
+    "edge",
+    "edge-to-alert",
+    "edge-to-disclosure",
+    "edge-to-validation",
+    "emphasized-default",
+    "emphasized-hover",
+    "end-edge",
+    "end-edge-to",
+    "field-edge",
+    "field-edge-to",
+    "field-end",
+    "field-end-edge",
+    "field-quiet",
+    "field-top",
+    "field-top-to",
+    "focus-indicator",
+    "font",
+    "group",
+    "height",
+    "height-font",
+    "height-font-size",
+    "horizontal-extra",
+    "horizontal-medium",
+    "horizontal-uniform",
+    "horizontal-uniform-2x",
+    "horizontal-uniform-extra",
+    "icon-2x",
+    "icon-compact",
+    "icon-extra",
+    "icon-extra-large",
+    "icon-large",
+    "icon-medium",
+    "icon-quiet",
+    "icon-small",
+    "icon-spacious",
+    "indicator-thickness",
+    "indicator-top",
+    "indicator-top-to",
+    "item-gap",
+    "item-padding",
+    "item-padding-extra",
+    "item-padding-vertical",
+    "items",
+    "key",
+    "label-character",
+    "label-character-count",
+    "large-default",
+    "large-spacious",
+    "letter",
+    "line",
+    "list-gap",
+    "list-indent",
+    "list-item",
+    "list-item-gap",
+    "list-item-padding",
+    "medium-size",
+    "medium-size-extra",
+    "navigational-indicator",
+    "navigational-indicator-top",
+    "only",
+    "pill-edge",
+    "pill-edge-to",
+    "progress-circle",
+    "serif-font",
+    "side",
+    "side-label",
+    "side-label-character",
+    "size",
+    "size-extra",
+    "size-extra-large",
+    "size-large",
+    "size-medium",
+    "size-small",
+    "small-size",
+    "small-spacious",
+    "stop",
+    "strikethrough-day",
+    "target-dash",
+    "text-to",
+    "text-underline",
+    "to-alert",
+    "to-alert-icon",
+    "to-back",
+    "to-back-icon",
+    "to-control",
+    "to-disclosure",
+    "to-disclosure-icon",
+    "to-field",
+    "to-field-quiet",
+    "to-menu",
+    "to-progress",
+    "to-progress-circle",
+    "to-text",
+    "to-validation",
+    "to-validation-icon",
+    "to-visual",
+    "to-visual-only",
+    "to-workflow",
+    "to-workflow-icon",
+    "top-to-alert",
+    "top-to-back",
+    "top-to-disclosure",
+    "top-to-progress",
+    "top-to-validation",
+    "top-to-workflow",
+    "triangle-icon",
+    "uniform-2x",
+    "uniform-extra",
+    "validation-icon",
+    "validation-icon-extra",
+    "validation-icon-large",
+    "validation-icon-medium",
+    "validation-icon-small",
+    "vertical-2x",
+    "vertical-extra",
+    "visual",
+    "visual-only",
+    "width",
+    "window",
+    "workflow",
+    "workflow-icon-2x",
+    "workflow-icon-extra"
   ],
   "scopes": [
     {
@@ -36,7 +209,44 @@
       "scope": "component"
     }
   ],
-  "steps": [],
+  "steps": [
+    "2x",
+    "2x-large",
+    "2x-small",
+    "3x",
+    "3x-large",
+    "4x",
+    "affixed",
+    "black",
+    "bold",
+    "center",
+    "compact",
+    "default",
+    "down",
+    "elevated",
+    "emphasized",
+    "extra",
+    "extra-large",
+    "extra-small",
+    "full",
+    "italic",
+    "l",
+    "large",
+    "light",
+    "m",
+    "maximum",
+    "medium",
+    "minimum",
+    "none",
+    "quiet",
+    "regular",
+    "s",
+    "small",
+    "spacious",
+    "uniform",
+    "xl",
+    "xs"
+  ],
   "terms": [
     {
       "term": "accent",
@@ -75,28 +285,67 @@
       }
     },
     {
-      "term": "base",
-      "concept": "dsi:usage/page",
+      "term": "base-gap",
+      "concept": "dsi:property/gap",
       "match": "exact",
       "status": "proposed",
-      "note": "background-base is the app's base background. (confidence 0.82; the other agent disagreed)",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "base",
-      "concept": "dsi:usage/page",
-      "match": "close",
+      "term": "base-gap-extra",
+      "concept": "dsi:property/gap",
+      "match": "exact",
       "status": "proposed",
-      "note": "background-base-color is the app base background. (confidence 0.7; the other agent disagreed)",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:34.286646Z",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "base-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "base-padding-horizontal",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Axis-specific padding is a narrower case of the role. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "base-padding-vertical",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Axis-specific padding is a narrower case of the role. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
@@ -119,15 +368,15 @@
       }
     },
     {
-      "term": "blue",
-      "concept": "dsi:usage/categorical",
+      "term": "bold-font-weight",
+      "concept": "dsi:property/font-weight",
       "match": "exact",
       "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "note": "font-weight with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
@@ -150,6 +399,37 @@
       }
     },
     {
+      "term": "border-width",
+      "concept": "dsi:property/border-width",
+      "match": "exact",
+      "status": "approved",
+      "note": "Border thickness.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "bottom-to-text",
+      "concept": "dsi:property/padding",
+      "match": "close",
+      "status": "proposed",
+      "note": "Distance from a component edge to its content is padding. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
       "term": "brown",
       "concept": "dsi:hue/brown",
       "match": "exact",
@@ -168,132 +448,246 @@
       }
     },
     {
-      "term": "brown",
-      "concept": "dsi:usage/categorical",
+      "term": "cjk-line-height",
+      "concept": "dsi:property/line-height",
       "match": "exact",
       "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "note": "line-height with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "celery",
-      "concept": "dsi:hue/green",
-      "match": "close",
-      "status": "proposed",
-      "note": "Yellow-green; nearest hue green (lime also plausible). (confidence 0.75; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:34.286646Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "celery",
-      "concept": "dsi:hue/lime",
-      "match": "close",
-      "status": "proposed",
-      "note": "Nearest canonical hue (celery -> lime). (confidence 0.8; the other agent disagreed)",
+      "term": "component-height",
+      "concept": "dsi:property/height",
+      "match": "exact",
+      "status": "approved",
+      "note": "Fixed control heights.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "component-l",
+      "concept": "dsi:usage/label",
+      "match": "close",
+      "status": "proposed",
+      "note": "Composite component text styles (component-<size>-<weight>): text inside components. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "celery",
-      "concept": "dsi:usage/categorical",
+      "term": "component-m",
+      "concept": "dsi:usage/label",
+      "match": "close",
+      "status": "proposed",
+      "note": "Composite component text styles (component-<size>-<weight>): text inside components. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "component-padding",
+      "concept": "dsi:property/padding",
       "match": "exact",
       "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "chartreuse",
-      "concept": "dsi:hue/lime",
+      "term": "component-padding-vertical",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Axis-specific padding is a narrower case of the role. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "component-s",
+      "concept": "dsi:usage/label",
       "match": "close",
       "status": "proposed",
-      "note": "Nearest canonical hue (chartreuse -> lime). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "note": "Composite component text styles (component-<size>-<weight>): text inside components. (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "chartreuse",
-      "concept": "dsi:usage/categorical",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "cinnamon",
-      "concept": "dsi:hue/brown",
+      "term": "component-xl",
+      "concept": "dsi:usage/label",
       "match": "close",
       "status": "proposed",
-      "note": "Nearest canonical hue (cinnamon -> brown). (confidence 0.8; the other agent disagreed)",
+      "note": "Composite component text styles (component-<size>-<weight>): text inside components. (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "cinnamon",
-      "concept": "dsi:hue/orange",
+      "term": "component-xs",
+      "concept": "dsi:usage/label",
       "match": "close",
       "status": "proposed",
-      "note": "Red-orange brown; nearest hue orange. (confidence 0.5; the other agent disagreed)",
+      "note": "Composite component text styles (component-<size>-<weight>): text inside components. (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:34.286646Z",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "cinnamon",
-      "concept": "dsi:usage/categorical",
+      "term": "container-gap",
+      "concept": "dsi:property/gap",
       "match": "exact",
       "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "content",
-      "concept": "dsi:property/foreground",
+      "term": "container-gap-2x",
+      "concept": "dsi:property/gap",
       "match": "exact",
       "status": "proposed",
-      "note": "Spectrum content color colors text and icons. (confidence 0.9); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "container-gap-extra",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "container-padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "container-padding-2x",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "container-padding-extra",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "corner-radius",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "approved",
+      "note": "Corner rounding.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "corner-radius-medium",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "proposed",
+      "note": "corner-radius with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "corner-radius-small",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "proposed",
+      "note": "corner-radius with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
@@ -316,32 +710,6 @@
       }
     },
     {
-      "term": "cyan",
-      "concept": "dsi:usage/categorical",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "default",
-      "concept": "dsi:emphasis/default",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Baseline state/step. (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:34.286646Z",
-        "method": "terms-v1"
-      }
-    },
-    {
       "term": "disabled",
       "concept": "dsi:state/disabled",
       "match": "exact",
@@ -357,32 +725,6 @@
         "by": "agreement",
         "at": "2026-11-01T15:01:26.341Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
-      }
-    },
-    {
-      "term": "down",
-      "concept": "dsi:state/active",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Spectrum's pressed state. (confidence 0.92; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "down",
-      "concept": "dsi:state/active",
-      "match": "close",
-      "status": "proposed",
-      "note": "Pressed state. (confidence 0.8; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:34.286646Z",
-        "method": "terms-v1"
       }
     },
     {
@@ -422,28 +764,106 @@
       }
     },
     {
-      "term": "elevated",
-      "concept": "dsi:usage/overlay",
-      "match": "close",
+      "term": "drop-shadow-dragged",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
       "status": "proposed",
-      "note": "Elevated background/shadow for raised floating containers. (confidence 0.55; the other agent disagreed)",
+      "note": "drop-shadow with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "emphasized",
-      "concept": "dsi:emphasis/strong",
-      "match": "close",
+      "term": "drop-shadow-elevated",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
       "status": "proposed",
-      "note": "Emphasized drop shadow is the stronger shadow variant. (confidence 0.55; the other agent disagreed)",
+      "note": "drop-shadow with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "drop-shadow-emphasized",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
+      "status": "proposed",
+      "note": "drop-shadow with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "edge-to-text",
+      "concept": "dsi:property/padding",
+      "match": "close",
+      "status": "proposed",
+      "note": "Distance from a component edge to its content is padding. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "edge-to-visual",
+      "concept": "dsi:property/padding",
+      "match": "close",
+      "status": "proposed",
+      "note": "Distance from a component edge to its content is padding. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "elevation",
+      "concept": "dsi:property/elevation-level",
+      "match": "close",
+      "status": "proposed",
+      "note": "android-elevation is an Android elevation value. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "family",
+      "concept": "dsi:property/font-family",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Only font-family tokens carry family. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "field",
+      "concept": "dsi:usage/field",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Form input field. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.306Z",
         "method": "terms-v1"
       }
     },
@@ -466,41 +886,256 @@
       }
     },
     {
-      "term": "focus-indicator",
-      "concept": "dsi:property/focus-ring",
+      "term": "font-family",
+      "concept": "dsi:property/font-family",
       "match": "exact",
-      "status": "proposed",
-      "note": "Focus indicator is the focus ring color. (confidence 0.9; the other agent disagreed)",
+      "status": "approved",
+      "note": "Typeface stack.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "font-size",
+      "concept": "dsi:property/font-size",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typography font size scale.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "font-weight",
+      "concept": "dsi:property/font-weight",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typeface weight.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "gap",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "approved",
+      "note": "Space between children.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "gap-2x",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "fuchsia",
-      "concept": "dsi:hue/magenta",
-      "match": "close",
+      "term": "gap-2x-large",
+      "concept": "dsi:property/gap",
+      "match": "exact",
       "status": "proposed",
-      "note": "Nearest canonical hue (fuchsia -> magenta). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "fuchsia",
-      "concept": "dsi:usage/categorical",
+      "term": "gap-affixed",
+      "concept": "dsi:property/gap",
       "match": "exact",
       "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap-affixed-extra",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap-compact",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap-extra",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap-extra-large",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap-extra-small",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap-horizontal",
+      "concept": "dsi:property/gap",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Axis-specific gap is a narrower case of the role. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap-large",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap-medium",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap-regular",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap-small",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gap-vertical",
+      "concept": "dsi:property/gap",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Axis-specific gap is a narrower case of the role. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
@@ -523,19 +1158,6 @@
       }
     },
     {
-      "term": "gray",
-      "concept": "dsi:usage/categorical",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
-      }
-    },
-    {
       "term": "green",
       "concept": "dsi:hue/green",
       "match": "exact",
@@ -554,28 +1176,67 @@
       }
     },
     {
-      "term": "green",
-      "concept": "dsi:usage/categorical",
+      "term": "group-gap",
+      "concept": "dsi:property/gap",
       "match": "exact",
       "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "highlight",
-      "concept": "dsi:intent/highlight",
-      "match": "close",
+      "term": "group-gap-extra",
+      "concept": "dsi:property/gap",
+      "match": "exact",
       "status": "proposed",
-      "note": "Highlight color of a selected stack item. (confidence 0.5; the other agent disagreed)",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:34.286646Z",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "group-gap-large",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "group-gap-medium",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "group-gap-small",
+      "concept": "dsi:property/gap",
+      "match": "exact",
+      "status": "proposed",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
@@ -616,6 +1277,37 @@
       }
     },
     {
+      "term": "icon-size",
+      "concept": "dsi:property/icon-size",
+      "match": "exact",
+      "status": "approved",
+      "note": "Icon dimensions.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "indent",
+      "concept": "dsi:property/spacing",
+      "match": "broad",
+      "status": "proposed",
+      "note": "List indentation is a narrower case of spacing. (confidence 0.65; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
       "term": "indigo",
       "concept": "dsi:hue/indigo",
       "match": "exact",
@@ -631,19 +1323,6 @@
         "by": "agreement",
         "at": "2026-11-01T15:01:26.341Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
-      }
-    },
-    {
-      "term": "indigo",
-      "concept": "dsi:usage/categorical",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
       }
     },
     {
@@ -683,28 +1362,64 @@
       }
     },
     {
-      "term": "layer",
-      "concept": "dsi:usage/surface",
+      "term": "letter-spacing",
+      "concept": "dsi:property/letter-spacing",
       "match": "exact",
-      "status": "proposed",
-      "note": "background-layer-1/2 are surface layers on the base. (confidence 0.88; the other agent disagreed)",
+      "status": "approved",
+      "note": "Tracking.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "line-height",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "approved",
+      "note": "Typography line height.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "line-height-font",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
+      "status": "proposed",
+      "note": "line-height with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "layer",
-      "concept": "dsi:usage/surface",
-      "match": "close",
+      "term": "line-height-font-size",
+      "concept": "dsi:property/line-height",
+      "match": "exact",
       "status": "proposed",
-      "note": "background-layer-N are stacked surfaces. (confidence 0.75; the other agent disagreed)",
+      "note": "Line height paired to a font-size step; the value is a line height. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:34.286646Z",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
@@ -727,16 +1442,21 @@
       }
     },
     {
-      "term": "magenta",
-      "concept": "dsi:usage/categorical",
+      "term": "margin",
+      "concept": "dsi:property/margin",
       "match": "exact",
-      "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "status": "approved",
+      "note": "Space outside a part.",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -776,32 +1496,6 @@
       }
     },
     {
-      "term": "notice",
-      "concept": "dsi:intent/warning",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Spectrum's warning semantic. (confidence 0.92; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "notice",
-      "concept": "dsi:intent/warning",
-      "match": "close",
-      "status": "proposed",
-      "note": "Orange attention status; Spectrum has no separate warning word. (confidence 0.75; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:34.286646Z",
-        "method": "terms-v1"
-      }
-    },
-    {
       "term": "orange",
       "concept": "dsi:hue/orange",
       "match": "exact",
@@ -820,41 +1514,202 @@
       }
     },
     {
-      "term": "orange",
-      "concept": "dsi:usage/categorical",
+      "term": "padding",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "approved",
+      "note": "Space inside a component.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "padding-2x",
+      "concept": "dsi:property/padding",
       "match": "exact",
       "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "overlay",
-      "concept": "dsi:usage/scrim",
-      "match": "close",
+      "term": "padding-2x-small",
+      "concept": "dsi:property/padding",
+      "match": "exact",
       "status": "proposed",
-      "note": "overlay-color dims content behind modals (used with overlay opacity). (confidence 0.65); both agents gave this, claude-sonnet-5-5 at confidence 0.7",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "pasteboard",
-      "concept": "dsi:usage/page",
-      "match": "close",
+      "term": "padding-extra",
+      "concept": "dsi:property/padding",
+      "match": "exact",
       "status": "proposed",
-      "note": "Pasteboard: outermost canvas area behind documents in Adobe apps. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.55",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-extra-large",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-extra-small",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-horizontal",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Axis-specific padding is a narrower case of the role. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-horizontal-extra",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Axis-specific padding is a narrower case of the role. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-horizontal-uniform",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Axis-specific padding is a narrower case of the role. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-large",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-medium",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-small",
+      "concept": "dsi:property/padding",
+      "match": "exact",
+      "status": "proposed",
+      "note": "padding with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-vertical",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Axis-specific padding is a narrower case of the role. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-vertical-2x",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Axis-specific padding is a narrower case of the role. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "padding-vertical-extra",
+      "concept": "dsi:property/padding",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Axis-specific padding is a narrower case of the role. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
@@ -874,19 +1729,6 @@
         "by": "agreement",
         "at": "2026-11-01T15:01:26.341Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
-      }
-    },
-    {
-      "term": "pink",
-      "concept": "dsi:usage/categorical",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
       }
     },
     {
@@ -926,15 +1768,67 @@
       }
     },
     {
-      "term": "purple",
-      "concept": "dsi:usage/categorical",
+      "term": "radius",
+      "concept": "dsi:property/corner-radius",
       "match": "exact",
       "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "note": "Only corner-radius tokens carry radius. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "radius-medium",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "proposed",
+      "note": "radius with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "radius-medium-size",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "proposed",
+      "note": "radius with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "radius-small",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "proposed",
+      "note": "radius with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "radius-small-size",
+      "concept": "dsi:property/corner-radius",
+      "match": "exact",
+      "status": "proposed",
+      "note": "radius with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
@@ -957,45 +1851,6 @@
       }
     },
     {
-      "term": "red",
-      "concept": "dsi:usage/categorical",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "seafoam",
-      "concept": "dsi:hue/teal",
-      "match": "close",
-      "status": "proposed",
-      "note": "Nearest canonical hue (seafoam -> teal). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "seafoam",
-      "concept": "dsi:usage/categorical",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
-      }
-    },
-    {
       "term": "selected",
       "concept": "dsi:state/selected",
       "match": "exact",
@@ -1011,6 +1866,19 @@
         "by": "agreement",
         "at": "2026-11-01T15:01:26.341Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "serif-font-family",
+      "concept": "dsi:property/font-family",
+      "match": "exact",
+      "status": "proposed",
+      "note": "font-family with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -1032,55 +1900,86 @@
       }
     },
     {
-      "term": "silver",
-      "concept": "dsi:hue/gray",
-      "match": "close",
-      "status": "proposed",
-      "note": "Nearest canonical hue (silver -> gray). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "silver",
-      "concept": "dsi:usage/categorical",
+      "term": "shadow-dragged",
+      "concept": "dsi:property/shadow",
       "match": "exact",
       "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "note": "shadow with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "subdued",
-      "concept": "dsi:emphasis/subtle",
-      "match": "close",
-      "status": "proposed",
-      "note": "Lower-contrast variant of a family (negative-subdued-background, neutral-subdued-content). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.7",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "subtle",
-      "concept": "dsi:emphasis/subtle",
+      "term": "shadow-elevated",
+      "concept": "dsi:property/shadow",
       "match": "exact",
       "status": "proposed",
-      "note": "Lighter background variant of the family (two-step). (confidence 0.88); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "note": "shadow with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
+      }
+    },
+    {
+      "term": "shadow-emphasized",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
+      "status": "proposed",
+      "note": "shadow with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "shadow-emphasized-default",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
+      "status": "proposed",
+      "note": "shadow with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "shadow-emphasized-hover",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
+      "status": "proposed",
+      "note": "shadow with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "spacing",
+      "concept": "dsi:property/spacing",
+      "match": "exact",
+      "status": "approved",
+      "note": "Global spacing scale spacing-25..1000.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:13:22.161Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -1102,80 +2001,158 @@
       }
     },
     {
-      "term": "title",
-      "concept": "dsi:property/text",
+      "term": "text-gap",
+      "concept": "dsi:property/gap",
       "match": "exact",
       "status": "proposed",
-      "note": "title-color colors title text. (confidence 0.85; the other agent disagreed)",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "title",
-      "concept": "dsi:usage/title",
+      "term": "text-gap-extra",
+      "concept": "dsi:property/gap",
       "match": "exact",
       "status": "proposed",
-      "note": "Title text color. (confidence 0.85; the other agent disagreed)",
+      "note": "gap with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "title",
-      "concept": "dsi:usage/title",
+      "term": "text-to-control",
+      "concept": "dsi:property/gap",
       "match": "close",
       "status": "proposed",
-      "note": "title-color is text for titles. (confidence 0.65; the other agent disagreed)",
+      "note": "Distance between two children of a component is a gap. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text-to-visual",
+      "concept": "dsi:property/gap",
+      "match": "close",
+      "status": "proposed",
+      "note": "Distance between two children of a component is a gap. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "thickness",
+      "concept": "dsi:property/border-width",
+      "match": "close",
+      "status": "proposed",
+      "note": "Line thickness of focus indicators, underlines and strikethroughs. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "to",
+      "concept": "dsi:property/spacing",
+      "match": "close",
+      "status": "proposed",
+      "note": "Spectrum X-to-Y names a distance between two parts. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "top-margin",
+      "concept": "dsi:property/margin",
+      "match": "exact",
+      "status": "proposed",
+      "note": "margin with step or generic qualifiers. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "top-to-text",
+      "concept": "dsi:property/padding",
+      "match": "close",
+      "status": "proposed",
+      "note": "Distance from a component edge to its content is padding. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "triangle-icon-size",
+      "concept": "dsi:property/icon-size",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Corner triangle icon size. (confidence 0.8; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:34.286646Z",
+        "at": "2026-11-01T15:00:34.306Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "turquoise",
-      "concept": "dsi:hue/teal",
-      "match": "close",
-      "status": "proposed",
-      "note": "Nearest canonical hue (turquoise -> teal). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
-      }
-    },
-    {
-      "term": "turquoise",
-      "concept": "dsi:usage/categorical",
+      "term": "weight",
+      "concept": "dsi:property/font-weight",
       "match": "exact",
       "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "note": "Only font-weight tokens carry weight. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
       }
     },
     {
-      "term": "visual",
-      "concept": "dsi:property/icon",
+      "term": "workflow-icon",
+      "concept": "dsi:property/icon-size",
       "match": "close",
       "status": "proposed",
-      "note": "Visual color: non-text graphics such as icons and status dots; icon is the nearest property. (confidence 0.6; the other agent disagreed)",
+      "note": "workflow-icon-<step> tokens are Spectrum workflow icon sizes. (confidence 0.8; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
+        "at": "2026-11-01T15:02:38Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "workflow-icon-size",
+      "concept": "dsi:property/icon-size",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Workflow icon size. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.306Z",
         "method": "terms-v1"
       }
     },
@@ -1195,19 +2172,6 @@
         "by": "agreement",
         "at": "2026-11-01T15:01:26.341Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
-      }
-    },
-    {
-      "term": "yellow",
-      "concept": "dsi:usage/categorical",
-      "match": "exact",
-      "status": "proposed",
-      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
-      "provenance": {
-        "agent": "dsi-classify",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:00:52.355Z",
-        "method": "terms-v1"
       }
     }
   ]
