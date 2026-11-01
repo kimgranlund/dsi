@@ -328,6 +328,90 @@
         "hex": "#6995fe"
       }
     },
+    "accent-icon": {
+      "$description": "Accent icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-icon",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--spectrum-accent-content-color-default",
+          "note": "no direct mapping; accent-content-color-default maps to dsi:concept/color/intent-accent/property-foreground, which covers text and icons",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "accent-content-color-default",
+          "version": "15.6.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3373,
+          0.5059,
+          1
+        ],
+        "hex": "#5681ff"
+      }
+    },
+    "accent-text": {
+      "$description": "Accent text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--spectrum-accent-content-color-default",
+          "note": "no direct mapping; accent-content-color-default maps to dsi:concept/color/intent-accent/property-foreground, which covers text and icons",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "accent-content-color-default",
+          "version": "15.6.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3373,
+          0.5059,
+          1
+        ],
+        "hex": "#5681ff"
+      }
+    },
+    "accent-text-hover": {
+      "$description": "Hovered accent text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-text/state-hover",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--spectrum-accent-content-color-hover",
+          "note": "no direct mapping; accent-content-color-hover maps to dsi:concept/color/intent-accent/property-foreground/state-hover, which covers text and icons",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "accent-content-color-hover",
+          "version": "15.6.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.4118,
+          0.5843,
+          0.9961
+        ],
+        "hex": "#6995fe"
+      }
+    },
     "background": {
       "$description": "Background",
       "$extensions": {
@@ -2308,6 +2392,90 @@
         "hex": "#fc432e"
       }
     },
+    "danger-text": {
+      "$description": "Danger text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-text",
+          "match": "narrow",
+          "mode": "dark",
+          "nativeName": "--spectrum-negative-content-color-default",
+          "note": "no direct mapping; negative-content-color-default maps to dsi:concept/color/intent-danger/property-foreground, which covers text and icons",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "negative-content-color-default",
+          "version": "15.6.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9882,
+          0.2627,
+          0.1804
+        ],
+        "hex": "#fc432e"
+      }
+    },
+    "danger-text-active": {
+      "$description": "Pressed danger text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-text/state-active",
+          "match": "narrow",
+          "mode": "dark",
+          "nativeName": "--spectrum-negative-content-color-down",
+          "note": "no direct mapping; negative-content-color-down maps to dsi:concept/color/intent-danger/property-foreground/state-active, which covers text and icons",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "negative-content-color-down",
+          "version": "15.6.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.4039,
+          0.3373
+        ],
+        "hex": "#ff6756"
+      }
+    },
+    "danger-text-hover": {
+      "$description": "Hovered danger text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-text/state-hover",
+          "match": "narrow",
+          "mode": "dark",
+          "nativeName": "--spectrum-negative-content-color-hover",
+          "note": "no direct mapping; negative-content-color-hover maps to dsi:concept/color/intent-danger/property-foreground/state-hover, which covers text and icons",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "negative-content-color-hover",
+          "version": "15.6.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.4039,
+          0.3373
+        ],
+        "hex": "#ff6756"
+      }
+    },
     "focus-ring": {
       "$description": "Focus ring",
       "$extensions": {
@@ -2555,6 +2723,34 @@
           0
         ],
         "hex": "#e06400"
+      }
+    },
+    "icon-disabled": {
+      "$description": "Disabled icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-icon/state-disabled",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--spectrum-disabled-content-color",
+          "note": "no direct mapping; disabled-content-color maps to dsi:concept/color/property-foreground/state-disabled, which covers text and icons",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "disabled-content-color",
+          "version": "15.6.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2667,
+          0.2667,
+          0.2667
+        ],
+        "hex": "#444444"
       }
     },
     "info": {
@@ -3853,6 +4049,34 @@
           0.949
         ],
         "hex": "#f2f2f2"
+      }
+    },
+    "text-disabled": {
+      "$description": "Disabled text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-text/state-disabled",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--spectrum-disabled-content-color",
+          "note": "no direct mapping; disabled-content-color maps to dsi:concept/color/property-foreground/state-disabled, which covers text and icons",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "disabled-content-color",
+          "version": "15.6.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2667,
+          0.2667,
+          0.2667
+        ],
+        "hex": "#444444"
       }
     },
     "warning": {

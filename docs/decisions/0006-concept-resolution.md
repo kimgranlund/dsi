@@ -14,3 +14,8 @@ A homepage probe (Playwright, computed colors and contrast per system and mode) 
 - A **state variant** (hover, active, selected, visited, dragged, disabled) never answers a stateless concept: a hovered surface is not a surface. The cell is unknown instead.
 - Ranking: direct, then broader (fewest missing facets), then narrower (fewest added facets).
 - A candidate token with no value in the asked theme is skipped.
+
+## Amendment, 2026-11-01 (owner decision, foreground and narrow answers)
+
+- `property/text` and `property/icon` are narrower than `property/foreground` (`skos:broader`). When asked for text or icon, the resolver may answer with a foreground token (`via: broader-property`), ranked after direct answers and before broader concepts. Primer `fgColor.*` and Fluent `Foreground*` color text and icons together.
+- A `narrow` mapping to a more specific concept now counts as a nearest answer: the token covers that concept and more, so it covers the requested one too. Within each kind of answer, narrow ranks after exact and close.

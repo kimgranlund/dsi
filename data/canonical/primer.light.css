@@ -8,11 +8,18 @@
   --dsi-color-accent-border-strong: var(--borderColor-accent-emphasis, #0969da);
   --dsi-color-accent-border-subtle: var(--borderColor-accent-muted, #54aeff);
   --dsi-color-accent-foreground: var(--fgColor-accent, #0969da);
+  --dsi-color-accent-icon: var(--fgColor-accent, #0969da); /* nearest: exact */
+  --dsi-color-accent-text: var(--fgColor-accent, #0969da); /* nearest: exact */
+  --dsi-color-danger: var(--fgColor-danger, #d1242f); /* nearest: narrow */
+  --dsi-color-danger-background: var(--bgColor-danger-emphasis, #cf222e); /* nearest: narrow */
   --dsi-color-danger-background-strong: var(--bgColor-danger-emphasis, #cf222e); /* nearest: narrow */
   --dsi-color-danger-background-subtle: var(--bgColor-danger-muted, #ffebe9); /* nearest: narrow */
+  --dsi-color-danger-border: var(--borderColor-danger-emphasis, #cf222e); /* nearest: narrow */
   --dsi-color-danger-border-strong: var(--borderColor-danger-emphasis, #cf222e); /* nearest: narrow */
   --dsi-color-danger-border-subtle: var(--borderColor-danger-muted, #ff8182); /* nearest: narrow */
   --dsi-color-danger-foreground: var(--fgColor-danger, #d1242f); /* nearest: narrow */
+  --dsi-color-danger-icon: var(--fgColor-danger, #d1242f); /* nearest: narrow */
+  --dsi-color-danger-text: var(--fgColor-danger, #d1242f); /* nearest: narrow */
   --dsi-color-discovery-background-strong: var(--bgColor-upsell-emphasis, #8250df);
   --dsi-color-discovery-background-subtle: var(--bgColor-upsell-muted, #fbefff);
   --dsi-color-discovery-border-strong: var(--borderColor-upsell-emphasis, #8250df);
@@ -26,6 +33,7 @@
   --dsi-color-neutral-border-strong: var(--borderColor-neutral-emphasis, #59636e);
   --dsi-color-neutral-border-subtle: var(--borderColor-neutral-muted, #d1d9e0);
   --dsi-color-neutral-foreground: var(--fgColor-neutral, #59636e);
+  --dsi-color-neutral-icon: var(--fgColor-neutral, #59636e); /* nearest: exact */
   --dsi-color-success: var(--fgColor-success, #1a7f37); /* nearest: exact */
   --dsi-color-success-background: var(--bgColor-success-emphasis, #1f883d); /* nearest: exact */
   --dsi-color-success-background-strong: var(--bgColor-success-emphasis, #1f883d);
@@ -34,6 +42,8 @@
   --dsi-color-success-border-strong: var(--borderColor-success-emphasis, #1a7f37);
   --dsi-color-success-border-subtle: var(--borderColor-success-muted, #4ac26b);
   --dsi-color-success-foreground: var(--fgColor-success, #1a7f37);
+  --dsi-color-success-icon: var(--fgColor-success, #1a7f37); /* nearest: exact */
+  --dsi-color-success-text: var(--fgColor-success, #1a7f37); /* nearest: exact */
   --dsi-color-warning: var(--fgColor-severe, #bc4c00); /* nearest: close */
   --dsi-color-warning-strong: var(--bgColor-attention-emphasis, #9a6700); /* nearest: close */
   --dsi-color-warning-background: var(--bgColor-attention-emphasis, #9a6700); /* nearest: close */
@@ -43,6 +53,8 @@
   --dsi-color-warning-border-strong: var(--borderColor-attention-emphasis, #9a6700);
   --dsi-color-warning-border-subtle: var(--borderColor-attention-muted, #d4a72c);
   --dsi-color-warning-foreground: var(--fgColor-severe, #bc4c00);
+  --dsi-color-warning-icon: var(--fgColor-severe, #bc4c00); /* nearest: close */
+  --dsi-color-warning-text: var(--fgColor-severe, #bc4c00); /* nearest: close */
   --dsi-color-background: var(--bgColor-inverse, #25292e); /* nearest: exact */
   --dsi-color-background-strong: var(--bgColor-emphasis, #25292e);
   --dsi-color-background-subtle: var(--bgColor-accent-muted, #ddf4ff); /* nearest: exact */
@@ -56,7 +68,11 @@
   --dsi-color-foreground: var(--fgColor-accent, #0969da); /* nearest: exact */
   --dsi-color-foreground-subtle: var(--fgColor-muted, #59636e);
   --dsi-color-foreground-disabled: var(--fgColor-disabled, #818b98);
+  --dsi-color-icon-subtle: var(--fgColor-muted, #59636e); /* nearest: exact */
+  --dsi-color-icon-disabled: var(--fgColor-disabled, #818b98); /* nearest: exact */
   --dsi-color-text: var(--fgColor-link, #0969da); /* nearest: exact */
+  --dsi-color-text-subtle: var(--fgColor-muted, #59636e); /* nearest: exact */
+  --dsi-color-text-disabled: var(--fgColor-disabled, #818b98); /* nearest: exact */
   --dsi-color-code-angle-bracket-text: var(--prettylights-syntax-brackethighlighter-angle, #59636e);
   --dsi-color-code-comment-text: var(--prettylights-syntax-comment, #59636e);
   --dsi-color-code-definition-keyword-text: var(--codeMirror-syntax-fgColor-storage, #cf222e);
@@ -108,6 +124,7 @@
   --dsi-color-categorical-blue-border-strong: var(--display-blue-borderColor-emphasis, #006edb);
   --dsi-color-categorical-blue-border-subtle: var(--display-blue-borderColor-muted, #ade1ff);
   --dsi-color-categorical-blue-foreground: var(--display-blue-fgColor, #005fcc);
+  --dsi-color-categorical-blue-icon: var(--display-blue-fgColor, #005fcc); /* nearest: exact */
   --dsi-color-categorical-brown: var(--display-brown-scale-0, #eeeae2); /* nearest: broad */
   --dsi-color-categorical-brown-background: var(--display-brown-bgColor-emphasis, #856d4c); /* nearest: exact */
   --dsi-color-categorical-brown-background-strong: var(--display-brown-bgColor-emphasis, #856d4c);
@@ -139,6 +156,7 @@
   --dsi-color-categorical-green-border-strong: var(--display-green-borderColor-emphasis, #2c8141);
   --dsi-color-categorical-green-border-subtle: var(--display-green-borderColor-muted, #9ceda0);
   --dsi-color-categorical-green-foreground: var(--display-green-fgColor, #2b6e3f);
+  --dsi-color-categorical-green-icon: var(--display-green-fgColor, #2b6e3f); /* nearest: exact */
   --dsi-color-categorical-indigo: var(--display-indigo-scale-0, #e5e9ff); /* nearest: broad */
   --dsi-color-categorical-indigo-background: var(--display-indigo-bgColor-emphasis, #5a61e7); /* nearest: exact */
   --dsi-color-categorical-indigo-background-strong: var(--display-indigo-bgColor-emphasis, #5a61e7);
@@ -154,6 +172,7 @@
   --dsi-color-categorical-lime-border-strong: var(--display-lime-borderColor-emphasis, #527a29);
   --dsi-color-categorical-lime-border-subtle: var(--display-lime-borderColor-muted, #c7e580);
   --dsi-color-categorical-lime-foreground: var(--display-lime-fgColor, #476c28);
+  --dsi-color-categorical-lime-icon: var(--display-lime-fgColor, #476c28); /* nearest: exact */
   --dsi-color-categorical-orange: var(--display-orange-scale-0, #ffe7d1); /* nearest: broad */
   --dsi-color-categorical-orange-background: var(--display-orange-bgColor-emphasis, #b8500f); /* nearest: exact */
   --dsi-color-categorical-orange-background-strong: var(--display-orange-bgColor-emphasis, #b8500f);
@@ -162,6 +181,7 @@
   --dsi-color-categorical-orange-border-strong: var(--display-orange-borderColor-emphasis, #b8500f);
   --dsi-color-categorical-orange-border-subtle: var(--display-orange-borderColor-muted, #fecfaa);
   --dsi-color-categorical-orange-foreground: var(--display-orange-fgColor, #a24610);
+  --dsi-color-categorical-orange-icon: var(--display-orange-fgColor, #a24610); /* nearest: exact */
   --dsi-color-categorical-pink: var(--display-pink-scale-0, #ffe5f1); /* nearest: broad */
   --dsi-color-categorical-pink-background: var(--display-pink-bgColor-emphasis, #ce2c85); /* nearest: exact */
   --dsi-color-categorical-pink-background-strong: var(--display-pink-bgColor-emphasis, #ce2c85);
@@ -178,6 +198,7 @@
   --dsi-color-categorical-purple-border-strong: var(--display-purple-borderColor-emphasis, #894ceb);
   --dsi-color-categorical-purple-border-subtle: var(--display-purple-borderColor-muted, #e6d2fe);
   --dsi-color-categorical-purple-foreground: var(--display-purple-fgColor, #783ae4);
+  --dsi-color-categorical-purple-icon: var(--display-purple-fgColor, #783ae4); /* nearest: exact */
   --dsi-color-categorical-red: var(--display-red-scale-0, #ffe2e0); /* nearest: broad */
   --dsi-color-categorical-red-background: var(--display-red-bgColor-emphasis, #df0c24); /* nearest: exact */
   --dsi-color-categorical-red-background-strong: var(--display-red-bgColor-emphasis, #df0c24);
@@ -186,6 +207,7 @@
   --dsi-color-categorical-red-border-strong: var(--display-red-borderColor-emphasis, #df0c24);
   --dsi-color-categorical-red-border-subtle: var(--display-red-borderColor-muted, #fecdcd);
   --dsi-color-categorical-red-foreground: var(--display-red-fgColor, #c50d28);
+  --dsi-color-categorical-red-icon: var(--display-red-fgColor, #c50d28); /* nearest: exact */
   --dsi-color-categorical-teal: var(--display-teal-scale-0, #c7f5ef); /* nearest: broad */
   --dsi-color-categorical-teal-background: var(--display-teal-bgColor-emphasis, #127e81); /* nearest: exact */
   --dsi-color-categorical-teal-background-strong: var(--display-teal-bgColor-emphasis, #127e81);
@@ -194,6 +216,7 @@
   --dsi-color-categorical-teal-border-strong: var(--display-teal-borderColor-emphasis, #127e81);
   --dsi-color-categorical-teal-border-subtle: var(--display-teal-borderColor-muted, #89ebe1);
   --dsi-color-categorical-teal-foreground: var(--display-teal-fgColor, #106e75);
+  --dsi-color-categorical-teal-icon: var(--display-teal-fgColor, #106e75); /* nearest: exact */
   --dsi-color-categorical-yellow: var(--display-yellow-scale-0, #ffec9e); /* nearest: broad */
   --dsi-color-categorical-yellow-background: var(--display-yellow-bgColor-emphasis, #946a00); /* nearest: exact */
   --dsi-color-categorical-yellow-background-strong: var(--display-yellow-bgColor-emphasis, #946a00);
@@ -202,6 +225,7 @@
   --dsi-color-categorical-yellow-border-strong: var(--display-yellow-borderColor-emphasis, #946a00);
   --dsi-color-categorical-yellow-border-subtle: var(--display-yellow-borderColor-muted, #ffd642);
   --dsi-color-categorical-yellow-foreground: var(--display-yellow-fgColor, #805900);
+  --dsi-color-categorical-yellow-icon: var(--display-yellow-fgColor, #805900); /* nearest: exact */
   --dsi-color-categorical-background: var(--display-blue-bgColor-emphasis, #006edb); /* nearest: exact */
   --dsi-color-code-surface-background: var(--codeMirror-bgColor, #ffffff);
   --dsi-color-code-surface-foreground: var(--codeMirror-cursor-fgColor, #1f2328); /* nearest: broad */
@@ -219,9 +243,13 @@
   --dsi-color-code-surface-code-inserted-text-strong: var(--diffBlob-additionWord-fgColor, #1f2328);
   --dsi-color-inverse-background: var(--bgColor-inverse, #25292e);
   --dsi-color-inverse-foreground: var(--fgColor-onInverse, #ffffff);
+  --dsi-color-inverse-icon: var(--fgColor-onInverse, #ffffff); /* nearest: exact */
+  --dsi-color-inverse-text: var(--fgColor-onInverse, #ffffff); /* nearest: exact */
   --dsi-color-link-text: var(--fgColor-link, #0969da);
   --dsi-color-navigation-background: var(--page-header-bgColor, #f6f8fa);
   --dsi-color-on-fill-foreground: var(--fgColor-onEmphasis, #ffffff);
+  --dsi-color-on-fill-icon: var(--fgColor-onEmphasis, #ffffff); /* nearest: exact */
+  --dsi-color-on-fill-text: var(--fgColor-onEmphasis, #ffffff); /* nearest: exact */
   --dsi-color-overlay-background: var(--overlay-bgColor, #ffffff);
   --dsi-color-overlay-border: var(--overlay-borderColor, #d1d9e0);
   --dsi-color-page-background: var(--bgColor-default, #ffffff);

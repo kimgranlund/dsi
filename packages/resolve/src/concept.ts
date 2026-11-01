@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { parseConcept, type Ontology } from '@dsi/schema';
+import { expand, parseConcept, type Ontology } from '@dsi/schema';
 import { resolve, showValue, themeFor, type NativeSet } from './native.ts';
 
 export type MatchType = 'exact' | 'close' | 'broad' | 'narrow' | 'related';
@@ -29,7 +29,7 @@ export interface Candidate {
   token: string;
   match: MatchType;
   /** 'direct' maps to the asked concept; 'more-specific' maps to a concept that adds facets to it. */
-  via: 'direct' | 'less-specific' | 'more-specific';
+  via: 'direct' | 'broader-property' | 'less-specific' | 'more-specific';
   concept: string;
   confidence: number;
   theme: string;
@@ -58,15 +58,20 @@ export function resolveConcept(o: Ontology, set: NativeSet, maps: MappingSet, co
   const theme = themeFor(set, mode);
   if (theme === undefined) return { ...base, status: 'unknown', candidates: [], note: `no theme is declared for mode "${mode}"` };
   const want = facetSet(o, concept);
+  // ADR 0006 amended: a token for the broader property answers a narrower one (foreground covers text and icons).
+  const pc = parseConcept(o, concept);
+  const broaderProp = typeof pc !== 'string' && pc.facets.property ? [...(o.broader?.get(expand(`dsi:property/${pc.facets.property}`)) ?? [])].map((x) => x.split('/').pop()!)[0] : undefined;
+  const alt = broaderProp ? concept.replace(`/property-${(pc as any).facets.property}`, `/property-${broaderProp}`) : undefined;
   const approved = maps.mappings.filter((m) => m.status === 'approved' && m.match !== 'related');
   const cands: Candidate[] = [];
   for (const m of approved) {
     let via: Candidate['via'] | undefined;
     let extra: number | undefined, addsState: boolean | undefined;
     if (m.concept === concept) via = 'direct';
+    else if (alt && m.concept === alt) via = 'broader-property';
     else if (want) {
       const have = facetSet(o, m.concept);
-      if (have && (m.match === 'exact' || m.match === 'close') && have.size > want.size && [...want].every((f) => have.has(f))) {
+      if (have && (m.match === 'exact' || m.match === 'close' || m.match === 'narrow') && have.size > want.size && [...want].every((f) => have.has(f))) {
         const added = [...have].filter((f) => !want.has(f));
         // A state variant (hover, selected, visited) never answers a stateless concept: a hovered surface is not a surface.
         if (added.some((f) => /:state-/.test(f))) continue;
@@ -87,12 +92,13 @@ export function resolveConcept(o: Ontology, set: NativeSet, maps: MappingSet, co
   }
   // Direct answers first, then a broader concept the token covers (fewest missing facets), then a narrower one
   // (fewest added facets, never an added state). Never an alphabetical accident.
-  const VIA = { direct: 0, 'less-specific': 1, 'more-specific': 2 } as const;
-  cands.sort((a, b) => VIA[a.via] - VIA[b.via] || Number(a.addsState ?? false) - Number(b.addsState ?? false) || (a.extra ?? 0) - (b.extra ?? 0) || RANK[a.match] - RANK[b.match] || b.confidence - a.confidence || a.token.localeCompare(b.token));
+  const VIA = { direct: 0, 'broader-property': 1, 'less-specific': 2, 'more-specific': 3 } as const;
+  // Within a kind, narrow answers (the token covers more) come after exact and close ones.
+  cands.sort((a, b) => VIA[a.via] - VIA[b.via] || Number(a.addsState ?? false) - Number(b.addsState ?? false) || Number(a.match === 'narrow') - Number(b.match === 'narrow') || (a.extra ?? 0) - (b.extra ?? 0) || RANK[a.match] - RANK[b.match] || b.confidence - a.confidence || a.token.localeCompare(b.token));
   const top = cands[0];
   const t = theme || undefined;
   if (top && top.via === 'direct' && RANK[top.match] <= 1) return { ...base, theme: t, status: 'match', answer: top, candidates: cands };
-  if (top) return { ...base, theme: t, status: 'nearest', answer: top, candidates: cands, note: top.via === 'more-specific' ? `no direct mapping; ${top.token} maps to the more specific ${top.concept}` : top.via === 'less-specific' ? `no direct mapping; ${top.token} maps to the broader ${top.concept}` : `only a ${top.match} match` };
+  if (top) return { ...base, theme: t, status: 'nearest', answer: top, candidates: cands, note: top.via === 'broader-property' ? `no direct mapping; ${top.token} maps to ${top.concept}, which covers text and icons` : top.via === 'more-specific' ? `no direct mapping; ${top.token} maps to the more specific ${top.concept}` : top.via === 'less-specific' ? `no direct mapping; ${top.token} maps to the broader ${top.concept}` : `only a ${top.match} match` };
   if (maps.noEquivalent.some((n) => n.status === 'approved' && n.concept === concept)) return { ...base, theme: t, status: 'absent', candidates: [] };
   return { ...base, theme: t, status: 'unknown', candidates: [] };
 }

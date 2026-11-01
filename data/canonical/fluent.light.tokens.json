@@ -629,6 +629,34 @@
         "hex": "#0f548c"
       }
     },
+    "accent-icon": {
+      "$description": "Accent icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-icon",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--colorBrandForeground1",
+          "note": "no direct mapping; colorBrandForeground1 maps to dsi:concept/color/intent-accent/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorBrandForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0588,
+          0.4235,
+          0.7412
+        ],
+        "hex": "#0f6cbd"
+      }
+    },
     "accent-inverse": {
       "$description": "Accent inverse color",
       "$extensions": {
@@ -979,6 +1007,90 @@
           1
         ],
         "hex": "#ffffff"
+      }
+    },
+    "accent-on-fill-text": {
+      "$description": "Accent on-fill text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--colorNeutralForegroundOnBrand",
+          "note": "no direct mapping; colorNeutralForegroundOnBrand maps to dsi:concept/color/intent-accent/usage-on-fill/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorNeutralForegroundOnBrand",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "hex": "#ffffff"
+      }
+    },
+    "accent-text": {
+      "$description": "Accent text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-text",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--colorBrandForeground1",
+          "note": "no direct mapping; colorBrandForeground1 maps to dsi:concept/color/intent-accent/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorBrandForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0588,
+          0.4235,
+          0.7412
+        ],
+        "hex": "#0f6cbd"
+      }
+    },
+    "accent-text-hover": {
+      "$description": "Hovered accent text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-text/state-hover",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--colorCompoundBrandForeground1Hover",
+          "note": "no direct mapping; colorCompoundBrandForeground1Hover maps to dsi:concept/color/intent-accent/property-foreground/state-hover, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorCompoundBrandForeground1Hover",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0667,
+          0.3686,
+          0.6392
+        ],
+        "hex": "#115ea3"
       }
     },
     "background": {
@@ -2335,6 +2447,34 @@
         "hex": "#107c10"
       }
     },
+    "categorical-green-icon": {
+      "$description": "Green categorical icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-green/property-icon",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--colorPaletteGreenForeground1",
+          "note": "no direct mapping; colorPaletteGreenForeground1 maps to dsi:concept/color/usage-categorical/hue-green/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorPaletteGreenForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0549,
+          0.4392,
+          0.0549
+        ],
+        "hex": "#0e700e"
+      }
+    },
     "categorical-magenta-background": {
       "$description": "Magenta categorical background",
       "$extensions": {
@@ -2552,6 +2692,34 @@
           0.702
         ],
         "hex": "#c239b3"
+      }
+    },
+    "categorical-magenta-icon": {
+      "$description": "Magenta categorical icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-icon",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--colorPaletteBerryForeground1",
+          "note": "no direct mapping; colorPaletteBerryForeground1 maps to dsi:concept/color/usage-categorical/hue-magenta/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorPaletteBerryForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6863,
+          0.2,
+          0.6314
+        ],
+        "hex": "#af33a1"
       }
     },
     "categorical-orange": {
@@ -2799,6 +2967,34 @@
           0.0039
         ],
         "hex": "#da3b01"
+      }
+    },
+    "categorical-orange-icon": {
+      "$description": "Orange categorical icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-orange/property-icon",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--colorPaletteDarkOrangeForeground1",
+          "note": "no direct mapping; colorPaletteDarkOrangeForeground1 maps to dsi:concept/color/usage-categorical/hue-orange/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorPaletteDarkOrangeForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7686,
+          0.2078,
+          0.0039
+        ],
+        "hex": "#c43501"
       }
     },
     "categorical-pink-background": {
@@ -3241,6 +3437,34 @@
           0.2196
         ],
         "hex": "#d13438"
+      }
+    },
+    "categorical-red-icon": {
+      "$description": "Red categorical icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-red/property-icon",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--colorPaletteRedForeground1",
+          "note": "no direct mapping; colorPaletteRedForeground1 maps to dsi:concept/color/usage-categorical/hue-red/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorPaletteRedForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7373,
+          0.1843,
+          0.1961
+        ],
+        "hex": "#bc2f32"
       }
     },
     "categorical-teal-background": {
@@ -3956,6 +4180,34 @@
         "hex": "#c50f1f"
       }
     },
+    "danger-icon": {
+      "$description": "Danger icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-icon",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--colorStatusDangerForeground1",
+          "note": "no direct mapping; colorStatusDangerForeground1 maps to dsi:concept/color/intent-danger/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorStatusDangerForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6941,
+          0.0549,
+          0.1098
+        ],
+        "hex": "#b10e1c"
+      }
+    },
     "danger-inverse": {
       "$description": "Danger inverse color",
       "$extensions": {
@@ -4009,6 +4261,62 @@
           0.4275
         ],
         "hex": "#dc626d"
+      }
+    },
+    "danger-text": {
+      "$description": "Danger text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-text",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--colorStatusDangerForeground1",
+          "note": "no direct mapping; colorStatusDangerForeground1 maps to dsi:concept/color/intent-danger/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorStatusDangerForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6941,
+          0.0549,
+          0.1098
+        ],
+        "hex": "#b10e1c"
+      }
+    },
+    "danger-text-subtle": {
+      "$description": "Subtle danger text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-text/emphasis-subtle",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--colorStatusDangerForeground3",
+          "note": "no direct mapping; colorStatusDangerForeground3 maps to dsi:concept/color/intent-danger/property-foreground/emphasis-subtle, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorStatusDangerForeground3",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7725,
+          0.0588,
+          0.1216
+        ],
+        "hex": "#c50f1f"
       }
     },
     "focus-ring": {
@@ -4260,6 +4568,146 @@
         "hex": "#c50f1f"
       }
     },
+    "icon": {
+      "$description": "Icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-icon",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--colorNeutralForeground1",
+          "note": "no direct mapping; colorNeutralForeground1 maps to dsi:concept/color/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorNeutralForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1412,
+          0.1412,
+          0.1412
+        ],
+        "hex": "#242424"
+      }
+    },
+    "icon-active": {
+      "$description": "Pressed icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-icon/state-active",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--colorNeutralForeground1Pressed",
+          "note": "no direct mapping; colorNeutralForeground1Pressed maps to dsi:concept/color/property-foreground/state-active, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorNeutralForeground1Pressed",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1412,
+          0.1412,
+          0.1412
+        ],
+        "hex": "#242424"
+      }
+    },
+    "icon-disabled": {
+      "$description": "Disabled icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-icon/state-disabled",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--colorNeutralForegroundDisabled",
+          "note": "no direct mapping; colorNeutralForegroundDisabled maps to dsi:concept/color/property-foreground/state-disabled, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorNeutralForegroundDisabled",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7412,
+          0.7412,
+          0.7412
+        ],
+        "hex": "#bdbdbd"
+      }
+    },
+    "icon-hover": {
+      "$description": "Hovered icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-icon/state-hover",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--colorNeutralForeground1Hover",
+          "note": "no direct mapping; colorNeutralForeground1Hover maps to dsi:concept/color/property-foreground/state-hover, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorNeutralForeground1Hover",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1412,
+          0.1412,
+          0.1412
+        ],
+        "hex": "#242424"
+      }
+    },
+    "icon-selected": {
+      "$description": "Selected icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-icon/state-selected",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--colorNeutralForeground1Selected",
+          "note": "no direct mapping; colorNeutralForeground1Selected maps to dsi:concept/color/property-foreground/state-selected, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorNeutralForeground1Selected",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1412,
+          0.1412,
+          0.1412
+        ],
+        "hex": "#242424"
+      }
+    },
     "inverse-background": {
       "$description": "Inverse background",
       "$extensions": {
@@ -4463,6 +4911,62 @@
           "token": "colorNeutralForegroundInvertedSelected",
           "version": "1.0.0-alpha.24",
           "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "hex": "#ffffff"
+      }
+    },
+    "inverse-icon": {
+      "$description": "Inverse icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-inverse/property-icon",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--colorNeutralForegroundInverted",
+          "note": "no direct mapping; colorNeutralForegroundInverted maps to dsi:concept/color/usage-inverse/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorNeutralForegroundInverted",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "hex": "#ffffff"
+      }
+    },
+    "inverse-text": {
+      "$description": "Inverse text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-inverse/property-text",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--colorNeutralForegroundInverted",
+          "note": "no direct mapping; colorNeutralForegroundInverted maps to dsi:concept/color/usage-inverse/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorNeutralForegroundInverted",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
         }
       },
       "$type": "color",
@@ -5251,6 +5755,34 @@
         "hex": "#107c10"
       }
     },
+    "success-icon": {
+      "$description": "Success icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-icon",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--colorStatusSuccessForeground1",
+          "note": "no direct mapping; colorStatusSuccessForeground1 maps to dsi:concept/color/intent-success/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorStatusSuccessForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0549,
+          0.4392,
+          0.0549
+        ],
+        "hex": "#0e700e"
+      }
+    },
     "success-inverse": {
       "$description": "Success inverse color",
       "$extensions": {
@@ -5304,6 +5836,62 @@
           0.3294
         ],
         "hex": "#54b054"
+      }
+    },
+    "success-text": {
+      "$description": "Success text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-text",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--colorStatusSuccessForeground1",
+          "note": "no direct mapping; colorStatusSuccessForeground1 maps to dsi:concept/color/intent-success/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorStatusSuccessForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0549,
+          0.4392,
+          0.0549
+        ],
+        "hex": "#0e700e"
+      }
+    },
+    "success-text-subtle": {
+      "$description": "Subtle success text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-text/emphasis-subtle",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--colorStatusSuccessForeground3",
+          "note": "no direct mapping; colorStatusSuccessForeground3 maps to dsi:concept/color/intent-success/property-foreground/emphasis-subtle, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorStatusSuccessForeground3",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0627,
+          0.4863,
+          0.0627
+        ],
+        "hex": "#107c10"
       }
     },
     "surface-background": {
@@ -5504,27 +6092,55 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-text",
-          "match": "exact",
+          "match": "broad",
           "mode": "light",
-          "nativeName": "--colorBrandForegroundLink",
-          "note": "no direct mapping; colorBrandForegroundLink maps to the more specific dsi:concept/color/usage-link/property-text",
+          "nativeName": "--colorNeutralForeground1",
+          "note": "no direct mapping; colorNeutralForeground1 maps to dsi:concept/color/property-foreground, which covers text and icons",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-light",
-          "token": "colorBrandForegroundLink",
+          "token": "colorNeutralForeground1",
           "version": "1.0.0-alpha.24",
-          "via": "more-specific"
+          "via": "broader-property"
         }
       },
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.0667,
-          0.3686,
-          0.6392
+          0.1412,
+          0.1412,
+          0.1412
         ],
-        "hex": "#115ea3"
+        "hex": "#242424"
+      }
+    },
+    "text-disabled": {
+      "$description": "Disabled text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-text/state-disabled",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--colorNeutralForegroundDisabled",
+          "note": "no direct mapping; colorNeutralForegroundDisabled maps to dsi:concept/color/property-foreground/state-disabled, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorNeutralForegroundDisabled",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7412,
+          0.7412,
+          0.7412
+        ],
+        "hex": "#bdbdbd"
       }
     },
     "text-selected": {
@@ -5532,27 +6148,27 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-text/state-selected",
-          "match": "exact",
+          "match": "broad",
           "mode": "light",
-          "nativeName": "--colorBrandForegroundLinkSelected",
-          "note": "no direct mapping; colorBrandForegroundLinkSelected maps to the more specific dsi:concept/color/usage-link/property-text/state-selected",
+          "nativeName": "--colorNeutralForeground1Selected",
+          "note": "no direct mapping; colorNeutralForeground1Selected maps to dsi:concept/color/property-foreground/state-selected, which covers text and icons",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-light",
-          "token": "colorBrandForegroundLinkSelected",
+          "token": "colorNeutralForeground1Selected",
           "version": "1.0.0-alpha.24",
-          "via": "more-specific"
+          "via": "broader-property"
         }
       },
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.0667,
-          0.3686,
-          0.6392
+          0.1412,
+          0.1412,
+          0.1412
         ],
-        "hex": "#115ea3"
+        "hex": "#242424"
       }
     },
     "warning": {
@@ -5828,6 +6444,34 @@
         "hex": "#8a3707"
       }
     },
+    "warning-icon": {
+      "$description": "Warning icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-icon",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--colorStatusWarningForeground1",
+          "note": "no direct mapping; colorStatusWarningForeground1 maps to dsi:concept/color/intent-warning/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorStatusWarningForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7373,
+          0.2941,
+          0.0353
+        ],
+        "hex": "#bc4b09"
+      }
+    },
     "warning-inverse": {
       "$description": "Warning inverse color",
       "$extensions": {
@@ -5909,6 +6553,34 @@
           0.0471
         ],
         "hex": "#f7630c"
+      }
+    },
+    "warning-text": {
+      "$description": "Warning text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-text",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--colorStatusWarningForeground1",
+          "note": "no direct mapping; colorStatusWarningForeground1 maps to dsi:concept/color/intent-warning/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-light",
+          "token": "colorStatusWarningForeground1",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7373,
+          0.2941,
+          0.0353
+        ],
+        "hex": "#bc4b09"
       }
     }
   }

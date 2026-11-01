@@ -275,6 +275,34 @@
         "hex": "#21005d"
       }
     },
+    "accent-on-fill-text": {
+      "$description": "Accent on-fill text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--md-sys-color-on-primary",
+          "note": "no direct mapping; md.sys.color.on-primary maps to dsi:concept/color/intent-accent/usage-on-fill/property-foreground, which covers text and icons",
+          "product": "material",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "md.sys.color.on-primary",
+          "version": "2.5.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2196,
+          0.1176,
+          0.4471
+        ],
+        "hex": "#381e72"
+      }
+    },
     "accent-text": {
       "$description": "Accent text",
       "$extensions": {
@@ -690,6 +718,34 @@
         "hex": "#f9dedc"
       }
     },
+    "danger-on-fill-text-subtle": {
+      "$description": "Subtle danger on-fill text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/usage-on-fill/property-text/emphasis-subtle",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--md-sys-color-on-error-container",
+          "note": "no direct mapping; md.sys.color.on-error-container maps to dsi:concept/color/intent-danger/usage-on-fill/property-foreground/emphasis-subtle, which covers text and icons",
+          "product": "material",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "md.sys.color.on-error-container",
+          "version": "2.5.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9765,
+          0.8706,
+          0.8627
+        ],
+        "hex": "#f9dedc"
+      }
+    },
     "danger-text": {
       "$description": "Danger text",
       "$extensions": {
@@ -773,6 +829,34 @@
         "hex": "#cac4d0"
       }
     },
+    "icon-subtle": {
+      "$description": "Subtle icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-icon/emphasis-subtle",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--md-sys-color-on-surface-variant",
+          "note": "no direct mapping; md.sys.color.on-surface-variant maps to dsi:concept/color/property-foreground/emphasis-subtle, which covers text and icons",
+          "product": "material",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "md.sys.color.on-surface-variant",
+          "version": "2.5.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7922,
+          0.7686,
+          0.8157
+        ],
+        "hex": "#cac4d0"
+      }
+    },
     "inverse-background": {
       "$description": "Inverse background",
       "$extensions": {
@@ -814,6 +898,62 @@
           "token": "md.sys.color.inverse-on-surface",
           "version": "2.5.0",
           "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1961,
+          0.1843,
+          0.2078
+        ],
+        "hex": "#322f35"
+      }
+    },
+    "inverse-icon": {
+      "$description": "Inverse icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-inverse/property-icon",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--md-sys-color-inverse-on-surface",
+          "note": "no direct mapping; md.sys.color.inverse-on-surface maps to dsi:concept/color/usage-inverse/property-foreground, which covers text and icons",
+          "product": "material",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "md.sys.color.inverse-on-surface",
+          "version": "2.5.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1961,
+          0.1843,
+          0.2078
+        ],
+        "hex": "#322f35"
+      }
+    },
+    "inverse-text": {
+      "$description": "Inverse text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-inverse/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--md-sys-color-inverse-on-surface",
+          "note": "no direct mapping; md.sys.color.inverse-on-surface maps to dsi:concept/color/usage-inverse/property-foreground, which covers text and icons",
+          "product": "material",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "md.sys.color.inverse-on-surface",
+          "version": "2.5.0",
+          "via": "broader-property"
         }
       },
       "$type": "color",
@@ -1206,6 +1346,34 @@
           0.9137
         ],
         "hex": "#e6e0e9"
+      }
+    },
+    "text-subtle": {
+      "$description": "Subtle text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-text/emphasis-subtle",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--md-sys-color-on-surface-variant",
+          "note": "no direct mapping; md.sys.color.on-surface-variant maps to dsi:concept/color/property-foreground/emphasis-subtle, which covers text and icons",
+          "product": "material",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "md.sys.color.on-surface-variant",
+          "version": "2.5.0",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7922,
+          0.7686,
+          0.8157
+        ],
+        "hex": "#cac4d0"
       }
     }
   }
