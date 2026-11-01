@@ -126,6 +126,8 @@ if (cmd === 'prepare') {
   const dir = path.join(root, '.cache/audit', run);
   const products = cmd === 'audit-check' ? [process.argv[5]] : Object.keys(scope.products);
   for (const product of products) {
+    // An audit run may cover only some products: merge skips those without verdicts.
+    if (cmd === 'audit-merge' && !fs.existsSync(path.join(dir, `${product}.verdicts.json`))) { console.log(`${product}: no verdicts in this run, skipped`); continue; }
     const packet = JSON.parse(fs.readFileSync(path.join(dir, `${product}.audit-packet.json`), 'utf8'));
     const expected = new Map<string, string>(packet.items.map((i: any) => [i.token, i.mappingId]));
     try {

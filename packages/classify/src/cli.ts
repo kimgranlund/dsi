@@ -109,7 +109,7 @@ if (cmd === 'derive') {
   const graph = fs.readdirSync(schemeDir).filter((f) => f.endsWith('.jsonld')).flatMap((f) => JSON.parse(fs.readFileSync(path.join(schemeDir, f), 'utf8'))['@graph'] as any[]);
   const domainOfProperty = new Map<string, string>(graph.filter((c) => c['dsi:inDomain']).map((c) => [String(c.id).split('/').pop()!, String(c['dsi:inDomain'].id).split('/').pop()!]));
   const scoped = [...set.tokens.keys()].filter((p) => classify(terms, p, fileOf(p), 'color').scope === 'foundation' && domainOf(p) !== 'color').sort();
-  const r = mapScales(o, terms, scoped.map((p) => ({ path: p, file: fileOf(p), type: scaleTypeOf(p) })), domainOfProperty);
+  const r = mapScales(o, terms, scoped.map((p) => { const raw = [...(set.tokens.get(p)?.byTheme.values() ?? [])][0]?.$value; return { path: p, file: fileOf(p), type: scaleTypeOf(p), value: typeof raw === 'string' ? raw : undefined }; }), domainOfProperty);
   const file = JSON.parse(fs.readFileSync(mapFile, 'utf8'));
   // Judgments by people or agents are never changed. Mappings this command derived (method map-scales-*) are
   // re-derived: when the terms now give another concept or match, the old one is superseded, not edited.
