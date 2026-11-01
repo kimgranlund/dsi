@@ -2318,7 +2318,12 @@
    "inScheme": "dsi:scheme/native/carbon/11.84.0",
    "prefLabel": "highlight",
    "notation": "--cds-highlight",
-   "definition": "Highlight color for selected text or emphasized content. Use for text selection or search result highlighting."
+   "definition": "Highlight color for selected text or emphasized content. Use for text selection or search result highlighting.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/intent-highlight/property-background"
+    }
+   ]
   },
   {
    "id": "dsi:native/carbon/11.84.0/icon-disabled",
@@ -10289,6 +10294,22 @@
     }
    ],
    "prefLabel": "Color: Danger · Inverse"
+  },
+  {
+   "id": "dsi:concept/color/intent-highlight/property-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/highlight"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "prefLabel": "Color: Highlight · Background"
   },
   {
    "id": "dsi:concept/color/intent-info",

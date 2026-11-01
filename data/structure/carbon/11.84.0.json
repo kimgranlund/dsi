@@ -124,11 +124,15 @@
    ],
    "subgroups": [
     {
-     "label": "Tile",
+     "label": "Border",
      "tokens": [
-      "border-tile-01",
-      "border-tile-02",
-      "border-tile-03"
+      "border-radius.border-radius-00",
+      "border-radius.border-radius-max",
+      "border-radius.border-radius-02",
+      "border-radius.border-radius-04",
+      "border-radius.border-radius-08",
+      "border-radius.border-radius-16",
+      "border-radius.border-radius-24"
      ]
     }
    ]
@@ -210,10 +214,10 @@
    ],
    "subgroups": [
     {
-     "label": "On",
+     "label": "Size",
      "tokens": [
-      "icon-on-color",
-      "icon-on-color-disabled"
+      "icon-size.icon-size-01",
+      "icon-size.icon-size-02"
      ]
     }
    ]
@@ -277,14 +281,11 @@
     "text"
    ],
    "tokens": [
-    "syntax-color",
+    "syntax-type",
     "syntax-strong",
-    "syntax-comment",
-    "syntax-line-comment",
     "syntax-block-comment",
     "syntax-keyword",
     "syntax-module-keyword",
-    "syntax-name",
     "syntax-label-name",
     "syntax-property-name",
     "syntax-class-name",
@@ -304,6 +305,7 @@
     "syntax-regexp",
     "syntax-escape",
     "syntax-url",
+    "syntax-color",
     "syntax-deref-operator",
     "syntax-arithmetic-operator",
     "syntax-logic-operator",
@@ -338,6 +340,13 @@
    ],
    "subgroups": [
     {
+     "label": "Comment",
+     "tokens": [
+      "syntax-comment",
+      "syntax-line-comment"
+     ]
+    },
+    {
      "label": "Doc",
      "tokens": [
       "syntax-doc-comment",
@@ -348,7 +357,8 @@
      "label": "Operator",
      "tokens": [
       "syntax-operator-keyword",
-      "syntax-operator"
+      "syntax-operator",
+      "syntax-type-operator"
      ]
     },
     {
@@ -374,6 +384,13 @@
      ]
     },
     {
+     "label": "Name",
+     "tokens": [
+      "syntax-name",
+      "syntax-type-name"
+     ]
+    },
+    {
      "label": "Attribute",
      "tokens": [
       "syntax-attribute",
@@ -386,14 +403,6 @@
      "tokens": [
       "syntax-tag",
       "syntax-tag-name"
-     ]
-    },
-    {
-     "label": "Type",
-     "tokens": [
-      "syntax-type",
-      "syntax-type-name",
-      "syntax-type-operator"
      ]
     },
     {
@@ -564,6 +573,819 @@
     "overlay",
     "toggle-off",
     "shadow"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-13",
+   "label": "Body",
+   "native": "body",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.body-01.font-weight",
+    "type.body-01.line-height",
+    "type.body-02.font-weight",
+    "type.body-02.line-height"
+   ],
+   "subgroups": [
+    {
+     "label": "Compact",
+     "tokens": [
+      "type.body-compact-01.font-weight",
+      "type.body-compact-01.line-height",
+      "type.body-compact-01.font-size",
+      "type.body-compact-01.letter-spacing",
+      "type.body-compact-02.font-weight",
+      "type.body-compact-02.line-height",
+      "type.body-compact-02.font-size",
+      "type.body-compact-02.letter-spacing"
+     ]
+    },
+    {
+     "label": "Long",
+     "tokens": [
+      "type.body-long-01.font-weight",
+      "type.body-long-01.line-height",
+      "type.body-long-01.font-size",
+      "type.body-long-01.letter-spacing",
+      "type.body-long-02.font-weight",
+      "type.body-long-02.line-height",
+      "type.body-long-02.font-size",
+      "type.body-long-02.letter-spacing"
+     ]
+    },
+    {
+     "label": "Short",
+     "tokens": [
+      "type.body-short-01.font-weight",
+      "type.body-short-01.line-height",
+      "type.body-short-01.font-size",
+      "type.body-short-01.letter-spacing",
+      "type.body-short-02.font-weight",
+      "type.body-short-02.line-height",
+      "type.body-short-02.font-size",
+      "type.body-short-02.letter-spacing"
+     ]
+    },
+    {
+     "label": "Size",
+     "tokens": [
+      "type.body-01.font-size",
+      "type.body-02.font-size"
+     ]
+    },
+    {
+     "label": "Spacing",
+     "tokens": [
+      "type.body-01.letter-spacing",
+      "type.body-02.letter-spacing"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g-14",
+   "label": "Display",
+   "native": "display",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.display-01.font-weight",
+    "type.display-01.line-height",
+    "type.fluid-display-01.font-weight",
+    "type.fluid-display-01.line-height",
+    "type.display-02.font-weight",
+    "type.display-02.line-height",
+    "type.fluid-display-02.font-weight",
+    "type.fluid-display-02.line-height",
+    "type.display-03.font-weight",
+    "type.display-03.line-height",
+    "type.fluid-display-03.font-weight",
+    "type.fluid-display-03.line-height",
+    "type.display-04.font-weight",
+    "type.display-04.line-height",
+    "type.fluid-display-04.font-weight",
+    "type.fluid-display-04.line-height"
+   ],
+   "subgroups": [
+    {
+     "label": "Size",
+     "tokens": [
+      "type.display-01.font-size",
+      "type.fluid-display-01.font-size",
+      "type.display-02.font-size",
+      "type.fluid-display-02.font-size",
+      "type.display-03.font-size",
+      "type.fluid-display-03.font-size",
+      "type.display-04.font-size",
+      "type.fluid-display-04.font-size"
+     ]
+    },
+    {
+     "label": "Spacing",
+     "tokens": [
+      "type.display-01.letter-spacing",
+      "type.fluid-display-01.letter-spacing",
+      "type.display-02.letter-spacing",
+      "type.fluid-display-02.letter-spacing",
+      "type.display-03.letter-spacing",
+      "type.fluid-display-03.letter-spacing",
+      "type.display-04.letter-spacing",
+      "type.fluid-display-04.letter-spacing"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g-15",
+   "label": "Productive",
+   "native": "productive",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [],
+   "subgroups": [
+    {
+     "label": "Heading",
+     "tokens": [
+      "type.productive-heading-01.font-weight",
+      "type.productive-heading-01.line-height",
+      "type.productive-heading-01.font-size",
+      "type.productive-heading-01.letter-spacing",
+      "type.productive-heading-02.font-weight",
+      "type.productive-heading-02.line-height",
+      "type.productive-heading-02.font-size",
+      "type.productive-heading-02.letter-spacing",
+      "type.productive-heading-03.font-weight",
+      "type.productive-heading-03.line-height",
+      "type.productive-heading-03.font-size",
+      "type.productive-heading-03.letter-spacing",
+      "type.productive-heading-04.font-weight",
+      "type.productive-heading-04.line-height",
+      "type.productive-heading-04.font-size",
+      "type.productive-heading-04.letter-spacing",
+      "type.productive-heading-05.font-weight",
+      "type.productive-heading-05.line-height",
+      "type.productive-heading-05.font-size",
+      "type.productive-heading-05.letter-spacing",
+      "type.productive-heading-06.font-weight",
+      "type.productive-heading-06.line-height",
+      "type.productive-heading-06.font-size",
+      "type.productive-heading-06.letter-spacing",
+      "type.productive-heading-07.font-weight",
+      "type.productive-heading-07.line-height",
+      "type.productive-heading-07.font-size",
+      "type.productive-heading-07.letter-spacing"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g-16",
+   "label": "Heading",
+   "native": "heading",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.expressive-heading-01.font-weight",
+    "type.expressive-heading-01.line-height",
+    "type.expressive-heading-02.font-weight",
+    "type.expressive-heading-02.line-height",
+    "type.expressive-heading-03.font-weight",
+    "type.expressive-heading-03.line-height",
+    "type.expressive-heading-04.font-weight",
+    "type.expressive-heading-04.line-height",
+    "type.expressive-heading-05.font-weight",
+    "type.expressive-heading-05.line-height",
+    "type.expressive-heading-06.font-weight",
+    "type.expressive-heading-06.line-height"
+   ],
+   "subgroups": [
+    {
+     "label": "Size",
+     "tokens": [
+      "type.expressive-heading-01.font-size",
+      "type.expressive-heading-02.font-size",
+      "type.expressive-heading-03.font-size",
+      "type.expressive-heading-04.font-size",
+      "type.expressive-heading-05.font-size",
+      "type.expressive-heading-06.font-size"
+     ]
+    },
+    {
+     "label": "Spacing",
+     "tokens": [
+      "type.expressive-heading-01.letter-spacing",
+      "type.expressive-heading-02.letter-spacing",
+      "type.expressive-heading-03.letter-spacing",
+      "type.expressive-heading-04.letter-spacing",
+      "type.expressive-heading-05.letter-spacing",
+      "type.expressive-heading-06.letter-spacing"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g-17",
+   "label": "Spacing",
+   "native": "spacing",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [],
+   "subgroups": [
+    {
+     "label": "Spacing",
+     "tokens": [
+      "fluid-spacing.fluid-spacing-01",
+      "spacing.spacing-01",
+      "fluid-spacing.fluid-spacing-02",
+      "spacing.spacing-02",
+      "fluid-spacing.fluid-spacing-03",
+      "spacing.spacing-03",
+      "fluid-spacing.fluid-spacing-04",
+      "spacing.spacing-04",
+      "spacing.spacing-05",
+      "spacing.spacing-06",
+      "spacing.spacing-07",
+      "spacing.spacing-08",
+      "spacing.spacing-09",
+      "spacing.spacing-10",
+      "spacing.spacing-11",
+      "spacing.spacing-12",
+      "spacing.spacing-13"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g-18",
+   "label": "Sans",
+   "native": "sans",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.font-families.sans",
+    "type.font-families.sans-arabic",
+    "type.font-families.sans-condensed",
+    "type.font-families.sans-devanagari",
+    "type.font-families.sans-hebrew",
+    "type.font-families.sans-jp",
+    "type.font-families.sans-kr"
+   ],
+   "subgroups": [
+    {
+     "label": "Thai",
+     "tokens": [
+      "type.font-families.sans-thai",
+      "type.font-families.sans-thai-looped"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g-19",
+   "label": "Label",
+   "native": "label",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.label-01.font-weight",
+    "type.label-01.line-height",
+    "type.label-02.font-weight",
+    "type.label-02.line-height"
+   ],
+   "subgroups": [
+    {
+     "label": "Size",
+     "tokens": [
+      "type.label-01.font-size",
+      "type.label-02.font-size"
+     ]
+    },
+    {
+     "label": "Spacing",
+     "tokens": [
+      "type.label-01.letter-spacing",
+      "type.label-02.letter-spacing"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g-20",
+   "label": "Paragraph",
+   "native": "paragraph",
+   "meaning": "Body",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.fluid-paragraph-01.font-weight",
+    "type.fluid-paragraph-01.line-height",
+    "type.expressive-paragraph-01.font-weight",
+    "type.expressive-paragraph-01.line-height"
+   ],
+   "subgroups": [
+    {
+     "label": "Size",
+     "tokens": [
+      "type.fluid-paragraph-01.font-size",
+      "type.expressive-paragraph-01.font-size"
+     ]
+    },
+    {
+     "label": "Spacing",
+     "tokens": [
+      "type.fluid-paragraph-01.letter-spacing",
+      "type.expressive-paragraph-01.letter-spacing"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g-21",
+   "label": "Layout",
+   "native": "layout",
+   "meaning": "Spacing",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [],
+   "subgroups": [
+    {
+     "label": "Layout",
+     "tokens": [
+      "layout.layout-01",
+      "layout.layout-02",
+      "layout.layout-03",
+      "layout.layout-04",
+      "layout.layout-05",
+      "layout.layout-06",
+      "layout.layout-07"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g-22",
+   "label": "Duration",
+   "native": "duration",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "duration.fast.01",
+    "duration.moderate.01",
+    "duration.slow.01",
+    "duration.fast.02",
+    "duration.moderate.02",
+    "duration.slow.02"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-23",
+   "label": "Easing",
+   "native": "easing",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "easing.entrance.expressive",
+    "easing.entrance.productive",
+    "easing.exit.expressive",
+    "easing.exit.productive",
+    "easing.standard.expressive",
+    "easing.standard.productive"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-24",
+   "label": "Size",
+   "native": "size",
+   "meaning": "Height",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "size.size-sm",
+    "size.size-2xl",
+    "size.size-lg",
+    "size.size-md",
+    "size.size-xl",
+    "size.size-xs"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-25",
+   "label": "Container",
+   "native": "container",
+   "meaning": "Height",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "container.container-01",
+    "container.container-02",
+    "container.container-03",
+    "container.container-04",
+    "container.container-05"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-26",
+   "label": "Surface",
+   "native": "surface",
+   "meaning": "Transition",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "surface.contextual",
+    "surface.disclosure",
+    "surface.expand",
+    "surface.invoke"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-27",
+   "label": "1",
+   "native": "1",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.1"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-28",
+   "label": "10",
+   "native": "10",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.10"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-29",
+   "label": "11",
+   "native": "11",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.11"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-30",
+   "label": "12",
+   "native": "12",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.12"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-31",
+   "label": "13",
+   "native": "13",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.13"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-32",
+   "label": "14",
+   "native": "14",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.14"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-33",
+   "label": "15",
+   "native": "15",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.15"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-34",
+   "label": "16",
+   "native": "16",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.16"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-35",
+   "label": "17",
+   "native": "17",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.17"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-36",
+   "label": "18",
+   "native": "18",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.18"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-37",
+   "label": "19",
+   "native": "19",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.19"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-38",
+   "label": "2",
+   "native": "2",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.2"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-39",
+   "label": "20",
+   "native": "20",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.20"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-40",
+   "label": "21",
+   "native": "21",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.21"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-41",
+   "label": "22",
+   "native": "22",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.22"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-42",
+   "label": "23",
+   "native": "23",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.23"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-43",
+   "label": "3",
+   "native": "3",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.3"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-44",
+   "label": "4",
+   "native": "4",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.4"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-45",
+   "label": "5",
+   "native": "5",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.5"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-46",
+   "label": "6",
+   "native": "6",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.6"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-47",
+   "label": "7",
+   "native": "7",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.7"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-48",
+   "label": "8",
+   "native": "8",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.8"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-49",
+   "label": "9",
+   "native": "9",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.type-scale.9"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-50",
+   "label": "Dropdown",
+   "native": "dropdown",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "z-index.dropdown"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-51",
+   "label": "Floating",
+   "native": "floating",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "z-index.floating"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-52",
+   "label": "Footer",
+   "native": "footer",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "z-index.footer"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-53",
+   "label": "Header",
+   "native": "header",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "z-index.header"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-54",
+   "label": "Hidden",
+   "native": "hidden",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "z-index.hidden"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-55",
+   "label": "Light",
+   "native": "light",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.font-weights.light"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-56",
+   "label": "Modal",
+   "native": "modal",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "z-index.modal"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-57",
+   "label": "Mono",
+   "native": "mono",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.font-families.mono"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-58",
+   "label": "Overflow",
+   "native": "overflow",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "z-index.overflowHidden"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-59",
+   "label": "Regular",
+   "native": "regular",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.font-weights.regular"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-60",
+   "label": "Semibold",
+   "native": "semibold",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.font-weights.semibold"
+   ],
+   "subgroups": []
+  },
+  {
+   "id": "g-61",
+   "label": "Serif",
+   "native": "serif",
+   "source": "name-family",
+   "order": "progression",
+   "tokens": [
+    "type.font-families.serif"
    ],
    "subgroups": []
   }

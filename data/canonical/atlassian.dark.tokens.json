@@ -637,12 +637,12 @@
           "concept": "dsi:concept/color/property-background",
           "match": "exact",
           "mode": "dark",
-          "nativeName": "--ds-background-input",
-          "note": "no direct mapping; color.background.input.default maps to the more specific dsi:concept/color/usage-field/property-background",
+          "nativeName": "--ds-background-code-default",
+          "note": "no direct mapping; color.background.code.default maps to the more specific dsi:concept/color/usage-code-surface/property-background",
           "product": "atlassian",
           "status": "nearest",
           "theme": "dark",
-          "token": "color.background.input.default",
+          "token": "color.background.code.default",
           "version": "20.6.1",
           "via": "more-specific"
         }
@@ -651,11 +651,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.1412,
-          0.1451,
-          0.1569
+          0.1216,
+          0.1216,
+          0.1294
         ],
-        "hex": "#242528"
+        "hex": "#1f1f21"
       }
     },
     "background-active": {
@@ -1135,12 +1135,12 @@
           "concept": "dsi:concept/color/property-border/emphasis-subtle",
           "match": "exact",
           "mode": "dark",
-          "nativeName": "--ds-border-danger-subtle",
-          "note": "no direct mapping; color.border.danger.subtle maps to the more specific dsi:concept/color/intent-danger/property-border/emphasis-subtle",
+          "nativeName": "--ds-border-discovery-subtle",
+          "note": "no direct mapping; color.border.discovery.subtle maps to the more specific dsi:concept/color/intent-discovery/property-border/emphasis-subtle",
           "product": "atlassian",
           "status": "nearest",
           "theme": "dark",
-          "token": "color.border.danger.subtle",
+          "token": "color.border.discovery.subtle",
           "version": "20.6.1",
           "via": "more-specific"
         }
@@ -1149,11 +1149,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.6824,
-          0.1804,
-          0.1412
+          0.502,
+          0.2471,
+          0.6471
         ],
-        "hex": "#ae2e24"
+        "hex": "#803fa5"
       }
     },
     "categorical+data-viz": {
@@ -1184,6 +1184,87 @@
         "hex": "#4688ec"
       }
     },
+    "categorical+data-viz-blue-strong": {
+      "$description": "Strong blue categorical data-visualization color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strong",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-chart-blue-bold",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.chart.blue.bold.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2078,
+          0.4902,
+          0.9098
+        ],
+        "hex": "#357de8"
+      }
+    },
+    "categorical+data-viz-gray-strong": {
+      "$description": "Strong gray categorical data-visualization color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strong",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-chart-gray-bold",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.chart.gray.bold.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.4941,
+          0.5059,
+          0.5333
+        ],
+        "hex": "#7e8188"
+      }
+    },
+    "categorical+data-viz-green-strong": {
+      "$description": "Strong green categorical data-visualization color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strong",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-chart-green-bold",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.chart.green.bold.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1647,
+          0.7333,
+          0.498
+        ],
+        "hex": "#2abb7f"
+      }
+    },
     "categorical+data-viz-hover": {
       "$description": "Hovered categorical data-visualization color",
       "$extensions": {
@@ -1210,6 +1291,168 @@
           0.9451
         ],
         "hex": "#669df1"
+      }
+    },
+    "categorical+data-viz-lime-strong": {
+      "$description": "Strong lime categorical data-visualization color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strong",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-chart-lime-bold",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.chart.lime.bold.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.5098,
+          0.7098,
+          0.2118
+        ],
+        "hex": "#82b536"
+      }
+    },
+    "categorical+data-viz-orange-strong": {
+      "$description": "Strong orange categorical data-visualization color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strong",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-chart-orange-bold",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.chart.orange.bold.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9647,
+          0.5373,
+          0.0353
+        ],
+        "hex": "#f68909"
+      }
+    },
+    "categorical+data-viz-purple-strong": {
+      "$description": "Strong purple categorical data-visualization color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strong",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-chart-purple-bold",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.chart.purple.bold.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6863,
+          0.349,
+          0.8824
+        ],
+        "hex": "#af59e1"
+      }
+    },
+    "categorical+data-viz-red-strong": {
+      "$description": "Strong red categorical data-visualization color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strong",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-chart-red-bold",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.chart.red.bold.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8863,
+          0.2824,
+          0.2392
+        ],
+        "hex": "#e2483d"
+      }
+    },
+    "categorical+data-viz-teal-strong": {
+      "$description": "Strong teal categorical data-visualization color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strong",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-chart-teal-bold",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.chart.teal.bold.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2588,
+          0.698,
+          0.8431
+        ],
+        "hex": "#42b2d7"
+      }
+    },
+    "categorical+data-viz-yellow-strong": {
+      "$description": "Strong yellow categorical data-visualization color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strong",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-chart-yellow-bold",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.chart.yellow.bold.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8118,
+          0.6235,
+          0.0078
+        ],
+        "hex": "#cf9f02"
       }
     },
     "categorical-background": {
@@ -5958,6 +6201,33 @@
         "hex": "#b3df72"
       }
     },
+    "code-surface-background": {
+      "$description": "Code-surface background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-code-surface/property-background",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-background-code-default",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.background.code.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1216,
+          0.1216,
+          0.1294
+        ],
+        "hex": "#1f1f21"
+      }
+    },
     "code-surface-border": {
       "$description": "Code-surface border",
       "$extensions": {
@@ -5984,6 +6254,33 @@
           0.949
         ],
         "hex": "#e3e4f2"
+      }
+    },
+    "code-surface-text": {
+      "$description": "Code-surface text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-code-surface/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-text-code-default",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.text.code.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6627,
+          0.6706,
+          0.6863
+        ],
+        "hex": "#a9abaf"
       }
     },
     "danger": {
@@ -6668,6 +6965,87 @@
         "hex": "#ffd5d2"
       }
     },
+    "discovery-background-strong": {
+      "$description": "Strong discovery background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-strong",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--ds-background-discovery-bold",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.background.discovery.bold.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7882,
+          0.4863,
+          0.9569
+        ],
+        "hex": "#c97cf4"
+      }
+    },
+    "discovery-background-subtle": {
+      "$description": "Subtle discovery background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-discovery/property-background/emphasis-subtle",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--ds-background-discovery-subtle",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.background.discovery.subtle.default",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.502,
+          0.2471,
+          0.6471
+        ],
+        "hex": "#803fa5"
+      }
+    },
+    "discovery-border-subtle": {
+      "$description": "Subtle discovery border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-discovery/property-border/emphasis-subtle",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--ds-border-discovery-subtle",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.border.discovery.subtle",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.502,
+          0.2471,
+          0.6471
+        ],
+        "hex": "#803fa5"
+      }
+    },
     "field-background": {
       "$description": "Field background",
       "$extensions": {
@@ -6801,6 +7179,61 @@
           0.9647
         ],
         "hex": "#8fb8f6"
+      }
+    },
+    "highlight-background": {
+      "$description": "Highlight background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-highlight/property-background",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--ds-background-code-highlight",
+          "note": "no direct mapping; color.background.code.highlight maps to the more specific dsi:concept/color/intent-highlight/usage-code-surface/property-background",
+          "product": "atlassian",
+          "status": "nearest",
+          "theme": "dark",
+          "token": "color.background.code.highlight",
+          "version": "20.6.1",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1412,
+          0.1451,
+          0.1569
+        ],
+        "hex": "#242528"
+      }
+    },
+    "highlight-code-surface-background": {
+      "$description": "Highlight code-surface background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-highlight/usage-code-surface/property-background",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--ds-background-code-highlight",
+          "product": "atlassian",
+          "status": "match",
+          "theme": "dark",
+          "token": "color.background.code.highlight",
+          "version": "20.6.1",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1412,
+          0.1451,
+          0.1569
+        ],
+        "hex": "#242528"
       }
     },
     "icon": {

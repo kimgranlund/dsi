@@ -19013,13 +19013,25 @@
   "dsi:concept/color/intent-discovery/property-background/emphasis-strong": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "close",
+     "status": "match",
+     "token": "color.background.discovery.bold.default",
+     "value": "#c97cf4",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "close",
+     "status": "match",
+     "token": "color.background.discovery.bold.default",
+     "value": "#48245d",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "close",
+     "status": "match",
+     "token": "color.background.discovery.bold.default",
+     "value": "#964ac0",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -19098,13 +19110,25 @@
   "dsi:concept/color/intent-discovery/property-background/emphasis-subtle": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "close",
+     "status": "match",
+     "token": "color.background.discovery.subtle.default",
+     "value": "#803fa5",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "close",
+     "status": "match",
+     "token": "color.background.discovery.subtle.default",
+     "value": "#d8a0f7",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "close",
+     "status": "match",
+     "token": "color.background.discovery.subtle.default",
+     "value": "#d8a0f7",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -19268,13 +19292,25 @@
   "dsi:concept/color/intent-discovery/property-border/emphasis-subtle": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.border.discovery.subtle",
+     "value": "#803fa5",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.border.discovery.subtle",
+     "value": "#d8a0f7",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.border.discovery.subtle",
+     "value": "#d8a0f7",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -19438,21 +19474,41 @@
   "dsi:concept/color/intent-highlight/property-background": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "close",
+     "status": "nearest",
+     "token": "color.background.code.highlight",
+     "value": "#242528",
+     "via": "more-specific"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "close",
+     "status": "nearest",
+     "token": "color.background.code.highlight",
+     "value": "#f0f1f2",
+     "via": "more-specific"
     },
     "light": {
-     "status": "unknown"
+     "match": "close",
+     "status": "nearest",
+     "token": "color.background.code.highlight",
+     "value": "#f0f1f2",
+     "via": "more-specific"
     }
    },
    "carbon": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "highlight",
+     "value": "#001d6c",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "highlight",
+     "value": "#d0e2ff",
+     "via": "direct"
     }
    },
    "fluent": {
@@ -20470,13 +20526,25 @@
   "dsi:concept/color/intent-highlight/usage-code-surface/property-background": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "close",
+     "status": "match",
+     "token": "color.background.code.highlight",
+     "value": "#242528",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "close",
+     "status": "match",
+     "token": "color.background.code.highlight",
+     "value": "#f0f1f2",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "close",
+     "status": "match",
+     "token": "color.background.code.highlight",
+     "value": "#f0f1f2",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -34171,21 +34239,21 @@
     "dark": {
      "match": "exact",
      "status": "nearest",
-     "token": "color.background.input.default",
-     "value": "#242528",
+     "token": "color.background.code.default",
+     "value": "#1f1f21",
      "via": "more-specific"
     },
     "increased-contrast": {
      "match": "exact",
      "status": "nearest",
-     "token": "color.background.input.default",
+     "token": "color.background.code.default",
      "value": "#ffffff",
      "via": "more-specific"
     },
     "light": {
      "match": "exact",
      "status": "nearest",
-     "token": "color.background.input.default",
+     "token": "color.background.code.default",
      "value": "#ffffff",
      "via": "more-specific"
     }
@@ -36334,22 +36402,22 @@
     "dark": {
      "match": "exact",
      "status": "nearest",
-     "token": "color.border.danger.subtle",
-     "value": "#ae2e24",
+     "token": "color.border.discovery.subtle",
+     "value": "#803fa5",
      "via": "more-specific"
     },
     "increased-contrast": {
      "match": "exact",
      "status": "nearest",
-     "token": "color.border.danger.subtle",
-     "value": "#fd9891",
+     "token": "color.border.discovery.subtle",
+     "value": "#d8a0f7",
      "via": "more-specific"
     },
     "light": {
      "match": "exact",
      "status": "nearest",
-     "token": "color.border.danger.subtle",
-     "value": "#fd9891",
+     "token": "color.border.discovery.subtle",
+     "value": "#d8a0f7",
      "via": "more-specific"
     }
    },
@@ -47447,13 +47515,25 @@
   "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strong": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.blue.bold.default",
+     "value": "#357de8",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.blue.bold.default",
+     "value": "#1558bc",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.blue.bold.default",
+     "value": "#4688ec",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -47787,13 +47867,25 @@
   "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strong": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.gray.bold.default",
+     "value": "#7e8188",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.gray.bold.default",
+     "value": "#6b6e76",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.gray.bold.default",
+     "value": "#8c8f97",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -47957,13 +48049,25 @@
   "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strong": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.green.bold.default",
+     "value": "#2abb7f",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.green.bold.default",
+     "value": "#216e4e",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.green.bold.default",
+     "value": "#22a06b",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -48127,13 +48231,25 @@
   "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strong": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.lime.bold.default",
+     "value": "#82b536",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.lime.bold.default",
+     "value": "#4c6b1f",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.lime.bold.default",
+     "value": "#6a9a23",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -48297,13 +48413,25 @@
   "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strong": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.orange.bold.default",
+     "value": "#f68909",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.orange.bold.default",
+     "value": "#9e4c00",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.orange.bold.default",
+     "value": "#e06c00",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -48637,13 +48765,25 @@
   "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strong": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.purple.bold.default",
+     "value": "#af59e1",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.purple.bold.default",
+     "value": "#803fa5",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.purple.bold.default",
+     "value": "#bf63f3",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -48807,13 +48947,25 @@
   "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strong": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.red.bold.default",
+     "value": "#e2483d",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.red.bold.default",
+     "value": "#ae2e24",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.red.bold.default",
+     "value": "#f15b50",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -48977,13 +49129,25 @@
   "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strong": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.teal.bold.default",
+     "value": "#42b2d7",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.teal.bold.default",
+     "value": "#206a83",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.teal.bold.default",
+     "value": "#2898bd",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -49147,13 +49311,25 @@
   "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strong": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.yellow.bold.default",
+     "value": "#cf9f02",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.yellow.bold.default",
+     "value": "#7f5f01",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.chart.yellow.bold.default",
+     "value": "#b38600",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -73138,13 +73314,25 @@
   "dsi:concept/color/usage-code-surface/property-background": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.background.code.default",
+     "value": "#1f1f21",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.background.code.default",
+     "value": "#ffffff",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.background.code.default",
+     "value": "#ffffff",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -73648,13 +73836,25 @@
   "dsi:concept/color/usage-code-surface/property-text": {
    "atlassian": {
     "dark": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.text.code.default",
+     "value": "#a9abaf",
+     "via": "direct"
     },
     "increased-contrast": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.text.code.default",
+     "value": "#505258",
+     "via": "direct"
     },
     "light": {
-     "status": "unknown"
+     "match": "exact",
+     "status": "match",
+     "token": "color.text.code.default",
+     "value": "#505258",
+     "via": "direct"
     }
    },
    "carbon": {
@@ -83174,7 +83374,7 @@
    "mode": "dark",
    "product": "atlassian",
    "theme": "dark",
-   "tokens": 372
+   "tokens": 388
   },
   {
    "css": "atlassian.increased-contrast.css",
@@ -83182,7 +83382,7 @@
    "mode": "increased-contrast",
    "product": "atlassian",
    "theme": "light-increased-contrast",
-   "tokens": 372
+   "tokens": 388
   },
   {
    "css": "atlassian.light.css",
@@ -83190,7 +83390,7 @@
    "mode": "light",
    "product": "atlassian",
    "theme": "light",
-   "tokens": 372
+   "tokens": 388
   },
   {
    "css": "carbon.dark.css",
@@ -83198,7 +83398,7 @@
    "mode": "dark",
    "product": "carbon",
    "theme": "g100",
-   "tokens": 215
+   "tokens": 216
   },
   {
    "css": "carbon.light.css",
@@ -83206,7 +83406,7 @@
    "mode": "light",
    "product": "carbon",
    "theme": "white",
-   "tokens": 215
+   "tokens": 216
   },
   {
    "css": "fluent.dark.css",
@@ -83353,9 +83553,9 @@
  ],
  "summary": {
   "cells": {
-   "match": 2819,
-   "nearest": 1303,
-   "unknown": 11914
+   "match": 2866,
+   "nearest": 1306,
+   "unknown": 11864
   },
   "concepts": 844
  }

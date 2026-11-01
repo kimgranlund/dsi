@@ -1765,7 +1765,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.background.code.default",
    "notation": "--ds-background-code-default",
-   "definition": "Use for the default background of code blocks and code diffs."
+   "definition": "Use for the default background of code blocks and code diffs.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-code-surface/property-background"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.background.code.gutter",
@@ -1781,7 +1786,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.background.code.highlight",
    "notation": "--ds-background-code-highlight",
-   "definition": "Use for highlighted unchanged code lines."
+   "definition": "Use for highlighted unchanged code lines.",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-highlight/usage-code-surface/property-background"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.background.code.removed.highlight",
@@ -1948,7 +1958,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.background.discovery.bold.default",
    "notation": "--ds-background-discovery-bold",
-   "definition": "A vibrant background option communicating change or something new, such as in onboarding spotlights."
+   "definition": "A vibrant background option communicating change or something new, such as in onboarding spotlights.",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-discovery/property-background/emphasis-strong"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.background.discovery.bold.hovered",
@@ -1996,7 +2011,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.background.discovery.subtle.default",
    "notation": "--ds-background-discovery-subtle",
-   "definition": "Background colour for non-interactive elements communicating discovery (e.g. semantic badges, status pills, callout chips). Sits between subtler and bold in visual emphasis. Not for interactive surfaces — see color.background.discovery.bold or color.background.discovery.subtler for interactive states."
+   "definition": "Background colour for non-interactive elements communicating discovery (e.g. semantic badges, status pills, callout chips). Sits between subtler and bold in visual emphasis. Not for interactive surfaces — see color.background.discovery.bold or color.background.discovery.subtler for interactive states.",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-discovery/property-background/emphasis-subtle"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.background.discovery.subtler.default",
@@ -3240,7 +3260,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.border.discovery.subtle",
    "notation": "--ds-border-discovery-subtle",
-   "definition": "Use for decorative discovery borders that do not need to meet 3:1 contrast requirements."
+   "definition": "Use for decorative discovery borders that do not need to meet 3:1 contrast requirements.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/intent-discovery/property-border/emphasis-subtle"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.border.focused",
@@ -3443,7 +3468,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.chart.blue.bold.default",
    "notation": "--ds-chart-blue-bold",
-   "definition": "For data visualisation only."
+   "definition": "For data visualisation only.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strong"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.chart.blue.bold.hovered",
@@ -3809,7 +3839,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.chart.gray.bold.default",
    "notation": "--ds-chart-gray-bold",
-   "definition": "For data visualisation only."
+   "definition": "For data visualisation only.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strong"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.chart.gray.bold.hovered",
@@ -3857,7 +3892,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.chart.green.bold.default",
    "notation": "--ds-chart-green-bold",
-   "definition": "For data visualisation only."
+   "definition": "For data visualisation only.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strong"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.chart.green.bold.hovered",
@@ -3957,7 +3997,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.chart.lime.bold.default",
    "notation": "--ds-chart-lime-bold",
-   "definition": "For data visualisation only."
+   "definition": "For data visualisation only.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strong"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.chart.lime.bold.hovered",
@@ -4079,7 +4124,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.chart.orange.bold.default",
    "notation": "--ds-chart-orange-bold",
-   "definition": "For data visualisation only."
+   "definition": "For data visualisation only.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strong"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.chart.orange.bold.hovered",
@@ -4127,7 +4177,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.chart.purple.bold.default",
    "notation": "--ds-chart-purple-bold",
-   "definition": "For data visualisation only."
+   "definition": "For data visualisation only.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strong"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.chart.purple.bold.hovered",
@@ -4175,7 +4230,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.chart.red.bold.default",
    "notation": "--ds-chart-red-bold",
-   "definition": "For data visualisation only."
+   "definition": "For data visualisation only.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strong"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.chart.red.bold.hovered",
@@ -4275,7 +4335,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.chart.teal.bold.default",
    "notation": "--ds-chart-teal-bold",
-   "definition": "For data visualisation only."
+   "definition": "For data visualisation only.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strong"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.chart.teal.bold.hovered",
@@ -4375,7 +4440,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.chart.yellow.bold.default",
    "notation": "--ds-chart-yellow-bold",
-   "definition": "For data visualisation only."
+   "definition": "For data visualisation only.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strong"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.chart.yellow.bold.hovered",
@@ -7051,7 +7121,12 @@
    "inScheme": "dsi:scheme/native/atlassian/20.6.1",
    "prefLabel": "color.text.code.default",
    "notation": "--ds-text-code-default",
-   "definition": "Use for default text in code blocks and code diffs."
+   "definition": "Use for default text in code blocks and code diffs.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-code-surface/property-text"
+    }
+   ]
   },
   {
    "id": "dsi:native/atlassian/20.6.1/color.text.code.functions",
@@ -10351,50 +10426,6 @@
    ]
   },
   {
-   "id": "dsi:vocab/atlassian/default",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/vocab/atlassian",
-   "prefLabel": "default",
-   "skos:closeMatch": [
-    {
-     "id": "dsi:emphasis/default"
-    }
-   ]
-  },
-  {
-   "id": "dsi:vocab/atlassian/default-default",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/vocab/atlassian",
-   "prefLabel": "default-default",
-   "skos:closeMatch": [
-    {
-     "id": "dsi:emphasis/default"
-    }
-   ]
-  },
-  {
-   "id": "dsi:vocab/atlassian/default-hovered",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/vocab/atlassian",
-   "prefLabel": "default-hovered",
-   "skos:closeMatch": [
-    {
-     "id": "dsi:emphasis/default"
-    }
-   ]
-  },
-  {
-   "id": "dsi:vocab/atlassian/default-pressed",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/vocab/atlassian",
-   "prefLabel": "default-pressed",
-   "skos:closeMatch": [
-    {
-     "id": "dsi:emphasis/default"
-    }
-   ]
-  },
-  {
    "id": "dsi:vocab/atlassian/disabled",
    "type": "Concept",
    "inScheme": "dsi:scheme/vocab/atlassian",
@@ -11834,6 +11865,90 @@
     }
    ],
    "prefLabel": "Color: Danger · State layer · Background"
+  },
+  {
+   "id": "dsi:concept/color/intent-discovery/property-background/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/discovery"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Discovery · Background · Strong"
+  },
+  {
+   "id": "dsi:concept/color/intent-discovery/property-background/emphasis-subtle",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/discovery"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/subtle"
+    }
+   ],
+   "prefLabel": "Color: Discovery · Background · Subtle"
+  },
+  {
+   "id": "dsi:concept/color/intent-discovery/property-border/emphasis-subtle",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/discovery"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/border"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/subtle"
+    }
+   ],
+   "prefLabel": "Color: Discovery · Border · Subtle"
+  },
+  {
+   "id": "dsi:concept/color/intent-highlight/usage-code-surface/property-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/highlight"
+    }
+   ],
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/code-surface"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "prefLabel": "Color: Highlight · Code surface · Background"
   },
   {
    "id": "dsi:concept/color/intent-info/property-background/emphasis-strong",
@@ -13843,6 +13958,222 @@
     }
    ],
    "prefLabel": "Color: Categorical + Data visualization"
+  },
+  {
+   "id": "dsi:concept/color/usage-categorical+data-viz/hue-blue/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/categorical"
+    },
+    {
+     "id": "dsi:usage/data-viz"
+    }
+   ],
+   "dsi:hasHue": [
+    {
+     "id": "dsi:hue/blue"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Categorical + Data visualization · Blue · Strong"
+  },
+  {
+   "id": "dsi:concept/color/usage-categorical+data-viz/hue-gray/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/categorical"
+    },
+    {
+     "id": "dsi:usage/data-viz"
+    }
+   ],
+   "dsi:hasHue": [
+    {
+     "id": "dsi:hue/gray"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Categorical + Data visualization · Gray · Strong"
+  },
+  {
+   "id": "dsi:concept/color/usage-categorical+data-viz/hue-green/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/categorical"
+    },
+    {
+     "id": "dsi:usage/data-viz"
+    }
+   ],
+   "dsi:hasHue": [
+    {
+     "id": "dsi:hue/green"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Categorical + Data visualization · Green · Strong"
+  },
+  {
+   "id": "dsi:concept/color/usage-categorical+data-viz/hue-lime/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/categorical"
+    },
+    {
+     "id": "dsi:usage/data-viz"
+    }
+   ],
+   "dsi:hasHue": [
+    {
+     "id": "dsi:hue/lime"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Categorical + Data visualization · Lime · Strong"
+  },
+  {
+   "id": "dsi:concept/color/usage-categorical+data-viz/hue-orange/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/categorical"
+    },
+    {
+     "id": "dsi:usage/data-viz"
+    }
+   ],
+   "dsi:hasHue": [
+    {
+     "id": "dsi:hue/orange"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Categorical + Data visualization · Orange · Strong"
+  },
+  {
+   "id": "dsi:concept/color/usage-categorical+data-viz/hue-purple/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/categorical"
+    },
+    {
+     "id": "dsi:usage/data-viz"
+    }
+   ],
+   "dsi:hasHue": [
+    {
+     "id": "dsi:hue/purple"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Categorical + Data visualization · Purple · Strong"
+  },
+  {
+   "id": "dsi:concept/color/usage-categorical+data-viz/hue-red/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/categorical"
+    },
+    {
+     "id": "dsi:usage/data-viz"
+    }
+   ],
+   "dsi:hasHue": [
+    {
+     "id": "dsi:hue/red"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Categorical + Data visualization · Red · Strong"
+  },
+  {
+   "id": "dsi:concept/color/usage-categorical+data-viz/hue-teal/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/categorical"
+    },
+    {
+     "id": "dsi:usage/data-viz"
+    }
+   ],
+   "dsi:hasHue": [
+    {
+     "id": "dsi:hue/teal"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Categorical + Data visualization · Teal · Strong"
+  },
+  {
+   "id": "dsi:concept/color/usage-categorical+data-viz/hue-yellow/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/categorical"
+    },
+    {
+     "id": "dsi:usage/data-viz"
+    }
+   ],
+   "dsi:hasHue": [
+    {
+     "id": "dsi:hue/yellow"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Categorical + Data visualization · Yellow · Strong"
   },
   {
    "id": "dsi:concept/color/usage-categorical+data-viz/state-hover",
@@ -18043,6 +18374,22 @@
    "prefLabel": "Color: Categorical · Yellow · Icon"
   },
   {
+   "id": "dsi:concept/color/usage-code-surface/property-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/code-surface"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "prefLabel": "Color: Code surface · Background"
+  },
+  {
    "id": "dsi:concept/color/usage-code-surface/property-border",
    "type": "Concept",
    "inScheme": "dsi:scheme/canonical/color",
@@ -18057,6 +18404,22 @@
     }
    ],
    "prefLabel": "Color: Code surface · Border"
+  },
+  {
+   "id": "dsi:concept/color/usage-code-surface/property-text",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/code-surface"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/text"
+    }
+   ],
+   "prefLabel": "Color: Code surface · Text"
   },
   {
    "id": "dsi:concept/color/usage-field/property-background",

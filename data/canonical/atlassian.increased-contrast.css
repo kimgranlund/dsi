@@ -48,6 +48,11 @@
   --dsi-color-danger-data-viz-hover: var(--ds-chart-danger-hovered, #ae2e24); /* nearest: broad */
   --dsi-color-danger-on-fill-text-subtle: var(--ds-text-danger-bolder, #42221f);
   --dsi-color-danger-state-layer-background: var(--ds-blanket-danger, #ef5c48);
+  --dsi-color-discovery-background-strong: var(--ds-background-discovery-bold, #48245d);
+  --dsi-color-discovery-background-subtle: var(--ds-background-discovery-subtle, #d8a0f7);
+  --dsi-color-discovery-border-subtle: var(--ds-border-discovery-subtle, #d8a0f7);
+  --dsi-color-highlight-background: var(--ds-background-code-highlight, #f0f1f2); /* nearest: close */
+  --dsi-color-highlight-code-surface-background: var(--ds-background-code-highlight, #f0f1f2);
   --dsi-color-info: var(--ds-chart-information, #1868db); /* nearest: exact */
   --dsi-color-info-background: var(--ds-background-information-bold, #123263); /* nearest: exact */
   --dsi-color-info-background-strong: var(--ds-background-information-bold, #123263);
@@ -134,7 +139,7 @@
   --dsi-color-warning-on-fill-icon: var(--ds-icon-warning-inverse, #ffffff);
   --dsi-color-warning-on-fill-text: var(--ds-text-warning-inverse, #ffffff);
   --dsi-color-warning-on-fill-text-subtle: var(--ds-text-warning-bolder, #3a2c1f);
-  --dsi-color-background: var(--ds-background-input, #ffffff); /* nearest: exact */
+  --dsi-color-background: var(--ds-background-code-default, #ffffff); /* nearest: exact */
   --dsi-color-background-strong: var(--ds-background-brand-bold, #123263); /* nearest: exact */
   --dsi-color-background-strong-active_selected: var(--ds-background-selected-bold-pressed, #022353);
   --dsi-color-background-strong-hover_selected: var(--ds-background-selected-bold-hovered, #1c2b42);
@@ -150,7 +155,7 @@
   --dsi-color-background-selected: var(--ds-background-selected, #e9f2fe);
   --dsi-color-border: var(--ds-border, #e9f0fb);
   --dsi-color-border-strong: var(--ds-border-bold, #505258);
-  --dsi-color-border-subtle: var(--ds-border-danger-subtle, #fd9891); /* nearest: exact */
+  --dsi-color-border-subtle: var(--ds-border-discovery-subtle, #d8a0f7); /* nearest: exact */
   --dsi-color-border-disabled: var(--ds-border-disabled, #0b120e);
   --dsi-color-border-selected: var(--ds-border-selected, #1558bc);
   --dsi-color-focus-ring: var(--ds-border-focused, #1558bc);
@@ -171,6 +176,15 @@
   --dsi-color-code-operator-text: var(--ds-text-code-operators, #292a2e); /* nearest: narrow */
   --dsi-color-code-string-text: var(--ds-text-code-strings, #4c6b1f);
   --dsi-color-categorical_data-viz: var(--ds-chart-categorical-1, #206a83); /* nearest: broad */
+  --dsi-color-categorical_data-viz-blue-strong: var(--ds-chart-blue-bold, #1558bc);
+  --dsi-color-categorical_data-viz-gray-strong: var(--ds-chart-gray-bold, #6b6e76);
+  --dsi-color-categorical_data-viz-green-strong: var(--ds-chart-green-bold, #216e4e);
+  --dsi-color-categorical_data-viz-lime-strong: var(--ds-chart-lime-bold, #4c6b1f);
+  --dsi-color-categorical_data-viz-orange-strong: var(--ds-chart-orange-bold, #9e4c00);
+  --dsi-color-categorical_data-viz-purple-strong: var(--ds-chart-purple-bold, #803fa5);
+  --dsi-color-categorical_data-viz-red-strong: var(--ds-chart-red-bold, #ae2e24);
+  --dsi-color-categorical_data-viz-teal-strong: var(--ds-chart-teal-bold, #206a83);
+  --dsi-color-categorical_data-viz-yellow-strong: var(--ds-chart-yellow-bold, #7f5f01);
   --dsi-color-categorical_data-viz-hover: var(--ds-chart-categorical-1-hovered, #164555); /* nearest: broad */
   --dsi-color-categorical-blue: var(--ds-border-accent-blue, #1558bc); /* nearest: exact */
   --dsi-color-categorical-blue-background: var(--ds-background-accent-blue-bolder, #123263); /* nearest: exact */
@@ -341,7 +355,9 @@
   --dsi-color-categorical-yellow-border-subtle: var(--ds-border-accent-yellow-subtle, #eed12b);
   --dsi-color-categorical-yellow-icon: var(--ds-icon-accent-yellow, #7f5f01);
   --dsi-color-categorical-background: var(--ds-background-accent-blue-bolder, #123263); /* nearest: exact */
+  --dsi-color-code-surface-background: var(--ds-background-code-default, #ffffff);
   --dsi-color-code-surface-border: var(--ds-border-code, #0b120e);
+  --dsi-color-code-surface-text: var(--ds-text-code-default, #505258);
   --dsi-color-field-background: var(--ds-background-input, #ffffff);
   --dsi-color-field-background-active: var(--ds-background-input-pressed, #ffffff);
   --dsi-color-field-background-hover: var(--ds-background-input-hovered, #f8f8f8);
