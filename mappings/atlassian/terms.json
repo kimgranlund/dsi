@@ -1641,7 +1641,7 @@
       "term": "subtler",
       "concept": "dsi:emphasis/subtle",
       "match": "close",
-      "status": "approved",
+      "status": "rejected",
       "note": "Step between subtle and subtlest on the 7-step emphasis scale.",
       "provenance": {
         "agent": "dsi-classify",
@@ -1651,7 +1651,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T07:29:07.813Z"
+        "at": "2026-11-01T22:47:20.000Z",
+        "note": "ADR 0018: subtler maps to emphasis subtler."
       },
       "votes": [
         {
@@ -1663,6 +1664,23 @@
           "confidence": 0.55
         }
       ]
+    },
+    {
+      "term": "subtler",
+      "concept": "dsi:emphasis/subtler",
+      "match": "exact",
+      "status": "approved",
+      "note": "The step between subtlest and subtle in Atlassian ladders.",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T22:47:20.000Z",
+        "method": "owner-rule"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T22:47:20.000Z",
+        "note": "Owner decision: follow ADR 0018."
+      }
     },
     {
       "term": "subtlest",
