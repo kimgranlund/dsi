@@ -1,0 +1,356 @@
+{
+  "base": {
+    "text": {
+      "lineHeight": {
+        "loose": {
+          "$description": "Use sparingly for very small text or when maximum readability is critical. Best for footnotes, legal text, or content requiring high accessibility.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-lineHeight-loose",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.75",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "lineHeight"
+              ]
+            }
+          },
+          "$type": "number",
+          "$value": 1.75
+        },
+        "normal": {
+          "$description": "Default choice for body text and general UI content. Provides optimal readability for paragraphs, descriptions, and most multi-line text. Use when unsure which line-height to pick.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-lineHeight-normal",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.5",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "lineHeight"
+              ]
+            }
+          },
+          "$type": "number",
+          "$value": 1.5
+        },
+        "relaxed": {
+          "$description": "Use for longer-form content, smaller text sizes (12-13px), or when increased readability is desired. Good for text that needs extra breathing room.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-lineHeight-relaxed",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.625",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "lineHeight"
+              ]
+            }
+          },
+          "$type": "number",
+          "$value": 1.625
+        },
+        "snug": {
+          "$description": "Use for display text, large headings, or short multi-line text where moderate density is needed. Good for hero sections and marketing headlines.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-lineHeight-snug",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.375",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "lineHeight"
+              ]
+            }
+          },
+          "$type": "number",
+          "$value": 1.375
+        },
+        "tight": {
+          "$description": "Use for single-line text in compact UI elements like labels, badges, buttons, or captions where vertical space is limited. Not recommended for multi-line body text due to reduced readability.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-lineHeight-tight",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.25",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "lineHeight"
+              ]
+            }
+          },
+          "$type": "number",
+          "$value": 1.25
+        }
+      },
+      "size": {
+        "2xl": {
+          "$description": "40px - Display text for hero sections.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-size-2xl",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "2.5rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "base/typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$type": "dimension",
+          "$value": {
+            "unit": "rem",
+            "value": 2.5
+          }
+        },
+        "lg": {
+          "$description": "20px - Medium titles and subtitles.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-size-lg",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.25rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "base/typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$type": "dimension",
+          "$value": {
+            "unit": "rem",
+            "value": 1.25
+          }
+        },
+        "md": {
+          "$description": "16px - Large body text and small titles.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-size-md",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "base/typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$type": "dimension",
+          "$value": {
+            "unit": "rem",
+            "value": 1
+          }
+        },
+        "sm": {
+          "$description": "14px - Default body text size for UI.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-size-sm",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "0.875rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "base/typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$type": "dimension",
+          "$value": {
+            "unit": "rem",
+            "value": 0.875
+          }
+        },
+        "xl": {
+          "$description": "32px - Large titles and page headings.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-size-xl",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "2rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "base/typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$type": "dimension",
+          "$value": {
+            "unit": "rem",
+            "value": 2
+          }
+        },
+        "xs": {
+          "$description": "12px - Smallest text size for captions and compact UI elements.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-size-xs",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "0.75rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "base/typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$type": "dimension",
+          "$value": {
+            "unit": "rem",
+            "value": 0.75
+          }
+        }
+      },
+      "weight": {
+        "light": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-weight-light",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "300",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "base/typography",
+              "scopes": [
+                "fontWeight"
+              ]
+            }
+          },
+          "$type": "fontWeight",
+          "$value": 300
+        },
+        "medium": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-weight-medium",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "500",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "base/typography",
+              "scopes": [
+                "fontWeight"
+              ]
+            }
+          },
+          "$type": "fontWeight",
+          "$value": 500
+        },
+        "normal": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-weight-normal",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "400",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "base/typography",
+              "scopes": [
+                "fontWeight"
+              ]
+            }
+          },
+          "$type": "fontWeight",
+          "$value": 400
+        },
+        "semibold": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/base/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--base-text-weight-semibold",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "600",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "base/typography",
+              "scopes": [
+                "fontWeight"
+              ]
+            }
+          },
+          "$type": "fontWeight",
+          "$value": 600
+        }
+      }
+    }
+  }
+}

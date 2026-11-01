@@ -1,0 +1,274 @@
+{
+  "borderWidth": {
+    "default": {
+      "$description": "Semantic token: preferred default border width for standard component borders. Use this in normal component code unless a specific scale value is required.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/border.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--borderWidth-default",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "0.0625rem",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "collection": "functional/size",
+          "scopes": [
+            "borderWidth",
+            "effectFloat"
+          ]
+        }
+      },
+      "$value": "{borderWidth.thin}"
+    },
+    "thick": {
+      "$description": "Scale token: 2px border width for emphasis or focus states.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/border.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--borderWidth-thick",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "0.125rem",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "collection": "functional/size",
+          "scopes": [
+            "borderWidth",
+            "effectFloat"
+          ]
+        },
+        "org.primer.llm": {
+          "rules": "MUST use for focus rings on interactive elements. Do NOT use for subtle dividers.",
+          "usage": [
+            "focus-indicator",
+            "selected-state",
+            "emphasis-border"
+          ]
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "px",
+        "value": 2
+      }
+    },
+    "thicker": {
+      "$description": "Scale token: 4px border width for strong emphasis.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/border.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--borderWidth-thicker",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "0.25rem",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "collection": "functional/size",
+          "scopes": [
+            "borderWidth",
+            "effectFloat"
+          ]
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "px",
+        "value": 4
+      }
+    },
+    "thin": {
+      "$description": "Scale token: 1px border width. Use when selecting an explicit size from the border-width scale.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/border.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--borderWidth-thin",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "0.0625rem",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "collection": "functional/size",
+          "scopes": [
+            "borderWidth",
+            "effectFloat"
+          ]
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "px",
+        "value": 1
+      }
+    }
+  },
+  "boxShadow": {
+    "thick": {
+      "$description": "Thick shadow (2px) used instead of a border for emphasis without layout shift",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/border.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--boxShadow-thick",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "inset 0 0 0 0.125rem",
+          "untyped": true,
+          "version": "11.10.0"
+        }
+      },
+      "$value": "inset 0 0 0 0.125rem"
+    },
+    "thicker": {
+      "$description": "Thickest shadow (4px) used for high emphasis borders without layout shift. Use sparingly for maximum visual impact",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/border.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--boxShadow-thicker",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "inset 0 0 0 0.25rem",
+          "untyped": true,
+          "version": "11.10.0"
+        }
+      },
+      "$value": "inset 0 0 0 0.25rem"
+    },
+    "thin": {
+      "$description": "Thin shadow used instead of a border to prevent layout shift",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/border.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--boxShadow-thin",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "inset 0 0 0 0.0625rem",
+          "untyped": true,
+          "version": "11.10.0"
+        }
+      },
+      "$value": "inset 0 0 0 0.0625rem"
+    }
+  },
+  "focus": {
+    "outline-offset": {
+      "$description": "Focus outline offset (-2px). Negative value creates an inset outline for keyboard focus indicators, ensuring the focus ring stays within the element bounds",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/border.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--focus-outline-offset",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "-0.125rem",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "collection": "functional/size",
+          "scopes": [
+            "borderWidth",
+            "effectFloat"
+          ]
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "px",
+        "value": -2
+      }
+    },
+    "outline-width": {
+      "$description": "Focus outline width (2px). Standard width for keyboard focus indicators to meet WCAG 2.4.7 accessibility requirements",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/border.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--focus-outline-width",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "0.125rem",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "collection": "functional/size",
+          "scopes": [
+            "borderWidth",
+            "effectFloat"
+          ]
+        },
+        "org.primer.llm": {
+          "rules": "MUST use for all keyboard focus indicators. Required for WCAG 2.4.7 compliance.",
+          "usage": [
+            "focus-ring",
+            "keyboard-focus",
+            "accessibility"
+          ]
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "px",
+        "value": 2
+      }
+    }
+  },
+  "outline": {
+    "focus": {
+      "offset": {
+        "$deprecated": "Use focus.outline-offset",
+        "$description": "Deprecated. Use focus.outline-offset instead.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/size/border.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--outline-focus-offset",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "-0.125rem",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "functional/size",
+            "scopes": [
+              "borderWidth",
+              "effectFloat"
+            ]
+          }
+        },
+        "$value": "{focus.outline-offset}"
+      },
+      "width": {
+        "$deprecated": "Use focus.outline-width",
+        "$description": "Deprecated. Use focus.outline-width instead.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/size/border.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--outline-focus-width",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "0.125rem",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "functional/size",
+            "scopes": [
+              "borderWidth",
+              "effectFloat"
+            ]
+          }
+        },
+        "$value": "{focus.outline-width}"
+      }
+    }
+  }
+}

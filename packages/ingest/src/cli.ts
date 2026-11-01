@@ -6,10 +6,11 @@ import { material } from './adapters/material.ts';
 import { dtcg } from './adapters/dtcg.ts';
 import { polaris } from './adapters/polaris.ts';
 import { atlassian } from './adapters/atlassian.ts';
+import { primer } from './adapters/primer.ts';
 import { setPath, stable } from './dtcg.ts';
 import { fetchNpm } from './fetch.ts';
 
-const ADAPTERS: Record<string, Adapter> = { material, dtcg, polaris, atlassian };
+const ADAPTERS: Record<string, Adapter> = { material, dtcg, polaris, atlassian, primer };
 
 const [product, rootArg] = process.argv.slice(2);
 if (!product) { console.error('usage: dsi-ingest <product> [repo root]'); process.exit(2); }

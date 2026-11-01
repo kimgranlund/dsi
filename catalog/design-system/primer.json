@@ -1,0 +1,30 @@
+{
+  "id": "primer",
+  "name": "Primer",
+  "category": "dsi:category/design-system",
+  "organization": "GitHub",
+  "description": "GitHub's design system: foundations, design tokens (Primer Primitives) and components for GitHub.com.",
+  "homepage": "https://primer.style/",
+  "repository": "https://github.com/primer/primitives",
+  "license": "MIT",
+  "implementations": [
+    {
+      "id": "primer-primitives",
+      "name": "Primer Primitives",
+      "package": "@primer/primitives",
+      "license": "MIT",
+      "targets": [
+        "dsi:target/css"
+      ]
+    },
+    {
+      "id": "primer-react",
+      "name": "Primer React",
+      "package": "@primer/react",
+      "license": "MIT",
+      "targets": [
+        "dsi:target/react"
+      ]
+    }
+  ]
+}

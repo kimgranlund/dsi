@@ -1,0 +1,29 @@
+{
+  "control": {
+    "minTarget": {
+      "auto": {
+        "$description": "Minimum target size for fine pointer devices (mouse)",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/size/size-fine.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--control-minTarget-auto",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "1rem",
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use as minimum size for interactive elements on desktop/mouse interfaces. Smaller than touch targets for denser layouts. Do NOT use for touch/mobile contexts.",
+            "usage": [
+              "mouse-target",
+              "desktop-button",
+              "click-area"
+            ]
+          }
+        },
+        "$value": "{base.size.16}"
+      }
+    }
+  }
+}

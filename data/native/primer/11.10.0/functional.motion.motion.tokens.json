@@ -1,0 +1,331 @@
+{
+  "motion": {
+    "duration": {
+      "long": {
+        "$description": "Longer duration for complex multi-step animations or large-scale layout shifts. Use sparingly.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-duration-long",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "{\"value\":500,\"unit\":\"ms\"}",
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use sparingly for complex animations. NEVER use for simple UI interactions.",
+            "usage": [
+              "complex-animation",
+              "multi-step",
+              "layout-shift",
+              "page-transition"
+            ]
+          }
+        },
+        "$value": "{base.duration.500}"
+      },
+      "medium": {
+        "$description": "Standard duration for elements entering or exiting the viewport, such as modals and dropdowns.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-duration-medium",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "{\"value\":300,\"unit\":\"ms\"}",
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use for elements entering or leaving the viewport. Maximum recommended duration for UI interactions.",
+            "usage": [
+              "modal-open",
+              "dropdown-appear",
+              "tooltip-show",
+              "enter-exit-viewport"
+            ]
+          }
+        },
+        "$value": "{base.duration.300}"
+      },
+      "micro": {
+        "$description": "Fast micro-interactions like hover, focus ring, and color shifts.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-duration-micro",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "{\"value\":100,\"unit\":\"ms\"}",
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use for instantaneous feedback on hover and focus states.",
+            "usage": [
+              "hover-transition",
+              "focus-ring",
+              "color-shift",
+              "opacity-change"
+            ]
+          }
+        },
+        "$value": "{base.duration.100}"
+      },
+      "short": {
+        "$description": "Quick transitions for state changes like expand/collapse, toggles, and visibility changes.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-duration-short",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "{\"value\":200,\"unit\":\"ms\"}",
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use for interactive state changes that need to feel responsive.",
+            "usage": [
+              "expand-collapse",
+              "toggle",
+              "visibility-change",
+              "state-transition"
+            ]
+          }
+        },
+        "$value": "{base.duration.200}"
+      }
+    },
+    "easing": {
+      "enter": {
+        "$description": "Decelerating easing for elements entering the viewport or appearing on screen.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-easing-enter",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "[0.3,0.8,0.6,1]",
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "RECOMMENDED default for enter animations. Element decelerates into its final position.",
+            "usage": [
+              "enter-animation",
+              "element-appearing",
+              "modal-open",
+              "dropdown-open",
+              "tooltip-appear"
+            ]
+          }
+        },
+        "$value": "{base.easing.easeOut}"
+      },
+      "exit": {
+        "$description": "Accelerating easing for elements exiting the viewport or leaving the screen.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-easing-exit",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "[0.7,0.1,0.75,0.9]",
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use for elements leaving the viewport. Element accelerates away.",
+            "usage": [
+              "exit-animation",
+              "element-leaving",
+              "modal-close",
+              "dismiss"
+            ]
+          }
+        },
+        "$value": "{base.easing.easeIn}"
+      },
+      "hover": {
+        "$description": "Easing for hover state changes and micro-interactions.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-easing-hover",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "[0.25,0.1,0.25,1]",
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use for hover state changes.",
+            "usage": [
+              "hover-state",
+              "micro-interaction",
+              "button-hover",
+              "link-hover"
+            ]
+          }
+        },
+        "$value": "{base.easing.ease}"
+      },
+      "linear": {
+        "$description": "Constant motion with no acceleration. Use for continuous animations like progress bars or loaders.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-easing-linear",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "[0,0,1,1]",
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use only for constant, uninterrupted motion.",
+            "usage": [
+              "progress-bar",
+              "loader",
+              "continuous-animation",
+              "scrolling"
+            ]
+          }
+        },
+        "$value": "{base.easing.linear}"
+      },
+      "move": {
+        "$description": "Smooth easing for elements moving or morphing within the viewport.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-easing-move",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "[0.6,0,0.2,1]",
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use for elements that move or change shape on screen.",
+            "usage": [
+              "position-change",
+              "size-change",
+              "morph-animation",
+              "expand-collapse",
+              "slide-transition"
+            ]
+          }
+        },
+        "$value": "{base.easing.easeInOut}"
+      }
+    },
+    "transition": {
+      "enter": {
+        "$description": "Transition for elements entering the viewport, such as modals, dropdowns, and tooltips.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-transition-enter",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "{\"duration\":{\"value\":300,\"unit\":\"ms\"},\"timingFunction\":[0.3,0.8,0.6,1]}",
+            "untyped": true,
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use for elements appearing on screen. Element decelerates into final position.",
+            "usage": [
+              "modal-open",
+              "dropdown-appear",
+              "tooltip-show",
+              "popover-enter",
+              "overlay-appear"
+            ]
+          }
+        },
+        "$value": "(\"duration\":{\"value\":300,\"unit\":\"ms\"},\"timingFunction\":[0.3,0.8,0.6,1])"
+      },
+      "exit": {
+        "$description": "Transition for elements exiting the viewport, such as closing modals and dismissing dropdowns.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-transition-exit",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "{\"duration\":{\"value\":200,\"unit\":\"ms\"},\"timingFunction\":[0.7,0.1,0.75,0.9]}",
+            "untyped": true,
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use for elements leaving the screen. Shorter than enter to feel snappy.",
+            "usage": [
+              "modal-close",
+              "dropdown-dismiss",
+              "tooltip-hide",
+              "popover-exit",
+              "overlay-dismiss"
+            ]
+          }
+        },
+        "$value": "(\"duration\":{\"value\":200,\"unit\":\"ms\"},\"timingFunction\":[0.7,0.1,0.75,0.9])"
+      },
+      "hover": {
+        "$description": "Transition for hover state changes on interactive elements like buttons and links.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-transition-hover",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "{\"duration\":{\"value\":100,\"unit\":\"ms\"},\"timingFunction\":[0.25,0.1,0.25,1]}",
+            "untyped": true,
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use for all hover state transitions. Keeps interactions feeling instantaneous.",
+            "usage": [
+              "button-hover",
+              "link-hover",
+              "interactive-hover",
+              "color-transition"
+            ]
+          }
+        },
+        "$value": "(\"duration\":{\"value\":100,\"unit\":\"ms\"},\"timingFunction\":[0.25,0.1,0.25,1])"
+      },
+      "stateChange": {
+        "$description": "Transition for state changes like toggles, expand/collapse, and visibility changes.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/motion/motion.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--motion-transition-stateChange",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "{\"duration\":{\"value\":200,\"unit\":\"ms\"},\"timingFunction\":[0.6,0,0.2,1]}",
+            "untyped": true,
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use for interactive elements that change between states.",
+            "usage": [
+              "toggle",
+              "expand-collapse",
+              "accordion",
+              "tab-switch",
+              "visibility-change"
+            ]
+          }
+        },
+        "$value": "(\"duration\":{\"value\":200,\"unit\":\"ms\"},\"timingFunction\":[0.6,0,0.2,1])"
+      }
+    }
+  }
+}

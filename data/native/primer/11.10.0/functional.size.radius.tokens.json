@@ -1,0 +1,176 @@
+{
+  "borderRadius": {
+    "default": {
+      "$description": "Semantic token: preferred default border radius for standard UI components. Use this in normal component code unless a specific radius is intentionally required.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/radius.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--borderRadius-default",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "0.375rem",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "codeSyntax": {
+            "web": "var(--borderRadius-default) /* utility class: .rounded-2 */"
+          },
+          "collection": "functional/size",
+          "scopes": [
+            "radius"
+          ]
+        }
+      },
+      "$value": "{borderRadius.medium}"
+    },
+    "full": {
+      "$description": "Shape token for fully rounded or pill-shaped elements.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/radius.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--borderRadius-full",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "624.9375rem",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "codeSyntax": {
+            "web": "var(--borderRadius-full) /* utility class: .circle */"
+          },
+          "collection": "functional/size",
+          "scopes": [
+            "radius"
+          ]
+        },
+        "org.primer.llm": {
+          "rules": "Use for avatars and pill-shaped elements. Do NOT use for rectangular containers.",
+          "usage": [
+            "avatar",
+            "pill-badge",
+            "circular-button"
+          ]
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "px",
+        "value": 9999
+      }
+    },
+    "large": {
+      "$description": "Scale token: 12px radius for larger surfaces or softer container treatments.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/radius.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--borderRadius-large",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "0.75rem",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "codeSyntax": {
+            "web": "var(--borderRadius-large) /* utility class: .rounded-3 */"
+          },
+          "collection": "functional/size",
+          "scopes": [
+            "radius"
+          ]
+        },
+        "org.primer.llm": {
+          "rules": "Recommended for dialogs and modals.",
+          "usage": [
+            "dialog",
+            "card",
+            "modal"
+          ]
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "px",
+        "value": 12
+      }
+    },
+    "medium": {
+      "$description": "Scale token: 6px radius in the border-radius scale. Use when selecting a specific radius intentionally.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/radius.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--borderRadius-medium",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "0.375rem",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "codeSyntax": {
+            "web": "var(--borderRadius-medium) /* utility class: .rounded-2 */"
+          },
+          "collection": "functional/size",
+          "scopes": [
+            "radius"
+          ]
+        },
+        "org.primer.llm": {
+          "rules": "Default choice for most components. Use for inputs, cards, and general containers.",
+          "usage": [
+            "button",
+            "input",
+            "textarea",
+            "select",
+            "card",
+            "container"
+          ]
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "px",
+        "value": 6
+      }
+    },
+    "small": {
+      "$description": "Scale token: 3px radius for compact UI elements or small component variants.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/size/radius.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--borderRadius-small",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "0.1875rem",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "codeSyntax": {
+            "web": "var(--borderRadius-small) /* utility class: .rounded-1 */"
+          },
+          "collection": "functional/size",
+          "scopes": [
+            "radius"
+          ]
+        },
+        "org.primer.llm": {
+          "rules": "Use for small UI elements under 16px height. Do NOT use for buttons or cards.",
+          "usage": [
+            "badge",
+            "tag",
+            "label",
+            "small-input"
+          ]
+        }
+      },
+      "$type": "dimension",
+      "$value": {
+        "unit": "px",
+        "value": 3
+      }
+    }
+  }
+}

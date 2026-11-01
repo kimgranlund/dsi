@@ -1,0 +1,1030 @@
+{
+  "fontStack": {
+    "monospace": {
+      "$description": "Monospace font stack for code, technical content, and tabular data.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/typography/typography.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--fontStack-monospace",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "collection": "typography",
+          "scopes": [
+            "fontFamily"
+          ]
+        },
+        "org.primer.llm": {
+          "rules": "MUST use for all code display. Use for technical content requiring fixed-width characters.",
+          "usage": [
+            "code-block",
+            "inline-code",
+            "terminal",
+            "technical-data",
+            "tabular-numbers"
+          ]
+        }
+      },
+      "$type": "fontFamily",
+      "$value": "ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace"
+    },
+    "sansSerif": {
+      "$description": "Sans-serif font stack for body text and general UI elements.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/typography/typography.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--fontStack-sansSerif",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "collection": "typography",
+          "scopes": [
+            "fontFamily"
+          ]
+        },
+        "org.primer.llm": {
+          "rules": "Default font stack for all UI text. Use for body text and standard UI elements. MUST use for readable content.",
+          "usage": [
+            "body-text",
+            "form-inputs",
+            "labels",
+            "paragraphs"
+          ]
+        }
+      },
+      "$type": "fontFamily",
+      "$value": "'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+    },
+    "sansSerifDisplay": {
+      "$description": "Display font stack for headings and titles. Same as sansSerif but semantically distinct.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/typography/typography.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--fontStack-sansSerifDisplay",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "collection": "typography",
+          "scopes": [
+            "fontFamily"
+          ]
+        },
+        "org.primer.llm": {
+          "rules": "Use for headings and display text. Prefer over sansSerif for titles.",
+          "usage": [
+            "heading",
+            "title",
+            "display-text",
+            "hero-text"
+          ]
+        }
+      },
+      "$type": "fontFamily",
+      "$value": "'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+    },
+    "system": {
+      "$description": "Mona Sans–first font stack with system fallbacks, optimized for cross-platform rendering. Primary font stack for all UI text where Mona Sans is available.",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "file": "dist/docs/functional/typography/typography.json",
+          "implementation": "primer-primitives",
+          "nativeName": "--fontStack-system",
+          "package": "@primer/primitives",
+          "product": "primer",
+          "rawValue": "'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+          "version": "11.10.0"
+        },
+        "org.primer.figma": {
+          "collection": "typography",
+          "scopes": [
+            "fontFamily"
+          ]
+        }
+      },
+      "$type": "fontFamily",
+      "$value": "'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+    }
+  },
+  "text": {
+    "body": {
+      "lineHeight": {
+        "large": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-body-lineHeight-large",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.5",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "lineHeight"
+              ]
+            }
+          },
+          "$value": "{base.text.lineHeight.normal}"
+        },
+        "medium": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-body-lineHeight-medium",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.5",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "lineHeight"
+              ]
+            }
+          },
+          "$value": "{base.text.lineHeight.normal}"
+        },
+        "small": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-body-lineHeight-small",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.625",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "lineHeight"
+              ]
+            }
+          },
+          "$value": "{base.text.lineHeight.relaxed}"
+        }
+      },
+      "shorthand": {
+        "large": {
+          "$description": "User-generated content, markdown rendering.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-body-shorthand-large",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "400 1rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+              "untyped": true,
+              "version": "11.10.0"
+            },
+            "org.primer.llm": {
+              "rules": "Use for user-generated content and markdown. Better readability for longer text.",
+              "usage": [
+                "markdown-content",
+                "article-text",
+                "readme",
+                "comment-body"
+              ]
+            }
+          },
+          "$value": "400 1rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+        },
+        "medium": {
+          "$description": "Default UI font. Most commonly used for body text.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-body-shorthand-medium",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "400 0.875rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+              "untyped": true,
+              "version": "11.10.0"
+            },
+            "org.primer.llm": {
+              "rules": "RECOMMENDED default for UI text. Use for buttons, labels, and general interface text.",
+              "usage": [
+                "body-text",
+                "ui-text",
+                "form-label",
+                "button-text",
+                "navigation"
+              ]
+            }
+          },
+          "$value": "400 0.875rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+        },
+        "small": {
+          "$description": "Small body text for discrete UI applications, such as helper, footnote text. Should be used sparingly across pages. Line-height matches Body (medium) at 20px.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-body-shorthand-small",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "400 0.75rem/1.625 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+              "untyped": true,
+              "version": "11.10.0"
+            },
+            "org.primer.llm": {
+              "rules": "Use sparingly for secondary information. Do NOT use for primary content or interactive elements.",
+              "usage": [
+                "helper-text",
+                "footnote",
+                "metadata",
+                "timestamp"
+              ]
+            }
+          },
+          "$value": "400 0.75rem/1.625 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+        }
+      },
+      "size": {
+        "large": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-body-size-large",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$value": "{base.text.size.md}"
+        },
+        "medium": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-body-size-medium",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "0.875rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$value": "{base.text.size.sm}"
+        },
+        "small": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-body-size-small",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "0.75rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$value": "{base.text.size.xs}"
+        }
+      },
+      "weight": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-body-weight",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "400",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "fontWeight"
+            ]
+          }
+        },
+        "$value": "{base.text.weight.normal}"
+      }
+    },
+    "caption": {
+      "lineHeight": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-caption-lineHeight",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "1.25",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "lineHeight"
+            ]
+          }
+        },
+        "$value": "{base.text.lineHeight.tight}"
+      },
+      "shorthand": {
+        "$description": "Compact small font with a smaller line height of 16px. Use it for single-line scenarios, as the small sizing doesn’t pass accessibility requirements.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-caption-shorthand",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "400 0.75rem/1.25 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+            "untyped": true,
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use only for single-line or short text. Does NOT meet accessibility requirements for body text.",
+            "usage": [
+              "caption",
+              "label",
+              "badge-text",
+              "single-line-metadata"
+            ]
+          }
+        },
+        "$value": "400 0.75rem/1.25 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+      },
+      "size": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-caption-size",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "0.75rem",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "fontSize"
+            ]
+          }
+        },
+        "$value": "{base.text.size.xs}"
+      },
+      "weight": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-caption-weight",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "400",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "fontWeight"
+            ]
+          }
+        },
+        "$value": "{base.text.weight.normal}"
+      }
+    },
+    "codeBlock": {
+      "lineHeight": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-codeBlock-lineHeight",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "1.5",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "lineHeight"
+            ]
+          }
+        },
+        "$value": "{base.text.lineHeight.normal}"
+      },
+      "shorthand": {
+        "$description": "Default style for rendering code blocks.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-codeBlock-shorthand",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "400 0.8125rem/1.5 ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace",
+            "untyped": true,
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "MUST use for multi-line code. Use monospace font stack.",
+            "usage": [
+              "code-block",
+              "pre-element",
+              "code-snippet",
+              "terminal-output"
+            ]
+          }
+        },
+        "$value": "400 0.8125rem/1.5 ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace"
+      },
+      "size": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-codeBlock-size",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "0.8125rem",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "fontSize"
+            ]
+          }
+        },
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 13
+        }
+      },
+      "weight": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-codeBlock-weight",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "400",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "fontWeight"
+            ]
+          }
+        },
+        "$value": "{base.text.weight.normal}"
+      }
+    },
+    "codeInline": {
+      "shorthand": {
+        "$description": "Inline code blocks using em units to inherit size from its parent.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-codeInline-shorthand",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "400 0.9285em ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace",
+            "untyped": true,
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use for inline code within text. Size inherits from parent using em units.",
+            "usage": [
+              "inline-code",
+              "code-element",
+              "variable-name",
+              "command"
+            ]
+          }
+        },
+        "$value": "400 0.9285em ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace"
+      },
+      "size": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-codeInline-size",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "0.9285em",
+            "untyped": true,
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "fontSize"
+            ]
+          }
+        },
+        "$value": "0.9285em"
+      },
+      "weight": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-codeInline-weight",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "400",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "fontWeight"
+            ]
+          }
+        },
+        "$value": "{base.text.weight.normal}"
+      }
+    },
+    "display": {
+      "lineHeight": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-display-lineHeight",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "1.375",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "lineHeight"
+            ]
+          }
+        },
+        "$value": "{base.text.lineHeight.snug}"
+      },
+      "shorthand": {
+        "$description": "Hero-style text for brand to product transition pages. Utilize Title (large) styles on narrow viewports.",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-display-shorthand",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "500 2.5rem/1.375 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+            "untyped": true,
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use sparingly for hero sections. Switch to title.large on narrow viewports.",
+            "usage": [
+              "hero-section",
+              "landing-page",
+              "marketing-header"
+            ]
+          }
+        },
+        "$value": "500 2.5rem/1.375 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+      },
+      "size": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-display-size",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "2.5rem",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "fontSize"
+            ]
+          }
+        },
+        "$value": "{base.text.size.2xl}"
+      },
+      "weight": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-display-weight",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "500",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "fontWeight"
+            ]
+          }
+        },
+        "$value": "{base.text.weight.medium}"
+      }
+    },
+    "subtitle": {
+      "lineHeight": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-subtitle-lineHeight",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "1.625",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "lineHeight"
+            ]
+          }
+        },
+        "$value": "{base.text.lineHeight.relaxed}"
+      },
+      "shorthand": {
+        "$description": "Page sections/sub headings, or less important object names in page titles (automated action titles, for example). Same line-height as title (medium).",
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-subtitle-shorthand",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "400 1.25rem/1.625 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+            "untyped": true,
+            "version": "11.10.0"
+          },
+          "org.primer.llm": {
+            "rules": "Use below titles for supporting text. Normal weight distinguishes from title styles.",
+            "usage": [
+              "subtitle",
+              "description",
+              "secondary-heading",
+              "lead-text"
+            ]
+          }
+        },
+        "$value": "400 1.25rem/1.625 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+      },
+      "size": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-subtitle-size",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "1.25rem",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "fontSize"
+            ]
+          }
+        },
+        "$value": "{base.text.size.lg}"
+      },
+      "weight": {
+        "$extensions": {
+          "io.nonoun.dsi": {
+            "file": "dist/docs/functional/typography/typography.json",
+            "implementation": "primer-primitives",
+            "nativeName": "--text-subtitle-weight",
+            "package": "@primer/primitives",
+            "product": "primer",
+            "rawValue": "400",
+            "version": "11.10.0"
+          },
+          "org.primer.figma": {
+            "collection": "typography",
+            "scopes": [
+              "fontWeight"
+            ]
+          }
+        },
+        "$value": "{base.text.weight.normal}"
+      }
+    },
+    "title": {
+      "lineHeight": {
+        "large": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-lineHeight-large",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.5",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "lineHeight"
+              ]
+            }
+          },
+          "$value": "{base.text.lineHeight.normal}"
+        },
+        "medium": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-lineHeight-medium",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.625",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "lineHeight"
+              ]
+            }
+          },
+          "$value": "{base.text.lineHeight.relaxed}"
+        },
+        "small": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-lineHeight-small",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.5",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "lineHeight"
+              ]
+            }
+          },
+          "$value": "{base.text.lineHeight.normal}"
+        }
+      },
+      "shorthand": {
+        "large": {
+          "$description": "Page headings for user-created objects, such as issues or pull requests. Utilize title (medium) styles on narrow viewports.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-shorthand-large",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "600 2rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+              "untyped": true,
+              "version": "11.10.0"
+            },
+            "org.primer.llm": {
+              "rules": "Use for primary page headings. Switch to title.medium on narrow viewports.",
+              "usage": [
+                "page-heading",
+                "issue-title",
+                "pr-title",
+                "h1"
+              ]
+            }
+          },
+          "$value": "600 2rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+        },
+        "medium": {
+          "$description": "Default page title. The 32px-equivalent line-height matches with button and other medium control heights. Great for page header composition.",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-shorthand-medium",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "600 1.25rem/1.625 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+              "untyped": true,
+              "version": "11.10.0"
+            },
+            "org.primer.llm": {
+              "rules": "RECOMMENDED default for page titles. Use for section headings and dialog titles.",
+              "usage": [
+                "section-heading",
+                "card-title",
+                "dialog-title",
+                "h2"
+              ]
+            }
+          },
+          "$value": "600 1.25rem/1.625 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+        },
+        "small": {
+          "$description": "Uses the same size as body (large) with a heavier weight of semibold (600).",
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-shorthand-small",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "600 1rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+              "untyped": true,
+              "version": "11.10.0"
+            },
+            "org.primer.llm": {
+              "rules": "Use for smaller headings within sections. Same size as body.large but semibold.",
+              "usage": [
+                "subsection-heading",
+                "list-title",
+                "h3",
+                "sidebar-heading"
+              ]
+            }
+          },
+          "$value": "600 1rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+        }
+      },
+      "size": {
+        "large": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-size-large",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "2rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$value": "{base.text.size.xl}"
+        },
+        "medium": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-size-medium",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1.25rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$value": "{base.text.size.lg}"
+        },
+        "small": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-size-small",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "1rem",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "fontSize"
+              ]
+            }
+          },
+          "$value": "{base.text.size.md}"
+        }
+      },
+      "weight": {
+        "large": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-weight-large",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "600",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "fontWeight"
+              ]
+            }
+          },
+          "$value": "{base.text.weight.semibold}"
+        },
+        "medium": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-weight-medium",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "600",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "fontWeight"
+              ]
+            }
+          },
+          "$value": "{base.text.weight.semibold}"
+        },
+        "small": {
+          "$extensions": {
+            "io.nonoun.dsi": {
+              "file": "dist/docs/functional/typography/typography.json",
+              "implementation": "primer-primitives",
+              "nativeName": "--text-title-weight-small",
+              "package": "@primer/primitives",
+              "product": "primer",
+              "rawValue": "600",
+              "version": "11.10.0"
+            },
+            "org.primer.figma": {
+              "collection": "typography",
+              "scopes": [
+                "fontWeight"
+              ]
+            }
+          },
+          "$value": "{base.text.weight.semibold}"
+        }
+      }
+    }
+  }
+}
