@@ -1,6 +1,6 @@
 # 0010 Fixed tokens follow their container role; "secondary" direction is checked per property
 
-Status: proposed, 2026-11-01 (accepted when the owner resolves the audit disputes). Supersedes the "fixed" row of 0008 and qualifies its "secondary" row.
+Status: accepted, 2026-11-01 (owner took all 23 audit suggestions and rejected the terms `brand` -> on-fill, `primary` -> default emphasis and `on-bg-fill` -> text). Supersedes the "fixed" row of 0008 and qualifies its "secondary" row.
 
 ## Context
 The evidence audit (`mappings/*/2.5.0.audit.json`, auditor claude-fable-5-1) contradicted 23 of 350 approved color mappings. Two causes were conventions, not individual judgments:

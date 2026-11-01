@@ -107,9 +107,9 @@
         "method": "terms-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T00:41:58.804Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:13:45.864Z",
+        "note": "Restored: approved in term review; an audit-resolution bug rejected this record instead of the disputed one."
       }
     },
     {
@@ -136,7 +136,7 @@
       "term": "brand",
       "concept": "dsi:usage/on-fill",
       "match": "exact",
-      "status": "approved",
+      "status": "rejected",
       "evidence": {
         "support": 4,
         "agree": 4,
@@ -149,7 +149,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:13:22.015Z"
+        "at": "2026-11-01T02:30:00Z",
+        "note": "Rejected after audit: most of its own approved tokens disagree."
       }
     },
     {
@@ -584,7 +585,7 @@
       "term": "on-bg-fill",
       "concept": "dsi:property/text",
       "match": "exact",
-      "status": "approved",
+      "status": "rejected",
       "note": "Overrides bg/fill: every Polaris on-bg-fill token is a text color, not the fill. (confidence 0.85; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
@@ -594,7 +595,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:13:45.864Z"
+        "at": "2026-11-01T01:44:48.772Z",
+        "note": "Rejected after audit: most of its own approved tokens disagree."
       }
     },
     {

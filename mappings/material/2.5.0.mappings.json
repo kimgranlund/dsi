@@ -247,7 +247,7 @@
       "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground",
       "match": "exact",
       "confidence": 0.75,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Fixed across themes (primary10 in both); same concept and match as on-primary: content on an accent fill.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -258,6 +258,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T00:49:52.428Z"
+      },
+      "supersededBy": "m-5f10ef113ce9"
+    },
+    {
+      "id": "m-5f10ef113ce9",
+      "token": "md.sys.color.on-primary-fixed",
+      "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground/emphasis-subtle",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): On fixed colors are used for text and icons which sit on top of the corresponding Fixed color; Primary fixed ... are fill colors used against surface. primaryFixed: A substitute for primaryContainer that's the same color for the dark and light themes. primary10 #21005d in both themes = on-primary-co",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:43:38.482Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:43:38.482Z"
       }
     },
     {
@@ -306,7 +325,7 @@
       "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground",
       "match": "broad",
       "confidence": 0.8,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Fixed across themes (secondary10 in both); same concept and match as on-secondary: broad to accent on-fill foreground.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -317,6 +336,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T00:53:05.206Z"
+      },
+      "supersededBy": "m-7a876650de87"
+    },
+    {
+      "id": "m-7a876650de87",
+      "token": "md.sys.color.on-secondary-fixed",
+      "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground/emphasis-subtle",
+      "match": "broad",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): On fixed colors are used for text and icons which sit on top of the corresponding Fixed color; fixed roles are fill colors used against surface. secondary10 #1d192b in both themes = on-secondary-container light, not on-secondary (secondary100 #ffffff).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:43:42.806Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:43:42.806Z"
       }
     },
     {
@@ -423,7 +461,7 @@
       "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground",
       "match": "broad",
       "confidence": 0.8,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Fixed across themes (tertiary10 in both); same concept and match as on-tertiary: broad to accent on-fill foreground.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -434,6 +472,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T00:53:32.940Z"
+      },
+      "supersededBy": "m-f6adee802744"
+    },
+    {
+      "id": "m-f6adee802744",
+      "token": "md.sys.color.on-tertiary-fixed",
+      "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-foreground/emphasis-subtle",
+      "match": "broad",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): On fixed colors are used for text and icons which sit on top of the corresponding Fixed color; fixed roles are fill colors used against surface. tertiary10 #31111d in both themes = on-tertiary-container light, not on-tertiary (tertiary100 #ffffff).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:43:43.681Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:43:43.681Z"
       }
     },
     {
@@ -558,7 +615,7 @@
       "concept": "dsi:concept/color/intent-accent",
       "match": "exact",
       "confidence": 0.75,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Fixed across themes (primary90 in both); same concept and match as primary: accent.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -569,6 +626,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T00:54:16.122Z"
+      },
+      "supersededBy": "m-f11698c89b4c"
+    },
+    {
+      "id": "m-f11698c89b4c",
+      "token": "md.sys.color.primary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): Primary fixed ... are fill colors used against surface. primaryFixed: A substitute for primaryContainer that's the same color for the dark and light themes. primary90 #eaddff in both themes = primary-container light, not primary (primary40 #6750a4).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:43:54.048Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:43:54.048Z"
       }
     },
     {
@@ -637,7 +713,7 @@
       "concept": "dsi:concept/color/intent-accent",
       "match": "broad",
       "confidence": 0.85,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Fixed across themes (secondary90 in both); same concept and match as secondary: broad to accent.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -649,6 +725,25 @@
         "by": "agreement",
         "at": "2026-10-31T23:52:35.378Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      },
+      "supersededBy": "m-b734017d3b3b"
+    },
+    {
+      "id": "m-b734017d3b3b",
+      "token": "md.sys.color.secondary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+      "match": "broad",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): Fixed roles are fill colors used against surface, the same tone in light and dark themes. secondary90 #e8def8 in both themes = secondary-container light, not secondary (secondary40 #625b71).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:43:55.406Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:43:55.406Z"
       }
     },
     {
@@ -911,7 +1006,7 @@
       "concept": "dsi:concept/color/intent-accent",
       "match": "broad",
       "confidence": 0.85,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Fixed across themes (tertiary90 in both); same concept and match as tertiary: broad to accent.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -923,6 +1018,25 @@
         "by": "agreement",
         "at": "2026-10-31T23:52:35.378Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      },
+      "supersededBy": "m-64878212e317"
+    },
+    {
+      "id": "m-64878212e317",
+      "token": "md.sys.color.tertiary-fixed",
+      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+      "match": "broad",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): Fixed roles are fill colors used against surface, the same tone in light and dark themes. tertiary90 #ffd8e4 in both themes = tertiary-container light, not tertiary (tertiary40 #7d5260).",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:43:56.269Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:43:56.269Z"
       }
     }
   ],

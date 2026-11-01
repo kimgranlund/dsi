@@ -1,6 +1,6 @@
 # 0008 Mapping conventions from color-v1 review
 
-Status: accepted, 2026-11-01
+Status: accepted, 2026-11-01; the fixed-token row is superseded and the secondary row qualified by [0010](0010-fixed-tokens-and-secondary-direction.md)
 
 ## Context
 Three agent rounds and one human review of 508 color tokens settled how recurring naming patterns map. Agents read these before mapping (`packages/mapper/prompts/color-v1.md`, `packages/classify/prompts/terms-v1.md`).
@@ -10,7 +10,6 @@ Three agent rounds and one human review of 508 color tokens settled how recurrin
 | Pattern | Maps to | Match | Examples |
 |---|---|---|---|
 | Content on a filled or container background | `usage-on-fill` + property; `emphasis-subtle` for light containers | exact | Material `on-error`, `on-error-container`; Carbon `text-on-color` |
-| A token coloring only text where the name says `on-bg-fill` | `usage-on-fill/property-text` | exact | Polaris `color-text-critical-on-bg-fill` |
 | One token for text and icons | `property-foreground` | | Material `on-surface` |
 | Ordered levels of one family | subtle / default / strong (subtlest / strongest at the ends of 4+ steps) | close | Carbon `layer-01..03`; Material `surface-container-*` |
 | "secondary" variant | `emphasis-subtle` | exact (Polaris), close (Carbon) | Polaris `color-bg-fill-critical-secondary`; Carbon `link-secondary` |

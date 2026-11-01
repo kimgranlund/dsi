@@ -9,7 +9,7 @@
    "foundation": 60,
    "component": 78
   },
-  "colorTokensFullyExplained": 77
+  "colorTokensFullyExplained": 73
  },
  "tokens": [
   {
@@ -1281,19 +1281,15 @@
   {
    "token": "button-danger-primary",
    "scope": "component",
-   "facets": {
-    "emphasis": "default"
-   },
-   "matchedTerms": [
-    "primary"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "button",
-    "danger"
+    "danger",
+    "primary"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/emphasis-default",
-   "explained": 0.3333333333333333,
+   "explained": 0,
    "domain": "color"
   },
   {
@@ -1334,56 +1330,50 @@
   {
    "token": "button-primary",
    "scope": "component",
-   "facets": {
-    "emphasis": "default"
-   },
-   "matchedTerms": [
+   "facets": {},
+   "matchedTerms": [],
+   "unknown": [
+    "button",
     "primary"
    ],
-   "unknown": [
-    "button"
-   ],
    "conflicts": [],
-   "concept": "dsi:concept/color/emphasis-default",
-   "explained": 0.5,
+   "explained": 0,
    "domain": "color"
   },
   {
    "token": "button-primary-active",
    "scope": "component",
    "facets": {
-    "emphasis": "default",
     "state": "active"
    },
    "matchedTerms": [
-    "primary",
     "active"
    ],
    "unknown": [
-    "button"
+    "button",
+    "primary"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/emphasis-default/state-active",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/state-active",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
    "token": "button-primary-hover",
    "scope": "component",
    "facets": {
-    "emphasis": "default",
     "state": "hover"
    },
    "matchedTerms": [
-    "primary",
     "hover"
    ],
    "unknown": [
-    "button"
+    "button",
+    "primary"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/emphasis-default/state-hover",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/state-hover",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
@@ -3466,17 +3456,17 @@
    "token": "icon-primary",
    "scope": "semantic",
    "facets": {
-    "property": "icon",
-    "emphasis": "default"
+    "property": "icon"
    },
    "matchedTerms": [
-    "icon",
+    "icon"
+   ],
+   "unknown": [
     "primary"
    ],
-   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-icon/emphasis-default",
-   "explained": 1,
+   "concept": "dsi:concept/color/property-icon",
+   "explained": 0.5,
    "domain": "color"
   },
   {
@@ -4238,17 +4228,17 @@
    "scope": "semantic",
    "facets": {
     "property": "text",
-    "usage": "link",
-    "emphasis": "default"
+    "usage": "link"
    },
    "matchedTerms": [
-    "link",
+    "link"
+   ],
+   "unknown": [
     "primary"
    ],
-   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-link/property-text/emphasis-default",
-   "explained": 1,
+   "concept": "dsi:concept/color/usage-link/property-text",
+   "explained": 0.5,
    "domain": "color"
   },
   {
@@ -4257,18 +4247,18 @@
    "facets": {
     "property": "text",
     "usage": "link",
-    "emphasis": "default",
     "state": "hover"
    },
    "matchedTerms": [
     "link",
-    "primary",
     "hover"
    ],
-   "unknown": [],
+   "unknown": [
+    "primary"
+   ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-link/property-text/emphasis-default/state-hover",
-   "explained": 1,
+   "concept": "dsi:concept/color/usage-link/property-text/state-hover",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
@@ -8425,17 +8415,17 @@
    "token": "text-primary",
    "scope": "semantic",
    "facets": {
-    "property": "text",
-    "emphasis": "default"
+    "property": "text"
    },
    "matchedTerms": [
-    "text",
+    "text"
+   ],
+   "unknown": [
     "primary"
    ],
-   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-text/emphasis-default",
-   "explained": 1,
+   "concept": "dsi:concept/color/property-text",
+   "explained": 0.5,
    "domain": "color"
   },
   {

@@ -162,18 +162,17 @@
       "token": "color-bg-fill-brand-disabled",
       "concept": "dsi:concept/color/intent-accent/property-background/state-disabled",
       "match": "close",
-      "confidence": 0.75,
-      "status": "rejected",
-      "rationale": "Polaris bg-fill-brand (disabled): The disabled state color of main actions, like primary buttons.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): The disabled state color of main actions, like primary buttons. the same family is approved at close \"brand\" -> intent-accent, close",
       "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:50:52.644Z",
-        "method": "color-v1"
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:39.452Z",
+        "method": "audit-review"
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:09:04.679Z"
+        "at": "2026-11-01T01:44:39.452Z"
       }
     },
     {
@@ -182,7 +181,7 @@
       "concept": "dsi:concept/color/intent-accent/property-background/state-disabled",
       "match": "exact",
       "confidence": 0.86,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Background fill communicating accent (Polaris brand), as in the bg-fill-critical example. disabled state.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -193,7 +192,8 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:09:04.679Z"
-      }
+      },
+      "supersededBy": "m-00f9486b1d6f"
     },
     {
       "id": "m-6779de360e17",
@@ -239,7 +239,7 @@
       "concept": "dsi:concept/color/intent-accent/property-background/state-selected",
       "match": "exact",
       "confidence": 0.86,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Background fill communicating accent (Polaris brand), as in the bg-fill-critical example. selected state.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -250,25 +250,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:09:27.799Z"
-      }
+      },
+      "supersededBy": "m-dbba0ba7a46a"
     },
     {
       "id": "m-dbba0ba7a46a",
       "token": "color-bg-fill-brand-selected",
       "concept": "dsi:concept/color/intent-accent/property-background/state-selected",
       "match": "close",
-      "confidence": 0.75,
-      "status": "rejected",
-      "rationale": "Polaris bg-fill-brand (selected): The selected state color of main actions, like primary buttons.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): The selected state color of main actions, like primary buttons. the same family is approved at close \"brand\" -> intent-accent, close",
       "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-10-31T23:50:52.644Z",
-        "method": "color-v1"
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:39.943Z",
+        "method": "audit-review"
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:09:27.799Z"
+        "at": "2026-11-01T01:44:39.943Z"
       }
     },
     {
@@ -1663,6 +1663,24 @@
       }
     },
     {
+      "id": "m-51d0be24092a",
+      "token": "color-bg-surface-critical",
+      "concept": "dsi:concept/color/intent-danger/usage-surface/property-background",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): Use for backgrounds communicating critical information, like banners or input errors. parallel descriptions (\"Use for backgrounds communicating X, like banners\") approved exact critical -> intent-danger approved exact elsewhere",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:40.393Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:44:40.393Z"
+      }
+    },
+    {
       "id": "m-e952df5c47c4",
       "token": "color-bg-surface-critical",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
@@ -1687,7 +1705,7 @@
       "concept": "dsi:concept/color/intent-danger/usage-surface/property-background",
       "match": "close",
       "confidence": 0.78,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Surface background communicating danger (banners), but also used for input errors, not only surfaces.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -1698,6 +1716,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:15:50.889Z"
+      },
+      "supersededBy": "m-51d0be24092a"
+    },
+    {
+      "id": "m-6a2fc5264094",
+      "token": "color-bg-surface-critical-active",
+      "concept": "dsi:concept/color/intent-danger/usage-surface/property-background/state-active",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): The active state (on press) color for communicating critical information. parallel descriptions (\"Use for backgrounds communicating X, like banners\") approved exact critical -> intent-danger approved exact elsewhere",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:40.860Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:44:40.860Z"
       }
     },
     {
@@ -1706,7 +1743,7 @@
       "concept": "dsi:concept/color/intent-danger/usage-surface/property-background/state-active",
       "match": "close",
       "confidence": 0.78,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Surface background communicating danger (banners), but also used for input errors, not only surfaces. active state.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -1717,7 +1754,8 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:15:53.027Z"
-      }
+      },
+      "supersededBy": "m-6a2fc5264094"
     },
     {
       "id": "m-fc591c3e7355",
@@ -1758,12 +1796,30 @@
       }
     },
     {
+      "id": "m-246c03a2b7d7",
+      "token": "color-bg-surface-critical-hover",
+      "concept": "dsi:concept/color/intent-danger/usage-surface/property-background/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): The hover state color for communicating critical information. parallel descriptions (\"Use for backgrounds communicating X, like banners\") approved exact critical -> intent-danger approved exact elsewhere",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:41.335Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:44:41.335Z"
+      }
+    },
+    {
       "id": "m-cc0e60d0f717",
       "token": "color-bg-surface-critical-hover",
       "concept": "dsi:concept/color/intent-danger/usage-surface/property-background/state-hover",
       "match": "close",
       "confidence": 0.78,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Surface background communicating danger (banners), but also used for input errors, not only surfaces. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -1774,7 +1830,8 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:15:54.352Z"
-      }
+      },
+      "supersededBy": "m-246c03a2b7d7"
     },
     {
       "id": "m-3d483e100939",
@@ -2488,7 +2545,7 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest",
       "match": "close",
       "confidence": 0.55,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Polaris bg-surface-tertiary: The background color for elements with a third level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2499,25 +2556,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:16:26.221Z"
-      }
+      },
+      "supersededBy": "m-8aab62f216dd"
     },
     {
       "id": "m-8aab62f216dd",
       "token": "color-bg-surface-tertiary",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle",
       "match": "broad",
-      "confidence": 0.6,
-      "status": "rejected",
-      "rationale": "Surface background at third prominence; three-step family so subtlest not allowed; a narrower case of subtle surface.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): The background color for elements with a third level of prominence. the surface family has three levels (highest, secondary, third); subtlest is reserved for the ends of 4+ step families same \"third level of prominence\" wording approved as emphasis-subtle, broad \"tertiary\" variant -> emphasis-subtle",
       "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:51:18.375Z",
-        "method": "color-v1"
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:41.801Z",
+        "method": "audit-review"
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:16:26.221Z"
+        "at": "2026-11-01T01:44:41.801Z"
       }
     },
     {
@@ -2526,7 +2583,7 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest/state-active",
       "match": "close",
       "confidence": 0.55,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Polaris bg-surface-tertiary (active): The active state (on press) color for elements with a third level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2537,25 +2594,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:16:27.143Z"
-      }
+      },
+      "supersededBy": "m-bae839e7b9c2"
     },
     {
       "id": "m-bae839e7b9c2",
       "token": "color-bg-surface-tertiary-active",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active",
       "match": "broad",
-      "confidence": 0.6,
-      "status": "rejected",
-      "rationale": "Surface background at third prominence; three-step family so subtlest not allowed; a narrower case of subtle surface. active state.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): The active state (on press) color for elements with a third level of prominence. the surface family has three levels (highest, secondary, third); subtlest is reserved for the ends of 4+ step families same \"third level of prominence\" wording approved as emphasis-subtle, broad \"tertiary\" variant -> em",
       "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:51:18.375Z",
-        "method": "color-v1"
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:42.218Z",
+        "method": "audit-review"
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:16:27.143Z"
+        "at": "2026-11-01T01:44:42.218Z"
       }
     },
     {
@@ -2564,7 +2621,7 @@
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest/state-hover",
       "match": "close",
       "confidence": 0.55,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Polaris bg-surface-tertiary (hover): The hover state color for elements with a third level of prominence.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2575,25 +2632,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:16:27.702Z"
-      }
+      },
+      "supersededBy": "m-9005990c9422"
     },
     {
       "id": "m-9005990c9422",
       "token": "color-bg-surface-tertiary-hover",
       "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover",
       "match": "broad",
-      "confidence": 0.6,
-      "status": "rejected",
-      "rationale": "Surface background at third prominence; three-step family so subtlest not allowed; a narrower case of subtle surface. hover state.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): The hover state color for elements with a third level of prominence. the surface family has three levels (highest, secondary, third); subtlest is reserved for the ends of 4+ step families same \"third level of prominence\" wording approved as emphasis-subtle, broad \"tertiary\" variant -> emphasis-subtl",
       "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:51:18.375Z",
-        "method": "color-v1"
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:42.627Z",
+        "method": "audit-review"
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:16:27.702Z"
+        "at": "2026-11-01T01:44:42.627Z"
       }
     },
     {
@@ -2735,18 +2792,17 @@
       "token": "color-border-brand",
       "concept": "dsi:concept/color/intent-accent/property-border",
       "match": "close",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Border paired with brand colors; accent border, nuance: used alongside brand fills rather than carrying brand color itself.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): Use for borders paired with brand colors. identical to color-border (#e3e3e3) in every theme: a neutral border, not a distinct accent border \"brand\" -> intent-accent, close",
       "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:51:18.375Z",
-        "method": "color-v1"
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:43.752Z",
+        "method": "audit-review"
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:16:33.443Z"
+        "at": "2026-11-01T01:44:43.752Z"
       }
     },
     {
@@ -2755,7 +2811,7 @@
       "concept": "dsi:concept/color/intent-accent/property-border",
       "match": "exact",
       "confidence": 0.75,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Polaris border-brand: Use for borders paired with brand colors.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2766,7 +2822,8 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:16:33.443Z"
-      }
+      },
+      "supersededBy": "m-541cbb91cfdd"
     },
     {
       "id": "m-7d4368eb77c8",
@@ -2814,7 +2871,7 @@
       "concept": "dsi:concept/color/intent-danger/property-border/emphasis-subtle",
       "match": "close",
       "confidence": 0.72,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Border communicating danger at secondary prominence; used on invalid fields and resolves to a dark red, nuance noted.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2825,6 +2882,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:16:34.844Z"
+      },
+      "supersededBy": "m-fcbda1b363ee"
+    },
+    {
+      "id": "m-fcbda1b363ee",
+      "token": "color-border-critical-secondary",
+      "concept": "dsi:concept/color/intent-danger/property-border/emphasis-strong",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): Use for borders communicating critical information, such as borders on invalid text fields. #8e0b21 (red.14) vs color-border-critical #fec1c7 (red.8): the \"secondary\" border is the darker, stronger one identical value, the full-strength critical text color",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:44.410Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:44:44.410Z"
       }
     },
     {
@@ -3048,12 +3124,30 @@
       }
     },
     {
+      "id": "m-6b005c2f24e6",
+      "token": "color-border-magic-secondary",
+      "concept": "dsi:concept/color/intent-ai/property-border/emphasis-strong",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): Use for borders suggested by magic AI, such as borders on text fields. #9474ff (colors.purple.11) vs color-border-magic #e4deff (purple.6): the \"secondary\" border is the saturated, stronger one color-border-magic-secondary-hover shares their full-strength #8051ff",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:44.843Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:44:44.843Z"
+      }
+    },
+    {
       "id": "m-9103268a8953",
       "token": "color-border-magic-secondary",
       "concept": "dsi:concept/color/intent-ai/property-border/emphasis-subtle",
       "match": "exact",
       "confidence": 0.85,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Border communicating ai at secondary prominence.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3064,7 +3158,8 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:16:36.005Z"
-      }
+      },
+      "supersededBy": "m-6b005c2f24e6"
     },
     {
       "id": "m-e1093cf5c13b",
@@ -3110,7 +3205,7 @@
       "concept": "dsi:concept/color/intent-ai/property-border/emphasis-subtle/state-hover",
       "match": "exact",
       "confidence": 0.85,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Border communicating ai at secondary prominence. hover state.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3121,6 +3216,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:16:37.147Z"
+      },
+      "supersededBy": "m-889fa25142fa"
+    },
+    {
+      "id": "m-889fa25142fa",
+      "token": "color-border-magic-secondary-hover",
+      "concept": "dsi:concept/color/intent-ai/property-border/emphasis-strong/state-hover",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): Use for borders suggested by magic AI, such as borders on text fields. #8051ff (colors.purple.12) vs color-border-magic #e4deff (purple.6): the \"secondary\" border is the saturated, stronger one color-border-magic-secondary-hover shares their full-strength #8051ff",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:45.285Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:44:45.285Z"
       }
     },
     {
@@ -3182,12 +3296,30 @@
       }
     },
     {
+      "id": "m-acfe46285ec4",
+      "token": "color-border-tertiary",
+      "concept": "dsi:concept/color/property-border/emphasis-strong",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): The border color on any element. Pair with bg-surface-tertiary or bg-fill-tertiary. #cccccc (gray.10): darker than color-border #e3e3e3 and color-border-secondary #ebebeb, so the most prominent neutral border, not the subtlest identical value, approved as the hover (stronger) border",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:45.685Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:44:45.685Z"
+      }
+    },
+    {
       "id": "m-af9abc504f4f",
       "token": "color-border-tertiary",
       "concept": "dsi:concept/color/property-border/emphasis-subtlest",
       "match": "close",
       "confidence": 0.55,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Polaris border-tertiary: The border color on any element. Pair with bg-surface-tertiary or bg-fill-tertiary.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3198,7 +3330,8 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:16:39.572Z"
-      }
+      },
+      "supersededBy": "m-acfe46285ec4"
     },
     {
       "id": "m-fe0728a1c4c0",
@@ -4057,18 +4190,17 @@
       "token": "color-text-brand",
       "concept": "dsi:concept/color/intent-accent/property-text",
       "match": "close",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Text that needs to pull attention (brand); near-neutral in Polaris, nuance noted.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): Use for text that needs to pull attention. neutral gray #4a4a4a in every theme \"brand\" -> intent-accent, close",
       "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:51:18.375Z",
-        "method": "color-v1"
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:46.339Z",
+        "method": "audit-review"
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:17:02.963Z"
+        "at": "2026-11-01T01:44:46.339Z"
       }
     },
     {
@@ -4077,7 +4209,7 @@
       "concept": "dsi:concept/color/intent-accent/property-text",
       "match": "exact",
       "confidence": 0.75,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Polaris text-brand: Use for text that needs to pull attention.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4088,7 +4220,8 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:17:02.963Z"
-      }
+      },
+      "supersededBy": "m-08ff9061d505"
     },
     {
       "id": "m-b376dfa384f6",
@@ -4096,7 +4229,7 @@
       "concept": "dsi:concept/color/intent-accent/property-text/state-hover",
       "match": "exact",
       "confidence": 0.75,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Polaris text-brand (hover): The hover state color for text that needs to pull attention.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4107,25 +4240,25 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:17:04.201Z"
-      }
+      },
+      "supersededBy": "m-b4f7307bc699"
     },
     {
       "id": "m-b4f7307bc699",
       "token": "color-text-brand-hover",
       "concept": "dsi:concept/color/intent-accent/property-text/state-hover",
       "match": "close",
-      "confidence": 0.72,
-      "status": "rejected",
-      "rationale": "Text that needs to pull attention (brand); near-neutral in Polaris, nuance noted. hover state.",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): The hover state color for text that needs to pull attention. neutral gray #303030 in every theme \"brand\" -> intent-accent, close",
       "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:51:18.375Z",
-        "method": "color-v1"
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:46.755Z",
+        "method": "audit-review"
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:17:04.201Z"
+        "at": "2026-11-01T01:44:46.755Z"
       }
     },
     {

@@ -8,7 +8,7 @@
    "semantic": 225,
    "palette": 251
   },
-  "colorTokensFullyExplained": 151
+  "colorTokensFullyExplained": 141
  },
  "tokens": [
   {
@@ -342,7 +342,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "on",
     "bg",
@@ -352,8 +351,10 @@
     "avatar",
     "five"
    ],
-   "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 0.6666666666666666,
    "domain": "color"
   },
@@ -384,7 +385,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "on",
     "bg",
@@ -394,8 +394,10 @@
     "avatar",
     "four"
    ],
-   "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 0.6666666666666666,
    "domain": "color"
   },
@@ -426,7 +428,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "on",
     "bg",
@@ -436,8 +437,10 @@
     "avatar",
     "one"
    ],
-   "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 0.6666666666666666,
    "domain": "color"
   },
@@ -468,7 +471,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "on",
     "bg",
@@ -478,8 +480,10 @@
     "avatar",
     "seven"
    ],
-   "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 0.6666666666666666,
    "domain": "color"
   },
@@ -510,7 +514,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "on",
     "bg",
@@ -520,8 +523,10 @@
     "avatar",
     "six"
    ],
-   "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 0.6666666666666666,
    "domain": "color"
   },
@@ -533,7 +538,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "on",
     "bg",
@@ -542,8 +546,10 @@
    "unknown": [
     "avatar"
    ],
-   "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 0.8,
    "domain": "color"
   },
@@ -574,7 +580,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "on",
     "bg",
@@ -584,8 +589,10 @@
     "avatar",
     "three"
    ],
-   "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 0.6666666666666666,
    "domain": "color"
   },
@@ -616,7 +623,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "on",
     "bg",
@@ -626,8 +632,10 @@
     "avatar",
     "two"
    ],
-   "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 0.6666666666666666,
    "domain": "color"
   },
@@ -702,8 +710,7 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
-    "intent": "accent",
-    "usage": "on-fill"
+    "intent": "accent"
    },
    "matchedTerms": [
     "bg",
@@ -712,7 +719,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-background",
+   "concept": "dsi:concept/color/intent-accent/property-background",
    "explained": 1,
    "domain": "color"
   },
@@ -722,7 +729,6 @@
    "facets": {
     "property": "background",
     "intent": "accent",
-    "usage": "on-fill",
     "state": "active"
    },
    "matchedTerms": [
@@ -733,7 +739,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-background/state-active",
+   "concept": "dsi:concept/color/intent-accent/property-background/state-active",
    "explained": 1,
    "domain": "color"
   },
@@ -743,7 +749,6 @@
    "facets": {
     "property": "background",
     "intent": "accent",
-    "usage": "on-fill",
     "state": "disabled"
    },
    "matchedTerms": [
@@ -754,7 +759,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-background/state-disabled",
+   "concept": "dsi:concept/color/intent-accent/property-background/state-disabled",
    "explained": 1,
    "domain": "color"
   },
@@ -764,7 +769,6 @@
    "facets": {
     "property": "background",
     "intent": "accent",
-    "usage": "on-fill",
     "state": "hover"
    },
    "matchedTerms": [
@@ -775,7 +779,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-background/state-hover",
+   "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
    "explained": 1,
    "domain": "color"
   },
@@ -785,7 +789,6 @@
    "facets": {
     "property": "background",
     "intent": "accent",
-    "usage": "on-fill",
     "state": "selected"
    },
    "matchedTerms": [
@@ -796,7 +799,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-background/state-selected",
+   "concept": "dsi:concept/color/intent-accent/property-background/state-selected",
    "explained": 1,
    "domain": "color"
   },
@@ -1819,7 +1822,7 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
-    "usage": "on-fill+surface",
+    "usage": "surface",
     "intent": "accent"
    },
    "matchedTerms": [
@@ -1829,7 +1832,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill+surface/property-background",
+   "concept": "dsi:concept/color/intent-accent/usage-surface/property-background",
    "explained": 1,
    "domain": "color"
   },
@@ -1838,7 +1841,7 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
-    "usage": "on-fill+surface",
+    "usage": "surface",
     "intent": "accent",
     "state": "active"
    },
@@ -1850,7 +1853,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill+surface/property-background/state-active",
+   "concept": "dsi:concept/color/intent-accent/usage-surface/property-background/state-active",
    "explained": 1,
    "domain": "color"
   },
@@ -1859,7 +1862,7 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
-    "usage": "on-fill+surface",
+    "usage": "surface",
     "intent": "accent",
     "state": "hover"
    },
@@ -1871,7 +1874,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill+surface/property-background/state-hover",
+   "concept": "dsi:concept/color/intent-accent/usage-surface/property-background/state-hover",
    "explained": 1,
    "domain": "color"
   },
@@ -1880,7 +1883,7 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
-    "usage": "on-fill+surface",
+    "usage": "surface",
     "intent": "accent",
     "state": "selected"
    },
@@ -1892,7 +1895,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill+surface/property-background/state-selected",
+   "concept": "dsi:concept/color/intent-accent/usage-surface/property-background/state-selected",
    "explained": 1,
    "domain": "color"
   },
@@ -2580,8 +2583,7 @@
    "scope": "semantic",
    "facets": {
     "property": "border",
-    "intent": "accent",
-    "usage": "on-fill"
+    "intent": "accent"
    },
    "matchedTerms": [
     "border",
@@ -2589,7 +2591,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-border",
+   "concept": "dsi:concept/color/intent-accent/property-border",
    "explained": 1,
    "domain": "color"
   },
@@ -3043,8 +3045,7 @@
    "scope": "semantic",
    "facets": {
     "property": "icon",
-    "intent": "accent",
-    "usage": "on-fill"
+    "intent": "accent"
    },
    "matchedTerms": [
     "icon",
@@ -3052,7 +3053,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-icon",
+   "concept": "dsi:concept/color/intent-accent/property-icon",
    "explained": 1,
    "domain": "color"
   },
@@ -3627,8 +3628,7 @@
    "scope": "semantic",
    "facets": {
     "property": "text",
-    "intent": "accent",
-    "usage": "on-fill"
+    "intent": "accent"
    },
    "matchedTerms": [
     "text",
@@ -3636,7 +3636,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text",
+   "concept": "dsi:concept/color/intent-accent/property-text",
    "explained": 1,
    "domain": "color"
   },
@@ -3646,7 +3646,6 @@
    "facets": {
     "property": "text",
     "intent": "accent",
-    "usage": "on-fill",
     "state": "hover"
    },
    "matchedTerms": [
@@ -3656,7 +3655,7 @@
    ],
    "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text/state-hover",
+   "concept": "dsi:concept/color/intent-accent/property-text/state-hover",
    "explained": 1,
    "domain": "color"
   },
@@ -3669,7 +3668,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "brand",
     "on",
@@ -3677,8 +3675,10 @@
     "fill"
    ],
    "unknown": [],
-   "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 1,
    "domain": "color"
   },
@@ -3692,7 +3692,6 @@
     "state": "active"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "brand",
     "on",
@@ -3701,8 +3700,10 @@
     "active"
    ],
    "unknown": [],
-   "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text/state-active",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 1,
    "domain": "color"
   },
@@ -3716,7 +3717,6 @@
     "state": "disabled"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "brand",
     "on",
@@ -3725,8 +3725,10 @@
     "disabled"
    ],
    "unknown": [],
-   "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text/state-disabled",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 1,
    "domain": "color"
   },
@@ -3740,7 +3742,6 @@
     "state": "hover"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "brand",
     "on",
@@ -3749,8 +3750,10 @@
     "hover"
    ],
    "unknown": [],
-   "conflicts": [],
-   "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text/state-hover",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 1,
    "domain": "color"
   },
@@ -3818,7 +3821,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "caution",
     "on",
@@ -3826,8 +3828,10 @@
     "fill"
    ],
    "unknown": [],
-   "conflicts": [],
-   "concept": "dsi:concept/color/intent-caution/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 1,
    "domain": "color"
   },
@@ -3914,7 +3918,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "critical",
     "on",
@@ -3922,8 +3925,10 @@
     "fill"
    ],
    "unknown": [],
-   "conflicts": [],
-   "concept": "dsi:concept/color/intent-danger/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 1,
    "domain": "color"
   },
@@ -4030,7 +4035,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text-emphasis",
     "text",
     "emphasis",
@@ -4054,7 +4058,6 @@
     "state": "active"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text-emphasis",
     "text",
     "emphasis",
@@ -4079,7 +4082,6 @@
     "state": "hover"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text-emphasis",
     "text",
     "emphasis",
@@ -4158,7 +4160,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "info",
     "on",
@@ -4166,8 +4167,10 @@
     "fill"
    ],
    "unknown": [],
-   "conflicts": [],
-   "concept": "dsi:concept/color/intent-info/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 1,
    "domain": "color"
   },
@@ -4325,7 +4328,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "magic",
     "on",
@@ -4333,8 +4335,10 @@
     "fill"
    ],
    "unknown": [],
-   "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 1,
    "domain": "color"
   },
@@ -4438,7 +4442,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "success",
     "on",
@@ -4446,8 +4449,10 @@
     "fill"
    ],
    "unknown": [],
-   "conflicts": [],
-   "concept": "dsi:concept/color/intent-success/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 1,
    "domain": "color"
   },
@@ -4534,7 +4539,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "warning",
     "on",
@@ -4542,8 +4546,10 @@
     "fill"
    ],
    "unknown": [],
-   "conflicts": [],
-   "concept": "dsi:concept/color/intent-warning/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 1,
    "domain": "color"
   },
@@ -4656,7 +4662,6 @@
     "usage": "on-fill"
    },
    "matchedTerms": [
-    "on-bg-fill",
     "text",
     "on",
     "bg",
@@ -4668,8 +4673,10 @@
     "play",
     "button"
    ],
-   "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "conflicts": [
+    "property: text vs background (bg)",
+    "property: text vs background (fill)"
+   ],
    "explained": 0.5,
    "domain": "color"
   },

@@ -538,12 +538,30 @@
       }
     },
     {
+      "id": "m-63894d4fce8e",
+      "token": "ai-skeleton-element-background",
+      "concept": "dsi:concept/color/intent-ai/usage-skeleton/property-background",
+      "match": "broad",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): Element background color for AI skeleton loaders. Provides the animated shimmer effect for loading AI content. Only $ai-skeleton-background is listed: 'Skeleton color for AI containers'; the element token is not on the page. Also mapped exact to intent-ai/usage-skeleton/property-background; the elem",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:00.643Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:44:00.643Z"
+      }
+    },
+    {
       "id": "m-aad5844ab9f3",
       "token": "ai-skeleton-element-background",
       "concept": "dsi:concept/color/intent-ai/usage-skeleton/property-background",
       "match": "exact",
       "confidence": 0.8,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Skeleton loader fill for AI content.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -554,7 +572,8 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T00:58:28.220Z"
-      }
+      },
+      "supersededBy": "m-63894d4fce8e"
     },
     {
       "id": "m-82288567034e",
@@ -2659,7 +2678,7 @@
       "concept": "dsi:concept/color/usage-skeleton/property-background",
       "match": "exact",
       "confidence": 0.85,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Skeleton loader element.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2670,7 +2689,8 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:03:41.244Z"
-      }
+      },
+      "supersededBy": "m-efed4c2bb777"
     },
     {
       "id": "m-bc49e73fe9ee",
@@ -2689,6 +2709,24 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:03:41.244Z"
+      }
+    },
+    {
+      "id": "m-efed4c2bb777",
+      "token": "skeleton-element",
+      "concept": "dsi:concept/color/usage-skeleton/property-background",
+      "match": "broad",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Changed after evidence audit (claude-fable-5-1): Element color for skeleton loaders. Provides the animated shimmer effect for loading states. Skeleton color for text and UI elements $skeleton-element: 'Skeleton color for text and UI elements'; $skeleton-background: 'Skeleton color for containers'. Two distinct roles under one concept. Also mapped ",
+      "provenance": {
+        "agent": "kimgranlund",
+        "at": "2026-11-01T01:44:01.935Z",
+        "method": "audit-review"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:44:01.935Z"
       }
     },
     {

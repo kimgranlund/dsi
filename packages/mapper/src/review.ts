@@ -214,7 +214,7 @@ export interface DisputeDecision { key: string; kind: 'mapping' | 'term'; produc
  * kept: the approved record stays; the verdict records the resolution. suggestion/custom: the approved mapping is
  * Superseded by a new Approved mapping from the reviewer. reject-term: the term becomes Rejected.
  */
-export function applyDisputes(root: string, scope: Scope, decisions: DisputeDecision[], reviewer: string, suggestions: Map<string, { concept: string; match: string }>): Record<string, number> {
+export function applyDisputes(root: string, scope: Scope, decisions: DisputeDecision[], reviewer: string, suggestions: Map<string, { concept: string; match: string }>, disputedTerms: Map<string, string> = new Map()): Record<string, number> {
   const counts: Record<string, number> = { kept: 0, suggestion: 0, custom: 0, 'reject-term': 0, skipped: 0 };
   for (const [product, { version }] of Object.entries(scope.products)) {
     const mine = decisions.filter((d) => d.product === product);
@@ -224,8 +224,10 @@ export function applyDisputes(root: string, scope: Scope, decisions: DisputeDeci
     for (const d of mine) {
       const review = { by: reviewer, at: d.at, ...(d.note ? { note: d.note } : {}) };
       if (d.kind === 'term') {
-        const t = terms.terms.find((x: any) => x.term === d.subject && x.status === 'approved');
-        if (!t) { counts.skipped++; continue; }
+        // The disputed term is identified by word AND concept: a word may have several approved terms (one per facet).
+        const disputed = disputedTerms.get(d.key);
+        const t = terms.terms.find((x: any) => x.term === d.subject && x.status === 'approved' && (!disputed || x.concept === disputed));
+        if (!t || !disputed) { counts.skipped++; continue; }
         if (d.action === 'reject-term') Object.assign(t, { status: 'rejected', review: { ...review, note: d.note ?? 'Rejected after audit: most of its own approved tokens disagree.' } });
         counts[d.action]++;
         continue;

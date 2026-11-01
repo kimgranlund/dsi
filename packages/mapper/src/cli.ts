@@ -98,12 +98,14 @@ if (cmd === 'prepare') {
   const raw = JSON.parse(fs.readFileSync(file, 'utf8'));
   const all = (Array.isArray(raw) ? raw : raw.documents ?? raw.docs ?? []).map((d: any) => d.data ?? d);
   // Token decisions and term decisions may come in one export; term decisions carry a `term` field.
-  console.log('tokens', JSON.stringify(applyDecisions(root, scope, all.filter((d: any) => !('term' in d)) as Decision[], reviewer)));
+  console.log('tokens', JSON.stringify(applyDecisions(root, scope, all.filter((d: any) => 'token' in d) as Decision[], reviewer)));
   console.log('terms ', JSON.stringify(applyTermDecisions(root, all.filter((d: any) => 'term' in d && !('kind' in d)) as TermDecision[], reviewer)));
   const disputeDecisions = all.filter((d: any) => 'kind' in d && 'subject' in d) as DisputeDecision[];
   if (disputeDecisions.length) {
-    const suggestions = new Map(collectDisputes(root, scope, termFindingsFor(), valuesOf).filter((x) => x.suggested).map((x) => [x.key, x.suggested!]));
-    console.log('disputes', JSON.stringify(applyDisputes(root, scope, disputeDecisions, reviewer, suggestions)));
+    const open = collectDisputes(root, scope, termFindingsFor(), valuesOf);
+    const suggestions = new Map(open.filter((x) => x.suggested).map((x) => [x.key, x.suggested!]));
+    const disputedTerms = new Map(open.filter((x) => x.kind === 'term').map((x) => [x.key, x.current.concept]));
+    console.log('disputes', JSON.stringify(applyDisputes(root, scope, disputeDecisions, reviewer, suggestions, disputedTerms)));
   }
 } else if (cmd === 'audit-prepare') {
   if (!run) { console.error(USAGE); process.exit(2); }

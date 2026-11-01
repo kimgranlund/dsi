@@ -26,6 +26,9 @@ Product: public, searchable explorer at `dsi.nonoun.io` on Cloudflare; audience 
 
 ## 3. Open questions
 
+- Classifier: when two words each imply a usage (`nav` + `surface`, `input` + `surface`, `inverse` + `surface`), the classifier combines them, but approved mappings keep only the more specific usage. Decide a precedence rule (e.g. field/navigation/inverse over surface) so the remaining 15 terms-contradict findings close. Carbon term `overlay` -> usage overlay also disagrees with approved scrim mappings (auditor supported scrim, citing Carbon docs).
+- Carbon `support-caution-minor` resolves to the same colors as `support-warning` in every theme but is mapped caution; review whether Carbon treats it as warning.
+
 - Color ontology backlog from color-v1 rounds 1-3 (each raised by 2+ agents): a `control` usage for interactive fills (Polaris bg-fill, Carbon interactive); a tertiary emphasis step in three-step families; a layer index beyond emphasis (Carbon layer 01-03 borders and fields); helper and placeholder text roles; severity between warning and danger (Carbon caution-major); gradient stops; surface brightness (Material surface-bright, -dim, -variant); syntax-highlighting roles; avatar and categorical palettes; translucent tint fills.
 
 - Carbon typography: `@carbon/type` ships no DTCG file; ingest from its Sass/JS or wait for upstream.

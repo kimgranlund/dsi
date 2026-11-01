@@ -354,7 +354,7 @@
    "prefLabel": "color-bg-fill-brand-disabled",
    "notation": "--p-color-bg-fill-brand-disabled",
    "definition": "The disabled state color of main actions, like primary buttons.",
-   "skos:exactMatch": [
+   "skos:closeMatch": [
     {
      "id": "dsi:concept/color/intent-accent/property-background/state-disabled"
     }
@@ -380,7 +380,7 @@
    "prefLabel": "color-bg-fill-brand-selected",
    "notation": "--p-color-bg-fill-brand-selected",
    "definition": "The selected state color of main actions, like primary buttons.",
-   "skos:exactMatch": [
+   "skos:closeMatch": [
     {
      "id": "dsi:concept/color/intent-accent/property-background/state-selected"
     }
@@ -1112,7 +1112,7 @@
    "prefLabel": "color-bg-surface-critical",
    "notation": "--p-color-bg-surface-critical",
    "definition": "Use for backgrounds communicating critical information, like banners or input errors.",
-   "skos:closeMatch": [
+   "skos:exactMatch": [
     {
      "id": "dsi:concept/color/intent-danger/usage-surface/property-background"
     }
@@ -1125,7 +1125,7 @@
    "prefLabel": "color-bg-surface-critical-active",
    "notation": "--p-color-bg-surface-critical-active",
    "definition": "The active state (on press) color for communicating critical information.",
-   "skos:closeMatch": [
+   "skos:exactMatch": [
     {
      "id": "dsi:concept/color/intent-danger/usage-surface/property-background/state-active"
     }
@@ -1138,7 +1138,7 @@
    "prefLabel": "color-bg-surface-critical-hover",
    "notation": "--p-color-bg-surface-critical-hover",
    "definition": "The hover state color for communicating critical information.",
-   "skos:closeMatch": [
+   "skos:exactMatch": [
     {
      "id": "dsi:concept/color/intent-danger/usage-surface/property-background/state-hover"
     }
@@ -1411,9 +1411,9 @@
    "prefLabel": "color-bg-surface-tertiary",
    "notation": "--p-color-bg-surface-tertiary",
    "definition": "The background color for elements with a third level of prominence.",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest"
+     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle"
     }
    ]
   },
@@ -1424,9 +1424,9 @@
    "prefLabel": "color-bg-surface-tertiary-active",
    "notation": "--p-color-bg-surface-tertiary-active",
    "definition": "The active state (on press) color for elements with a third level of prominence.",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest/state-active"
+     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active"
     }
    ]
   },
@@ -1437,9 +1437,9 @@
    "prefLabel": "color-bg-surface-tertiary-hover",
    "notation": "--p-color-bg-surface-tertiary-hover",
    "definition": "The hover state color for elements with a third level of prominence.",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest/state-hover"
+     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover"
     }
    ]
   },
@@ -1510,7 +1510,7 @@
    "prefLabel": "color-border-brand",
    "notation": "--p-color-border-brand",
    "definition": "Use for borders paired with brand colors.",
-   "skos:exactMatch": [
+   "skos:closeMatch": [
     {
      "id": "dsi:concept/color/intent-accent/property-border"
     }
@@ -1551,7 +1551,7 @@
    "definition": "Use for borders communicating critical information, such as borders on invalid text fields.",
    "skos:closeMatch": [
     {
-     "id": "dsi:concept/color/intent-danger/property-border/emphasis-subtle"
+     "id": "dsi:concept/color/intent-danger/property-border/emphasis-strong"
     }
    ]
   },
@@ -1705,9 +1705,9 @@
    "prefLabel": "color-border-magic-secondary",
    "notation": "--p-color-border-magic-secondary",
    "definition": "Use for borders suggested by magic AI, such as borders on text fields.",
-   "skos:exactMatch": [
+   "skos:closeMatch": [
     {
-     "id": "dsi:concept/color/intent-ai/property-border/emphasis-subtle"
+     "id": "dsi:concept/color/intent-ai/property-border/emphasis-strong"
     }
    ]
   },
@@ -1718,9 +1718,9 @@
    "prefLabel": "color-border-magic-secondary-hover",
    "notation": "--p-color-border-magic-secondary-hover",
    "definition": "Use for borders suggested by magic AI, such as borders on text fields.",
-   "skos:exactMatch": [
+   "skos:closeMatch": [
     {
-     "id": "dsi:concept/color/intent-ai/property-border/emphasis-subtle/state-hover"
+     "id": "dsi:concept/color/intent-ai/property-border/emphasis-strong/state-hover"
     }
    ]
   },
@@ -1759,7 +1759,7 @@
    "definition": "The border color on any element. Pair with bg-surface-tertiary or bg-fill-tertiary.",
    "skos:closeMatch": [
     {
-     "id": "dsi:concept/color/property-border/emphasis-subtlest"
+     "id": "dsi:concept/color/property-border/emphasis-strong"
     }
    ]
   },
@@ -2211,7 +2211,7 @@
    "prefLabel": "color-text-brand",
    "notation": "--p-color-text-brand",
    "definition": "Use for text that needs to pull attention.",
-   "skos:exactMatch": [
+   "skos:closeMatch": [
     {
      "id": "dsi:concept/color/intent-accent/property-text"
     }
@@ -2224,7 +2224,7 @@
    "prefLabel": "color-text-brand-hover",
    "notation": "--p-color-text-brand-hover",
    "definition": "The hover state color for text that needs to pull attention.",
-   "skos:exactMatch": [
+   "skos:closeMatch": [
     {
      "id": "dsi:concept/color/intent-accent/property-text/state-hover"
     }
@@ -6113,9 +6113,6 @@
    "skos:exactMatch": [
     {
      "id": "dsi:intent/accent"
-    },
-    {
-     "id": "dsi:usage/on-fill"
     }
    ]
   },
@@ -6350,17 +6347,6 @@
    "skos:exactMatch": [
     {
      "id": "dsi:usage/on-fill"
-    }
-   ]
-  },
-  {
-   "id": "dsi:vocab/polaris/on-bg-fill",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/vocab/polaris",
-   "prefLabel": "on-bg-fill",
-   "skos:exactMatch": [
-    {
-     "id": "dsi:property/text"
     }
    ]
   },
@@ -6909,7 +6895,7 @@
    "prefLabel": "Color: AI · Border"
   },
   {
-   "id": "dsi:concept/color/intent-ai/property-border/emphasis-subtle",
+   "id": "dsi:concept/color/intent-ai/property-border/emphasis-strong",
    "type": "Concept",
    "inScheme": "dsi:scheme/canonical/color",
    "dsi:hasIntent": [
@@ -6924,13 +6910,13 @@
    ],
    "dsi:hasEmphasis": [
     {
-     "id": "dsi:emphasis/subtle"
+     "id": "dsi:emphasis/strong"
     }
    ],
-   "prefLabel": "Color: AI · Border · Subtle"
+   "prefLabel": "Color: AI · Border · Strong"
   },
   {
-   "id": "dsi:concept/color/intent-ai/property-border/emphasis-subtle/state-hover",
+   "id": "dsi:concept/color/intent-ai/property-border/emphasis-strong/state-hover",
    "type": "Concept",
    "inScheme": "dsi:scheme/canonical/color",
    "dsi:hasIntent": [
@@ -6945,7 +6931,7 @@
    ],
    "dsi:hasEmphasis": [
     {
-     "id": "dsi:emphasis/subtle"
+     "id": "dsi:emphasis/strong"
     }
    ],
    "dsi:hasState": [
@@ -6953,7 +6939,7 @@
      "id": "dsi:state/hover"
     }
    ],
-   "prefLabel": "Color: AI · Border · Subtle · Hover"
+   "prefLabel": "Color: AI · Border · Strong · Hover"
   },
   {
    "id": "dsi:concept/color/intent-ai/property-icon",
@@ -7503,7 +7489,7 @@
    "prefLabel": "Color: Danger · Border"
   },
   {
-   "id": "dsi:concept/color/intent-danger/property-border/emphasis-subtle",
+   "id": "dsi:concept/color/intent-danger/property-border/emphasis-strong",
    "type": "Concept",
    "inScheme": "dsi:scheme/canonical/color",
    "dsi:hasIntent": [
@@ -7518,10 +7504,10 @@
    ],
    "dsi:hasEmphasis": [
     {
-     "id": "dsi:emphasis/subtle"
+     "id": "dsi:emphasis/strong"
     }
    ],
-   "prefLabel": "Color: Danger · Border · Subtle"
+   "prefLabel": "Color: Danger · Border · Strong"
   },
   {
    "id": "dsi:concept/color/intent-danger/property-icon",
@@ -9035,6 +9021,22 @@
    "prefLabel": "Color: Border"
   },
   {
+   "id": "dsi:concept/color/property-border/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/border"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: Border · Strong"
+  },
+  {
    "id": "dsi:concept/color/property-border/emphasis-subtle",
    "type": "Concept",
    "inScheme": "dsi:scheme/canonical/color",
@@ -9049,22 +9051,6 @@
     }
    ],
    "prefLabel": "Color: Border · Subtle"
-  },
-  {
-   "id": "dsi:concept/color/property-border/emphasis-subtlest",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasProperty": [
-    {
-     "id": "dsi:property/border"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/subtlest"
-    }
-   ],
-   "prefLabel": "Color: Border · Subtlest"
   },
   {
    "id": "dsi:concept/color/property-border/state-disabled",
@@ -9875,79 +9861,6 @@
     }
    ],
    "prefLabel": "Color: Surface · Background · Subtle · Selected"
-  },
-  {
-   "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasUsage": [
-    {
-     "id": "dsi:usage/surface"
-    }
-   ],
-   "dsi:hasProperty": [
-    {
-     "id": "dsi:property/background"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/subtlest"
-    }
-   ],
-   "prefLabel": "Color: Surface · Background · Subtlest"
-  },
-  {
-   "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest/state-active",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasUsage": [
-    {
-     "id": "dsi:usage/surface"
-    }
-   ],
-   "dsi:hasProperty": [
-    {
-     "id": "dsi:property/background"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/subtlest"
-    }
-   ],
-   "dsi:hasState": [
-    {
-     "id": "dsi:state/active"
-    }
-   ],
-   "prefLabel": "Color: Surface · Background · Subtlest · Active"
-  },
-  {
-   "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtlest/state-hover",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasUsage": [
-    {
-     "id": "dsi:usage/surface"
-    }
-   ],
-   "dsi:hasProperty": [
-    {
-     "id": "dsi:property/background"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/subtlest"
-    }
-   ],
-   "dsi:hasState": [
-    {
-     "id": "dsi:state/hover"
-    }
-   ],
-   "prefLabel": "Color: Surface · Background · Subtlest · Hover"
   },
   {
    "id": "dsi:concept/color/usage-surface/property-background/state-active",
