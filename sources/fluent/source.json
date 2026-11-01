@@ -1,0 +1,54 @@
+{
+  "product": "fluent",
+  "implementation": "fluentui-tokens",
+  "package": {
+    "registry": "npm",
+    "name": "@fluentui/tokens",
+    "version": "1.0.0-alpha.24"
+  },
+  "entries": [
+    {
+      "path": "lib/global/colors.js",
+      "format": "fluent-palette"
+    },
+    {
+      "path": "lib/global/brandColors.js",
+      "format": "fluent-palette"
+    },
+    {
+      "path": "lib/themes/index.js",
+      "format": "fluent-themes"
+    }
+  ],
+  "themes": [
+    "web-light",
+    "web-dark",
+    "teams-light",
+    "teams-dark",
+    "teams-high-contrast",
+    "teams-light-v21",
+    "teams-dark-v21"
+  ],
+  "themeExports": {
+    "web-light": "webLightTheme",
+    "web-dark": "webDarkTheme",
+    "teams-light": "teamsLightTheme",
+    "teams-dark": "teamsDarkTheme",
+    "teams-high-contrast": "teamsHighContrastTheme",
+    "teams-light-v21": "teamsLightV21Theme",
+    "teams-dark-v21": "teamsDarkV21Theme"
+  },
+  "modes": {
+    "light": "web-light",
+    "dark": "web-dark",
+    "increased-contrast": "teams-high-contrast"
+  },
+  "modesNote": "Web light and dark answer the canonical modes; Teams themes (brandTeams ramp, V21 variants) are native themes; teamsHighContrastTheme is Fluent's only high-contrast theme.",
+  "adapter": "fluent",
+  "license": {
+    "spdx": "MIT",
+    "url": "https://github.com/microsoft/fluentui/blob/master/LICENSE",
+    "redistribution": "permitted",
+    "notes": "MIT (package/LICENSE, Copyright (c) Microsoft Corporation). 1.0.0-alpha.24 is the npm latest tag and the exact version @fluentui/react-components 9.75.0 pins through @fluentui/react-theme."
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "product": "fluent",
+  "implementation": "fluentui-tokens",
+  "package": {
+    "registry": "npm",
+    "name": "@fluentui/tokens",
+    "version": "1.0.0-alpha.24",
+    "integrity": "sha512-YrjGQfnxBR+9o8wXyTflON3Ohsv7OrZWYLVRU+7RaiFO1gcu36iDm3WjudlVmYuWRLDO0Gmxotm6RQNhbZuEQQ=="
+  },
+  "adapter": "fluent",
+  "themes": [
+    "web-light",
+    "web-dark",
+    "teams-light",
+    "teams-dark",
+    "teams-high-contrast",
+    "teams-light-v21",
+    "teams-dark-v21"
+  ],
+  "modes": {
+    "light": "web-light",
+    "dark": "web-dark",
+    "increased-contrast": "teams-high-contrast"
+  },
+  "files": [
+    {
+      "file": "global.tokens.json",
+      "tokens": 91
+    },
+    {
+      "file": "palette.tokens.json",
+      "tokens": 762
+    },
+    {
+      "file": "theme.teams-dark-v21.tokens.json",
+      "theme": "teams-dark-v21",
+      "tokens": 368
+    },
+    {
+      "file": "theme.teams-dark.tokens.json",
+      "theme": "teams-dark",
+      "tokens": 368
+    },
+    {
+      "file": "theme.teams-high-contrast.tokens.json",
+      "theme": "teams-high-contrast",
+      "tokens": 368
+    },
+    {
+      "file": "theme.teams-light-v21.tokens.json",
+      "theme": "teams-light-v21",
+      "tokens": 368
+    },
+    {
+      "file": "theme.teams-light.tokens.json",
+      "theme": "teams-light",
+      "tokens": 368
+    },
+    {
+      "file": "theme.web-dark.tokens.json",
+      "theme": "web-dark",
+      "tokens": 368
+    },
+    {
+      "file": "theme.web-light.tokens.json",
+      "theme": "web-light",
+      "tokens": 368
+    }
+  ],
+  "counts": {
+    "tokens": 3429,
+    "aliases": 2431,
+    "literals": 236,
+    "untyped": 48,
+    "palette": 762
+  },
+  "notes": [
+    "Themes evaluated statically from lib/themes/index.js: web-light = webLightTheme, web-dark = webDarkTheme, teams-light = teamsLightTheme, teams-dark = teamsDarkTheme, teams-high-contrast = teamsHighContrastTheme, teams-light-v21 = teamsLightV21Theme, teams-dark-v21 = teamsDarkV21Theme. Shadows are CSS shorthands, stored untyped."
+  ]
+}

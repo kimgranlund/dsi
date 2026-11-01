@@ -79,7 +79,9 @@
               "primer-palette",
               "primer-theme",
               "primer-docs",
-              "spectrum"
+              "spectrum",
+              "fluent-palette",
+              "fluent-themes"
             ]
           },
           "theme": {
@@ -270,6 +272,13 @@
     "themeExtends": {
       "type": "object",
       "description": "A theme that only overrides another theme: lookups fall back to that theme, then to the base files (Material expressive extends light).",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "themeExports": {
+      "type": "object",
+      "description": "fluent: native theme name -> the module export that builds it.",
       "additionalProperties": {
         "type": "string"
       }

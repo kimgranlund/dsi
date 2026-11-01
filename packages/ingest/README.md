@@ -22,7 +22,7 @@ Code. Its output in `data/native/` is generated: fix the adapter or the source c
 
 - **Aliases are proven, not guessed.** An alias is written only when the adapter can show the token references another token and the resolved values match. Otherwise the token is a literal and the reason is a manifest note.
 - **Untyped is honest.** A literal that fits no DTCG type (CSS `font` shorthand, four-corner shape, `100%`) keeps its string value, has no `$type`, and is flagged `untyped`.
-- **Never execute package code.** `--ignore-scripts`; Sass evaluation only.
+- **Never execute package code.** `--ignore-scripts`; Sass evaluation, JSON/CSS parsing, and the syntax-tree interpreter for plain-data modules only.
 - A new adapter adds `src/adapters/<name>.ts`, registers it in `src/cli.ts`, and ships a synthetic fixture test.
 
 ## Adapters
@@ -35,6 +35,7 @@ Code. Its output in `data/native/` is generated: fix the adapter or the source c
 | `atlassian` | `@atlaskit/tokens` | Generated JS modules whose body is one JSON array literal (`artifacts/tokens-raw/<theme>.js`, `palettes-raw/*.js`), read as JSON text, never executed. Aliases only where the token's `original.value` names a palette token of equal typed value. `[default]` path segments become `default`. Shadows become DTCG shadows, cubic-bezier motion DTCG transitions (keyframes kept under `com.atlassian`); font shorthands and `linear()` transitions stay untyped. Names from `token-names.js`. |
 | `primer` | `@primer/primitives` | Built per-theme token lists (`dist/docs/functional/themes/<theme>.json`, `dist/docs/{base,functional}/**`) with resolved values; base color palettes from `src/tokens/base/color/**.json5`, layered per theme. An alias (the theme's override, else fallback, else original) is written only when its target equals the resolved value in that theme, which also proves each theme's palette layering. Colors are stored sRGB from the shipped hex; `em` dimensions and font shorthands stay untyped. |
 | `spectrum` | `@adobe/spectrum-tokens` | One JSON file per group in `src/`, typed by each token's `$schema`. Color sets (light, dark, wireframe) become themes; scale sets give desktop as the default and mobile as a theme extending light. Aliases kept as shipped; font-weight keywords become numbers; drop shadows DTCG shadows; type styles DTCG typography composites of aliases. Deprecated tokens keep their replacement, private ones are internal. |
+| `fluent` | `@fluentui/tokens` | No token data file: themes are built in JS. The shipped ESM modules are evaluated by a syntax-tree interpreter (`src/static-eval.ts`: literals, spreads, arrow functions, template keys, reduce, Object.assign/entries, member patches; anything else throws; no package code runs). Values read from palette modules (`global/colors.js`, `global/brandColors.js`) carry their palette path and become proven aliases; tokens equal in every theme go to the base file. |
 
 ## Token applications
 
