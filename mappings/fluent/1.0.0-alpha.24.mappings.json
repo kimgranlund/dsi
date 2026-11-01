@@ -533,13 +533,18 @@
       "concept": "dsi:concept/color/intent-accent/property-foreground/emphasis-default",
       "match": "close",
       "confidence": 0.85,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Brand-colored text and icons; brand -> accent close. Base of a two-member family (Foreground2 has higher contrast in both modes).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -548,13 +553,17 @@
       "concept": "dsi:concept/color/intent-accent/property-foreground",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Brand colored text and icons on the page; base of the brand foreground pair.",
+      "status": "approved",
+      "rationale": "Brand text and icon color on neutral surfaces: Badge outline/ghost, Divider brand content, Rating selected; the theme designer tests it against colorNeutralBackground1 at 4.5:1. Base of the family (Foreground2 is the on-tint variant). Fluent 'Brand' is the single accent ramp (ADR 0008: brand -> accent, close).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -668,13 +677,17 @@
       "concept": "dsi:concept/color/usage-link/property-text",
       "match": "exact",
       "confidence": 0.85,
-      "status": "proposed",
-      "rationale": "Default hyperlink color (Fluent Link), brand blue in both modes.",
+      "status": "approved",
+      "rationale": "Theme-designer usage 'Link default': the default inline link color (brandWeb.70 light / 100 dark). Fluent also ships a neutral link variant (colorNeutralForeground2Link), so this is the brand-colored default; Link colors text.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -683,13 +696,18 @@
       "concept": "dsi:concept/color/usage-link/property-foreground",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Brand colored inline link; link intent is accent in Fluent.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -697,14 +715,18 @@
       "token": "colorBrandForegroundLinkHover",
       "concept": "dsi:concept/color/usage-link/property-text/state-hover",
       "match": "exact",
-      "confidence": 0.85,
-      "status": "proposed",
-      "rationale": "Default hyperlink color (Fluent Link), brand blue in both modes. Hover state (hover).",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Link component state color. Hover state of colorBrandForegroundLink.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -713,13 +735,18 @@
       "concept": "dsi:concept/color/usage-link/property-foreground/state-hover",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover of brand link.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -727,14 +754,18 @@
       "token": "colorBrandForegroundLinkPressed",
       "concept": "dsi:concept/color/usage-link/property-text/state-active",
       "match": "exact",
-      "confidence": 0.85,
-      "status": "proposed",
-      "rationale": "Default hyperlink color (Fluent Link), brand blue in both modes. Pressed state (pressed = active).",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Link component state color. Pressed state of colorBrandForegroundLink.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -743,13 +774,18 @@
       "concept": "dsi:concept/color/usage-link/property-foreground/state-active",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Pressed of brand link.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -758,13 +794,18 @@
       "concept": "dsi:concept/color/usage-link/property-foreground/state-selected",
       "match": "close",
       "confidence": 0.75,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Selected brand link.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -772,14 +813,18 @@
       "token": "colorBrandForegroundLinkSelected",
       "concept": "dsi:concept/color/usage-link/property-text/state-selected",
       "match": "exact",
-      "confidence": 0.85,
-      "status": "proposed",
-      "rationale": "Default hyperlink color (Fluent Link), brand blue in both modes. Selected state (selected).",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Link component state color. Selected state of colorBrandForegroundLink.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -3022,13 +3067,17 @@
       "concept": "dsi:concept/color/usage-inverse/property-foreground",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Same as ForegroundInverted except in high contrast (white); second inverse foreground.",
+      "status": "approved",
+      "rationale": "Flips with the mode (white light / grey.14 dark) like colorNeutralForegroundInverted; content on the inverse surface colorNeutralBackgroundInverted (Toast inverted). Variant '2' with identical web values.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -3685,14 +3734,18 @@
       "token": "colorNeutralStroke2",
       "concept": "dsi:concept/color/property-border/emphasis-subtle",
       "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Lighter neutral border (#e0e0e0 / #525252), e.g. dividers.",
+      "confidence": 0.7,
+      "status": "approved",
+      "rationale": "Subtle divider stroke (grey.88 / grey.32): TableRow bottom border, Divider subtle... Badge outline subtle. Below Stroke1 -> subtle. Neutral stroke ranks by contrast against Background1 in both modes: StrokeAccessible (grey.38/68) > Stroke1 (grey.82/40) > Stroke2 (grey.88/32) > Stroke4 (grey.92/24) > Stroke3 (grey.94/24) ~ StrokeAlpha.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -3701,13 +3754,18 @@
       "concept": "dsi:concept/color/property-border/emphasis-default",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Divider-weight border (#e0e0e0), lighter than stroke 1.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -3866,13 +3924,18 @@
       "concept": "dsi:concept/color/property-border/emphasis-stronger",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Border meeting 3:1 non-text contrast (#616161); darkest neutral border.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -3881,13 +3944,17 @@
       "concept": "dsi:concept/color/property-border/emphasis-strong",
       "match": "close",
       "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Accessible border meeting 3:1 (#616161 / #adadad), e.g. input bottom borders; highest-contrast neutral stroke.",
+      "status": "approved",
+      "rationale": "Stroke that meets 3:1 against the surface (grey.38 / grey.68) for control outlines: Checkbox, Switch, Input underline, Badge outline neutral, Slider. Highest-contrast neutral stroke -> strong. Neutral stroke ranks by contrast against Background1 in both modes: StrokeAccessible (grey.38/68) > Stroke1 (grey.82/40) > Stroke2 (grey.88/32) > Stroke4 (grey.92/24) > Stroke3 (grey.94/24) ~ StrokeAlpha.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -3895,14 +3962,18 @@
       "token": "colorNeutralStrokeAccessibleHover",
       "concept": "dsi:concept/color/property-border/emphasis-strong/state-hover",
       "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Accessible border meeting 3:1 (#616161 / #adadad), e.g. input bottom borders; highest-contrast neutral stroke. Hover state (hover).",
+      "confidence": 0.7,
+      "status": "approved",
+      "rationale": "Accessible control outline state (grey.34/30 light, grey.74/70 dark). Hover state of colorNeutralStrokeAccessible.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -3911,13 +3982,18 @@
       "concept": "dsi:concept/color/property-border/emphasis-stronger/state-hover",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Hover of accessible stroke.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -3926,13 +4002,18 @@
       "concept": "dsi:concept/color/property-border/emphasis-stronger/state-active",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Pressed of accessible stroke.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -3940,14 +4021,18 @@
       "token": "colorNeutralStrokeAccessiblePressed",
       "concept": "dsi:concept/color/property-border/emphasis-strong/state-active",
       "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Accessible border meeting 3:1 (#616161 / #adadad), e.g. input bottom borders; highest-contrast neutral stroke. Pressed state (pressed = active).",
+      "confidence": 0.7,
+      "status": "approved",
+      "rationale": "Accessible control outline state (grey.34/30 light, grey.74/70 dark). Pressed state of colorNeutralStrokeAccessible.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -7315,13 +7400,18 @@
       "concept": "dsi:concept/color/property-background",
       "match": "broad",
       "confidence": 0.4,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Translucent scrollbar thumb (black 0.5 / white 0.6); not a scrim.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -7485,13 +7575,18 @@
       "concept": "dsi:concept/color/intent-danger/property-foreground/emphasis-default",
       "match": "close",
       "confidence": 0.85,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Main danger status text and icons (e.g. validation message); middle of the three status foregrounds by contrast.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -7499,14 +7594,18 @@
       "token": "colorStatusDangerForeground1",
       "concept": "dsi:concept/color/intent-danger/property-foreground",
       "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Danger text and icon at base strength.",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Default danger text and icon color on neutral surfaces (cranberry.shade10 light / tint30 dark; MessageBar error icon, Field error message). Level 1 of three status foregrounds (2 is darker for medium tints, 3 is the pure hue), so the base is left without emphasis.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -7690,13 +7789,18 @@
       "concept": "dsi:concept/color/intent-success/property-foreground/emphasis-default",
       "match": "close",
       "confidence": 0.85,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Main success status text and icons (e.g. validation message); middle of the three status foregrounds by contrast.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -7704,14 +7808,18 @@
       "token": "colorStatusSuccessForeground1",
       "concept": "dsi:concept/color/intent-success/property-foreground",
       "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Success text and icon at base strength.",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Default success text and icon color on neutral surfaces (green.shade10 light / tint30 dark; MessageBar success icon, Field success message). Level 1 of three status foregrounds (2 is darker for medium tints, 3 is the pure hue), so the base is left without emphasis.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -7895,13 +8003,18 @@
       "concept": "dsi:concept/color/intent-warning/property-foreground/emphasis-default",
       "match": "close",
       "confidence": 0.85,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Main warning status text and icons (e.g. validation message); middle of the three status foregrounds by contrast.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -7909,14 +8022,18 @@
       "token": "colorStatusWarningForeground1",
       "concept": "dsi:concept/color/intent-warning/property-foreground",
       "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Warning text and icon at base strength.",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Default warning text and icon color on neutral surfaces (orange.shade20 light / tint30 dark; Field warning message). Level 1 of three status foregrounds (2 is darker for medium tints, 3 is the pure hue), so the base is left without emphasis.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -8403,13 +8520,18 @@
       "concept": "dsi:concept/color/property-background",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Always transparent; no visible color outside high-contrast.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -8418,13 +8540,18 @@
       "concept": "dsi:concept/color/property-background/state-hover",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Transparent hover fill (hc theme draws a color).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -8433,13 +8560,18 @@
       "concept": "dsi:concept/color/property-background/state-active",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Transparent pressed fill.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -8448,13 +8580,18 @@
       "concept": "dsi:concept/color/property-background/state-selected",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Transparent selected fill.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -8463,13 +8600,18 @@
       "concept": "dsi:concept/color/property-border",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Always-transparent border that reserves space; hc theme draws it.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -8478,13 +8620,18 @@
       "concept": "dsi:concept/color/property-border/state-disabled",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Transparent disabled border; hc theme draws a disabled color.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -8493,13 +8640,18 @@
       "concept": "dsi:concept/color/property-border",
       "match": "broad",
       "confidence": 0.4,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Transparent border on interactive controls; hc theme draws a cyan border.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -9418,90 +9570,122 @@
   "unmapped": [
     {
       "token": "colorScrollbarOverlay",
-      "status": "proposed",
-      "rationale": "Scrollbar thumb on overlay content; no scrollbar concept exists (ontology gap: scrollbar).",
+      "status": "approved",
+      "rationale": "Overlay scrollbar thumb color (black at 0.5 light / white at 0.6 dark). No concept for a scrollbar thumb: a scrollbar component or part is missing from the ontology.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "colorTransparentBackground",
-      "status": "proposed",
-      "rationale": "Fully transparent in every web and Teams theme; only high contrast gives it a value. No concept for a transparent placeholder (ontology gap: transparent/HC-only colors).",
+      "status": "approved",
+      "rationale": "Transparent in every web and Teams theme (rest fill of Button transparent, Card outline, Input underline, Tab); only high contrast gives it a system color. The ontology has no concept for a transparent/none value.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "colorTransparentBackgroundHover",
-      "status": "proposed",
-      "rationale": "Fully transparent in every web and Teams theme; only high contrast gives it a value. No concept for a transparent placeholder (ontology gap: transparent/HC-only colors).",
+      "status": "approved",
+      "rationale": "Transparent in every web and Teams theme (hover fill of Button transparent, Card outline, Input underline, Tab); only high contrast gives it a system color. The ontology has no concept for a transparent/none value.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "colorTransparentBackgroundPressed",
-      "status": "proposed",
-      "rationale": "Fully transparent in every web and Teams theme; only high contrast gives it a value. No concept for a transparent placeholder (ontology gap: transparent/HC-only colors).",
+      "status": "approved",
+      "rationale": "Transparent in every web and Teams theme (pressed fill of Button transparent, Card outline, Input underline, Tab); only high contrast gives it a system color. The ontology has no concept for a transparent/none value.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "colorTransparentBackgroundSelected",
-      "status": "proposed",
-      "rationale": "Fully transparent in every web and Teams theme; only high contrast gives it a value. No concept for a transparent placeholder (ontology gap: transparent/HC-only colors).",
+      "status": "approved",
+      "rationale": "Transparent in every web and Teams theme (selected fill of Button transparent, Card outline, Input underline, Tab); only high contrast gives it a system color. The ontology has no concept for a transparent/none value.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "colorTransparentStroke",
-      "status": "proposed",
-      "rationale": "Fully transparent in every web and Teams theme; only high contrast gives it a value. No concept for a transparent placeholder (ontology gap: transparent/HC-only colors).",
+      "status": "approved",
+      "rationale": "Transparent in every theme except high contrast (CanvasText white): a border slot kept so outlines appear in HC (Avatar, Badge, Button, Card, Tooltip...). The ontology has no concept for a transparent or HC-only outline.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "colorTransparentStrokeDisabled",
-      "status": "proposed",
-      "rationale": "Fully transparent in every web and Teams theme; only high contrast gives it a value. No concept for a transparent placeholder (ontology gap: transparent/HC-only colors).",
+      "status": "approved",
+      "rationale": "Transparent in every theme except high contrast (hcDisabled #3ff23f): HC-only disabled outline (Switch, Tag). No concept for a transparent or HC-only outline.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "colorTransparentStrokeInteractive",
-      "status": "proposed",
-      "rationale": "Fully transparent in every web and Teams theme; only high contrast gives it a value. No concept for a transparent placeholder (ontology gap: transparent/HC-only colors).",
+      "status": "approved",
+      "rationale": "Transparent in every theme except high contrast (hcHighlight #1aebff): HC-only outline for interactive rows and fields (Input, Switch, TableRow). No concept for a transparent or HC-only outline.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.703Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.703Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     }
   ]

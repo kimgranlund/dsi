@@ -2670,13 +2670,17 @@
       "concept": "dsi:concept/color/property-shadow/state-dragged",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Shadow color for a dragged element.",
+      "status": "approved",
+      "rationale": "Single shadow color for a dragged item, alpha 0.2 (= drop-shadow-color-300); one-layer counterpart of drop-shadow-dragged.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -2685,13 +2689,18 @@
       "concept": "dsi:concept/color/property-shadow/state-dragged",
       "match": "broad",
       "confidence": 0.65,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Color of the dragged shadow.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -3847,13 +3856,18 @@
       "concept": "dsi:concept/color/intent-danger/property-icon",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Icon color for negative status icons; aliases negative-visual-color. Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -3862,13 +3876,17 @@
       "concept": "dsi:concept/color/intent-danger/property-icon",
       "match": "exact",
       "confidence": 0.85,
-      "status": "proposed",
-      "rationale": "Icon color for negative (error) status.",
+      "status": "approved",
+      "rationale": "Icon color for negative (error) status; alias of negative-visual-color, limited to icons.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -3897,13 +3915,18 @@
       "concept": "dsi:concept/color/intent-warning/property-icon",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Icon color for notice (orange warning).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -3912,13 +3935,17 @@
       "concept": "dsi:concept/color/intent-warning/property-icon",
       "match": "exact",
       "confidence": 0.88,
-      "status": "proposed",
-      "rationale": "Icon color for notice status icons; aliases notice-visual-color. Spectrum notice (orange): warning status needing attention.",
+      "status": "approved",
+      "rationale": "Icon color for notice status; Spectrum notice is its warning level (orange). Alias of notice-visual-color, limited to icons.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -4799,13 +4826,17 @@
       "concept": "dsi:concept/color/intent-danger/property-border",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Negative (error) border.",
+      "status": "approved",
+      "rationale": "Danger border color. validation border of invalid fields.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -4814,13 +4845,18 @@
       "concept": "dsi:concept/color/intent-danger/property-border",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. Border of invalid fields/controls; single border member, emphasis unbound; resting state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4829,13 +4865,18 @@
       "concept": "dsi:concept/color/intent-danger/property-border/state-active",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. Border of invalid fields/controls; single border member, emphasis unbound; pressed (down) state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4844,13 +4885,17 @@
       "concept": "dsi:concept/color/intent-danger/property-border/state-active",
       "match": "exact",
       "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Pressed negative border.",
+      "status": "approved",
+      "rationale": "Danger border color, state active. down = pressed (active). validation border of invalid fields.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -4859,13 +4904,17 @@
       "concept": "dsi:concept/color/intent-danger/property-border/state-focus",
       "match": "exact",
       "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Negative border when focused.",
+      "status": "approved",
+      "rationale": "Danger border color, state focus. validation border of invalid fields.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -4874,13 +4923,18 @@
       "concept": "dsi:concept/color/intent-danger/property-border/state-focus",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. Border of invalid fields/controls; single border member, emphasis unbound; focus state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4889,13 +4943,17 @@
       "concept": "dsi:concept/color/intent-danger/property-border/state-focus+hover",
       "match": "exact",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Negative border when focused and hovered.",
+      "status": "approved",
+      "rationale": "Danger border color, state focus+hover. focused and hovered at once. validation border of invalid fields.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -4904,13 +4962,18 @@
       "concept": "dsi:concept/color/intent-danger/property-border/state-focus+hover",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. Border of invalid fields/controls; single border member, emphasis unbound; hover while focused state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4919,13 +4982,17 @@
       "concept": "dsi:concept/color/intent-danger/property-border/state-hover",
       "match": "exact",
       "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Hovered negative border.",
+      "status": "approved",
+      "rationale": "Danger border color, state hover. validation border of invalid fields.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -4934,13 +5001,18 @@
       "concept": "dsi:concept/color/intent-danger/property-border/state-hover",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. Border of invalid fields/controls; single border member, emphasis unbound; hover state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4949,13 +5021,18 @@
       "concept": "dsi:concept/color/intent-danger/property-border/state-focus",
       "match": "exact",
       "confidence": 0.7,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Keyboard-focus negative border.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -4963,14 +5040,18 @@
       "token": "negative-border-color-key-focus",
       "concept": "dsi:concept/color/intent-danger/property-border/state-focus",
       "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. Border of invalid fields/controls; single border member, emphasis unbound; keyboard focus state.",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Danger border color, state focus. key-focus is keyboard focus only, a nuance on state focus. validation border of invalid fields.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -5309,13 +5390,18 @@
       "concept": "dsi:concept/color/intent-danger/property-foreground/state-focus",
       "match": "narrow",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Keyboard-focus negative content.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -5323,14 +5409,18 @@
       "token": "negative-content-color-key-focus",
       "concept": "dsi:concept/color/intent-danger/property-foreground/state-focus",
       "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. Content color paints text and icons (foreground); only content member of the family, emphasis unbound; keyboard focus state.",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Danger content color, state focus. key-focus is keyboard focus only, a nuance on state focus. negative content colors both text and icons (help text errors, negative quiet buttons).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -5359,13 +5449,17 @@
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-active",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. Subdued background resolves to the same tint as negative-subtle-background (red-200/300 light, red-300 dark), so it ranks with subtle, not the bold fill; pressed (down) state.",
+      "status": "approved",
+      "rationale": "Danger background color, state active. 'subdued' is the lower-contrast member of the two-step family (negative-subdued-* are deprecated aliases of negative-subtle-*), hence emphasis subtle. down = pressed (active).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -5374,13 +5468,17 @@
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-hover",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. Subdued background resolves to the same tint as negative-subtle-background (red-200/300 light, red-300 dark), so it ranks with subtle, not the bold fill; hover state.",
+      "status": "approved",
+      "rationale": "Danger background color, state hover. 'subdued' is the lower-contrast member of the two-step family (negative-subdued-* are deprecated aliases of negative-subtle-*), hence emphasis subtle.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -5389,13 +5487,17 @@
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-focus",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. Subdued background resolves to the same tint as negative-subtle-background (red-200/300 light, red-300 dark), so it ranks with subtle, not the bold fill; keyboard focus state.",
+      "status": "approved",
+      "rationale": "Danger background color, state focus. 'subdued' is the lower-contrast member of the two-step family (negative-subdued-* are deprecated aliases of negative-subtle-*), hence emphasis subtle. key-focus is keyboard focus only, a nuance on state focus.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -5403,14 +5505,18 @@
       "token": "negative-subtle-background-color-default",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
       "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Spectrum negative: errors and invalid/critical states; Spectrum names it by sentiment (negative), nuance vs Danger. -subtle- background is the tinted light fill (200 step light, dark tint in dark), lower contrast than the plain fill: subtle.",
+      "confidence": 0.7,
+      "status": "approved",
+      "rationale": "Danger background color. 'subdued' is the lower-contrast member of the two-step family (negative-subdued-* are deprecated aliases of negative-subtle-*), hence emphasis subtle.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -5419,13 +5525,18 @@
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
       "match": "exact",
       "confidence": 0.85,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Light negative tint.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -5854,13 +5965,17 @@
       "concept": "dsi:concept/color/intent-neutral/property-foreground/state-focus",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Spectrum neutral: deliberately no status or brand. Default content color for text and icons (gray-800); base of the family, emphasis unbound (subdued sibling is the subtle step); nuance: Spectrum frames default text as neutral; keyboard focus state.",
+      "status": "approved",
+      "rationale": "Neutral content color, state focus. key-focus is keyboard focus only, a nuance on state focus. neutral content is the text-and-icon color of neutral components (Action button labels, slider tick labels): one token for both, so foreground.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -5869,13 +5984,18 @@
       "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-strong/state-focus",
       "match": "close",
       "confidence": 0.6,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Keyboard-focus neutral content.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -5944,13 +6064,18 @@
       "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-strong/state-focus+selected",
       "match": "close",
       "confidence": 0.55,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Keyboard-focus selected neutral content.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -5959,13 +6084,17 @@
       "concept": "dsi:concept/color/intent-neutral/property-foreground/state-focus+selected",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Spectrum neutral: deliberately no status or brand. Selected neutral content color for text and icons; state focus+selected.",
+      "status": "approved",
+      "rationale": "Neutral content color, state focus+selected. key-focus is keyboard focus only, a nuance on state focus. neutral content is the text-and-icon color of neutral components (Action button labels, slider tick labels): one token for both, so foreground.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -6034,13 +6163,18 @@
       "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Spectrum neutral: deliberately no status or brand. Subdued content (gray-700 light, #afafaf dark) has lower contrast than neutral-content in both modes: subtle; resting state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -6049,13 +6183,17 @@
       "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle",
       "match": "close",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Lower-contrast neutral content (secondary text).",
+      "status": "approved",
+      "rationale": "Neutral content color. 'subdued' (gray-700 vs gray-800) is the lower-contrast member of the two-step family, hence emphasis subtle. neutral content is the text-and-icon color of neutral components (Action button labels, slider tick labels): one token for both, so foreground.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -7142,13 +7280,18 @@
       "concept": "dsi:concept/opacity/property-opacity/state-disabled",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Opacity applied to disabled elements (0.3).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -7157,13 +7300,17 @@
       "concept": "dsi:concept/color/property-opacity/state-disabled",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "approved",
       "rationale": "Opacity applied to disabled elements (0.3).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -7280,13 +7427,18 @@
       "concept": "dsi:concept/color/usage-scrim/property-background",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Black dimming layer behind modals.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -7295,13 +7447,17 @@
       "concept": "dsi:concept/color/usage-scrim/property-background",
       "match": "close",
       "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Color of the dimming layer behind modals (black); opacity is a separate token (overlay-opacity).",
+      "status": "approved",
+      "rationale": "Black underlay color behind modal dialogs and trays; the dimming alpha is shipped separately as overlay-opacity, so this token is the color half of the scrim.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -7310,13 +7466,17 @@
       "concept": "dsi:concept/color/usage-scrim/property-opacity",
       "match": "exact",
       "confidence": 0.7,
-      "status": "proposed",
-      "rationale": "Opacity of the modal dimming layer (0.4 light, 0.6 dark).",
+      "status": "approved",
+      "rationale": "Opacity of the modal underlay (0.4 light, 0.6 dark).",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
       }
     },
     {
@@ -7325,13 +7485,18 @@
       "concept": "dsi:concept/opacity/usage-scrim/property-opacity",
       "match": "exact",
       "confidence": 0.8,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Opacity of the modal dimming overlay (0.4 light, 0.6 dark), paired with overlay-color.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -8649,13 +8814,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-subtle",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Track of sliders and progress over light backgrounds; fixed translucent black.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -8664,13 +8834,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-strong",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Filled portion of a track over light backgrounds; fixed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -8709,13 +8884,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-subtle",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Track over dark backgrounds; fixed translucent white.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -8724,13 +8904,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-strong",
       "match": "broad",
       "confidence": 0.45,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Filled portion of a track over dark backgrounds; fixed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -8769,13 +8954,18 @@
       "concept": "dsi:concept/color/property-background/emphasis-subtle",
       "match": "broad",
       "confidence": 0.5,
-      "status": "proposed",
+      "status": "rejected",
       "rationale": "Unfilled track of sliders and progress.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "Third opinion (claude-fable-5-1) agreed no concept fits."
       }
     },
     {
@@ -9045,57 +9235,77 @@
   "unmapped": [
     {
       "token": "static-black-track-color",
-      "status": "proposed",
-      "rationale": "Track (unfilled rail) of sliders/progress for static-black context. Gap: no track part/concept for slider and progress tracks (part facet needs a component).",
+      "status": "approved",
+      "rationale": "Track and track-indicator (fill) colors of Slider, Meter and Progress bar. No component slider / meter / progress-bar and no part track in the ontology; part indicator cannot bind without a component. Missing: component slider, progress-bar; part track.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "static-black-track-indicator-color",
-      "status": "proposed",
-      "rationale": "Filled indicator of a slider/progress track, static-black context. Gap: no track/indicator concept outside a component (needs a progress/slider component or part track).",
+      "status": "approved",
+      "rationale": "Track and track-indicator (fill) colors of Slider, Meter and Progress bar. No component slider / meter / progress-bar and no part track in the ontology; part indicator cannot bind without a component. Missing: component slider, progress-bar; part track.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "static-white-track-color",
-      "status": "proposed",
-      "rationale": "Track (unfilled rail) of sliders/progress for static-white context. Gap: no track part/concept for slider and progress tracks (part facet needs a component).",
+      "status": "approved",
+      "rationale": "Track and track-indicator (fill) colors of Slider, Meter and Progress bar. No component slider / meter / progress-bar and no part track in the ontology; part indicator cannot bind without a component. Missing: component slider, progress-bar; part track.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "static-white-track-indicator-color",
-      "status": "proposed",
-      "rationale": "Filled indicator of a slider/progress track, static-white context. Gap: no track/indicator concept outside a component (needs a progress/slider component or part track).",
+      "status": "approved",
+      "rationale": "Track and track-indicator (fill) colors of Slider, Meter and Progress bar. No component slider / meter / progress-bar and no part track in the ontology; part indicator cannot bind without a component. Missing: component slider, progress-bar; part track.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     },
     {
       "token": "track-color",
-      "status": "proposed",
-      "rationale": "Track (unfilled rail) of sliders, progress bars and meters (gray-300). Gap: no track part/concept for slider and progress tracks.",
+      "status": "approved",
+      "rationale": "Track and track-indicator (fill) colors of Slider, Meter and Progress bar. No component slider / meter / progress-bar and no part track in the ontology; part indicator cannot bind without a component. Missing: component slider, progress-bar; part track.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
+        "at": "2026-11-01T15:31:47.561Z",
+        "method": "two-of-three-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:31:47.561Z",
+        "note": "claude-fable-5-1 agreed with an earlier agent"
       }
     }
   ]
