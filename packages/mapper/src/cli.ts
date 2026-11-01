@@ -547,7 +547,14 @@ if (cmd === 'prepare') {
       if (cmd === 'audit-check') { console.log(`OK: ${v.verdicts.length} verdicts ${JSON.stringify(c)}`); continue; }
       const checks = packet.items.flatMap((i: any) => i.checks.map((d: string) => ({ token: i.token, finding: d })));
       const out = path.join(root, 'mappings', product, `${scope.products[product].version}.audit.json`);
-      fs.writeFileSync(out, JSON.stringify({ packet: v.packet, model: v.model, at: v.at, checks, verdicts: v.verdicts.sort((a: any, b: any) => a.token.localeCompare(b.token)) }, null, 2) + '\n');
+      if (process.argv.includes('--partial')) {
+        // --partial: a re-audit of some tokens replaces only their verdicts; each keeps the run and the verdict it replaced.
+        const prev = JSON.parse(fs.readFileSync(out, 'utf8'));
+        const byTok = new Map<string, any>(prev.verdicts.map((x: any) => [x.token, x]));
+        for (const x of v.verdicts as any[]) { const old = byTok.get(x.token); byTok.set(x.token, { ...x, rerun: { run, model: v.model, at: v.at, previous: old?.rerun ? old.rerun.previous : old?.verdict ?? x.verdict } }); }
+        prev.verdicts = [...byTok.values()].sort((a: any, b: any) => a.token.localeCompare(b.token));
+        fs.writeFileSync(out, JSON.stringify(prev, null, 2) + '\n');
+      } else fs.writeFileSync(out, JSON.stringify({ packet: v.packet, model: v.model, at: v.at, checks, verdicts: v.verdicts.sort((a: any, b: any) => a.token.localeCompare(b.token)) }, null, 2) + '\n');
       console.log(`${product}: ${JSON.stringify(c)} -> ${path.relative(root, out)}`);
       for (const x of v.verdicts.filter((x: any) => x.verdict === 'contradicted')) console.log(`  disputed ${x.token}: ${packet.items.find((i: any) => i.token === x.token).mapping.concept.replace('dsi:concept/color/', '')} -> ${x.suggested.concept.replace('dsi:concept/color/', '')} ${x.suggested.match}`);
     } catch (e) { console.error(`FAIL: ${(e as Error).message}`); process.exit(1); }

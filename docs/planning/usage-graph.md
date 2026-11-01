@@ -41,3 +41,7 @@ Working note (2026-11-01). Hypothesis: grounding mappings in how each system's o
 1. Re-audit the 61 Spectrum insufficient verdicts with usage evidence in the packets.
 2. Widen coverage where component CSS exists: Primer React's CSS, Carbon (compiled Sass), Polaris, Material Web. Measure again.
 3. Follow aliases: a ramp token used through a semantic token that aliases it gains indirect evidence. Weaker; label it as such.
+
+## Re-audit with usage evidence (2026-11-01, run audit-u1)
+
+Audit packets now carry `observedUses` (component, selector, property class, state) when a usage graph exists, and `audit-merge --partial` replaces only the re-audited verdicts, each with a `rerun` record of the verdict it replaced. The 61 Spectrum mappings whose earlier verdict was insufficient and that have observed uses were re-audited blind by claude-haiku-5-5 (a family that mapped none of Spectrum): 60 supported, 1 insufficient (`notice-background-color-default`, a single badge use), 0 contradicted. Spectrum's audit is now 201 supported, 57 insufficient, 1 contradicted. The support is for property and state; usage does not speak to intent or emphasis.

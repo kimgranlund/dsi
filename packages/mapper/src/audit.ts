@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { evidenceOf, loadUsage } from './usage-evidence.ts';
 import path from 'node:path';
 import { createAjv, parseConcept, type Ontology } from '@dsi/schema';
 import { loadNative, resolve, showValue, isAlias, type NativeSet } from '@dsi/resolve';
@@ -160,6 +161,8 @@ export function prepareAudit(root: string, o: Ontology, scope: Scope, product: s
   const findings = runChecks(o, product, set, approved, terms);
   const termFindings = terms ? auditTerms(o, terms, approved) : [];
   const usage = usageOf(set);
+  // Observed uses in the system's own component CSS (docs/planning/usage-graph.md), when a usage graph exists.
+  const observed = loadUsage(root, product, version);
   const themes = set.themes.length ? set.themes : [''];
   const valueKey = (t: string) => themes.map((th) => showValue(resolve(set, th, t).type, resolve(set, th, t).value)).join('|');
   const byValue = new Map<string, string[]>();
@@ -173,6 +176,7 @@ export function prepareAudit(root: string, o: Ontology, scope: Scope, product: s
       mapping: { concept: m.concept, match: m.match },
       values: Object.fromEntries(themes.map((th) => { const r = resolve(set, th, m.token); return [th || 'all', { aliases: r.chain, value: showValue(r.type, r.value) }]; })),
       usedBy: u ? { count: u.users.length, roles: u.roles, examples: u.users.slice(0, 6) } : undefined,
+      observedUses: (() => { const xs = observed?.get(m.token); if (!xs?.length) return undefined; const e = evidenceOf(xs); return { count: e.uses, components: e.components, property: e.property, propertyShare: +e.propertyShare.toFixed(2), state: e.state, stateShare: +e.stateShare.toFixed(2), examples: xs.slice(0, 8).map((x) => `${x.component}: ${x.selector} { ${x.property} }${x.state ? ' [' + x.state + ']' : ''}`) }; })(),
       sameValueSiblings: (byValue.get(valueKey(m.token)) ?? []).filter((x) => x !== m.token).slice(0, 5).map((x) => `${x} -> ${conceptOfToken.get(x)}`),
       checks: findings.filter((f) => f.token === m.token).map((f) => `${f.check}: ${f.detail}`),
     };

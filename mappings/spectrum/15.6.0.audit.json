@@ -37,14 +37,20 @@
     {
       "token": "accent-background-color-hover",
       "mappingId": "m-eb867746a0ed",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "accent-background-color-hover",
-          "says": "Values only (#274dea light, #345bf8 dark). Same values as informative-background-color-hover in every theme; value and name cannot separate accent from info."
+          "kind": "usage",
+          "source": "button: .spectrum-Button:hover { background-color } [hover]",
+          "says": "background 67% of 6 uses; hover state 83%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "accent-content-color-default",
@@ -66,14 +72,20 @@
     {
       "token": "accent-content-color-down",
       "mappingId": "m-639562b27368",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "accent-content-color-down",
-          "says": "Values only (#274dea light, #6995fe dark). usage does not fit the color intent; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "button: .spectrum-Button:active { color } [active]",
+          "says": "text 100% of 3 uses; active state 67%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "accent-content-color-hover",
@@ -95,14 +107,20 @@
     {
       "token": "accent-content-color-key-focus",
       "mappingId": "m-a9cc01219b85",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "accent-content-color-key-focus",
-          "says": "Values only (#274dea light, #6995fe dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "button: .spectrum-Button:focus-visible { color } [focus]",
+          "says": "text 100% of 4 uses; focus state 75%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "accent-content-color-selected",
@@ -503,14 +521,25 @@
     {
       "token": "blue-background-color-default",
       "mappingId": "m-39ca0b2887f8",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge--blue { background }",
+          "says": "only use is a categorical badge background"
+        },
         {
           "kind": "value",
           "source": "blue-background-color-default",
-          "says": "Values only (#3b63fb light, #4069fd dark). Hue-named fill with values identical to accent; no evidence it is used as a categorical series."
+          "says": "light blue-900 #3b63fb (hue ~228 deg)"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "blue-subtle-background-color-default",
@@ -563,14 +592,20 @@
     {
       "token": "border-width-400",
       "mappingId": "m-dfaba990c6fc",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "border-width-400",
-          "says": "Values only (4px light, 4px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "thumbnail: .spectrum-Thumbnail-layer-inner { outline-width }",
+          "says": "ring width; property class focus-ring|border"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "brown-subtle-background-color-default",
@@ -683,182 +718,289 @@
     {
       "token": "component-edge-to-text-100",
       "mappingId": "m-8c0b0d68420e",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-text-100",
-          "says": "Values only (12px light, 12px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton { padding-inline }",
+          "says": "edge-to-text padding; 28 uses, padding-inline on textfield and picker too"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-text-200",
       "mappingId": "m-a736c8081e2e",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-text-200",
-          "says": "Values only (15px light, 15px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton { padding-inline }",
+          "says": "edge-to-text padding; 26 uses"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-text-300",
       "mappingId": "m-87c0ccb1fa82",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-text-300",
-          "says": "Values only (18px light, 18px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "picker: .spectrum-Picker { padding-inline-start }",
+          "says": "edge-to-text padding; 20 uses"
+        },
+        {
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge-label { padding-inline-end }",
+          "says": "label padding"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-text-50",
       "mappingId": "m-6ecb619b90b2",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-text-50",
-          "says": "Values only (8px light, 8px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "accordion: .spectrum-Accordion-itemContent { padding-inline }",
+          "says": "edge-to-text padding; 7 uses"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-text-75",
       "mappingId": "m-e4857704f39a",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-text-75",
-          "says": "Values only (9px light, 9px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "textfield: .spectrum-Textfield-input { padding-inline }",
+          "says": "edge-to-text padding; 28 uses"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-visual-100",
       "mappingId": "m-54d3cef0b508",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-visual-100",
-          "says": "Values only (10px light, 10px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge-icon { padding-inline-start }",
+          "says": "edge-to-icon padding; 10 uses"
+        },
+        {
+          "kind": "usage",
+          "source": "tag: .spectrum-Tag { padding-inline-start }",
+          "says": "edge-to-icon padding"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-visual-200",
       "mappingId": "m-6eec4db13209",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-visual-200",
-          "says": "Values only (13px light, 13px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge-icon { padding-inline-start }",
+          "says": "edge-to-icon padding; 10 uses"
+        },
+        {
+          "kind": "usage",
+          "source": "tag: .spectrum-Tag { padding-inline-start }",
+          "says": "edge-to-icon padding"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-visual-300",
       "mappingId": "m-104c99c73ce1",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-visual-300",
-          "says": "Values only (15px light, 15px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge-icon { padding-inline-start }",
+          "says": "edge-to-icon padding; 7 uses"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-visual-50",
       "mappingId": "m-d73a43a25928",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-visual-50",
-          "says": "Values only (6px light, 6px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton-icon { margin-inline-start }",
+          "says": "edge-to-icon spacing applied as margin, the only use; not padding, so the property facet is loose"
         }
-      ]
+      ],
+      "note": "Single use, and it is margin rather than padding. The edge-to-icon role still fits; no contradicting evidence.",
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-visual-75",
       "mappingId": "m-4023d2154161",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-visual-75",
-          "says": "Values only (7px light, 7px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge-icon { padding-inline-start }",
+          "says": "edge-to-icon padding; 10 uses"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-visual-only-100",
       "mappingId": "m-3cb578f457e8",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-visual-only-100",
-          "says": "Values only (6px light, 6px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge-icon--no-label { padding-inline-start }",
+          "says": "edge-to-icon padding for icon-only badges; 7 uses"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-visual-only-200",
       "mappingId": "m-c624c096c4e4",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-visual-only-200",
-          "says": "Values only (9px light, 9px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge-icon--no-label { padding-inline-end }",
+          "says": "edge-to-icon padding for icon-only badges; 7 uses"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-visual-only-300",
       "mappingId": "m-7b692fd352a3",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-visual-only-300",
-          "says": "Values only (11px light, 11px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge-icon--no-label { padding-inline-start }",
+          "says": "edge-to-icon padding for icon-only badges; 7 uses"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-visual-only-50",
       "mappingId": "m-d5966684eb6f",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-visual-only-50",
-          "says": "Values only (3px light, 3px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton-hold + &, &:only-child { margin-inline-start }",
+          "says": "icon-only edge spacing; 5 uses, margin"
         }
-      ]
+      ],
+      "note": "Margin usage for an edge-to-icon role. Not contradicted.",
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-edge-to-visual-only-75",
       "mappingId": "m-0a933b4d27cb",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-edge-to-visual-only-75",
-          "says": "Values only (4px light, 4px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge-icon--no-label { padding-inline-end }",
+          "says": "edge-to-icon padding for icon-only badges"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-height-100",
@@ -911,14 +1053,25 @@
     {
       "token": "component-height-50",
       "mappingId": "m-92d3d5e78a1b",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "component-height-50",
-          "says": "Values only (20px light, 20px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton { block-size }",
+          "says": "component height; 3 uses"
+        },
+        {
+          "kind": "usage",
+          "source": "inlinealert: .spectrum-InLineAlert-header { min-block-size }",
+          "says": "height constraint"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "component-height-500",
@@ -1403,50 +1556,94 @@
     {
       "token": "corner-radius-medium-size-extra-large",
       "mappingId": "m-b6e33814b568",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton { border-radius }",
+          "says": "corner radius; 3 uses"
+        },
         {
           "kind": "value",
           "source": "corner-radius-medium-size-extra-large",
-          "says": "Values only (10px light, 10px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "10px (aliases corner-radius-700)"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "corner-radius-medium-size-extra-small",
       "mappingId": "m-8e75ed7f1c76",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton { border-radius }",
+          "says": "corner radius; 3 uses"
+        },
         {
           "kind": "value",
           "source": "corner-radius-medium-size-extra-small",
-          "says": "Values only (6px light, 6px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "6px (aliases corner-radius-300)"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "corner-radius-medium-size-large",
       "mappingId": "m-707c47b4d913",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton { border-radius }",
+          "says": "corner radius; 3 uses"
+        },
         {
           "kind": "value",
           "source": "corner-radius-medium-size-large",
-          "says": "Values only (9px light, 9px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "9px (aliases corner-radius-600)"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "corner-radius-medium-size-medium",
       "mappingId": "m-38ad5c1e87f3",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton { border-radius }",
+          "says": "corner radius; 3 uses"
+        },
         {
           "kind": "value",
           "source": "corner-radius-medium-size-medium",
-          "says": "Values only (8px light, 8px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "8px (aliases corner-radius-500)"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "corner-radius-medium-size-small",
@@ -1559,74 +1756,115 @@
     {
       "token": "disabled-background-color",
       "mappingId": "m-32140e9c43e3",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "disabled-background-color",
-          "says": "Values only (#e9e9e9 light, #2c2c2c dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "button: .spectrum-Button.is-disabled, .spectrum-Button:disabled { background-color } [disabled]",
+          "says": "background 100% of 15 uses; disabled state 60%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "disabled-border-color",
       "mappingId": "m-8c220b329c45",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "disabled-border-color",
-          "says": "Values only (#dadada light, #393939 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "button: .spectrum-Button.is-disabled, .spectrum-Button:disabled { border-color } [disabled]",
+          "says": "border 100%; all selectors are disabled-scoped (.is-disabled, :disabled); the hover share comes from disabled:hover rules"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "disabled-content-color",
       "mappingId": "m-944f78116bdd",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "disabled-content-color",
-          "says": "Values only (#c6c6c6 light, #444444 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "button: .spectrum-Button.is-disabled, .spectrum-Button:disabled { color } [disabled]",
+          "says": "text 61% of 88 uses; disabled state 41%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "disabled-static-black-background-color",
       "mappingId": "m-c57860b80929",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "disabled-static-black-background-color",
-          "says": "Values only (#000000 @ 0.09 light, #000000 @ 0.09 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "button: .spectrum-Button.is-disabled, .spectrum-Button:disabled { background-color } [disabled]",
+          "says": "background 100% of 3 uses; disabled 67%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "disabled-static-black-border-color",
       "mappingId": "m-14817d4e0cbd",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "disabled-static-black-border-color",
-          "says": "Values only (#000000 @ 0.15 light, #000000 @ 0.15 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "button: .spectrum-Button.is-disabled, .spectrum-Button:disabled { border-color } [disabled]",
+          "says": "border 100%; disabled 100%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "disabled-static-black-content-color",
       "mappingId": "m-3c3d15b5498c",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "disabled-static-black-content-color",
-          "says": "Values only (#000000 @ 0.22 light, #000000 @ 0.22 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "button: .spectrum-Button.is-disabled, .spectrum-Button:disabled { color } [disabled]",
+          "says": "text 50%; disabled 67%"
+        },
+        {
+          "kind": "usage",
+          "source": "closebutton: .spectrum-CloseButton--staticBlack:disabled .spectrum-CloseButton-UIIcon { color }",
+          "says": "static-black close icon, disabled"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "drop-shadow-color",
@@ -1667,14 +1905,26 @@
     {
       "token": "focus-indicator-color",
       "mappingId": "m-134b32fb40cf",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "focus-indicator-color",
-          "says": "Values only (#4b75ff light, #4069fd dark). Check flagged a state mismatch (unbound state vs terms focus); no evidence settles it."
+          "kind": "usage",
+          "source": "button: .spectrum-Button.is-focused:after, .spectrum-Button:focus-visible:after { box-shadow } [focus]",
+          "says": "focus-ring|border 52%; focus state 70%"
+        },
+        {
+          "kind": "usage",
+          "source": "textfield: .is-keyboardFocused .spectrum-Textfield-input { outline-color } [focus]",
+          "says": "focus outline"
         }
-      ]
+      ],
+      "note": "Terms check flags the state as unbound against focus. The concept is the focus-ring property itself, and usage is focus-only, so the unbound state is not a contradiction.",
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "font-size-100",
@@ -1957,14 +2207,26 @@
     {
       "token": "green-background-color-default",
       "mappingId": "m-7e987f3e2090",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge--green { background }",
+          "says": "categorical badge background"
+        },
         {
           "kind": "value",
           "source": "green-background-color-default",
-          "says": "Values only (#05834e light, #068850 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "light green-900 #05834e (hue ~155 deg)"
         }
-      ]
+      ],
+      "note": "Hex hue sits between green and teal; the name carries the green call. Compare seafoam (hue ~170 deg).",
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "green-subtle-background-color-default",
@@ -2183,14 +2445,25 @@
     {
       "token": "indigo-background-color-default",
       "mappingId": "m-92c7b95326f9",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge--indigo { background }",
+          "says": "categorical badge background"
+        },
         {
           "kind": "value",
           "source": "indigo-background-color-default",
-          "says": "Values only (#7155fa light, #745bfc dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "light indigo-900 #7155fa (hue ~254 deg)"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "indigo-subtle-background-color-default",
@@ -2207,14 +2480,30 @@
     {
       "token": "informative-background-color-default",
       "mappingId": "m-7b3748abc45c",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "informative-background-color-default",
-          "says": "Values only (#3b63fb light, #4069fd dark). usage does not fit the color intent; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "toast: .spectrum-Toast--info { background-color }",
+          "says": "intent-info background across toast, tooltip, badge; background 73%"
+        },
+        {
+          "kind": "usage",
+          "source": "tooltip: .spectrum-Tooltip--info { background-color }",
+          "says": "info tooltip background"
+        },
+        {
+          "kind": "usage",
+          "source": "table-selected-row-background-color",
+          "says": "aliased with role background"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "informative-background-color-hover",
@@ -2315,74 +2604,111 @@
     {
       "token": "negative-border-color-down",
       "mappingId": "m-f1ec7ffe4d6b",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "negative-border-color-down",
-          "says": "Values only (#9c2113 light, #ff8678 dark). usage does not fit the color intent; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "picker: .spectrum-Picker.is-invalid:not(:disabled, .is-disabled):active { border-color } [active]",
+          "says": "border 100% of 2 uses; active 100%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "negative-border-color-focus",
       "mappingId": "m-c1c59be7e9dd",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "negative-border-color-focus",
-          "says": "Values only (#b72818 light, #ff6756 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "textfield: .is-invalid .spectrum-Textfield-input:focus { border-color } [focus]",
+          "says": "border 71% of 7 uses; focus 57%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "negative-border-color-focus-hover",
       "mappingId": "m-55a7afbf833a",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "negative-border-color-focus-hover",
-          "says": "Values only (#9c2113 light, #ff8678 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "textfield: .is-invalid .spectrum-Textfield-input:focus:hover { border-color } [hover]",
+          "says": "border 100%; focus+hover selectors present"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "negative-border-color-hover",
       "mappingId": "m-75fcb87b1814",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "negative-border-color-hover",
-          "says": "Values only (#b72818 light, #ff6756 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "textfield: .is-invalid .spectrum-Textfield-input:hover:not(.is-disabled) { border-color } [hover]",
+          "says": "border 100% of 9 uses; hover 67%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "negative-border-color-key-focus",
       "mappingId": "m-ce1b0bea3319",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "negative-border-color-key-focus",
-          "says": "Values only (#b72818 light, #ff6756 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "textfield: .is-invalid .spectrum-Textfield-input:focus-visible { border-color } [focus]",
+          "says": "border 67%; focus 67%"
         }
-      ]
+      ],
+      "note": "Close match is right: keyboard focus is narrower than focus.",
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "negative-content-color-key-focus",
       "mappingId": "m-c3d39ac9d7ef",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "negative-content-color-key-focus",
-          "says": "Values only (#b72818 light, #ff6756 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "button: .spectrum-Button:focus-visible { color } [focus]",
+          "says": "text 100% of 4 uses; focus 100%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "negative-subdued-background-color-default",
@@ -2447,14 +2773,20 @@
     {
       "token": "neutral-content-color-key-focus",
       "mappingId": "m-57e7c9f1b781",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "neutral-content-color-key-focus",
-          "says": "Values only (#131313 light, #f2f2f2 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "button: .spectrum-Button:focus-visible { color } [focus]",
+          "says": "text 69% of 36 uses; focus 61%"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "neutral-content-color-selected-key-focus",
@@ -2471,14 +2803,25 @@
     {
       "token": "neutral-subdued-content-color-default",
       "mappingId": "m-f6de6e98e022",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "neutral-subdued-content-color-default",
-          "says": "Values only (#505050 light, #afafaf dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "menu: .spectrum-Menu-itemDescription { color }",
+          "says": "subdued text; text 64% of 25 uses; default state 92%"
+        },
+        {
+          "kind": "usage",
+          "source": "statuslight: .spectrum-StatusLight--neutral { color }",
+          "says": "neutral subdued text"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "neutral-subtle-background-color-default",
@@ -2498,11 +2841,23 @@
       "verdict": "insufficient",
       "evidence": [
         {
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge--notice { background }",
+          "says": "background only; the one use is a badge background and does not say what intent it carries"
+        },
+        {
           "kind": "value",
           "source": "notice-background-color-default",
-          "says": "Values only (#fc7d00 light, #e06400 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "light notice-color-600 aliases orange-600 #fc7d00; the value is orange and says nothing about intent"
         }
-      ]
+      ],
+      "note": "intent-warning rests on the name. No description, docs, or intent-bearing usage in the packet (unlike informative, whose toast and tooltip uses show intent). Not guessed.",
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "notice-subtle-background-color-default",
@@ -2531,14 +2886,25 @@
     {
       "token": "orange-background-color-default",
       "mappingId": "m-326928c55ed5",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge--orange { background }",
+          "says": "categorical badge background"
+        },
         {
           "kind": "value",
           "source": "orange-background-color-default",
-          "says": "Values only (#fc7d00 light, #e06400 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "light orange-600 #fc7d00 (hue ~30 deg)"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "orange-subtle-background-color-default",
@@ -2567,14 +2933,25 @@
     {
       "token": "overlay-opacity",
       "mappingId": "m-cd6077fa70e6",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "underlay: .spectrum-Underlay { background-color }",
+          "says": "scrim alpha; unitless 0.4 light, 0.6 dark"
+        },
         {
           "kind": "value",
           "source": "overlay-opacity",
-          "says": "Values only (0.4 light, 0.6 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "unitless 0.4 light, 0.6 dark"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "padding-horizontal",
@@ -2663,14 +3040,25 @@
     {
       "token": "purple-background-color-default",
       "mappingId": "m-be15ba7d2639",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge--purple { background }",
+          "says": "categorical badge background"
+        },
         {
           "kind": "value",
           "source": "purple-background-color-default",
-          "says": "Values only (#9a47e2 light, #9d4ee4 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "light purple-900 #9a47e2 (hue ~272 deg)"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "purple-subtle-background-color-default",
@@ -2687,14 +3075,25 @@
     {
       "token": "red-background-color-default",
       "mappingId": "m-bad05ccfa377",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge--red { background }",
+          "says": "categorical badge background"
+        },
         {
           "kind": "value",
           "source": "red-background-color-default",
-          "says": "Values only (#d73220 light, #df3422 dark). Hue-named fill; values match negative-border-color-default but no evidence it is categorical or status."
+          "says": "light red-900 #d73220 (hue ~6 deg)"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "red-subtle-background-color-default",
@@ -2735,14 +3134,25 @@
     {
       "token": "seafoam-background-color-default",
       "mappingId": "m-90d674545684",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge--seafoam { background }",
+          "says": "categorical badge background"
+        },
         {
           "kind": "value",
           "source": "seafoam-background-color-default",
-          "says": "Values only (#07816d light, #088670 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "light seafoam-900 #07816d (hue ~170 deg, teal)"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "seafoam-subtle-background-color-default",
@@ -2939,50 +3349,83 @@
     {
       "token": "spacing-900",
       "mappingId": "m-2c9dc18bce49",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
           "kind": "value",
           "source": "spacing-900",
-          "says": "Values only (80px light, 80px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "80px in every theme, a spacing-scale length"
+        },
+        {
+          "kind": "usage",
+          "source": "slider: .spectrum-Slider { min-inline-size }",
+          "says": "the only use sizes a slider; a generic spacing concept does not exclude that"
         }
-      ]
+      ],
+      "note": "Generic spacing concept is not contradicted, but the sole use is a size. Weak support.",
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "text-to-control-100",
       "mappingId": "m-1c3e0c23c450",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "text-to-control-100",
-          "says": "Values only (10px light, 10px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "checkbox: .spectrum-Checkbox-label { margin-inline-start }",
+          "says": "text-to-control spacing applied as margin; 8 uses"
         }
-      ]
+      ],
+      "note": "Usage is margin, not gap. Same spacing role, not contradicted.",
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "text-to-control-200",
       "mappingId": "m-60707dace291",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "text-to-control-200",
-          "says": "Values only (11px light, 11px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "radio: .spectrum-Radio-label { margin-inline-start }",
+          "says": "text-to-control spacing applied as margin; 8 uses"
         }
-      ]
+      ],
+      "note": "Usage is margin, not gap. Same spacing role, not contradicted.",
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "text-to-control-300",
       "mappingId": "m-aff34cf72d69",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "text-to-control-300",
-          "says": "Values only (13px light, 13px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "checkbox: .spectrum-Checkbox-label { margin-inline-start }",
+          "says": "text-to-control spacing applied as margin; 8 uses"
         }
-      ]
+      ],
+      "note": "Usage is margin, not gap. Same spacing role, not contradicted.",
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "text-to-control-50",
@@ -2999,14 +3442,21 @@
     {
       "token": "text-to-control-75",
       "mappingId": "m-092de477d0f8",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "text-to-control-75",
-          "says": "Values only (9px light, 9px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "switch: .spectrum-Switch-label { margin-inline }",
+          "says": "text-to-control spacing applied as margin; 8 uses"
         }
-      ]
+      ],
+      "note": "Usage is margin, not gap. Same spacing role, not contradicted.",
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "text-to-visual-100",
@@ -3059,14 +3509,20 @@
     {
       "token": "text-to-visual-50",
       "mappingId": "m-d90e6f7252f0",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "text-to-visual-50",
-          "says": "Values only (5px light, 5px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton { gap }",
+          "says": "text-to-visual spacing as gap; 1 use"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "text-to-visual-75",
@@ -3083,74 +3539,140 @@
     {
       "token": "workflow-icon-size-100",
       "mappingId": "m-de179a893e20",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "workflow-icon-size-100",
-          "says": "Values only (20px light, 20px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton-icon { inline-size }",
+          "says": "icon size; 47 uses"
+        },
+        {
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton-icon { block-size }",
+          "says": "icon size"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "workflow-icon-size-200",
       "mappingId": "m-35bc57831615",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "workflow-icon-size-200",
-          "says": "Values only (22px light, 22px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton-icon { inline-size }",
+          "says": "icon size; 39 uses"
+        },
+        {
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton-icon { block-size }",
+          "says": "icon size"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "workflow-icon-size-300",
       "mappingId": "m-21466cf0a823",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "workflow-icon-size-300",
-          "says": "Values only (26px light, 26px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "textfield: .spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon { block-size }",
+          "says": "icon size; 27 uses"
+        },
+        {
+          "kind": "usage",
+          "source": "textfield: .spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon { inline-size }",
+          "says": "icon size"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "workflow-icon-size-50",
       "mappingId": "m-723a42cfcf56",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "workflow-icon-size-50",
-          "says": "Values only (14px light, 14px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "tooltip: .spectrum-Tooltip-typeIcon { inline-size }",
+          "says": "icon size; 13 uses"
+        },
+        {
+          "kind": "usage",
+          "source": "tooltip: .spectrum-Tooltip-typeIcon { block-size }",
+          "says": "icon size"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "workflow-icon-size-75",
       "mappingId": "m-1fe7f47d28b3",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
         {
-          "kind": "value",
-          "source": "workflow-icon-size-75",
-          "says": "Values only (16px light, 16px dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton-icon { inline-size }",
+          "says": "icon size; 39 uses"
+        },
+        {
+          "kind": "usage",
+          "source": "actionbutton: .spectrum-ActionButton-icon { block-size }",
+          "says": "icon size"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "yellow-background-color-default",
       "mappingId": "m-1695148f7d28",
-      "verdict": "insufficient",
+      "verdict": "supported",
       "evidence": [
+        {
+          "kind": "usage",
+          "source": "badge: .spectrum-Badge--yellow { background }",
+          "says": "categorical badge background"
+        },
         {
           "kind": "value",
           "source": "yellow-background-color-default",
-          "says": "Values only (#f5c700 light, #da9f00 dark). name and values only; no description, usage or docs; no non-value citation fits the concept."
+          "says": "light yellow-400 #f5c700 (hue ~49 deg)"
         }
-      ]
+      ],
+      "rerun": {
+        "run": "audit-u1",
+        "model": "claude-haiku-5-5",
+        "at": "2026-11-01T20:46:45Z",
+        "previous": "insufficient"
+      }
     },
     {
       "token": "yellow-subtle-background-color-default",

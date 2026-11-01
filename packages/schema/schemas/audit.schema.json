@@ -147,6 +147,36 @@
               }
             },
             "description": "How a human settled a contradicted verdict."
+          },
+          "rerun": {
+            "type": "object",
+            "description": "Set when audit-merge --partial replaced an earlier verdict: the run, model and time of the re-audit and the verdict it replaced.",
+            "required": [
+              "run",
+              "model",
+              "at",
+              "previous"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "run": {
+                "type": "string"
+              },
+              "model": {
+                "type": "string"
+              },
+              "at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "previous": {
+                "enum": [
+                  "supported",
+                  "contradicted",
+                  "insufficient"
+                ]
+              }
+            }
           }
         },
         "if": {
