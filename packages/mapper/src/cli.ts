@@ -62,7 +62,11 @@ if (cmd === 'prepare') {
   if (!run) { console.error(USAGE); process.exit(2); }
   for (const product of Object.keys(scope.products))
     for (const role of ['a', 'b'] as const) {
-      const r = preparePacket(root, ontology, scope, product, role, runDir);
+      // --only <tokens.json> ({"<product>": ["token", ...]}): only these tokens; products not listed are skipped.
+      const onlyFile = process.argv.includes('--only') ? process.argv[process.argv.indexOf('--only') + 1] : undefined;
+      const onlyList = onlyFile ? (JSON.parse(fs.readFileSync(onlyFile, 'utf8'))[product] as string[] | undefined) : undefined;
+      if (onlyFile && !onlyList?.length) break;
+      const r = preparePacket(root, ontology, scope, product, role, runDir, onlyList ? new Set(onlyList) : undefined);
       if (role === 'a') console.log(`${product}: ${r.count} tokens to map (${r.skipped} already approved) -> ${path.relative(root, r.file).replace('.a.', '.{a,b}.')}`);
     }
 } else if (cmd === 'merge') {
@@ -99,6 +103,23 @@ if (cmd === 'prepare') {
     const bad = (pf.proposals as any[]).map((p) => [p.token, lint(p.rationale ?? '')] as const).filter(([, w]) => w.length);
     if (bad.length) { console.log(`WARN: ${bad.length} rationale(s) break L6`); for (const [t, w] of bad.slice(0, 10)) console.log(`  ${t}: ${w.join('; ')}`); }
   } catch (e) { console.error(`FAIL: ${(e as Error).message}`); process.exit(1); }
+} else if (cmd === 'reopen') {
+  // reopen <scope> <tokens.json> <adr>: an owner decision (G5) re-opens approved "no concept fits" records after the
+  // ontology gained the words they lacked. Each becomes rejected with a note, so the next map run sees it again.
+  const [file, adr] = [process.argv[4], process.argv[5]];
+  if (!file || !adr) { console.error('usage: dsi-map reopen <scope> <tokens.json> <ADR number>'); process.exit(2); }
+  const list = JSON.parse(fs.readFileSync(file, 'utf8')) as Record<string, string[]>;
+  const at = new Date().toISOString();
+  for (const [product, tokens] of Object.entries(list)) {
+    const { version } = scope.products[product];
+    const mf = path.join(root, 'mappings', product, `${version}.mappings.json`);
+    const m = JSON.parse(fs.readFileSync(mf, 'utf8'));
+    const want = new Set(tokens);
+    let n = 0;
+    for (const u of m.unmapped ?? []) if (want.has(u.token) && u.status === 'approved') { u.status = 'rejected'; u.review = { by: 'owner-decision', at, note: `Re-opened: the ontology gained the concepts this token lacked (ADR ${adr}). Earlier review: ${u.review?.by ?? '?'}.` }; n++; }
+    fs.writeFileSync(mf, JSON.stringify(m, null, 2) + '\n');
+    console.log(`${product}: ${n} of ${tokens.length} re-opened`);
+  }
 } else if (cmd === 'language-sweep') {
   // Controlled-language sweep of open review items (docs/controlled-language.md section 11).
   const third = process.argv.includes('--third') ? process.argv[process.argv.indexOf('--third') + 1] : undefined;

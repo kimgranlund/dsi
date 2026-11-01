@@ -55,7 +55,7 @@ facet    = "intent" | "usage" | "hue" | "syntax" | "component" | "part"
 - Facets appear in the order listed, each at most once, with at least one segment.
 - Only `usage` and `state` take several values, joined with `+` and sorted alphabetically.
 - Every value must be in its facet's scheme and not deprecated.
-- `hue` requires usage `categorical`. `part` requires a `component` or usage `code-surface`.
+- `hue` requires usage `categorical` or `terminal` (ADR 0023). `part` requires a `component` or usage `code-surface`.
 - `emphasis-default` is never bound: the concept without emphasis is the default step. `property-opacity` belongs to the `opacity` domain (ADR 0019).
 
 Example: `dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-hover`.

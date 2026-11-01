@@ -16048,7 +16048,7 @@
   "unmapped": [
     {
       "token": "ansi.black",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal 16-color palette slot. Gap: no concept for terminal/ANSI colors (a usage such as usage-terminal with named ANSI slots); not categorical identity colors and not intents despite the descriptions.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16057,14 +16057,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: ANSI terminal palette slot black; no terminal-palette concept, not a hue."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "ansi.blackBright",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16072,14 +16072,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.blue",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16087,14 +16087,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.blueBright",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16102,14 +16102,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.cyan",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16117,14 +16117,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.cyanBright",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16132,14 +16132,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.gray",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16147,14 +16147,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.green",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16162,14 +16162,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.greenBright",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16177,14 +16177,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.magenta",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16192,14 +16192,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.magentaBright",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16207,14 +16207,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.red",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16222,14 +16222,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.redBright",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16237,14 +16237,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.white",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal 16-color palette slot. Gap: no concept for terminal/ANSI colors (a usage such as usage-terminal with named ANSI slots); not categorical identity colors and not intents despite the descriptions.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16253,14 +16253,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: ANSI terminal palette slot white (gray in light mode); no terminal-palette concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "ansi.whiteBright",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal 16-color palette slot. Gap: no concept for terminal/ANSI colors (a usage such as usage-terminal with named ANSI slots); not categorical identity colors and not intents despite the descriptions.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16269,14 +16269,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: ANSI terminal bright white; no concept for terminal palette extremes."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "ansi.yellow",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16284,14 +16284,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "ansi.yellowBright",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "ANSI terminal palette slot (syntax.json5: 'ANSI terminal color palette for command-line interfaces'). A program picks the slot, not the meaning, so an intent would be a guess; hue binds only with usage-categorical (ADR 0017) and there is no terminal usage. Missing: a terminal/console usage that admits hue.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16299,14 +16299,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "bgColor.black",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "Literal black background (not theme semantic). Gap: no concept for absolute black/white.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16315,14 +16315,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fixed black background (differs per theme); no fixed-color concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "bgColor.done.emphasis",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub done/merged (completed) state, purple. Gap: lifecycle status (done/merged); not success, accent or discovery.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16331,14 +16331,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Done/merged state badge (purple); no lifecycle-state concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "bgColor.done.muted",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub done/merged (completed) state, purple, muted. Gap: lifecycle status (done/merged).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16347,9 +16347,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Done/merged state tint; no lifecycle-state concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
@@ -16384,7 +16384,7 @@
     },
     {
       "token": "bgColor.transparent",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "Fully transparent value; no concept for a transparent/none color.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16393,14 +16393,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fully transparent fixed value; no concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "bgColor.white",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "Literal white background, invariant across themes. Gap: no concept for absolute black/white.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16409,14 +16409,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fixed white background; no concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "borderColor.done.emphasis",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub done/merged (completed) state, purple. Gap: lifecycle status (done/merged); not success, accent or discovery.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16425,14 +16425,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Done/merged state border; no lifecycle concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "borderColor.done.muted",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub done/merged (completed) state, purple, muted. Gap: lifecycle status (done/merged).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16441,9 +16441,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Done/merged subtle border; no lifecycle concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
@@ -16478,7 +16478,7 @@
     },
     {
       "token": "borderColor.transparent",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "Fully transparent value; no concept for a transparent/none color.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16487,9 +16487,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fully transparent fixed value; no concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
@@ -16505,7 +16505,7 @@
     },
     {
       "token": "contribution.default.bgColor.0",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16514,14 +16514,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Contribution graph sequential level; no sequential-ramp concept (ADR 0018 defers)."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.default.bgColor.1",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16530,14 +16530,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Contribution graph sequential level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.default.bgColor.2",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16546,14 +16546,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Contribution graph sequential level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.default.bgColor.3",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16562,14 +16562,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Contribution graph sequential level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.default.bgColor.4",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16578,14 +16578,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Contribution graph sequential level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.default.borderColor.0",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16594,14 +16594,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Contribution cell border; no concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.default.borderColor.1",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16610,14 +16610,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Contribution cell border; no concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.default.borderColor.2",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16626,14 +16626,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Contribution cell border; no concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.default.borderColor.3",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16642,14 +16642,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Contribution cell border; no concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.default.borderColor.4",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16658,14 +16658,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Contribution cell border; no concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.halloween.bgColor.1",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16674,14 +16674,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Seasonal contribution ramp level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.halloween.bgColor.2",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16690,14 +16690,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Seasonal contribution ramp level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.halloween.bgColor.3",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16706,14 +16706,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Seasonal contribution ramp level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.halloween.bgColor.4",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16722,14 +16722,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Seasonal contribution ramp level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.winter.bgColor.1",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16738,14 +16738,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Seasonal contribution ramp level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.winter.bgColor.2",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16754,14 +16754,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Seasonal contribution ramp level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.winter.bgColor.3",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16770,14 +16770,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Seasonal contribution ramp level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "contribution.winter.bgColor.4",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub contribution graph (activity heatmap) level color: a sequential data-viz ramp. Gap: sequential ramp concept (ADR 0018 deferred sequential/diverging ramps until shipped as tokens; Primer ships them here).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16786,14 +16786,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Seasonal contribution ramp level; no sequential-ramp concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "fgColor.black",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "Literal black text. Gap: no concept for absolute black/white.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16802,14 +16802,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fixed pure black text; no fixed-color concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "fgColor.done",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "GitHub done/merged state text color. Gap: lifecycle status (done/merged).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16818,9 +16818,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Done/merged state text; no lifecycle concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
@@ -16840,7 +16840,7 @@
     },
     {
       "token": "fgColor.white",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "Literal white text, invariant. Gap: no concept for absolute black/white.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -16849,9 +16849,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Fixed pure white text; no fixed-color concept."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
@@ -17128,7 +17128,7 @@
     },
     {
       "token": "prettylights.syntax.carriage.return.bg",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "Deprecated alias of prettylights.syntax.carriageReturn.bg. 'Background color for carriage return characters in diffs': a visible control-character marker (red badge). No Lezer tag fits (escape is for string escapes, invalid for erroneous code) and no diff-marker part exists. Missing: a syntax/part value for rendered control or whitespace characters.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -17136,14 +17136,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "prettylights.syntax.carriage.return.text",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "Deprecated alias of prettylights.syntax.carriageReturn.text. 'Text color for carriage return characters in diffs': a visible control-character marker (red badge). No Lezer tag fits (escape is for string escapes, invalid for erroneous code) and no diff-marker part exists. Missing: a syntax/part value for rendered control or whitespace characters.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -17151,14 +17151,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "prettylights.syntax.carriageReturn.bg",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "'Background color for carriage return characters in diffs': a visible control-character marker (red badge). No Lezer tag fits (escape is for string escapes, invalid for erroneous code) and no diff-marker part exists. Missing: a syntax/part value for rendered control or whitespace characters.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -17166,14 +17166,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "prettylights.syntax.carriageReturn.text",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "'Text color for carriage return characters in diffs': a visible control-character marker (red badge). No Lezer tag fits (escape is for string escapes, invalid for erroneous code) and no diff-marker part exists. Missing: a syntax/part value for rendered control or whitespace characters.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -17181,14 +17181,14 @@
         "method": "two-of-three-v1"
       },
       "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:21:36.872Z",
-        "note": "claude-fable-5-1 agreed with an earlier agent"
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: two-of-three."
       }
     },
     {
       "token": "prettylights.syntax.markup.ignored.bg",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "Ignored content in diffs; no Lezer tag or code-surface concept for ignored diff content. Gap: diff ignored.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -17197,14 +17197,14 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Ignored diff content background; no concept for ignored."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     },
     {
       "token": "prettylights.syntax.markup.ignored.text",
-      "status": "approved",
+      "status": "rejected",
       "rationale": "Ignored content in diffs; no Lezer tag or code-surface concept for ignored diff content. Gap: diff ignored.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -17213,9 +17213,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "agreement",
-        "at": "2026-11-01T14:57:51.795Z",
-        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Ignored diff content text; no concept for ignored."
+        "by": "owner-decision",
+        "at": "2026-11-01T21:09:42.556Z",
+        "note": "Re-opened: the ontology gained the concepts this token lacked (ADR 0023). Earlier review: agreement."
       }
     }
   ]

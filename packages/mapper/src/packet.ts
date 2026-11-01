@@ -47,13 +47,14 @@ function ontologySummary(root: string, o: Ontology) {
 }
 
 /** Build one packet per product for a role. Approved tokens are skipped; rejected answers are listed. */
-export function preparePacket(root: string, o: Ontology, scope: Scope, product: string, role: 'a' | 'b', runDir: string) {
+export function preparePacket(root: string, o: Ontology, scope: Scope, product: string, role: 'a' | 'b', runDir: string, only?: Set<string>) {
   const { version } = scope.products[product];
   const set = loadNative(root, product, version);
   const existing = readMappings(root, product, version);
   const settled = new Set([...(existing?.mappings ?? []).filter((m) => m.status === 'approved').map((m) => m.token), ...(existing?.unmapped ?? []).filter((u) => u.status === 'approved').map((u) => u.token)]);
   const rejected = (existing?.mappings ?? []).filter((m) => m.status === 'rejected').map(({ token, concept, match }) => ({ token, concept, match }));
-  const paths = inScope(scope, product, set).filter((p) => !settled.has(p));
+  // `only`: map just these tokens (a re-opened set, `prepare --only`), leaving the open review queue alone.
+  const paths = inScope(scope, product, set).filter((p) => !settled.has(p) && (!only || only.has(p)));
   const themes = set.themes.length ? set.themes : [''];
   const tokens = paths.map((p) => {
     const t = set.tokens.get(p)!;

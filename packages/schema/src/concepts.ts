@@ -45,7 +45,8 @@ export function parseConcept(o: Ontology, ref: string): ParsedConcept | string {
   if (facets.property === 'opacity' && domain !== 'opacity') return 'property opacity belongs to the opacity domain';
   // A part belongs to a component, or to a code surface (gutter, line number, line; ADR 0018).
   if (facets.part && !facets.component && !String(facets.usage ?? '').split('+').includes('code-surface')) return 'part needs a component or usage code-surface';
-  if (facets.hue && !String(facets.usage ?? '').split('+').includes('categorical')) return 'hue needs usage categorical';
+  // Terminal (ANSI) slots bind a hue too (ADR 0023).
+  if (facets.hue && !String(facets.usage ?? '').split('+').some((u) => u === 'categorical' || u === 'terminal')) return 'hue needs usage categorical or terminal';
   return { domain, facets };
 }
 

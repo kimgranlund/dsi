@@ -22,3 +22,8 @@ ADRs, one per file: `NNNN-short-title.md` with Status, Context, Decision, Conseq
 | [0016](0016-atlassian-license.md) | Publish Atlassian token values under the npm package Apache-2.0 |
 | [0017](0017-hue-facet.md) | Categorical colors bind a canonical hue |
 | [0018](0018-emphasis-rank-and-new-roles.md) | Seven emphasis steps by contrast rank; discovery, data-viz, code surfaces; inverse by value |
+| [0019](0019-controlled-language-and-concept-registry.md) | Controlled language and a concept registry |
+| [0020](0020-jev-roles.md) | Jev as audit pre-screen and review suggester |
+| [0021](0021-boundary-tests.md) | Deciding tests for vocabulary boundaries |
+| [0022](0022-graphic-property.md) | A graphic property for non-text marks |
+| [0023](0023-gap-words-and-components.md) | Fixed, transparent and terminal usages, done intent; eight components and six parts |
