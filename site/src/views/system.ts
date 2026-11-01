@@ -5,9 +5,9 @@ import { categoryOf, renderScales, type Category } from './scales';
 type ViewGroup = { id: string; label: string; meaning?: string; native?: string; note?: string; tokens: string[]; subgroups: { label: string; tokens: string[] }[] };
 const FACET_PRIORITY = ['usage', 'intent', 'syntax', 'property'] as const;
 const STATE_RANK: Record<string, number> = { hover: 1, active: 2, focus: 3, selected: 4, disabled: 6, visited: 7 };
-const EMPHASIS_SIGNED: Record<string, number> = { subtlest: -2, subtle: -1, default: 0, strong: 1, strongest: 2 };
+const EMPHASIS_SIGNED: Record<string, number> = { subtlest: -3, subtler: -2, subtle: -1, default: 0, strong: 1, stronger: 2, strongest: 3 };
 /** Base first, then outward, for families that only step one way from their base. */
-const EMPHASIS_OUTWARD: Record<string, number> = { default: 0, subtle: 1, subtlest: 2, strong: 3, strongest: 4 };
+const EMPHASIS_OUTWARD: Record<string, number> = { default: 0, subtle: 1, subtler: 2, subtlest: 3, strong: 4, stronger: 5, strongest: 6 };
 
 /** Hue (0-360) and saturation of a hex display value, for ordering palette families. */
 function hueOf(display?: string): { h: number; s: number } | undefined {

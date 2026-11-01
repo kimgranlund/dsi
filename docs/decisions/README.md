@@ -21,3 +21,4 @@ ADRs, one per file: `NNNN-short-title.md` with Status, Context, Decision, Conseq
 | [0015](0015-token-applications.md) | The component tier is shown through token applications read from shipped component styles |
 | [0016](0016-atlassian-license.md) | Publish Atlassian token values under the npm package Apache-2.0 |
 | [0017](0017-hue-facet.md) | Categorical colors bind a canonical hue |
+| [0018](0018-emphasis-rank-and-new-roles.md) | Seven emphasis steps by contrast rank; discovery, data-viz, code surfaces; inverse by value |

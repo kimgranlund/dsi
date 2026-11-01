@@ -24,9 +24,9 @@ export interface Structure { kind: ShippedStructure['kind'] | 'name-family'; gro
 export type FacetsOf = (token: string) => Partial<Record<Facet, string>>;
 
 const STATE_RANK: Record<string, number> = { hover: 1, active: 2, focus: 3, selected: 4, 'hover+selected': 5, 'active+selected': 5, disabled: 6, 'disabled+selected': 6, visited: 7 };
-const EMPHASIS_RANK: Record<string, number> = { default: 0, subtle: 1, subtlest: 2, strong: 3, strongest: 4 };
+const EMPHASIS_RANK: Record<string, number> = { default: 0, subtle: 1, subtler: 2, subtlest: 3, strong: 4, stronger: 5, strongest: 6 };
 /** Signed emphasis, for families that run both ways from the base (lowest, low, base, high, highest). */
-const EMPHASIS_SIGNED: Record<string, number> = { subtlest: -2, subtle: -1, default: 0, strong: 1, strongest: 2 };
+const EMPHASIS_SIGNED: Record<string, number> = { subtlest: -3, subtler: -2, subtle: -1, default: 0, strong: 1, stronger: 2, strongest: 3 };
 const ACRONYMS: Record<string, string> = { ai: 'AI', ui: 'UI' };
 const NUMBER_WORDS: Record<string, number> = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
 const levelOf = (w: string) => (/^\d+$/.test(w) ? Number(w) : NUMBER_WORDS[w]);

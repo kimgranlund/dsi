@@ -36,3 +36,9 @@ Write only the JSON file named in the packet's `output`, valid against `packages
 - `match` says how the word's meaning relates to the facet value, as for token mappings: `exact` when the word always means that value in this product's names; `close` with a nuance; `broad` when the word is one specific case of the value; never use a term for a value it only sometimes implies.
 - Do not map hue names (red, blue) to intents. Component and part names (button, field, tab) are `ignore: component`.
 - Confidence is your probability that a designer familiar with this system would accept the term as written.
+
+
+## Since ADR 0018
+- Emphasis has seven values (subtlest, subtler, subtle, default, strong, stronger, strongest). A word such as `subtler` or `bolder` maps to its step only if the product uses it consistently in name order; when a family's values contradict its words (Atlassian status `default` is the lightest), answer the word `close` or leave it to token mapping (`ignore: noise`) rather than forcing a step.
+- `inverse` maps by what the product means: content on bold fills -> `dsi:usage/on-fill`; a mode-flipping surface -> `dsi:usage/inverse`.
+- New values: `dsi:intent/discovery`, `dsi:usage/data-viz`, `dsi:usage/code-surface`, parts `gutter`, `line-number`, `line`; hue values for categorical color names.

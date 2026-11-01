@@ -37,12 +37,12 @@ Layers in a stack. Classify products, not organizations.
 | Facet | One dimension of a concept: domain, scale, step, emphasis, intent, property, style, hue, usage, component, part, state (identity facets) and mode (context facet) |
 | Mapping | A typed SKOS link between a native token and a concept |
 | Match type | `match/exact`, `close`, `broad`, `narrow`, `related` (SKOS mapping properties; subject is always the native token) |
-| Intent | Hue-independent meaning, e.g. `intent/danger` (status) vs `intent/destructive` (action), linked as related; `intent/ai` marks AI content; `intent/caution` is narrower than warning; `intent/highlight` marks editor focus and selection |
-| Usage | Where a token applies across components: `usage/page`, `surface`, `overlay`, `scrim`, `inverse`, `on-fill`, `field`, `link`, `navigation`, `skeleton`, `categorical` (`code` deprecated) |
+| Intent | Hue-independent meaning, e.g. `intent/danger` (status) vs `intent/destructive` (action), linked as related; `intent/ai` marks AI content; `intent/caution` is narrower than warning; `intent/highlight` marks editor focus and selection; `intent/discovery` marks something new or changed |
+| Usage | Where a token applies across components: `usage/page`, `surface`, `overlay`, `scrim`, `inverse` (surfaces that flip between modes), `on-fill` (content on a bold fill), `field`, `link`, `navigation`, `skeleton`, `categorical`, `data-viz`, `code-surface` (`code` deprecated) |
 | Syntax | `syntax/*`: code and document syntax roles, the @lezer/highlight tags (keyword, string, comment...) with Lezer's hierarchy |
 | Brightness | `brightness/dim`, `brightness/bright`: lightness that holds in every theme (Material surface-dim/bright) |
 | Foreground | `property/foreground`: one token coloring both text and icons; `property/text` and `property/icon` are for one only |
-| Emphasis | `subtlest`, `subtle`, `default`, `strong`, `strongest`: relative strength within a family |
+| Emphasis | `subtlest`, `subtler`, `subtle`, `default`, `strong`, `stronger`, `strongest`: relative strength within a family, assigned by contrast rank against the page (ADR 0018) |
 | Domain | `facet/domain`: the token family a concept belongs to: color, space, size, shape, typography, elevation, motion, opacity, layout (breakpoints, z-index) |
 | Role | A `property` value naming a whole non-color scale (spacing, corner-radius, font-size, duration...); each names its domain with `dsi:inDomain`. Scale tokens map to the role with `narrow` (ADR 0013) |
 | Hue | `hue/*`: the named hue of a categorical color (tags, avatars, user-chosen colors); binds only with `usage/categorical` (ADR 0017) |
