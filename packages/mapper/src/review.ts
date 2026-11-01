@@ -1,4 +1,5 @@
 import crypto from 'node:crypto';
+import { lintRationale } from './language-sweep.ts';
 import fs from 'node:fs';
 import path from 'node:path';
 import { readMappings, mappingPath, type Scope } from './packet.ts';
@@ -256,7 +257,7 @@ export function applyDisputes(root: string, scope: Scope, decisions: DisputeDeci
 }
 
 /** One answer on a card: identical concept+match answers from several models merge into one option with all voters. */
-export interface ReviewOption { concept?: string; match?: string; name?: string; registered?: boolean; usedBy?: string[]; voters: { model: string; confidence?: number; rationale: string }[]; recordId?: string; shape: string }
+export interface ReviewOption { concept?: string; match?: string; name?: string; registered?: boolean; usedBy?: string[]; voters: { model: string; confidence?: number; rationale: string; l6?: string[] }[]; recordId?: string; shape: string }
 export interface ReviewExtras {
   options: ReviewOption[];
   preselect?: number;
@@ -297,9 +298,9 @@ export function enrichQueue(root: string, scope: Scope, items: QueueItem[], thir
         const o = options.find((x) => x.concept === concept && x.match === match);
         if (o) { o.voters.push(voter); o.recordId ??= recordId; } else options.push({ concept, match, voters: [voter], recordId, shape: shapeOf(concept, match) });
       };
-      for (const x of item.candidates) add(x.kind === 'mapping' ? x.concept : undefined, x.kind === 'mapping' ? x.match : undefined, { model: x.model, confidence: x.confidence, rationale: x.rationale }, x.kind === 'mapping' ? x.id : x.id);
+      for (const x of item.candidates) add(x.kind === 'mapping' ? x.concept : undefined, x.kind === 'mapping' ? x.match : undefined, { model: x.model, confidence: x.confidence, rationale: x.rationale, l6: lintRationale(x.rationale ?? '') }, x.kind === 'mapping' ? x.id : x.id);
       const cp = c.get(item.token);
-      if (cp) add(cp.concept ?? undefined, cp.concept ? cp.match : undefined, { model: cp.model ?? 'third opinion', confidence: cp.confidence, rationale: cp.rationale ?? '' });
+      if (cp) add(cp.concept ?? undefined, cp.concept ? cp.match : undefined, { model: cp.model ?? 'third opinion', confidence: cp.confidence, rationale: cp.rationale ?? '', l6: lintRationale(cp.rationale ?? '') });
       for (const o of options) if (o.concept) { const d = describe(o.concept); o.name = d.name; o.registered = d.registered; o.usedBy = [...(usage.get(o.concept) ?? [])].sort(); }
       options.sort((a, b) => b.voters.length - a.voters.length || Number(!!b.registered) - Number(!!a.registered) || (b.usedBy?.length ?? 0) - (a.usedBy?.length ?? 0));
       // Family: the word position whose variation has the most siblings (later positions win ties).

@@ -155,6 +155,7 @@ kbd { font: 600 0.7rem var(--font-mono); padding: 1px 6px; border: 1px solid var
 .reg.new { background: var(--warn-soft); color: var(--warn); }
 .total { font: 600 0.85rem var(--font-body); font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
+.l6 { display: inline-block; margin-left: .4em; padding: 0 .4em; border-radius: 4px; font-size: .78em; color: var(--muted); border: 1px dashed currentColor; }
 </style>
 
 <header class="top">
@@ -486,7 +487,7 @@ function card(item) {
           o.concept ? (o.registered ? el('span', { class: 'reg shared', text: (o.usedBy && o.usedBy.length ? 'Shared · ' + o.usedBy.join(', ') : 'Registered') }) : el('span', { class: 'reg new', text: 'New concept · needs your approval', title: 'Not in the concept registry yet. Accepting it registers it (ADR 0019).' })) : null,
           o.jev != null ? el('span', { class: 'reg shared', text: 'Jev ' + o.jev.toFixed(2) }) : null,
           sugg ? el('span', { class: 'sugg', text: 'Suggested: ' + item.preselectWhy }) : null),
-        el('details', {}, el('summary', { text: o.voters[0].rationale }), o.voters.map((v) => el('p', {}, el('b', { text: v.model.replace(/^claude-/, '') + ': ' }), v.rationale)))),
+        el('details', {}, el('summary', { text: o.voters[0].rationale }), o.voters.map((v) => el('p', {}, el('b', { text: v.model.replace(/^claude-/, '') + ': ' }), v.rationale, v.l6 && v.l6.length ? el('span', { class: 'l6', text: ' L6: ' + v.l6.join(', '), title: 'This rationale breaks the wording rule L6 (docs/controlled-language.md section 8). Shown as written; it was not rewritten.' }) : null)))),
       !d ? el('button', { class: sugg ? 'primary' : '', text: 'Accept', disabled: !canWrite, onclick: () => decideOpt(item, i) }) : el('span')));
   });
   if (item.jev) {
