@@ -4,12 +4,31 @@
   "sourceVersion": "20.6.1",
   "mappings": [
     {
+      "id": "m-c409cf06f688",
+      "token": "border.width.default",
+      "concept": "dsi:concept/shape/property-border-width/emphasis-default",
+      "match": "broad",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role; a step covers part of its role (ADR 0013).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T07:29:47.529Z",
+        "method": "map-scales-v2"
+      },
+      "review": {
+        "by": "terms+classifier",
+        "at": "2026-11-01T07:29:47.529Z",
+        "note": "Deterministic: every word is an approved term or a step word."
+      }
+    },
+    {
       "id": "m-e68c86bf668e",
       "token": "border.width.default",
       "concept": "dsi:concept/shape/property-border-width",
       "match": "broad",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role; a step covers part of its role (ADR 0013).",
       "provenance": {
         "agent": "dsi-classify",
@@ -18,9 +37,10 @@
       },
       "review": {
         "by": "terms+classifier",
-        "at": "2026-11-01T07:15:48.071Z",
-        "note": "Deterministic: every word is an approved term or a step word."
-      }
+        "at": "2026-11-01T07:29:47.529Z",
+        "note": "Re-derived as dsi:concept/shape/property-border-width/emphasis-default (broad)."
+      },
+      "supersededBy": "m-c409cf06f688"
     },
     {
       "id": "m-30ab96511ade",
@@ -76,33 +96,43 @@
       }
     },
     {
-      "id": "m-266cf7239e48",
+      "id": "m-91311d343d14",
       "token": "color.background.accent.blue.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent blue 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian blue accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-548a726286b8",
+      "id": "m-d24fd6434c10",
       "token": "color.background.accent.blue.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent blue 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian blue accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -211,33 +241,43 @@
       }
     },
     {
-      "id": "m-9c982a4261f1",
+      "id": "m-6969dfa398ea",
       "token": "color.background.accent.blue.subtlest.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent blue 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtlest/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian blue accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-f9853d78107d",
+      "id": "m-e8ef168b5f53",
       "token": "color.background.accent.blue.subtlest.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent blue 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtlest/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian blue accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -256,33 +296,43 @@
       }
     },
     {
-      "id": "m-ed444b23354f",
+      "id": "m-6f14b179b441",
       "token": "color.background.accent.gray.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent gray 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian gray accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-3837a1d9676d",
+      "id": "m-83d97e0137ca",
       "token": "color.background.accent.gray.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent gray 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian gray accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -391,33 +441,43 @@
       }
     },
     {
-      "id": "m-b35793674696",
+      "id": "m-1835508711ee",
       "token": "color.background.accent.gray.subtlest.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent gray 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtlest/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian gray accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-8fff993cb1c8",
+      "id": "m-5acda1e26ee0",
       "token": "color.background.accent.gray.subtlest.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent gray 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtlest/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian gray accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -436,33 +496,43 @@
       }
     },
     {
-      "id": "m-03306c46c563",
+      "id": "m-e00dd3e83df5",
       "token": "color.background.accent.green.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent green 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian green accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-09df0c30bd71",
+      "id": "m-03d7f3394562",
       "token": "color.background.accent.green.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent green 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian green accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -571,33 +641,43 @@
       }
     },
     {
-      "id": "m-50b8516a40f8",
+      "id": "m-3211bd187e25",
       "token": "color.background.accent.green.subtlest.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent green 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtlest/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian green accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-5ba6aef43f57",
+      "id": "m-345bdf7e3c59",
       "token": "color.background.accent.green.subtlest.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent green 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtlest/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian green accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -616,33 +696,43 @@
       }
     },
     {
-      "id": "m-af141c79e387",
+      "id": "m-f4969db80297",
       "token": "color.background.accent.lime.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent lime 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian lime accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-0ec30b7aeb20",
+      "id": "m-2b1f3e7b2149",
       "token": "color.background.accent.lime.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent lime 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian lime accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -751,33 +841,43 @@
       }
     },
     {
-      "id": "m-e0ac97c5d440",
+      "id": "m-8de09bd1ec40",
       "token": "color.background.accent.lime.subtlest.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent lime 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtlest/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian lime accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-9b5fb4e9a246",
+      "id": "m-a27975123e57",
       "token": "color.background.accent.lime.subtlest.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent lime 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtlest/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian lime accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -796,33 +896,43 @@
       }
     },
     {
-      "id": "m-82ac4c3c71d1",
+      "id": "m-c140f511ccf4",
       "token": "color.background.accent.magenta.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent magenta 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian magenta accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-72e210d66564",
+      "id": "m-d9411b71af88",
       "token": "color.background.accent.magenta.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent magenta 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian magenta accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -931,33 +1041,43 @@
       }
     },
     {
-      "id": "m-83cec7c71710",
+      "id": "m-2a6da8184a96",
       "token": "color.background.accent.magenta.subtlest.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent magenta 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtlest/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian magenta accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-a8dce41cbf88",
+      "id": "m-f0b6fd372934",
       "token": "color.background.accent.magenta.subtlest.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent magenta 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtlest/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian magenta accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -976,33 +1096,43 @@
       }
     },
     {
-      "id": "m-5d7924066a74",
+      "id": "m-11b40332b381",
       "token": "color.background.accent.orange.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent orange 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian orange accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-729215523052",
+      "id": "m-62d2098f3e77",
       "token": "color.background.accent.orange.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent orange 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian orange accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1111,33 +1241,43 @@
       }
     },
     {
-      "id": "m-9e57e3a290e3",
+      "id": "m-af807e11d48b",
       "token": "color.background.accent.orange.subtlest.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent orange 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtlest/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian orange accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-583696fcf2db",
+      "id": "m-420152e8ba4c",
       "token": "color.background.accent.orange.subtlest.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent orange 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtlest/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian orange accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1156,33 +1296,43 @@
       }
     },
     {
-      "id": "m-e7e7d6480898",
+      "id": "m-56db6807ab23",
       "token": "color.background.accent.purple.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent purple 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian purple accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-c2aabed2be80",
+      "id": "m-ad0cc41914c9",
       "token": "color.background.accent.purple.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent purple 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian purple accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1291,33 +1441,43 @@
       }
     },
     {
-      "id": "m-1d6b8fc88e68",
+      "id": "m-2989154c0c31",
       "token": "color.background.accent.purple.subtlest.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent purple 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtlest/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian purple accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-06ae1950d78d",
+      "id": "m-be3f2f156de3",
       "token": "color.background.accent.purple.subtlest.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent purple 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtlest/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian purple accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1336,33 +1496,43 @@
       }
     },
     {
-      "id": "m-cde2f4f14cc8",
+      "id": "m-2811576b62ac",
       "token": "color.background.accent.red.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent red 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian red accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-75e3e60a2702",
+      "id": "m-8ffdcc764a54",
       "token": "color.background.accent.red.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent red 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian red accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1471,33 +1641,43 @@
       }
     },
     {
-      "id": "m-e6b7aa8194ff",
+      "id": "m-1410b8263d5f",
       "token": "color.background.accent.red.subtlest.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent red 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtlest/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian red accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-6a4e2eb44d32",
+      "id": "m-6c178a289866",
       "token": "color.background.accent.red.subtlest.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent red 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtlest/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian red accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1516,33 +1696,43 @@
       }
     },
     {
-      "id": "m-4b8086d92e4a",
+      "id": "m-d88734668b06",
       "token": "color.background.accent.teal.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent teal 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian teal accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-7349ece49c55",
+      "id": "m-c2f13560d1c3",
       "token": "color.background.accent.teal.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent teal 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian teal accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1651,33 +1841,43 @@
       }
     },
     {
-      "id": "m-c0c025d9a7cc",
+      "id": "m-34d02be3e10b",
       "token": "color.background.accent.teal.subtlest.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent teal 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtlest/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian teal accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-43e36e215138",
+      "id": "m-33b8d52d4a99",
       "token": "color.background.accent.teal.subtlest.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent teal 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtlest/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian teal accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1696,33 +1896,43 @@
       }
     },
     {
-      "id": "m-d825c9ac2fc3",
+      "id": "m-530de208f35d",
       "token": "color.background.accent.yellow.bolder.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent yellow 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-strong/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian yellow accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-bea7e3a206f8",
+      "id": "m-80af6d0ed8f8",
       "token": "color.background.accent.yellow.bolder.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-strong/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent yellow 'bolder' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-strong/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian yellow accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; bolder is step strong of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1831,33 +2041,43 @@
       }
     },
     {
-      "id": "m-9e2dc9faffd8",
+      "id": "m-f4733c7eccb3",
       "token": "color.background.accent.yellow.subtlest.hovered",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-hover",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent yellow 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Hovered state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtlest/state-hover",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian yellow accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-ccea4bc36354",
+      "id": "m-c2cf07391e8f",
       "token": "color.background.accent.yellow.subtlest.pressed",
-      "concept": "dsi:concept/color/usage-categorical/property-background/emphasis-subtlest/state-active",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Accent yellow 'subtlest' background with no meaning tied to the color (colored tags, user-chosen colors): one slot of a categorical hue set. Atlassian's 4-step ladder subtlest/subtler/subtle/bolder maps in order to subtlest/subtle/default/strong. Pressed state.",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtlest/state-active",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Atlassian yellow accent background, \"no meaning tied to the color\" (categorical, e.g. tags); hue named; subtlest is step subtlest of the 4-step accent ladder (subtlest/subtler/subtle/bolder) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1880,14 +2100,19 @@
       "token": "color.background.brand.bold.hovered",
       "concept": "dsi:concept/color/intent-accent/property-background/emphasis-strong/state-hover",
       "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Brand background ('bold'); brand maps to Accent (ADR 0008, close: Atlassian brand blue). Hovered state.",
+      "confidence": 0.64,
+      "status": "approved",
+      "rationale": "Brand background, bold step hovered; brand -> accent is close (ADR 0008).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1895,14 +2120,19 @@
       "token": "color.background.brand.bold.pressed",
       "concept": "dsi:concept/color/intent-accent/property-background/emphasis-strong/state-active",
       "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Brand background ('bold'); brand maps to Accent (ADR 0008, close: Atlassian brand blue). Pressed state.",
+      "confidence": 0.64,
+      "status": "approved",
+      "rationale": "Brand background, bold step pressed; brand -> accent is close (ADR 0008).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1925,14 +2155,19 @@
       "token": "color.background.brand.boldest.hovered",
       "concept": "dsi:concept/color/intent-accent/property-background/emphasis-strongest/state-hover",
       "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Brand background ('boldest'); brand maps to Accent (ADR 0008, close: Atlassian brand blue). Hovered state.",
+      "confidence": 0.64,
+      "status": "approved",
+      "rationale": "Brand background, boldest step hovered; brand -> accent is close (ADR 0008).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -1940,14 +2175,19 @@
       "token": "color.background.brand.boldest.pressed",
       "concept": "dsi:concept/color/intent-accent/property-background/emphasis-strongest/state-active",
       "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Brand background ('boldest'); brand maps to Accent (ADR 0008, close: Atlassian brand blue). Pressed state.",
+      "confidence": 0.64,
+      "status": "approved",
+      "rationale": "Brand background, boldest step pressed; brand -> accent is close (ADR 0008).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -2031,33 +2271,43 @@
       }
     },
     {
-      "id": "m-4867760e17c4",
+      "id": "m-45291ad7fde1",
       "token": "color.background.danger.bold.hovered",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-strong/state-hover",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Danger background, 'bold' step. Atlassian's ladder subtler < subtle < bold (subtle 'sits between subtler and bold') maps to subtlest/subtle/strong; base .default unbound. Hovered state.",
+      "match": "exact",
+      "confidence": 0.81,
+      "status": "approved",
+      "rationale": "Vibrant danger fill (buttons, banners, checked toggles) hovered: strong emphasis.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-df64dfffb72e",
+      "id": "m-052af0c141a3",
       "token": "color.background.danger.bold.pressed",
       "concept": "dsi:concept/color/intent-danger/property-background/emphasis-strong/state-active",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Danger background, 'bold' step. Atlassian's ladder subtler < subtle < bold (subtle 'sits between subtler and bold') maps to subtlest/subtle/strong; base .default unbound. Pressed state.",
+      "match": "exact",
+      "confidence": 0.81,
+      "status": "approved",
+      "rationale": "Vibrant danger fill (buttons, banners, checked toggles) pressed: strong emphasis.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -2311,33 +2561,43 @@
       }
     },
     {
-      "id": "m-42c89e627932",
+      "id": "m-aa76a1b145d0",
       "token": "color.background.information.bold.hovered",
       "concept": "dsi:concept/color/intent-info/property-background/emphasis-strong/state-hover",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Information background, 'bold' step. Atlassian's ladder subtler < subtle < bold (subtle 'sits between subtler and bold') maps to subtlest/subtle/strong; base .default unbound. Hovered state.",
+      "match": "exact",
+      "confidence": 0.81,
+      "status": "approved",
+      "rationale": "Vibrant information fill (buttons, banners, checked toggles) hovered: strong emphasis.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-d9a374c61b92",
+      "id": "m-ce01cc937cb8",
       "token": "color.background.information.bold.pressed",
       "concept": "dsi:concept/color/intent-info/property-background/emphasis-strong/state-active",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Information background, 'bold' step. Atlassian's ladder subtler < subtle < bold (subtle 'sits between subtler and bold') maps to subtlest/subtle/strong; base .default unbound. Pressed state.",
+      "match": "exact",
+      "confidence": 0.81,
+      "status": "approved",
+      "rationale": "Vibrant information fill (buttons, banners, checked toggles) pressed: strong emphasis.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -2716,33 +2976,43 @@
       }
     },
     {
-      "id": "m-5968d4ecd886",
+      "id": "m-977b9eb62076",
       "token": "color.background.neutral.bold.hovered",
       "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-strong/state-hover",
-      "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Vibrant neutral background (announcement banners), bold -> strong. Atlassian names the role neutral explicitly, so intent-neutral rather than an unbound fill. Hovered state.",
+      "match": "exact",
+      "confidence": 0.76,
+      "status": "approved",
+      "rationale": "Vibrant neutral fill (announcement banners) hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-7feaf8b96d8f",
+      "id": "m-bd3ec6b9a6e9",
       "token": "color.background.neutral.bold.pressed",
       "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-strong/state-active",
-      "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Vibrant neutral background (announcement banners), bold -> strong. Atlassian names the role neutral explicitly, so intent-neutral rather than an unbound fill. Pressed state.",
+      "match": "exact",
+      "confidence": 0.76,
+      "status": "approved",
+      "rationale": "Vibrant neutral fill (announcement banners) pressed.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -2896,48 +3166,23 @@
       }
     },
     {
-      "id": "m-595d8f8e3cb7",
-      "token": "color.background.selected.bold.hovered",
-      "concept": "dsi:concept/color/property-background/emphasis-strong/state-hover+selected",
-      "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Bold background of selected controls (checked checkbox, selected radio). Selected and hovered.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
-        "method": "color-v1"
-      }
-    },
-    {
       "id": "m-b97d12c99c62",
       "token": "color.background.selected.bold.hovered",
       "concept": "dsi:concept/color/property-background/emphasis-strong/state-hover+selected",
       "match": "exact",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Background of selected controls (bold).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T07:08:45.676Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-2243fc199693",
-      "token": "color.background.selected.bold.pressed",
-      "concept": "dsi:concept/color/property-background/emphasis-strong/state-active+selected",
-      "match": "close",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Bold background of selected controls (checked checkbox, selected radio). Selected and pressed.",
+      "confidence": 0.76,
+      "status": "approved",
+      "rationale": "Selected bold control background while hovered.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -2945,14 +3190,19 @@
       "token": "color.background.selected.bold.pressed",
       "concept": "dsi:concept/color/property-background/emphasis-strong/state-active+selected",
       "match": "exact",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Background of selected controls (bold).",
+      "confidence": 0.76,
+      "status": "approved",
+      "rationale": "Selected bold control background while pressed.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T07:08:45.676Z",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -3036,33 +3286,43 @@
       }
     },
     {
-      "id": "m-0136aa94a581",
+      "id": "m-eace7ef96b73",
       "token": "color.background.success.bold.hovered",
       "concept": "dsi:concept/color/intent-success/property-background/emphasis-strong/state-hover",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Success background, 'bold' step. Atlassian's ladder subtler < subtle < bold (subtle 'sits between subtler and bold') maps to subtlest/subtle/strong; base .default unbound. Hovered state.",
+      "match": "exact",
+      "confidence": 0.81,
+      "status": "approved",
+      "rationale": "Vibrant success fill (buttons, banners, checked toggles) hovered: strong emphasis.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-98e9de9c4ba4",
+      "id": "m-38dfdaf0ed03",
       "token": "color.background.success.bold.pressed",
       "concept": "dsi:concept/color/intent-success/property-background/emphasis-strong/state-active",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Success background, 'bold' step. Atlassian's ladder subtler < subtle < bold (subtle 'sits between subtler and bold') maps to subtlest/subtle/strong; base .default unbound. Pressed state.",
+      "match": "exact",
+      "confidence": 0.81,
+      "status": "approved",
+      "rationale": "Vibrant success fill (buttons, banners, checked toggles) pressed: strong emphasis.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -3296,33 +3556,43 @@
       }
     },
     {
-      "id": "m-3a55c16f8390",
+      "id": "m-d1c94f88f820",
       "token": "color.background.warning.bold.hovered",
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-strong/state-hover",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Warning background, 'bold' step. Atlassian's ladder subtler < subtle < bold (subtle 'sits between subtler and bold') maps to subtlest/subtle/strong; base .default unbound. Hovered state.",
+      "match": "exact",
+      "confidence": 0.81,
+      "status": "approved",
+      "rationale": "Vibrant warning fill (buttons, banners, checked toggles) hovered: strong emphasis.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-3ca49c29d80f",
+      "id": "m-296bcdee438e",
       "token": "color.background.warning.bold.pressed",
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-strong/state-active",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Warning background, 'bold' step. Atlassian's ladder subtler < subtle < bold (subtle 'sits between subtler and bold') maps to subtlest/subtle/strong; base .default unbound. Pressed state.",
+      "match": "exact",
+      "confidence": 0.81,
+      "status": "approved",
+      "rationale": "Vibrant warning fill (buttons, banners, checked toggles) pressed: strong emphasis.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -3616,18 +3886,23 @@
       }
     },
     {
-      "id": "m-673b11ac7e99",
+      "id": "m-bbe461167395",
       "token": "color.border.accent.blue",
-      "concept": "dsi:concept/color/usage-categorical/property-border",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Blue border with no meaning tied to the color: one slot of the categorical accent hues. Group base token (resolves only in legacy/brand-refresh themes).",
+      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-border",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "blue accent border with no meaning tied to the color (categorical); base step of the family (group token, same description as .default).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -3646,33 +3921,43 @@
       }
     },
     {
-      "id": "m-61e1071bfcbf",
+      "id": "m-126a83b8bac7",
       "token": "color.border.accent.blue.subtle",
-      "concept": "dsi:concept/color/usage-categorical/property-border/emphasis-subtle",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Blue border with no meaning tied to the color: one slot of the categorical accent hues. Decorative subtle variant.",
+      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Decorative blue accent border below 3:1 contrast: categorical blue border, subtle step.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-3aad52290b0f",
+      "id": "m-cf6594bce7cc",
       "token": "color.border.accent.gray",
-      "concept": "dsi:concept/color/usage-categorical/property-border",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Gray border with no meaning tied to the color: one slot of the categorical accent hues. Group base token (resolves only in legacy/brand-refresh themes).",
+      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-border",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "gray accent border with no meaning tied to the color (categorical); base step of the family (group token, same description as .default).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -3691,33 +3976,43 @@
       }
     },
     {
-      "id": "m-0dbc89d51352",
+      "id": "m-b043059f2f26",
       "token": "color.border.accent.gray.subtle",
-      "concept": "dsi:concept/color/usage-categorical/property-border/emphasis-subtle",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Gray border with no meaning tied to the color: one slot of the categorical accent hues. Decorative subtle variant.",
+      "concept": "dsi:concept/color/usage-categorical/hue-gray/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Decorative gray accent border below 3:1 contrast: categorical gray border, subtle step.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-3a24164ff145",
+      "id": "m-862f2605b031",
       "token": "color.border.accent.green",
-      "concept": "dsi:concept/color/usage-categorical/property-border",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Green border with no meaning tied to the color: one slot of the categorical accent hues. Group base token (resolves only in legacy/brand-refresh themes).",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-border",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "green accent border with no meaning tied to the color (categorical); base step of the family (group token, same description as .default).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -3736,33 +4031,43 @@
       }
     },
     {
-      "id": "m-5396ec02b01e",
+      "id": "m-3f27ce6c9e42",
       "token": "color.border.accent.green.subtle",
-      "concept": "dsi:concept/color/usage-categorical/property-border/emphasis-subtle",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Green border with no meaning tied to the color: one slot of the categorical accent hues. Decorative subtle variant.",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Decorative green accent border below 3:1 contrast: categorical green border, subtle step.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-d5cbb4268e9c",
+      "id": "m-0732dfe0bb40",
       "token": "color.border.accent.lime",
-      "concept": "dsi:concept/color/usage-categorical/property-border",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Lime border with no meaning tied to the color: one slot of the categorical accent hues. Group base token (resolves only in legacy/brand-refresh themes).",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-border",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "lime accent border with no meaning tied to the color (categorical); base step of the family (group token, same description as .default).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -3781,33 +4086,43 @@
       }
     },
     {
-      "id": "m-2a34ed973c7e",
+      "id": "m-f1ea40b79e46",
       "token": "color.border.accent.lime.subtle",
-      "concept": "dsi:concept/color/usage-categorical/property-border/emphasis-subtle",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Lime border with no meaning tied to the color: one slot of the categorical accent hues. Decorative subtle variant.",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Decorative lime accent border below 3:1 contrast: categorical lime border, subtle step.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-fdb76ca07721",
+      "id": "m-f65d6d49a0c3",
       "token": "color.border.accent.magenta",
-      "concept": "dsi:concept/color/usage-categorical/property-border",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Magenta border with no meaning tied to the color: one slot of the categorical accent hues. Group base token (resolves only in legacy/brand-refresh themes).",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-border",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "magenta accent border with no meaning tied to the color (categorical); base step of the family (group token, same description as .default).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -3826,33 +4141,43 @@
       }
     },
     {
-      "id": "m-c3e20d5b62a8",
+      "id": "m-c01dd343c3f5",
       "token": "color.border.accent.magenta.subtle",
-      "concept": "dsi:concept/color/usage-categorical/property-border/emphasis-subtle",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Magenta border with no meaning tied to the color: one slot of the categorical accent hues. Decorative subtle variant.",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Decorative magenta accent border below 3:1 contrast: categorical magenta border, subtle step.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-697d2b368e8a",
+      "id": "m-c4a8dcdbc77c",
       "token": "color.border.accent.orange",
-      "concept": "dsi:concept/color/usage-categorical/property-border",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Orange border with no meaning tied to the color: one slot of the categorical accent hues. Group base token (resolves only in legacy/brand-refresh themes).",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-border",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "orange accent border with no meaning tied to the color (categorical); base step of the family (group token, same description as .default).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -3871,33 +4196,43 @@
       }
     },
     {
-      "id": "m-cc6babd05f6c",
+      "id": "m-edcbd8fc6bf2",
       "token": "color.border.accent.orange.subtle",
-      "concept": "dsi:concept/color/usage-categorical/property-border/emphasis-subtle",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Orange border with no meaning tied to the color: one slot of the categorical accent hues. Decorative subtle variant.",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Decorative orange accent border below 3:1 contrast: categorical orange border, subtle step.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-a8f39dc8ab9e",
+      "id": "m-e02e8388c4d7",
       "token": "color.border.accent.purple",
-      "concept": "dsi:concept/color/usage-categorical/property-border",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Purple border with no meaning tied to the color: one slot of the categorical accent hues. Group base token (resolves only in legacy/brand-refresh themes).",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-border",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "purple accent border with no meaning tied to the color (categorical); base step of the family (group token, same description as .default).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -3916,33 +4251,43 @@
       }
     },
     {
-      "id": "m-5f7c4b37526b",
+      "id": "m-ffceaca27118",
       "token": "color.border.accent.purple.subtle",
-      "concept": "dsi:concept/color/usage-categorical/property-border/emphasis-subtle",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Purple border with no meaning tied to the color: one slot of the categorical accent hues. Decorative subtle variant.",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Decorative purple accent border below 3:1 contrast: categorical purple border, subtle step.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-490f184a8642",
+      "id": "m-61bf15124900",
       "token": "color.border.accent.red",
-      "concept": "dsi:concept/color/usage-categorical/property-border",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Red border with no meaning tied to the color: one slot of the categorical accent hues. Group base token (resolves only in legacy/brand-refresh themes).",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-border",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "red accent border with no meaning tied to the color (categorical); base step of the family (group token, same description as .default).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -3961,33 +4306,43 @@
       }
     },
     {
-      "id": "m-72cf3f367703",
+      "id": "m-cdfbb5e30c4f",
       "token": "color.border.accent.red.subtle",
-      "concept": "dsi:concept/color/usage-categorical/property-border/emphasis-subtle",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Red border with no meaning tied to the color: one slot of the categorical accent hues. Decorative subtle variant.",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Decorative red accent border below 3:1 contrast: categorical red border, subtle step.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-cf9810c41148",
+      "id": "m-7176f2c135f3",
       "token": "color.border.accent.teal",
-      "concept": "dsi:concept/color/usage-categorical/property-border",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Teal border with no meaning tied to the color: one slot of the categorical accent hues. Group base token (resolves only in legacy/brand-refresh themes).",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-border",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "teal accent border with no meaning tied to the color (categorical); base step of the family (group token, same description as .default).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -4006,33 +4361,43 @@
       }
     },
     {
-      "id": "m-0ce9421763c1",
+      "id": "m-ccb009668949",
       "token": "color.border.accent.teal.subtle",
-      "concept": "dsi:concept/color/usage-categorical/property-border/emphasis-subtle",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Teal border with no meaning tied to the color: one slot of the categorical accent hues. Decorative subtle variant.",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Decorative teal accent border below 3:1 contrast: categorical teal border, subtle step.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-e55b5e79af57",
+      "id": "m-aeef8a83e16d",
       "token": "color.border.accent.yellow",
-      "concept": "dsi:concept/color/usage-categorical/property-border",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Yellow border with no meaning tied to the color: one slot of the categorical accent hues. Group base token (resolves only in legacy/brand-refresh themes).",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-border",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "yellow accent border with no meaning tied to the color (categorical); base step of the family (group token, same description as .default).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -4051,18 +4416,23 @@
       }
     },
     {
-      "id": "m-9af55c34c873",
+      "id": "m-a228494c9662",
       "token": "color.border.accent.yellow.subtle",
-      "concept": "dsi:concept/color/usage-categorical/property-border/emphasis-subtle",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Yellow border with no meaning tied to the color: one slot of the categorical accent hues. Decorative subtle variant.",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-border/emphasis-subtle",
+      "match": "exact",
+      "confidence": 0.75,
+      "status": "approved",
+      "rationale": "Decorative yellow accent border below 3:1 contrast: categorical yellow border, subtle step.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -5061,18 +5431,23 @@
       }
     },
     {
-      "id": "m-8a81cb0c67b2",
+      "id": "m-a3f595c33ece",
       "token": "color.icon.accent.blue",
-      "concept": "dsi:concept/color/usage-categorical/property-icon",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Blue icon with no meaning tied to the color (file type icons): one categorical hue slot.",
+      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-icon",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "blue accent icon with no meaning tied to the color (file type icons): categorical blue icon.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -5091,123 +5466,163 @@
       }
     },
     {
-      "id": "m-314f6daa088a",
+      "id": "m-2800053e558e",
       "token": "color.icon.accent.green",
-      "concept": "dsi:concept/color/usage-categorical/property-icon",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Green icon with no meaning tied to the color (file type icons): one categorical hue slot.",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-icon",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "green accent icon with no meaning tied to the color (file type icons): categorical green icon.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-d0a102a866da",
+      "id": "m-9b84ad6e2b22",
       "token": "color.icon.accent.lime",
-      "concept": "dsi:concept/color/usage-categorical/property-icon",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Lime icon with no meaning tied to the color (file type icons): one categorical hue slot.",
+      "concept": "dsi:concept/color/usage-categorical/hue-lime/property-icon",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "lime accent icon with no meaning tied to the color (file type icons): categorical lime icon.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-84a72b33dbbe",
+      "id": "m-5bf93b467481",
       "token": "color.icon.accent.magenta",
-      "concept": "dsi:concept/color/usage-categorical/property-icon",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Magenta icon with no meaning tied to the color (file type icons): one categorical hue slot.",
+      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-icon",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "magenta accent icon with no meaning tied to the color (file type icons): categorical magenta icon.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-4b94ce11edf8",
+      "id": "m-fcf2ea63fb10",
       "token": "color.icon.accent.orange",
-      "concept": "dsi:concept/color/usage-categorical/property-icon",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Orange icon with no meaning tied to the color (file type icons): one categorical hue slot.",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-icon",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "orange accent icon with no meaning tied to the color (file type icons): categorical orange icon.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-2ffbba3ae919",
+      "id": "m-386bcffd65d5",
       "token": "color.icon.accent.purple",
-      "concept": "dsi:concept/color/usage-categorical/property-icon",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Purple icon with no meaning tied to the color (file type icons): one categorical hue slot.",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-icon",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "purple accent icon with no meaning tied to the color (file type icons): categorical purple icon.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-78bc8eb04f11",
+      "id": "m-985bb4676d1d",
       "token": "color.icon.accent.red",
-      "concept": "dsi:concept/color/usage-categorical/property-icon",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Red icon with no meaning tied to the color (file type icons): one categorical hue slot.",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-icon",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "red accent icon with no meaning tied to the color (file type icons): categorical red icon.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-68f7fa7fea26",
+      "id": "m-42006632efa6",
       "token": "color.icon.accent.teal",
-      "concept": "dsi:concept/color/usage-categorical/property-icon",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Teal icon with no meaning tied to the color (file type icons): one categorical hue slot.",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-icon",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "teal accent icon with no meaning tied to the color (file type icons): categorical teal icon.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
-      "id": "m-592ef506e8f7",
+      "id": "m-0bdfc34c0ff9",
       "token": "color.icon.accent.yellow",
-      "concept": "dsi:concept/color/usage-categorical/property-icon",
-      "match": "broad",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Yellow icon with no meaning tied to the color (file type icons): one categorical hue slot.",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-icon",
+      "match": "exact",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "yellow accent icon with no meaning tied to the color (file type icons): categorical yellow icon.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -5530,14 +5945,19 @@
       "token": "color.link.pressed",
       "concept": "dsi:concept/color/usage-link/property-text/state-active",
       "match": "exact",
-      "confidence": 0.85,
-      "status": "proposed",
-      "rationale": "Links in a pressed state.",
+      "confidence": 0.8,
+      "status": "approved",
+      "rationale": "Pressed link.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -5565,14 +5985,19 @@
       "token": "color.link.visited.pressed",
       "concept": "dsi:concept/color/usage-link/property-text/state-active+visited",
       "match": "exact",
-      "confidence": 0.75,
-      "status": "proposed",
-      "rationale": "Visited links in a pressed state.",
+      "confidence": 0.7,
+      "status": "approved",
+      "rationale": "Visited link in pressed state.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -5810,14 +6235,19 @@
       "token": "color.skeleton.subtle",
       "concept": "dsi:concept/color/usage-skeleton/property-background/emphasis-subtle",
       "match": "close",
-      "confidence": 0.7,
-      "status": "proposed",
+      "confidence": 0.6,
+      "status": "approved",
       "rationale": "Pulse/shimmer effect of skeleton loading states, lighter than the skeleton base.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T07:10:28Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.293Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -6711,7 +7141,7 @@
       "concept": "dsi:concept/elevation/property-shadow",
       "match": "broad",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role; a step covers part of its role (ADR 0013).",
       "provenance": {
         "agent": "dsi-classify",
@@ -6720,7 +7150,27 @@
       },
       "review": {
         "by": "terms+classifier",
-        "at": "2026-11-01T07:15:48.071Z",
+        "at": "2026-11-01T07:29:47.529Z",
+        "note": "Re-derived as dsi:concept/elevation/property-shadow/emphasis-default (broad)."
+      },
+      "supersededBy": "m-67dbc3f5d494"
+    },
+    {
+      "id": "m-67dbc3f5d494",
+      "token": "elevation.shadow.overflow.default",
+      "concept": "dsi:concept/elevation/property-shadow/emphasis-default",
+      "match": "broad",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role; a step covers part of its role (ADR 0013).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T07:29:47.529Z",
+        "method": "map-scales-v2"
+      },
+      "review": {
+        "by": "terms+classifier",
+        "at": "2026-11-01T07:29:47.529Z",
         "note": "Deterministic: every word is an approved term or a step word."
       }
     },
@@ -6782,14 +7232,19 @@
       "token": "elevation.surface.container.hovered",
       "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
       "match": "close",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Neutral translucent container surface background. Hovered state.",
+      "confidence": 0.65,
+      "status": "approved",
+      "rationale": "Neutral translucent container surface hovered; nuance: translucent tint over the parent surface.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -6797,14 +7252,19 @@
       "token": "elevation.surface.container.pressed",
       "concept": "dsi:concept/color/usage-surface/property-background/state-active",
       "match": "close",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "Neutral translucent container surface background. Pressed state.",
+      "confidence": 0.65,
+      "status": "approved",
+      "rationale": "Neutral translucent container surface pressed; nuance: translucent tint over the parent surface.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
-        "at": "2026-11-01T07:10:28Z",
+        "at": "2026-11-01T07:23:58Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T07:29:47.037Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {
@@ -7129,12 +7589,31 @@
       }
     },
     {
+      "id": "m-619d39f973bd",
+      "token": "font.weight.bold",
+      "concept": "dsi:concept/typography/property-font-weight/emphasis-strong",
+      "match": "broad",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role; a step covers part of its role (ADR 0013).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T07:29:47.529Z",
+        "method": "map-scales-v2"
+      },
+      "review": {
+        "by": "terms+classifier",
+        "at": "2026-11-01T07:29:47.529Z",
+        "note": "Deterministic: every word is an approved term or a step word."
+      }
+    },
+    {
       "id": "m-9acedecb33c8",
       "token": "font.weight.bold",
       "concept": "dsi:concept/typography/property-font-weight",
       "match": "broad",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role; a step covers part of its role (ADR 0013).",
       "provenance": {
         "agent": "dsi-classify",
@@ -7143,9 +7622,10 @@
       },
       "review": {
         "by": "terms+classifier",
-        "at": "2026-11-01T07:15:48.071Z",
-        "note": "Deterministic: every word is an approved term or a step word."
-      }
+        "at": "2026-11-01T07:29:47.529Z",
+        "note": "Re-derived as dsi:concept/typography/property-font-weight/emphasis-strong (broad)."
+      },
+      "supersededBy": "m-619d39f973bd"
     },
     {
       "id": "m-5784ca592e7b",
@@ -7381,7 +7861,7 @@
       "concept": "dsi:concept/motion/property-easing",
       "match": "broad",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role; a step covers part of its role (ADR 0013).",
       "provenance": {
         "agent": "dsi-classify",
@@ -7390,7 +7870,46 @@
       },
       "review": {
         "by": "terms+classifier",
-        "at": "2026-11-01T07:15:48.071Z",
+        "at": "2026-11-01T07:29:47.529Z",
+        "note": "Re-derived as dsi:concept/motion/property-easing/emphasis-strong (broad)."
+      },
+      "supersededBy": "m-c4e87d4eaee0"
+    },
+    {
+      "id": "m-c4e87d4eaee0",
+      "token": "motion.easing.inout.bold",
+      "concept": "dsi:concept/motion/property-easing/emphasis-strong",
+      "match": "broad",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role; a step covers part of its role (ADR 0013).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T07:29:47.529Z",
+        "method": "map-scales-v2"
+      },
+      "review": {
+        "by": "terms+classifier",
+        "at": "2026-11-01T07:29:47.529Z",
+        "note": "Deterministic: every word is an approved term or a step word."
+      }
+    },
+    {
+      "id": "m-62d7552993a9",
+      "token": "motion.easing.out.bold",
+      "concept": "dsi:concept/motion/property-easing/emphasis-strong",
+      "match": "broad",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role; a step covers part of its role (ADR 0013).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T07:29:47.529Z",
+        "method": "map-scales-v2"
+      },
+      "review": {
+        "by": "terms+classifier",
+        "at": "2026-11-01T07:29:47.529Z",
         "note": "Deterministic: every word is an approved term or a step word."
       }
     },
@@ -7400,7 +7919,7 @@
       "concept": "dsi:concept/motion/property-easing",
       "match": "broad",
       "confidence": 1,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Role and type roles from approved naming terms explain the whole name; the DTCG type fits the role; a step covers part of its role (ADR 0013).",
       "provenance": {
         "agent": "dsi-classify",
@@ -7409,9 +7928,10 @@
       },
       "review": {
         "by": "terms+classifier",
-        "at": "2026-11-01T07:15:48.071Z",
-        "note": "Deterministic: every word is an approved term or a step word."
-      }
+        "at": "2026-11-01T07:29:47.529Z",
+        "note": "Re-derived as dsi:concept/motion/property-easing/emphasis-strong (broad)."
+      },
+      "supersededBy": "m-62d7552993a9"
     },
     {
       "id": "m-b91b665af298",
