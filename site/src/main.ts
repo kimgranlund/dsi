@@ -51,7 +51,16 @@ document.addEventListener('click', (e) => {
 window.addEventListener('popstate', route);
 
 // Systems nav
-meta().then((m) => document.getElementById('systems-nav')!.replaceChildren(...m.products.map((p) => el('a', { href: `/system/${p.id}`, 'data-link': true, text: p.name.replace(/ Design System| Design 3/, '') })), el('a', { href: '/component', 'data-link': true, text: 'Components' }), el('a', { href: '/ontology', 'data-link': true, text: 'Ontology' })));
+meta().then((m) => {
+  const menu = el('details', { class: 'nav-systems' }, el('summary', { text: `Systems (${m.products.length})` }), el('div', { class: 'nav-menu' }, m.products.map((p) => el('a', { href: `/system/${p.id}`, 'data-link': true, text: p.name.replace(/ Design System| Design 3/, '') }))));
+  menu.addEventListener('click', (e) => { if ((e.target as Element).closest('a')) menu.removeAttribute('open'); });
+  document.getElementById('systems-nav')!.replaceChildren(menu, el('a', { href: '/component', 'data-link': true, text: 'Components' }), el('a', { href: '/ontology', 'data-link': true, text: 'Ontology' }));
+  // Footer licenses come from each source's recorded license.
+  const byLicense = new Map<string, string[]>();
+  for (const p of m.products) { const l = p.home?.license ?? p.license ?? 'unknown license'; byLicense.set(l, [...(byLicense.get(l) ?? []), p.name.replace(/ Design System| Design 3/, '')]); }
+  const foot = document.querySelector('.site-foot p');
+  if (foot) foot.textContent = `Token values belong to their owners: ${[...byLicense].map(([l, ps]) => `${ps.join(', ')} under ${l.replace('LicenseRef-Shopify-Polaris', 'the Shopify Polaris license')}`).join('; ')}. Mappings and ontology by DesignSystemsIndex, MIT. Every mapping shows how it was reached.`;
+});
 
 // Search: every query word must appear in a row's title or body; title matches rank first.
 const input = document.getElementById('q') as HTMLInputElement;

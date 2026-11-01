@@ -31,7 +31,35 @@ export function exportSite(root: string, dbFile: string, outDir: string): Record
     },
   }));
   const catalog = all('SELECT id, name, category, organization, homepage, description FROM products ORDER BY name');
-  sizes['meta.json'] = write('meta.json', { products, catalog, facets: facetValues, concepts: all('SELECT count(*) n FROM concepts')[0].n });
+  // Homepage facts, all derived from the database and repo files: per-system coverage by category and mapping
+  // status, token counts per layer (scope), audit totals, and one real alias chain per system.
+  const CAT = (concept: string) => { const d = concept.split('/')[1]; return d === 'color' ? 'color' : d === 'typography' ? 'typography' : d === 'motion' ? 'motion' : 'geometry'; };
+  for (const p of products) {
+    const byCat: Record<string, number> = { color: 0, geometry: 0, typography: 0, motion: 0 };
+    for (const r of all('SELECT DISTINCT token, concept FROM mappings WHERE product = ?', p.id)) byCat[CAT(r.concept)]++;
+    const tokensByScope = Object.fromEntries(all("SELECT coalesce(scope, 'other') s, count(*) n FROM tokens WHERE product = ? GROUP BY 1", p.id).map((r) => [r.s, r.n]));
+    const mf = path.join(root, 'mappings', p.id, `${p.version}.mappings.json`);
+    const mfile = fs.existsSync(mf) ? JSON.parse(fs.readFileSync(mf, 'utf8')) : { mappings: [] };
+    const proposed = new Set(mfile.mappings.filter((m: Row) => m.status === 'proposed').map((m: Row) => m.token)).size;
+    const af = path.join(root, 'mappings', p.id, `${p.version}.audit.json`);
+    const audit = fs.existsSync(af) ? JSON.parse(fs.readFileSync(af, 'utf8')).verdicts.reduce((acc: Row, v: Row) => ((acc[v.verdict] = (acc[v.verdict] ?? 0) + 1), acc), {}) : undefined;
+    const components = all('SELECT count(DISTINCT component) n FROM component_sources WHERE product = ? AND absent = 0', p.id)[0].n;
+    const sourcePath = path.join(root, 'sources', p.id, 'source.json');
+    const lic = fs.existsSync(sourcePath) ? JSON.parse(fs.readFileSync(sourcePath, 'utf8')).license : undefined;
+    // The longest alias chain from a component (else semantic) token down to a literal: the layers in one line.
+    const chainOf = (scope: string) => all("SELECT t.path, v.alias_chain, v.display FROM tokens t JOIN token_values v USING (product, path) WHERE t.product = ? AND t.scope = ? AND t.type = 'color' AND v.theme IN (?, '') AND json_array_length(v.alias_chain) >= 1 ORDER BY json_array_length(v.alias_chain) DESC, t.path LIMIT 1", p.id, scope, p.modes.light ?? Object.values(p.modes)[0] ?? '')[0];
+    const ex = chainOf('component') ?? chainOf('semantic');
+    p.home = { byCat, tokensByScope, proposed, audit, components, license: lic?.spdx, status: p.counts.mapped === 0 ? 'not-started' : proposed > 0 ? 'in-progress' : 'mapped', chain: ex ? [ex.path, ...JSON.parse(ex.alias_chain)].slice(0, 6).concat([ex.display]) : undefined };
+  }
+  // A featured chain for the layers diagram: the first candidate that exists, with its alias chain in light mode.
+  const FEATURED = [['material', 'md.comp.filled-button.container-color'], ['primer', 'button.primary.bgColor.rest'], ['spectrum', 'accent-background-color-default']];
+  let featured: Row | undefined;
+  for (const [pid, tp] of FEATURED) {
+    const pr = products.find((x) => x.id === pid);
+    const r = pr && all("SELECT v.alias_chain, v.display FROM token_values v WHERE v.product = ? AND v.path = ? AND v.theme IN (?, '') LIMIT 1", pid, tp, pr.modes.light ?? '')[0];
+    if (r) { featured = { product: pid, steps: [tp, ...JSON.parse(r.alias_chain)], value: r.display, scopes: [tp, ...JSON.parse(r.alias_chain)].map((x: string) => all('SELECT scope FROM tokens WHERE product = ? AND path = ?', pid, x)[0]?.scope ?? null) }; break; }
+  }
+  sizes['meta.json'] = write('meta.json', { products, catalog, facets: facetValues, concepts: all('SELECT count(*) n FROM concepts')[0].n, featured });
 
   const cov = all('SELECT * FROM coverage');
   const byConcept = new Map<string, Row[]>();
