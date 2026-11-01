@@ -5,6 +5,8 @@ type ViewGroup = { id: string; label: string; meaning?: string; native?: string;
 const FACET_PRIORITY = ['usage', 'intent', 'syntax', 'property'] as const;
 const STATE_RANK: Record<string, number> = { hover: 1, active: 2, focus: 3, selected: 4, disabled: 6, visited: 7 };
 const EMPHASIS_SIGNED: Record<string, number> = { subtlest: -2, subtle: -1, default: 0, strong: 1, strongest: 2 };
+/** Base first, then outward, for families that only step one way from their base. */
+const EMPHASIS_OUTWARD: Record<string, number> = { default: 0, subtle: 1, subtlest: 2, strong: 3, strongest: 4 };
 
 /** Hue (0-360) and saturation of a hex display value, for ordering palette families. */
 function hueOf(display?: string): { h: number; s: number } | undefined {
@@ -58,14 +60,37 @@ export async function systemView(main: HTMLElement, p: Product) {
   const facetLabel = (f: string, v: string) => v.split('+').map((x) => m.facets[f]?.find((y) => y.value === x)?.label ?? title(x)).join(' + ');
   const facetsOf = (t: Token) => (t.m[0] ? byIri.get(t.m[0][0])?.facets : undefined);
   /** Base first, then pairs, emphasis as a ramp, then states: the same progression the structure stage uses. */
-  const progression = (a: Token, b: Token) => {
+  const progression = (a: Token, b: Token, ramp = false) => {
     const fa = facetsOf(a) ?? {}, fb = facetsOf(b) ?? {};
-    return (EMPHASIS_SIGNED[fa.emphasis ?? 'default'] ?? 0) - (EMPHASIS_SIGNED[fb.emphasis ?? 'default'] ?? 0) || (STATE_RANK[fa.state ?? ''] ?? 0) - (STATE_RANK[fb.state ?? ''] ?? 0) || a.p.localeCompare(b.p);
+    const rank = ramp ? EMPHASIS_SIGNED : EMPHASIS_OUTWARD;
+    return (rank[fa.emphasis ?? 'default'] ?? 0) - (rank[fb.emphasis ?? 'default'] ?? 0) || (STATE_RANK[fa.state ?? ''] ?? 0) - (STATE_RANK[fb.state ?? ''] ?? 0) || (designOrder.get(a.p) ?? 1e9) - (designOrder.get(b.p) ?? 1e9) || a.p.localeCompare(b.p);
   };
   // Designer order from the system's own structure, used before the generic progression.
   const designOrder = new Map<string, number>();
   (gs?.groups ?? []).forEach((g) => [...g.tokens, ...g.subgroups.flatMap((x) => x.tokens)].forEach((t) => designOrder.set(t, designOrder.size)));
   const byDesign = (a: Token, b: Token) => (designOrder.get(a.p) ?? 1e9) - (designOrder.get(b.p) ?? 1e9) || progression(a, b);
+  const nameWords = (p: string) => p.toLowerCase().split(/[.\-_]+/).filter(Boolean);
+  /**
+   * Sort a mixed list family by family: drop the words every token shares (md, sys, color, on), the first remaining
+   * word is the family (primary, secondary, error). Families come in designer order (first appearance in the
+   * system's structure); inside a family: base, then the emphasis ramp, then states, designer order breaking ties.
+   */
+  const sortList = (items: Token[]) => {
+    if (items.length < 3) return [...items].sort(byDesign);
+    const ws = items.map((t) => nameWords(t.p));
+    const shared = new Set(ws[0].filter((w) => ws.every((x) => x.includes(w))));
+    const family = new Map(items.map((t, i) => [t.p, ws[i].find((w) => !shared.has(w) && !/^\d+$/.test(w)) ?? '']));
+    const famFirst = new Map<string, number>();
+    for (const t of items) { const f = family.get(t.p)!; famFirst.set(f, Math.min(famFirst.get(f) ?? 1e9, designOrder.get(t.p) ?? 1e9)); }
+    // A family whose emphasis runs both below and above its base reads as a ramp; otherwise base first, then outward.
+    const signs = new Map<string, Set<number>>();
+    for (const t of items) { const f = family.get(t.p)!; (signs.get(f) ?? signs.set(f, new Set()).get(f)!).add(Math.sign(EMPHASIS_SIGNED[facetsOf(t)?.emphasis ?? 'default'] ?? 0)); }
+    const ramp = (f: string) => signs.get(f)!.has(-1) && signs.get(f)!.has(1);
+    return [...items].sort((a, b) => {
+      const fa = family.get(a.p)!, fb = family.get(b.p)!;
+      return (famFirst.get(fa)! - famFirst.get(fb)!) || fa.localeCompare(fb) || progression(a, b, ramp(fa)) || byDesign(a, b);
+    });
+  };
   const syntaxRoot = (v: string) => { let cur = v; for (let i = 0; i < 6; i++) { const b = m.facets.syntax?.find((x) => x.value === cur)?.broader; if (!b) break; cur = b; } return cur; };
   const namespaceGroups = (): ViewGroup[] => {
     const top = new Map<string, Map<string, Token[]>>();
@@ -91,9 +116,9 @@ export async function systemView(main: HTMLElement, p: Product) {
     const order = (k: string) => FACET_PRIORITY.indexOf(k.split(':')[0] as (typeof FACET_PRIORITY)[number]);
     const out: ViewGroup[] = [...top].sort(([a, x], [b, y]) => order(a) - order(b) || [...y.values()].flat().length - [...x.values()].flat().length).map(([k, subs], i) => {
       const [f, v] = k.split(':');
-      const main = (subs.get('') ?? []).sort(byDesign).map((t) => t.p);
+      const main = sortList(subs.get('') ?? []).map((t) => t.p);
       const label = f === 'syntax' ? 'Code' : facetLabel(f, v);
-      return { id: `ns-${i}`, label, note: f === 'syntax' ? 'syntax roles, by Lezer tag family' : f, tokens: main, subgroups: [...subs].filter(([s2]) => s2).sort(([a, x], [b, y]) => (designOrder.get(x[0].p) ?? 1e9) - (designOrder.get(y[0].p) ?? 1e9) || a.localeCompare(b)).map(([s2, items]) => { const [sf, sv] = s2.split(':'); return { label: facetLabel(sf, sv), tokens: items.sort(byDesign).map((t) => t.p) }; }) };
+      return { id: `ns-${i}`, label, note: f === 'syntax' ? 'syntax roles, by Lezer tag family' : f, tokens: main, subgroups: [...subs].filter(([s2]) => s2).sort(([a, x], [b, y]) => (designOrder.get(x[0].p) ?? 1e9) - (designOrder.get(y[0].p) ?? 1e9) || a.localeCompare(b)).map(([s2, items]) => { const [sf, sv] = s2.split(':'); return { label: facetLabel(sf, sv), tokens: sortList(items).map((t) => t.p) }; }) };
     });
     if (none.length) out.push({ id: 'ns-none', label: 'No concept yet', note: 'unmapped', tokens: none.sort((a, b) => a.p.localeCompare(b.p)).map((t) => t.p), subgroups: [] });
     return out;
@@ -120,7 +145,7 @@ export async function systemView(main: HTMLElement, p: Product) {
     const out: ViewGroup[] = [...fams].sort(([a, x], [b, y]) => famHue(x) - famHue(y) || a.localeCompare(b)).map(([family, steps], i) => ({
       id: `src-${i}`, label: title(family), note: 'palette',
       tokens: [],
-      subgroups: [...steps].sort(([a], [b]) => (a === 'x' ? 1e9 : a) - (b === 'x' ? 1e9 : b)).map(([step, e]) => ({ label: step === 'x' ? e.path : `${title(family)} ${step}`, tokens: e.tokens.sort(byDesign).map((t) => t.p) })),
+      subgroups: [...steps].sort(([a], [b]) => (a === 'x' ? 1e9 : a) - (b === 'x' ? 1e9 : b)).map(([step, e]) => ({ label: step === 'x' ? e.path : `${title(family)} ${step}`, tokens: sortList(e.tokens).map((t) => t.p) })),
     }));
     if (literal.length) out.push({ id: 'src-literal', label: 'Literal values', note: 'no alias to a palette token', tokens: literal.sort((a, b) => a.p.localeCompare(b.p)).map((t) => t.p), subgroups: [] });
     return out;

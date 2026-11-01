@@ -24,7 +24,7 @@ Path-based, served by the single-page fallback (`wrangler.jsonc`): `/` home with
 A "Group by" switch (remembered per browser) shows a system's tokens three ways:
 
 - **System groups**: the structure stage's output (ADR 0011): the system's own groups and order where it ships them, otherwise name families.
-- **Namespace**: canonical role from each token's approved mapping, by the most general facet it binds (usage, then intent, then syntax, then property); combined values fold into their first value; syntax roles form one Code namespace with subgroups per Lezer root tag. Designer order is kept inside groups.
+- **Namespace**: canonical role from each token's approved mapping, by the most general facet it binds (usage, then intent, then syntax, then property); combined values fold into their first value; syntax roles form one Code namespace with subgroups per Lezer root tag. Lists mixing several native families sort family by family (the first word not shared by the whole list: primary, secondary, error), families in designer order, then base first and outward (or a ramp when a family runs both below and above its base), then states.
 - **Source color**: the palette token each alias chain ends at in the selected swatch mode: families (Gray, Blue...) with neutrals first, then by hue; subgroups per palette step.
 
 ## Rules
