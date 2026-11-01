@@ -17,6 +17,7 @@
     "line",
     "on",
     "size",
+    "static",
     "status",
     "width"
   ],
@@ -95,6 +96,24 @@
     "xxxl"
   ],
   "terms": [
+    {
+      "term": "anchor",
+      "concept": "dsi:hue/gray",
+      "match": "close",
+      "status": "approved",
+      "note": "Fluent anchor primary is a dark slate with saturation 0.10: a cool gray.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
     {
       "term": "background",
       "concept": "dsi:property/background",
@@ -942,6 +961,24 @@
       }
     },
     {
+      "term": "berry",
+      "concept": "dsi:hue/magenta",
+      "match": "close",
+      "status": "approved",
+      "note": "Fluent berry primary at about 307 deg is nearest canonical magenta (300).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
       "term": "blue",
       "concept": "dsi:hue/blue",
       "match": "exact",
@@ -1032,6 +1069,42 @@
       }
     },
     {
+      "term": "brand",
+      "concept": "dsi:intent/accent",
+      "match": "close",
+      "status": "approved",
+      "note": "ADR 0008: brand -> intent-accent close.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
+      "term": "brand2",
+      "concept": "dsi:intent/accent",
+      "match": "close",
+      "status": "approved",
+      "note": "camelCase split of OnBrand2 (colorNeutralStrokeOnBrand2*): brand with a variant number; same accent intent as brand, and on carries on-fill.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
       "term": "brand2hover",
       "concept": "dsi:state/hover",
       "match": "exact",
@@ -1101,6 +1174,60 @@
         "by": "agreement",
         "at": "2026-11-01T15:01:26.531Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "card",
+      "concept": "dsi:usage/surface",
+      "match": "close",
+      "status": "approved",
+      "note": "colorNeutralCardBackground* is a global neutral role for card surfaces (not a component-scoped token); the surface usage names cards as its case.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
+      "term": "cornflower",
+      "concept": "dsi:hue/blue",
+      "match": "close",
+      "status": "approved",
+      "note": "Fluent cornflower primary at about 229 deg is nearest canonical blue (215) over indigo (240).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
+      "term": "cranberry",
+      "concept": "dsi:hue/red",
+      "match": "close",
+      "status": "approved",
+      "note": "Fluent cranberry primary at about 355 deg is red.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -2023,6 +2150,24 @@
       }
     },
     {
+      "term": "gold",
+      "concept": "dsi:hue/yellow",
+      "match": "close",
+      "status": "approved",
+      "note": "Fluent gold primary at about 49 deg is nearest canonical yellow (55).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
       "term": "green",
       "concept": "dsi:hue/green",
       "match": "exact",
@@ -2056,6 +2201,24 @@
         "by": "agreement",
         "at": "2026-11-01T15:01:26.531Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "inverted",
+      "concept": "dsi:usage/inverse",
+      "match": "exact",
+      "status": "approved",
+      "note": "Fluent inverted tokens (colorNeutralBackgroundInverted grey.16 in light, colorNeutralForegroundInverted, colorBrandBackgroundInverted) are surfaces that flip relative to the page and the content on them; ADR 0018 names Fluent's inverse as mode-flipping.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -2113,6 +2276,42 @@
       }
     },
     {
+      "term": "mink",
+      "concept": "dsi:hue/gray",
+      "match": "close",
+      "status": "approved",
+      "note": "Fluent mink primary has saturation 0.03: a warm dark gray.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
+      "term": "navy",
+      "concept": "dsi:hue/blue",
+      "match": "close",
+      "status": "approved",
+      "note": "Fluent navy primary at about 227 deg is a dark blue, nearest canonical blue (215).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
       "term": "neutral",
       "concept": "dsi:intent/neutral",
       "match": "exact",
@@ -2167,6 +2366,42 @@
       }
     },
     {
+      "term": "palette",
+      "concept": "dsi:usage/categorical",
+      "match": "close",
+      "status": "approved",
+      "note": "colorPalette<Hue>* are Fluent's shared colors, used for avatars, badges, tags and calendars where each named hue is a distinct slot; the nuance is that a few (red, green) double as status colors.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
+      "term": "peach",
+      "concept": "dsi:hue/orange",
+      "match": "close",
+      "status": "approved",
+      "note": "Fluent peach primary at about 33 deg is orange.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
       "term": "pink",
       "concept": "dsi:hue/pink",
       "match": "exact",
@@ -2185,6 +2420,24 @@
       }
     },
     {
+      "term": "platinum",
+      "concept": "dsi:hue/gray",
+      "match": "close",
+      "status": "approved",
+      "note": "Fluent platinum primary has saturation 0.09: a cool gray.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
       "term": "pressed",
       "concept": "dsi:state/active",
       "match": "exact",
@@ -2200,6 +2453,24 @@
         "by": "agreement",
         "at": "2026-11-01T15:01:26.531Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "pumpkin",
+      "concept": "dsi:hue/orange",
+      "match": "close",
+      "status": "approved",
+      "note": "Fluent pumpkin primary at about 21 deg with saturation 0.85 is a saturated red-orange, not a low-saturation brown.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -3110,6 +3381,24 @@
         "by": "agreement",
         "at": "2026-11-01T15:01:26.531Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "subtle",
+      "concept": "dsi:emphasis/subtle",
+      "match": "exact",
+      "status": "approved",
+      "note": "colorSubtleBackground (transparent, subtle button) and colorNeutralStrokeSubtle (grey.88 against Stroke1 grey.82) are the lightest step of their families.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.673Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {

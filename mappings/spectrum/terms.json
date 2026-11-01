@@ -77,6 +77,7 @@
     "height",
     "height-font",
     "height-font-size",
+    "highlight",
     "horizontal-extra",
     "horizontal-medium",
     "horizontal-uniform",
@@ -131,6 +132,7 @@
     "size-small",
     "small-size",
     "small-spacious",
+    "static",
     "stop",
     "strikethrough-day",
     "target-dash",
@@ -465,6 +467,60 @@
       }
     },
     {
+      "term": "celery",
+      "concept": "dsi:hue/green",
+      "match": "close",
+      "status": "approved",
+      "note": "Spectrum celery sits at about 95 deg between lime (80) and green (120), with chartreuse already taking the lime slot and Spectrum green at 153 deg; nearest canonical reading used by designers is a yellow-green, mapped green.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
+      "term": "chartreuse",
+      "concept": "dsi:hue/lime",
+      "match": "close",
+      "status": "approved",
+      "note": "Spectrum chartreuse at about 70 deg is nearest canonical lime (80).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
+      "term": "cinnamon",
+      "concept": "dsi:hue/brown",
+      "match": "close",
+      "status": "approved",
+      "note": "Spectrum cinnamon at about 20 deg with low saturation is a reddish brown; nearest canonical brown (25, low-saturation warm).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
       "term": "cjk-line-height",
       "concept": "dsi:property/line-height",
       "match": "exact",
@@ -662,6 +718,24 @@
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
+      }
+    },
+    {
+      "term": "content",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "Spectrum 'content color' (accent-content-color-*, neutral-subdued-content-color-*) colors text and icons together; Spectrum uses text-color when it means text alone.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -969,6 +1043,24 @@
         "by": "agreement",
         "at": "2026-11-01T15:13:22.161Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "fuchsia",
+      "concept": "dsi:hue/magenta",
+      "match": "close",
+      "status": "approved",
+      "note": "Spectrum fuchsia at about 292 deg is nearest canonical magenta (300).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -1394,6 +1486,24 @@
       }
     },
     {
+      "term": "layer",
+      "concept": "dsi:usage/surface",
+      "match": "exact",
+      "status": "approved",
+      "note": "background-layer-1-color and layer-2 are Spectrum's stacked application layers above the base background: containers placed on the page.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
       "term": "letter-spacing",
       "concept": "dsi:property/letter-spacing",
       "match": "exact",
@@ -1525,6 +1635,24 @@
         "by": "agreement",
         "at": "2026-11-01T15:01:26.341Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "notice",
+      "concept": "dsi:intent/warning",
+      "match": "exact",
+      "status": "approved",
+      "note": "Spectrum's semantic set is informative, positive, notice, negative; notice (orange) is its warning status.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -1888,6 +2016,24 @@
       }
     },
     {
+      "term": "seafoam",
+      "concept": "dsi:hue/teal",
+      "match": "close",
+      "status": "approved",
+      "note": "Spectrum seafoam at about 169 deg is nearest canonical teal (170).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
       "term": "selected",
       "concept": "dsi:state/selected",
       "match": "exact",
@@ -2002,6 +2148,24 @@
       }
     },
     {
+      "term": "silver",
+      "concept": "dsi:hue/gray",
+      "match": "close",
+      "status": "approved",
+      "note": "Spectrum silver is a zero-saturation gray ramp.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
       "term": "spacing",
       "concept": "dsi:property/spacing",
       "match": "exact",
@@ -2017,6 +2181,42 @@
         "by": "agreement",
         "at": "2026-11-01T15:13:22.161Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "subdued",
+      "concept": "dsi:emphasis/subtle",
+      "match": "close",
+      "status": "approved",
+      "note": "neutral-subdued-content-color is one step lighter than neutral content (gray-700 vs 800) and negative-subdued-background-color-default aliases negative-subtle-background-color-default; one step below default is subtle, with the nuance that Spectrum also has a subtle word.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
+      }
+    },
+    {
+      "term": "subtle",
+      "concept": "dsi:emphasis/subtle",
+      "match": "exact",
+      "status": "approved",
+      "note": "<hue>-subtle-background-color-default is the 200 step against the 800..900 default fill: the lighter of two steps.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
@@ -2110,6 +2310,24 @@
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:02:38Z",
         "method": "terms-v1"
+      }
+    },
+    {
+      "term": "title",
+      "concept": "dsi:usage/title",
+      "match": "exact",
+      "status": "approved",
+      "note": "title-color is the color of Spectrum's title typography role, alongside heading-color and body-color.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-fable-5-1",
+        "at": "2026-11-01T15:40:00Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "two-of-three",
+        "at": "2026-11-01T15:42:31.486Z",
+        "note": "claude-fable-5-1 (blind) agreed with an earlier agent"
       }
     },
     {
