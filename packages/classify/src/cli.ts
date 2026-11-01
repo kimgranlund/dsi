@@ -141,6 +141,50 @@ if (cmd === 'derive') {
   for (const l of r.leftovers) { const k = l.why.split(':')[0]; why[k] = (why[k] ?? 0) + 1; }
   console.log(`${product}: ${scoped.length} foundation tokens; ${added} mapped, ${superseded} superseded (${r.mapped.length - added} already settled); ${r.leftovers.length} leftovers ${JSON.stringify(why)}`);
   for (const l of r.leftovers) console.log(`  ${l.token}: ${l.why}`);
+} else if (cmd === 'vocab-third' || cmd === 'vocab-tiebreak') {
+  // Two of three for naming words (ADR 0005 amended): a third model answers only the words the first two split on,
+  // blind; when its answer equals one of theirs (confidence >= 0.7 both), that answer is approved.
+  if (!run) { console.error(USAGE); process.exit(2); }
+  const runDir = path.join(root, '.cache/classify', run);
+  const rd = (r: string) => JSON.parse(fs.readFileSync(path.join(runDir, `${product}.${r}.proposals.json`), 'utf8'));
+  const [pa, pb] = [rd('a'), rd('b')];
+  const k = (t: any) => (t.concept ? `${t.concept}|${t.match}` : `ignore|${t.ignore}`);
+  const byTerm = (pf: any) => { const m = new Map<string, any[]>(); for (const t of pf.terms) (m.get(t.term) ?? m.set(t.term, []).get(t.term)!).push(t); return m; };
+  const [ma, mb] = [byTerm(pa), byTerm(pb)];
+  const settledWords = new Set(terms.terms.filter((t) => t.status === 'approved').map((t) => t.term).concat(terms.noise ?? [], terms.steps ?? []));
+  const split = [...new Set([...ma.keys(), ...mb.keys()])].filter((w) => !settledWords.has(w) && JSON.stringify((ma.get(w) ?? []).map(k).sort()) !== JSON.stringify((mb.get(w) ?? []).map(k).sort()) || (!settledWords.has(w) && [...(ma.get(w) ?? []), ...(mb.get(w) ?? [])].some((t) => t.concept && (t.confidence ?? 0) < 0.85)));
+  if (cmd === 'vocab-third') {
+    const packet = JSON.parse(fs.readFileSync(packetPath(runDir, product, 'a'), 'utf8'));
+    const keep = new Set(split);
+    const vocab = packet.vocabulary.filter((v: any) => keep.has(v.term));
+    fs.writeFileSync(packetPath(runDir, product, 'c'), JSON.stringify({ ...packet, role: 'c', output: path.join(runDir, `${product}.c.proposals.json`), vocabulary: vocab, note: 'Third opinion: only the words the first two agents split on.' }, null, 1) + '\n');
+    console.log(`${product}: ${vocab.length} split words -> ${path.relative(root, packetPath(runDir, product, 'c'))}`);
+  } else {
+    const required = new Set(split.filter((w) => !w.includes('-')));
+    const pc = readTermProposals(path.join(runDir, `${product}.c.proposals.json`), o, required);
+    if ([pa.model, pb.model].includes(pc.model)) { console.error(`third opinion must come from a third model, got ${pc.model}`); process.exit(1); }
+    const now = new Date().toISOString();
+    let approved = 0, noise = 0, steps = 0;
+    const noiseSet = new Set(terms.noise ?? []), stepSet = new Set(terms.steps ?? []);
+    for (const c of pc.terms as any[]) {
+      if (!split.includes(c.term) || settledWords.has(c.term)) continue;
+      const pick = [...(ma.get(c.term) ?? []), ...(mb.get(c.term) ?? [])].find((x) => k(x) === k(c) && (!c.concept || ((x.confidence ?? 0) >= 0.7 && (c.confidence ?? 0) >= 0.7)));
+      if (!pick) continue;
+      if (!c.concept) {
+        if (c.ignore === 'step') { stepSet.add(c.term); steps++; } else { noiseSet.add(c.term); noise++; }
+        terms.terms = terms.terms.filter((t) => !(t.term === c.term && t.status === 'proposed'));
+        continue;
+      }
+      terms.terms = terms.terms.filter((t) => !(t.term === c.term && t.status === 'proposed'));
+      terms.terms.push({ term: c.term, concept: c.concept, match: c.match, status: 'approved', note: c.rationale, provenance: { agent: 'dsi-classify', model: pc.model, at: pc.at, method: 'terms-v1' }, review: { by: 'two-of-three', at: now, note: `${pc.model} (blind) agreed with an earlier agent` } } as any);
+      settledWords.add(c.term);
+      approved++;
+    }
+    terms.noise = [...noiseSet].sort(); if (stepSet.size) terms.steps = [...stepSet].sort();
+    terms.terms.sort((x, y) => x.term.localeCompare(y.term) || x.concept.localeCompare(y.concept) || x.status.localeCompare(y.status));
+    fs.writeFileSync(termsPath, JSON.stringify(terms, null, 2) + '\n');
+    console.log(`${product}: ${approved} terms, ${noise} noise and ${steps} step words settled by two of three (third: ${pc.model})`);
+  }
 } else if (cmd === 'vocab-prepare' || cmd === 'vocab-check' || cmd === 'vocab-merge') {
   if (!run) { console.error(USAGE); process.exit(2); }
   const runDir = path.join(root, '.cache/classify', run);
@@ -160,7 +204,9 @@ if (cmd === 'derive') {
     for (const r of ['a', 'b']) fs.writeFileSync(packetPath(runDir, product, r), JSON.stringify({ id: `${scaleRun ? 'terms-scale-v1' : 'terms-v1'}/${product}`, role: r, product, instructions: scaleRun ? 'packages/classify/prompts/terms-scale-v1.md' : 'packages/classify/prompts/terms-v1.md', output: path.join(runDir, `${product}.${r}.proposals.json`), ontology, noise: terms.noise ?? [], vocabulary: vocab, derived }, null, 1) + '\n');
     console.log(`${product}: ${single.size} words (${vocab.length} entries with recurring sequences) from ${paths.length} ${scaleRun ? 'foundation' : 'semantic color'} tokens -> ${path.relative(root, packetPath(runDir, product, '{a,b}'))}`);
   } else if (cmd === 'vocab-check') {
-    try { const pf = readTermProposals(path.join(runDir, `${product}.${role}.proposals.json`), o, single); console.log(`OK: ${pf.terms.length} entries, all ${single.size} words answered, all concepts valid`); }
+    // A third-opinion file (role c) answers only the words in its own packet.
+    const required = role === 'c' ? new Set<string>(JSON.parse(fs.readFileSync(packetPath(runDir, product, 'c'), 'utf8')).vocabulary.map((v: any) => v.term).filter((w: string) => !w.includes('-'))) : single;
+    try { const pf = readTermProposals(path.join(runDir, `${product}.${role}.proposals.json`), o, required); console.log(`OK: ${pf.terms.length} entries, all ${required.size} words answered, all concepts valid`); }
     catch (e) { console.error(`FAIL: ${(e as Error).message}`); process.exit(1); }
   } else {
     const a = readTermProposals(path.join(runDir, `${product}.a.proposals.json`), o, single);
