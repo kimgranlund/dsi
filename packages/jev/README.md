@@ -6,6 +6,8 @@ An experiment lab for TypeSafe's Jev model (System One: state plus typed questio
 
 - `node packages/jev/src/lab.ts prescreen`: flags approved mappings a registered rival outscores by 0.2 or more; `audit-prepare --only .cache/jev/prescreen.json` audits them first.
 - `dsi-map review ... --jev`: Jev's two-stage pick on each review card (preselects at 0.85 or more, never approves). Code: `src/roles.ts`.
+- `dsi-map boundary-rules --jev`: boundary judge. Jev's B4 or B7 statement judgement (margin 0.3) decides that facet where the code test finds no evidence (ADR 0020 amendment, ADR 0021).
+- `dsi-map triage-conflicts`: Jev's B4 and B6 judgements sort approved conflicts into likely test bugs and owner decisions.
 
 ## Kind
 

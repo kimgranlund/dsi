@@ -44,4 +44,9 @@ Each lesson: what failed, why, the fix now in place. Rounds: Material, Carbon, P
 - **Ask Jev to compare or confirm, not to judge.** It verifies an answer against its rival 94 to 96% of the time and is reliable when confident (0.85 or more), but on hard cases it is no better than the agents.
 - **Write options in contrast.** Option descriptions that say what each value is not beat better definitions (usage 47 to 61%).
 - **Conventions stay rules.** Jev does not apply a convention from a note in its input; keep them as deterministic steps.
+- **Jev's best use is a yes or no on one boundary statement**, scored against its negation (round 6). B7 "colors code" is 100% accurate, B4 "on a bold fill" 98% on 72% of cases, and B6 100% on 48%. B1 (76%), B3 (one-sided) and B8 (chance) stay with rules and the owner.
+- **These add nothing:** definitions alone, shipped-code evidence in its state, staged questions, stated conventions, a merged candidate list (55 vs 61% for the agents) and mechanically generated contrast text (17.9 vs 32.1% for hand-written). Only hand-written contrastive descriptions helped (usage 47 to 61%).
+- **Triage before blaming the data.** When Jev sides with approvals against a test, check the test first: 23 of 97 conflicts were test bugs (syntax and link colors are text; Spectrum's `icon-color-*` naming).
+- **Observed usage beats Jev on property and state.** Where a system's component CSS uses a token, it agrees with approvals 93 to 97% on property (docs/planning/usage-graph.md), so ask Jev only where usage is silent.
+- **Owner grading is the benchmark that counts.** `apply-review` writes `packages/jev/experiments/OWNER-SCORES.md` after each round; widen a Jev role only on that evidence (G9).
 

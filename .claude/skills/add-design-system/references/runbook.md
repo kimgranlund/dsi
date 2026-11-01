@@ -186,6 +186,7 @@ Freedom: Low. Jev (TypeSafe System One) answers typed questions with probabiliti
 
 - **Audit pre-screen** (before §7): `node packages/jev/src/lab.ts prescreen`, then `audit-prepare color-v1 <run> --only .cache/jev/prescreen.json` so the strict auditor checks the flagged mappings first.
 - **Review suggestions** (in §8): add `--jev` to `review`; confident picks (0.85 or more) preselect or appear as their own option.
+- **Boundary judge** (after §6 settle): `boundary-rules color-v1 --jev`. Jev decides B4 (on a bold fill) or B7 (colors code) only where the code test finds no evidence; then `triage-conflicts` sorts approved conflicts on B4 and B6. Never on B1, B3 or B8, where Jev measured 50 to 89% (ADR 0020 amendment).
 
 To widen its role:
 

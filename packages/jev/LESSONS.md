@@ -94,3 +94,10 @@ Jev is a good **checker** (pairwise Noul, 94 to 96%) and a good **confident sugg
   After the fixes, approved conflicts fell from 97 to 76: 59 B1 and 11 B3 for the owner, plus 6 Polaris `color-text-*-on-bg-fill`, where Jev says foreground against the test's text.
 - **Generated contrastive descriptions lose to hand-written ones.** Mechanical "<definition>; not <neighbor>; not general-purpose" text built from the boundary list gives 17.9% joint vs 25% for plain definitions and 32.1% for the hand-written set; intent drops from 78 to 65%. Combined, with hand-written text winning where both exist, it scores 33.6%, within noise. Contrast helps only when it is written as a real distinction.
 - **Owner grading is wired.** `review --jev` saves its picks (`.cache/jev/review-picks.json`), and `apply-review` grades them against the owner's token decisions in `experiments/OWNER-SCORES.md`.
+
+## After round 6 (2026-11-01): where Jev stops being needed
+
+- **Observed usage answers property and state.** The token-usage graph (Spectrum, Primer with Primer React, Carbon, Polaris) agrees with approved mappings 93 to 97% on property and 84 to 94% on state where it is decisive. Those are the facets where Jev's facet classification was weakest, so ask Jev only for tokens no shipped component uses.
+- **Neither reaches the hard queue.** Open and conflicting tokens are mostly ones no component references (ramps, data-viz, display, editor colors). Jev's suggestions and observed usage both cover few of them, so the owner's review remains the bottleneck.
+- **Owner scores are pending.** `OWNER-SCORES.md` is written by the first `apply-review` after a `review --jev` round. Its first numbers decide whether the 0.85 preselect threshold holds.
+

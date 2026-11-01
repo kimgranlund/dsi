@@ -18,3 +18,13 @@ Jev (TypeSafe System One) answers typed questions with probabilities, and it is 
 - The mapper depends on `@dsi/jev` (roles only; the lab stays separate).
 - A Jev release can change answers; the cache is keyed by request, so re-running an experiment on a new release needs the cache cleared for that experiment.
 - The pilot continues under the loop in `packages/jev/README.md`; a wider role needs new evidence and a new owner decision.
+
+## Amendment, 2026-11-01 (owner decisions on B4 and B7, ADR 0021)
+
+A third role, narrower than a vote: **boundary judge**. Jev judges one boundary statement against its negation (pairwise, margin 0.3) only on the boundaries where round 6 measured it reliable (`RELIABLE` in `packages/jev/src/roles.ts`: B4, B6, B7):
+
+- `boundary-rules --jev`: where the code test finds no evidence, Jev's B4 ("on a bold, solid fill") or B7 ("colors code") judgement decides that one facet of an answer the agents already gave. Jev never introduces a concept, and the registry gate still holds new concepts for the owner.
+- `triage-conflicts`: Jev's B4 and B6 judgements sort approved mappings that break a test into likely test bugs and owner decisions. It changes nothing by itself.
+
+"No vote in merge, tiebreak or settle" still holds: Jev does not choose between agent answers. It only answers the deciding test on B4 and B7 where shipped facts are silent.
+
