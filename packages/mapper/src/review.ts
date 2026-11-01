@@ -19,6 +19,9 @@ export interface QueueItem {
 export const decisionKey = (product: string, token: string) => `${product}__${token}`;
 
 /** Collect the queue: tokens with Proposed records and nothing Approved. Token details come from the run's packets. */
+// A rule-settled answer the registry gate held (ADR 0019) has no single model: name the rule that agreed.
+const agreedBy = (x: any) => ({ 'settle-three-v1': 'all three models', 'settle-two-v1': 'two of three models', 'two-of-three-v1': 'two of three models', 'emphasis-rank-v1': 'contrast rank' } as Record<string, string>)[x.provenance?.method] ?? x.provenance?.method ?? x.provenance?.agent ?? 'rule';
+
 export function collectQueue(root: string, scope: Scope, runDir: string | string[]): QueueItem[] {
   // Several map runs may hold queued tokens (a re-opened set mapped later); a later run's packet wins.
   const dirs = Array.isArray(runDir) ? runDir : [runDir];
@@ -31,8 +34,8 @@ export function collectQueue(root: string, scope: Scope, runDir: string | string
     const settled = new Set([...(m.mappings ?? []).filter((x: any) => x.status === 'approved').map((x: any) => x.token), ...(m.unmapped ?? []).filter((x: any) => x.status === 'approved').map((x: any) => x.token)]);
     const byToken = new Map<string, QueueItem['candidates']>();
     const push = (t: string, c: QueueItem['candidates'][number]) => (byToken.get(t) ?? byToken.set(t, []).get(t)!).push(c);
-    for (const x of m.mappings ?? []) if (x.status === 'proposed' && !settled.has(x.token)) push(x.token, { id: x.id, kind: 'mapping', model: x.provenance.model, concept: x.concept, match: x.match, confidence: x.confidence, rationale: x.rationale });
-    for (const x of m.unmapped ?? []) if (x.status === 'proposed' && !settled.has(x.token)) push(x.token, { id: 'u-' + crypto.createHash('sha1').update(x.token + x.provenance.model).digest('hex').slice(0, 12), kind: 'unmapped', model: x.provenance.model, rationale: x.rationale });
+    for (const x of m.mappings ?? []) if (x.status === 'proposed' && !settled.has(x.token)) push(x.token, { id: x.id, kind: 'mapping', model: x.provenance.model ?? agreedBy(x), concept: x.concept, match: x.match, confidence: x.confidence, rationale: x.rationale });
+    for (const x of m.unmapped ?? []) if (x.status === 'proposed' && !settled.has(x.token)) push(x.token, { id: 'u-' + crypto.createHash('sha1').update(x.token + x.provenance.model).digest('hex').slice(0, 12), kind: 'unmapped', model: x.provenance.model ?? agreedBy(x), rationale: x.rationale });
     for (const [token, candidates] of [...byToken].sort(([a], [b]) => a.localeCompare(b))) {
       const t = info.get(token);
       if (!t) throw new Error(`${product}: queued token ${token} is missing from ${dirs.join(', ')}; pass the latest run`);

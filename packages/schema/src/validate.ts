@@ -148,7 +148,7 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
     t.terms.forEach((x, i) => {
       const facet = facetOfConcept(ontology, x.concept);
       if (!facet) issues.push({ file: at, message: `terms[${i}] ${x.term}: ${x.concept} is not a value of a facet scheme (${TERM_FACETS.join(', ')})` });
-      else if (ontology.deprecated.has(expand(x.concept))) issues.push({ file: at, message: `terms[${i}] ${x.term}: ${x.concept} is deprecated` });
+      else if (x.status !== 'rejected' && ontology.deprecated.has(expand(x.concept))) issues.push({ file: at, message: `terms[${i}] ${x.term}: ${x.concept} is deprecated` });
       if (!inScheme(ontology, `dsi:review/${x.status}`, 'dsi:scheme/review-status')) issues.push({ file: at, message: `terms[${i}] ${x.term}: status "${x.status}" is not in dsi:scheme/review-status` });
       if (x.status === 'approved') {
         const k = `${x.term}|${facetOfConcept(ontology, x.concept)}`;

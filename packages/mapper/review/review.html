@@ -342,21 +342,40 @@ function termCard(item) {
       d.action === 'custom' ? el('span', {}, conceptChip(d.concept), ' ', el('span', { class: 'pill ' + d.match, text: d.match })) : null,
       el('button', { text: 'Undo', disabled: !canWrite, onclick: () => undo(item, 'term-decisions') })));
   }
-  for (const c of item.candidates) {
-    const chosen = d && d.action === 'accept' && d.candidateId === c.id;
+  // One option per meaning: candidates that name the same value merge, and the most cautious match is the one offered.
+  const CAUTION = { exact: 0, close: 1, narrow: 2, broad: 2, related: 3 };
+  const groups = [];
+  for (const c of item.candidates) { const g = groups.find((x) => x.concept === c.concept); if (g) g.voters.push(c); else groups.push({ concept: c.concept, voters: [c] }); }
+  for (const g of groups) g.pick = g.voters.slice().sort((a, b) => (CAUTION[b.match] ?? 0) - (CAUTION[a.match] ?? 0))[0];
+  const m = /^dsi:([a-z]+)\/([a-z0-9-]+)$/;
+  const wordOf = (c) => { const x = m.exec(c); return x ? (LABEL[x[1] + ':' + x[2]] || x[2]) : c; };
+  const facetOf = (c) => (m.exec(c) || [])[1];
+  const defOf = (c) => { const x = m.exec(c); const v = x && (ONT.facets[x[1]] || []).find((y) => y.value === x[2]); return v && v.definition; };
+  const FACET_Q = { intent: 'what it signals', usage: 'where it is used', property: 'what part it colors', emphasis: 'how strong it is', state: 'which state', hue: 'which hue', component: 'which component', part: 'which part', style: 'which style', brightness: 'how bright', syntax: 'which code role' };
+  const clean = (n) => (n || '').replace(/\s*\(confidence[^)]*\)/g, '').replace(/;?\s*(both agents gave this|the other agent disagreed)[^.]*\.?$/i, '').replace(/[;\s]+$/, '').trim();
+  const head = groups.length === 1
+    ? 'Both models say it means “' + wordOf(groups[0].concept) + '” (' + (FACET_Q[facetOf(groups[0].concept)] || facetOf(groups[0].concept)) + ')' + (new Set(groups[0].voters.map((v) => v.match)).size > 1 ? '; they differ only on how exact the match is, so the more careful one is offered.' : '.') + ' Accept it, or pick another answer below.'
+    : 'The models disagree: ' + groups.map((g) => '“' + wordOf(g.concept) + '”').join(' or ') + '. Pick the sentence that is true.';
+  right.append(el('div', { class: 'q' }, el('h3', { text: 'What does the word “' + item.term + '” mean in ' + item.product.replace(/^./, (ch) => ch.toUpperCase()) + ' token names?' }), el('p', { text: head })));
+  for (const g of groups) {
+    const c = g.pick;
+    const chosen = d && d.action === 'accept' && g.voters.some((v) => v.id === d.candidateId);
+    const def = defOf(g.concept);
     right.append(el('div', { class: 'cand' + (chosen ? ' chosen' : '') },
-      el('div', { class: 'cand-head' }, el('span', { class: 'model', text: c.by }), el('span', { class: 'pill ' + c.match, text: c.match }),
+      el('div', { class: 'cand-head' }, el('span', { class: 'say', text: (SENTENCE[c.match] || SENTENCE.exact)(wordOf(g.concept)) }), el('span', { class: 'pill ' + c.match, text: c.match }),
+        el('span', { class: 'model', text: g.voters.map((v) => String(v.by || v.model || 'model').replace(/^claude-/, '') + ' ' + v.match).join(' · ') }),
         c.evidence ? el('span', { class: 'ev', text: c.evidence.agree + ' of ' + c.evidence.support + ' approved tokens agree' }) : null),
-      el('div', { class: 'facets' }, conceptChip(c.concept)),
-      c.note ? el('p', { class: 'why', text: c.note }) : null,
+      el('div', { class: 'facets' }, conceptChip(g.concept)),
+      def ? el('p', { class: 'why', text: wordOf(g.concept) + ': ' + def }) : null,
+      el('details', {}, el('summary', { text: 'Why the models think so' }), g.voters.map((v) => el('p', {}, el('b', { text: String(v.by || v.model || 'model').replace(/^claude-/, '') + ': ' }), clean(v.note) || '(no note)'))),
       !d ? el('div', { class: 'actions' }, el('button', { class: 'primary', text: 'Accept this', disabled: !canWrite, onclick: () => decide(item, { action: 'accept', candidateId: c.id }, 'term-decisions') })) : null));
   }
   if (!d) {
     if (openCustom.has(item.key)) right.append(termBuilder(item));
     right.append(el('div', { class: 'actions' },
       el('button', { text: 'Write my own', disabled: !canWrite, onclick: () => { openCustom.add(item.key); render(); } }),
-      el('button', { text: 'Noise word', disabled: !canWrite, onclick: () => decide(item, { action: 'ignore', ignore: 'noise' }, 'term-decisions') }),
-      el('button', { text: 'No concept fits', disabled: !canWrite, onclick: () => decide(item, { action: 'ignore', ignore: 'no-concept' }, 'term-decisions') }),
+      el('button', { text: 'Noise word', title: 'The word carries no meaning of its own (a namespace or filler, like “color” or “default”).', disabled: !canWrite, onclick: () => decide(item, { action: 'ignore', ignore: 'noise' }, 'term-decisions') }),
+      el('button', { text: 'No concept fits', title: 'The word means something, but no value in our vocabulary says it.', disabled: !canWrite, onclick: () => decide(item, { action: 'ignore', ignore: 'no-concept' }, 'term-decisions') }),
       el('button', { text: 'Reject all', disabled: !canWrite, onclick: () => decide(item, { action: 'reject' }, 'term-decisions') })));
   }
   return el('article', { class: 'card' + (d ? ' decided' : ''), 'data-key': item.key, onclick: () => { if (activeKey !== item.key) { activeKey = item.key; markActive(); } } }, left, right);

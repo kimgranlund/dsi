@@ -177,7 +177,7 @@ if (cmd === 'prepare') {
   const termItems = [...(vocabRun && !vocabRun.startsWith('--') ? vocabRun.split(',').flatMap((r) => collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', r))) : [])
     .reduce((m, t) => { const prev = m.get(t.key); if (!prev || (!prev.examples.length && t.examples.length)) m.set(t.key, t); return m; }, new Map<string, any>()).values()];
   const disputes = collectDisputes(root, scope, termFindingsFor(), valuesOf);
-  const packet = JSON.parse(fs.readFileSync(path.join(root, '.cache/mapper', run.split(',')[0], `${Object.keys(scope.products)[0]}.a.packet.json`), 'utf8'));
+  const packet = JSON.parse(fs.readFileSync(path.join(root, '.cache/mapper', run.split(',').at(-1)!, `${Object.keys(scope.products).find((p) => fs.existsSync(path.join(root, '.cache/mapper', run.split(',').at(-1)!, `${p}.a.packet.json`)))}.a.packet.json`), 'utf8'));
   fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true });
   // --definitions <drafts.json>: drafted L4 definitions for lexicon words ({ "<iri>": "<text>" }), shown with the current text.
   const defFile = process.argv.includes('--definitions') ? process.argv[process.argv.indexOf('--definitions') + 1] : undefined;

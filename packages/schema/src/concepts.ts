@@ -36,6 +36,7 @@ export function parseConcept(o: Ontology, ref: string): ParsedConcept | string {
     }
     for (const v of parts) {
       if (!inScheme(o, `dsi:${facet}/${v}`, `dsi:scheme/${facet}`)) return `${facet} "${v}" is not in dsi:scheme/${facet}`;
+      if (facet === 'emphasis' && v === 'default') return 'emphasis default is the bare concept: leave emphasis unbound';
       if (o.deprecated.has(expand(`dsi:${facet}/${v}`))) return `${facet} "${v}" is deprecated`;
     }
     facets[facet] = value;

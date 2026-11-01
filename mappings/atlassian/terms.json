@@ -2,6 +2,7 @@
   "product": "atlassian",
   "noise": [
     "color",
+    "default",
     "ds",
     "elevation",
     "font",
@@ -572,7 +573,7 @@
       "term": "default",
       "concept": "dsi:emphasis/default",
       "match": "close",
-      "status": "approved",
+      "status": "rejected",
       "note": "Middle level between subtle and bold where the family has a default variant. (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
@@ -581,15 +582,16 @@
         "method": "terms-v1"
       },
       "review": {
-        "by": "kimgranlund",
-        "at": "2026-11-01T07:28:59.735Z"
+        "by": "owner-decision",
+        "at": "2026-11-01T22:31:42.000Z",
+        "note": "emphasis/default is retired: the bare concept is the default step, so \"default\" is a noise word (ADR 0019 amendment)."
       }
     },
     {
       "term": "default-default",
       "concept": "dsi:emphasis/default",
       "match": "close",
-      "status": "approved",
+      "status": "rejected",
       "note": "The first default in danger.default.default is the middle step between subtle and bold. (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
@@ -598,15 +600,16 @@
         "method": "terms-v1"
       },
       "review": {
-        "by": "kimgranlund",
-        "at": "2026-11-01T07:28:59.901Z"
+        "by": "owner-decision",
+        "at": "2026-11-01T22:32:00.000Z",
+        "note": "emphasis/default is retired: the bare concept is the default step, so \"default\" is a noise word (ADR 0019 amendment)."
       }
     },
     {
       "term": "default-hovered",
       "concept": "dsi:emphasis/default",
       "match": "close",
-      "status": "approved",
+      "status": "rejected",
       "note": "default followed by a state is the middle emphasis step (danger.default.hovered). (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
@@ -615,15 +618,16 @@
         "method": "terms-v1"
       },
       "review": {
-        "by": "kimgranlund",
-        "at": "2026-11-01T07:29:00.234Z"
+        "by": "owner-decision",
+        "at": "2026-11-01T22:32:00.000Z",
+        "note": "emphasis/default is retired: the bare concept is the default step, so \"default\" is a noise word (ADR 0019 amendment)."
       }
     },
     {
       "term": "default-pressed",
       "concept": "dsi:emphasis/default",
       "match": "close",
-      "status": "approved",
+      "status": "rejected",
       "note": "default followed by a state is the middle emphasis step (danger.default.pressed). (confidence 0.6; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
@@ -632,8 +636,9 @@
         "method": "terms-v1"
       },
       "review": {
-        "by": "kimgranlund",
-        "at": "2026-11-01T07:29:00.693Z"
+        "by": "owner-decision",
+        "at": "2026-11-01T22:32:00.000Z",
+        "note": "emphasis/default is retired: the bare concept is the default step, so \"default\" is a noise word (ADR 0019 amendment)."
       }
     },
     {
