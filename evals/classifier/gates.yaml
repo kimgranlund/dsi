@@ -1,0 +1,84 @@
+# Gates for evals/classifier/suite.yaml. Decision: may this change be pushed and deployed?
+# Threshold = the baseline pass count less max(1, 2% of n), over n, measured on the dev split on 2026-11-01.
+# Re-baseline (scripts/baseline in evals/README.md) only in a commit that says why the drop is intended.
+gates:
+  - id: classifier-all
+    suite_id: dsi-classifier
+    suite_version: 1
+    metric: pass_rate
+    slice: all
+    threshold: 0.5018
+    min_n: 20
+    action: push and deploy
+    owner: kimgranlund
+    status: open
+  - id: classifier-material
+    suite_id: dsi-classifier
+    suite_version: 1
+    metric: pass_rate
+    slice: material
+    threshold: 0.5909
+    min_n: 20
+    action: push and deploy
+    owner: kimgranlund
+    status: open
+  - id: classifier-carbon
+    suite_id: dsi-classifier
+    suite_version: 1
+    metric: pass_rate
+    slice: carbon
+    threshold: 0.275
+    min_n: 20
+    action: push and deploy
+    owner: kimgranlund
+    status: open
+  - id: classifier-polaris
+    suite_id: dsi-classifier
+    suite_version: 1
+    metric: pass_rate
+    slice: polaris
+    threshold: 0.723
+    min_n: 20
+    action: push and deploy
+    owner: kimgranlund
+    status: open
+  - id: classifier-atlassian
+    suite_id: dsi-classifier
+    suite_version: 1
+    metric: pass_rate
+    slice: atlassian
+    threshold: 0.7708
+    min_n: 20
+    action: push and deploy
+    owner: kimgranlund
+    status: open
+  - id: classifier-primer
+    suite_id: dsi-classifier
+    suite_version: 1
+    metric: pass_rate
+    slice: primer
+    threshold: 0.2011
+    min_n: 20
+    action: push and deploy
+    owner: kimgranlund
+    status: open
+  - id: classifier-spectrum
+    suite_id: dsi-classifier
+    suite_version: 1
+    metric: pass_rate
+    slice: spectrum
+    threshold: 0.3723
+    min_n: 20
+    action: push and deploy
+    owner: kimgranlund
+    status: open
+  - id: classifier-fluent
+    suite_id: dsi-classifier
+    suite_version: 1
+    metric: pass_rate
+    slice: fluent
+    threshold: 0.3043
+    min_n: 20
+    action: push and deploy
+    owner: kimgranlund
+    status: open

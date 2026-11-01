@@ -100,6 +100,6 @@ Copy the checklist of the current stage into your task list. Each has an exit cr
 - Exit: queue empty or owner-deferred; validator clean.
 
 ### 9 Ship (Low)
-- [ ] Rebuild data, full check via gate_lock, site build, probe, preview deploy
+- [ ] Rebuild data, full check via gate_lock, golden-set gate (`corepack pnpm eval`), site build, probe, preview deploy
 - [ ] G8 before `git push` and production deploy
 - Exit: owner approved and both done, or stopped at preview with the URL reported.

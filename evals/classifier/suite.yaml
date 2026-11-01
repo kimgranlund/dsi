@@ -1,0 +1,13 @@
+# Gold suite for the naming-term classifier (packages/classify). Cases are the approved exact and close
+# mappings, rebuilt by build.py in the same commit as the mappings and terms they come from.
+id: dsi-classifier
+version: 1
+target: dsi-classify run (naming terms -> concept), read from data/classified via target.py
+target_spec:
+  - When the approved naming terms explain every word of a token's name, the classifier gives the concept of that token's approved exact or close mapping.
+graders:
+  - id: concept-exact
+    kind: exact
+    config: {field: concept}
+slices: [material, carbon, polaris, atlassian, primer, spectrum, fluent]
+cases_path: cases.jsonl

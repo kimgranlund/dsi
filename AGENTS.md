@@ -27,6 +27,7 @@ A public, searchable index of design-system tokens. Each system's shipped tokens
 | Query database, search | `packages/db/README.md` | `docs/planning/repo-layout.md` |
 | Explorer site | `site/README.md` | `packages/db/README.md` |
 | Data file shape or validation rule | `packages/schema/README.md` | `ontology/README.md` |
+| Golden-set regression gate (before push and deploy) | `evals/README.md` | `packages/classify/README.md` |
 | Naming, definitions, wording rules (controlled language), concept registry | `docs/controlled-language.md` | `docs/decisions/0019-controlled-language-and-concept-registry.md` |
 
 ## Invariants
@@ -41,5 +42,7 @@ A public, searchable index of design-system tokens. Each system's shipped tokens
 - **Record upstream licenses** per source. Project license is MIT; it does not relicense third-party token values.
 
 ## Checks
+
+Before a push or deploy, also `corepack pnpm eval` (the golden-set gate, `evals/README.md`).
 
 `corepack pnpm check` from the root (or `pnpm check` with pnpm installed). Runs each package's `check`: today, `@dsi/schema` generates types, typechecks, runs tests and validates `ontology/`, `catalog/`, `sources/`, `mappings/`.
