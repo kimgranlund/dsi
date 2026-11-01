@@ -1,0 +1,65 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { DatabaseSync } from 'node:sqlite';
+
+type Row = Record<string, any>;
+
+/**
+ * Export the site's static data from the database (so the site and the future API read the same rows):
+ * meta.json, concepts.json, tokens.<product>.json, search.json, and the canonical CSS bridges.
+ */
+export function exportSite(root: string, dbFile: string, outDir: string): Record<string, number> {
+  const db = new DatabaseSync(dbFile, { readOnly: true });
+  const all = (sql: string, ...args: any[]) => db.prepare(sql).all(...args) as Row[];
+  fs.rmSync(outDir, { recursive: true, force: true });
+  fs.mkdirSync(path.join(outDir, 'canonical'), { recursive: true });
+  const write = (name: string, data: unknown) => { const s = JSON.stringify(data); fs.writeFileSync(path.join(outDir, name), s); return s.length; };
+  const sizes: Record<string, number> = {};
+
+  const facets = JSON.parse(fs.readFileSync(path.join(root, 'ontology/schemes/facets.jsonld'), 'utf8'))['@graph'] as Row[];
+  const facetValues = Object.fromEntries(['intent', 'usage', 'property', 'emphasis', 'state'].map((f) => [f, facets.filter((c) => c.inScheme === `dsi:scheme/${f}` && !c.deprecated).map((c) => ({ value: String(c.id).split('/').pop(), label: c.prefLabel, definition: c.definition ?? null }))]));
+  const modes = all('SELECT product, mode, theme FROM modes ORDER BY product, mode');
+  const products = all("SELECT * FROM products WHERE version IS NOT NULL ORDER BY name").map((p): Row => ({
+    ...p,
+    modes: Object.fromEntries(modes.filter((m) => m.product === p.id).map((m) => [m.mode, m.theme])),
+    counts: {
+      tokens: (all('SELECT count(*) n FROM tokens WHERE product = ?', p.id)[0].n),
+      mapped: (all('SELECT count(DISTINCT token) n FROM mappings WHERE product = ?', p.id)[0].n),
+      unmapped: (all('SELECT count(*) n FROM unmapped WHERE product = ?', p.id)[0].n),
+      answered: (all("SELECT count(DISTINCT concept) n FROM coverage WHERE product = ? AND status IN ('match','nearest')", p.id)[0].n),
+    },
+  }));
+  const catalog = all('SELECT id, name, category, organization, homepage, description FROM products ORDER BY name');
+  sizes['meta.json'] = write('meta.json', { products, catalog, facets: facetValues, concepts: all('SELECT count(*) n FROM concepts')[0].n });
+
+  const cov = all('SELECT * FROM coverage');
+  const byConcept = new Map<string, Row[]>();
+  for (const c of cov) (byConcept.get(c.concept) ?? byConcept.set(c.concept, []).get(c.concept)!).push(c);
+  const concepts = all('SELECT * FROM concepts ORDER BY name').map((c) => {
+    const cells: Record<string, Record<string, Row>> = {};
+    for (const x of byConcept.get(c.iri) ?? []) if (x.status === 'match' || x.status === 'nearest') (cells[x.product] ??= {})[x.mode] = { s: x.status, t: x.token, m: x.match, via: x.via, d: x.display };
+    return { iri: c.iri, group: c.grp, name: c.name, label: c.label, facets: JSON.parse(c.facets), cells };
+  });
+  sizes['concepts.json'] = write('concepts.json', concepts);
+
+  for (const p of products) {
+    const maps = all('SELECT token, concept, match, review_by FROM mappings WHERE product = ?', p.id);
+    const mapped = new Map<string, Row[]>();
+    for (const m of maps) (mapped.get(m.token) ?? mapped.set(m.token, []).get(m.token)!).push(m);
+    const unm = new Map(all('SELECT token, rationale FROM unmapped WHERE product = ?', p.id).map((u) => [u.token, u.rationale]));
+    const values = all('SELECT path, theme, display, alias_chain FROM token_values WHERE product = ?', p.id);
+    const vals = new Map<string, Row>();
+    for (const v of values) ((vals.get(v.path) ?? vals.set(v.path, {}).get(v.path)!) as Row)[v.theme || 'all'] = [v.display, JSON.parse(v.alias_chain)];
+    const tokens = all("SELECT path, native_name, type, description, scope, visibility FROM tokens WHERE product = ? AND (scope = 'semantic' OR path IN (SELECT token FROM mappings WHERE product = ?)) ORDER BY path", p.id, p.id).map((t) => ({
+      p: t.path, n: t.native_name, t: t.type, d: t.description ?? undefined, s: t.scope, vis: t.visibility ?? undefined, v: vals.get(t.path),
+      m: mapped.get(t.path)?.map((m) => [m.concept, m.match, m.review_by]) ?? [],
+      u: unm.get(t.path) ?? undefined,
+    }));
+    sizes[`tokens.${p.id}.json`] = write(`tokens.${p.id}.json`, tokens);
+  }
+
+  sizes['search.json'] = write('search.json', all('SELECT kind, key, title, body FROM search').map((r) => [r.kind, r.key, r.title, r.body]));
+  for (const f of fs.readdirSync(path.join(root, 'data/canonical')).filter((f) => f.endsWith('.css'))) fs.copyFileSync(path.join(root, 'data/canonical', f), path.join(outDir, 'canonical', f));
+  db.close();
+  return sizes;
+}
