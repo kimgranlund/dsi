@@ -37,6 +37,9 @@ export interface Candidate {
   type?: string;
   value?: unknown;
   display: string;
+  /** For more-specific answers: how many facet values the answering concept adds, and whether one is a state. */
+  extra?: number;
+  addsState?: boolean;
 }
 
 export interface ConceptAnswer { product: string; version: string; concept: string; mode?: string; theme?: string; status: Status; answer?: Candidate; candidates: Candidate[]; note?: string }
@@ -59,16 +62,24 @@ export function resolveConcept(o: Ontology, set: NativeSet, maps: MappingSet, co
   const cands: Candidate[] = [];
   for (const m of approved) {
     let via: Candidate['via'] | undefined;
+    let extra: number | undefined, addsState: boolean | undefined;
     if (m.concept === concept) via = 'direct';
     else if (want && (m.match === 'exact' || m.match === 'close')) {
       const have = facetSet(o, m.concept);
-      if (have && have.size > want.size && [...want].every((f) => have.has(f))) via = 'more-specific';
+      if (have && have.size > want.size && [...want].every((f) => have.has(f))) {
+        via = 'more-specific';
+        const added = [...have].filter((f) => !want.has(f));
+        extra = added.length;
+        addsState = added.some((f) => f.includes(':state-'));
+      }
     }
     if (!via) continue;
     const r = resolve(set, theme, m.token);
-    cands.push({ token: m.token, match: m.match, via, concept: m.concept, confidence: m.confidence, theme, chain: r.chain, type: r.type, value: r.value, display: showValue(r.type, r.value) });
+    cands.push({ token: m.token, match: m.match, via, concept: m.concept, confidence: m.confidence, theme, chain: r.chain, type: r.type, value: r.value, display: showValue(r.type, r.value), extra, addsState });
   }
-  cands.sort((a, b) => (a.via === b.via ? 0 : a.via === 'direct' ? -1 : 1) || RANK[a.match] - RANK[b.match] || b.confidence - a.confidence || a.token.localeCompare(b.token));
+  // Direct answers first; among more-specific ones, the closest superset: no added state (hover, selected...), then
+  // the fewest added facet values. Never an alphabetical accident.
+  cands.sort((a, b) => (a.via === b.via ? 0 : a.via === 'direct' ? -1 : 1) || Number(a.addsState ?? false) - Number(b.addsState ?? false) || (a.extra ?? 0) - (b.extra ?? 0) || RANK[a.match] - RANK[b.match] || b.confidence - a.confidence || a.token.localeCompare(b.token));
   const top = cands[0];
   const t = theme || undefined;
   if (top && top.via === 'direct' && RANK[top.match] <= 1) return { ...base, theme: t, status: 'match', answer: top, candidates: cands };

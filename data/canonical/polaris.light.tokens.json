@@ -5,14 +5,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent",
-          "match": "exact",
+          "match": "close",
           "mode": "light",
-          "nativeName": "--p-color-text-brand-on-bg-fill",
-          "note": "no direct mapping; color-text-brand-on-bg-fill maps to the more specific dsi:concept/color/intent-accent/usage-on-fill/property-text",
+          "nativeName": "--p-color-border-brand",
+          "note": "no direct mapping; color-border-brand maps to the more specific dsi:concept/color/intent-accent/property-border",
           "product": "polaris",
           "status": "nearest",
           "theme": "light",
-          "token": "color-text-brand-on-bg-fill",
+          "token": "color-border-brand",
           "version": "9.4.2",
           "via": "more-specific"
         }
@@ -21,11 +21,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          1,
-          1,
-          1
+          0.8902,
+          0.8902,
+          0.8902
         ],
-        "hex": "#ffffff"
+        "hex": "#e3e3e3"
       }
     },
     "accent-background": {
@@ -1289,12 +1289,12 @@
           "concept": "dsi:concept/color/intent-caution",
           "match": "exact",
           "mode": "light",
-          "nativeName": "--p-color-bg-fill-caution-secondary",
-          "note": "no direct mapping; color-bg-fill-caution-secondary maps to the more specific dsi:concept/color/intent-caution/property-background/emphasis-subtle",
+          "nativeName": "--p-color-bg-fill-caution",
+          "note": "no direct mapping; color-bg-fill-caution maps to the more specific dsi:concept/color/intent-caution/property-background",
           "product": "polaris",
           "status": "nearest",
           "theme": "light",
-          "token": "color-bg-fill-caution-secondary",
+          "token": "color-bg-fill-caution",
           "version": "9.4.2",
           "via": "more-specific"
         }
@@ -1304,10 +1304,10 @@
         "colorSpace": "srgb",
         "components": [
           1,
-          0.9216,
-          0.4706
+          0.902,
+          0
         ],
-        "hex": "#ffeb78"
+        "hex": "#ffe600"
       }
     },
     "caution-background": {
@@ -1695,12 +1695,12 @@
           "concept": "dsi:concept/color/intent-danger",
           "match": "exact",
           "mode": "light",
-          "nativeName": "--p-color-bg-surface-critical",
-          "note": "no direct mapping; color-bg-surface-critical maps to the more specific dsi:concept/color/intent-danger/usage-surface/property-background",
+          "nativeName": "--p-color-bg-fill-critical",
+          "note": "no direct mapping; color-bg-fill-critical maps to the more specific dsi:concept/color/intent-danger/property-background",
           "product": "polaris",
           "status": "nearest",
           "theme": "light",
-          "token": "color-bg-surface-critical",
+          "token": "color-bg-fill-critical",
           "version": "9.4.2",
           "via": "more-specific"
         }
@@ -1709,11 +1709,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.9961,
-          0.9098,
-          0.9216
+          0.7804,
+          0.0392,
+          0.1412
         ],
-        "hex": "#fee8eb"
+        "hex": "#c70a24"
       }
     },
     "danger-background": {
@@ -2938,12 +2938,12 @@
           "concept": "dsi:concept/color/intent-info",
           "match": "exact",
           "mode": "light",
-          "nativeName": "--p-color-text-info-on-bg-fill",
-          "note": "no direct mapping; color-text-info-on-bg-fill maps to the more specific dsi:concept/color/intent-info/usage-on-fill/property-foreground",
+          "nativeName": "--p-color-bg-fill-info",
+          "note": "no direct mapping; color-bg-fill-info maps to the more specific dsi:concept/color/intent-info/property-background",
           "product": "polaris",
           "status": "nearest",
           "theme": "light",
-          "token": "color-text-info-on-bg-fill",
+          "token": "color-bg-fill-info",
           "version": "9.4.2",
           "via": "more-specific"
         }
@@ -2952,11 +2952,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0,
-          0.1294,
-          0.2
+          0.5686,
+          0.8157,
+          1
         ],
-        "hex": "#002133"
+        "hex": "#91d0ff"
       }
     },
     "info-background": {
@@ -3970,12 +3970,12 @@
           "concept": "dsi:concept/color/intent-success",
           "match": "exact",
           "mode": "light",
-          "nativeName": "--p-color-text-success-on-bg-fill",
-          "note": "no direct mapping; color-text-success-on-bg-fill maps to the more specific dsi:concept/color/intent-success/usage-on-fill/property-foreground",
+          "nativeName": "--p-color-bg-fill-success",
+          "note": "no direct mapping; color-bg-fill-success maps to the more specific dsi:concept/color/intent-success/property-background",
           "product": "polaris",
           "status": "nearest",
           "theme": "light",
-          "token": "color-text-success-on-bg-fill",
+          "token": "color-bg-fill-success",
           "version": "9.4.2",
           "via": "more-specific"
         }
@@ -3984,11 +3984,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.9804,
-          1,
-          0.9843
+          0.0157,
+          0.4824,
+          0.3647
         ],
-        "hex": "#fafffb"
+        "hex": "#047b5d"
       }
     },
     "success-background": {
@@ -4701,12 +4701,12 @@
           "concept": "dsi:concept/color/intent-warning",
           "match": "exact",
           "mode": "light",
-          "nativeName": "--p-color-text-warning-on-bg-fill",
-          "note": "no direct mapping; color-text-warning-on-bg-fill maps to the more specific dsi:concept/color/intent-warning/usage-on-fill/property-foreground",
+          "nativeName": "--p-color-bg-fill-warning",
+          "note": "no direct mapping; color-bg-fill-warning maps to the more specific dsi:concept/color/intent-warning/property-background",
           "product": "polaris",
           "status": "nearest",
           "theme": "light",
-          "token": "color-text-warning-on-bg-fill",
+          "token": "color-bg-fill-warning",
           "version": "9.4.2",
           "via": "more-specific"
         }
@@ -4715,11 +4715,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.1451,
-          0.102,
+          1,
+          0.7216,
           0
         ],
-        "hex": "#251a00"
+        "hex": "#ffb800"
       }
     },
     "warning-background": {

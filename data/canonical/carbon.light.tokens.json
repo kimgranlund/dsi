@@ -638,12 +638,12 @@
           "concept": "dsi:concept/color/property-border",
           "match": "exact",
           "mode": "light",
-          "nativeName": "--cds-border-disabled",
-          "note": "no direct mapping; border-disabled maps to the more specific dsi:concept/color/property-border/state-disabled",
+          "nativeName": "--cds-border-inverse",
+          "note": "no direct mapping; border-inverse maps to the more specific dsi:concept/color/usage-inverse/property-border",
           "product": "carbon",
           "status": "nearest",
           "theme": "white",
-          "token": "border-disabled",
+          "token": "border-inverse",
           "version": "11.84.0",
           "via": "more-specific"
         }
@@ -652,11 +652,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.776471,
-          0.776471,
-          0.776471
+          0.086275,
+          0.086275,
+          0.086275
         ],
-        "hex": "#c6c6c6"
+        "hex": "#161616"
       }
     },
     "border-disabled": {
@@ -1859,14 +1859,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background",
-          "match": "exact",
+          "match": "close",
           "mode": "light",
-          "nativeName": "--cds-layer-selected-disabled",
-          "note": "no direct mapping; layer-selected-disabled maps to the more specific dsi:concept/color/usage-surface/property-background/state-disabled+selected",
+          "nativeName": "--cds-layer-01",
+          "note": "no direct mapping; layer-01 maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-subtle",
           "product": "carbon",
           "status": "nearest",
           "theme": "white",
-          "token": "layer-selected-disabled",
+          "token": "layer-01",
           "version": "11.84.0",
           "via": "more-specific"
         }
@@ -1875,11 +1875,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.552941,
-          0.552941,
-          0.552941
+          0.956863,
+          0.956863,
+          0.956863
         ],
-        "hex": "#8d8d8d"
+        "hex": "#f4f4f4"
       }
     },
     "surface-background-active": {
@@ -2133,14 +2133,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
-          "match": "exact",
+          "match": "close",
           "mode": "light",
-          "nativeName": "--cds-layer-selected-disabled",
-          "note": "no direct mapping; layer-selected-disabled maps to the more specific dsi:concept/color/usage-surface/property-background/state-disabled+selected",
+          "nativeName": "--cds-layer-selected-01",
+          "note": "no direct mapping; layer-selected-01 maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-selected",
           "product": "carbon",
           "status": "nearest",
           "theme": "white",
-          "token": "layer-selected-disabled",
+          "token": "layer-selected-01",
           "version": "11.84.0",
           "via": "more-specific"
         }
@@ -2149,11 +2149,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.552941,
-          0.552941,
-          0.552941
+          0.878431,
+          0.878431,
+          0.878431
         ],
-        "hex": "#8d8d8d"
+        "hex": "#e0e0e0"
       }
     },
     "surface-background-strong": {

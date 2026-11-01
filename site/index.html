@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>DesignSystemsIndex</title>
+  <meta name="description" content="The tokens of Material, Carbon and Polaris under one shared vocabulary: every concept, every system, every mode, with the evidence behind each match.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" id="specimen-css" href="">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a href="/" class="brand" data-link><span class="brand-mark" aria-hidden="true"></span>DesignSystemsIndex</a>
+      <form class="search" id="search-form" role="search">
+        <label class="sr-only" for="q">Search tokens and concepts</label>
+        <input id="q" type="search" autocomplete="off" placeholder="Search: critical, surface, --cds-text-error">
+        <div class="results" id="results" hidden></div>
+      </form>
+      <nav class="head-nav" aria-label="Systems" id="systems-nav"></nav>
+    </div>
+  </header>
+  <main id="main" class="wrap"></main>
+  <footer class="site-foot wrap">
+    <p>Token values belong to their owners: Material and Carbon under Apache-2.0; Polaris under the Shopify Polaris license. Mappings and ontology by DesignSystemsIndex, MIT. Every mapping shows how it was reached.</p>
+  </footer>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -74,3 +74,14 @@ test('absent needs an approved noEquivalent; an unmapped mode is unknown with a 
   const x = resolveConcept(o, set, { mappings: [m('danger', DANGER_BG, 'exact')], noEquivalent: [] }, DANGER_BG, 'increased-contrast');
   assert.deepEqual([x.status, x.note], ['unknown', 'no theme is declared for mode "increased-contrast"']);
 });
+
+test('a more-specific answer is the closest superset, never a state variant chosen by name order', () => {
+  const SURF = 'dsi:concept/color/usage-surface/property-background';
+  const maps: MappingSet = { mappings: [
+    m('danger', `${SURF}/state-disabled+selected`, 'exact'),
+    m('red.60', `${SURF}/emphasis-subtle/state-hover`, 'exact'),
+    m('danger-text', `${SURF}/emphasis-subtle`, 'exact'),
+  ], noEquivalent: [] };
+  const a = resolveConcept(o, set, maps, SURF, 'light');
+  assert.deepEqual([a.status, a.answer?.token, a.answer?.extra, a.answer?.addsState], ['nearest', 'danger-text', 1, false]);
+});

@@ -1,0 +1,16 @@
+{
+  "name": "@dsi/site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "data": "cd .. && node packages/db/src/cli.ts build && node packages/db/src/cli.ts export",
+    "dev": "vite",
+    "build": "tsc -p . && vite build",
+    "preview": "vite preview",
+    "check": "tsc -p ."
+  },
+  "devDependencies": {
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
+  }
+}

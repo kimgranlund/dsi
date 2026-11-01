@@ -1,0 +1,7 @@
+{
+  // Static site on Cloudflare: every unknown path serves index.html so /concept/..., /token/... and /ontology/... resolve client-side.
+  "name": "dsi",
+  "compatibility_date": "2025-10-01",
+  "assets": { "directory": "./dist", "not_found_handling": "single-page-application" },
+  "routes": [{ "pattern": "dsi.nonoun.io", "custom_domain": true }]
+}
