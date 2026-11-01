@@ -21,3 +21,7 @@ Shape: `packages/schema/schemas/source.schema.json`. Meaning: `corepack pnpm che
 ## See also
 
 `packages/ingest/README.md`, `catalog/README.md`.
+
+## applications.json
+
+Optional, per product: which shipped component styles `dsi-apply` reads and the authored map from selectors to anatomy parts (`packages/schema/schemas/applications.schema.json`, ADR 0015). The match of a native component to a `dsi:component` and the part map are judgments; cite evidence.

@@ -73,6 +73,20 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
     for (const id of e.relations?.providesTokenSet ?? []) if (catalog.has(id) && cat(id) !== 'dsi:category/token-set') issues.push({ file: at, message: `providesTokenSet "${id}", which is not a Token Set` });
   }
 
+  // Token application configs (ADR 0015): component, part and match values must exist in the ontology.
+  for (const f of walk(path.join(root, 'sources'), 'applications.json')) {
+    const data = read(f);
+    if (data === undefined || !shape('applications.schema.json', f, data)) continue;
+    const a = data as { product: string; components: { component: string; match: string; parts: { part: string }[]; props?: { part: string }[] }[]; absent?: { component: string }[] };
+    const at = rel(f);
+    if (path.basename(path.dirname(f)) !== a.product) issues.push({ file: at, message: `folder must equal product "${a.product}"` });
+    for (const c of [...a.components, ...(a.absent ?? [])]) if (!inScheme(ontology, `dsi:component/${c.component}`, 'dsi:scheme/component')) issues.push({ file: at, message: `component "${c.component}" is not in dsi:scheme/component` });
+    for (const c of a.components) {
+      if (!inScheme(ontology, `dsi:match/${c.match}`, 'dsi:scheme/match-types')) issues.push({ file: at, message: `${c.component}: match "${c.match}" is not in dsi:scheme/match-types` });
+      for (const p of [...c.parts, ...(c.props ?? [])]) if (!inScheme(ontology, `dsi:part/${p.part}`, 'dsi:scheme/part')) issues.push({ file: at, message: `${c.component}: part "${p.part}" is not in dsi:scheme/part` });
+    }
+  }
+
   // Sources
   for (const f of walk(path.join(root, 'sources'), 'source.json')) {
     const data = read(f);

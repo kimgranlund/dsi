@@ -1,0 +1,356 @@
+{
+  "product": "carbon",
+  "packages": [
+    {
+      "registry": "npm",
+      "name": "@carbon/styles",
+      "version": "1.118.0"
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/themes",
+      "version": "11.84.0"
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/layout",
+      "version": "11.62.0"
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/colors",
+      "version": "11.61.0"
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/motion",
+      "version": "11.55.0"
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/type",
+      "version": "11.70.0"
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/grid",
+      "version": "11.65.0"
+    },
+    {
+      "registry": "npm",
+      "name": "@carbon/feature-flags",
+      "version": "1.11.0"
+    }
+  ],
+  "packagesNote": "Versions released together with @carbon/themes 11.84.0 (2026-10-21).",
+  "sass": [
+    {
+      "id": "card",
+      "source": "@use '@carbon/styles/scss/layout';\n@use '@carbon/styles/scss/components/card';",
+      "markers": [
+        {
+          "module": "@carbon/layout/scss/generated/spacing",
+          "names": [
+            "spacing-01",
+            "spacing-02",
+            "spacing-03",
+            "spacing-04",
+            "spacing-05",
+            "spacing-06",
+            "spacing-07",
+            "spacing-08",
+            "spacing-09",
+            "spacing-10",
+            "spacing-11",
+            "spacing-12",
+            "spacing-13"
+          ]
+        },
+        {
+          "module": "@carbon/layout/scss/generated/border-radius",
+          "names": [
+            "border-radius-00",
+            "border-radius-02",
+            "border-radius-04",
+            "border-radius-08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tile",
+      "source": "@use '@carbon/styles/scss/layout';\n@use '@carbon/styles/scss/components/tile';",
+      "markers": [
+        {
+          "module": "@carbon/layout/scss/generated/spacing",
+          "names": [
+            "spacing-01",
+            "spacing-02",
+            "spacing-03",
+            "spacing-04",
+            "spacing-05",
+            "spacing-06",
+            "spacing-07",
+            "spacing-08",
+            "spacing-09",
+            "spacing-10",
+            "spacing-11",
+            "spacing-12",
+            "spacing-13"
+          ]
+        },
+        {
+          "module": "@carbon/layout/scss/generated/border-radius",
+          "names": [
+            "border-radius-00",
+            "border-radius-02",
+            "border-radius-04",
+            "border-radius-08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "button",
+      "source": "@use '@carbon/styles/scss/layout';\n@use '@carbon/styles/scss/components/button';",
+      "markers": [
+        {
+          "module": "@carbon/layout/scss/generated/spacing",
+          "names": [
+            "spacing-01",
+            "spacing-02",
+            "spacing-03",
+            "spacing-04",
+            "spacing-05",
+            "spacing-06",
+            "spacing-07",
+            "spacing-08",
+            "spacing-09",
+            "spacing-10",
+            "spacing-11",
+            "spacing-12",
+            "spacing-13"
+          ]
+        },
+        {
+          "module": "@carbon/layout/scss/generated/border-radius",
+          "names": [
+            "border-radius-00",
+            "border-radius-02",
+            "border-radius-04",
+            "border-radius-08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "text-input",
+      "source": "@use '@carbon/styles/scss/layout';\n@use '@carbon/styles/scss/components/text-input';",
+      "markers": [
+        {
+          "module": "@carbon/layout/scss/generated/spacing",
+          "names": [
+            "spacing-01",
+            "spacing-02",
+            "spacing-03",
+            "spacing-04",
+            "spacing-05",
+            "spacing-06",
+            "spacing-07",
+            "spacing-08",
+            "spacing-09",
+            "spacing-10",
+            "spacing-11",
+            "spacing-12",
+            "spacing-13"
+          ]
+        },
+        {
+          "module": "@carbon/layout/scss/generated/border-radius",
+          "names": [
+            "border-radius-00",
+            "border-radius-02",
+            "border-radius-04",
+            "border-radius-08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-table",
+      "source": "@use '@carbon/styles/scss/layout';\n@use '@carbon/styles/scss/components/data-table';",
+      "markers": [
+        {
+          "module": "@carbon/layout/scss/generated/spacing",
+          "names": [
+            "spacing-01",
+            "spacing-02",
+            "spacing-03",
+            "spacing-04",
+            "spacing-05",
+            "spacing-06",
+            "spacing-07",
+            "spacing-08",
+            "spacing-09",
+            "spacing-10",
+            "spacing-11",
+            "spacing-12",
+            "spacing-13"
+          ]
+        },
+        {
+          "module": "@carbon/layout/scss/generated/border-radius",
+          "names": [
+            "border-radius-00",
+            "border-radius-02",
+            "border-radius-04",
+            "border-radius-08"
+          ]
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "component": "card",
+      "native": "Card",
+      "match": "exact",
+      "variant": "default",
+      "sass": "card",
+      "evidence": "@carbon/styles scss/components/card/_card.scss",
+      "within": "^\\.cds--card(?![a-z-])|^\\.cds--card__(body|footer|title|label|description)(?![a-z-])|^\\.cds--card__title \\.cds--card__(label|description)$",
+      "exclude": "--clickable|--flush|truncate|media|actions|decorator|start-icon|end-icon|clickable-footer|:has",
+      "parts": [
+        {
+          "selector": "__label",
+          "part": "label"
+        },
+        {
+          "selector": "__description",
+          "part": "supporting-text"
+        },
+        {
+          "selector": "__title",
+          "part": "header"
+        },
+        {
+          "selector": "__footer",
+          "part": "footer"
+        },
+        {
+          "selector": "__body",
+          "part": "body"
+        },
+        {
+          "selector": "^\\.cds--card$",
+          "part": "container"
+        }
+      ],
+      "defScope": "^\\.cds--card$"
+    },
+    {
+      "component": "card",
+      "native": "Tile",
+      "match": "close",
+      "variant": "tile (default)",
+      "sass": "tile",
+      "evidence": "@carbon/styles scss/components/tile/_tile.scss; Tile is Carbon's long-standing card-like container",
+      "within": "^\\.cds--tile(?![a-z-])(:focus)?$",
+      "parts": [
+        {
+          "selector": "^\\.cds--tile",
+          "part": "container"
+        }
+      ],
+      "defScope": "^\\.cds--tile$"
+    },
+    {
+      "component": "button",
+      "native": "Button",
+      "match": "exact",
+      "variant": "primary, default size",
+      "sass": "button",
+      "evidence": "@carbon/styles scss/components/button/_button.scss",
+      "within": "^\\.cds--btn(?![a-z-])|^\\.cds--btn--primary(?![a-z-])",
+      "exclude": "skeleton|__icon|--sm|--md|--lg|--xl|--2xl|--ghost|--danger|--secondary|--tertiary|--expressive|--icon-only",
+      "parts": [
+        {
+          "selector": ".",
+          "part": "label",
+          "props": "^(color|font-|line-height|letter-spacing)"
+        },
+        {
+          "selector": ".",
+          "part": "container"
+        }
+      ],
+      "defScope": "^\\.cds--btn$"
+    },
+    {
+      "component": "text-field",
+      "native": "TextInput",
+      "match": "exact",
+      "variant": "default",
+      "sass": "text-input",
+      "evidence": "@carbon/styles scss/components/text-input/_text-input.scss; label and helper text from form/_form.scss",
+      "within": "^\\.cds--(text-input|label|form__helper-text)(?![a-z-_])",
+      "exclude": "tooltip|toggletip|password|decorator|::placeholder|invalid|warn|skeleton|readonly|fluid|inline",
+      "parts": [
+        {
+          "selector": "^\\.cds--label",
+          "part": "label"
+        },
+        {
+          "selector": "helper-text",
+          "part": "supporting-text"
+        },
+        {
+          "selector": "^\\.cds--text-input",
+          "part": "input",
+          "props": "^(color|caret-color|font-|line-height|letter-spacing|-webkit)"
+        },
+        {
+          "selector": "^\\.cds--text-input",
+          "part": "container"
+        }
+      ],
+      "defScope": "^\\.cds--text-input$"
+    },
+    {
+      "component": "table",
+      "native": "DataTable",
+      "match": "exact",
+      "variant": "default size",
+      "sass": "data-table",
+      "evidence": "@carbon/styles scss/components/data-table/_data-table.scss",
+      "within": "^\\.cds--data-table (th|td|tr|thead|tbody)(?![a-z])",
+      "exclude": "list-box|overflow-menu|checkbox|slug|decorator|ai-label|cds--link|child-row|first-of-type|sort|expand|batch|zebra|skeleton|selected|static|compact|short|tall|--xs|--sm|--lg|--xl",
+      "parts": [
+        {
+          "selector": " td|tbody th",
+          "part": "cell"
+        },
+        {
+          "selector": " th$|thead",
+          "part": "header"
+        },
+        {
+          "selector": " tr",
+          "part": "row"
+        },
+        {
+          "selector": "tbody",
+          "part": "body"
+        }
+      ],
+      "defScope": "^\\.cds--data-table$"
+    }
+  ],
+  "cssNames": [
+    {
+      "group": "type",
+      "pattern": "--cds-{rest}"
+    }
+  ],
+  "defScopeNote": "Carbon layout context (size, density) is set by .cds--layout--* classes; only :root defaults and the component's own root rule count, so components show their default size and normal density."
+}

@@ -33,6 +33,10 @@ Code. Its output in `data/native/` is generated: fix the adapter or the source c
 | `dtcg` | Carbon (`@carbon/themes` + colors, layout, motion) | Reads shipped DTCG 2025.10 files and one resolver. Keeps `{aliases}`, `$description`, `$deprecated` and foreign `$extensions`; resolves partial JSON Pointer `$ref`s to literals (noted as derived); inherits group `$type`. `nativeName` pattern per entry (`--cds-{path}`). `sass-module` entries read public Sass variables of packages that ship no DTCG (`@carbon/type`, `@carbon/grid`, `@carbon/styles`) by evaluating the module with the pinned packages linked in; `///` comments give descriptions and `@deprecated`. |
 | `polaris` | `@shopify/polaris-tokens` | Values and `var(--p-x)` aliases from `dist/css/styles.css`; palette and size aliases from the token modules, **parsed with the TypeScript parser, never executed**, and accepted only when the palette value equals the CSS value. The palette and size scale are internal (`visibility: internal`); the size scale is stored in rem as the build ships it. |
 
+## Token applications
+
+`node packages/ingest/src/apply-cli.ts <product>` reads `sources/<product>/applications.json` and the shipped component styles it names, and writes `data/applications/<product>/<version>.json`: one row per token `var()` in a declaration, with part, CSS property, state, media, chain, token, literal fallback, file and line (ADR 0015). Material and Polaris CSS are parsed with postcss; Carbon component Sass is compiled with spacing and radius variables configured to `var(--dsi-m-<name>)` markers; Polaris Card prop defaults are read from JS source text by an authored pattern. `within` keeps one component's rules out of a shared stylesheet, `defScope` limits component-local definitions to the default variant, `exclude` drops other variants.
+
 ## Checks
 
 `corepack pnpm --filter @dsi/ingest check` (typecheck + tests). Output is validated by `@dsi/schema` (`corepack pnpm check` at the root).

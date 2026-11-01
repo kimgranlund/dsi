@@ -1,0 +1,1404 @@
+{
+ "components": [
+  {
+   "component": "button",
+   "evidence": "https://polaris-react.shopify.com/components/actions/button",
+   "match": "exact",
+   "native": "Button",
+   "variant": "secondary (default), medium"
+  },
+  {
+   "component": "card",
+   "evidence": "https://polaris-react.shopify.com/components/layout-and-structure/card",
+   "match": "exact",
+   "native": "Card",
+   "variant": "default props"
+  },
+  {
+   "component": "text-field",
+   "evidence": "https://polaris-react.shopify.com/components/selection-and-input/text-field",
+   "match": "exact",
+   "native": "TextField",
+   "variant": "default"
+  },
+  {
+   "component": "table",
+   "evidence": "https://polaris-react.shopify.com/components/tables/data-table",
+   "match": "exact",
+   "native": "DataTable",
+   "variant": "default density"
+  }
+ ],
+ "notes": [
+  "button (Button): 24 css rows, 0 prop defaults, 2660 declarations outside the part map",
+  "card (Card): 0 css rows, 4 prop defaults, 0 declarations outside the part map",
+  "text-field (TextField): 34 css rows, 0 prop defaults, 2650 declarations outside the part map",
+  "table (DataTable): 21 css rows, 0 prop defaults, 2665 declarations outside the part map"
+ ],
+ "packages": [
+  {
+   "integrity": "sha512-UN+rT2q1r/uF0Xia8MaCl2nDxatuzbjunS5WYcv4qw8VBvThTxDVURgpwOuvutSrvu138pwScOAah933vqlYkg==",
+   "name": "@shopify/polaris",
+   "registry": "npm",
+   "version": "13.9.5"
+  }
+ ],
+ "product": "polaris",
+ "rows": [
+  {
+   "chain": [
+    "--pc-button-bg",
+    "--p-color-bg-fill"
+   ],
+   "component": "button",
+   "cssProperty": "background",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 712,
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button",
+   "token": "color-bg-fill",
+   "value": "var(--pc-button-bg)"
+  },
+  {
+   "chain": [
+    "--pc-button-bg_disabled",
+    "--p-color-bg-fill-disabled"
+   ],
+   "component": "button",
+   "cssProperty": "background",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 777,
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button:disabled, .Polaris-Button[disabled], .Polaris-Button--disabled",
+   "state": "disabled",
+   "token": "color-bg-fill-disabled",
+   "value": "var(--pc-button-bg_disabled)"
+  },
+  {
+   "chain": [
+    "--pc-button-bg_hover",
+    "--p-color-bg-fill-hover"
+   ],
+   "component": "button",
+   "cssProperty": "background",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 764,
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button:focus-visible",
+   "state": "focus",
+   "token": "color-bg-fill-hover",
+   "value": "var(--pc-button-bg_hover)"
+  },
+  {
+   "chain": [
+    "--pc-button-bg_hover",
+    "--p-color-bg-fill-hover"
+   ],
+   "component": "button",
+   "cssProperty": "background",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 751,
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button:hover",
+   "state": "hover",
+   "token": "color-bg-fill-hover",
+   "value": "var(--pc-button-bg_hover)"
+  },
+  {
+   "chain": [
+    "--p-border-radius-200"
+   ],
+   "component": "button",
+   "cssProperty": "border-radius",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 714,
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button",
+   "token": "border-radius-200",
+   "value": "var(--p-border-radius-200)"
+  },
+  {
+   "chain": [
+    "--pc-button-box-shadow",
+    "--p-shadow-button"
+   ],
+   "component": "button",
+   "cssProperty": "box-shadow",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 715,
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button",
+   "token": "shadow-button",
+   "value": "var(--pc-button-box-shadow)"
+  },
+  {
+   "chain": [
+    "--pc-button-box-shadow_hover",
+    "--pc-button-box-shadow",
+    "--p-shadow-button"
+   ],
+   "component": "button",
+   "cssProperty": "box-shadow",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 753,
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button:hover",
+   "state": "hover",
+   "token": "shadow-button",
+   "value": "var(--pc-button-box-shadow_hover)"
+  },
+  {
+   "chain": [
+    "--pc-button-gap",
+    "--p-space-050"
+   ],
+   "component": "button",
+   "cssProperty": "gap",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 710,
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button",
+   "token": "space-050",
+   "value": "var(--pc-button-gap)"
+  },
+  {
+   "chain": [
+    "--p-height-800"
+   ],
+   "component": "button",
+   "cssProperty": "min-height",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 905,
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button--sizeSlim, .Polaris-Button--sizeMedium",
+   "token": "height-800",
+   "value": "var(--p-height-800)"
+  },
+  {
+   "chain": [
+    "--p-height-700"
+   ],
+   "component": "button",
+   "cssProperty": "min-height",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 913,
+   "media": "@media (min-width: 48em)",
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button--sizeSlim, .Polaris-Button--sizeMedium",
+   "token": "height-700",
+   "value": "var(--p-height-700)"
+  },
+  {
+   "chain": [
+    "--p-width-800"
+   ],
+   "component": "button",
+   "cssProperty": "min-width",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 906,
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button--sizeSlim, .Polaris-Button--sizeMedium",
+   "token": "width-800",
+   "value": "var(--p-width-800)"
+  },
+  {
+   "chain": [
+    "--p-width-700"
+   ],
+   "component": "button",
+   "cssProperty": "min-width",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 914,
+   "media": "@media (min-width: 48em)",
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button--sizeSlim, .Polaris-Button--sizeMedium",
+   "token": "width-700",
+   "value": "var(--p-width-700)"
+  },
+  {
+   "chain": [
+    "--p-border-width-050"
+   ],
+   "component": "button",
+   "cssProperty": "outline",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 766,
+   "native": "Button",
+   "part": "container",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".Polaris-Button:focus-visible",
+   "state": "focus",
+   "token": "border-width-050",
+   "value": "var(--p-border-width-050) solid var(--p-color-border-focus)"
+  },
+  {
+   "chain": [
+    "--p-color-border-focus"
+   ],
+   "component": "button",
+   "cssProperty": "outline",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 766,
+   "native": "Button",
+   "part": "container",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".Polaris-Button:focus-visible",
+   "state": "focus",
+   "token": "color-border-focus",
+   "value": "var(--p-border-width-050) solid var(--p-color-border-focus)"
+  },
+  {
+   "chain": [
+    "--p-space-025"
+   ],
+   "component": "button",
+   "cssProperty": "outline-offset",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 767,
+   "native": "Button",
+   "part": "container",
+   "selector": ".Polaris-Button:focus-visible",
+   "state": "focus",
+   "token": "space-025",
+   "value": "var(--p-space-025)"
+  },
+  {
+   "chain": [
+    "--pc-button-padding-block",
+    "--p-space-150"
+   ],
+   "component": "button",
+   "cssProperty": "padding",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 711,
+   "native": "Button",
+   "part": "container",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".Polaris-Button",
+   "token": "space-150",
+   "value": "var(--pc-button-padding-block) var(--pc-button-padding-inline)"
+  },
+  {
+   "chain": [
+    "--pc-button-padding-inline",
+    "--p-space-300"
+   ],
+   "component": "button",
+   "cssProperty": "padding",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 711,
+   "native": "Button",
+   "part": "container",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".Polaris-Button",
+   "token": "space-300",
+   "value": "var(--pc-button-padding-block) var(--pc-button-padding-inline)"
+  },
+  {
+   "chain": [
+    "--pc-button-icon-fill",
+    "--p-color-icon"
+   ],
+   "component": "button",
+   "cssProperty": "fill",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 725,
+   "native": "Button",
+   "part": "icon",
+   "selector": ".Polaris-Button.Polaris-Button svg",
+   "token": "color-icon",
+   "value": "var(--pc-button-icon-fill)"
+  },
+  {
+   "chain": [
+    "--pc-button-icon-fill_hover",
+    "--pc-button-icon-fill",
+    "--p-color-icon"
+   ],
+   "component": "button",
+   "cssProperty": "fill",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 729,
+   "native": "Button",
+   "part": "icon",
+   "selector": ".Polaris-Button.Polaris-Button:hover svg",
+   "state": "hover",
+   "token": "color-icon",
+   "value": "var(--pc-button-icon-fill_hover)"
+  },
+  {
+   "chain": [
+    "--p-space-050"
+   ],
+   "component": "button",
+   "cssProperty": "margin",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 1021,
+   "native": "Button",
+   "part": "icon",
+   "selector": ".Polaris-Button__Icon",
+   "token": "space-050",
+   "value": "calc(var(--p-space-050)*-1) 0"
+  },
+  {
+   "chain": [
+    "--pc-button-color",
+    "--p-color-text"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 716,
+   "native": "Button",
+   "part": "label",
+   "selector": ".Polaris-Button",
+   "token": "color-text",
+   "value": "var(--pc-button-color)"
+  },
+  {
+   "chain": [
+    "--pc-button-color_disabled",
+    "--p-color-text-disabled"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 778,
+   "native": "Button",
+   "part": "label",
+   "selector": ".Polaris-Button:disabled, .Polaris-Button[disabled], .Polaris-Button--disabled",
+   "state": "disabled",
+   "token": "color-text-disabled",
+   "value": "var(--pc-button-color_disabled)"
+  },
+  {
+   "chain": [
+    "--pc-button-color_hover",
+    "--pc-button-color",
+    "--p-color-text"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 765,
+   "native": "Button",
+   "part": "label",
+   "selector": ".Polaris-Button:focus-visible",
+   "state": "focus",
+   "token": "color-text",
+   "value": "var(--pc-button-color_hover)"
+  },
+  {
+   "chain": [
+    "--pc-button-color_hover",
+    "--pc-button-color",
+    "--p-color-text"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 752,
+   "native": "Button",
+   "part": "label",
+   "selector": ".Polaris-Button:hover",
+   "state": "hover",
+   "token": "color-text",
+   "value": "var(--pc-button-color_hover)"
+  },
+  {
+   "chain": [
+    "--p-color-bg-surface"
+   ],
+   "component": "card",
+   "cssProperty": "background",
+   "file": "build/esm/components/Card/Card.js",
+   "how": "prop-default",
+   "line": 9,
+   "native": "Card",
+   "part": "container",
+   "selector": "(prop default)",
+   "token": "color-bg-surface",
+   "value": "background = 'bg-surface'"
+  },
+  {
+   "chain": [
+    "--p-border-radius-300"
+   ],
+   "component": "card",
+   "cssProperty": "border-radius",
+   "file": "build/esm/components/Card/Card.js",
+   "how": "prop-default",
+   "line": 16,
+   "native": "Card",
+   "part": "container",
+   "selector": "(prop default)",
+   "token": "border-radius-300",
+   "value": "defaultBorderRadius = '300'"
+  },
+  {
+   "chain": [
+    "--p-shadow-100"
+   ],
+   "component": "card",
+   "cssProperty": "box-shadow",
+   "file": "build/esm/components/Card/Card.js",
+   "how": "prop-default",
+   "line": 21,
+   "native": "Card",
+   "part": "container",
+   "selector": "(prop default)",
+   "token": "shadow-100",
+   "value": "boxShadow: \"100\""
+  },
+  {
+   "chain": [
+    "--p-space-400"
+   ],
+   "component": "card",
+   "cssProperty": "padding",
+   "file": "build/esm/components/Card/Card.js",
+   "how": "prop-default",
+   "line": 10,
+   "native": "Card",
+   "part": "container",
+   "selector": "(prop default)",
+   "token": "space-400",
+   "value": "padding = {\n    xs: '400'"
+  },
+  {
+   "chain": [
+    "--p-color-bg-surface-hover"
+   ],
+   "component": "table",
+   "cssProperty": "background",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6278,
+   "media": "@media (min-width: 48em)",
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".Polaris-DataTable--hoverable .Polaris-DataTable__Cell--hovered",
+   "state": "hover",
+   "token": "color-bg-surface-hover",
+   "value": "var(--p-color-bg-surface-hover)"
+  },
+  {
+   "chain": [
+    "--p-color-text"
+   ],
+   "component": "table",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6150,
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".Polaris-DataTable__Cell",
+   "token": "color-text",
+   "value": "var(--p-color-text)"
+  },
+  {
+   "chain": [
+    "--p-color-icon"
+   ],
+   "component": "table",
+   "cssProperty": "fill",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6374,
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".Polaris-DataTable__Cell--sorted .Polaris-DataTable__Icon svg",
+   "token": "color-icon",
+   "value": "var(--p-color-icon)"
+  },
+  {
+   "chain": [
+    "--p-color-icon"
+   ],
+   "component": "table",
+   "cssProperty": "fill",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6378,
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".Polaris-DataTable__Cell--sorted:hover svg",
+   "state": "hover",
+   "token": "color-icon",
+   "value": "var(--p-color-icon)"
+  },
+  {
+   "chain": [
+    "--p-font-weight-regular"
+   ],
+   "component": "table",
+   "cssProperty": "font-weight",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6149,
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".Polaris-DataTable__Cell",
+   "token": "font-weight-regular",
+   "value": "var(--p-font-weight-regular)"
+  },
+  {
+   "chain": [
+    "--p-space-200"
+   ],
+   "component": "table",
+   "cssProperty": "padding",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6155,
+   "native": "DataTable",
+   "part": "cell",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".Polaris-DataTable__Cell",
+   "token": "space-200",
+   "value": "var(--p-space-200) var(--p-space-150)"
+  },
+  {
+   "chain": [
+    "--p-space-150"
+   ],
+   "component": "table",
+   "cssProperty": "padding",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6155,
+   "native": "DataTable",
+   "part": "cell",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".Polaris-DataTable__Cell",
+   "token": "space-150",
+   "value": "var(--p-space-200) var(--p-space-150)"
+  },
+  {
+   "chain": [
+    "--p-space-300"
+   ],
+   "component": "table",
+   "cssProperty": "padding-left",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6159,
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".Polaris-DataTable__Cell:first-child",
+   "token": "space-300",
+   "value": "var(--p-space-300)"
+  },
+  {
+   "chain": [
+    "--p-space-300"
+   ],
+   "component": "table",
+   "cssProperty": "padding-right",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6163,
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".Polaris-DataTable__Cell:last-child",
+   "token": "space-300",
+   "value": "var(--p-space-300)"
+  },
+  {
+   "chain": [
+    "--p-motion-duration-200"
+   ],
+   "component": "table",
+   "cssProperty": "transition",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6153,
+   "native": "DataTable",
+   "part": "cell",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".Polaris-DataTable__Cell",
+   "token": "motion-duration-200",
+   "value": "background-color var(--p-motion-duration-200) var(--p-motion-ease-in-out)"
+  },
+  {
+   "chain": [
+    "--p-motion-ease-in-out"
+   ],
+   "component": "table",
+   "cssProperty": "transition",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6153,
+   "native": "DataTable",
+   "part": "cell",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".Polaris-DataTable__Cell",
+   "token": "motion-ease-in-out",
+   "value": "background-color var(--p-motion-duration-200) var(--p-motion-ease-in-out)"
+  },
+  {
+   "chain": [
+    "--p-color-bg-surface"
+   ],
+   "component": "table",
+   "cssProperty": "background-color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6078,
+   "native": "DataTable",
+   "part": "container",
+   "selector": ".Polaris-DataTable",
+   "token": "color-bg-surface",
+   "value": "var(--p-color-bg-surface)"
+  },
+  {
+   "chain": [
+    "--p-border-radius-300"
+   ],
+   "component": "table",
+   "cssProperty": "border-radius",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6086,
+   "media": "@media (min-width: 30.625em)",
+   "native": "DataTable",
+   "part": "container",
+   "selector": ".Polaris-DataTable",
+   "token": "border-radius-300",
+   "value": "var(--p-border-radius-300)"
+  },
+  {
+   "chain": [
+    "--p-border-width-025"
+   ],
+   "component": "table",
+   "cssProperty": "border-bottom",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6220,
+   "native": "DataTable",
+   "part": "header",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".Polaris-DataTable__Cell--header",
+   "token": "border-width-025",
+   "value": "var(--p-border-width-025) solid var(--p-color-border)"
+  },
+  {
+   "chain": [
+    "--p-color-border"
+   ],
+   "component": "table",
+   "cssProperty": "border-bottom",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6220,
+   "native": "DataTable",
+   "part": "header",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".Polaris-DataTable__Cell--header",
+   "token": "color-border",
+   "value": "var(--p-border-width-025) solid var(--p-color-border)"
+  },
+  {
+   "chain": [
+    "--p-color-text"
+   ],
+   "component": "table",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6219,
+   "native": "DataTable",
+   "part": "header",
+   "selector": ".Polaris-DataTable__Cell--header",
+   "token": "color-text",
+   "value": "var(--p-color-text)"
+  },
+  {
+   "chain": [
+    "--p-font-weight-regular"
+   ],
+   "component": "table",
+   "cssProperty": "font-weight",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6218,
+   "native": "DataTable",
+   "part": "header",
+   "selector": ".Polaris-DataTable__Cell--header",
+   "token": "font-weight-regular",
+   "value": "var(--p-font-weight-regular)"
+  },
+  {
+   "chain": [
+    "--p-space-300"
+   ],
+   "component": "table",
+   "cssProperty": "padding-bottom",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6223,
+   "native": "DataTable",
+   "part": "header",
+   "selector": ".Polaris-DataTable__Cell--header",
+   "token": "space-300",
+   "value": "var(--p-space-300)"
+  },
+  {
+   "chain": [
+    "--p-space-300"
+   ],
+   "component": "table",
+   "cssProperty": "padding-top",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6222,
+   "native": "DataTable",
+   "part": "header",
+   "selector": ".Polaris-DataTable__Cell--header",
+   "token": "space-300",
+   "value": "var(--p-space-300)"
+  },
+  {
+   "chain": [
+    "--p-border-width-025"
+   ],
+   "component": "table",
+   "cssProperty": "border-top",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6145,
+   "native": "DataTable",
+   "part": "row",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".Polaris-DataTable__TableRow + .Polaris-DataTable__TableRow .Polaris-DataTable__Cell",
+   "token": "border-width-025",
+   "value": "var(--p-border-width-025) solid var(--p-color-border-secondary)"
+  },
+  {
+   "chain": [
+    "--p-color-border-secondary"
+   ],
+   "component": "table",
+   "cssProperty": "border-top",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 6145,
+   "native": "DataTable",
+   "part": "row",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".Polaris-DataTable__TableRow + .Polaris-DataTable__TableRow .Polaris-DataTable__Cell",
+   "token": "color-border-secondary",
+   "value": "var(--p-border-width-025) solid var(--p-color-border-secondary)"
+  },
+  {
+   "chain": [
+    "--p-color-input-bg-surface"
+   ],
+   "component": "text-field",
+   "cssProperty": "background-color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2325,
+   "native": "TextField",
+   "part": "container",
+   "selector": ".Polaris-TextField__Backdrop",
+   "token": "color-input-bg-surface",
+   "value": "var(--p-color-input-bg-surface)"
+  },
+  {
+   "chain": [
+    "--p-color-bg-surface-disabled"
+   ],
+   "component": "text-field",
+   "cssProperty": "background-color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2142,
+   "native": "TextField",
+   "part": "container",
+   "selector": ".Polaris-TextField--disabled > .Polaris-TextField__Backdrop",
+   "state": "disabled",
+   "token": "color-bg-surface-disabled",
+   "value": "var(--p-color-bg-surface-disabled)"
+  },
+  {
+   "chain": [
+    "--p-border-width-0165"
+   ],
+   "component": "text-field",
+   "cssProperty": "border",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2326,
+   "native": "TextField",
+   "part": "container",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".Polaris-TextField__Backdrop",
+   "token": "border-width-0165",
+   "value": "var(--p-border-width-0165) solid var(--p-color-input-border)"
+  },
+  {
+   "chain": [
+    "--p-color-input-border"
+   ],
+   "component": "text-field",
+   "cssProperty": "border",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2326,
+   "native": "TextField",
+   "part": "container",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".Polaris-TextField__Backdrop",
+   "token": "color-input-border",
+   "value": "var(--p-border-width-0165) solid var(--p-color-input-border)"
+  },
+  {
+   "chain": [
+    "--p-border-radius-200"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-radius",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2328,
+   "native": "TextField",
+   "part": "container",
+   "selector": ".Polaris-TextField__Backdrop",
+   "token": "border-radius-200",
+   "value": "var(--p-border-radius-200)"
+  },
+  {
+   "chain": [
+    "--p-border-radius-100"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-radius",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2343,
+   "native": "TextField",
+   "part": "container",
+   "selector": ".Polaris-TextField__Backdrop::after",
+   "token": "border-radius-100",
+   "value": "var(--p-border-radius-100)"
+  },
+  {
+   "chain": [
+    "--p-color-border-focus"
+   ],
+   "component": "text-field",
+   "cssProperty": "box-shadow",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2342,
+   "native": "TextField",
+   "part": "container",
+   "selector": ".Polaris-TextField__Backdrop::after",
+   "token": "color-border-focus",
+   "value": "0 0 0 -0.125rem var(--p-color-border-focus)"
+  },
+  {
+   "chain": [
+    "--pc-text-field-backdrop"
+   ],
+   "component": "text-field",
+   "cssProperty": "z-index",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2320,
+   "literal": "10",
+   "native": "TextField",
+   "part": "container",
+   "selector": ".Polaris-TextField__Backdrop",
+   "value": "var(--pc-text-field-backdrop)"
+  },
+  {
+   "chain": [
+    "--p-color-icon-secondary"
+   ],
+   "component": "text-field",
+   "cssProperty": "fill",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 1999,
+   "native": "TextField",
+   "part": "icon",
+   "selector": ".Polaris-TextField svg",
+   "token": "color-icon-secondary",
+   "value": "var(--p-color-icon-secondary)"
+  },
+  {
+   "chain": [
+    "--p-color-icon-disabled"
+   ],
+   "component": "text-field",
+   "cssProperty": "fill",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2146,
+   "native": "TextField",
+   "part": "icon",
+   "selector": ".Polaris-TextField--disabled svg",
+   "state": "disabled",
+   "token": "color-icon-disabled",
+   "value": "var(--p-color-icon-disabled)"
+  },
+  {
+   "chain": [
+    "--p-color-text-disabled"
+   ],
+   "component": "text-field",
+   "cssProperty": "-webkit-text-fill-color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2242,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input:disabled",
+   "state": "disabled",
+   "token": "color-text-disabled",
+   "value": "var(--p-color-text-disabled)"
+  },
+  {
+   "chain": [
+    "--p-color-text"
+   ],
+   "component": "text-field",
+   "cssProperty": "caret-color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2221,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input",
+   "token": "color-text",
+   "value": "var(--p-color-text)"
+  },
+  {
+   "chain": [
+    "--p-color-text"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 1994,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField",
+   "token": "color-text",
+   "value": "var(--p-color-text)"
+  },
+  {
+   "chain": [
+    "--p-color-text"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2222,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input",
+   "token": "color-text",
+   "value": "var(--p-color-text)"
+  },
+  {
+   "chain": [
+    "--p-color-text"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2037,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField--hasValue",
+   "token": "color-text",
+   "value": "var(--p-color-text)"
+  },
+  {
+   "chain": [
+    "--p-color-text-disabled"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2241,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input:disabled",
+   "state": "disabled",
+   "token": "color-text-disabled",
+   "value": "var(--p-color-text-disabled)"
+  },
+  {
+   "chain": [
+    "--p-color-text-disabled"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2136,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField--disabled",
+   "state": "disabled",
+   "token": "color-text-disabled",
+   "value": "var(--p-color-text-disabled)"
+  },
+  {
+   "chain": [
+    "--p-font-family-sans"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-family",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2218,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input",
+   "token": "font-family-sans",
+   "value": "var(--p-font-family-sans)"
+  },
+  {
+   "chain": [
+    "--p-font-size-325"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-size",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 1986,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField",
+   "token": "font-size-325",
+   "value": "var(--p-font-size-325)"
+  },
+  {
+   "chain": [
+    "--p-font-size-400"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-size",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2204,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input",
+   "token": "font-size-400",
+   "value": "var(--p-font-size-400)"
+  },
+  {
+   "chain": [
+    "--p-font-size-325"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-size",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2229,
+   "media": "@media (min-width: 48em)",
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input",
+   "token": "font-size-325",
+   "value": "var(--p-font-size-325)"
+  },
+  {
+   "chain": [
+    "--p-font-weight-regular"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-weight",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 1987,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField",
+   "token": "font-weight-regular",
+   "value": "var(--p-font-weight-regular)"
+  },
+  {
+   "chain": [
+    "--p-font-weight-regular"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-weight",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2205,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input",
+   "token": "font-weight-regular",
+   "value": "var(--p-font-weight-regular)"
+  },
+  {
+   "chain": [
+    "--p-font-line-height-500"
+   ],
+   "component": "text-field",
+   "cssProperty": "line-height",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 1988,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField",
+   "token": "font-line-height-500",
+   "value": "var(--p-font-line-height-500)"
+  },
+  {
+   "chain": [
+    "--p-font-line-height-600"
+   ],
+   "component": "text-field",
+   "cssProperty": "line-height",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2206,
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input",
+   "token": "font-line-height-600",
+   "value": "var(--p-font-line-height-600)"
+  },
+  {
+   "chain": [
+    "--p-font-line-height-500"
+   ],
+   "component": "text-field",
+   "cssProperty": "line-height",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2230,
+   "media": "@media (min-width: 48em)",
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input",
+   "token": "font-line-height-500",
+   "value": "var(--p-font-line-height-500)"
+  },
+  {
+   "chain": [
+    "--pg-control-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "min-height",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2214,
+   "literal": "2rem",
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input",
+   "value": "var(--pg-control-height)"
+  },
+  {
+   "chain": [
+    "--p-space-150"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2215,
+   "native": "TextField",
+   "part": "input",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".Polaris-TextField__Input",
+   "token": "space-150",
+   "value": "var(--p-space-150) var(--p-space-300)"
+  },
+  {
+   "chain": [
+    "--p-space-300"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2215,
+   "native": "TextField",
+   "part": "input",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".Polaris-TextField__Input",
+   "token": "space-300",
+   "value": "var(--p-space-150) var(--p-space-300)"
+  },
+  {
+   "chain": [
+    "--pc-text-field-contents"
+   ],
+   "component": "text-field",
+   "cssProperty": "z-index",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 2209,
+   "literal": "20",
+   "native": "TextField",
+   "part": "input",
+   "selector": ".Polaris-TextField__Input",
+   "value": "var(--pc-text-field-contents)"
+  },
+  {
+   "chain": [
+    "--p-color-text-disabled"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 1916,
+   "native": "TextField",
+   "part": "label",
+   "selector": ".Polaris-Labelled--disabled > .Polaris-Labelled__LabelWrapper",
+   "state": "disabled",
+   "token": "color-text-disabled",
+   "value": "var(--p-color-text-disabled)"
+  },
+  {
+   "chain": [
+    "--p-space-100"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-bottom",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 1935,
+   "native": "TextField",
+   "part": "label",
+   "selector": ".Polaris-Labelled__LabelWrapper",
+   "token": "space-100",
+   "value": "var(--p-space-100)"
+  },
+  {
+   "chain": [
+    "--p-color-text-disabled"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 1920,
+   "native": "TextField",
+   "part": "supporting-text",
+   "selector": ".Polaris-Labelled--disabled > .Polaris-Labelled__HelpText > span",
+   "state": "disabled",
+   "token": "color-text-disabled",
+   "value": "var(--p-color-text-disabled)"
+  },
+  {
+   "chain": [
+    "--p-space-100"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-top",
+   "file": "build/esm/styles.css",
+   "how": "css",
+   "line": 1939,
+   "native": "TextField",
+   "part": "supporting-text",
+   "selector": ".Polaris-Labelled__HelpText",
+   "token": "space-100",
+   "value": "var(--p-space-100)"
+  }
+ ],
+ "version": "9.4.2"
+}

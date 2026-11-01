@@ -3,6 +3,7 @@ import path from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
 import { facetLabels, loadNative, resolve, showValue } from '@dsi/resolve';
 import { canonicalNameOf, loadOntology, parseConcept } from '@dsi/schema';
+import { roleOf, slotConcept } from './slots.ts';
 
 export const SCHEMA = `
 CREATE TABLE products (id TEXT PRIMARY KEY, name TEXT NOT NULL, category TEXT NOT NULL, organization TEXT, homepage TEXT, license TEXT, description TEXT, version TEXT, implementation TEXT, redistribution TEXT);
@@ -16,6 +17,9 @@ CREATE TABLE terms (product TEXT NOT NULL, term TEXT NOT NULL, concept TEXT NOT 
 CREATE TABLE coverage (concept TEXT NOT NULL, product TEXT NOT NULL, mode TEXT NOT NULL, status TEXT NOT NULL, token TEXT, match TEXT, via TEXT, display TEXT, PRIMARY KEY (concept, product, mode));
 CREATE VIRTUAL TABLE search USING fts5(kind UNINDEXED, key UNINDEXED, title, body, tokenize = 'unicode61 tokenchars ''-.''');
 CREATE INDEX mappings_concept ON mappings (concept);
+CREATE TABLE component_sources (product TEXT NOT NULL, component TEXT NOT NULL, native TEXT NOT NULL, match TEXT NOT NULL, variant TEXT, evidence TEXT, absent INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (product, component, native));
+CREATE TABLE applications (product TEXT NOT NULL, component TEXT NOT NULL, native TEXT NOT NULL, part TEXT NOT NULL, css_property TEXT NOT NULL, state TEXT, media TEXT, selector TEXT NOT NULL, token TEXT, literal TEXT, value TEXT, chain TEXT NOT NULL, position TEXT, how TEXT NOT NULL, file TEXT NOT NULL, line INTEGER, role TEXT, concept TEXT);
+CREATE INDEX applications_component ON applications (component);
 `;
 
 const readJson = (p: string) => JSON.parse(fs.readFileSync(p, 'utf8'));
@@ -51,6 +55,8 @@ export async function buildDatabase(root: string, out: string): Promise<Record<s
   // Scale concepts (geometry, typography, motion) come from approved mappings: they have members, not canonical tokens.
   const o = await loadOntology(path.join(root, 'ontology'));
   const labels = facetLabels(root);
+  const schemeDir = path.join(root, 'ontology/schemes');
+  const domainOfProperty = new Map<string, string>(fs.readdirSync(schemeDir).filter((f) => f.endsWith('.jsonld')).flatMap((f) => readJson(path.join(schemeDir, f))['@graph'] as any[]).filter((c) => c['dsi:inDomain']).map((c) => [String(c.id).split('/').pop()!, String(c['dsi:inDomain'].id).split('/').pop()!]));
   const known = new Set(canon.concepts.map((c: any) => c.concept));
   const extra: any[] = [];
   for (const [product, s] of sources) {
@@ -79,6 +85,8 @@ export async function buildDatabase(root: string, out: string): Promise<Record<s
   const iMap = ins('mappings', ['id', 'product', 'token', 'concept', 'match', 'confidence', 'status', 'review_by', 'rationale']);
   const iUnm = ins('unmapped', ['product', 'token', 'rationale']);
   const iTerm = ins('terms', ['product', 'term', 'concept', 'match']);
+  const iComp = ins('component_sources', ['product', 'component', 'native', 'match', 'variant', 'evidence', 'absent']);
+  const iApp = ins('applications', ['product', 'component', 'native', 'part', 'css_property', 'state', 'media', 'selector', 'token', 'literal', 'value', 'chain', 'position', 'how', 'file', 'line', 'role', 'concept']);
   for (const [product, s] of [...sources].sort(([a], [b]) => a.localeCompare(b))) {
     const version = s.package.version;
     const set = loadNative(root, product, version);
@@ -99,6 +107,21 @@ export async function buildDatabase(root: string, out: string): Promise<Record<s
     // Search covers tokens people look for: semantic and mapped ones (palettes and component tokens are reachable from them).
     const mapped = new Set(m.mappings.filter((x: any) => x.status === 'approved').map((x: any) => x.token));
     for (const [p, t] of set.tokens) if (mapped.has(p) || classified.get(p)?.scope === 'semantic') iSearch.run('token', `${product}/${p}`, p, `${t.prov.nativeName ?? ''} ${t.description ?? ''} ${product}`);
+    // Token applications (ADR 0015): generated from shipped component styles by dsi-apply.
+    const ap = path.join(root, 'data/applications', product, `${version}.json`);
+    if (fs.existsSync(ap)) {
+      const doc = readJson(ap);
+      for (const c of doc.components) iComp.run(product, c.component, c.native, c.match, c.variant ?? null, c.evidence ?? null, 0);
+      for (const c of doc.absent ?? []) iComp.run(product, c.component, '', 'none', null, c.evidence, 1);
+      for (const r of doc.rows) {
+        const type = r.token ? (set.tokens.get(r.token)?.type ?? resolve(set, themes[0], r.token).type) : undefined;
+        const role = roleOf(r.cssProperty, r.part, type);
+        const concept = role ? slotConcept(r.component, r.part, role, r.state, (x) => domainOfProperty.get(x)) : undefined;
+        const ok = concept && typeof parseConcept(o, concept) !== 'string';
+        iApp.run(product, r.component, r.native, r.part, r.cssProperty, r.state ?? null, r.media ?? null, r.selector, r.token ?? null, r.literal ?? null, r.value, JSON.stringify(r.chain), r.position ? r.position.join('/') : null, r.how, r.file, r.line ?? null, role ?? null, ok ? concept : null);
+        add('applications');
+      }
+    }
     const tp = path.join(root, 'mappings', product, 'terms.json');
     if (fs.existsSync(tp)) for (const x of readJson(tp).terms.filter((x: any) => x.status === 'approved')) { iTerm.run(product, x.term, x.concept, x.match); add('terms'); }
   }

@@ -1,0 +1,113 @@
+{
+  "product": "material",
+  "packages": [
+    {
+      "registry": "npm",
+      "name": "@material/web",
+      "version": "2.5.0"
+    }
+  ],
+  "components": [
+    {
+      "component": "button",
+      "native": "md-filled-button",
+      "match": "exact",
+      "variant": "filled",
+      "evidence": "https://github.com/material-components/material-web/blob/main/docs/components/button.md",
+      "css": [
+        "button/internal/filled-styles.css",
+        "button/internal/shared-styles.css"
+      ],
+      "exclude": "touch-target|has-icon",
+      "parts": [
+        {
+          "selector": "^:host$",
+          "part": "label",
+          "props": "^(font-|line-height|letter-spacing)"
+        },
+        {
+          "selector": "slot=icon",
+          "part": "icon"
+        },
+        {
+          "selector": "\\.label",
+          "part": "label"
+        },
+        {
+          "selector": "\\.button$|\\) \\.button$",
+          "part": "label",
+          "props": "^color$"
+        },
+        {
+          "selector": "^:host|\\.background|\\.button",
+          "part": "container"
+        }
+      ],
+      "apiProps": "^--md-elevation-"
+    },
+    {
+      "component": "card",
+      "native": "md-filled-card",
+      "match": "exact",
+      "variant": "filled",
+      "evidence": "https://github.com/material-components/material-web/tree/main/labs/card (labs: not stable)",
+      "css": [
+        "labs/card/internal/filled-styles.css",
+        "labs/card/internal/shared-styles.css"
+      ],
+      "parts": [
+        {
+          "selector": "^:host|\\.background|md-elevation|\\.outline",
+          "part": "container"
+        }
+      ],
+      "apiProps": "^--md-elevation-"
+    },
+    {
+      "component": "text-field",
+      "native": "md-filled-text-field",
+      "match": "exact",
+      "variant": "filled",
+      "evidence": "https://github.com/material-components/material-web/blob/main/docs/components/text-field.md",
+      "css": [
+        "textfield/internal/filled-styles.css",
+        "textfield/internal/shared-styles.css",
+        "field/internal/filled-styles.css",
+        "field/internal/shared-styles.css"
+      ],
+      "exclude": "error|resizable|prefix|suffix|placeholder|label-wrapper|\\.label\\.(resting|floating)",
+      "parts": [
+        {
+          "selector": "supporting-text",
+          "part": "supporting-text"
+        },
+        {
+          "selector": "\\.label",
+          "part": "label"
+        },
+        {
+          "selector": "\\.icon|\\.start|\\.end",
+          "part": "icon"
+        },
+        {
+          "selector": "\\.content|\\.input",
+          "part": "input"
+        },
+        {
+          "selector": "active-indicator",
+          "part": "indicator"
+        },
+        {
+          "selector": "\\.background|\\.state-layer|container",
+          "part": "container"
+        }
+      ]
+    }
+  ],
+  "absent": [
+    {
+      "component": "table",
+      "evidence": "Material Web 2.5.0 ships no table component; md-comp-data-table tokens exist only under tokens/versions/v0_192 and are not forwarded (tokens/_index.scss)."
+    }
+  ]
+}

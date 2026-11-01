@@ -1,0 +1,145 @@
+{
+  "product": "polaris",
+  "packages": [
+    {
+      "registry": "npm",
+      "name": "@shopify/polaris",
+      "version": "13.9.5"
+    }
+  ],
+  "packagesNote": "13.9.5 is the only @shopify/polaris release that depends on @shopify/polaris-tokens ^9.4.2.",
+  "components": [
+    {
+      "component": "button",
+      "native": "Button",
+      "match": "exact",
+      "variant": "secondary (default), medium",
+      "evidence": "https://polaris-react.shopify.com/components/actions/button",
+      "css": [
+        "build/esm/styles.css"
+      ],
+      "defScope": "^\\.Polaris-Button$|^\\.Polaris-Button--variantSecondary$|--sizeMedium$",
+      "exclude": "--variant(?!Secondary)|--tone|--size(Micro|Large)|--sizeSlim(?!, \\.Polaris-Button--sizeMedium)|--iconOnly|--iconWithText|--disclosure|--pressed|Spinner|--textAlign|--fullWidth|--removeUnderline|data-state",
+      "parts": [
+        {
+          "selector": "^\\.Polaris-Button(\\.Polaris-Button)?(:[a-z-]+|\\[[^\\]]+\\])? svg$|__Icon",
+          "part": "icon"
+        },
+        {
+          "selector": "^\\.Polaris-Button(:[a-z-]+|\\[[^\\]]+\\]|--variantSecondary|--disabled)?(, .*)?$",
+          "part": "label",
+          "props": "^color$"
+        },
+        {
+          "selector": "^\\.Polaris-Button(:[a-z-]+|\\[[^\\]]+\\]|--variantSecondary|--disabled|--sizeSlim)?(, .*)?$",
+          "part": "container"
+        }
+      ],
+      "within": "^\\.Polaris-Button(?![A-Za-z0-9])"
+    },
+    {
+      "component": "card",
+      "native": "Card",
+      "match": "exact",
+      "variant": "default props",
+      "evidence": "https://polaris-react.shopify.com/components/layout-and-structure/card",
+      "css": [],
+      "parts": [],
+      "props": [
+        {
+          "file": "build/esm/components/Card/Card.js",
+          "pattern": "padding = \\{\\s*xs: '([0-9]+)'",
+          "token": "--p-space-{v}",
+          "part": "container",
+          "property": "padding",
+          "note": "Box padding prop default; the .d.ts documents sm: 500 but the shipped code has only xs: 400."
+        },
+        {
+          "file": "build/esm/components/Card/Card.js",
+          "pattern": "background = '([a-z-]+)'",
+          "token": "--p-color-{v}",
+          "part": "container",
+          "property": "background"
+        },
+        {
+          "file": "build/esm/components/Card/Card.js",
+          "pattern": "defaultBorderRadius = '([0-9]+)'",
+          "token": "--p-border-radius-{v}",
+          "part": "container",
+          "property": "border-radius"
+        },
+        {
+          "file": "build/esm/components/Card/Card.js",
+          "pattern": "boxShadow: \"([0-9]+)\"",
+          "token": "--p-shadow-{v}",
+          "part": "container",
+          "property": "box-shadow"
+        }
+      ]
+    },
+    {
+      "component": "text-field",
+      "native": "TextField",
+      "match": "exact",
+      "variant": "default",
+      "evidence": "https://polaris-react.shopify.com/components/selection-and-input/text-field",
+      "css": [
+        "build/esm/styles.css"
+      ],
+      "exclude": "multiline|--error|readOnly|toneMagic|borderless|suggestion|autofill|Prefix|Suffix|Spinner|ClearButton|CharacterCount|Loading|VerticalContent|Resizer|monospaced|slim|RequiredIndicator|--readOnly|::placeholder|Labelled__Error",
+      "parts": [
+        {
+          "selector": "^\\.Polaris-Labelled(--disabled > )?(\\.Polaris-Labelled)?__HelpText",
+          "part": "supporting-text"
+        },
+        {
+          "selector": "^\\.Polaris-Labelled(--disabled > \\.Polaris-Labelled)?__LabelWrapper",
+          "part": "label"
+        },
+        {
+          "selector": "^\\.Polaris-TextField(--[a-z]+)? svg$",
+          "part": "icon"
+        },
+        {
+          "selector": "^(\\.Polaris-TextField(--[a-z]+)? > )?\\.Polaris-TextField__Input(:[a-z-]+)?$|^\\.Polaris-TextField(--hasValue|--disabled)?$",
+          "part": "input"
+        },
+        {
+          "selector": "Polaris-TextField__Backdrop|^\\.Polaris-TextField:not",
+          "part": "container"
+        }
+      ],
+      "within": "^\\.Polaris-(TextField|Labelled)(?![A-Za-z0-9])"
+    },
+    {
+      "component": "table",
+      "native": "DataTable",
+      "match": "exact",
+      "variant": "default density",
+      "evidence": "https://polaris-react.shopify.com/components/tables/data-table",
+      "css": [
+        "build/esm/styles.css"
+      ],
+      "exclude": "IncreasedTableDensity|condensed|Pip|Navigation|ZebraStriping|--truncated|--sortable|--separate|Footer|StickyHeader|Heading|--total|--numeric|Fixed|ScrollContainer",
+      "parts": [
+        {
+          "selector": "__Cell--header",
+          "part": "header"
+        },
+        {
+          "selector": "__TableRow",
+          "part": "row"
+        },
+        {
+          "selector": "__Cell",
+          "part": "cell"
+        },
+        {
+          "selector": "^\\.Polaris-DataTable$",
+          "part": "container"
+        }
+      ],
+      "within": "^\\.Polaris-DataTable(?![A-Za-z0-9])"
+    }
+  ]
+}

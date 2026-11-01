@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dsi.nonoun.io/schema/applications.schema.json",
+  "title": "Token applications config",
+  "description": "sources/<product>/applications.json: which shipped component styles dsi-apply reads, and the authored selector map from CSS rules to anatomy parts (ADR 0015).",
+  "type": "object",
+  "required": ["product", "packages", "components"],
+  "additionalProperties": false,
+  "properties": {
+    "product": { "type": "string" },
+    "packages": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["registry", "name", "version"], "additionalProperties": false, "properties": { "registry": { "const": "npm" }, "name": { "type": "string" }, "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+" } } } },
+    "packagesNote": { "type": "string" },
+    "defScopeNote": { "type": "string" },
+    "cssNames": { "type": "array", "items": { "type": "object", "required": ["group", "pattern"], "additionalProperties": false, "properties": { "group": { "type": "string" }, "pattern": { "type": "string", "pattern": "\\{rest\\}" } } } },
+    "sass": { "type": "array", "items": { "type": "object", "required": ["id", "source"], "additionalProperties": false, "properties": { "id": { "type": "string" }, "source": { "type": "string" }, "markers": { "type": "array", "items": { "type": "object", "required": ["module", "names"], "additionalProperties": false, "properties": { "module": { "type": "string" }, "names": { "type": "array", "items": { "type": "string" }, "minItems": 1 } } } } } } },
+    "absent": { "type": "array", "items": { "type": "object", "required": ["component", "evidence"], "additionalProperties": false, "properties": { "component": { "type": "string", "description": "A dsi:component value." }, "evidence": { "type": "string" } } } },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["component", "native", "match", "parts"],
+        "additionalProperties": false,
+        "properties": {
+          "component": { "type": "string", "description": "A dsi:component value." },
+          "native": { "type": "string", "description": "The product's own component name." },
+          "match": { "type": "string", "description": "A dsi:match value: how the native component corresponds." },
+          "variant": { "type": "string" },
+          "evidence": { "type": "string" },
+          "package": { "type": "string" },
+          "css": { "type": "array", "items": { "type": "string" } },
+          "sass": { "type": "string" },
+          "within": { "type": "string" },
+          "defScope": { "type": "string" },
+          "exclude": { "type": "string" },
+          "apiProps": { "type": "string" },
+          "parts": { "type": "array", "items": { "type": "object", "required": ["selector", "part"], "additionalProperties": false, "properties": { "selector": { "type": "string" }, "part": { "type": "string", "description": "A dsi:part value." }, "props": { "type": "string" } } } },
+          "props": { "type": "array", "items": { "type": "object", "required": ["file", "pattern", "token", "part", "property"], "additionalProperties": false, "properties": { "file": { "type": "string" }, "pattern": { "type": "string" }, "token": { "type": "string", "pattern": "\\{v\\}" }, "part": { "type": "string" }, "property": { "type": "string" }, "note": { "type": "string" } } } }
+        }
+      }
+    }
+  }
+}

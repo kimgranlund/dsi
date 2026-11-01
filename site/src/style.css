@@ -233,3 +233,40 @@ td.num { font-variant-numeric: tabular-nums; text-align: right; }
 
 .dep { margin-left: 6px; padding: 0 5px; border-radius: 3px; font: 600 0.62rem/1.5 var(--sans, system-ui); letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); }
 .ruler-row.is-dep .bar-fill { opacity: 0.45; }
+
+/* Component tier */
+.comp-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.comp-list a { display: grid; gap: 4px; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); text-decoration: none; }
+.comp-list a:hover { border-color: var(--accent); }
+.comp-systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+.comp-sys { display: grid; gap: 4px; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); font-size: 0.86rem; }
+.anatomy { padding: 28px 16px; border: 1px dashed var(--line); border-radius: var(--radius); background: var(--panel); display: flex; justify-content: center; overflow-x: auto; }
+.anat-stage { display: grid; gap: 10px; min-width: min(420px, 100%); }
+.anat { position: relative; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 18px 14px 12px; border: 1.5px solid color-mix(in srgb, var(--accent) 45%, var(--line)); border-radius: 10px; text-decoration: none; color: var(--ink); background: color-mix(in srgb, var(--accent-soft) 35%, transparent); }
+.anat:hover { border-color: var(--accent); background: var(--accent-soft); }
+.anat .anat { flex: 1 1 auto; }
+.anat-tag { position: absolute; top: 3px; left: 8px; font: 600 0.6rem/1 var(--mono, ui-monospace, monospace); text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); }
+.anat-text { font-size: 0.9rem; }
+.anat-text.muted { color: var(--muted); font-size: 0.8rem; }
+.anat-button > .anat-container { border-radius: 999px; justify-content: center; }
+.anat-text-field .anat-container { min-height: 56px; }
+.anat-indicator { flex-basis: 100%; min-height: 10px; padding: 12px 8px 4px; }
+.anat-card > .anat-container, .anat-table > .anat-container { flex-direction: column; align-items: stretch; }
+.slot-table { display: grid; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--panel); }
+.slot-row { display: grid; grid-template-columns: minmax(130px, 0.8fr) repeat(var(--cols), minmax(0, 1fr)); gap: 12px; padding: 8px 12px; border-top: 1px solid var(--line); align-items: start; }
+.slot-row:first-child { border-top: 0; }
+.slot-head { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; background: color-mix(in srgb, var(--line) 30%, transparent); }
+.slot-row.is-state .slot-name { padding-left: 14px; color: var(--muted); }
+.slot-name { font-size: 0.86rem; }
+.slot-cell { display: grid; gap: 6px; min-width: 0; }
+.slot-cell.empty { color: var(--muted); font-size: 0.78rem; font-style: italic; }
+.slot-entry { display: grid; gap: 2px; min-width: 0; }
+.slot-value { display: inline-flex; gap: 6px; align-items: center; font-size: 0.82rem; overflow-wrap: anywhere; }
+.slot-token { font-size: 0.72rem; overflow-wrap: anywhere; }
+.slot-bar { display: block; height: 6px; border-radius: 3px; background: var(--bg); overflow: hidden; }
+.slot-bar i { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+@media (max-width: 640px) { .slot-row { grid-template-columns: 1fr; } .slot-head { display: none; } .slot-cell::before { content: attr(data-sys); } }
+
+.slot-value .swatch { width: 18px; height: 18px; min-height: 0; flex: none; border-radius: 4px; }
+.type-line { display: inline-flex; gap: 8px; align-items: baseline; font-size: 0.8rem; flex-wrap: wrap; }
+.type-specimen { font-family: var(--sans, system-ui); line-height: 1; color: var(--ink); }

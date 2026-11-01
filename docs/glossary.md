@@ -49,6 +49,8 @@ Layers in a stack. Classify products, not organizations.
 | Component, Part | `component/*` and `part/*`: only components and parts a product's shipped tokens name (Polaris `shadow-button`, `space-table-cell-padding`) |
 | Expressive mode | `mode/expressive`: a product's newer token set shipped beside the one its components consume (Material Web `versions/latest`); it extends light |
 | Step word | A name segment that picks a point on a scale (`400`, `medium`, `05`); explained by `ignore: step`, never a concept |
+| Application | One declaration in a component's shipped styles that uses a token (Carbon `.cds--card__body { padding-block: $spacing-05 }`), generated into `data/applications/` (ADR 0015) |
+| Slot | Where a component applies a value: part + role (+ axis, + state), e.g. Card · Container · Padding inline |
 | Alias graph | References between tokens inside one product (vertical) |
 | Mapping graph | Links from native tokens to concepts, across products (horizontal) |
 | Canonical token set | The concept layer emitted as DTCG; each product resolves it as a theme |

@@ -1,0 +1,2190 @@
+{
+ "absent": [
+  {
+   "component": "table",
+   "evidence": "Material Web 2.5.0 ships no table component; md-comp-data-table tokens exist only under tokens/versions/v0_192 and are not forwarded (tokens/_index.scss)."
+  }
+ ],
+ "components": [
+  {
+   "component": "button",
+   "evidence": "https://github.com/material-components/material-web/blob/main/docs/components/button.md",
+   "match": "exact",
+   "native": "md-filled-button",
+   "variant": "filled"
+  },
+  {
+   "component": "card",
+   "evidence": "https://github.com/material-components/material-web/tree/main/labs/card (labs: not stable)",
+   "match": "exact",
+   "native": "md-filled-card",
+   "variant": "filled"
+  },
+  {
+   "component": "text-field",
+   "evidence": "https://github.com/material-components/material-web/blob/main/docs/components/text-field.md",
+   "match": "exact",
+   "native": "md-filled-text-field",
+   "variant": "filled"
+  }
+ ],
+ "notes": [
+  "button (md-filled-button): 34 css rows, 0 prop defaults, 5 declarations outside the part map",
+  "card (md-filled-card): 4 css rows, 0 prop defaults, 0 declarations outside the part map",
+  "text-field (md-filled-text-field): 82 css rows, 0 prop defaults, 35 declarations outside the part map"
+ ],
+ "packages": [
+  {
+   "integrity": "sha512-x2Uovyq8E/Zc1xHXd9s1eBMXF5pMHVAt70pISKd0fL3Ajj4L6zQaQUY/awcfR2RDAMKXC7i4+vr0arv1YaOR/g==",
+   "name": "@material/web",
+   "registry": "npm",
+   "version": "2.5.0"
+  }
+ ],
+ "product": "material",
+ "rows": [
+  {
+   "chain": [
+    "--_container-color",
+    "--md-filled-button-container-color"
+   ],
+   "component": "button",
+   "cssProperty": "background",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#6750a4",
+   "native": "md-filled-button",
+   "part": "container",
+   "selector": ".background",
+   "token": "md.comp.filled-button.container-color",
+   "value": "var(--_container-color)"
+  },
+  {
+   "chain": [
+    "--_disabled-container-color",
+    "--md-filled-button-disabled-container-color"
+   ],
+   "component": "button",
+   "cssProperty": "background",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-button",
+   "part": "container",
+   "selector": ":host(:is([disabled],[soft-disabled])) .background",
+   "state": "disabled",
+   "token": "md.comp.filled-button.disabled-container-color",
+   "value": "var(--_disabled-container-color)"
+  },
+  {
+   "chain": [
+    "--_container-shape-end-end",
+    "--md-filled-button-container-shape-end-end"
+   ],
+   "component": "button",
+   "cssProperty": "border-end-end-radius",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "9999px",
+   "native": "md-filled-button",
+   "part": "container",
+   "selector": ":host",
+   "token": "md.comp.filled-button.container-shape-end-end",
+   "value": "var(--_container-shape-end-end)"
+  },
+  {
+   "chain": [
+    "--_container-shape-end-start",
+    "--md-filled-button-container-shape-end-start"
+   ],
+   "component": "button",
+   "cssProperty": "border-end-start-radius",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "9999px",
+   "native": "md-filled-button",
+   "part": "container",
+   "selector": ":host",
+   "token": "md.comp.filled-button.container-shape-end-start",
+   "value": "var(--_container-shape-end-start)"
+  },
+  {
+   "chain": [
+    "--_container-shape-start-end",
+    "--md-filled-button-container-shape-start-end"
+   ],
+   "component": "button",
+   "cssProperty": "border-start-end-radius",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "9999px",
+   "native": "md-filled-button",
+   "part": "container",
+   "selector": ":host",
+   "token": "md.comp.filled-button.container-shape-start-end",
+   "value": "var(--_container-shape-start-end)"
+  },
+  {
+   "chain": [
+    "--_container-shape-start-start",
+    "--md-filled-button-container-shape-start-start"
+   ],
+   "component": "button",
+   "cssProperty": "border-start-start-radius",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "9999px",
+   "native": "md-filled-button",
+   "part": "container",
+   "selector": ":host",
+   "token": "md.comp.filled-button.container-shape-start-start",
+   "value": "var(--_container-shape-start-start)"
+  },
+  {
+   "chain": [
+    "--_container-height",
+    "--md-filled-button-container-height"
+   ],
+   "component": "button",
+   "cssProperty": "min-height",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "40px",
+   "native": "md-filled-button",
+   "part": "container",
+   "selector": ":host",
+   "token": "md.comp.filled-button.container-height",
+   "value": "var(--_container-height)"
+  },
+  {
+   "chain": [
+    "--_leading-space",
+    "--md-filled-button-leading-space"
+   ],
+   "component": "button",
+   "cssProperty": "min-width",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "24px",
+   "native": "md-filled-button",
+   "part": "container",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".button",
+   "token": "md.comp.filled-button.leading-space",
+   "value": "calc(64px - var(--_leading-space) - var(--_trailing-space))"
+  },
+  {
+   "chain": [
+    "--_trailing-space",
+    "--md-filled-button-trailing-space"
+   ],
+   "component": "button",
+   "cssProperty": "min-width",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "24px",
+   "native": "md-filled-button",
+   "part": "container",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".button",
+   "token": "md.comp.filled-button.trailing-space",
+   "value": "calc(64px - var(--_leading-space) - var(--_trailing-space))"
+  },
+  {
+   "chain": [
+    "--_disabled-container-opacity",
+    "--md-filled-button-disabled-container-opacity"
+   ],
+   "component": "button",
+   "cssProperty": "opacity",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.12",
+   "native": "md-filled-button",
+   "part": "container",
+   "selector": ":host(:is([disabled],[soft-disabled])) .background",
+   "state": "disabled",
+   "token": "md.comp.filled-button.disabled-container-opacity",
+   "value": "var(--_disabled-container-opacity)"
+  },
+  {
+   "chain": [
+    "--_container-height",
+    "--md-filled-button-container-height"
+   ],
+   "component": "button",
+   "cssProperty": "padding-block",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "40px",
+   "native": "md-filled-button",
+   "part": "container",
+   "position": [
+    1,
+    3
+   ],
+   "selector": ":host",
+   "token": "md.comp.filled-button.container-height",
+   "value": "calc((var(--_container-height) - max(var(--_label-text-line-height),var(--_icon-size)))/2)"
+  },
+  {
+   "chain": [
+    "--_label-text-line-height",
+    "--md-filled-button-label-text-line-height"
+   ],
+   "component": "button",
+   "cssProperty": "padding-block",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1.25rem",
+   "native": "md-filled-button",
+   "part": "container",
+   "position": [
+    2,
+    3
+   ],
+   "selector": ":host",
+   "token": "md.comp.filled-button.label-text-line-height",
+   "value": "calc((var(--_container-height) - max(var(--_label-text-line-height),var(--_icon-size)))/2)"
+  },
+  {
+   "chain": [
+    "--_icon-size",
+    "--md-filled-button-icon-size"
+   ],
+   "component": "button",
+   "cssProperty": "padding-block",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "18px",
+   "native": "md-filled-button",
+   "part": "container",
+   "position": [
+    3,
+    3
+   ],
+   "selector": ":host",
+   "token": "md.comp.filled-button.icon-size",
+   "value": "calc((var(--_container-height) - max(var(--_label-text-line-height),var(--_icon-size)))/2)"
+  },
+  {
+   "chain": [
+    "--_trailing-space",
+    "--md-filled-button-trailing-space"
+   ],
+   "component": "button",
+   "cssProperty": "padding-inline-end",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "24px",
+   "native": "md-filled-button",
+   "part": "container",
+   "selector": ":host",
+   "token": "md.comp.filled-button.trailing-space",
+   "value": "var(--_trailing-space)"
+  },
+  {
+   "chain": [
+    "--_leading-space",
+    "--md-filled-button-leading-space"
+   ],
+   "component": "button",
+   "cssProperty": "padding-inline-start",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "24px",
+   "native": "md-filled-button",
+   "part": "container",
+   "selector": ":host",
+   "token": "md.comp.filled-button.leading-space",
+   "value": "var(--_leading-space)"
+  },
+  {
+   "chain": [
+    "--_icon-size",
+    "--md-filled-button-icon-size"
+   ],
+   "component": "button",
+   "cssProperty": "block-size",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "18px",
+   "native": "md-filled-button",
+   "part": "icon",
+   "selector": "::slotted([slot=icon])",
+   "token": "md.comp.filled-button.icon-size",
+   "value": "var(--_icon-size)"
+  },
+  {
+   "chain": [
+    "--_icon-color",
+    "--md-filled-button-icon-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#fff",
+   "native": "md-filled-button",
+   "part": "icon",
+   "selector": "::slotted([slot=icon])",
+   "token": "md.comp.filled-button.icon-color",
+   "value": "var(--_icon-color)"
+  },
+  {
+   "chain": [
+    "--_pressed-icon-color",
+    "--md-filled-button-pressed-icon-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#fff",
+   "native": "md-filled-button",
+   "part": "icon",
+   "selector": ":host(:active) ::slotted([slot=icon])",
+   "state": "active",
+   "token": "md.comp.filled-button.pressed-icon-color",
+   "value": "var(--_pressed-icon-color)"
+  },
+  {
+   "chain": [
+    "--_disabled-icon-color",
+    "--md-filled-button-disabled-icon-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-button",
+   "part": "icon",
+   "selector": ":host(:is([disabled],[soft-disabled])) ::slotted([slot=icon])",
+   "state": "disabled",
+   "token": "md.comp.filled-button.disabled-icon-color",
+   "value": "var(--_disabled-icon-color)"
+  },
+  {
+   "chain": [
+    "--_focus-icon-color",
+    "--md-filled-button-focus-icon-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#fff",
+   "native": "md-filled-button",
+   "part": "icon",
+   "selector": ":host(:focus-within) ::slotted([slot=icon])",
+   "state": "focus",
+   "token": "md.comp.filled-button.focus-icon-color",
+   "value": "var(--_focus-icon-color)"
+  },
+  {
+   "chain": [
+    "--_hover-icon-color",
+    "--md-filled-button-hover-icon-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#fff",
+   "native": "md-filled-button",
+   "part": "icon",
+   "selector": ":host(:hover) ::slotted([slot=icon])",
+   "state": "hover",
+   "token": "md.comp.filled-button.hover-icon-color",
+   "value": "var(--_hover-icon-color)"
+  },
+  {
+   "chain": [
+    "--_icon-size",
+    "--md-filled-button-icon-size"
+   ],
+   "component": "button",
+   "cssProperty": "font-size",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "18px",
+   "native": "md-filled-button",
+   "part": "icon",
+   "selector": "::slotted([slot=icon])",
+   "token": "md.comp.filled-button.icon-size",
+   "value": "var(--_icon-size)"
+  },
+  {
+   "chain": [
+    "--_icon-size",
+    "--md-filled-button-icon-size"
+   ],
+   "component": "button",
+   "cssProperty": "inline-size",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "18px",
+   "native": "md-filled-button",
+   "part": "icon",
+   "selector": "::slotted([slot=icon])",
+   "token": "md.comp.filled-button.icon-size",
+   "value": "var(--_icon-size)"
+  },
+  {
+   "chain": [
+    "--_disabled-icon-opacity",
+    "--md-filled-button-disabled-icon-opacity"
+   ],
+   "component": "button",
+   "cssProperty": "opacity",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.38",
+   "native": "md-filled-button",
+   "part": "icon",
+   "selector": ":host(:is([disabled],[soft-disabled])) ::slotted([slot=icon])",
+   "state": "disabled",
+   "token": "md.comp.filled-button.disabled-icon-opacity",
+   "value": "var(--_disabled-icon-opacity)"
+  },
+  {
+   "chain": [
+    "--_label-text-color",
+    "--md-filled-button-label-text-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#fff",
+   "native": "md-filled-button",
+   "part": "label",
+   "selector": ".button",
+   "token": "md.comp.filled-button.label-text-color",
+   "value": "var(--_label-text-color)"
+  },
+  {
+   "chain": [
+    "--_pressed-label-text-color",
+    "--md-filled-button-pressed-label-text-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#fff",
+   "native": "md-filled-button",
+   "part": "label",
+   "selector": ":host(:active) .button",
+   "state": "active",
+   "token": "md.comp.filled-button.pressed-label-text-color",
+   "value": "var(--_pressed-label-text-color)"
+  },
+  {
+   "chain": [
+    "--_disabled-label-text-color",
+    "--md-filled-button-disabled-label-text-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-button",
+   "part": "label",
+   "selector": ":host(:is([disabled],[soft-disabled])) .label",
+   "state": "disabled",
+   "token": "md.comp.filled-button.disabled-label-text-color",
+   "value": "var(--_disabled-label-text-color)"
+  },
+  {
+   "chain": [
+    "--_focus-label-text-color",
+    "--md-filled-button-focus-label-text-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#fff",
+   "native": "md-filled-button",
+   "part": "label",
+   "selector": ":host(:focus-within) .button",
+   "state": "focus",
+   "token": "md.comp.filled-button.focus-label-text-color",
+   "value": "var(--_focus-label-text-color)"
+  },
+  {
+   "chain": [
+    "--_hover-label-text-color",
+    "--md-filled-button-hover-label-text-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#fff",
+   "native": "md-filled-button",
+   "part": "label",
+   "selector": ":host(:hover) .button",
+   "state": "hover",
+   "token": "md.comp.filled-button.hover-label-text-color",
+   "value": "var(--_hover-label-text-color)"
+  },
+  {
+   "chain": [
+    "--_label-text-font",
+    "--md-filled-button-label-text-font"
+   ],
+   "component": "button",
+   "cssProperty": "font-family",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "Roboto",
+   "native": "md-filled-button",
+   "part": "label",
+   "selector": ":host",
+   "token": "md.comp.filled-button.label-text-font",
+   "value": "var(--_label-text-font)"
+  },
+  {
+   "chain": [
+    "--_label-text-size",
+    "--md-filled-button-label-text-size"
+   ],
+   "component": "button",
+   "cssProperty": "font-size",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.875rem",
+   "native": "md-filled-button",
+   "part": "label",
+   "selector": ":host",
+   "token": "md.comp.filled-button.label-text-size",
+   "value": "var(--_label-text-size)"
+  },
+  {
+   "chain": [
+    "--_label-text-weight",
+    "--md-filled-button-label-text-weight"
+   ],
+   "component": "button",
+   "cssProperty": "font-weight",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "500",
+   "native": "md-filled-button",
+   "part": "label",
+   "selector": ":host",
+   "token": "md.comp.filled-button.label-text-weight",
+   "value": "var(--_label-text-weight)"
+  },
+  {
+   "chain": [
+    "--_label-text-line-height",
+    "--md-filled-button-label-text-line-height"
+   ],
+   "component": "button",
+   "cssProperty": "line-height",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1.25rem",
+   "native": "md-filled-button",
+   "part": "label",
+   "selector": ":host",
+   "token": "md.comp.filled-button.label-text-line-height",
+   "value": "var(--_label-text-line-height)"
+  },
+  {
+   "chain": [
+    "--_disabled-label-text-opacity",
+    "--md-filled-button-disabled-label-text-opacity"
+   ],
+   "component": "button",
+   "cssProperty": "opacity",
+   "file": "button/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.38",
+   "native": "md-filled-button",
+   "part": "label",
+   "selector": ":host(:is([disabled],[soft-disabled])) .label",
+   "state": "disabled",
+   "token": "md.comp.filled-button.disabled-label-text-opacity",
+   "value": "var(--_disabled-label-text-opacity)"
+  },
+  {
+   "chain": [
+    "--_container-elevation",
+    "--md-filled-card-container-elevation"
+   ],
+   "component": "card",
+   "cssProperty": "--md-elevation-level",
+   "file": "labs/card/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0",
+   "native": "md-filled-card",
+   "part": "container",
+   "selector": "md-elevation",
+   "token": "md.comp.filled-card.container-elevation",
+   "value": "var(--_container-elevation)"
+  },
+  {
+   "chain": [
+    "--_container-shadow-color",
+    "--md-filled-card-container-shadow-color"
+   ],
+   "component": "card",
+   "cssProperty": "--md-elevation-shadow-color",
+   "file": "labs/card/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#000",
+   "native": "md-filled-card",
+   "part": "container",
+   "selector": "md-elevation",
+   "token": "md.comp.filled-card.container-shadow-color",
+   "value": "var(--_container-shadow-color)"
+  },
+  {
+   "chain": [
+    "--_container-color",
+    "--md-filled-card-container-color"
+   ],
+   "component": "card",
+   "cssProperty": "background",
+   "file": "labs/card/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#e6e0e9",
+   "native": "md-filled-card",
+   "part": "container",
+   "selector": ".background",
+   "token": "md.comp.filled-card.container-color",
+   "value": "var(--_container-color)"
+  },
+  {
+   "chain": [
+    "--_container-shape",
+    "--md-filled-card-container-shape"
+   ],
+   "component": "card",
+   "cssProperty": "border-radius",
+   "file": "labs/card/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "12px",
+   "native": "md-filled-card",
+   "part": "container",
+   "selector": ":host",
+   "token": "md.comp.filled-card.container-shape",
+   "value": "var(--_container-shape)"
+  },
+  {
+   "chain": [
+    "--_container-color",
+    "--md-filled-text-field-container-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "background",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#e6e0e9",
+   "native": "md-filled-text-field",
+   "part": "container",
+   "selector": ".background",
+   "token": "md.comp.filled-text-field.container-color",
+   "value": "var(--_container-color)"
+  },
+  {
+   "chain": [
+    "--_disabled-container-color",
+    "--md-filled-text-field-disabled-container-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "background",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "container",
+   "selector": ".disabled .background",
+   "state": "disabled",
+   "token": "md.comp.filled-text-field.disabled-container-color",
+   "value": "var(--_disabled-container-color)"
+  },
+  {
+   "chain": [
+    "--_hover-state-layer-color",
+    "--md-filled-text-field-hover-state-layer-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "background",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "container",
+   "selector": ":hover .state-layer",
+   "state": "hover",
+   "token": "md.comp.filled-text-field.hover-state-layer-color",
+   "value": "var(--_hover-state-layer-color)"
+  },
+  {
+   "chain": [
+    "--_container-shape-end-end",
+    "--md-filled-text-field-container-shape-end-end"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-end-end-radius",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0px",
+   "native": "md-filled-text-field",
+   "part": "container",
+   "selector": ".container-overflow",
+   "token": "md.comp.filled-text-field.container-shape-end-end",
+   "value": "var(--_container-shape-end-end)"
+  },
+  {
+   "chain": [
+    "--_container-shape-end-start",
+    "--md-filled-text-field-container-shape-end-start"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-end-start-radius",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0px",
+   "native": "md-filled-text-field",
+   "part": "container",
+   "selector": ".container-overflow",
+   "token": "md.comp.filled-text-field.container-shape-end-start",
+   "value": "var(--_container-shape-end-start)"
+  },
+  {
+   "chain": [
+    "--_container-shape-start-end",
+    "--md-filled-text-field-container-shape-start-end"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-start-end-radius",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "4px",
+   "native": "md-filled-text-field",
+   "part": "container",
+   "selector": ".container-overflow",
+   "token": "md.comp.filled-text-field.container-shape-start-end",
+   "value": "var(--_container-shape-start-end)"
+  },
+  {
+   "chain": [
+    "--_container-shape-start-start",
+    "--md-filled-text-field-container-shape-start-start"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-start-start-radius",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "4px",
+   "native": "md-filled-text-field",
+   "part": "container",
+   "selector": ".container-overflow",
+   "token": "md.comp.filled-text-field.container-shape-start-start",
+   "value": "var(--_container-shape-start-start)"
+  },
+  {
+   "chain": [
+    "--_disabled-container-opacity",
+    "--md-filled-text-field-disabled-container-opacity"
+   ],
+   "component": "text-field",
+   "cssProperty": "opacity",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.04",
+   "native": "md-filled-text-field",
+   "part": "container",
+   "selector": ".disabled .background",
+   "state": "disabled",
+   "token": "md.comp.filled-text-field.disabled-container-opacity",
+   "value": "var(--_disabled-container-opacity)"
+  },
+  {
+   "chain": [
+    "--_hover-state-layer-opacity",
+    "--md-filled-text-field-hover-state-layer-opacity"
+   ],
+   "component": "text-field",
+   "cssProperty": "opacity",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.08",
+   "native": "md-filled-text-field",
+   "part": "container",
+   "selector": ":hover .state-layer",
+   "state": "hover",
+   "token": "md.comp.filled-text-field.hover-state-layer-opacity",
+   "value": "var(--_hover-state-layer-opacity)"
+  },
+  {
+   "chain": [
+    "--_trailing-content-color",
+    "--md-filled-field-trailing-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": ".end",
+   "token": "md.comp.filled-field.trailing-content-color",
+   "value": "var(--_trailing-content-color)"
+  },
+  {
+   "chain": [
+    "--_leading-content-color",
+    "--md-filled-field-leading-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": ".start",
+   "token": "md.comp.filled-field.leading-content-color",
+   "value": "var(--_leading-content-color)"
+  },
+  {
+   "chain": [
+    "--_disabled-trailing-content-color",
+    "--md-filled-field-disabled-trailing-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": ".disabled .end",
+   "state": "disabled",
+   "token": "md.comp.filled-field.disabled-trailing-content-color",
+   "value": "var(--_disabled-trailing-content-color)"
+  },
+  {
+   "chain": [
+    "--_disabled-leading-content-color",
+    "--md-filled-field-disabled-leading-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": ".disabled .start",
+   "state": "disabled",
+   "token": "md.comp.filled-field.disabled-leading-content-color",
+   "value": "var(--_disabled-leading-content-color)"
+  },
+  {
+   "chain": [
+    "--_focus-trailing-content-color",
+    "--md-filled-field-focus-trailing-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": ".focused .end",
+   "state": "focus",
+   "token": "md.comp.filled-field.focus-trailing-content-color",
+   "value": "var(--_focus-trailing-content-color)"
+  },
+  {
+   "chain": [
+    "--_focus-leading-content-color",
+    "--md-filled-field-focus-leading-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": ".focused .start",
+   "state": "focus",
+   "token": "md.comp.filled-field.focus-leading-content-color",
+   "value": "var(--_focus-leading-content-color)"
+  },
+  {
+   "chain": [
+    "--_hover-trailing-content-color",
+    "--md-filled-field-hover-trailing-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": ":hover .end",
+   "state": "hover",
+   "token": "md.comp.filled-field.hover-trailing-content-color",
+   "value": "var(--_hover-trailing-content-color)"
+  },
+  {
+   "chain": [
+    "--_hover-leading-content-color",
+    "--md-filled-field-hover-leading-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": ":hover .start",
+   "state": "hover",
+   "token": "md.comp.filled-field.hover-leading-content-color",
+   "value": "var(--_hover-leading-content-color)"
+  },
+  {
+   "chain": [
+    "--_trailing-icon-size",
+    "--md-filled-text-field-trailing-icon-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-size",
+   "file": "textfield/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "24px",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": "[has-end] .icon.trailing",
+   "token": "md.comp.filled-text-field.trailing-icon-size",
+   "value": "var(--_trailing-icon-size)"
+  },
+  {
+   "chain": [
+    "--_leading-icon-size",
+    "--md-filled-text-field-leading-icon-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-size",
+   "file": "textfield/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "24px",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": "[has-start] .icon.leading",
+   "token": "md.comp.filled-text-field.leading-icon-size",
+   "value": "var(--_leading-icon-size)"
+  },
+  {
+   "chain": [
+    "--_trailing-icon-size",
+    "--md-filled-text-field-trailing-icon-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "height",
+   "file": "textfield/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "24px",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": "[has-end] .icon.trailing",
+   "token": "md.comp.filled-text-field.trailing-icon-size",
+   "value": "var(--_trailing-icon-size)"
+  },
+  {
+   "chain": [
+    "--_leading-icon-size",
+    "--md-filled-text-field-leading-icon-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "height",
+   "file": "textfield/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "24px",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": "[has-start] .icon.leading",
+   "token": "md.comp.filled-text-field.leading-icon-size",
+   "value": "var(--_leading-icon-size)"
+  },
+  {
+   "chain": [
+    "--_content-space",
+    "--md-filled-field-content-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-inline",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "16px",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".with-end .end",
+   "token": "md.comp.filled-field.content-space",
+   "value": "var(--_content-space) var(--_with-trailing-content-trailing-space)"
+  },
+  {
+   "chain": [
+    "--_with-trailing-content-trailing-space",
+    "--md-filled-field-with-trailing-content-trailing-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-inline",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "12px",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".with-end .end",
+   "token": "md.comp.filled-field.with-trailing-content-trailing-space",
+   "value": "var(--_content-space) var(--_with-trailing-content-trailing-space)"
+  },
+  {
+   "chain": [
+    "--_with-leading-content-leading-space",
+    "--md-filled-field-with-leading-content-leading-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-inline",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "12px",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".with-start .start",
+   "token": "md.comp.filled-field.with-leading-content-leading-space",
+   "value": "var(--_with-leading-content-leading-space) var(--_content-space)"
+  },
+  {
+   "chain": [
+    "--_content-space",
+    "--md-filled-field-content-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-inline",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "16px",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".with-start .start",
+   "token": "md.comp.filled-field.content-space",
+   "value": "var(--_with-leading-content-leading-space) var(--_content-space)"
+  },
+  {
+   "chain": [
+    "--_disabled-trailing-content-opacity",
+    "--md-filled-field-disabled-trailing-content-opacity"
+   ],
+   "component": "text-field",
+   "cssProperty": "opacity",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.38",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": ".disabled .end",
+   "state": "disabled",
+   "token": "md.comp.filled-field.disabled-trailing-content-opacity",
+   "value": "var(--_disabled-trailing-content-opacity)"
+  },
+  {
+   "chain": [
+    "--_disabled-leading-content-opacity",
+    "--md-filled-field-disabled-leading-content-opacity"
+   ],
+   "component": "text-field",
+   "cssProperty": "opacity",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.38",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": ".disabled .start",
+   "state": "disabled",
+   "token": "md.comp.filled-field.disabled-leading-content-opacity",
+   "value": "var(--_disabled-leading-content-opacity)"
+  },
+  {
+   "chain": [
+    "--_trailing-icon-size",
+    "--md-filled-text-field-trailing-icon-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "width",
+   "file": "textfield/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "24px",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": "[has-end] .icon.trailing",
+   "token": "md.comp.filled-text-field.trailing-icon-size",
+   "value": "var(--_trailing-icon-size)"
+  },
+  {
+   "chain": [
+    "--_leading-icon-size",
+    "--md-filled-text-field-leading-icon-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "width",
+   "file": "textfield/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "24px",
+   "native": "md-filled-text-field",
+   "part": "icon",
+   "selector": "[has-start] .icon.leading",
+   "token": "md.comp.filled-text-field.leading-icon-size",
+   "value": "var(--_leading-icon-size)"
+  },
+  {
+   "chain": [
+    "--_active-indicator-height",
+    "--md-filled-text-field-active-indicator-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-bottom",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1px",
+   "native": "md-filled-text-field",
+   "part": "indicator",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".active-indicator::before,.active-indicator::after",
+   "token": "md.comp.filled-text-field.active-indicator-height",
+   "value": "var(--_active-indicator-height) solid var(--_active-indicator-color)"
+  },
+  {
+   "chain": [
+    "--_active-indicator-color",
+    "--md-filled-text-field-active-indicator-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-bottom",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "indicator",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".active-indicator::before,.active-indicator::after",
+   "token": "md.comp.filled-text-field.active-indicator-color",
+   "value": "var(--_active-indicator-height) solid var(--_active-indicator-color)"
+  },
+  {
+   "chain": [
+    "--_focus-active-indicator-color",
+    "--md-filled-text-field-focus-active-indicator-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-bottom-color",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#6750a4",
+   "native": "md-filled-text-field",
+   "part": "indicator",
+   "selector": ".active-indicator::after",
+   "token": "md.comp.filled-text-field.focus-active-indicator-color",
+   "value": "var(--_focus-active-indicator-color)"
+  },
+  {
+   "chain": [
+    "--_disabled-active-indicator-color",
+    "--md-filled-text-field-disabled-active-indicator-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-bottom-color",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "indicator",
+   "selector": ".disabled .active-indicator::before",
+   "state": "disabled",
+   "token": "md.comp.filled-text-field.disabled-active-indicator-color",
+   "value": "var(--_disabled-active-indicator-color)"
+  },
+  {
+   "chain": [
+    "--_hover-active-indicator-color",
+    "--md-filled-text-field-hover-active-indicator-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-bottom-color",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "indicator",
+   "selector": ":hover .active-indicator::before",
+   "state": "hover",
+   "token": "md.comp.filled-text-field.hover-active-indicator-color",
+   "value": "var(--_hover-active-indicator-color)"
+  },
+  {
+   "chain": [
+    "--_focus-active-indicator-height",
+    "--md-filled-text-field-focus-active-indicator-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-bottom-width",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "3px",
+   "native": "md-filled-text-field",
+   "part": "indicator",
+   "selector": ".active-indicator::after",
+   "token": "md.comp.filled-text-field.focus-active-indicator-height",
+   "value": "var(--_focus-active-indicator-height)"
+  },
+  {
+   "chain": [
+    "--_disabled-active-indicator-height",
+    "--md-filled-text-field-disabled-active-indicator-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-bottom-width",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1px",
+   "native": "md-filled-text-field",
+   "part": "indicator",
+   "selector": ".disabled .active-indicator::before",
+   "state": "disabled",
+   "token": "md.comp.filled-text-field.disabled-active-indicator-height",
+   "value": "var(--_disabled-active-indicator-height)"
+  },
+  {
+   "chain": [
+    "--_hover-active-indicator-height",
+    "--md-filled-text-field-hover-active-indicator-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-bottom-width",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1px",
+   "native": "md-filled-text-field",
+   "part": "indicator",
+   "selector": ":hover .active-indicator::before",
+   "state": "hover",
+   "token": "md.comp.filled-text-field.hover-active-indicator-height",
+   "value": "var(--_hover-active-indicator-height)"
+  },
+  {
+   "chain": [
+    "--_disabled-active-indicator-opacity",
+    "--md-filled-text-field-disabled-active-indicator-opacity"
+   ],
+   "component": "text-field",
+   "cssProperty": "opacity",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.38",
+   "native": "md-filled-text-field",
+   "part": "indicator",
+   "selector": ".disabled .active-indicator::before",
+   "state": "disabled",
+   "token": "md.comp.filled-text-field.disabled-active-indicator-opacity",
+   "value": "var(--_disabled-active-indicator-opacity)"
+  },
+  {
+   "chain": [
+    "--_caret-color",
+    "--md-filled-text-field-caret-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "caret-color",
+   "file": "textfield/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#6750a4",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".input",
+   "token": "md.comp.filled-text-field.caret-color",
+   "value": "var(--_caret-color)"
+  },
+  {
+   "chain": [
+    "--_focus-caret-color",
+    "--md-filled-text-field-focus-caret-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "caret-color",
+   "file": "textfield/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#6750a4",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ":focus-within .input",
+   "state": "focus",
+   "token": "md.comp.filled-text-field.focus-caret-color",
+   "value": "var(--_focus-caret-color)"
+  },
+  {
+   "chain": [
+    "--_content-color",
+    "--md-filled-field-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".content",
+   "token": "md.comp.filled-field.content-color",
+   "value": "var(--_content-color)"
+  },
+  {
+   "chain": [
+    "--_disabled-content-color",
+    "--md-filled-field-disabled-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".disabled .content",
+   "state": "disabled",
+   "token": "md.comp.filled-field.disabled-content-color",
+   "value": "var(--_disabled-content-color)"
+  },
+  {
+   "chain": [
+    "--_focus-content-color",
+    "--md-filled-field-focus-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".focused .content",
+   "state": "focus",
+   "token": "md.comp.filled-field.focus-content-color",
+   "value": "var(--_focus-content-color)"
+  },
+  {
+   "chain": [
+    "--_hover-content-color",
+    "--md-filled-field-hover-content-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ":hover .content",
+   "state": "hover",
+   "token": "md.comp.filled-field.hover-content-color",
+   "value": "var(--_hover-content-color)"
+  },
+  {
+   "chain": [
+    "--_content-font",
+    "--md-filled-field-content-font"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-family",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "Roboto",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".content ::slotted(*)",
+   "token": "md.comp.filled-field.content-font",
+   "value": "var(--_content-font)"
+  },
+  {
+   "chain": [
+    "--_content-size",
+    "--md-filled-field-content-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-size",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1rem",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".content ::slotted(*)",
+   "token": "md.comp.filled-field.content-size",
+   "value": "var(--_content-size)"
+  },
+  {
+   "chain": [
+    "--_content-weight",
+    "--md-filled-field-content-weight"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-weight",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "400",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".content ::slotted(*)",
+   "token": "md.comp.filled-field.content-weight",
+   "value": "var(--_content-weight)"
+  },
+  {
+   "chain": [
+    "--_content-line-height",
+    "--md-filled-field-content-line-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "line-height",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1.5rem",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".content ::slotted(*)",
+   "token": "md.comp.filled-field.content-line-height",
+   "value": "var(--_content-line-height)"
+  },
+  {
+   "chain": [
+    "--_bottom-space",
+    "--md-filled-text-field-bottom-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-bottom",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "16px",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".content ::slotted(textarea)",
+   "token": "md.comp.filled-text-field.bottom-space",
+   "value": "var(--_bottom-space)"
+  },
+  {
+   "chain": [
+    "--_with-label-bottom-space",
+    "--md-filled-text-field-with-label-bottom-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-bottom",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "8px",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".field:not(.no-label) .content ::slotted(textarea)",
+   "token": "md.comp.filled-text-field.with-label-bottom-space",
+   "value": "var(--_with-label-bottom-space)"
+  },
+  {
+   "chain": [
+    "--_top-space",
+    "--md-filled-text-field-top-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-top",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "16px",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".content ::slotted(textarea)",
+   "token": "md.comp.filled-text-field.top-space",
+   "value": "var(--_top-space)"
+  },
+  {
+   "chain": [
+    "--_with-label-top-space",
+    "--md-filled-text-field-with-label-top-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-top",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "8px",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".field:not(.no-label) .content ::slotted(textarea)",
+   "token": "md.comp.filled-text-field.with-label-top-space",
+   "value": "calc(var(--_with-label-top-space) + var(--_label-text-populated-line-height))"
+  },
+  {
+   "chain": [
+    "--_label-text-populated-line-height",
+    "--md-filled-text-field-label-text-populated-line-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-top",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1rem",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".field:not(.no-label) .content ::slotted(textarea)",
+   "token": "md.comp.filled-text-field.label-text-populated-line-height",
+   "value": "calc(var(--_with-label-top-space) + var(--_label-text-populated-line-height))"
+  },
+  {
+   "chain": [
+    "--_disabled-content-opacity",
+    "--md-filled-field-disabled-content-opacity"
+   ],
+   "component": "text-field",
+   "cssProperty": "opacity",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.38",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".disabled.no-label .content,.disabled.focused .content,.disabled.populated .content",
+   "state": "disabled",
+   "token": "md.comp.filled-field.disabled-content-opacity",
+   "value": "var(--_disabled-content-opacity)"
+  },
+  {
+   "chain": [
+    "--_bottom-space",
+    "--md-filled-text-field-bottom-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding-bottom",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "16px",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".content ::slotted(:not(textarea))",
+   "token": "md.comp.filled-text-field.bottom-space",
+   "value": "var(--_bottom-space)"
+  },
+  {
+   "chain": [
+    "--_with-label-bottom-space",
+    "--md-filled-text-field-with-label-bottom-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding-bottom",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "8px",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".field:not(.no-label) .content ::slotted(:not(textarea))",
+   "token": "md.comp.filled-text-field.with-label-bottom-space",
+   "value": "var(--_with-label-bottom-space)"
+  },
+  {
+   "chain": [
+    "--_trailing-space",
+    "--md-filled-text-field-trailing-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding-inline-end",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "16px",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".field:not(.with-end) .content ::slotted(*)",
+   "token": "md.comp.filled-text-field.trailing-space",
+   "value": "var(--_trailing-space)"
+  },
+  {
+   "chain": [
+    "--_leading-space",
+    "--md-filled-text-field-leading-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding-inline-start",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "16px",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".field:not(.with-start) .content ::slotted(*)",
+   "token": "md.comp.filled-text-field.leading-space",
+   "value": "var(--_leading-space)"
+  },
+  {
+   "chain": [
+    "--_top-space",
+    "--md-filled-text-field-top-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding-top",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "16px",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "selector": ".content ::slotted(:not(textarea))",
+   "token": "md.comp.filled-text-field.top-space",
+   "value": "var(--_top-space)"
+  },
+  {
+   "chain": [
+    "--_with-label-top-space",
+    "--md-filled-text-field-with-label-top-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding-top",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "8px",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".field:not(.no-label) .content ::slotted(:not(textarea))",
+   "token": "md.comp.filled-text-field.with-label-top-space",
+   "value": "calc(var(--_with-label-top-space) + var(--_label-text-populated-line-height))"
+  },
+  {
+   "chain": [
+    "--_label-text-populated-line-height",
+    "--md-filled-text-field-label-text-populated-line-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding-top",
+   "file": "field/internal/filled-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1rem",
+   "native": "md-filled-text-field",
+   "part": "input",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".field:not(.no-label) .content ::slotted(:not(textarea))",
+   "token": "md.comp.filled-text-field.label-text-populated-line-height",
+   "value": "calc(var(--_with-label-top-space) + var(--_label-text-populated-line-height))"
+  },
+  {
+   "chain": [
+    "--_label-text-color",
+    "--md-filled-text-field-label-text-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "label",
+   "selector": ".label",
+   "token": "md.comp.filled-text-field.label-text-color",
+   "value": "var(--_label-text-color)"
+  },
+  {
+   "chain": [
+    "--_disabled-label-text-color",
+    "--md-filled-text-field-disabled-label-text-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "label",
+   "selector": ".disabled .label",
+   "state": "disabled",
+   "token": "md.comp.filled-text-field.disabled-label-text-color",
+   "value": "var(--_disabled-label-text-color)"
+  },
+  {
+   "chain": [
+    "--_focus-label-text-color",
+    "--md-filled-text-field-focus-label-text-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#6750a4",
+   "native": "md-filled-text-field",
+   "part": "label",
+   "selector": ".focused .label",
+   "state": "focus",
+   "token": "md.comp.filled-text-field.focus-label-text-color",
+   "value": "var(--_focus-label-text-color)"
+  },
+  {
+   "chain": [
+    "--_hover-label-text-color",
+    "--md-filled-text-field-hover-label-text-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "label",
+   "selector": ":hover .label",
+   "state": "hover",
+   "token": "md.comp.filled-text-field.hover-label-text-color",
+   "value": "var(--_hover-label-text-color)"
+  },
+  {
+   "chain": [
+    "--_label-text-font",
+    "--md-filled-text-field-label-text-font"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-family",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "Roboto",
+   "native": "md-filled-text-field",
+   "part": "label",
+   "selector": ".label",
+   "token": "md.comp.filled-text-field.label-text-font",
+   "value": "var(--_label-text-font)"
+  },
+  {
+   "chain": [
+    "--_label-text-size",
+    "--md-filled-text-field-label-text-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-size",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1rem",
+   "native": "md-filled-text-field",
+   "part": "label",
+   "selector": ".label",
+   "token": "md.comp.filled-text-field.label-text-size",
+   "value": "var(--_label-text-size)"
+  },
+  {
+   "chain": [
+    "--_label-text-weight",
+    "--md-filled-text-field-label-text-weight"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-weight",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "400",
+   "native": "md-filled-text-field",
+   "part": "label",
+   "selector": ".label",
+   "token": "md.comp.filled-text-field.label-text-weight",
+   "value": "var(--_label-text-weight)"
+  },
+  {
+   "chain": [
+    "--_label-text-line-height",
+    "--md-filled-text-field-label-text-line-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "line-height",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1.5rem",
+   "native": "md-filled-text-field",
+   "part": "label",
+   "selector": ".label",
+   "token": "md.comp.filled-text-field.label-text-line-height",
+   "value": "var(--_label-text-line-height)"
+  },
+  {
+   "chain": [
+    "--_disabled-label-text-opacity",
+    "--md-filled-text-field-disabled-label-text-opacity"
+   ],
+   "component": "text-field",
+   "cssProperty": "opacity",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.38",
+   "native": "md-filled-text-field",
+   "part": "label",
+   "selector": ".disabled .label:not(.hidden)",
+   "state": "disabled",
+   "token": "md.comp.filled-text-field.disabled-label-text-opacity",
+   "value": "var(--_disabled-label-text-opacity)"
+  },
+  {
+   "chain": [
+    "--_supporting-text-color",
+    "--md-filled-text-field-supporting-text-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ".supporting-text",
+   "token": "md.comp.filled-text-field.supporting-text-color",
+   "value": "var(--_supporting-text-color)"
+  },
+  {
+   "chain": [
+    "--_disabled-supporting-text-color",
+    "--md-filled-text-field-disabled-supporting-text-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#1d1b20",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ".disabled .supporting-text",
+   "state": "disabled",
+   "token": "md.comp.filled-text-field.disabled-supporting-text-color",
+   "value": "var(--_disabled-supporting-text-color)"
+  },
+  {
+   "chain": [
+    "--_focus-supporting-text-color",
+    "--md-filled-text-field-focus-supporting-text-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ".focus .supporting-text",
+   "state": "focus",
+   "token": "md.comp.filled-text-field.focus-supporting-text-color",
+   "value": "var(--_focus-supporting-text-color)"
+  },
+  {
+   "chain": [
+    "--_hover-supporting-text-color",
+    "--md-filled-text-field-hover-supporting-text-color"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "#49454f",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ":hover .supporting-text",
+   "state": "hover",
+   "token": "md.comp.filled-text-field.hover-supporting-text-color",
+   "value": "var(--_hover-supporting-text-color)"
+  },
+  {
+   "chain": [
+    "--_supporting-text-font",
+    "--md-filled-text-field-supporting-text-font"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-family",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "Roboto",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ".supporting-text",
+   "token": "md.comp.filled-text-field.supporting-text-font",
+   "value": "var(--_supporting-text-font)"
+  },
+  {
+   "chain": [
+    "--_supporting-text-size",
+    "--md-filled-text-field-supporting-text-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-size",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.75rem",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ".supporting-text",
+   "token": "md.comp.filled-text-field.supporting-text-size",
+   "value": "var(--_supporting-text-size)"
+  },
+  {
+   "chain": [
+    "--_supporting-text-weight",
+    "--md-filled-text-field-supporting-text-weight"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-weight",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "400",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ".supporting-text",
+   "token": "md.comp.filled-text-field.supporting-text-weight",
+   "value": "var(--_supporting-text-weight)"
+  },
+  {
+   "chain": [
+    "--_supporting-text-line-height",
+    "--md-filled-text-field-supporting-text-line-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "line-height",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "1rem",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ".supporting-text",
+   "token": "md.comp.filled-text-field.supporting-text-line-height",
+   "value": "var(--_supporting-text-line-height)"
+  },
+  {
+   "chain": [
+    "--_disabled-supporting-text-opacity",
+    "--md-filled-text-field-disabled-supporting-text-opacity"
+   ],
+   "component": "text-field",
+   "cssProperty": "opacity",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "0.38",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ".disabled .supporting-text",
+   "state": "disabled",
+   "token": "md.comp.filled-text-field.disabled-supporting-text-opacity",
+   "value": "var(--_disabled-supporting-text-opacity)"
+  },
+  {
+   "chain": [
+    "--_supporting-text-trailing-space",
+    "--md-filled-field-supporting-text-trailing-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding-inline-end",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "16px",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ".supporting-text",
+   "token": "md.comp.filled-field.supporting-text-trailing-space",
+   "value": "var(--_supporting-text-trailing-space)"
+  },
+  {
+   "chain": [
+    "--_supporting-text-leading-space",
+    "--md-filled-field-supporting-text-leading-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding-inline-start",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "16px",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ".supporting-text",
+   "token": "md.comp.filled-field.supporting-text-leading-space",
+   "value": "var(--_supporting-text-leading-space)"
+  },
+  {
+   "chain": [
+    "--_supporting-text-top-space",
+    "--md-filled-field-supporting-text-top-space"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding-top",
+   "file": "field/internal/shared-styles.css",
+   "how": "css",
+   "line": 1,
+   "literal": "4px",
+   "native": "md-filled-text-field",
+   "part": "supporting-text",
+   "selector": ".supporting-text",
+   "token": "md.comp.filled-field.supporting-text-top-space",
+   "value": "var(--_supporting-text-top-space)"
+  }
+ ],
+ "version": "2.5.0"
+}

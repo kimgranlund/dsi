@@ -15,6 +15,9 @@ export const meta = () => load<Meta>('meta.json');
 export const concepts = () => load<Concept[]>('concepts.json');
 export const tokens = (product: string) => load<Token[]>(`tokens.${product}.json`);
 export const search = () => load<SearchRow[]>('search.json');
+export interface SlotCell { native: string; computed?: string; inputs?: string[]; media?: string; also?: string[]; token?: string; name?: string; type?: string; value?: string; chain?: string[]; literal?: string; deprecated?: string; position?: string; css: { selector: string; property: string; how: string; file: string; line?: number; media?: string; chain: string[]; token?: string }[] }
+export interface ComponentDoc { id: string; label: string; definition: string | null; systems: Record<string, { native?: string; match?: string; variant?: string; evidence?: string; absent?: boolean }[]>; parts: string[]; slots: { concept: string; part: string; role: string; axis?: string; state?: string; label: string; cells: Record<string, SlotCell[]> }[] }
+export const components = () => load<ComponentDoc[]>('components.json');
 
 export async function conceptByName(name: string) { return (await concepts()).find((c) => c.name === name); }
 export async function conceptByIri(iri: string) { return (await concepts()).find((c) => c.iri === iri); }

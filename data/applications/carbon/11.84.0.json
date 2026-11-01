@@ -1,0 +1,1806 @@
+{
+ "components": [
+  {
+   "component": "card",
+   "evidence": "@carbon/styles scss/components/card/_card.scss",
+   "match": "exact",
+   "native": "Card",
+   "variant": "default"
+  },
+  {
+   "component": "card",
+   "evidence": "@carbon/styles scss/components/tile/_tile.scss; Tile is Carbon's long-standing card-like container",
+   "match": "close",
+   "native": "Tile",
+   "variant": "tile (default)"
+  },
+  {
+   "component": "button",
+   "evidence": "@carbon/styles scss/components/button/_button.scss",
+   "match": "exact",
+   "native": "Button",
+   "variant": "primary, default size"
+  },
+  {
+   "component": "text-field",
+   "evidence": "@carbon/styles scss/components/text-input/_text-input.scss; label and helper text from form/_form.scss",
+   "match": "exact",
+   "native": "TextInput",
+   "variant": "default"
+  },
+  {
+   "component": "table",
+   "evidence": "@carbon/styles scss/components/data-table/_data-table.scss",
+   "match": "exact",
+   "native": "DataTable",
+   "variant": "default size"
+  }
+ ],
+ "notes": [
+  "card (Card): 22 css rows, 0 prop defaults, 295 declarations outside the part map",
+  "card (Tile): 7 css rows, 0 prop defaults, 63 declarations outside the part map",
+  "button (Button): 25 css rows, 0 prop defaults, 219 declarations outside the part map",
+  "text-field (TextInput): 25 css rows, 0 prop defaults, 62 declarations outside the part map",
+  "table (DataTable): 23 css rows, 0 prop defaults, 178 declarations outside the part map"
+ ],
+ "packages": [
+  {
+   "integrity": "sha512-/a5FktRWkAtrWmWMPO9tpc+GKX91dctdKXFL/pk02BJg47NZxhGCwFBJTDGeLvuEZnlkYaN5nUJXBi6vj4oKjQ==",
+   "name": "@carbon/styles",
+   "registry": "npm",
+   "version": "1.118.0"
+  },
+  {
+   "integrity": "sha512-SQI2Zq7bRC9+VOI6wPpoIt+k2nuzq47or76749h8xZTkjIYVMPKUh4OtUYI0+VZK3K4abeHCuUexQSqoAb54Gg==",
+   "name": "@carbon/themes",
+   "registry": "npm",
+   "version": "11.84.0"
+  },
+  {
+   "integrity": "sha512-MBXjxBkY9DNbdDmSPhPF5t+rBUJffxk/hlLlTawX901X84BFBKVtbCYy/UfFl5IytCN8mXXuCdOJ3rPOEwEX1Q==",
+   "name": "@carbon/layout",
+   "registry": "npm",
+   "version": "11.62.0"
+  },
+  {
+   "integrity": "sha512-pEDtZ0jPGyjbxcnzBxFCIB05oIJSbfT2E+z9TY+txqRfHmXe+QCEDD4fQPaFkxq60ToJ7KWfCb/SjnhF5/aq8A==",
+   "name": "@carbon/colors",
+   "registry": "npm",
+   "version": "11.61.0"
+  },
+  {
+   "integrity": "sha512-jBjLagm+DvFPcVpZUYuS+lY3FkZWolA69apKe+Oh8Ezulm3Q1DQMkG9Ky+VOa0rptgFTnafP6L6y8vmZ3LJa5g==",
+   "name": "@carbon/motion",
+   "registry": "npm",
+   "version": "11.55.0"
+  },
+  {
+   "integrity": "sha512-cmxwwhlVD/8L/J6k1N4/U6AhNldrpLynCQ4+Z7wSeGO6Ki0wE1Iczza8PAPa2eMoIw7frzk1q8jrwnI0zHBftw==",
+   "name": "@carbon/type",
+   "registry": "npm",
+   "version": "11.70.0"
+  },
+  {
+   "integrity": "sha512-zuHs9oDYd/gMZQPKV0a/PNJXK/iaYmnMFqcwgbm4zYJ3MnD3kWgJKoqFSSPGuks8xKrg722exFYW4yDdwImIDQ==",
+   "name": "@carbon/grid",
+   "registry": "npm",
+   "version": "11.65.0"
+  },
+  {
+   "integrity": "sha512-HN8bzIwPubG53xSlOZGFcCghL3zspj/LzA+LOfkoLwpagYIpZsOddpvqmCpOh3JOumNb5Cxq9qmjJL9yEiVYNA==",
+   "name": "@carbon/feature-flags",
+   "registry": "npm",
+   "version": "1.11.0"
+  }
+ ],
+ "product": "carbon",
+ "rows": [
+  {
+   "chain": [
+    "--cds-button-disabled"
+   ],
+   "component": "button",
+   "cssProperty": "background",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1382,
+   "literal": "#c6c6c6",
+   "native": "Button",
+   "part": "container",
+   "selector": ".cds--btn:disabled, .cds--btn:hover:disabled, .cds--btn:focus:disabled, .cds--btn.cds--btn--disabled, .cds--btn.cds--btn--disabled:hover, .cds--btn.cds--btn--disabled:focus",
+   "state": "disabled",
+   "token": "button-disabled",
+   "value": "var(--cds-button-disabled, #c6c6c6)"
+  },
+  {
+   "chain": [
+    "--cds-button-primary"
+   ],
+   "component": "button",
+   "cssProperty": "background-color",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1406,
+   "literal": "#0f62fe",
+   "native": "Button",
+   "part": "container",
+   "selector": ".cds--btn--primary",
+   "token": "button-primary",
+   "value": "var(--cds-button-primary, #0f62fe)"
+  },
+  {
+   "chain": [
+    "--cds-button-primary-active"
+   ],
+   "component": "button",
+   "cssProperty": "background-color",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1419,
+   "literal": "#002d9c",
+   "native": "Button",
+   "part": "container",
+   "selector": ".cds--btn--primary:active",
+   "state": "active",
+   "token": "button-primary-active",
+   "value": "var(--cds-button-primary-active, #002d9c)"
+  },
+  {
+   "chain": [
+    "--cds-button-primary-hover"
+   ],
+   "component": "button",
+   "cssProperty": "background-color",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1411,
+   "literal": "#0050e6",
+   "media": "@media (any-hover: hover)",
+   "native": "Button",
+   "part": "container",
+   "selector": ".cds--btn--primary:hover",
+   "state": "hover",
+   "token": "button-primary-hover",
+   "value": "var(--cds-button-primary-hover, #0050e6)"
+  },
+  {
+   "chain": [
+    "--cds-button-disabled"
+   ],
+   "component": "button",
+   "cssProperty": "border-color",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1381,
+   "literal": "#c6c6c6",
+   "native": "Button",
+   "part": "container",
+   "selector": ".cds--btn:disabled, .cds--btn:hover:disabled, .cds--btn:focus:disabled, .cds--btn.cds--btn--disabled, .cds--btn.cds--btn--disabled:hover, .cds--btn.cds--btn--disabled:focus",
+   "state": "disabled",
+   "token": "button-disabled",
+   "value": "var(--cds-button-disabled, #c6c6c6)"
+  },
+  {
+   "chain": [
+    "--cds-button-focus-color",
+    "--cds-focus"
+   ],
+   "component": "button",
+   "cssProperty": "border-color",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1415,
+   "literal": "#0f62fe",
+   "native": "Button",
+   "part": "container",
+   "selector": ".cds--btn--primary:focus",
+   "state": "focus",
+   "token": "focus",
+   "value": "var(--cds-button-focus-color, var(--cds-focus, #0f62fe))"
+  },
+  {
+   "chain": [
+    "--cds-button-radius-ee",
+    "--cds-button-radius"
+   ],
+   "component": "button",
+   "cssProperty": "border-end-end-radius",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1354,
+   "literal": "0",
+   "native": "Button",
+   "part": "container",
+   "selector": ".cds--btn",
+   "value": "var(--cds-button-radius-ee, var(--cds-button-radius, 0))"
+  },
+  {
+   "chain": [
+    "--cds-button-radius-es",
+    "--cds-button-radius"
+   ],
+   "component": "button",
+   "cssProperty": "border-end-start-radius",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1355,
+   "literal": "0",
+   "native": "Button",
+   "part": "container",
+   "selector": ".cds--btn",
+   "value": "var(--cds-button-radius-es, var(--cds-button-radius, 0))"
+  },
+  {
+   "chain": [
+    "--cds-button-radius-se",
+    "--cds-button-radius"
+   ],
+   "component": "button",
+   "cssProperty": "border-start-end-radius",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1356,
+   "literal": "0",
+   "native": "Button",
+   "part": "container",
+   "selector": ".cds--btn",
+   "value": "var(--cds-button-radius-se, var(--cds-button-radius, 0))"
+  },
+  {
+   "chain": [
+    "--cds-button-radius-ss",
+    "--cds-button-radius"
+   ],
+   "component": "button",
+   "cssProperty": "border-start-start-radius",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1357,
+   "literal": "0",
+   "native": "Button",
+   "part": "container",
+   "selector": ".cds--btn",
+   "value": "var(--cds-button-radius-ss, var(--cds-button-radius, 0))"
+  },
+  {
+   "chain": [
+    "--cds-button-focus-color",
+    "--cds-focus"
+   ],
+   "component": "button",
+   "cssProperty": "box-shadow",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1416,
+   "literal": "#0f62fe",
+   "native": "Button",
+   "part": "container",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".cds--btn--primary:focus",
+   "state": "focus",
+   "token": "focus",
+   "value": "inset 0 0 0 1px var(--cds-button-focus-color, var(--cds-focus, #0f62fe)), inset 0 0 0 2px var(--cds-background, #ffffff)"
+  },
+  {
+   "chain": [
+    "--cds-background"
+   ],
+   "component": "button",
+   "cssProperty": "box-shadow",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1416,
+   "literal": "#ffffff",
+   "native": "Button",
+   "part": "container",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".cds--btn--primary:focus",
+   "state": "focus",
+   "token": "background",
+   "value": "inset 0 0 0 1px var(--cds-button-focus-color, var(--cds-focus, #0f62fe)), inset 0 0 0 2px var(--cds-background, #ffffff)"
+  },
+  {
+   "chain": [
+    "--cds-layout-size-height-local",
+    "--cds-layout-size-height",
+    "--cds-layout-size-height-lg"
+   ],
+   "component": "button",
+   "cssProperty": "min-block-size",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1366,
+   "literal": "3rem",
+   "native": "Button",
+   "part": "container",
+   "selector": ".cds--btn",
+   "value": "var(--cds-layout-size-height-local)"
+  },
+  {
+   "chain": [
+    "--cds-layout-size-height-local",
+    "--cds-layout-size-height",
+    "--cds-layout-size-height-lg"
+   ],
+   "component": "button",
+   "cssProperty": "padding-block",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1368,
+   "literal": "3rem",
+   "native": "Button",
+   "part": "container",
+   "position": [
+    1,
+    3
+   ],
+   "selector": ".cds--btn",
+   "value": "min((var(--cds-layout-size-height-local) - var(--temp-1lh)) / 2 - 0.0625rem, var(--temp-padding-block-max))"
+  },
+  {
+   "chain": [
+    "--temp-1lh"
+   ],
+   "component": "button",
+   "cssProperty": "padding-block",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1368,
+   "literal": "(\n    var(--cds-body-compact-01-line-height, 1.28572) * 1em\n  )",
+   "native": "Button",
+   "part": "container",
+   "position": [
+    2,
+    3
+   ],
+   "selector": ".cds--btn",
+   "value": "min((var(--cds-layout-size-height-local) - var(--temp-1lh)) / 2 - 0.0625rem, var(--temp-padding-block-max))"
+  },
+  {
+   "chain": [
+    "--temp-padding-block-max"
+   ],
+   "component": "button",
+   "cssProperty": "padding-block",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1368,
+   "literal": "calc(\n    (var(--cds-layout-size-height-lg) - var(--temp-1lh)) / 2 -\n      0.0625rem\n  )",
+   "native": "Button",
+   "part": "container",
+   "position": [
+    3,
+    3
+   ],
+   "selector": ".cds--btn",
+   "value": "min((var(--cds-layout-size-height-local) - var(--temp-1lh)) / 2 - 0.0625rem, var(--temp-padding-block-max))"
+  },
+  {
+   "chain": [
+    "--cds-layout-density-padding-inline-local",
+    "--cds-layout-density-padding-inline",
+    "--cds-layout-density-padding-inline-normal",
+    "--dsi-m-spacing-05"
+   ],
+   "component": "button",
+   "cssProperty": "padding-inline",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1369,
+   "native": "Button",
+   "part": "container",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".cds--btn",
+   "token": "spacing.spacing-05",
+   "value": "calc(var(--cds-layout-density-padding-inline-local) - 0.0625rem) calc(var(--cds-layout-density-padding-inline-local) * 3 + 1rem - 0.0625rem)"
+  },
+  {
+   "chain": [
+    "--cds-layout-density-padding-inline-local",
+    "--cds-layout-density-padding-inline",
+    "--cds-layout-density-padding-inline-normal",
+    "--dsi-m-spacing-05"
+   ],
+   "component": "button",
+   "cssProperty": "padding-inline",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1369,
+   "native": "Button",
+   "part": "container",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".cds--btn",
+   "token": "spacing.spacing-05",
+   "value": "calc(var(--cds-layout-density-padding-inline-local) - 0.0625rem) calc(var(--cds-layout-density-padding-inline-local) * 3 + 1rem - 0.0625rem)"
+  },
+  {
+   "chain": [
+    "--cds-text-on-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1407,
+   "literal": "#ffffff",
+   "native": "Button",
+   "part": "label",
+   "selector": ".cds--btn--primary",
+   "token": "text-on-color",
+   "value": "var(--cds-text-on-color, #ffffff)"
+  },
+  {
+   "chain": [
+    "--cds-text-on-color-disabled"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1384,
+   "literal": "#8d8d8d",
+   "native": "Button",
+   "part": "label",
+   "selector": ".cds--btn:disabled, .cds--btn:hover:disabled, .cds--btn:focus:disabled, .cds--btn.cds--btn--disabled, .cds--btn.cds--btn--disabled:hover, .cds--btn.cds--btn--disabled:focus",
+   "state": "disabled",
+   "token": "text-on-color-disabled",
+   "value": "var(--cds-text-on-color-disabled, #8d8d8d)"
+  },
+  {
+   "chain": [
+    "--cds-text-on-color"
+   ],
+   "component": "button",
+   "cssProperty": "color",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1426,
+   "literal": "#ffffff",
+   "native": "Button",
+   "part": "label",
+   "selector": ".cds--btn--primary:hover",
+   "state": "hover",
+   "token": "text-on-color",
+   "value": "var(--cds-text-on-color, #ffffff)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-font-size"
+   ],
+   "component": "button",
+   "cssProperty": "font-size",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1350,
+   "literal": "0.875rem",
+   "native": "Button",
+   "part": "label",
+   "selector": ".cds--btn",
+   "token": "type.body-compact-01.font-size",
+   "value": "var(--cds-body-compact-01-font-size, 0.875rem)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-font-weight"
+   ],
+   "component": "button",
+   "cssProperty": "font-weight",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1351,
+   "literal": "400",
+   "native": "Button",
+   "part": "label",
+   "selector": ".cds--btn",
+   "token": "type.body-compact-01.font-weight",
+   "value": "var(--cds-body-compact-01-font-weight, 400)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-letter-spacing"
+   ],
+   "component": "button",
+   "cssProperty": "letter-spacing",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1353,
+   "literal": "0.16px",
+   "native": "Button",
+   "part": "label",
+   "selector": ".cds--btn",
+   "token": "type.body-compact-01.letter-spacing",
+   "value": "var(--cds-body-compact-01-letter-spacing, 0.16px)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-line-height"
+   ],
+   "component": "button",
+   "cssProperty": "line-height",
+   "file": "sass:button",
+   "how": "css",
+   "line": 1352,
+   "literal": "1.28572",
+   "native": "Button",
+   "part": "label",
+   "selector": ".cds--btn",
+   "token": "type.body-compact-01.line-height",
+   "value": "var(--cds-body-compact-01-line-height, 1.28572)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-font-size"
+   ],
+   "component": "card",
+   "cssProperty": "font-size",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2000,
+   "literal": "0.875rem",
+   "native": "Card",
+   "part": "body",
+   "selector": ".cds--card__body",
+   "token": "type.body-compact-01.font-size",
+   "value": "var(--cds-body-compact-01-font-size, 0.875rem)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-font-weight"
+   ],
+   "component": "card",
+   "cssProperty": "font-weight",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2001,
+   "literal": "400",
+   "native": "Card",
+   "part": "body",
+   "selector": ".cds--card__body",
+   "token": "type.body-compact-01.font-weight",
+   "value": "var(--cds-body-compact-01-font-weight, 400)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-letter-spacing"
+   ],
+   "component": "card",
+   "cssProperty": "letter-spacing",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2003,
+   "literal": "0.16px",
+   "native": "Card",
+   "part": "body",
+   "selector": ".cds--card__body",
+   "token": "type.body-compact-01.letter-spacing",
+   "value": "var(--cds-body-compact-01-letter-spacing, 0.16px)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-line-height"
+   ],
+   "component": "card",
+   "cssProperty": "line-height",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2002,
+   "literal": "1.28572",
+   "native": "Card",
+   "part": "body",
+   "selector": ".cds--card__body",
+   "token": "type.body-compact-01.line-height",
+   "value": "var(--cds-body-compact-01-line-height, 1.28572)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-05"
+   ],
+   "component": "card",
+   "cssProperty": "padding-block",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2004,
+   "native": "Card",
+   "part": "body",
+   "selector": ".cds--card__body",
+   "token": "spacing.spacing-05",
+   "value": "var(--dsi-m-spacing-05)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-05"
+   ],
+   "component": "card",
+   "cssProperty": "padding-inline",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2005,
+   "native": "Card",
+   "part": "body",
+   "selector": ".cds--card__body",
+   "token": "spacing.spacing-05",
+   "value": "var(--dsi-m-spacing-05)"
+  },
+  {
+   "chain": [
+    "--cds-layer",
+    "--cds-layer-01"
+   ],
+   "component": "card",
+   "cssProperty": "background-color",
+   "file": "sass:card",
+   "how": "css",
+   "line": 1943,
+   "literal": "#f4f4f4",
+   "native": "Card",
+   "part": "container",
+   "selector": ".cds--card",
+   "token": "layer-01",
+   "value": "var(--cds-layer)"
+  },
+  {
+   "chain": [
+    "--cds-text-primary"
+   ],
+   "component": "card",
+   "cssProperty": "color",
+   "file": "sass:card",
+   "how": "css",
+   "line": 1944,
+   "literal": "#161616",
+   "native": "Card",
+   "part": "container",
+   "selector": ".cds--card",
+   "token": "text-primary",
+   "value": "var(--cds-text-primary, #161616)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-05"
+   ],
+   "component": "card",
+   "cssProperty": "padding",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2015,
+   "native": "Card",
+   "part": "footer",
+   "selector": ".cds--card__footer",
+   "token": "spacing.spacing-05",
+   "value": "var(--dsi-m-spacing-05)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-01"
+   ],
+   "component": "card",
+   "cssProperty": "gap",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2164,
+   "native": "Card",
+   "part": "header",
+   "selector": ".cds--card__title",
+   "token": "spacing.spacing-01",
+   "value": "var(--dsi-m-spacing-01)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-05"
+   ],
+   "component": "card",
+   "cssProperty": "margin-block",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2171,
+   "native": "Card",
+   "part": "header",
+   "selector": ".cds--card__header > .cds--card__title",
+   "token": "spacing.spacing-05",
+   "value": "var(--dsi-m-spacing-05)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-05"
+   ],
+   "component": "card",
+   "cssProperty": "margin-inline",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2166,
+   "native": "Card",
+   "part": "header",
+   "selector": ".cds--card__title",
+   "token": "spacing.spacing-05",
+   "value": "var(--dsi-m-spacing-05)"
+  },
+  {
+   "chain": [
+    "--cds-text-secondary"
+   ],
+   "component": "card",
+   "cssProperty": "color",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2140,
+   "literal": "#525252",
+   "native": "Card",
+   "part": "label",
+   "selector": ".cds--card__title .cds--card__label",
+   "token": "text-secondary",
+   "value": "var(--cds-text-secondary, #525252)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-font-size"
+   ],
+   "component": "card",
+   "cssProperty": "font-size",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2136,
+   "literal": "0.75rem",
+   "native": "Card",
+   "part": "label",
+   "selector": ".cds--card__title .cds--card__label",
+   "token": "type.label-01.font-size",
+   "value": "var(--cds-label-01-font-size, 0.75rem)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-font-weight"
+   ],
+   "component": "card",
+   "cssProperty": "font-weight",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2137,
+   "literal": "400",
+   "native": "Card",
+   "part": "label",
+   "selector": ".cds--card__title .cds--card__label",
+   "token": "type.label-01.font-weight",
+   "value": "var(--cds-label-01-font-weight, 400)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-letter-spacing"
+   ],
+   "component": "card",
+   "cssProperty": "letter-spacing",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2139,
+   "literal": "0.32px",
+   "native": "Card",
+   "part": "label",
+   "selector": ".cds--card__title .cds--card__label",
+   "token": "type.label-01.letter-spacing",
+   "value": "var(--cds-label-01-letter-spacing, 0.32px)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-line-height"
+   ],
+   "component": "card",
+   "cssProperty": "line-height",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2138,
+   "literal": "1.33333",
+   "native": "Card",
+   "part": "label",
+   "selector": ".cds--card__title .cds--card__label",
+   "token": "type.label-01.line-height",
+   "value": "var(--cds-label-01-line-height, 1.33333)"
+  },
+  {
+   "chain": [
+    "--cds-text-secondary"
+   ],
+   "component": "card",
+   "cssProperty": "color",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2236,
+   "literal": "#525252",
+   "native": "Card",
+   "part": "supporting-text",
+   "selector": ".cds--card__title .cds--card__description",
+   "token": "text-secondary",
+   "value": "var(--cds-text-secondary, #525252)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-font-size"
+   ],
+   "component": "card",
+   "cssProperty": "font-size",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2232,
+   "literal": "0.75rem",
+   "native": "Card",
+   "part": "supporting-text",
+   "selector": ".cds--card__title .cds--card__description",
+   "token": "type.label-01.font-size",
+   "value": "var(--cds-label-01-font-size, 0.75rem)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-font-weight"
+   ],
+   "component": "card",
+   "cssProperty": "font-weight",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2233,
+   "literal": "400",
+   "native": "Card",
+   "part": "supporting-text",
+   "selector": ".cds--card__title .cds--card__description",
+   "token": "type.label-01.font-weight",
+   "value": "var(--cds-label-01-font-weight, 400)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-letter-spacing"
+   ],
+   "component": "card",
+   "cssProperty": "letter-spacing",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2235,
+   "literal": "0.32px",
+   "native": "Card",
+   "part": "supporting-text",
+   "selector": ".cds--card__title .cds--card__description",
+   "token": "type.label-01.letter-spacing",
+   "value": "var(--cds-label-01-letter-spacing, 0.32px)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-line-height"
+   ],
+   "component": "card",
+   "cssProperty": "line-height",
+   "file": "sass:card",
+   "how": "css",
+   "line": 2234,
+   "literal": "1.33333",
+   "native": "Card",
+   "part": "supporting-text",
+   "selector": ".cds--card__title .cds--card__description",
+   "token": "type.label-01.line-height",
+   "value": "var(--cds-label-01-line-height, 1.33333)"
+  },
+  {
+   "chain": [
+    "--cds-layer",
+    "--cds-layer-01"
+   ],
+   "component": "card",
+   "cssProperty": "background-color",
+   "file": "sass:tile",
+   "how": "css",
+   "line": 386,
+   "literal": "#f4f4f4",
+   "native": "Tile",
+   "part": "container",
+   "selector": ".cds--tile",
+   "token": "layer-01",
+   "value": "var(--cds-layer)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-font-size"
+   ],
+   "component": "card",
+   "cssProperty": "font-size",
+   "file": "sass:tile",
+   "how": "css",
+   "line": 378,
+   "literal": "0.875rem",
+   "native": "Tile",
+   "part": "container",
+   "selector": ".cds--tile",
+   "token": "type.body-compact-01.font-size",
+   "value": "var(--cds-body-compact-01-font-size, 0.875rem)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-font-weight"
+   ],
+   "component": "card",
+   "cssProperty": "font-weight",
+   "file": "sass:tile",
+   "how": "css",
+   "line": 379,
+   "literal": "400",
+   "native": "Tile",
+   "part": "container",
+   "selector": ".cds--tile",
+   "token": "type.body-compact-01.font-weight",
+   "value": "var(--cds-body-compact-01-font-weight, 400)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-letter-spacing"
+   ],
+   "component": "card",
+   "cssProperty": "letter-spacing",
+   "file": "sass:tile",
+   "how": "css",
+   "line": 381,
+   "literal": "0.16px",
+   "native": "Tile",
+   "part": "container",
+   "selector": ".cds--tile",
+   "token": "type.body-compact-01.letter-spacing",
+   "value": "var(--cds-body-compact-01-letter-spacing, 0.16px)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-line-height"
+   ],
+   "component": "card",
+   "cssProperty": "line-height",
+   "file": "sass:tile",
+   "how": "css",
+   "line": 380,
+   "literal": "1.28572",
+   "native": "Tile",
+   "part": "container",
+   "selector": ".cds--tile",
+   "token": "type.body-compact-01.line-height",
+   "value": "var(--cds-body-compact-01-line-height, 1.28572)"
+  },
+  {
+   "chain": [
+    "--cds-focus"
+   ],
+   "component": "card",
+   "cssProperty": "outline",
+   "file": "sass:tile",
+   "how": "css",
+   "line": 393,
+   "literal": "#0f62fe",
+   "native": "Tile",
+   "part": "container",
+   "selector": ".cds--tile:focus",
+   "state": "focus",
+   "token": "focus",
+   "value": "2px solid var(--cds-focus, #0f62fe)"
+  },
+  {
+   "chain": [
+    "--cds-layout-density-padding-inline-local",
+    "--cds-layout-density-padding-inline",
+    "--cds-layout-density-padding-inline-normal",
+    "--dsi-m-spacing-05"
+   ],
+   "component": "card",
+   "cssProperty": "padding",
+   "file": "sass:tile",
+   "how": "css",
+   "line": 385,
+   "native": "Tile",
+   "part": "container",
+   "selector": ".cds--tile",
+   "token": "spacing.spacing-05",
+   "value": "var(--cds-layout-density-padding-inline-local)"
+  },
+  {
+   "chain": [
+    "--cds-layer",
+    "--cds-layer-01"
+   ],
+   "component": "table",
+   "cssProperty": "background-color",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1639,
+   "literal": "#f4f4f4",
+   "native": "DataTable",
+   "part": "body",
+   "selector": ".cds--data-table tbody",
+   "token": "layer-01",
+   "value": "var(--cds-layer)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-font-size"
+   ],
+   "component": "table",
+   "cssProperty": "font-size",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1635,
+   "literal": "0.875rem",
+   "native": "DataTable",
+   "part": "body",
+   "selector": ".cds--data-table tbody",
+   "token": "type.body-compact-01.font-size",
+   "value": "var(--cds-body-compact-01-font-size, 0.875rem)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-font-weight"
+   ],
+   "component": "table",
+   "cssProperty": "font-weight",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1636,
+   "literal": "400",
+   "native": "DataTable",
+   "part": "body",
+   "selector": ".cds--data-table tbody",
+   "token": "type.body-compact-01.font-weight",
+   "value": "var(--cds-body-compact-01-font-weight, 400)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-letter-spacing"
+   ],
+   "component": "table",
+   "cssProperty": "letter-spacing",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1638,
+   "literal": "0.16px",
+   "native": "DataTable",
+   "part": "body",
+   "selector": ".cds--data-table tbody",
+   "token": "type.body-compact-01.letter-spacing",
+   "value": "var(--cds-body-compact-01-letter-spacing, 0.16px)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-line-height"
+   ],
+   "component": "table",
+   "cssProperty": "line-height",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1637,
+   "literal": "1.28572",
+   "native": "DataTable",
+   "part": "body",
+   "selector": ".cds--data-table tbody",
+   "token": "type.body-compact-01.line-height",
+   "value": "var(--cds-body-compact-01-line-height, 1.28572)"
+  },
+  {
+   "chain": [
+    "--cds-border-subtle-01"
+   ],
+   "component": "table",
+   "cssProperty": "border-block-end",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1732,
+   "literal": "#c6c6c6",
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".cds--data-table td, .cds--data-table tbody th",
+   "token": "border-subtle-01",
+   "value": "1px solid var(--cds-border-subtle-01, #c6c6c6)"
+  },
+  {
+   "chain": [
+    "--cds-layer-hover",
+    "--cds-layer-hover-01"
+   ],
+   "component": "table",
+   "cssProperty": "border-block-end",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1662,
+   "literal": "#e8e8e8",
+   "media": "@media (any-hover: hover)",
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".cds--data-table tbody tr:hover td, .cds--data-table tbody tr:hover th",
+   "state": "hover",
+   "token": "layer-hover-01",
+   "value": "1px solid var(--cds-layer-hover)"
+  },
+  {
+   "chain": [
+    "--cds-layer",
+    "--cds-layer-01"
+   ],
+   "component": "table",
+   "cssProperty": "border-block-start",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1733,
+   "literal": "#f4f4f4",
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".cds--data-table td, .cds--data-table tbody th",
+   "token": "layer-01",
+   "value": "1px solid var(--cds-layer)"
+  },
+  {
+   "chain": [
+    "--cds-layer-hover",
+    "--cds-layer-hover-01"
+   ],
+   "component": "table",
+   "cssProperty": "border-block-start",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1663,
+   "literal": "#e8e8e8",
+   "media": "@media (any-hover: hover)",
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".cds--data-table tbody tr:hover td, .cds--data-table tbody tr:hover th",
+   "state": "hover",
+   "token": "layer-hover-01",
+   "value": "1px solid var(--cds-layer-hover)"
+  },
+  {
+   "chain": [
+    "--cds-text-secondary"
+   ],
+   "component": "table",
+   "cssProperty": "color",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1734,
+   "literal": "#525252",
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".cds--data-table td, .cds--data-table tbody th",
+   "token": "text-secondary",
+   "value": "var(--cds-text-secondary, #525252)"
+  },
+  {
+   "chain": [
+    "--cds-text-primary"
+   ],
+   "component": "table",
+   "cssProperty": "color",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1664,
+   "literal": "#161616",
+   "media": "@media (any-hover: hover)",
+   "native": "DataTable",
+   "part": "cell",
+   "selector": ".cds--data-table tbody tr:hover td, .cds--data-table tbody tr:hover th",
+   "state": "hover",
+   "token": "text-primary",
+   "value": "var(--cds-text-primary, #161616)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-05"
+   ],
+   "component": "table",
+   "cssProperty": "padding-inline",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1735,
+   "native": "DataTable",
+   "part": "cell",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".cds--data-table td, .cds--data-table tbody th",
+   "token": "spacing.spacing-05",
+   "value": "var(--dsi-m-spacing-05) var(--dsi-m-spacing-05)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-05"
+   ],
+   "component": "table",
+   "cssProperty": "padding-inline",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1735,
+   "native": "DataTable",
+   "part": "cell",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".cds--data-table td, .cds--data-table tbody th",
+   "token": "spacing.spacing-05",
+   "value": "var(--dsi-m-spacing-05) var(--dsi-m-spacing-05)"
+  },
+  {
+   "chain": [
+    "--cds-layer-accent",
+    "--cds-layer-accent-01"
+   ],
+   "component": "table",
+   "cssProperty": "background-color",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1716,
+   "literal": "#e0e0e0",
+   "native": "DataTable",
+   "part": "header",
+   "selector": ".cds--data-table th",
+   "token": "layer-accent-01",
+   "value": "var(--cds-layer-accent)"
+  },
+  {
+   "chain": [
+    "--cds-layer-accent",
+    "--cds-layer-accent-01"
+   ],
+   "component": "table",
+   "cssProperty": "background-color",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1631,
+   "literal": "#e0e0e0",
+   "native": "DataTable",
+   "part": "header",
+   "selector": ".cds--data-table thead",
+   "token": "layer-accent-01",
+   "value": "var(--cds-layer-accent)"
+  },
+  {
+   "chain": [
+    "--cds-text-primary"
+   ],
+   "component": "table",
+   "cssProperty": "color",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1717,
+   "literal": "#161616",
+   "native": "DataTable",
+   "part": "header",
+   "selector": ".cds--data-table th",
+   "token": "text-primary",
+   "value": "var(--cds-text-primary, #161616)"
+  },
+  {
+   "chain": [
+    "--cds-heading-compact-01-font-size"
+   ],
+   "component": "table",
+   "cssProperty": "font-size",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1627,
+   "literal": "0.875rem",
+   "native": "DataTable",
+   "part": "header",
+   "selector": ".cds--data-table thead",
+   "token": "type.heading-compact-01.font-size",
+   "value": "var(--cds-heading-compact-01-font-size, 0.875rem)"
+  },
+  {
+   "chain": [
+    "--cds-heading-compact-01-font-weight"
+   ],
+   "component": "table",
+   "cssProperty": "font-weight",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1628,
+   "literal": "600",
+   "native": "DataTable",
+   "part": "header",
+   "selector": ".cds--data-table thead",
+   "token": "type.heading-compact-01.font-weight",
+   "value": "var(--cds-heading-compact-01-font-weight, 600)"
+  },
+  {
+   "chain": [
+    "--cds-heading-compact-01-letter-spacing"
+   ],
+   "component": "table",
+   "cssProperty": "letter-spacing",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1630,
+   "literal": "0.16px",
+   "native": "DataTable",
+   "part": "header",
+   "selector": ".cds--data-table thead",
+   "token": "type.heading-compact-01.letter-spacing",
+   "value": "var(--cds-heading-compact-01-letter-spacing, 0.16px)"
+  },
+  {
+   "chain": [
+    "--cds-heading-compact-01-line-height"
+   ],
+   "component": "table",
+   "cssProperty": "line-height",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1629,
+   "literal": "1.28572",
+   "native": "DataTable",
+   "part": "header",
+   "selector": ".cds--data-table thead",
+   "token": "type.heading-compact-01.line-height",
+   "value": "var(--cds-heading-compact-01-line-height, 1.28572)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-05"
+   ],
+   "component": "table",
+   "cssProperty": "padding-inline",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1718,
+   "native": "DataTable",
+   "part": "header",
+   "position": [
+    1,
+    2
+   ],
+   "selector": ".cds--data-table th",
+   "token": "spacing.spacing-05",
+   "value": "var(--dsi-m-spacing-05) var(--dsi-m-spacing-05)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-05"
+   ],
+   "component": "table",
+   "cssProperty": "padding-inline",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1718,
+   "native": "DataTable",
+   "part": "header",
+   "position": [
+    2,
+    2
+   ],
+   "selector": ".cds--data-table th",
+   "token": "spacing.spacing-05",
+   "value": "var(--dsi-m-spacing-05) var(--dsi-m-spacing-05)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-09"
+   ],
+   "component": "table",
+   "cssProperty": "block-size",
+   "file": "sass:data-table",
+   "how": "css",
+   "line": 1645,
+   "native": "DataTable",
+   "part": "row",
+   "selector": ".cds--data-table tr",
+   "token": "spacing.spacing-09",
+   "value": "var(--dsi-m-spacing-09)"
+  },
+  {
+   "chain": [
+    "--cds-field",
+    "--cds-field-01"
+   ],
+   "component": "text-field",
+   "cssProperty": "background",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 913,
+   "literal": "#f4f4f4",
+   "native": "TextInput",
+   "part": "container",
+   "selector": ".cds--text-input:disabled",
+   "state": "disabled",
+   "token": "field-01",
+   "value": "var(--cds-field)"
+  },
+  {
+   "chain": [
+    "--cds-field",
+    "--cds-field-01"
+   ],
+   "component": "text-field",
+   "cssProperty": "background-color",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 751,
+   "literal": "#f4f4f4",
+   "native": "TextInput",
+   "part": "container",
+   "selector": ".cds--text-input",
+   "token": "field-01",
+   "value": "var(--cds-field)"
+  },
+  {
+   "chain": [
+    "--cds-layout-size-height-local",
+    "--cds-layout-size-height",
+    "--cds-layout-size-height-md"
+   ],
+   "component": "text-field",
+   "cssProperty": "block-size",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 752,
+   "literal": "2.5rem",
+   "native": "TextInput",
+   "part": "container",
+   "selector": ".cds--text-input",
+   "value": "var(--cds-layout-size-height-local)"
+  },
+  {
+   "chain": [
+    "--cds-border-strong",
+    "--cds-border-strong-01"
+   ],
+   "component": "text-field",
+   "cssProperty": "border-block-end",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 753,
+   "literal": "#8d8d8d",
+   "native": "TextInput",
+   "part": "container",
+   "selector": ".cds--text-input",
+   "token": "border-strong-01",
+   "value": "1px solid var(--cds-border-strong)"
+  },
+  {
+   "chain": [
+    "--cds-focus"
+   ],
+   "component": "text-field",
+   "cssProperty": "outline",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 766,
+   "literal": "#0f62fe",
+   "native": "TextInput",
+   "part": "container",
+   "selector": ".cds--text-input:focus, .cds--text-input:active",
+   "state": "focus",
+   "token": "focus",
+   "value": "2px solid var(--cds-focus, #0f62fe)"
+  },
+  {
+   "chain": [
+    "--cds-layout-density-padding-inline-local",
+    "--cds-layout-density-padding-inline",
+    "--cds-layout-density-padding-inline-normal",
+    "--dsi-m-spacing-05"
+   ],
+   "component": "text-field",
+   "cssProperty": "padding",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 749,
+   "native": "TextInput",
+   "part": "container",
+   "selector": ".cds--text-input",
+   "token": "spacing.spacing-05",
+   "value": "0 var(--cds-layout-density-padding-inline-local)"
+  },
+  {
+   "chain": [
+    "--cds-text-disabled"
+   ],
+   "component": "text-field",
+   "cssProperty": "-webkit-text-fill-color",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 916,
+   "literal": "rgba(22, 22, 22, 0.25)",
+   "native": "TextInput",
+   "part": "input",
+   "selector": ".cds--text-input:disabled",
+   "state": "disabled",
+   "token": "text-disabled",
+   "value": "var(--cds-text-disabled, rgba(22, 22, 22, 0.25))"
+  },
+  {
+   "chain": [
+    "--cds-text-primary"
+   ],
+   "component": "text-field",
+   "cssProperty": "caret-color",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 754,
+   "literal": "#161616",
+   "native": "TextInput",
+   "part": "input",
+   "selector": ".cds--text-input",
+   "token": "text-primary",
+   "value": "var(--cds-text-primary, #161616)"
+  },
+  {
+   "chain": [
+    "--cds-text-primary"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 755,
+   "literal": "#161616",
+   "native": "TextInput",
+   "part": "input",
+   "selector": ".cds--text-input",
+   "token": "text-primary",
+   "value": "var(--cds-text-primary, #161616)"
+  },
+  {
+   "chain": [
+    "--cds-text-disabled"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 914,
+   "literal": "rgba(22, 22, 22, 0.25)",
+   "native": "TextInput",
+   "part": "input",
+   "selector": ".cds--text-input:disabled",
+   "state": "disabled",
+   "token": "text-disabled",
+   "value": "var(--cds-text-disabled, rgba(22, 22, 22, 0.25))"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-font-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-size",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 743,
+   "literal": "0.875rem",
+   "native": "TextInput",
+   "part": "input",
+   "selector": ".cds--text-input",
+   "token": "type.body-compact-01.font-size",
+   "value": "var(--cds-body-compact-01-font-size, 0.875rem)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-font-weight"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-weight",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 744,
+   "literal": "400",
+   "native": "TextInput",
+   "part": "input",
+   "selector": ".cds--text-input",
+   "token": "type.body-compact-01.font-weight",
+   "value": "var(--cds-body-compact-01-font-weight, 400)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-letter-spacing"
+   ],
+   "component": "text-field",
+   "cssProperty": "letter-spacing",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 746,
+   "literal": "0.16px",
+   "native": "TextInput",
+   "part": "input",
+   "selector": ".cds--text-input",
+   "token": "type.body-compact-01.letter-spacing",
+   "value": "var(--cds-body-compact-01-letter-spacing, 0.16px)"
+  },
+  {
+   "chain": [
+    "--cds-body-compact-01-line-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "line-height",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 745,
+   "literal": "1.28572",
+   "native": "TextInput",
+   "part": "input",
+   "selector": ".cds--text-input",
+   "token": "type.body-compact-01.line-height",
+   "value": "var(--cds-body-compact-01-line-height, 1.28572)"
+  },
+  {
+   "chain": [
+    "--cds-text-secondary"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 439,
+   "literal": "#525252",
+   "native": "TextInput",
+   "part": "label",
+   "selector": ".cds--label",
+   "token": "text-secondary",
+   "value": "var(--cds-text-secondary, #525252)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-font-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-size",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 434,
+   "literal": "0.75rem",
+   "native": "TextInput",
+   "part": "label",
+   "selector": ".cds--label",
+   "token": "type.label-01.font-size",
+   "value": "var(--cds-label-01-font-size, 0.75rem)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-font-weight"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-weight",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 435,
+   "literal": "400",
+   "native": "TextInput",
+   "part": "label",
+   "selector": ".cds--label",
+   "token": "type.label-01.font-weight",
+   "value": "var(--cds-label-01-font-weight, 400)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-letter-spacing"
+   ],
+   "component": "text-field",
+   "cssProperty": "letter-spacing",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 437,
+   "literal": "0.32px",
+   "native": "TextInput",
+   "part": "label",
+   "selector": ".cds--label",
+   "token": "type.label-01.letter-spacing",
+   "value": "var(--cds-label-01-letter-spacing, 0.32px)"
+  },
+  {
+   "chain": [
+    "--cds-label-01-line-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "line-height",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 436,
+   "literal": "1.33333",
+   "native": "TextInput",
+   "part": "label",
+   "selector": ".cds--label",
+   "token": "type.label-01.line-height",
+   "value": "var(--cds-label-01-line-height, 1.33333)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-03"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-block-end",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 442,
+   "native": "TextInput",
+   "part": "label",
+   "selector": ".cds--label",
+   "token": "spacing.spacing-03",
+   "value": "var(--dsi-m-spacing-03)"
+  },
+  {
+   "chain": [
+    "--cds-text-helper"
+   ],
+   "component": "text-field",
+   "cssProperty": "color",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 702,
+   "literal": "#6f6f6f",
+   "native": "TextInput",
+   "part": "supporting-text",
+   "selector": ".cds--form__helper-text",
+   "token": "text-helper",
+   "value": "var(--cds-text-helper, #6f6f6f)"
+  },
+  {
+   "chain": [
+    "--cds-helper-text-01-font-size"
+   ],
+   "component": "text-field",
+   "cssProperty": "font-size",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 698,
+   "literal": "0.75rem",
+   "native": "TextInput",
+   "part": "supporting-text",
+   "selector": ".cds--form__helper-text",
+   "token": "type.helper-text-01.font-size",
+   "value": "var(--cds-helper-text-01-font-size, 0.75rem)"
+  },
+  {
+   "chain": [
+    "--cds-helper-text-01-letter-spacing"
+   ],
+   "component": "text-field",
+   "cssProperty": "letter-spacing",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 700,
+   "literal": "0.32px",
+   "native": "TextInput",
+   "part": "supporting-text",
+   "selector": ".cds--form__helper-text",
+   "token": "type.helper-text-01.letter-spacing",
+   "value": "var(--cds-helper-text-01-letter-spacing, 0.32px)"
+  },
+  {
+   "chain": [
+    "--cds-helper-text-01-line-height"
+   ],
+   "component": "text-field",
+   "cssProperty": "line-height",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 699,
+   "literal": "1.33333",
+   "native": "TextInput",
+   "part": "supporting-text",
+   "selector": ".cds--form__helper-text",
+   "token": "type.helper-text-01.line-height",
+   "value": "var(--cds-helper-text-01-line-height, 1.33333)"
+  },
+  {
+   "chain": [
+    "--dsi-m-spacing-02"
+   ],
+   "component": "text-field",
+   "cssProperty": "margin-block-start",
+   "file": "sass:text-input",
+   "how": "css",
+   "line": 704,
+   "native": "TextInput",
+   "part": "supporting-text",
+   "selector": ".cds--form__helper-text",
+   "token": "spacing.spacing-02",
+   "value": "var(--dsi-m-spacing-02)"
+  }
+ ],
+ "version": "11.84.0"
+}

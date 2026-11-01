@@ -35,6 +35,7 @@ design-system-index/
 │  └─ <product>/<version>.mappings.json   match assertions, facet bindings, provenance, review state
 ├─ data/                     GENERATED. Reproducible from inputs, never hand-edited
 │  ├─ native/<product>/<version>/*.tokens.json   DTCG, native names and values
+│  ├─ applications/<product>/<version>.json   token applications from shipped component styles
 │  ├─ canonical/             Canonical DTCG set + one resolver per product
 │  └─ reports/               Validation and coverage reports
 ├─ packages/

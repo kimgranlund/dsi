@@ -5,6 +5,7 @@ import { conceptView } from './views/concept';
 import { systemView } from './views/system';
 import { tokenView } from './views/token';
 import { ontologyView } from './views/ontology';
+import { componentIndex, componentView } from './views/component';
 
 const main = document.getElementById('main')!;
 
@@ -28,6 +29,7 @@ async function route() {
       const t = p && (await tokens(p.id)).find((x) => x.p === path);
       return p && t ? tokenView(main, p, t) : notFound(`Token ${path}`);
     }
+    if (kind === 'component') { if (!a) return componentIndex(main); return (await componentView(main, a)) || notFound(`Component ${a}`); }
     if (kind === 'ontology') {
       if (a === 'concept') { const c = await conceptByIri(`dsi:concept/${rest.join('/')}`); return c ? conceptView(main, c) : notFound(`Concept dsi:concept/${rest.join('/')}`); }
       return ontologyView(main, a, rest[0]);
@@ -49,7 +51,7 @@ document.addEventListener('click', (e) => {
 window.addEventListener('popstate', route);
 
 // Systems nav
-meta().then((m) => document.getElementById('systems-nav')!.replaceChildren(...m.products.map((p) => el('a', { href: `/system/${p.id}`, 'data-link': true, text: p.name.replace(/ Design System| Design 3/, '') })), el('a', { href: '/ontology', 'data-link': true, text: 'Ontology' })));
+meta().then((m) => document.getElementById('systems-nav')!.replaceChildren(...m.products.map((p) => el('a', { href: `/system/${p.id}`, 'data-link': true, text: p.name.replace(/ Design System| Design 3/, '') })), el('a', { href: '/component', 'data-link': true, text: 'Components' }), el('a', { href: '/ontology', 'data-link': true, text: 'Ontology' })));
 
 // Search: every query word must appear in a row's title or body; title matches rank first.
 const input = document.getElementById('q') as HTMLInputElement;
