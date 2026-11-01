@@ -1,0 +1,536 @@
+{
+  "product": "polaris",
+  "noise": [
+    "color"
+  ],
+  "scopes": [
+    {
+      "pathPrefix": "colors.",
+      "scope": "palette"
+    },
+    {
+      "pathPrefix": "size.",
+      "scope": "palette"
+    },
+    {
+      "pathPrefix": "color-",
+      "scope": "semantic"
+    },
+    {
+      "pathPrefix": "",
+      "scope": "foundation"
+    }
+  ],
+  "terms": [
+    {
+      "term": "active",
+      "facet": "state",
+      "value": "active",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 19,
+        "agree": 19,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "border",
+      "facet": "property",
+      "value": "border",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 16,
+        "agree": 15,
+        "precision": 0.938
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "brand",
+      "facet": "intent",
+      "value": "accent",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 4,
+        "agree": 4,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "brand",
+      "facet": "property",
+      "value": "text",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 4,
+        "agree": 4,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "brand",
+      "facet": "usage",
+      "value": "on-fill",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 4,
+        "agree": 4,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "caution",
+      "facet": "intent",
+      "value": "caution",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 9,
+        "agree": 9,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "critical",
+      "facet": "intent",
+      "value": "danger",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 10,
+        "agree": 10,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "disabled",
+      "facet": "state",
+      "value": "disabled",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 5,
+        "agree": 5,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "emphasis",
+      "facet": "intent",
+      "value": "highlight",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 12,
+        "agree": 12,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "fill-caution",
+      "facet": "property",
+      "value": "background",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 3,
+        "agree": 3,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "fill-critical",
+      "facet": "property",
+      "value": "background",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 4,
+        "agree": 4,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "fill-emphasis",
+      "facet": "property",
+      "value": "background",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 3,
+        "agree": 3,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "fill-info",
+      "facet": "property",
+      "value": "background",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 3,
+        "agree": 3,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "fill-success",
+      "facet": "property",
+      "value": "background",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 3,
+        "agree": 3,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "fill-warning",
+      "facet": "property",
+      "value": "background",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 3,
+        "agree": 3,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "hover",
+      "facet": "state",
+      "value": "hover",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 20,
+        "agree": 20,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "icon",
+      "facet": "property",
+      "value": "icon",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 14,
+        "agree": 14,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "info",
+      "facet": "intent",
+      "value": "info",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 9,
+        "agree": 9,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "inverse",
+      "facet": "usage",
+      "value": "inverse",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 7,
+        "agree": 7,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "link",
+      "facet": "property",
+      "value": "text",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 4,
+        "agree": 4,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "link",
+      "facet": "usage",
+      "value": "link",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 4,
+        "agree": 4,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "magic",
+      "facet": "intent",
+      "value": "ai",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 5,
+        "agree": 5,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "on",
+      "facet": "usage",
+      "value": "on-fill",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 10,
+        "agree": 10,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "selected",
+      "facet": "property",
+      "value": "background",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 2,
+        "agree": 2,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "selected",
+      "facet": "state",
+      "value": "selected",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 2,
+        "agree": 2,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "success",
+      "facet": "intent",
+      "value": "success",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 9,
+        "agree": 9,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "surface",
+      "facet": "property",
+      "value": "background",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 5,
+        "agree": 5,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "surface",
+      "facet": "usage",
+      "value": "surface",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 5,
+        "agree": 5,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "text-emphasis",
+      "facet": "property",
+      "value": "text",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 3,
+        "agree": 3,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "warning",
+      "facet": "intent",
+      "value": "warning",
+      "match": "exact",
+      "status": "proposed",
+      "evidence": {
+        "support": 9,
+        "agree": 9,
+        "precision": 1
+      },
+      "provenance": {
+        "agent": "dsi-classify",
+        "at": "2026-11-01T00:18:57.295Z",
+        "method": "derive-from-approved-mappings"
+      }
+    }
+  ]
+}

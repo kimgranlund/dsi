@@ -9,6 +9,7 @@ Generated, committed so that upstream changes show up as reviewable diffs and th
 | Path | Produced by | From |
 |---|---|---|
 | `native/<product>/<version>/` | `@dsi/ingest` | `sources/<product>/source.json` + the npm package |
+| `classified/<product>/<version>.json` | `@dsi/classify run` | `mappings/<product>/terms.json` + `native/` |
 | `canonical/` | `@dsi/canon` (planned) | `ontology/` + `mappings/` + `native/` |
 | SQLite / D1 (not in git) | `@dsi/db` (planned) | everything above + `catalog/` + `ontology/` |
 

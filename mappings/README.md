@@ -12,6 +12,7 @@ Agent-authored, human-reviewable. Written by `@dsi/mapper merge`; never regenera
 |---|---|
 | `mappings[]` | token -> concept with a SKOS match type, confidence, rationale, provenance, status |
 | `unmapped[]` | tokens no canonical concept fits yet (ontology backlog) |
+| `terms.json` (per product) | native naming words -> facet values, used by `@dsi/classify` |
 | `noEquivalent[]` | concepts this product version has no token for (absence of a record means unknown) |
 
 Statuses: `proposed` (candidate), `approved` (adopted; by agent agreement or a human), `rejected` (kept so it is never proposed again), `superseded` (replaced, kept for history).

@@ -99,6 +99,27 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
     issues.push(...checkMappingSemantics(ontology, data as MappingFile, rel(f), catalog.has.bind(catalog)));
   }
 
+  // Term mappings
+  for (const f of walk(path.join(root, 'mappings'), 'terms.json')) {
+    const data = read(f);
+    if (data === undefined || !shape('terms-file.schema.json', f, data)) continue;
+    const t = data as { product: string; terms: { term: string; facet: string; value: string; status: string }[] };
+    const at = rel(f);
+    if (path.basename(path.dirname(f)) !== t.product) issues.push({ file: at, message: `folder must equal product "${t.product}"` });
+    if (!catalog.has(t.product)) issues.push({ file: at, message: `unknown product "${t.product}"` });
+    const live = new Map<string, string>();
+    t.terms.forEach((x, i) => {
+      if (!inScheme(ontology, `dsi:${x.facet}/${x.value}`, `dsi:scheme/${x.facet}`)) issues.push({ file: at, message: `terms[${i}] ${x.term}: ${x.facet} "${x.value}" is not in dsi:scheme/${x.facet}` });
+      else if (ontology.deprecated.has(expand(`dsi:${x.facet}/${x.value}`))) issues.push({ file: at, message: `terms[${i}] ${x.term}: ${x.facet} "${x.value}" is deprecated` });
+      if (!inScheme(ontology, `dsi:review/${x.status}`, 'dsi:scheme/review-status')) issues.push({ file: at, message: `terms[${i}] ${x.term}: status "${x.status}" is not in dsi:scheme/review-status` });
+      if (x.status === 'approved') {
+        const k = `${x.term}|${x.facet}`;
+        if (live.has(k)) issues.push({ file: at, message: `terms[${i}] ${x.term}: two approved ${x.facet} values (${live.get(k)}, ${x.value})` });
+        live.set(k, x.value);
+      }
+    });
+  }
+
   // Native tokens
   validateNative(root, ajv, issues);
   return issues;
