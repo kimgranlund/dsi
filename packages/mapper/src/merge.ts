@@ -1,7 +1,7 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { createAjv, gateUnregistered, parseConcept, type Ontology } from '@dsi/schema';
+import { createAjv, gateUnregistered, normalizeConcept, parseConcept, type Ontology } from '@dsi/schema';
 import { mappingPath, readMappings, type MappingFileShape } from './packet.ts';
 
 export const APPROVE_AT = 0.7; // ADR 0005 amended 2026-11-01 (was 0.85)
@@ -27,7 +27,7 @@ export function readProposals(file: string, o: Ontology, expectedTokens: Set<str
     if (!expectedTokens.has(p.token)) throw new Error(`${file}: token ${p.token} is not in the packet`);
     if (seen.has(p.token)) throw new Error(`${file}: token ${p.token} answered twice`);
     seen.add(p.token);
-    if (isMap(p)) { const r = parseConcept(o, p.concept); if (typeof r === 'string') throw new Error(`${file}: ${p.token}: ${p.concept} ${r}`); }
+    if (isMap(p)) { p.concept = normalizeConcept(p.concept); const r = parseConcept(o, p.concept); if (typeof r === 'string') throw new Error(`${file}: ${p.token}: ${p.concept} ${r}`); }
   }
   const missing = [...expectedTokens].filter((t) => !seen.has(t));
   if (missing.length) throw new Error(`${file}: ${missing.length} packet token(s) unanswered, e.g. ${missing.slice(0, 3).join(', ')}`);

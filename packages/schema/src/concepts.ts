@@ -50,6 +50,16 @@ export function parseConcept(o: Ontology, ref: string): ParsedConcept | string {
 }
 
 /**
+ * Rewrites the two forms ADR 0019 retired into their ratified spelling, for answers written before the rule:
+ * a bound emphasis-default is dropped (the bare concept is the default) and opacity moves to its own domain.
+ */
+export function normalizeConcept(ref: string): string {
+  let r = ref.replace(/\/emphasis-default(?=\/|$)/, '');
+  if (/\/property-opacity(?=\/|$)/.test(r)) r = r.replace(/^dsi:concept\/[a-z0-9-]+\//, 'dsi:concept/opacity/');
+  return r;
+}
+
+/**
  * Canonical token name of a parsed concept: facet values in facet order joined by '-'. Syntax values are prefixed
  * "code-" because Lezer tag names (link, strong, emphasis) would otherwise collide with other facets' values.
  */

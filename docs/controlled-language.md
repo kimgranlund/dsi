@@ -187,6 +187,7 @@ Where two facet values meet, a deciding test on shipped facts says which side a 
 | L4 facet definitions: present, at most 25 words, no product names | validator (`validateRepo`); 126 written and owner-approved on 2026-11-01 | enforced |
 | L5 and L7 frames | review page templates | built; the site does not show match statements yet |
 | L6 rationale shape | `dsi-map check` warns; prompts teach it | warns |
+| Sweep of open review items (L1, registry, L3 collisions, L6) | `dsi-map language-sweep <scope> [--third <run>]` -> `.cache/language-sweep.json`; answers written before ADR 0019 are normalized on load (`normalizeConcept`) | run before each review render |
 
 ## 12. Classification and prior art
 

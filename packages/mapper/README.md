@@ -46,3 +46,5 @@ Agreement is not truth, so approved mappings (whoever approved them) are audited
 ## Checks
 
 `corepack pnpm --filter @dsi/mapper check`. Mapping files are validated by `@dsi/schema` (`corepack pnpm check`).
+
+`node packages/mapper/src/cli.ts language-sweep <scope> [--third <run>]` sweeps every open review proposal against the controlled language (docs/controlled-language.md): L1 grammar, registry status, L3 name collisions of new concepts, L6 rationale shape. Proposals written before ADR 0019 are normalized when read (`normalizeConcept`: drop `emphasis-default`, move opacity to its domain).

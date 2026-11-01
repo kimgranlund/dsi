@@ -9,7 +9,7 @@ import { loadNative, type NativeSet } from '@dsi/resolve';
 import { preparePacket, readMappings, type Scope } from './packet.ts';
 import { auditTerms, prepareAudit, readVerdicts } from './audit.ts';
 import { rankEmphasis } from './rank.ts';
-import { applyDefinitions, conceptName, gateUnregistered, isRegistered, parseConcept, readLexicon, registerConcepts } from '@dsi/schema';
+import { applyDefinitions, normalizeConcept, conceptName, gateUnregistered, isRegistered, parseConcept, readLexicon, registerConcepts } from '@dsi/schema';
 import { resolve as resolveToken, showValue } from '@dsi/resolve';
 import { applyDecisions, applyDisputes, applyTermDecisions, collectDisputes, collectQueue, collectTermQueue, disputeKey, enrichQueue, renderPage, type Decision, type DisputeDecision, type TermDecision } from './review.ts';
 
@@ -99,6 +99,16 @@ if (cmd === 'prepare') {
     const bad = (pf.proposals as any[]).map((p) => [p.token, lint(p.rationale ?? '')] as const).filter(([, w]) => w.length);
     if (bad.length) { console.log(`WARN: ${bad.length} rationale(s) break L6`); for (const [t, w] of bad.slice(0, 10)) console.log(`  ${t}: ${w.join('; ')}`); }
   } catch (e) { console.error(`FAIL: ${(e as Error).message}`); process.exit(1); }
+} else if (cmd === 'language-sweep') {
+  // Controlled-language sweep of open review items (docs/controlled-language.md section 11).
+  const third = process.argv.includes('--third') ? process.argv[process.argv.indexOf('--third') + 1] : undefined;
+  const { sweep } = await import('./language-sweep.ts');
+  const r = sweep(root, ontology, scope.products, third);
+  console.log(`${r.items} open proposals swept (${third ? 'with third opinion ' + third : 'agents a and b'})`);
+  console.log(`L1 grammar failures: ${r.grammar.length}`); for (const g of r.grammar.slice(0, 20)) console.log(`  ${g}`);
+  console.log(`New (unregistered) concepts proposed: ${r.fresh.length}; L3 name collisions with registered concepts: ${r.collisions.length}`); for (const c of r.collisions) console.log(`  ${c}`);
+  console.log(`L6 rationales breaking a rule: ${r.bad}/${r.items} ` + JSON.stringify(Object.fromEntries(r.l6))); for (const e of r.l6Examples) console.log(`  ${e}`);
+  fs.writeFileSync(path.join(root, '.cache/language-sweep.json'), JSON.stringify(r, null, 2));
 } else if (cmd === 'review') {
   const [out, vocabRun] = [process.argv[5], process.argv[6]];
   if (!run || !out) { console.error(USAGE); process.exit(2); }
@@ -112,7 +122,7 @@ if (cmd === 'prepare') {
     const f = thirdRun && path.join(root, '.cache/mapper', thirdRun, `${p}.c.proposals.json`);
     if (!f || !fs.existsSync(f)) return new Map<string, any>();
     const j = JSON.parse(fs.readFileSync(f, 'utf8'));
-    return new Map<string, any>(j.proposals.map((x: any) => [x.token, { ...x, model: j.model }]));
+    return new Map<string, any>(j.proposals.map((x: any) => [x.token, { ...x, ...(x.concept ? { concept: normalizeConcept(x.concept) } : {}), model: j.model }]));
   };
   const hexIn = (p: string, t: string, mode: string) => { const s = setOf(p); const r = resolveToken(s, s.themes.includes(mode) ? mode : s.themes[0] ?? '', t); return r.value ? showValue(r.type, r.value) : undefined; };
   const near = (p: string, t: string) => { const s = setOf(p); return [...s.tokens.keys()].filter((k) => k === t || k.startsWith(t + '.') || k.startsWith(t + '-')); };
@@ -249,7 +259,7 @@ if (cmd === 'prepare') {
   const [product, firstRun] = [process.argv[5], process.argv[6]];
   if (!run || !product || !firstRun) { console.error(USAGE); process.exit(2); }
   const { version } = scope.products[product];
-  const load = (dir: string, r: string) => JSON.parse(fs.readFileSync(path.join(root, '.cache/mapper', dir, `${product}.${r}.proposals.json`), 'utf8'));
+  const load = (dir: string, r: string) => { const j = JSON.parse(fs.readFileSync(path.join(root, '.cache/mapper', dir, `${product}.${r}.proposals.json`), 'utf8')); for (const x of j.proposals) if (x.concept) x.concept = normalizeConcept(x.concept); return j; };
   const [A, B, C] = [load(firstRun, 'a'), load(firstRun, 'b'), load(run, 'c')];
   const byTok = (f: any) => new Map<string, any>(f.proposals.map((p: any) => [p.token, p]));
   const [a, b, c] = [byTok(A), byTok(B), byTok(C)];
