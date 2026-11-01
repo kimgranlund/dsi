@@ -24,14 +24,20 @@ Ratified decisions live in [docs/decisions](../decisions/README.md); this plan k
 
 Product: public, searchable explorer at `dsi.nonoun.io` on Cloudflare; audience is the owner, designers, developers and AI agents; v1 is done when the searchable site is live. Stack: TypeScript pnpm monorepo, Vite + vanilla site, SQLite built in CI. v1 serves static exports (site data + search index) from Cloudflare static assets; D1 + a Worker come with the agent API. Project license MIT; upstream licenses recorded per source. v1 systems: Material Web 2.5.0, Carbon Elements 11.84.0, Polaris tokens 9.4.2 (all ingested; 508 semantic color tokens mapped).
 
-## 3. Open questions
+## 3. Next (owner order, 2026-11-01)
+
+1. More design systems: GitHub Primer, Adobe Spectrum, Microsoft Fluent 2, Atlassian (research first: package, format, modes, license, no-execution ingest path).
+2. Living index: CI that detects upstream releases and opens a rebuild PR with diffs; agent API (MCP over D1).
+3. Component variants (button kinds and sizes, outlined fields, table densities) and more components (checkbox, select, tabs, chip, dialog).
+4. Modeling gaps: the remaining scale leftovers (Carbon caption/legal/code/quotation/helper type families, M3 springs and focus-indicator offsets), the color backlog below, shadow/font shorthands as DTCG composites.
+
+## 4. Open questions
 
 - Classifier: when two words each imply a usage (`nav` + `surface`, `input` + `surface`, `inverse` + `surface`), the classifier combines them, but approved mappings keep only the more specific usage. Decide a precedence rule (e.g. field/navigation/inverse over surface) so the remaining 15 terms-contradict findings close. Carbon term `overlay` -> usage overlay also disagrees with approved scrim mappings (auditor supported scrim, citing Carbon docs).
 - Carbon `support-caution-minor` resolves to the same colors as `support-warning` in every theme but is mapped caution; review whether Carbon treats it as warning.
 
 - Color ontology backlog from color-v1 rounds 1-3 (each raised by 2+ agents): a `control` usage for interactive fills (Polaris bg-fill, Carbon interactive); a tertiary emphasis step in three-step families; a layer index beyond emphasis (Carbon layer 01-03 borders and fields); helper and placeholder text roles; severity between warning and danger (Carbon caution-major); gradient stops; surface brightness (Material surface-bright, -dim, -variant); syntax-highlighting roles; avatar and categorical palettes; translucent tint fills.
 
-- Carbon typography: `@carbon/type` ships no DTCG file; ingest from its Sass/JS or wait for upstream.
 - Polaris shadows and Material/Polaris CSS shorthands are untyped strings; parse into DTCG `shadow`/`typography` composites later.
 
 - Align mode files with the DTCG Resolver module (today: per-theme files plus manifest.json).
