@@ -1,7 +1,7 @@
 {
   "color": {
     "accent": {
-      "$description": "Accent",
+      "$description": "Accent color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent",
@@ -28,7 +28,7 @@
       }
     },
     "accent-background": {
-      "$description": "Accent · Background",
+      "$description": "Accent background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-background",
@@ -55,7 +55,7 @@
       }
     },
     "accent-border": {
-      "$description": "Accent · Border",
+      "$description": "Accent border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-border",
@@ -81,8 +81,36 @@
         "hex": "#0f62fe"
       }
     },
+    "accent-foreground": {
+      "$description": "Accent foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-foreground",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-interactive",
+          "note": "no direct mapping; interactive maps to the broader dsi:concept/color/intent-accent",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "interactive",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.058824,
+          0.384314,
+          0.996078
+        ],
+        "hex": "#0f62fe"
+      }
+    },
     "accent-icon": {
-      "$description": "Accent · Icon",
+      "$description": "Accent icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-icon",
@@ -109,7 +137,7 @@
       }
     },
     "accent-text": {
-      "$description": "Accent · Text",
+      "$description": "Accent text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-text",
@@ -137,7 +165,7 @@
       }
     },
     "ai-background": {
-      "$description": "AI · Background",
+      "$description": "Ai background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-background",
@@ -165,7 +193,7 @@
       }
     },
     "ai-background-hover": {
-      "$description": "AI · Background · Hover",
+      "$description": "Hovered ai background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-background/state-hover",
@@ -192,7 +220,7 @@
       }
     },
     "ai-border": {
-      "$description": "AI · Border",
+      "$description": "Ai border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-border",
@@ -220,7 +248,7 @@
       }
     },
     "ai-border-strong": {
-      "$description": "AI · Border · Strong",
+      "$description": "Strong ai border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-border/emphasis-strong",
@@ -247,7 +275,7 @@
       }
     },
     "ai-overlay-background": {
-      "$description": "AI · Overlay · Background",
+      "$description": "Ai overlay background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/usage-overlay/property-background",
@@ -274,7 +302,7 @@
       }
     },
     "ai-overlay-shadow": {
-      "$description": "AI · Overlay · Shadow",
+      "$description": "Ai overlay shadow color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/usage-overlay/property-shadow",
@@ -302,7 +330,7 @@
       }
     },
     "ai-scrim-background": {
-      "$description": "AI · Scrim · Background",
+      "$description": "Ai scrim background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/usage-scrim/property-background",
@@ -329,7 +357,7 @@
       }
     },
     "ai-shadow": {
-      "$description": "AI · Shadow",
+      "$description": "Ai shadow color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-shadow",
@@ -357,7 +385,7 @@
       }
     },
     "ai-skeleton-background": {
-      "$description": "AI · Skeleton · Background",
+      "$description": "Ai skeleton background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/usage-skeleton/property-background",
@@ -412,7 +440,7 @@
       }
     },
     "background-active": {
-      "$description": "Background · Active",
+      "$description": "Pressed background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/state-active",
@@ -439,7 +467,7 @@
       }
     },
     "background-hover": {
-      "$description": "Background · Hover",
+      "$description": "Hovered background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/state-hover",
@@ -466,7 +494,7 @@
       }
     },
     "background-hover+selected": {
-      "$description": "Background · Hover + Selected",
+      "$description": "Hovered selected background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/state-hover+selected",
@@ -493,7 +521,7 @@
       }
     },
     "background-selected": {
-      "$description": "Background · Selected",
+      "$description": "Selected background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/state-selected",
@@ -519,8 +547,36 @@
         ]
       }
     },
+    "background-strong": {
+      "$description": "Strong background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-background/emphasis-strong",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-layer-03",
+          "note": "no direct mapping; layer-03 maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-strong",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "layer-03",
+          "version": "11.84.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
     "background-strong-hover+selected": {
-      "$description": "Background · Strong · Hover + Selected",
+      "$description": "Hovered selected strong background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/emphasis-strong/state-hover+selected",
@@ -547,8 +603,36 @@
         "hex": "#d1d1d1"
       }
     },
+    "background-strong-selected": {
+      "$description": "Selected strong background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-background/emphasis-strong/state-selected",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-layer-selected-03",
+          "note": "no direct mapping; layer-selected-03 maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-strong/state-selected",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "layer-selected-03",
+          "version": "11.84.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
     "background-subtle": {
-      "$description": "Background · Subtle",
+      "$description": "Subtle background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/emphasis-subtle",
@@ -576,7 +660,7 @@
       }
     },
     "background-subtle-active": {
-      "$description": "Background · Subtle · Active",
+      "$description": "Pressed subtle background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/emphasis-subtle/state-active",
@@ -604,7 +688,7 @@
       }
     },
     "background-subtle-hover": {
-      "$description": "Background · Subtle · Hover",
+      "$description": "Hovered subtle background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/emphasis-subtle/state-hover",
@@ -632,7 +716,7 @@
       }
     },
     "background-subtle-selected": {
-      "$description": "Background · Subtle · Selected",
+      "$description": "Selected subtle background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/emphasis-subtle/state-selected",
@@ -688,7 +772,7 @@
       }
     },
     "border-disabled": {
-      "$description": "Border · Disabled",
+      "$description": "Disabled border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-border/state-disabled",
@@ -714,8 +798,36 @@
         "hex": "#c6c6c6"
       }
     },
+    "border-strong": {
+      "$description": "Strong border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-border/emphasis-strong",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--cds-ai-border-strong",
+          "note": "no direct mapping; ai-border-strong maps to the more specific dsi:concept/color/intent-ai/property-border/emphasis-strong",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "ai-border-strong",
+          "version": "11.84.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
     "border-subtle": {
-      "$description": "Border · Subtle",
+      "$description": "Subtle border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-border/emphasis-subtle",
@@ -743,7 +855,7 @@
       }
     },
     "code-angle-bracket-text": {
-      "$description": "Angle bracket · Text",
+      "$description": "Code angle bracket text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-angle-bracket/property-text",
@@ -770,7 +882,7 @@
       }
     },
     "code-annotation-text": {
-      "$description": "Annotation · Text",
+      "$description": "Code annotation text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-annotation/property-text",
@@ -797,7 +909,7 @@
       }
     },
     "code-arithmetic-operator-text": {
-      "$description": "Arithmetic operator · Text",
+      "$description": "Code arithmetic operator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-arithmetic-operator/property-text",
@@ -824,7 +936,7 @@
       }
     },
     "code-atom-text": {
-      "$description": "Atom · Text",
+      "$description": "Code atom text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-atom/property-text",
@@ -851,7 +963,7 @@
       }
     },
     "code-attribute-name-text": {
-      "$description": "Attribute name · Text",
+      "$description": "Code attribute name text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-attribute-name/property-text",
@@ -878,7 +990,7 @@
       }
     },
     "code-attribute-text": {
-      "$description": "Attribute · Text",
+      "$description": "Code attribute text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-attribute/property-text",
@@ -905,7 +1017,7 @@
       }
     },
     "code-attribute-value-text": {
-      "$description": "Attribute value · Text",
+      "$description": "Code attribute value text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-attribute-value/property-text",
@@ -932,7 +1044,7 @@
       }
     },
     "code-bitwise-operator-text": {
-      "$description": "Bitwise operator · Text",
+      "$description": "Code bitwise operator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-bitwise-operator/property-text",
@@ -959,7 +1071,7 @@
       }
     },
     "code-block-comment-text": {
-      "$description": "Block comment · Text",
+      "$description": "Code block comment text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-block-comment/property-text",
@@ -986,7 +1098,7 @@
       }
     },
     "code-bool-text": {
-      "$description": "Bool · Text",
+      "$description": "Code bool text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-bool/property-text",
@@ -1013,7 +1125,7 @@
       }
     },
     "code-brace-text": {
-      "$description": "Brace · Text",
+      "$description": "Code brace text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-brace/property-text",
@@ -1040,7 +1152,7 @@
       }
     },
     "code-bracket-text": {
-      "$description": "Bracket · Text",
+      "$description": "Code bracket text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-bracket/property-text",
@@ -1067,7 +1179,7 @@
       }
     },
     "code-character-text": {
-      "$description": "Character · Text",
+      "$description": "Code character text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-character/property-text",
@@ -1094,7 +1206,7 @@
       }
     },
     "code-class-name-text": {
-      "$description": "Class name · Text",
+      "$description": "Code class name text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-class-name/property-text",
@@ -1121,7 +1233,7 @@
       }
     },
     "code-color-text": {
-      "$description": "Color · Text",
+      "$description": "Code color text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-color/property-text",
@@ -1148,7 +1260,7 @@
       }
     },
     "code-comment-text": {
-      "$description": "Comment · Text",
+      "$description": "Code comment text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-comment/property-text",
@@ -1175,7 +1287,7 @@
       }
     },
     "code-compare-operator-text": {
-      "$description": "Compare operator · Text",
+      "$description": "Code compare operator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-compare-operator/property-text",
@@ -1202,7 +1314,7 @@
       }
     },
     "code-constant-text": {
-      "$description": "Constant · Text",
+      "$description": "Code constant text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-constant/property-text",
@@ -1229,7 +1341,7 @@
       }
     },
     "code-content-separator-text": {
-      "$description": "Content separator · Text",
+      "$description": "Code content separator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-content-separator/property-text",
@@ -1256,7 +1368,7 @@
       }
     },
     "code-content-text": {
-      "$description": "Content · Text",
+      "$description": "Code content text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-content/property-text",
@@ -1283,7 +1395,7 @@
       }
     },
     "code-control-keyword-text": {
-      "$description": "Control keyword · Text",
+      "$description": "Code control keyword text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-control-keyword/property-text",
@@ -1310,7 +1422,7 @@
       }
     },
     "code-control-operator-text": {
-      "$description": "Control operator · Text",
+      "$description": "Code control operator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-control-operator/property-text",
@@ -1337,7 +1449,7 @@
       }
     },
     "code-definition-keyword-text": {
-      "$description": "Definition keyword · Text",
+      "$description": "Code definition keyword text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-definition-keyword/property-text",
@@ -1364,7 +1476,7 @@
       }
     },
     "code-definition-operator-text": {
-      "$description": "Definition operator · Text",
+      "$description": "Code definition operator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-definition-operator/property-text",
@@ -1391,7 +1503,7 @@
       }
     },
     "code-definition-text": {
-      "$description": "Definition · Text",
+      "$description": "Code definition text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-definition/property-text",
@@ -1418,7 +1530,7 @@
       }
     },
     "code-deleted-text": {
-      "$description": "Deleted · Text",
+      "$description": "Code deleted text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-deleted/property-text",
@@ -1445,7 +1557,7 @@
       }
     },
     "code-deref-operator-text": {
-      "$description": "Deref operator · Text",
+      "$description": "Code deref operator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-deref-operator/property-text",
@@ -1472,7 +1584,7 @@
       }
     },
     "code-doc-comment-text": {
-      "$description": "Doc comment · Text",
+      "$description": "Code doc comment text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-doc-comment/property-text",
@@ -1499,7 +1611,7 @@
       }
     },
     "code-doc-string-text": {
-      "$description": "Doc string · Text",
+      "$description": "Code doc string text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-doc-string/property-text",
@@ -1526,7 +1638,7 @@
       }
     },
     "code-document-meta-text": {
-      "$description": "Document meta · Text",
+      "$description": "Code document meta text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-document-meta/property-text",
@@ -1553,7 +1665,7 @@
       }
     },
     "code-emphasis-text": {
-      "$description": "Emphasis · Text",
+      "$description": "Code emphasis text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-emphasis/property-text",
@@ -1580,7 +1692,7 @@
       }
     },
     "code-escape-text": {
-      "$description": "Escape · Text",
+      "$description": "Code escape text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-escape/property-text",
@@ -1607,7 +1719,7 @@
       }
     },
     "code-float-text": {
-      "$description": "Float · Text",
+      "$description": "Code float text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-float/property-text",
@@ -1634,7 +1746,7 @@
       }
     },
     "code-function-text": {
-      "$description": "Function · Text",
+      "$description": "Code function text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-function/property-text",
@@ -1661,7 +1773,7 @@
       }
     },
     "code-heading-1-text": {
-      "$description": "Heading 1 · Text",
+      "$description": "Code heading 1 text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-heading-1/property-text",
@@ -1688,7 +1800,7 @@
       }
     },
     "code-heading-2-text": {
-      "$description": "Heading 2 · Text",
+      "$description": "Code heading 2 text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-heading-2/property-text",
@@ -1715,7 +1827,7 @@
       }
     },
     "code-heading-3-text": {
-      "$description": "Heading 3 · Text",
+      "$description": "Code heading 3 text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-heading-3/property-text",
@@ -1742,7 +1854,7 @@
       }
     },
     "code-heading-4-text": {
-      "$description": "Heading 4 · Text",
+      "$description": "Code heading 4 text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-heading-4/property-text",
@@ -1769,7 +1881,7 @@
       }
     },
     "code-heading-5-text": {
-      "$description": "Heading 5 · Text",
+      "$description": "Code heading 5 text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-heading-5/property-text",
@@ -1796,7 +1908,7 @@
       }
     },
     "code-heading-6-text": {
-      "$description": "Heading 6 · Text",
+      "$description": "Code heading 6 text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-heading-6/property-text",
@@ -1823,7 +1935,7 @@
       }
     },
     "code-heading-text": {
-      "$description": "Heading · Text",
+      "$description": "Code heading text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-heading/property-text",
@@ -1850,7 +1962,7 @@
       }
     },
     "code-inserted-text": {
-      "$description": "Inserted · Text",
+      "$description": "Code inserted text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-inserted/property-text",
@@ -1877,7 +1989,7 @@
       }
     },
     "code-integer-text": {
-      "$description": "Integer · Text",
+      "$description": "Code integer text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-integer/property-text",
@@ -1904,7 +2016,7 @@
       }
     },
     "code-invalid-text": {
-      "$description": "Invalid · Text",
+      "$description": "Code invalid text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-invalid/property-text",
@@ -1931,7 +2043,7 @@
       }
     },
     "code-keyword-text": {
-      "$description": "Keyword · Text",
+      "$description": "Code keyword text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-keyword/property-text",
@@ -1958,7 +2070,7 @@
       }
     },
     "code-label-name-text": {
-      "$description": "Label name · Text",
+      "$description": "Code label name text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-label-name/property-text",
@@ -1985,7 +2097,7 @@
       }
     },
     "code-line-comment-text": {
-      "$description": "Line comment · Text",
+      "$description": "Code line comment text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-line-comment/property-text",
@@ -2012,7 +2124,7 @@
       }
     },
     "code-link-text": {
-      "$description": "Link · Text",
+      "$description": "Code link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-link/property-text",
@@ -2039,7 +2151,7 @@
       }
     },
     "code-list-text": {
-      "$description": "List · Text",
+      "$description": "Code list text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-list/property-text",
@@ -2066,7 +2178,7 @@
       }
     },
     "code-literal-text": {
-      "$description": "Literal · Text",
+      "$description": "Code literal text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-literal/property-text",
@@ -2093,7 +2205,7 @@
       }
     },
     "code-local-text": {
-      "$description": "Local · Text",
+      "$description": "Code local text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-local/property-text",
@@ -2120,7 +2232,7 @@
       }
     },
     "code-logic-operator-text": {
-      "$description": "Logic operator · Text",
+      "$description": "Code logic operator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-logic-operator/property-text",
@@ -2147,7 +2259,7 @@
       }
     },
     "code-macro-name-text": {
-      "$description": "Macro name · Text",
+      "$description": "Code macro name text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-macro-name/property-text",
@@ -2174,7 +2286,7 @@
       }
     },
     "code-meta-text": {
-      "$description": "Meta · Text",
+      "$description": "Code meta text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-meta/property-text",
@@ -2201,7 +2313,7 @@
       }
     },
     "code-modifier-text": {
-      "$description": "Modifier · Text",
+      "$description": "Code modifier text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-modifier/property-text",
@@ -2228,7 +2340,7 @@
       }
     },
     "code-module-keyword-text": {
-      "$description": "Module keyword · Text",
+      "$description": "Code module keyword text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-module-keyword/property-text",
@@ -2255,7 +2367,7 @@
       }
     },
     "code-monospace-text": {
-      "$description": "Monospace · Text",
+      "$description": "Code monospace text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-monospace/property-text",
@@ -2282,7 +2394,7 @@
       }
     },
     "code-name-text": {
-      "$description": "Name · Text",
+      "$description": "Code name text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-name/property-text",
@@ -2309,7 +2421,7 @@
       }
     },
     "code-namespace-text": {
-      "$description": "Namespace · Text",
+      "$description": "Code namespace text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-namespace/property-text",
@@ -2336,7 +2448,7 @@
       }
     },
     "code-null-text": {
-      "$description": "Null · Text",
+      "$description": "Code null text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-null/property-text",
@@ -2363,7 +2475,7 @@
       }
     },
     "code-number-text": {
-      "$description": "Number · Text",
+      "$description": "Code number text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-number/property-text",
@@ -2390,7 +2502,7 @@
       }
     },
     "code-operator-keyword-text": {
-      "$description": "Operator keyword · Text",
+      "$description": "Code operator keyword text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-operator-keyword/property-text",
@@ -2417,7 +2529,7 @@
       }
     },
     "code-operator-text": {
-      "$description": "Operator · Text",
+      "$description": "Code operator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-operator/property-text",
@@ -2444,7 +2556,7 @@
       }
     },
     "code-paren-text": {
-      "$description": "Paren · Text",
+      "$description": "Code paren text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-paren/property-text",
@@ -2471,7 +2583,7 @@
       }
     },
     "code-processing-instruction-text": {
-      "$description": "Processing instruction · Text",
+      "$description": "Code processing instruction text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-processing-instruction/property-text",
@@ -2498,7 +2610,7 @@
       }
     },
     "code-property-name-text": {
-      "$description": "Property name · Text",
+      "$description": "Code property name text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-property-name/property-text",
@@ -2525,7 +2637,7 @@
       }
     },
     "code-punctuation-text": {
-      "$description": "Punctuation · Text",
+      "$description": "Code punctuation text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-punctuation/property-text",
@@ -2552,7 +2664,7 @@
       }
     },
     "code-quote-text": {
-      "$description": "Quote · Text",
+      "$description": "Code quote text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-quote/property-text",
@@ -2579,7 +2691,7 @@
       }
     },
     "code-regexp-text": {
-      "$description": "Regexp · Text",
+      "$description": "Code regexp text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-regexp/property-text",
@@ -2606,7 +2718,7 @@
       }
     },
     "code-self-text": {
-      "$description": "Self · Text",
+      "$description": "Code self text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-self/property-text",
@@ -2633,7 +2745,7 @@
       }
     },
     "code-separator-text": {
-      "$description": "Separator · Text",
+      "$description": "Code separator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-separator/property-text",
@@ -2660,7 +2772,7 @@
       }
     },
     "code-special-string-text": {
-      "$description": "Special string · Text",
+      "$description": "Code special string text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-special-string/property-text",
@@ -2687,7 +2799,7 @@
       }
     },
     "code-special-text": {
-      "$description": "Special · Text",
+      "$description": "Code special text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-special/property-text",
@@ -2714,7 +2826,7 @@
       }
     },
     "code-square-bracket-text": {
-      "$description": "Square bracket · Text",
+      "$description": "Code square bracket text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-square-bracket/property-text",
@@ -2741,7 +2853,7 @@
       }
     },
     "code-standard-text": {
-      "$description": "Standard · Text",
+      "$description": "Code standard text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-standard/property-text",
@@ -2768,7 +2880,7 @@
       }
     },
     "code-strikethrough-text": {
-      "$description": "Strikethrough · Text",
+      "$description": "Code strikethrough text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-strikethrough/property-text",
@@ -2795,7 +2907,7 @@
       }
     },
     "code-string-text": {
-      "$description": "String · Text",
+      "$description": "Code string text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-string/property-text",
@@ -2822,7 +2934,7 @@
       }
     },
     "code-strong-text": {
-      "$description": "Strong · Text",
+      "$description": "Code strong text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-strong/property-text",
@@ -2849,7 +2961,7 @@
       }
     },
     "code-tag-name-text": {
-      "$description": "Tag name · Text",
+      "$description": "Code tag name text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-tag-name/property-text",
@@ -2876,7 +2988,7 @@
       }
     },
     "code-tag-text": {
-      "$description": "Tag · Text",
+      "$description": "Code tag text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-tag/property-text",
@@ -2903,7 +3015,7 @@
       }
     },
     "code-type-name-text": {
-      "$description": "Type name · Text",
+      "$description": "Code type name text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-type-name/property-text",
@@ -2930,7 +3042,7 @@
       }
     },
     "code-type-operator-text": {
-      "$description": "Type operator · Text",
+      "$description": "Code type operator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-type-operator/property-text",
@@ -2957,7 +3069,7 @@
       }
     },
     "code-type-text": {
-      "$description": "Type · Text",
+      "$description": "Code type text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-type/property-text",
@@ -2984,7 +3096,7 @@
       }
     },
     "code-unit-text": {
-      "$description": "Unit · Text",
+      "$description": "Code unit text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-unit/property-text",
@@ -3011,7 +3123,7 @@
       }
     },
     "code-update-operator-text": {
-      "$description": "Update operator · Text",
+      "$description": "Code update operator text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-update-operator/property-text",
@@ -3038,7 +3150,7 @@
       }
     },
     "code-url-text": {
-      "$description": "Url · Text",
+      "$description": "Code url text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-url/property-text",
@@ -3065,7 +3177,7 @@
       }
     },
     "code-variable-name-text": {
-      "$description": "Variable name · Text",
+      "$description": "Code variable name text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-variable-name/property-text",
@@ -3092,7 +3204,7 @@
       }
     },
     "code-variable-text": {
-      "$description": "Variable · Text",
+      "$description": "Code variable text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/syntax-variable/property-text",
@@ -3119,7 +3231,7 @@
       }
     },
     "danger": {
-      "$description": "Danger",
+      "$description": "Danger color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger",
@@ -3146,7 +3258,7 @@
       }
     },
     "danger-background": {
-      "$description": "Danger · Background",
+      "$description": "Danger background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-background",
@@ -3174,7 +3286,7 @@
       }
     },
     "danger-border": {
-      "$description": "Danger · Border",
+      "$description": "Danger border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-border",
@@ -3201,8 +3313,36 @@
         "hex": "#da1e28"
       }
     },
+    "danger-foreground": {
+      "$description": "Danger foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-foreground",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-support-error",
+          "note": "no direct mapping; support-error maps to the broader dsi:concept/color/intent-danger",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "support-error",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.854902,
+          0.117647,
+          0.156863
+        ],
+        "hex": "#da1e28"
+      }
+    },
     "danger-icon": {
-      "$description": "Danger · Icon",
+      "$description": "Danger icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-icon",
@@ -3230,7 +3370,7 @@
       }
     },
     "danger-inverse": {
-      "$description": "Danger · Inverse",
+      "$description": "Danger inverse color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/usage-inverse",
@@ -3256,8 +3396,36 @@
         "hex": "#fa4d56"
       }
     },
+    "danger-inverse-foreground": {
+      "$description": "Danger inverse foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/usage-inverse/property-foreground",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-support-error-inverse",
+          "note": "no direct mapping; support-error-inverse maps to the broader dsi:concept/color/intent-danger/usage-inverse",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "support-error-inverse",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.980392,
+          0.301961,
+          0.337255
+        ],
+        "hex": "#fa4d56"
+      }
+    },
     "danger-text": {
-      "$description": "Danger · Text",
+      "$description": "Danger text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-text",
@@ -3284,7 +3452,7 @@
       }
     },
     "field-background": {
-      "$description": "Field · Background",
+      "$description": "Field background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-field/property-background",
@@ -3312,7 +3480,7 @@
       }
     },
     "field-background-hover": {
-      "$description": "Field · Background · Hover",
+      "$description": "Hovered field background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-field/property-background/state-hover",
@@ -3340,7 +3508,7 @@
       }
     },
     "field-text-subtle": {
-      "$description": "Field · Text · Subtle",
+      "$description": "Subtle field text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-field/property-text/emphasis-subtle",
@@ -3421,7 +3589,7 @@
       }
     },
     "icon-disabled": {
-      "$description": "Icon · Disabled",
+      "$description": "Disabled icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-icon/state-disabled",
@@ -3448,7 +3616,7 @@
       }
     },
     "icon-subtle": {
-      "$description": "Icon · Subtle",
+      "$description": "Subtle icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-icon/emphasis-subtle",
@@ -3475,7 +3643,7 @@
       }
     },
     "info": {
-      "$description": "Info",
+      "$description": "Info color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info",
@@ -3502,7 +3670,7 @@
       }
     },
     "info-background": {
-      "$description": "Info · Background",
+      "$description": "Info background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-background",
@@ -3530,7 +3698,7 @@
       }
     },
     "info-border": {
-      "$description": "Info · Border",
+      "$description": "Info border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-border",
@@ -3558,7 +3726,7 @@
       }
     },
     "info-icon": {
-      "$description": "Info · Icon",
+      "$description": "Info icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-icon",
@@ -3586,7 +3754,7 @@
       }
     },
     "info-inverse": {
-      "$description": "Info · Inverse",
+      "$description": "Info inverse color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/usage-inverse",
@@ -3613,7 +3781,7 @@
       }
     },
     "info-text": {
-      "$description": "Info · Text",
+      "$description": "Info text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-text",
@@ -3641,7 +3809,7 @@
       }
     },
     "inverse+link-text": {
-      "$description": "Inverse + Link · Text",
+      "$description": "Inverse link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse+link/property-text",
@@ -3668,7 +3836,7 @@
       }
     },
     "inverse+link-text-active": {
-      "$description": "Inverse + Link · Text · Active",
+      "$description": "Pressed inverse link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse+link/property-text/state-active",
@@ -3695,7 +3863,7 @@
       }
     },
     "inverse+link-text-hover": {
-      "$description": "Inverse + Link · Text · Hover",
+      "$description": "Hovered inverse link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse+link/property-text/state-hover",
@@ -3722,7 +3890,7 @@
       }
     },
     "inverse+link-text-visited": {
-      "$description": "Inverse + Link · Text · Visited",
+      "$description": "Visited inverse link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse+link/property-text/state-visited",
@@ -3749,7 +3917,7 @@
       }
     },
     "inverse+surface-background-selected": {
-      "$description": "Inverse + Surface · Background · Selected",
+      "$description": "Selected inverse surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse+surface/property-background/state-selected",
@@ -3776,7 +3944,7 @@
       }
     },
     "inverse-background": {
-      "$description": "Inverse · Background",
+      "$description": "Inverse background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-background",
@@ -3803,7 +3971,7 @@
       }
     },
     "inverse-background-hover": {
-      "$description": "Inverse · Background · Hover",
+      "$description": "Hovered inverse background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-background/state-hover",
@@ -3829,8 +3997,36 @@
         "hex": "#474747"
       }
     },
+    "inverse-background-selected": {
+      "$description": "Selected inverse background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-inverse/property-background/state-selected",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-layer-selected-inverse",
+          "note": "no direct mapping; layer-selected-inverse maps to the more specific dsi:concept/color/usage-inverse+surface/property-background/state-selected",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "layer-selected-inverse",
+          "version": "11.84.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.086275,
+          0.086275,
+          0.086275
+        ],
+        "hex": "#161616"
+      }
+    },
     "inverse-border": {
-      "$description": "Inverse · Border",
+      "$description": "Inverse border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-border",
@@ -3857,7 +4053,7 @@
       }
     },
     "inverse-focus-ring": {
-      "$description": "Inverse · Focus ring",
+      "$description": "Inverse focus ring",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-focus-ring",
@@ -3884,7 +4080,7 @@
       }
     },
     "inverse-icon": {
-      "$description": "Inverse · Icon",
+      "$description": "Inverse icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-icon",
@@ -3911,7 +4107,7 @@
       }
     },
     "inverse-text": {
-      "$description": "Inverse · Text",
+      "$description": "Inverse text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-text",
@@ -3938,7 +4134,7 @@
       }
     },
     "link-text": {
-      "$description": "Link · Text",
+      "$description": "Link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-link/property-text",
@@ -3965,7 +4161,7 @@
       }
     },
     "link-text-active": {
-      "$description": "Link · Text · Active",
+      "$description": "Pressed link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-link/property-text/state-active",
@@ -3993,7 +4189,7 @@
       }
     },
     "link-text-hover": {
-      "$description": "Link · Text · Hover",
+      "$description": "Hovered link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-link/property-text/state-hover",
@@ -4020,7 +4216,7 @@
       }
     },
     "link-text-subtle": {
-      "$description": "Link · Text · Subtle",
+      "$description": "Subtle link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-link/property-text/emphasis-subtle",
@@ -4047,7 +4243,7 @@
       }
     },
     "link-text-visited": {
-      "$description": "Link · Text · Visited",
+      "$description": "Visited link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-link/property-text/state-visited",
@@ -4074,7 +4270,7 @@
       }
     },
     "on-fill-icon": {
-      "$description": "On fill · Icon",
+      "$description": "On-fill icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-on-fill/property-icon",
@@ -4101,7 +4297,7 @@
       }
     },
     "on-fill-icon-disabled": {
-      "$description": "On fill · Icon · Disabled",
+      "$description": "Disabled on-fill icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-on-fill/property-icon/state-disabled",
@@ -4128,7 +4324,7 @@
       }
     },
     "on-fill-text": {
-      "$description": "On fill · Text",
+      "$description": "On-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-on-fill/property-text",
@@ -4155,7 +4351,7 @@
       }
     },
     "on-fill-text-disabled": {
-      "$description": "On fill · Text · Disabled",
+      "$description": "Disabled on-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-on-fill/property-text/state-disabled",
@@ -4182,7 +4378,7 @@
       }
     },
     "overlay-background": {
-      "$description": "Overlay · Background",
+      "$description": "Overlay background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-overlay/property-background",
@@ -4210,7 +4406,7 @@
       }
     },
     "page-background": {
-      "$description": "Page · Background",
+      "$description": "Page background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-page/property-background",
@@ -4237,7 +4433,7 @@
       }
     },
     "scrim": {
-      "$description": "Scrim",
+      "$description": "Scrim color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-scrim",
@@ -4265,7 +4461,7 @@
       }
     },
     "scrim-background": {
-      "$description": "Scrim · Background",
+      "$description": "Scrim background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-scrim/property-background",
@@ -4292,7 +4488,7 @@
       }
     },
     "shadow": {
-      "$description": "Shadow",
+      "$description": "Shadow color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-shadow",
@@ -4319,7 +4515,7 @@
       }
     },
     "skeleton-background": {
-      "$description": "Skeleton · Background",
+      "$description": "Skeleton background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-skeleton/property-background",
@@ -4346,7 +4542,7 @@
       }
     },
     "success": {
-      "$description": "Success",
+      "$description": "Success color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success",
@@ -4373,7 +4569,7 @@
       }
     },
     "success-background": {
-      "$description": "Success · Background",
+      "$description": "Success background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-background",
@@ -4401,7 +4597,7 @@
       }
     },
     "success-border": {
-      "$description": "Success · Border",
+      "$description": "Success border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-border",
@@ -4428,8 +4624,36 @@
         "hex": "#24a148"
       }
     },
+    "success-foreground": {
+      "$description": "Success foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-foreground",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-support-success",
+          "note": "no direct mapping; support-success maps to the broader dsi:concept/color/intent-success",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "support-success",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.141176,
+          0.631373,
+          0.282353
+        ],
+        "hex": "#24a148"
+      }
+    },
     "success-icon": {
-      "$description": "Success · Icon",
+      "$description": "Success icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-icon",
@@ -4457,7 +4681,7 @@
       }
     },
     "success-inverse": {
-      "$description": "Success · Inverse",
+      "$description": "Success inverse color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/usage-inverse",
@@ -4483,8 +4707,36 @@
         "hex": "#42be65"
       }
     },
+    "success-inverse-foreground": {
+      "$description": "Success inverse foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/usage-inverse/property-foreground",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-support-success-inverse",
+          "note": "no direct mapping; support-success-inverse maps to the broader dsi:concept/color/intent-success/usage-inverse",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "support-success-inverse",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
+      }
+    },
     "success-text": {
-      "$description": "Success · Text",
+      "$description": "Success text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-text",
@@ -4512,66 +4764,10 @@
       }
     },
     "surface-background": {
-      "$description": "Surface · Background",
+      "$description": "Surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background",
-          "match": "close",
-          "mode": "light",
-          "nativeName": "--cds-layer-01",
-          "note": "no direct mapping; layer-01 maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-subtle",
-          "product": "carbon",
-          "status": "nearest",
-          "theme": "white",
-          "token": "layer-01",
-          "version": "11.84.0",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.956863,
-          0.956863,
-          0.956863
-        ],
-        "hex": "#f4f4f4"
-      }
-    },
-    "surface-background-active": {
-      "$description": "Surface · Background · Active",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-surface/property-background/state-active",
-          "match": "close",
-          "mode": "light",
-          "nativeName": "--cds-layer-active-01",
-          "note": "no direct mapping; layer-active-01 maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active",
-          "product": "carbon",
-          "status": "nearest",
-          "theme": "white",
-          "token": "layer-active-01",
-          "version": "11.84.0",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.776471,
-          0.776471,
-          0.776471
-        ],
-        "hex": "#c6c6c6"
-      }
-    },
-    "surface-background-default": {
-      "$description": "Surface · Background · Default",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default",
           "match": "close",
           "mode": "light",
           "nativeName": "--cds-layer-02",
@@ -4594,11 +4790,11 @@
         "hex": "#ffffff"
       }
     },
-    "surface-background-default-active": {
-      "$description": "Surface · Background · Default · Active",
+    "surface-background-active": {
+      "$description": "Pressed surface background",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-active",
+          "concept": "dsi:concept/color/usage-surface/property-background/state-active",
           "match": "close",
           "mode": "light",
           "nativeName": "--cds-layer-active-02",
@@ -4621,89 +4817,8 @@
         "hex": "#c6c6c6"
       }
     },
-    "surface-background-default-hover": {
-      "$description": "Surface · Background · Default · Hover",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-hover",
-          "match": "close",
-          "mode": "light",
-          "nativeName": "--cds-layer-hover-02",
-          "product": "carbon",
-          "status": "match",
-          "theme": "white",
-          "token": "layer-hover-02",
-          "version": "11.84.0",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.909804,
-          0.909804,
-          0.909804
-        ],
-        "hex": "#e8e8e8"
-      }
-    },
-    "surface-background-default-hover+selected": {
-      "$description": "Surface · Background · Default · Hover + Selected",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-hover+selected",
-          "match": "close",
-          "mode": "light",
-          "nativeName": "--cds-layer-selected-hover-02",
-          "product": "carbon",
-          "status": "match",
-          "theme": "white",
-          "token": "layer-selected-hover-02",
-          "version": "11.84.0",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.819608,
-          0.819608,
-          0.819608
-        ],
-        "hex": "#d1d1d1"
-      }
-    },
-    "surface-background-default-selected": {
-      "$description": "Surface · Background · Default · Selected",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-selected",
-          "match": "close",
-          "mode": "light",
-          "nativeName": "--cds-layer-selected-02",
-          "product": "carbon",
-          "status": "match",
-          "theme": "white",
-          "token": "layer-selected-02",
-          "version": "11.84.0",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.878431,
-          0.878431,
-          0.878431
-        ],
-        "hex": "#e0e0e0"
-      }
-    },
     "surface-background-disabled+selected": {
-      "$description": "Surface · Background · Disabled + Selected",
+      "$description": "Disabled selected surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/state-disabled+selected",
@@ -4730,20 +4845,19 @@
       }
     },
     "surface-background-hover": {
-      "$description": "Surface · Background · Hover",
+      "$description": "Hovered surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
           "match": "close",
           "mode": "light",
-          "nativeName": "--cds-layer-hover-01",
-          "note": "no direct mapping; layer-hover-01 maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover",
+          "nativeName": "--cds-layer-hover-02",
           "product": "carbon",
-          "status": "nearest",
+          "status": "match",
           "theme": "white",
-          "token": "layer-hover-01",
+          "token": "layer-hover-02",
           "version": "11.84.0",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
@@ -4757,21 +4871,47 @@
         "hex": "#e8e8e8"
       }
     },
+    "surface-background-hover+selected": {
+      "$description": "Hovered selected surface background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-surface/property-background/state-hover+selected",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-layer-selected-hover-02",
+          "product": "carbon",
+          "status": "match",
+          "theme": "white",
+          "token": "layer-selected-hover-02",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.819608,
+          0.819608,
+          0.819608
+        ],
+        "hex": "#d1d1d1"
+      }
+    },
     "surface-background-selected": {
-      "$description": "Surface · Background · Selected",
+      "$description": "Selected surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
           "match": "close",
           "mode": "light",
-          "nativeName": "--cds-layer-selected-01",
-          "note": "no direct mapping; layer-selected-01 maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-selected",
+          "nativeName": "--cds-layer-selected-02",
           "product": "carbon",
-          "status": "nearest",
+          "status": "match",
           "theme": "white",
-          "token": "layer-selected-01",
+          "token": "layer-selected-02",
           "version": "11.84.0",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
@@ -4786,7 +4926,7 @@
       }
     },
     "surface-background-strong": {
-      "$description": "Surface · Background · Strong",
+      "$description": "Strong surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong",
@@ -4813,7 +4953,7 @@
       }
     },
     "surface-background-strong-active": {
-      "$description": "Surface · Background · Strong · Active",
+      "$description": "Pressed strong surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-active",
@@ -4840,7 +4980,7 @@
       }
     },
     "surface-background-strong-hover": {
-      "$description": "Surface · Background · Strong · Hover",
+      "$description": "Hovered strong surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover",
@@ -4867,7 +5007,7 @@
       }
     },
     "surface-background-strong-hover+selected": {
-      "$description": "Surface · Background · Strong · Hover + Selected",
+      "$description": "Hovered selected strong surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover+selected",
@@ -4894,7 +5034,7 @@
       }
     },
     "surface-background-strong-selected": {
-      "$description": "Surface · Background · Strong · Selected",
+      "$description": "Selected strong surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-selected",
@@ -4921,7 +5061,7 @@
       }
     },
     "surface-background-subtle": {
-      "$description": "Surface · Background · Subtle",
+      "$description": "Subtle surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle",
@@ -4948,7 +5088,7 @@
       }
     },
     "surface-background-subtle-active": {
-      "$description": "Surface · Background · Subtle · Active",
+      "$description": "Pressed subtle surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active",
@@ -4975,7 +5115,7 @@
       }
     },
     "surface-background-subtle-hover": {
-      "$description": "Surface · Background · Subtle · Hover",
+      "$description": "Hovered subtle surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover",
@@ -5002,7 +5142,7 @@
       }
     },
     "surface-background-subtle-hover+selected": {
-      "$description": "Surface · Background · Subtle · Hover + Selected",
+      "$description": "Hovered selected subtle surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover+selected",
@@ -5029,7 +5169,7 @@
       }
     },
     "surface-background-subtle-selected": {
-      "$description": "Surface · Background · Subtle · Selected",
+      "$description": "Selected subtle surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-selected",
@@ -5056,7 +5196,7 @@
       }
     },
     "surface-border": {
-      "$description": "Surface · Border",
+      "$description": "Surface border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-border",
@@ -5084,7 +5224,7 @@
       }
     },
     "surface-border-strong": {
-      "$description": "Surface · Border · Strong",
+      "$description": "Strong surface border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-border/emphasis-strong",
@@ -5112,7 +5252,7 @@
       }
     },
     "surface-border-subtle": {
-      "$description": "Surface · Border · Subtle",
+      "$description": "Subtle surface border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-border/emphasis-subtle",
@@ -5140,7 +5280,7 @@
       }
     },
     "surface-border-subtle-selected": {
-      "$description": "Surface · Border · Subtle · Selected",
+      "$description": "Selected subtle surface border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-border/emphasis-subtle/state-selected",
@@ -5195,7 +5335,7 @@
       }
     },
     "text-disabled": {
-      "$description": "Text · Disabled",
+      "$description": "Disabled text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-text/state-disabled",
@@ -5222,7 +5362,7 @@
       }
     },
     "text-subtle": {
-      "$description": "Text · Subtle",
+      "$description": "Subtle text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-text/emphasis-subtle",
@@ -5249,7 +5389,7 @@
       }
     },
     "warning": {
-      "$description": "Warning",
+      "$description": "Warning color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning",
@@ -5276,7 +5416,7 @@
       }
     },
     "warning-background": {
-      "$description": "Warning · Background",
+      "$description": "Warning background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-background",
@@ -5304,7 +5444,7 @@
       }
     },
     "warning-background-strong": {
-      "$description": "Warning · Background · Strong",
+      "$description": "Strong warning background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-background/emphasis-strong",
@@ -5332,7 +5472,7 @@
       }
     },
     "warning-border": {
-      "$description": "Warning · Border",
+      "$description": "Warning border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-border",
@@ -5359,8 +5499,92 @@
         "hex": "#f1c21b"
       }
     },
+    "warning-border-strong": {
+      "$description": "Strong warning border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-border/emphasis-strong",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-support-caution-major",
+          "note": "no direct mapping; support-caution-major maps to the broader dsi:concept/color/intent-warning/emphasis-strong",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "support-caution-major",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.513725,
+          0.168627
+        ],
+        "hex": "#ff832b"
+      }
+    },
+    "warning-foreground": {
+      "$description": "Warning foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-foreground",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--cds-support-caution-minor",
+          "note": "no direct mapping; support-caution-minor maps to the broader dsi:concept/color/intent-warning",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "support-caution-minor",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.945098,
+          0.760784,
+          0.105882
+        ],
+        "hex": "#f1c21b"
+      }
+    },
+    "warning-foreground-strong": {
+      "$description": "Strong warning foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-foreground/emphasis-strong",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-support-caution-major",
+          "note": "no direct mapping; support-caution-major maps to the broader dsi:concept/color/intent-warning/emphasis-strong",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "support-caution-major",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.513725,
+          0.168627
+        ],
+        "hex": "#ff832b"
+      }
+    },
     "warning-icon": {
-      "$description": "Warning · Icon",
+      "$description": "Warning icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-icon",
@@ -5388,7 +5612,7 @@
       }
     },
     "warning-inverse": {
-      "$description": "Warning · Inverse",
+      "$description": "Warning inverse color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/usage-inverse",
@@ -5414,8 +5638,36 @@
         "hex": "#f1c21b"
       }
     },
+    "warning-inverse-foreground": {
+      "$description": "Warning inverse foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/usage-inverse/property-foreground",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--cds-support-warning-inverse",
+          "note": "no direct mapping; support-warning-inverse maps to the broader dsi:concept/color/intent-warning/usage-inverse",
+          "product": "carbon",
+          "status": "nearest",
+          "theme": "white",
+          "token": "support-warning-inverse",
+          "version": "11.84.0",
+          "via": "less-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.945098,
+          0.760784,
+          0.105882
+        ],
+        "hex": "#f1c21b"
+      }
+    },
     "warning-strong": {
-      "$description": "Warning · Strong",
+      "$description": "Strong warning color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/emphasis-strong",
@@ -5442,7 +5694,7 @@
       }
     },
     "warning-text": {
-      "$description": "Warning · Text",
+      "$description": "Warning text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-text",

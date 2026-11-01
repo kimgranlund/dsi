@@ -68,7 +68,7 @@ function easingCurve(value?: string) {
 
 /** Strip a typography property suffix to get the type style a token belongs to (body-large-font -> body-large). */
 /** The property part of a concept label ("Heading · Font size · Productive" -> "Font size"). */
-const propLabel = (c: Concept | undefined) => { if (!c) return undefined; const i = Object.keys(c.facets).indexOf('property'); const parts = c.label.split(' · '); return parts[i] ?? parts.at(-1); };
+const propLabel = (c: Concept | undefined) => { const p = c?.facets.property; return p ? (p.charAt(0).toUpperCase() + p.slice(1)).replace(/-/g, ' ') : c?.label; };
 const styleKey = (name: string) => name.replace(/[-.](font-family|font-size|font-weight|font-line-height|font-letter-spacing|line-height|letter-spacing|tracking|weight|size|font)$/, '');
 
 /** A concept's members in one system, as a ruler (or curves), for concept pages. */

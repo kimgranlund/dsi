@@ -2774,9 +2774,9 @@
       }
     },
     {
-      "id": "m-306401089cb6",
+      "id": "m-d4ef03cb6556",
       "token": "layer-02",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default",
+      "concept": "dsi:concept/color/usage-surface/property-background",
       "match": "close",
       "confidence": 0.85,
       "status": "approved",
@@ -2789,7 +2789,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:00:45.706Z"
+        "at": "2026-11-01T01:00:45.706Z",
+        "note": "Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -2869,9 +2870,9 @@
       }
     },
     {
-      "id": "m-87d5c6e6d6fb",
+      "id": "m-9d3b5bb30143",
       "token": "layer-accent-02",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default",
+      "concept": "dsi:concept/color/usage-surface/property-background",
       "match": "broad",
       "confidence": 0.5,
       "status": "rejected",
@@ -2884,7 +2885,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:01:00.573Z"
+        "at": "2026-11-01T01:01:00.573Z",
+        "note": "Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -2964,9 +2966,9 @@
       }
     },
     {
-      "id": "m-bcb8d85ac8e1",
+      "id": "m-da550ccb181c",
       "token": "layer-accent-active-02",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-active",
+      "concept": "dsi:concept/color/usage-surface/property-background/state-active",
       "match": "broad",
       "confidence": 0.5,
       "status": "rejected",
@@ -2979,7 +2981,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:01:16.481Z"
+        "at": "2026-11-01T01:01:16.481Z",
+        "note": "Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -3059,9 +3062,9 @@
       }
     },
     {
-      "id": "m-579c1f4061f6",
+      "id": "m-34fa4f130404",
       "token": "layer-accent-hover-02",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-hover",
+      "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
       "match": "broad",
       "confidence": 0.5,
       "status": "rejected",
@@ -3074,7 +3077,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:01:23.318Z"
+        "at": "2026-11-01T01:01:23.318Z",
+        "note": "Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -3116,9 +3120,9 @@
       }
     },
     {
-      "id": "m-11e49edcf532",
+      "id": "m-397ec990f63b",
       "token": "layer-active-02",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-active",
+      "concept": "dsi:concept/color/usage-surface/property-background/state-active",
       "match": "close",
       "confidence": 0.8,
       "status": "approved",
@@ -3131,7 +3135,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:01:25.856Z"
+        "at": "2026-11-01T01:01:25.856Z",
+        "note": "Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -3230,25 +3235,6 @@
       }
     },
     {
-      "id": "m-2984ba168af5",
-      "token": "layer-background-03",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "approved",
-      "rationale": "Background behind layer 03, equal to layer 02.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-10-31T23:51:14Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "kimgranlund",
-        "at": "2026-11-01T01:01:35.401Z"
-      }
-    },
-    {
       "id": "m-4f5278cc9241",
       "token": "layer-background-03",
       "concept": "dsi:concept/color/usage-page/property-background",
@@ -3265,6 +3251,26 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:01:35.401Z"
+      }
+    },
+    {
+      "id": "m-92a3b0711ec9",
+      "token": "layer-background-03",
+      "concept": "dsi:concept/color/usage-surface/property-background",
+      "match": "close",
+      "confidence": 0.65,
+      "status": "approved",
+      "rationale": "Background behind layer 03, equal to layer 02.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-10-31T23:51:14Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T01:01:35.401Z",
+        "note": "Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -3287,9 +3293,9 @@
       }
     },
     {
-      "id": "m-35b161d9c630",
+      "id": "m-280d9fb566af",
       "token": "layer-hover-02",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-hover",
+      "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
       "match": "close",
       "confidence": 0.8,
       "status": "approved",
@@ -3302,7 +3308,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:01:37.189Z"
+        "at": "2026-11-01T01:01:37.189Z",
+        "note": "Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -3344,9 +3351,9 @@
       }
     },
     {
-      "id": "m-0ef390486903",
+      "id": "m-4f7da529861f",
       "token": "layer-selected-02",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-selected",
+      "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
       "match": "close",
       "confidence": 0.8,
       "status": "approved",
@@ -3359,7 +3366,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:01:39.380Z"
+        "at": "2026-11-01T01:01:39.380Z",
+        "note": "Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -3439,9 +3447,9 @@
       }
     },
     {
-      "id": "m-fd38693706d2",
+      "id": "m-dbee1acc78ac",
       "token": "layer-selected-hover-02",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-hover+selected",
+      "concept": "dsi:concept/color/usage-surface/property-background/state-hover+selected",
       "match": "close",
       "confidence": 0.8,
       "status": "approved",
@@ -3454,7 +3462,8 @@
       },
       "review": {
         "by": "kimgranlund",
-        "at": "2026-11-01T01:02:09.293Z"
+        "at": "2026-11-01T01:02:09.293Z",
+        "note": "Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {

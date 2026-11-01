@@ -66,7 +66,7 @@ export async function buildDatabase(root: string, out: string): Promise<Record<s
       const pc = parseConcept(o, m.concept);
       if (typeof pc === 'string') continue;
       known.add(m.concept);
-      extra.push({ concept: m.concept, group: pc.domain, name: canonicalNameOf(pc), label: Object.entries(pc.facets).map(([f, v]) => String(v).split('+').map((x) => labels.get(`dsi:${f}/${x}`) ?? x).join(' + ')).join(' · ') });
+      extra.push({ concept: m.concept, group: pc.domain, name: canonicalNameOf(pc), label: labels.get(m.concept) ?? Object.entries(pc.facets).map(([f, v]) => String(v).split('+').map((x) => labels.get(`dsi:${f}/${x}`) ?? x).join(' + ')).join(' · ') });
     }
   }
   for (const c of [...canon.concepts, ...extra]) {

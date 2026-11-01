@@ -138,6 +138,26 @@
       }
     },
     {
+      "id": "m-1d3f4c482fdf",
+      "token": "colorBrandBackground",
+      "concept": "dsi:concept/color/intent-accent/property-background",
+      "match": "close",
+      "confidence": 0.85,
+      "status": "rejected",
+      "rationale": "Brand filled background (primary button fill); brand -> accent close per ADR 0008. Middle of the brand fill family by contrast (Background2 lighter, 3/4Static darker).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-background broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-24909d2369d3",
       "token": "colorBrandBackground",
       "concept": "dsi:concept/color/intent-accent/property-background",
@@ -154,26 +174,6 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
-      }
-    },
-    {
-      "id": "m-50bdbb0dcfdc",
-      "token": "colorBrandBackground",
-      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-default",
-      "match": "close",
-      "confidence": 0.85,
-      "status": "rejected",
-      "rationale": "Brand filled background (primary button fill); brand -> accent close per ADR 0008. Middle of the brand fill family by contrast (Background2 lighter, 3/4Static darker).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-background broad."
       }
     },
     {
@@ -414,9 +414,9 @@
       }
     },
     {
-      "id": "m-bcb27ba6271d",
+      "id": "m-961164d0c395",
       "token": "colorBrandBackgroundHover",
-      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-default/state-hover",
+      "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
       "match": "close",
       "confidence": 0.85,
       "status": "rejected",
@@ -430,7 +430,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-background/state-hover broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-background/state-hover broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -610,6 +610,26 @@
       }
     },
     {
+      "id": "m-785f212d4efc",
+      "token": "colorBrandBackgroundPressed",
+      "concept": "dsi:concept/color/intent-accent/property-background/state-active",
+      "match": "close",
+      "confidence": 0.85,
+      "status": "rejected",
+      "rationale": "Brand filled background (primary button fill); brand -> accent close per ADR 0008. Middle of the brand fill family by contrast (Background2 lighter, 3/4Static darker). Pressed state (pressed = active).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-background/state-active broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-b71384b68e92",
       "token": "colorBrandBackgroundPressed",
       "concept": "dsi:concept/color/intent-accent/property-background/state-active",
@@ -626,26 +646,6 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
-      }
-    },
-    {
-      "id": "m-e9e3b03d528a",
-      "token": "colorBrandBackgroundPressed",
-      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-default/state-active",
-      "match": "close",
-      "confidence": 0.85,
-      "status": "rejected",
-      "rationale": "Brand filled background (primary button fill); brand -> accent close per ADR 0008. Middle of the brand fill family by contrast (Background2 lighter, 3/4Static darker). Pressed state (pressed = active).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-background/state-active broad."
       }
     },
     {
@@ -668,9 +668,9 @@
       }
     },
     {
-      "id": "m-1c8b689f3c3e",
+      "id": "m-53f59cde6e15",
       "token": "colorBrandBackgroundSelected",
-      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-default/state-selected",
+      "concept": "dsi:concept/color/intent-accent/property-background/state-selected",
       "match": "close",
       "confidence": 0.85,
       "status": "rejected",
@@ -684,7 +684,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-background/state-selected broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-background/state-selected broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -727,9 +727,9 @@
       }
     },
     {
-      "id": "m-76638afa2488",
+      "id": "m-48403d2eee90",
       "token": "colorBrandBackgroundStatic",
-      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-default",
+      "concept": "dsi:concept/color/intent-accent/property-background",
       "match": "close",
       "confidence": 0.75,
       "status": "rejected",
@@ -743,7 +743,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-background broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-background broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -764,26 +764,6 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-background broad."
-      }
-    },
-    {
-      "id": "m-a530744a81f1",
-      "token": "colorBrandForeground1",
-      "concept": "dsi:concept/color/intent-accent/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.85,
-      "status": "rejected",
-      "rationale": "Brand-colored text and icons; brand -> accent close. Base of a two-member family (Foreground2 has higher contrast in both modes).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:31:47.703Z",
-        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -1098,9 +1078,9 @@
       }
     },
     {
-      "id": "m-b65e321dc562",
+      "id": "m-b461c6087c26",
       "token": "colorBrandForegroundOnLight",
-      "concept": "dsi:concept/color/intent-accent/property-foreground/emphasis-default",
+      "concept": "dsi:concept/color/intent-accent/property-foreground",
       "match": "close",
       "confidence": 0.65,
       "status": "rejected",
@@ -1114,7 +1094,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-foreground broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-foreground broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -1137,9 +1117,9 @@
       }
     },
     {
-      "id": "m-f5d1b7a5b2c6",
+      "id": "m-3b6cd19af8b5",
       "token": "colorBrandForegroundOnLightHover",
-      "concept": "dsi:concept/color/intent-accent/property-foreground/emphasis-default/state-hover",
+      "concept": "dsi:concept/color/intent-accent/property-foreground/state-hover",
       "match": "close",
       "confidence": 0.65,
       "status": "rejected",
@@ -1153,7 +1133,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-foreground/state-hover broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-foreground/state-hover broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -1176,9 +1156,9 @@
       }
     },
     {
-      "id": "m-8dcb55229dd9",
+      "id": "m-bb16d581de00",
       "token": "colorBrandForegroundOnLightPressed",
-      "concept": "dsi:concept/color/intent-accent/property-foreground/emphasis-default/state-active",
+      "concept": "dsi:concept/color/intent-accent/property-foreground/state-active",
       "match": "close",
       "confidence": 0.65,
       "status": "rejected",
@@ -1192,27 +1172,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-foreground/state-active broad."
-      }
-    },
-    {
-      "id": "m-0692d8ae7b12",
-      "token": "colorBrandForegroundOnLightSelected",
-      "concept": "dsi:concept/color/intent-accent/property-foreground/emphasis-default/state-selected",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "rejected",
-      "rationale": "Brand foreground fixed at the light-theme value for use on light surfaces regardless of theme; same value as colorBrandForeground1 in light. Invariance is not a concept (ADR 0010). Selected state (selected).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-foreground/state-selected broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-foreground/state-active broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -1232,6 +1192,26 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
+      }
+    },
+    {
+      "id": "m-a8ae9a69b5c3",
+      "token": "colorBrandForegroundOnLightSelected",
+      "concept": "dsi:concept/color/intent-accent/property-foreground/state-selected",
+      "match": "close",
+      "confidence": 0.65,
+      "status": "rejected",
+      "rationale": "Brand foreground fixed at the light-theme value for use on light surfaces regardless of theme; same value as colorBrandForeground1 in light. Invariance is not a concept (ADR 0010). Selected state (selected).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-accent/property-foreground/state-selected broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -1295,26 +1275,6 @@
       }
     },
     {
-      "id": "m-4d531e92b599",
-      "token": "colorBrandStroke1",
-      "concept": "dsi:concept/color/intent-accent/property-border/emphasis-default",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Brand border (brandWeb.80 light, .100-ish dark); stronger than Stroke2.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T15:11:55.434Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-accent/property-border/emphasis-strong."
-      }
-    },
-    {
       "id": "m-a8c36bd2d868",
       "token": "colorBrandStroke1",
       "concept": "dsi:concept/color/intent-accent/property-border/emphasis-strong",
@@ -1331,6 +1291,26 @@
         "by": "rank-rule",
         "at": "2026-11-01T15:11:55.434Z",
         "note": "Deterministic: contrast against the page in every mode."
+      }
+    },
+    {
+      "id": "m-b16774b100a3",
+      "token": "colorBrandStroke1",
+      "concept": "dsi:concept/color/intent-accent/property-border",
+      "match": "close",
+      "confidence": 0.8,
+      "status": "rejected",
+      "rationale": "Brand border (brandWeb.80 light, .100-ish dark); stronger than Stroke2.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:11:55.434Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-accent/property-border/emphasis-strong. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -2116,6 +2096,26 @@
       }
     },
     {
+      "id": "m-a509ff0476d7",
+      "token": "colorNeutralBackground3",
+      "concept": "dsi:concept/color/usage-surface/property-background",
+      "match": "close",
+      "confidence": 0.65,
+      "status": "rejected",
+      "rationale": "Neutral surface layer Background3; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6). ",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-surface/property-background broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-eb510814a1a9",
       "token": "colorNeutralBackground3",
       "concept": "dsi:concept/color/usage-surface/property-background",
@@ -2135,29 +2135,9 @@
       }
     },
     {
-      "id": "m-ee46e720f8d4",
-      "token": "colorNeutralBackground3",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "rejected",
-      "rationale": "Neutral surface layer Background3; Fluent numbering is not a lightness ladder, so emphasis is by contrast rank among Background1..6,8 in light (light-mode order 1,8,2,3,4,5,6). ",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-surface/property-background broad."
-      }
-    },
-    {
-      "id": "m-66c28c0c01b3",
+      "id": "m-b1db9a83cbd6",
       "token": "colorNeutralBackground3Hover",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-hover",
+      "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
       "match": "close",
       "confidence": 0.65,
       "status": "proposed",
@@ -2185,9 +2165,9 @@
       }
     },
     {
-      "id": "m-0fa5e6b191d8",
+      "id": "m-9653496024c4",
       "token": "colorNeutralBackground3Pressed",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-active",
+      "concept": "dsi:concept/color/usage-surface/property-background/state-active",
       "match": "close",
       "confidence": 0.65,
       "status": "proposed",
@@ -2215,9 +2195,9 @@
       }
     },
     {
-      "id": "m-39c042493bee",
+      "id": "m-cdd0cd618f09",
       "token": "colorNeutralBackground3Selected",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default/state-selected",
+      "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
       "match": "close",
       "confidence": 0.65,
       "status": "proposed",
@@ -2421,9 +2401,9 @@
       }
     },
     {
-      "id": "m-4e0c8713a0ce",
+      "id": "m-221327b9b478",
       "token": "colorNeutralBackground5",
-      "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default",
+      "concept": "dsi:concept/color/usage-surface/property-background",
       "match": "close",
       "confidence": 0.5,
       "status": "rejected",
@@ -2437,7 +2417,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-surface/property-background broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-surface/property-background broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -3377,6 +3357,26 @@
       }
     },
     {
+      "id": "m-53f5b027aad0",
+      "token": "colorNeutralForeground2",
+      "concept": "dsi:concept/color/property-foreground",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Secondary text and icons (#424242 / #d6d6d6), second by contrast among Foreground1..4. Hover/pressed/selected step up to Foreground1 values.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/property-foreground broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-b98f351d9592",
       "token": "colorNeutralForeground2",
       "concept": "dsi:concept/color/property-foreground",
@@ -3393,26 +3393,6 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
-      }
-    },
-    {
-      "id": "m-e5278f3420d1",
-      "token": "colorNeutralForeground2",
-      "concept": "dsi:concept/color/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.75,
-      "status": "rejected",
-      "rationale": "Secondary text and icons (#424242 / #d6d6d6), second by contrast among Foreground1..4. Hover/pressed/selected step up to Foreground1 values.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/property-foreground broad."
       }
     },
     {
@@ -3492,9 +3472,9 @@
       }
     },
     {
-      "id": "m-f729772a948d",
+      "id": "m-b936b39e8f68",
       "token": "colorNeutralForeground2Hover",
-      "concept": "dsi:concept/color/property-foreground/emphasis-default/state-hover",
+      "concept": "dsi:concept/color/property-foreground/state-hover",
       "match": "close",
       "confidence": 0.75,
       "status": "rejected",
@@ -3508,7 +3488,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/property-foreground/state-hover broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/property-foreground/state-hover broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -3632,26 +3612,6 @@
       }
     },
     {
-      "id": "m-05187498082e",
-      "token": "colorNeutralForeground2Pressed",
-      "concept": "dsi:concept/color/property-foreground/emphasis-default/state-active",
-      "match": "close",
-      "confidence": 0.75,
-      "status": "rejected",
-      "rationale": "Secondary text and icons (#424242 / #d6d6d6), second by contrast among Foreground1..4. Hover/pressed/selected step up to Foreground1 values. Pressed state (pressed = active).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/property-foreground/state-active broad."
-      }
-    },
-    {
       "id": "m-619daf4a4a9f",
       "token": "colorNeutralForeground2Pressed",
       "concept": "dsi:concept/color/property-foreground/state-active",
@@ -3671,13 +3631,13 @@
       }
     },
     {
-      "id": "m-21975b437557",
-      "token": "colorNeutralForeground2Selected",
-      "concept": "dsi:concept/color/property-foreground/emphasis-default/state-selected",
+      "id": "m-d87b4ec3744e",
+      "token": "colorNeutralForeground2Pressed",
+      "concept": "dsi:concept/color/property-foreground/state-active",
       "match": "close",
       "confidence": 0.75,
       "status": "rejected",
-      "rationale": "Secondary text and icons (#424242 / #d6d6d6), second by contrast among Foreground1..4. Hover/pressed/selected step up to Foreground1 values. Selected state (selected).",
+      "rationale": "Secondary text and icons (#424242 / #d6d6d6), second by contrast among Foreground1..4. Hover/pressed/selected step up to Foreground1 values. Pressed state (pressed = active).",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
@@ -3687,7 +3647,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/property-foreground/state-selected broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/property-foreground/state-active broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -3707,6 +3667,26 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
+      }
+    },
+    {
+      "id": "m-e4ea1c6fe842",
+      "token": "colorNeutralForeground2Selected",
+      "concept": "dsi:concept/color/property-foreground/state-selected",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Secondary text and icons (#424242 / #d6d6d6), second by contrast among Foreground1..4. Hover/pressed/selected step up to Foreground1 values. Selected state (selected).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/property-foreground/state-selected broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -4422,9 +4402,9 @@
       }
     },
     {
-      "id": "m-f82948902526",
+      "id": "m-505b99d6c88f",
       "token": "colorNeutralShadowAmbient",
-      "concept": "dsi:concept/color/property-shadow/emphasis-default",
+      "concept": "dsi:concept/color/property-shadow",
       "match": "close",
       "confidence": 0.65,
       "status": "rejected",
@@ -4438,7 +4418,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/property-shadow broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/property-shadow broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -4539,6 +4519,26 @@
       }
     },
     {
+      "id": "m-1b28f7489531",
+      "token": "colorNeutralShadowKey",
+      "concept": "dsi:concept/color/property-shadow",
+      "match": "close",
+      "confidence": 0.65,
+      "status": "rejected",
+      "rationale": "Base key (directional) shadow layer; Fluent shadows pair ambient + key; middle of the Key family.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/property-shadow broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-2ed1b405daf9",
       "token": "colorNeutralShadowKey",
       "concept": "dsi:concept/color/property-shadow",
@@ -4555,26 +4555,6 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
-      }
-    },
-    {
-      "id": "m-e9c74474cbba",
-      "token": "colorNeutralShadowKey",
-      "concept": "dsi:concept/color/property-shadow/emphasis-default",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "rejected",
-      "rationale": "Base key (directional) shadow layer; Fluent shadows pair ambient + key; middle of the Key family.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/property-shadow broad."
       }
     },
     {
@@ -4656,26 +4636,6 @@
       }
     },
     {
-      "id": "m-41a5ee317779",
-      "token": "colorNeutralStencil1",
-      "concept": "dsi:concept/color/usage-skeleton/property-background/emphasis-default",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "rejected",
-      "rationale": "Loading skeleton (stencil) fill, the higher-contrast of two.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T15:11:55.434Z",
-        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-skeleton/property-background/emphasis-strong."
-      }
-    },
-    {
       "id": "m-84e3ec4b2992",
       "token": "colorNeutralStencil1",
       "concept": "dsi:concept/color/usage-skeleton/property-background/emphasis-strong",
@@ -4695,13 +4655,13 @@
       }
     },
     {
-      "id": "m-7ae6a97713fd",
-      "token": "colorNeutralStencil1Alpha",
-      "concept": "dsi:concept/color/usage-skeleton/property-background/emphasis-default",
+      "id": "m-c2c02a3c7d3f",
+      "token": "colorNeutralStencil1",
+      "concept": "dsi:concept/color/usage-skeleton/property-background",
       "match": "close",
-      "confidence": 0.6,
+      "confidence": 0.7,
       "status": "rejected",
-      "rationale": "Translucent skeleton fill for use over images or colors.",
+      "rationale": "Loading skeleton (stencil) fill, the higher-contrast of two.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
@@ -4709,9 +4669,9 @@
         "method": "color-v1"
       },
       "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-skeleton/property-background broad."
+        "by": "rank-rule",
+        "at": "2026-11-01T15:11:55.434Z",
+        "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-skeleton/property-background/emphasis-strong. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -4751,6 +4711,26 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Settled (settle-broad-v1): dsi:concept/color/usage-skeleton/property-background broad."
+      }
+    },
+    {
+      "id": "m-c95915f6345e",
+      "token": "colorNeutralStencil1Alpha",
+      "concept": "dsi:concept/color/usage-skeleton/property-background",
+      "match": "close",
+      "confidence": 0.6,
+      "status": "rejected",
+      "rationale": "Translucent skeleton fill for use over images or colors.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:02:17.197Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-skeleton/property-background broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -4813,9 +4793,9 @@
       }
     },
     {
-      "id": "m-a99d7d94ec26",
+      "id": "m-5f259f9d13dc",
       "token": "colorNeutralStroke1",
-      "concept": "dsi:concept/color/property-border/emphasis-default",
+      "concept": "dsi:concept/color/property-border",
       "match": "close",
       "confidence": 0.8,
       "status": "rejected",
@@ -4829,7 +4809,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/property-border broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/property-border broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -4852,6 +4832,26 @@
       }
     },
     {
+      "id": "m-061b04d675f7",
+      "token": "colorNeutralStroke1Hover",
+      "concept": "dsi:concept/color/property-border/state-hover",
+      "match": "close",
+      "confidence": 0.8,
+      "status": "rejected",
+      "rationale": "Default neutral border (#d1d1d1 / #666666), second by contrast after StrokeAccessible. Hover state (hover).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/property-border/state-hover broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-7544fccba321",
       "token": "colorNeutralStroke1Hover",
       "concept": "dsi:concept/color/property-border/emphasis-strong/state-hover",
@@ -4863,26 +4863,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/property-border/state-hover broad."
-      }
-    },
-    {
-      "id": "m-91c866a59b11",
-      "token": "colorNeutralStroke1Hover",
-      "concept": "dsi:concept/color/property-border/emphasis-default/state-hover",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Default neutral border (#d1d1d1 / #666666), second by contrast after StrokeAccessible. Hover state (hover).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
       },
       "review": {
@@ -4950,9 +4930,9 @@
       }
     },
     {
-      "id": "m-7fdeafd5925c",
+      "id": "m-be36a7ff47c0",
       "token": "colorNeutralStroke1Pressed",
-      "concept": "dsi:concept/color/property-border/emphasis-default/state-active",
+      "concept": "dsi:concept/color/property-border/state-active",
       "match": "close",
       "confidence": 0.8,
       "status": "rejected",
@@ -4966,7 +4946,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/property-border/state-active broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/property-border/state-active broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -4989,6 +4969,26 @@
       }
     },
     {
+      "id": "m-3a6f0c3c9af0",
+      "token": "colorNeutralStroke1Selected",
+      "concept": "dsi:concept/color/property-border/state-selected",
+      "match": "close",
+      "confidence": 0.8,
+      "status": "rejected",
+      "rationale": "Default neutral border (#d1d1d1 / #666666), second by contrast after StrokeAccessible. Selected state (selected).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/property-border/state-selected broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-764de9c92c05",
       "token": "colorNeutralStroke1Selected",
       "concept": "dsi:concept/color/property-border/emphasis-strong/state-selected",
@@ -5000,26 +5000,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/property-border/state-selected broad."
-      }
-    },
-    {
-      "id": "m-b97c783fa382",
-      "token": "colorNeutralStroke1Selected",
-      "concept": "dsi:concept/color/property-border/emphasis-default/state-selected",
-      "match": "close",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Default neutral border (#d1d1d1 / #666666), second by contrast after StrokeAccessible. Selected state (selected).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
       },
       "review": {
@@ -5048,9 +5028,9 @@
       }
     },
     {
-      "id": "m-927f5e031f33",
+      "id": "m-b6ed04f5e156",
       "token": "colorNeutralStroke2",
-      "concept": "dsi:concept/color/property-border/emphasis-default",
+      "concept": "dsi:concept/color/property-border",
       "match": "close",
       "confidence": 0.6,
       "status": "rejected",
@@ -5064,7 +5044,7 @@
       "review": {
         "by": "two-of-three",
         "at": "2026-11-01T15:31:47.703Z",
-        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
+        "note": "Third opinion (claude-fable-5-1) agreed with another answer. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -6228,26 +6208,6 @@
       }
     },
     {
-      "id": "m-9996a5f3eeb9",
-      "token": "colorPaletteBerryForeground1",
-      "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "rejected",
-      "rationale": "Fluent colorPaletteBerry is a categorical (avatar/badge/tag) hue, not a status. Berry -> magenta (close). Foreground1: hue text/icon (shade10); emphasis by contrast rank within the hue family, kept consistent across hues. Close: emphasis assigned by rank, not native word.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-categorical/hue-magenta/property-foreground broad."
-      }
-    },
-    {
       "id": "m-c613d6edf1c1",
       "token": "colorPaletteBerryForeground1",
       "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-foreground",
@@ -6271,19 +6231,19 @@
       "token": "colorPaletteBerryForeground1",
       "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-foreground",
       "match": "close",
-      "confidence": 0.6,
+      "confidence": 0.65,
       "status": "rejected",
-      "rationale": "Berry base foreground.",
+      "rationale": "Fluent colorPaletteBerry is a categorical (avatar/badge/tag) hue, not a status. Berry -> magenta (close). Foreground1: hue text/icon (shade10); emphasis by contrast rank within the hue family, kept consistent across hues. Close: emphasis assigned by rank, not native word.",
       "provenance": {
         "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:02:17.197Z",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
       },
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-categorical/hue-magenta/property-foreground broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-categorical/hue-magenta/property-foreground broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -7149,26 +7109,6 @@
       }
     },
     {
-      "id": "m-9b4e246feb67",
-      "token": "colorPaletteDarkOrangeForeground1",
-      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "rejected",
-      "rationale": "Fluent colorPaletteDarkOrange is a categorical (avatar/badge/tag) hue, not a status. DarkOrange -> orange (close). Foreground1: hue text/icon (shade10); emphasis by contrast rank within the hue family, kept consistent across hues. Close: emphasis assigned by rank, not native word.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-categorical/hue-orange/property-foreground broad."
-      }
-    },
-    {
       "id": "m-b25dd8bc598d",
       "token": "colorPaletteDarkOrangeForeground1",
       "concept": "dsi:concept/color/usage-categorical/hue-orange/property-foreground",
@@ -7888,6 +7828,26 @@
       }
     },
     {
+      "id": "m-a05bb1010521",
+      "token": "colorPaletteGreenForeground1",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-foreground",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Fluent colorPaletteGreen is a categorical (avatar/badge/tag) hue, not a status. Green -> green (exact). Foreground1: hue text/icon (shade10); emphasis by contrast rank within the hue family, kept consistent across hues. Close: emphasis assigned by rank, not native word.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-categorical/hue-green/property-foreground broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-ac8c9bb9910a",
       "token": "colorPaletteGreenForeground1",
       "concept": "dsi:concept/color/usage-categorical/hue-green/property-foreground",
@@ -7924,26 +7884,6 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
-      }
-    },
-    {
-      "id": "m-df43dc03068c",
-      "token": "colorPaletteGreenForeground1",
-      "concept": "dsi:concept/color/usage-categorical/hue-green/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.75,
-      "status": "rejected",
-      "rationale": "Fluent colorPaletteGreen is a categorical (avatar/badge/tag) hue, not a status. Green -> green (exact). Foreground1: hue text/icon (shade10); emphasis by contrast rank within the hue family, kept consistent across hues. Close: emphasis assigned by rank, not native word.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-categorical/hue-green/property-foreground broad."
       }
     },
     {
@@ -8317,26 +8257,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-categorical/hue-green/property-foreground broad."
-      }
-    },
-    {
-      "id": "m-7bc99b185988",
-      "token": "colorPaletteLightGreenForeground1",
-      "concept": "dsi:concept/color/usage-categorical/hue-green/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "rejected",
-      "rationale": "Fluent colorPaletteLightGreen is a categorical (avatar/badge/tag) hue, not a status. LightGreen -> green (close). Foreground1: hue text/icon (shade10); emphasis by contrast rank within the hue family, kept consistent across hues. Close: emphasis assigned by rank, not native word.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
       },
       "review": {
@@ -8885,26 +8805,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (emphasis-rank-three-v1): dsi:concept/color/usage-categorical/hue-yellow/property-foreground/emphasis-subtle close."
-      }
-    },
-    {
-      "id": "m-c8931cad4143",
-      "token": "colorPaletteMarigoldForeground1",
-      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.65,
-      "status": "rejected",
-      "rationale": "Fluent colorPaletteMarigold is a categorical (avatar/badge/tag) hue, not a status. Marigold -> yellow (close). Foreground1: hue text/icon (shade10); emphasis by contrast rank within the hue family, kept consistent across hues. Close: emphasis assigned by rank, not native word.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
       },
       "review": {
@@ -10083,26 +9983,6 @@
       }
     },
     {
-      "id": "m-11c69a65dc64",
-      "token": "colorPaletteRedForeground1",
-      "concept": "dsi:concept/color/usage-categorical/hue-red/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.75,
-      "status": "rejected",
-      "rationale": "Fluent colorPaletteRed is a categorical (avatar/badge/tag) hue, not a status. Red -> red (exact). Foreground1: hue text/icon (shade10); emphasis by contrast rank within the hue family, kept consistent across hues. Close: emphasis assigned by rank, not native word.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-categorical/hue-red/property-foreground broad."
-      }
-    },
-    {
       "id": "m-528f13acd29a",
       "token": "colorPaletteRedForeground1",
       "concept": "dsi:concept/color/usage-categorical/hue-red/property-foreground",
@@ -10120,6 +10000,26 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Settled (settle-broad-v1): dsi:concept/color/usage-categorical/hue-red/property-foreground broad."
+      }
+    },
+    {
+      "id": "m-811c18d2ca32",
+      "token": "colorPaletteRedForeground1",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-foreground",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Fluent colorPaletteRed is a categorical (avatar/badge/tag) hue, not a status. Red -> red (exact). Foreground1: hue text/icon (shade10); emphasis by contrast rank within the hue family, kept consistent across hues. Close: emphasis assigned by rank, not native word.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/usage-categorical/hue-red/property-foreground broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -10897,6 +10797,26 @@
       }
     },
     {
+      "id": "m-66e698603b21",
+      "token": "colorPaletteYellowForeground1",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-foreground",
+      "match": "close",
+      "confidence": 0.75,
+      "status": "rejected",
+      "rationale": "Fluent colorPaletteYellow is a categorical (avatar/badge/tag) hue, not a status. Yellow -> yellow (exact). Foreground1: hue text/icon (shade10); emphasis by contrast rank within the hue family, kept consistent across hues. Close: emphasis assigned by rank, not native word.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (emphasis-rank-three-v1): dsi:concept/color/usage-categorical/hue-yellow/property-foreground/emphasis-strong close. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-6764e233d8be",
       "token": "colorPaletteYellowForeground1",
       "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-foreground",
@@ -10908,26 +10828,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:02:17.197Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (emphasis-rank-three-v1): dsi:concept/color/usage-categorical/hue-yellow/property-foreground/emphasis-strong close."
-      }
-    },
-    {
-      "id": "m-850bd18bc4b5",
-      "token": "colorPaletteYellowForeground1",
-      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.75,
-      "status": "rejected",
-      "rationale": "Fluent colorPaletteYellow is a categorical (avatar/badge/tag) hue, not a status. Yellow -> yellow (exact). Foreground1: hue text/icon (shade10); emphasis by contrast rank within the hue family, kept consistent across hues. Close: emphasis assigned by rank, not native word.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
         "method": "color-v1"
       },
       "review": {
@@ -11243,26 +11143,6 @@
       }
     },
     {
-      "id": "m-1e71159e5683",
-      "token": "colorStatusDangerForeground1",
-      "concept": "dsi:concept/color/intent-danger/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.85,
-      "status": "rejected",
-      "rationale": "Main danger status text and icons (e.g. validation message); middle of the three status foregrounds by contrast.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:31:47.703Z",
-        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
-      }
-    },
-    {
       "id": "m-4b2e662b2887",
       "token": "colorStatusDangerForeground1",
       "concept": "dsi:concept/color/intent-danger/property-foreground",
@@ -11478,26 +11358,6 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Settled (settle-broad-v1): dsi:concept/color/intent-success/property-border broad."
-      }
-    },
-    {
-      "id": "m-0cb44e573352",
-      "token": "colorStatusSuccessForeground1",
-      "concept": "dsi:concept/color/intent-success/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.85,
-      "status": "rejected",
-      "rationale": "Main success status text and icons (e.g. validation message); middle of the three status foregrounds by contrast.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:31:47.703Z",
-        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
       }
     },
     {
@@ -11719,26 +11579,6 @@
       }
     },
     {
-      "id": "m-6f946a3c1cff",
-      "token": "colorStatusWarningForeground1",
-      "concept": "dsi:concept/color/intent-warning/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.85,
-      "status": "rejected",
-      "rationale": "Main warning status text and icons (e.g. validation message); middle of the three status foregrounds by contrast.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:31:47.703Z",
-        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
-      }
-    },
-    {
       "id": "m-dba43fc7865c",
       "token": "colorStatusWarningForeground1",
       "concept": "dsi:concept/color/intent-warning/property-foreground",
@@ -11778,6 +11618,26 @@
       }
     },
     {
+      "id": "m-39a7d6565983",
+      "token": "colorStatusWarningForeground3",
+      "concept": "dsi:concept/color/intent-warning/property-foreground",
+      "match": "close",
+      "confidence": 0.6,
+      "status": "rejected",
+      "rationale": "Same values as StatusWarningForeground1 (orange.shade20); ranks with it, not below.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:52Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:52.061Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-warning/property-foreground broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-3fef330ef6f2",
       "token": "colorStatusWarningForeground3",
       "concept": "dsi:concept/color/intent-warning/property-foreground",
@@ -11794,26 +11654,6 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:52.061Z",
         "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
-      }
-    },
-    {
-      "id": "m-630356fc0c42",
-      "token": "colorStatusWarningForeground3",
-      "concept": "dsi:concept/color/intent-warning/property-foreground/emphasis-default",
-      "match": "close",
-      "confidence": 0.6,
-      "status": "rejected",
-      "rationale": "Same values as StatusWarningForeground1 (orange.shade20); ranks with it, not below.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:52Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:52.061Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-warning/property-foreground broad."
       }
     },
     {

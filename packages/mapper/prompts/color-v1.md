@@ -99,3 +99,10 @@ Your probability that a careful designer familiar with this system would accept 
 ## Unmapped
 
 Use `"unmapped": true` when no allowed combination captures the token (syntax highlighting roles, data visualization palettes, avatar colors, brand illustration colors). Say which concept is missing: these become the ontology backlog.
+
+## Wording (docs/controlled-language.md)
+
+- **Concepts.** Use words from the ontology only. Prefer a concept other systems already use; a new combination waits for the owner (ADR 0019). Never bind `emphasis-default`: the concept without emphasis is the default step. Opacity concepts belong to the `opacity` domain.
+- **Rationale (L6).** One or two sentences, at most 40 words, active voice, present tense. Sentence one says what the token is for. Sentence two starts `Evidence:` and names its kind: name, description, value, docs (with URL), sibling, or convention (with ADR number). A `close` match states its nuance. No hedging words (probably, seems, maybe): put uncertainty in `confidence`.
+  Example: "Icon color on subtle gray accent fills, such as file-type icons. Evidence: description; sibling (accent.blue and 8 others are categorical icons)."
+

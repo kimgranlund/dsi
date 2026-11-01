@@ -1,7 +1,7 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { createAjv, parseConcept, type Ontology } from '@dsi/schema';
+import { createAjv, gateUnregistered, parseConcept, type Ontology } from '@dsi/schema';
 import { mappingPath, readMappings, type MappingFileShape } from './packet.ts';
 
 export const APPROVE_AT = 0.7; // ADR 0005 amended 2026-11-01 (was 0.85)
@@ -41,7 +41,7 @@ export interface MergeResult { approved: number; approvedWithClassifier: number;
  * or both say unmapped. Anything else becomes Proposed records for human review. Approved and rejected records are
  * never modified; an agreement that equals a rejected answer stays Proposed.
  */
-export function merge(root: string, product: string, version: string, implementation: string | undefined, a: ProposalFile, b: ProposalFile, method: string, now = new Date().toISOString(), votes: ClassifierVotes = new Map()): MergeResult {
+export function merge(root: string, product: string, version: string, implementation: string | undefined, a: ProposalFile, b: ProposalFile, method: string, now = new Date().toISOString(), votes: ClassifierVotes = new Map(), registry?: Ontology): MergeResult {
   if (a.model === b.model) throw new Error(`both proposal files come from ${a.model}; agreement needs two different models`);
   const file: MappingFileShape & { mappings: any[]; unmapped: any[] } = { product, ...(implementation ? { implementation } : {}), sourceVersion: version, mappings: [], unmapped: [], ...(readMappings(root, product, version) ?? {}) } as any;
   file.mappings ??= [];
@@ -96,6 +96,7 @@ export function merge(root: string, product: string, version: string, implementa
   file.mappings.sort((x, y) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
   file.unmapped.sort((x, y) => x.token.localeCompare(y.token));
   if (!file.unmapped.length) delete (file as any).unmapped;
+  if (registry) gateUnregistered(registry, file, now); // ADR 0019: new concepts wait for the owner
   const out = mappingPath(root, product, version);
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, JSON.stringify(file, null, 2) + '\n');

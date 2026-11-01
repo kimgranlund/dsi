@@ -1,7 +1,7 @@
 {
   "color": {
     "accent": {
-      "$description": "Accent",
+      "$description": "Accent color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent",
@@ -29,7 +29,7 @@
       }
     },
     "accent-background": {
-      "$description": "Accent · Background",
+      "$description": "Accent background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-background",
@@ -56,7 +56,7 @@
       }
     },
     "accent-background-active": {
-      "$description": "Accent · Background · Active",
+      "$description": "Pressed accent background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-background/state-active",
@@ -83,7 +83,7 @@
       }
     },
     "accent-background-disabled": {
-      "$description": "Accent · Background · Disabled",
+      "$description": "Disabled accent background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-background/state-disabled",
@@ -111,7 +111,7 @@
       }
     },
     "accent-background-hover": {
-      "$description": "Accent · Background · Hover",
+      "$description": "Hovered accent background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
@@ -138,7 +138,7 @@
       }
     },
     "accent-background-selected": {
-      "$description": "Accent · Background · Selected",
+      "$description": "Selected accent background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-background/state-selected",
@@ -165,7 +165,7 @@
       }
     },
     "accent-border": {
-      "$description": "Accent · Border",
+      "$description": "Accent border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-border",
@@ -192,7 +192,7 @@
       }
     },
     "accent-icon": {
-      "$description": "Accent · Icon",
+      "$description": "Accent icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-icon",
@@ -219,7 +219,7 @@
       }
     },
     "accent-on-fill-text": {
-      "$description": "Accent · On fill · Text",
+      "$description": "Accent on-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text",
@@ -246,7 +246,7 @@
       }
     },
     "accent-on-fill-text-active": {
-      "$description": "Accent · On fill · Text · Active",
+      "$description": "Pressed accent on-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text/state-active",
@@ -273,7 +273,7 @@
       }
     },
     "accent-on-fill-text-disabled": {
-      "$description": "Accent · On fill · Text · Disabled",
+      "$description": "Disabled accent on-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text/state-disabled",
@@ -300,7 +300,7 @@
       }
     },
     "accent-on-fill-text-hover": {
-      "$description": "Accent · On fill · Text · Hover",
+      "$description": "Hovered accent on-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/usage-on-fill/property-text/state-hover",
@@ -327,7 +327,7 @@
       }
     },
     "accent-surface-background": {
-      "$description": "Accent · Surface · Background",
+      "$description": "Accent surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/usage-surface/property-background",
@@ -354,7 +354,7 @@
       }
     },
     "accent-surface-background-active": {
-      "$description": "Accent · Surface · Background · Active",
+      "$description": "Pressed accent surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/usage-surface/property-background/state-active",
@@ -381,7 +381,7 @@
       }
     },
     "accent-surface-background-hover": {
-      "$description": "Accent · Surface · Background · Hover",
+      "$description": "Hovered accent surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/usage-surface/property-background/state-hover",
@@ -408,7 +408,7 @@
       }
     },
     "accent-surface-background-selected": {
-      "$description": "Accent · Surface · Background · Selected",
+      "$description": "Selected accent surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/usage-surface/property-background/state-selected",
@@ -435,7 +435,7 @@
       }
     },
     "accent-text": {
-      "$description": "Accent · Text",
+      "$description": "Accent text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-text",
@@ -462,7 +462,7 @@
       }
     },
     "accent-text-hover": {
-      "$description": "Accent · Text · Hover",
+      "$description": "Hovered accent text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-accent/property-text/state-hover",
@@ -489,7 +489,7 @@
       }
     },
     "ai-background": {
-      "$description": "AI · Background",
+      "$description": "Ai background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-background",
@@ -515,8 +515,36 @@
         "hex": "#8051ff"
       }
     },
+    "ai-background-active": {
+      "$description": "Pressed ai background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-ai/property-background/state-active",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--p-color-bg-fill-magic-secondary-active",
+          "note": "no direct mapping; color-bg-fill-magic-secondary-active maps to the more specific dsi:concept/color/intent-ai/property-background/emphasis-subtle/state-active",
+          "product": "polaris",
+          "status": "nearest",
+          "theme": "light-high-contrast-experimental",
+          "token": "color-bg-fill-magic-secondary-active",
+          "version": "9.4.2",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8745,
+          0.851,
+          1
+        ],
+        "hex": "#dfd9ff"
+      }
+    },
     "ai-background-hover": {
-      "$description": "AI · Background · Hover",
+      "$description": "Hovered ai background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-background/state-hover",
@@ -544,7 +572,7 @@
       }
     },
     "ai-background-subtle": {
-      "$description": "AI · Background · Subtle",
+      "$description": "Subtle ai background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle",
@@ -571,7 +599,7 @@
       }
     },
     "ai-background-subtle-active": {
-      "$description": "AI · Background · Subtle · Active",
+      "$description": "Pressed subtle ai background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle/state-active",
@@ -598,7 +626,7 @@
       }
     },
     "ai-background-subtle-hover": {
-      "$description": "AI · Background · Subtle · Hover",
+      "$description": "Hovered subtle ai background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-background/emphasis-subtle/state-hover",
@@ -625,7 +653,7 @@
       }
     },
     "ai-border": {
-      "$description": "AI · Border",
+      "$description": "Ai border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-border",
@@ -652,7 +680,7 @@
       }
     },
     "ai-border-subtle": {
-      "$description": "AI · Border · Subtle",
+      "$description": "Subtle ai border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-border/emphasis-subtle",
@@ -679,7 +707,7 @@
       }
     },
     "ai-border-subtle-hover": {
-      "$description": "AI · Border · Subtle · Hover",
+      "$description": "Hovered subtle ai border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-border/emphasis-subtle/state-hover",
@@ -706,7 +734,7 @@
       }
     },
     "ai-icon": {
-      "$description": "AI · Icon",
+      "$description": "Ai icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-icon",
@@ -733,7 +761,7 @@
       }
     },
     "ai-on-fill-foreground": {
-      "$description": "AI · On fill · Foreground",
+      "$description": "Ai on-fill foreground",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/usage-on-fill/property-foreground",
@@ -760,7 +788,7 @@
       }
     },
     "ai-surface-background": {
-      "$description": "AI · Surface · Background",
+      "$description": "Ai surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/usage-surface/property-background",
@@ -787,7 +815,7 @@
       }
     },
     "ai-surface-background-active": {
-      "$description": "AI · Surface · Background · Active",
+      "$description": "Pressed ai surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/usage-surface/property-background/state-active",
@@ -814,7 +842,7 @@
       }
     },
     "ai-surface-background-hover": {
-      "$description": "AI · Surface · Background · Hover",
+      "$description": "Hovered ai surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/usage-surface/property-background/state-hover",
@@ -841,7 +869,7 @@
       }
     },
     "ai-text": {
-      "$description": "AI · Text",
+      "$description": "Ai text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-text",
@@ -868,7 +896,7 @@
       }
     },
     "ai-text-subtle": {
-      "$description": "AI · Text · Subtle",
+      "$description": "Subtle ai text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-ai/property-text/emphasis-subtle",
@@ -923,7 +951,7 @@
       }
     },
     "background-active": {
-      "$description": "Background · Active",
+      "$description": "Pressed background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/state-active",
@@ -951,7 +979,7 @@
       }
     },
     "background-disabled": {
-      "$description": "Background · Disabled",
+      "$description": "Disabled background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/state-disabled",
@@ -980,7 +1008,7 @@
       }
     },
     "background-hover": {
-      "$description": "Background · Hover",
+      "$description": "Hovered background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/state-hover",
@@ -1008,7 +1036,7 @@
       }
     },
     "background-selected": {
-      "$description": "Background · Selected",
+      "$description": "Selected background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/state-selected",
@@ -1036,7 +1064,7 @@
       }
     },
     "background-subtle": {
-      "$description": "Background · Subtle",
+      "$description": "Subtle background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/emphasis-subtle",
@@ -1064,7 +1092,7 @@
       }
     },
     "background-subtle-active": {
-      "$description": "Background · Subtle · Active",
+      "$description": "Pressed subtle background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/emphasis-subtle/state-active",
@@ -1092,7 +1120,7 @@
       }
     },
     "background-subtle-hover": {
-      "$description": "Background · Subtle · Hover",
+      "$description": "Hovered subtle background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/emphasis-subtle/state-hover",
@@ -1120,7 +1148,7 @@
       }
     },
     "background-subtle-selected": {
-      "$description": "Background · Subtle · Selected",
+      "$description": "Selected subtle background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-background/emphasis-subtle/state-selected",
@@ -1174,8 +1202,36 @@
         "hex": "#8a8a8a"
       }
     },
+    "border-active": {
+      "$description": "Pressed border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-border/state-active",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--p-color-input-border-active",
+          "note": "no direct mapping; color-input-border-active maps to the more specific dsi:concept/color/usage-field/property-border/state-active",
+          "product": "polaris",
+          "status": "nearest",
+          "theme": "light-high-contrast-experimental",
+          "token": "color-input-border-active",
+          "version": "9.4.2",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.102,
+          0.102,
+          0.102
+        ],
+        "hex": "#1a1a1a"
+      }
+    },
     "border-disabled": {
-      "$description": "Border · Disabled",
+      "$description": "Disabled border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-border/state-disabled",
@@ -1202,7 +1258,7 @@
       }
     },
     "border-hover": {
-      "$description": "Border · Hover",
+      "$description": "Hovered border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-border/state-hover",
@@ -1229,7 +1285,7 @@
       }
     },
     "border-subtle": {
-      "$description": "Border · Subtle",
+      "$description": "Subtle border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-border/emphasis-subtle",
@@ -1256,7 +1312,7 @@
       }
     },
     "categorical-background": {
-      "$description": "Categorical · Background",
+      "$description": "Categorical background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-categorical/property-background",
@@ -1284,7 +1340,7 @@
       }
     },
     "caution-background": {
-      "$description": "Caution · Background",
+      "$description": "Caution background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/property-background",
@@ -1311,7 +1367,7 @@
       }
     },
     "caution-background-active": {
-      "$description": "Caution · Background · Active",
+      "$description": "Pressed caution background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/property-background/state-active",
@@ -1338,7 +1394,7 @@
       }
     },
     "caution-background-hover": {
-      "$description": "Caution · Background · Hover",
+      "$description": "Hovered caution background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/property-background/state-hover",
@@ -1365,7 +1421,7 @@
       }
     },
     "caution-background-subtle": {
-      "$description": "Caution · Background · Subtle",
+      "$description": "Subtle caution background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/property-background/emphasis-subtle",
@@ -1392,7 +1448,7 @@
       }
     },
     "caution-border": {
-      "$description": "Caution · Border",
+      "$description": "Caution border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/property-border",
@@ -1419,7 +1475,7 @@
       }
     },
     "caution-icon": {
-      "$description": "Caution · Icon",
+      "$description": "Caution icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/property-icon",
@@ -1446,7 +1502,7 @@
       }
     },
     "caution-on-fill-foreground": {
-      "$description": "Caution · On fill · Foreground",
+      "$description": "Caution on-fill foreground",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/usage-on-fill/property-foreground",
@@ -1473,7 +1529,7 @@
       }
     },
     "caution-surface-background": {
-      "$description": "Caution · Surface · Background",
+      "$description": "Caution surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/usage-surface/property-background",
@@ -1500,7 +1556,7 @@
       }
     },
     "caution-surface-background-active": {
-      "$description": "Caution · Surface · Background · Active",
+      "$description": "Pressed caution surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/usage-surface/property-background/state-active",
@@ -1527,7 +1583,7 @@
       }
     },
     "caution-surface-background-hover": {
-      "$description": "Caution · Surface · Background · Hover",
+      "$description": "Hovered caution surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/usage-surface/property-background/state-hover",
@@ -1554,7 +1610,7 @@
       }
     },
     "caution-text": {
-      "$description": "Caution · Text",
+      "$description": "Caution text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/property-text",
@@ -1581,7 +1637,7 @@
       }
     },
     "caution-text-active": {
-      "$description": "Caution · Text · Active",
+      "$description": "Pressed caution text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/property-text/state-active",
@@ -1608,7 +1664,7 @@
       }
     },
     "caution-text-hover": {
-      "$description": "Caution · Text · Hover",
+      "$description": "Hovered caution text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/property-text/state-hover",
@@ -1635,7 +1691,7 @@
       }
     },
     "caution-text-subtle": {
-      "$description": "Caution · Text · Subtle",
+      "$description": "Subtle caution text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-caution/property-text/emphasis-subtle",
@@ -1662,7 +1718,7 @@
       }
     },
     "danger": {
-      "$description": "Danger",
+      "$description": "Danger color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger",
@@ -1690,7 +1746,7 @@
       }
     },
     "danger-background": {
-      "$description": "Danger · Background",
+      "$description": "Danger background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-background",
@@ -1717,7 +1773,7 @@
       }
     },
     "danger-background-active": {
-      "$description": "Danger · Background · Active",
+      "$description": "Pressed danger background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-background/state-active",
@@ -1744,7 +1800,7 @@
       }
     },
     "danger-background-hover": {
-      "$description": "Danger · Background · Hover",
+      "$description": "Hovered danger background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-background/state-hover",
@@ -1771,7 +1827,7 @@
       }
     },
     "danger-background-selected": {
-      "$description": "Danger · Background · Selected",
+      "$description": "Selected danger background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-background/state-selected",
@@ -1798,7 +1854,7 @@
       }
     },
     "danger-background-subtle": {
-      "$description": "Danger · Background · Subtle",
+      "$description": "Subtle danger background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
@@ -1825,7 +1881,7 @@
       }
     },
     "danger-border": {
-      "$description": "Danger · Border",
+      "$description": "Danger border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-border",
@@ -1852,7 +1908,7 @@
       }
     },
     "danger-border-subtle": {
-      "$description": "Danger · Border · Subtle",
+      "$description": "Subtle danger border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-border/emphasis-subtle",
@@ -1878,8 +1934,36 @@
         "hex": "#8e0b21"
       }
     },
+    "danger-foreground": {
+      "$description": "Danger foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-foreground",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--p-color-text-critical-on-bg-fill",
+          "note": "no direct mapping; color-text-critical-on-bg-fill maps to the more specific dsi:concept/color/intent-danger/usage-on-fill/property-foreground",
+          "product": "polaris",
+          "status": "nearest",
+          "theme": "light-high-contrast-experimental",
+          "token": "color-text-critical-on-bg-fill",
+          "version": "9.4.2",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9804,
+          0.9843
+        ],
+        "hex": "#fffafb"
+      }
+    },
     "danger-icon": {
-      "$description": "Danger · Icon",
+      "$description": "Danger icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-icon",
@@ -1906,7 +1990,7 @@
       }
     },
     "danger-on-fill-foreground": {
-      "$description": "Danger · On fill · Foreground",
+      "$description": "Danger on-fill foreground",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/usage-on-fill/property-foreground",
@@ -1933,7 +2017,7 @@
       }
     },
     "danger-surface-background": {
-      "$description": "Danger · Surface · Background",
+      "$description": "Danger surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/usage-surface/property-background",
@@ -1960,7 +2044,7 @@
       }
     },
     "danger-surface-background-active": {
-      "$description": "Danger · Surface · Background · Active",
+      "$description": "Pressed danger surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/usage-surface/property-background/state-active",
@@ -1987,7 +2071,7 @@
       }
     },
     "danger-surface-background-hover": {
-      "$description": "Danger · Surface · Background · Hover",
+      "$description": "Hovered danger surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/usage-surface/property-background/state-hover",
@@ -2014,7 +2098,7 @@
       }
     },
     "danger-text": {
-      "$description": "Danger · Text",
+      "$description": "Danger text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-text",
@@ -2041,7 +2125,7 @@
       }
     },
     "danger-text-active": {
-      "$description": "Danger · Text · Active",
+      "$description": "Pressed danger text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-text/state-active",
@@ -2068,7 +2152,7 @@
       }
     },
     "danger-text-hover": {
-      "$description": "Danger · Text · Hover",
+      "$description": "Hovered danger text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-text/state-hover",
@@ -2095,7 +2179,7 @@
       }
     },
     "danger-text-subtle": {
-      "$description": "Danger · Text · Subtle",
+      "$description": "Subtle danger text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-text/emphasis-subtle",
@@ -2122,7 +2206,7 @@
       }
     },
     "field-background": {
-      "$description": "Field · Background",
+      "$description": "Field background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-field/property-background",
@@ -2149,7 +2233,7 @@
       }
     },
     "field-background-active": {
-      "$description": "Field · Background · Active",
+      "$description": "Pressed field background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-field/property-background/state-active",
@@ -2176,7 +2260,7 @@
       }
     },
     "field-background-hover": {
-      "$description": "Field · Background · Hover",
+      "$description": "Hovered field background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-field/property-background/state-hover",
@@ -2203,7 +2287,7 @@
       }
     },
     "field-border": {
-      "$description": "Field · Border",
+      "$description": "Field border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-field/property-border",
@@ -2230,7 +2314,7 @@
       }
     },
     "field-border-active": {
-      "$description": "Field · Border · Active",
+      "$description": "Pressed field border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-field/property-border/state-active",
@@ -2257,7 +2341,7 @@
       }
     },
     "field-border-hover": {
-      "$description": "Field · Border · Hover",
+      "$description": "Hovered field border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-field/property-border/state-hover",
@@ -2310,8 +2394,36 @@
         "hex": "#005bd3"
       }
     },
+    "foreground": {
+      "$description": "Foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-foreground",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--p-color-text-critical-on-bg-fill",
+          "note": "no direct mapping; color-text-critical-on-bg-fill maps to the more specific dsi:concept/color/intent-danger/usage-on-fill/property-foreground",
+          "product": "polaris",
+          "status": "nearest",
+          "theme": "light-high-contrast-experimental",
+          "token": "color-text-critical-on-bg-fill",
+          "version": "9.4.2",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9804,
+          0.9843
+        ],
+        "hex": "#fffafb"
+      }
+    },
     "highlight-background": {
-      "$description": "Highlight · Background",
+      "$description": "Highlight background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-background",
@@ -2338,7 +2450,7 @@
       }
     },
     "highlight-background-active": {
-      "$description": "Highlight · Background · Active",
+      "$description": "Pressed highlight background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-background/state-active",
@@ -2365,7 +2477,7 @@
       }
     },
     "highlight-background-hover": {
-      "$description": "Highlight · Background · Hover",
+      "$description": "Hovered highlight background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-background/state-hover",
@@ -2392,7 +2504,7 @@
       }
     },
     "highlight-border": {
-      "$description": "Highlight · Border",
+      "$description": "Highlight border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-border",
@@ -2419,7 +2531,7 @@
       }
     },
     "highlight-border-active": {
-      "$description": "Highlight · Border · Active",
+      "$description": "Pressed highlight border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-border/state-active",
@@ -2446,7 +2558,7 @@
       }
     },
     "highlight-border-hover": {
-      "$description": "Highlight · Border · Hover",
+      "$description": "Hovered highlight border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-border/state-hover",
@@ -2473,7 +2585,7 @@
       }
     },
     "highlight-icon": {
-      "$description": "Highlight · Icon",
+      "$description": "Highlight icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-icon",
@@ -2500,7 +2612,7 @@
       }
     },
     "highlight-icon-active": {
-      "$description": "Highlight · Icon · Active",
+      "$description": "Pressed highlight icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-icon/state-active",
@@ -2527,7 +2639,7 @@
       }
     },
     "highlight-icon-hover": {
-      "$description": "Highlight · Icon · Hover",
+      "$description": "Hovered highlight icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-icon/state-hover",
@@ -2554,7 +2666,7 @@
       }
     },
     "highlight-surface-background": {
-      "$description": "Highlight · Surface · Background",
+      "$description": "Highlight surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/usage-surface/property-background",
@@ -2581,7 +2693,7 @@
       }
     },
     "highlight-surface-background-active": {
-      "$description": "Highlight · Surface · Background · Active",
+      "$description": "Pressed highlight surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/usage-surface/property-background/state-active",
@@ -2608,7 +2720,7 @@
       }
     },
     "highlight-surface-background-hover": {
-      "$description": "Highlight · Surface · Background · Hover",
+      "$description": "Hovered highlight surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/usage-surface/property-background/state-hover",
@@ -2635,7 +2747,7 @@
       }
     },
     "highlight-text": {
-      "$description": "Highlight · Text",
+      "$description": "Highlight text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-text",
@@ -2662,7 +2774,7 @@
       }
     },
     "highlight-text-active": {
-      "$description": "Highlight · Text · Active",
+      "$description": "Pressed highlight text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-text/state-active",
@@ -2689,7 +2801,7 @@
       }
     },
     "highlight-text-hover": {
-      "$description": "Highlight · Text · Hover",
+      "$description": "Hovered highlight text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-highlight/property-text/state-hover",
@@ -2743,7 +2855,7 @@
       }
     },
     "icon-active": {
-      "$description": "Icon · Active",
+      "$description": "Pressed icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-icon/state-active",
@@ -2770,7 +2882,7 @@
       }
     },
     "icon-disabled": {
-      "$description": "Icon · Disabled",
+      "$description": "Disabled icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-icon/state-disabled",
@@ -2797,7 +2909,7 @@
       }
     },
     "icon-hover": {
-      "$description": "Icon · Hover",
+      "$description": "Hovered icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-icon/state-hover",
@@ -2824,7 +2936,7 @@
       }
     },
     "icon-subtle": {
-      "$description": "Icon · Subtle",
+      "$description": "Subtle icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-icon/emphasis-subtle",
@@ -2851,7 +2963,7 @@
       }
     },
     "icon-subtle-active": {
-      "$description": "Icon · Subtle · Active",
+      "$description": "Pressed subtle icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-icon/emphasis-subtle/state-active",
@@ -2878,7 +2990,7 @@
       }
     },
     "icon-subtle-hover": {
-      "$description": "Icon · Subtle · Hover",
+      "$description": "Hovered subtle icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-icon/emphasis-subtle/state-hover",
@@ -2905,7 +3017,7 @@
       }
     },
     "info": {
-      "$description": "Info",
+      "$description": "Info color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info",
@@ -2933,7 +3045,7 @@
       }
     },
     "info-background": {
-      "$description": "Info · Background",
+      "$description": "Info background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-background",
@@ -2960,7 +3072,7 @@
       }
     },
     "info-background-active": {
-      "$description": "Info · Background · Active",
+      "$description": "Pressed info background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-background/state-active",
@@ -2987,7 +3099,7 @@
       }
     },
     "info-background-hover": {
-      "$description": "Info · Background · Hover",
+      "$description": "Hovered info background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-background/state-hover",
@@ -3014,7 +3126,7 @@
       }
     },
     "info-background-subtle": {
-      "$description": "Info · Background · Subtle",
+      "$description": "Subtle info background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle",
@@ -3041,7 +3153,7 @@
       }
     },
     "info-border": {
-      "$description": "Info · Border",
+      "$description": "Info border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-border",
@@ -3068,7 +3180,7 @@
       }
     },
     "info-icon": {
-      "$description": "Info · Icon",
+      "$description": "Info icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-icon",
@@ -3095,7 +3207,7 @@
       }
     },
     "info-on-fill-foreground": {
-      "$description": "Info · On fill · Foreground",
+      "$description": "Info on-fill foreground",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/usage-on-fill/property-foreground",
@@ -3122,7 +3234,7 @@
       }
     },
     "info-surface-background": {
-      "$description": "Info · Surface · Background",
+      "$description": "Info surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/usage-surface/property-background",
@@ -3149,7 +3261,7 @@
       }
     },
     "info-surface-background-active": {
-      "$description": "Info · Surface · Background · Active",
+      "$description": "Pressed info surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/usage-surface/property-background/state-active",
@@ -3176,7 +3288,7 @@
       }
     },
     "info-surface-background-hover": {
-      "$description": "Info · Surface · Background · Hover",
+      "$description": "Hovered info surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/usage-surface/property-background/state-hover",
@@ -3203,7 +3315,7 @@
       }
     },
     "info-text": {
-      "$description": "Info · Text",
+      "$description": "Info text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-text",
@@ -3230,7 +3342,7 @@
       }
     },
     "info-text-active": {
-      "$description": "Info · Text · Active",
+      "$description": "Pressed info text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-text/state-active",
@@ -3257,7 +3369,7 @@
       }
     },
     "info-text-hover": {
-      "$description": "Info · Text · Hover",
+      "$description": "Hovered info text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-text/state-hover",
@@ -3284,7 +3396,7 @@
       }
     },
     "info-text-subtle": {
-      "$description": "Info · Text · Subtle",
+      "$description": "Subtle info text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-info/property-text/emphasis-subtle",
@@ -3311,7 +3423,7 @@
       }
     },
     "inverse+link-text": {
-      "$description": "Inverse + Link · Text",
+      "$description": "Inverse link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse+link/property-text",
@@ -3338,7 +3450,7 @@
       }
     },
     "inverse+surface-background": {
-      "$description": "Inverse + Surface · Background",
+      "$description": "Inverse surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse+surface/property-background",
@@ -3365,7 +3477,7 @@
       }
     },
     "inverse-background": {
-      "$description": "Inverse · Background",
+      "$description": "Inverse background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-background",
@@ -3392,7 +3504,7 @@
       }
     },
     "inverse-background-active": {
-      "$description": "Inverse · Background · Active",
+      "$description": "Pressed inverse background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-background/state-active",
@@ -3419,7 +3531,7 @@
       }
     },
     "inverse-background-hover": {
-      "$description": "Inverse · Background · Hover",
+      "$description": "Hovered inverse background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-background/state-hover",
@@ -3446,7 +3558,7 @@
       }
     },
     "inverse-border": {
-      "$description": "Inverse · Border",
+      "$description": "Inverse border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-border",
@@ -3473,7 +3585,7 @@
       }
     },
     "inverse-border-active": {
-      "$description": "Inverse · Border · Active",
+      "$description": "Pressed inverse border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-border/state-active",
@@ -3500,7 +3612,7 @@
       }
     },
     "inverse-border-hover": {
-      "$description": "Inverse · Border · Hover",
+      "$description": "Hovered inverse border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-border/state-hover",
@@ -3527,7 +3639,7 @@
       }
     },
     "inverse-icon": {
-      "$description": "Inverse · Icon",
+      "$description": "Inverse icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-icon",
@@ -3554,7 +3666,7 @@
       }
     },
     "inverse-text": {
-      "$description": "Inverse · Text",
+      "$description": "Inverse text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-text",
@@ -3581,7 +3693,7 @@
       }
     },
     "inverse-text-subtle": {
-      "$description": "Inverse · Text · Subtle",
+      "$description": "Subtle inverse text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-inverse/property-text/emphasis-subtle",
@@ -3608,7 +3720,7 @@
       }
     },
     "link-text": {
-      "$description": "Link · Text",
+      "$description": "Link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-link/property-text",
@@ -3635,7 +3747,7 @@
       }
     },
     "link-text-active": {
-      "$description": "Link · Text · Active",
+      "$description": "Pressed link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-link/property-text/state-active",
@@ -3662,7 +3774,7 @@
       }
     },
     "link-text-hover": {
-      "$description": "Link · Text · Hover",
+      "$description": "Hovered link text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-link/property-text/state-hover",
@@ -3689,7 +3801,7 @@
       }
     },
     "navigation-background": {
-      "$description": "Navigation · Background",
+      "$description": "Navigation background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-navigation/property-background",
@@ -3716,7 +3828,7 @@
       }
     },
     "navigation-background-active": {
-      "$description": "Navigation · Background · Active",
+      "$description": "Pressed navigation background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-navigation/property-background/state-active",
@@ -3743,7 +3855,7 @@
       }
     },
     "navigation-background-hover": {
-      "$description": "Navigation · Background · Hover",
+      "$description": "Hovered navigation background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-navigation/property-background/state-hover",
@@ -3770,7 +3882,7 @@
       }
     },
     "navigation-background-selected": {
-      "$description": "Navigation · Background · Selected",
+      "$description": "Selected navigation background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-navigation/property-background/state-selected",
@@ -3796,8 +3908,36 @@
         "hex": "#fafafa"
       }
     },
+    "on-fill-foreground": {
+      "$description": "On-fill foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-on-fill/property-foreground",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--p-color-text-critical-on-bg-fill",
+          "note": "no direct mapping; color-text-critical-on-bg-fill maps to the more specific dsi:concept/color/intent-danger/usage-on-fill/property-foreground",
+          "product": "polaris",
+          "status": "nearest",
+          "theme": "light-high-contrast-experimental",
+          "token": "color-text-critical-on-bg-fill",
+          "version": "9.4.2",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9804,
+          0.9843
+        ],
+        "hex": "#fffafb"
+      }
+    },
     "on-fill-text": {
-      "$description": "On fill · Text",
+      "$description": "On-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-on-fill/property-text",
@@ -3825,7 +3965,7 @@
       }
     },
     "on-fill-text-disabled": {
-      "$description": "On fill · Text · Disabled",
+      "$description": "Disabled on-fill text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-on-fill/property-text/state-disabled",
@@ -3853,7 +3993,7 @@
       }
     },
     "page-background": {
-      "$description": "Page · Background",
+      "$description": "Page background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-page/property-background",
@@ -3880,7 +4020,7 @@
       }
     },
     "scrim": {
-      "$description": "Scrim",
+      "$description": "Scrim color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-scrim",
@@ -3909,7 +4049,7 @@
       }
     },
     "scrim-background": {
-      "$description": "Scrim · Background",
+      "$description": "Scrim background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-scrim/property-background",
@@ -3937,7 +4077,7 @@
       }
     },
     "success": {
-      "$description": "Success",
+      "$description": "Success color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success",
@@ -3965,7 +4105,7 @@
       }
     },
     "success-background": {
-      "$description": "Success · Background",
+      "$description": "Success background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-background",
@@ -3992,7 +4132,7 @@
       }
     },
     "success-background-active": {
-      "$description": "Success · Background · Active",
+      "$description": "Pressed success background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-background/state-active",
@@ -4019,7 +4159,7 @@
       }
     },
     "success-background-hover": {
-      "$description": "Success · Background · Hover",
+      "$description": "Hovered success background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-background/state-hover",
@@ -4046,7 +4186,7 @@
       }
     },
     "success-background-subtle": {
-      "$description": "Success · Background · Subtle",
+      "$description": "Subtle success background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle",
@@ -4073,7 +4213,7 @@
       }
     },
     "success-border": {
-      "$description": "Success · Border",
+      "$description": "Success border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-border",
@@ -4099,8 +4239,36 @@
         "hex": "#92fcac"
       }
     },
+    "success-foreground": {
+      "$description": "Success foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-foreground",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--p-color-text-success-on-bg-fill",
+          "note": "no direct mapping; color-text-success-on-bg-fill maps to the more specific dsi:concept/color/intent-success/usage-on-fill/property-foreground",
+          "product": "polaris",
+          "status": "nearest",
+          "theme": "light-high-contrast-experimental",
+          "token": "color-text-success-on-bg-fill",
+          "version": "9.4.2",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9804,
+          1,
+          0.9843
+        ],
+        "hex": "#fafffb"
+      }
+    },
     "success-icon": {
-      "$description": "Success · Icon",
+      "$description": "Success icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-icon",
@@ -4127,7 +4295,7 @@
       }
     },
     "success-on-fill-foreground": {
-      "$description": "Success · On fill · Foreground",
+      "$description": "Success on-fill foreground",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/usage-on-fill/property-foreground",
@@ -4154,7 +4322,7 @@
       }
     },
     "success-surface-background": {
-      "$description": "Success · Surface · Background",
+      "$description": "Success surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/usage-surface/property-background",
@@ -4181,7 +4349,7 @@
       }
     },
     "success-surface-background-active": {
-      "$description": "Success · Surface · Background · Active",
+      "$description": "Pressed success surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/usage-surface/property-background/state-active",
@@ -4208,7 +4376,7 @@
       }
     },
     "success-surface-background-hover": {
-      "$description": "Success · Surface · Background · Hover",
+      "$description": "Hovered success surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/usage-surface/property-background/state-hover",
@@ -4235,7 +4403,7 @@
       }
     },
     "success-text": {
-      "$description": "Success · Text",
+      "$description": "Success text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-text",
@@ -4262,7 +4430,7 @@
       }
     },
     "success-text-active": {
-      "$description": "Success · Text · Active",
+      "$description": "Pressed success text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-text/state-active",
@@ -4289,7 +4457,7 @@
       }
     },
     "success-text-hover": {
-      "$description": "Success · Text · Hover",
+      "$description": "Hovered success text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-text/state-hover",
@@ -4316,7 +4484,7 @@
       }
     },
     "success-text-subtle": {
-      "$description": "Success · Text · Subtle",
+      "$description": "Subtle success text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-text/emphasis-subtle",
@@ -4343,7 +4511,7 @@
       }
     },
     "surface-background": {
-      "$description": "Surface · Background",
+      "$description": "Surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background",
@@ -4370,7 +4538,7 @@
       }
     },
     "surface-background-active": {
-      "$description": "Surface · Background · Active",
+      "$description": "Pressed surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/state-active",
@@ -4397,7 +4565,7 @@
       }
     },
     "surface-background-disabled": {
-      "$description": "Surface · Background · Disabled",
+      "$description": "Disabled surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/state-disabled",
@@ -4425,7 +4593,7 @@
       }
     },
     "surface-background-hover": {
-      "$description": "Surface · Background · Hover",
+      "$description": "Hovered surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
@@ -4452,7 +4620,7 @@
       }
     },
     "surface-background-selected": {
-      "$description": "Surface · Background · Selected",
+      "$description": "Selected surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
@@ -4479,7 +4647,7 @@
       }
     },
     "surface-background-subtle": {
-      "$description": "Surface · Background · Subtle",
+      "$description": "Subtle surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle",
@@ -4506,7 +4674,7 @@
       }
     },
     "surface-background-subtle-active": {
-      "$description": "Surface · Background · Subtle · Active",
+      "$description": "Pressed subtle surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active",
@@ -4533,7 +4701,7 @@
       }
     },
     "surface-background-subtle-hover": {
-      "$description": "Surface · Background · Subtle · Hover",
+      "$description": "Hovered subtle surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover",
@@ -4560,7 +4728,7 @@
       }
     },
     "surface-background-subtle-selected": {
-      "$description": "Surface · Background · Subtle · Selected",
+      "$description": "Selected subtle surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-selected",
@@ -4614,7 +4782,7 @@
       }
     },
     "text-disabled": {
-      "$description": "Text · Disabled",
+      "$description": "Disabled text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-text/state-disabled",
@@ -4641,7 +4809,7 @@
       }
     },
     "text-subtle": {
-      "$description": "Text · Subtle",
+      "$description": "Subtle text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-text/emphasis-subtle",
@@ -4668,7 +4836,7 @@
       }
     },
     "warning": {
-      "$description": "Warning",
+      "$description": "Warning color",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning",
@@ -4696,7 +4864,7 @@
       }
     },
     "warning-background": {
-      "$description": "Warning · Background",
+      "$description": "Warning background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-background",
@@ -4723,7 +4891,7 @@
       }
     },
     "warning-background-active": {
-      "$description": "Warning · Background · Active",
+      "$description": "Pressed warning background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-background/state-active",
@@ -4750,7 +4918,7 @@
       }
     },
     "warning-background-hover": {
-      "$description": "Warning · Background · Hover",
+      "$description": "Hovered warning background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-background/state-hover",
@@ -4777,7 +4945,7 @@
       }
     },
     "warning-background-subtle": {
-      "$description": "Warning · Background · Subtle",
+      "$description": "Subtle warning background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
@@ -4804,7 +4972,7 @@
       }
     },
     "warning-border": {
-      "$description": "Warning · Border",
+      "$description": "Warning border",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-border",
@@ -4830,8 +4998,36 @@
         "hex": "#ffc879"
       }
     },
+    "warning-foreground": {
+      "$description": "Warning foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-foreground",
+          "match": "exact",
+          "mode": "increased-contrast",
+          "nativeName": "--p-color-text-warning-on-bg-fill",
+          "note": "no direct mapping; color-text-warning-on-bg-fill maps to the more specific dsi:concept/color/intent-warning/usage-on-fill/property-foreground",
+          "product": "polaris",
+          "status": "nearest",
+          "theme": "light-high-contrast-experimental",
+          "token": "color-text-warning-on-bg-fill",
+          "version": "9.4.2",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1451,
+          0.102,
+          0
+        ],
+        "hex": "#251a00"
+      }
+    },
     "warning-icon": {
-      "$description": "Warning · Icon",
+      "$description": "Warning icon",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-icon",
@@ -4858,7 +5054,7 @@
       }
     },
     "warning-on-fill-foreground": {
-      "$description": "Warning · On fill · Foreground",
+      "$description": "Warning on-fill foreground",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/usage-on-fill/property-foreground",
@@ -4885,7 +5081,7 @@
       }
     },
     "warning-surface-background": {
-      "$description": "Warning · Surface · Background",
+      "$description": "Warning surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/usage-surface/property-background",
@@ -4912,7 +5108,7 @@
       }
     },
     "warning-surface-background-active": {
-      "$description": "Warning · Surface · Background · Active",
+      "$description": "Pressed warning surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/usage-surface/property-background/state-active",
@@ -4939,7 +5135,7 @@
       }
     },
     "warning-surface-background-hover": {
-      "$description": "Warning · Surface · Background · Hover",
+      "$description": "Hovered warning surface background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/usage-surface/property-background/state-hover",
@@ -4966,7 +5162,7 @@
       }
     },
     "warning-text": {
-      "$description": "Warning · Text",
+      "$description": "Warning text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-text",
@@ -4993,7 +5189,7 @@
       }
     },
     "warning-text-active": {
-      "$description": "Warning · Text · Active",
+      "$description": "Pressed warning text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-text/state-active",
@@ -5020,7 +5216,7 @@
       }
     },
     "warning-text-hover": {
-      "$description": "Warning · Text · Hover",
+      "$description": "Hovered warning text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-text/state-hover",
@@ -5047,7 +5243,7 @@
       }
     },
     "warning-text-subtle": {
-      "$description": "Warning · Text · Subtle",
+      "$description": "Subtle warning text",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-text/emphasis-subtle",

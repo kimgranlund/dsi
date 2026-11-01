@@ -16,6 +16,7 @@ Authored. Changes here change meaning for every consumer; see Rules.
 | `schemes/targets.jsonld` | Implementation targets (UI frameworks live here, not as categories) |
 | `schemes/tiers.jsonld` | Source, Scale, Semantic, System, Component, and the tier derivation rule |
 | `schemes/facets.jsonld` | Facet dimensions and starter value schemes (domain, emphasis, intent, property, state, mode) |
+| `schemes/concepts.jsonld` | Concept registry (ADR 0019): every concept approved mappings may use, with its L3 name and L4 definition (`docs/controlled-language.md`). Add entries with `packages/schema/src/register.ts`; `apply-review` registers owner approvals. |
 | `schemes/mapping.jsonld` | Match types with fixed direction, review statuses |
 | `schemes/canonical.jsonld` | Concept schemes for canonical concepts, one per domain |
 | `concepts/` | (optional) Labels and definitions for notable compositional concepts |

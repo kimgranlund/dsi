@@ -1,1 +1,3968 @@
-{}
+{
+  "color": {
+    "accent": {
+      "$description": "Accent color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-color-100",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "accent-color-100",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9608,
+          0.9765,
+          1
+        ],
+        "hex": "#f5f9ff"
+      }
+    },
+    "accent-background": {
+      "$description": "Accent background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "accent-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2314,
+          0.3882,
+          0.9843
+        ],
+        "hex": "#3b63fb"
+      }
+    },
+    "accent-background-active": {
+      "$description": "Pressed accent background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-background/state-active",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-background-color-down",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "accent-background-color-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "accent-background-focus": {
+      "$description": "Focused accent background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-background/state-focus",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-background-color-key-focus",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "accent-background-color-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "accent-background-hover": {
+      "$description": "Hovered accent background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-background-color-hover",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "accent-background-color-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "accent-background-selected": {
+      "$description": "Selected accent background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-background/state-selected",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-stack-item-selected-background-color-highlight",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "stack-item-selected-background-color-highlight",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2314,
+          0.3882,
+          0.9843
+        ],
+        "hex": "#3b63fb"
+      }
+    },
+    "accent-background-subtle": {
+      "$description": "Subtle accent background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "accent-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.898,
+          0.9412,
+          0.9961
+        ],
+        "hex": "#e5f0fe"
+      }
+    },
+    "accent-foreground": {
+      "$description": "Accent foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-foreground",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-content-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "accent-content-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2314,
+          0.3882,
+          0.9843
+        ],
+        "hex": "#3b63fb"
+      }
+    },
+    "accent-foreground-active": {
+      "$description": "Pressed accent foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-foreground/state-active",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-content-color-down",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "accent-content-color-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "accent-foreground-focus": {
+      "$description": "Focused accent foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-foreground/state-focus",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-content-color-key-focus",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "accent-content-color-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "accent-foreground-hover": {
+      "$description": "Hovered accent foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-foreground/state-hover",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-content-color-hover",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "accent-content-color-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "accent-foreground-selected": {
+      "$description": "Selected accent foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-foreground/state-selected",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-content-color-selected",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "accent-content-color-selected",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "background": {
+      "$description": "Background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-background-color-default",
+          "note": "no direct mapping; accent-background-color-default maps to the more specific dsi:concept/color/intent-accent/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "accent-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2314,
+          0.3882,
+          0.9843
+        ],
+        "hex": "#3b63fb"
+      }
+    },
+    "background-active": {
+      "$description": "Pressed background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-background/state-active",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-subdued-background-color-down",
+          "note": "no direct mapping; negative-subdued-background-color-down maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-active",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-subdued-background-color-down",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.8392,
+          0.8196
+        ],
+        "hex": "#ffd6d1"
+      }
+    },
+    "background-disabled": {
+      "$description": "Disabled background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-background/state-disabled",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-disabled-background-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "disabled-background-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9137,
+          0.9137,
+          0.9137
+        ],
+        "hex": "#e9e9e9"
+      }
+    },
+    "background-hover": {
+      "$description": "Hovered background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-background/state-hover",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-background-color-hover",
+          "note": "no direct mapping; accent-background-color-hover maps to the more specific dsi:concept/color/intent-accent/property-background/state-hover",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "accent-background-color-hover",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "background-subtle": {
+      "$description": "Subtle background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-notice-subtle-background-color-default",
+          "note": "no direct mapping; notice-subtle-background-color-default maps to the more specific dsi:concept/color/intent-warning/property-background/emphasis-subtle",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "notice-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9255,
+          0.8118
+        ],
+        "hex": "#ffeccf"
+      }
+    },
+    "background-subtle-active": {
+      "$description": "Pressed subtle background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-background/emphasis-subtle/state-active",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-subdued-background-color-down",
+          "note": "no direct mapping; negative-subdued-background-color-down maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-active",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-subdued-background-color-down",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.8392,
+          0.8196
+        ],
+        "hex": "#ffd6d1"
+      }
+    },
+    "background-subtle-hover": {
+      "$description": "Hovered subtle background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-background/emphasis-subtle/state-hover",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-subdued-background-color-hover",
+          "note": "no direct mapping; negative-subdued-background-color-hover maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-hover",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-subdued-background-color-hover",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.8392,
+          0.8196
+        ],
+        "hex": "#ffd6d1"
+      }
+    },
+    "border": {
+      "$description": "Border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-border",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-border-color-default",
+          "note": "no direct mapping; negative-border-color-default maps to the more specific dsi:concept/color/intent-danger/property-border",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-border-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8431,
+          0.1961,
+          0.1255
+        ],
+        "hex": "#d73220"
+      }
+    },
+    "border-active": {
+      "$description": "Pressed border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-border/state-active",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-border-color-down",
+          "note": "no direct mapping; negative-border-color-down maps to the more specific dsi:concept/color/intent-danger/property-border/state-active",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-border-color-down",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6118,
+          0.1294,
+          0.0745
+        ],
+        "hex": "#9c2113"
+      }
+    },
+    "border-disabled": {
+      "$description": "Disabled border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-border/state-disabled",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-disabled-border-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "disabled-border-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8549,
+          0.8549,
+          0.8549
+        ],
+        "hex": "#dadada"
+      }
+    },
+    "border-hover": {
+      "$description": "Hovered border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-border/state-hover",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-border-color-hover",
+          "note": "no direct mapping; negative-border-color-hover maps to the more specific dsi:concept/color/intent-danger/property-border/state-hover",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-border-color-hover",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7176,
+          0.1569,
+          0.0941
+        ],
+        "hex": "#b72818"
+      }
+    },
+    "categorical-background": {
+      "$description": "Categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-blue-background-color-default",
+          "note": "no direct mapping; blue-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-blue/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "blue-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2314,
+          0.3882,
+          0.9843
+        ],
+        "hex": "#3b63fb"
+      }
+    },
+    "categorical-blue": {
+      "$description": "Blue categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-blue",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-blue-background-color-default",
+          "note": "no direct mapping; blue-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-blue/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "blue-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2314,
+          0.3882,
+          0.9843
+        ],
+        "hex": "#3b63fb"
+      }
+    },
+    "categorical-blue-background": {
+      "$description": "Blue categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-blue-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "blue-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2314,
+          0.3882,
+          0.9843
+        ],
+        "hex": "#3b63fb"
+      }
+    },
+    "categorical-blue-background-subtle": {
+      "$description": "Subtle blue categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-blue-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "blue-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.898,
+          0.9412,
+          0.9961
+        ],
+        "hex": "#e5f0fe"
+      }
+    },
+    "categorical-brown": {
+      "$description": "Brown categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-brown",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-brown-subtle-background-color-default",
+          "note": "no direct mapping; brown-subtle-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-brown/property-background/emphasis-subtle",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "brown-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9686,
+          0.9333,
+          0.8824
+        ],
+        "hex": "#f7eee1"
+      }
+    },
+    "categorical-brown-background": {
+      "$description": "Brown categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-brown/property-background",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-brown-background-color-default",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "brown-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.5451,
+          0.4275,
+          0.2588
+        ],
+        "hex": "#8b6d42"
+      }
+    },
+    "categorical-brown-background-subtle": {
+      "$description": "Subtle brown categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-brown/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-brown-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "brown-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9686,
+          0.9333,
+          0.8824
+        ],
+        "hex": "#f7eee1"
+      }
+    },
+    "categorical-cyan": {
+      "$description": "Cyan categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-cyan",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-cyan-subtle-background-color-default",
+          "note": "no direct mapping; cyan-subtle-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-cyan/property-background/emphasis-subtle",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "cyan-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.851,
+          0.9569,
+          0.9922
+        ],
+        "hex": "#d9f4fd"
+      }
+    },
+    "categorical-cyan-background": {
+      "$description": "Cyan categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-background",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-cyan-background-color-default",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "cyan-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0431,
+          0.4706,
+          0.702
+        ],
+        "hex": "#0b78b3"
+      }
+    },
+    "categorical-cyan-background-subtle": {
+      "$description": "Subtle cyan categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-cyan-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "cyan-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.851,
+          0.9569,
+          0.9922
+        ],
+        "hex": "#d9f4fd"
+      }
+    },
+    "categorical-gray": {
+      "$description": "Gray categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-gray",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-gray-subtle-background-color-default",
+          "note": "no direct mapping; gray-subtle-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "gray-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9137,
+          0.9137,
+          0.9137
+        ],
+        "hex": "#e9e9e9"
+      }
+    },
+    "categorical-gray-background": {
+      "$description": "Gray categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-gray-background-color-default",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "gray-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3137,
+          0.3137,
+          0.3137
+        ],
+        "hex": "#505050"
+      }
+    },
+    "categorical-gray-background-subtle": {
+      "$description": "Subtle gray categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-gray-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "gray-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9137,
+          0.9137,
+          0.9137
+        ],
+        "hex": "#e9e9e9"
+      }
+    },
+    "categorical-green": {
+      "$description": "Green categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-green",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-green-background-color-default",
+          "note": "no direct mapping; green-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-green/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "green-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0196,
+          0.5137,
+          0.3059
+        ],
+        "hex": "#05834e"
+      }
+    },
+    "categorical-green-background": {
+      "$description": "Green categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-green/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-green-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "green-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0196,
+          0.5137,
+          0.3059
+        ],
+        "hex": "#05834e"
+      }
+    },
+    "categorical-green-background-subtle": {
+      "$description": "Subtle green categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-green-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "green-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8431,
+          0.9686,
+          0.8824
+        ],
+        "hex": "#d7f7e1"
+      }
+    },
+    "categorical-indigo": {
+      "$description": "Indigo categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-indigo",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-indigo-background-color-default",
+          "note": "no direct mapping; indigo-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-indigo/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "indigo-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.4431,
+          0.3333,
+          0.9804
+        ],
+        "hex": "#7155fa"
+      }
+    },
+    "categorical-indigo-background": {
+      "$description": "Indigo categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-indigo/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-indigo-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "indigo-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.4431,
+          0.3333,
+          0.9804
+        ],
+        "hex": "#7155fa"
+      }
+    },
+    "categorical-indigo-background-subtle": {
+      "$description": "Subtle indigo categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-indigo/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-indigo-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "indigo-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9216,
+          0.9333,
+          1
+        ],
+        "hex": "#ebeeff"
+      }
+    },
+    "categorical-lime": {
+      "$description": "Lime categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-lime",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-chartreuse-subtle-background-color-default",
+          "note": "no direct mapping; chartreuse-subtle-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "chartreuse-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9176,
+          0.9647,
+          0.6784
+        ],
+        "hex": "#eaf6ad"
+      }
+    },
+    "categorical-lime-background": {
+      "$description": "Lime categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-chartreuse-background-color-default",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "chartreuse-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6392,
+          0.7686,
+          0
+        ],
+        "hex": "#a3c400"
+      }
+    },
+    "categorical-lime-background-subtle": {
+      "$description": "Subtle lime categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-chartreuse-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "chartreuse-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9176,
+          0.9647,
+          0.6784
+        ],
+        "hex": "#eaf6ad"
+      }
+    },
+    "categorical-magenta-background": {
+      "$description": "Magenta categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-magenta-background-color-default",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "magenta-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.851,
+          0.1373,
+          0.3804
+        ],
+        "hex": "#d92361"
+      }
+    },
+    "categorical-magenta-background-subtle": {
+      "$description": "Subtle magenta categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-magenta-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "magenta-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9098,
+          0.9412
+        ],
+        "hex": "#ffe8f0"
+      }
+    },
+    "categorical-orange": {
+      "$description": "Orange categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-orange",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-orange-background-color-default",
+          "note": "no direct mapping; orange-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-orange/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "orange-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9882,
+          0.4902,
+          0
+        ],
+        "hex": "#fc7d00"
+      }
+    },
+    "categorical-orange-background": {
+      "$description": "Orange categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-orange-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "orange-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9882,
+          0.4902,
+          0
+        ],
+        "hex": "#fc7d00"
+      }
+    },
+    "categorical-orange-background-subtle": {
+      "$description": "Subtle orange categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-orange-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "orange-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9255,
+          0.8118
+        ],
+        "hex": "#ffeccf"
+      }
+    },
+    "categorical-pink": {
+      "$description": "Pink categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-pink",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-pink-background-color-default",
+          "note": "no direct mapping; pink-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-pink/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "pink-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8078,
+          0.1647,
+          0.5725
+        ],
+        "hex": "#ce2a92"
+      }
+    },
+    "categorical-pink-background": {
+      "$description": "Pink categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-pink/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-pink-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "pink-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8078,
+          0.1647,
+          0.5725
+        ],
+        "hex": "#ce2a92"
+      }
+    },
+    "categorical-pink-background-subtle": {
+      "$description": "Subtle pink categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-pink/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-pink-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "pink-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9098,
+          0.9686
+        ],
+        "hex": "#ffe8f7"
+      }
+    },
+    "categorical-purple": {
+      "$description": "Purple categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-purple",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-purple-background-color-default",
+          "note": "no direct mapping; purple-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-purple/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "purple-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6039,
+          0.2784,
+          0.8863
+        ],
+        "hex": "#9a47e2"
+      }
+    },
+    "categorical-purple-background": {
+      "$description": "Purple categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-purple-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "purple-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6039,
+          0.2784,
+          0.8863
+        ],
+        "hex": "#9a47e2"
+      }
+    },
+    "categorical-purple-background-subtle": {
+      "$description": "Subtle purple categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-purple-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "purple-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9569,
+          0.9216,
+          0.9882
+        ],
+        "hex": "#f4ebfc"
+      }
+    },
+    "categorical-red": {
+      "$description": "Red categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-red",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-red-background-color-default",
+          "note": "no direct mapping; red-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-red/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "red-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8431,
+          0.1961,
+          0.1255
+        ],
+        "hex": "#d73220"
+      }
+    },
+    "categorical-red-background": {
+      "$description": "Red categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-red/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-red-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "red-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8431,
+          0.1961,
+          0.1255
+        ],
+        "hex": "#d73220"
+      }
+    },
+    "categorical-red-background-subtle": {
+      "$description": "Subtle red categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-red-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "red-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9216,
+          0.9098
+        ],
+        "hex": "#ffebe8"
+      }
+    },
+    "categorical-teal": {
+      "$description": "Teal categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-teal",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-seafoam-background-color-default",
+          "note": "no direct mapping; seafoam-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-teal/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "seafoam-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0275,
+          0.5059,
+          0.4275
+        ],
+        "hex": "#07816d"
+      }
+    },
+    "categorical-teal-background": {
+      "$description": "Teal categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-seafoam-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "seafoam-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0275,
+          0.5059,
+          0.4275
+        ],
+        "hex": "#07816d"
+      }
+    },
+    "categorical-teal-background-subtle": {
+      "$description": "Subtle teal categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-seafoam-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "seafoam-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8275,
+          0.9647,
+          0.9176
+        ],
+        "hex": "#d3f6ea"
+      }
+    },
+    "categorical-yellow": {
+      "$description": "Yellow categorical color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-yellow",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-yellow-background-color-default",
+          "note": "no direct mapping; yellow-background-color-default maps to the more specific dsi:concept/color/usage-categorical/hue-yellow/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "yellow-background-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9608,
+          0.7804,
+          0
+        ],
+        "hex": "#f5c700"
+      }
+    },
+    "categorical-yellow-background": {
+      "$description": "Yellow categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-yellow-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "yellow-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9608,
+          0.7804,
+          0
+        ],
+        "hex": "#f5c700"
+      }
+    },
+    "categorical-yellow-background-subtle": {
+      "$description": "Subtle yellow categorical background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-yellow-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "yellow-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9451,
+          0.5922
+        ],
+        "hex": "#fff197"
+      }
+    },
+    "danger": {
+      "$description": "Danger color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-color-100",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-color-100",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9647,
+          0.9608
+        ],
+        "hex": "#fff6f5"
+      }
+    },
+    "danger-background": {
+      "$description": "Danger background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-background",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-background-color-default",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8431,
+          0.1961,
+          0.1255
+        ],
+        "hex": "#d73220"
+      }
+    },
+    "danger-background-active": {
+      "$description": "Pressed danger background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-background/state-active",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-background-color-down",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-background-color-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7176,
+          0.1569,
+          0.0941
+        ],
+        "hex": "#b72818"
+      }
+    },
+    "danger-background-focus": {
+      "$description": "Focused danger background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-background/state-focus",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-background-color-key-focus",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-background-color-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7176,
+          0.1569,
+          0.0941
+        ],
+        "hex": "#b72818"
+      }
+    },
+    "danger-background-hover": {
+      "$description": "Hovered danger background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-background/state-hover",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-background-color-hover",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-background-color-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7176,
+          0.1569,
+          0.0941
+        ],
+        "hex": "#b72818"
+      }
+    },
+    "danger-background-subtle": {
+      "$description": "Subtle danger background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-subdued-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "negative-subdued-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9216,
+          0.9098
+        ],
+        "hex": "#ffebe8"
+      }
+    },
+    "danger-background-subtle-active": {
+      "$description": "Pressed subtle danger background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-active",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-subdued-background-color-down",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "negative-subdued-background-color-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.8392,
+          0.8196
+        ],
+        "hex": "#ffd6d1"
+      }
+    },
+    "danger-background-subtle-focus": {
+      "$description": "Focused subtle danger background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-focus",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-subdued-background-color-key-focus",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "negative-subdued-background-color-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.8392,
+          0.8196
+        ],
+        "hex": "#ffd6d1"
+      }
+    },
+    "danger-background-subtle-hover": {
+      "$description": "Hovered subtle danger background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-hover",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-subdued-background-color-hover",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "negative-subdued-background-color-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.8392,
+          0.8196
+        ],
+        "hex": "#ffd6d1"
+      }
+    },
+    "danger-border": {
+      "$description": "Danger border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-border",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-border-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "negative-border-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8431,
+          0.1961,
+          0.1255
+        ],
+        "hex": "#d73220"
+      }
+    },
+    "danger-border-active": {
+      "$description": "Pressed danger border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-border/state-active",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-border-color-down",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "negative-border-color-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6118,
+          0.1294,
+          0.0745
+        ],
+        "hex": "#9c2113"
+      }
+    },
+    "danger-border-focus": {
+      "$description": "Focused danger border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-border/state-focus",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-border-color-focus",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "negative-border-color-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7176,
+          0.1569,
+          0.0941
+        ],
+        "hex": "#b72818"
+      }
+    },
+    "danger-border-focus+hover": {
+      "$description": "Focused hovered danger border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-border/state-focus+hover",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-border-color-focus-hover",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "negative-border-color-focus-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6118,
+          0.1294,
+          0.0745
+        ],
+        "hex": "#9c2113"
+      }
+    },
+    "danger-border-hover": {
+      "$description": "Hovered danger border",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-border/state-hover",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-border-color-hover",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "negative-border-color-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7176,
+          0.1569,
+          0.0941
+        ],
+        "hex": "#b72818"
+      }
+    },
+    "danger-foreground": {
+      "$description": "Danger foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-foreground",
+          "match": "narrow",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-content-color-default",
+          "note": "only a narrow match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-content-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8431,
+          0.1961,
+          0.1255
+        ],
+        "hex": "#d73220"
+      }
+    },
+    "danger-foreground-active": {
+      "$description": "Pressed danger foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-foreground/state-active",
+          "match": "narrow",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-content-color-down",
+          "note": "only a narrow match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-content-color-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7176,
+          0.1569,
+          0.0941
+        ],
+        "hex": "#b72818"
+      }
+    },
+    "danger-foreground-focus": {
+      "$description": "Focused danger foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-foreground/state-focus",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-content-color-key-focus",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "negative-content-color-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7176,
+          0.1569,
+          0.0941
+        ],
+        "hex": "#b72818"
+      }
+    },
+    "danger-foreground-hover": {
+      "$description": "Hovered danger foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-foreground/state-hover",
+          "match": "narrow",
+          "mode": "light",
+          "nativeName": "--spectrum-negative-content-color-hover",
+          "note": "only a narrow match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "negative-content-color-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7176,
+          0.1569,
+          0.0941
+        ],
+        "hex": "#b72818"
+      }
+    },
+    "danger-icon": {
+      "$description": "Danger icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-danger/property-icon",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-icon-color-negative",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "icon-color-negative",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9412,
+          0.2196,
+          0.1373
+        ],
+        "hex": "#f03823"
+      }
+    },
+    "focus-ring": {
+      "$description": "Focus ring",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-focus-ring",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-focus-indicator-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "focus-indicator-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2941,
+          0.4588,
+          1
+        ],
+        "hex": "#4b75ff"
+      }
+    },
+    "foreground": {
+      "$description": "Foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-foreground",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-content-color-default",
+          "note": "no direct mapping; accent-content-color-default maps to the more specific dsi:concept/color/intent-accent/property-foreground",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "accent-content-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2314,
+          0.3882,
+          0.9843
+        ],
+        "hex": "#3b63fb"
+      }
+    },
+    "foreground-active": {
+      "$description": "Pressed foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-foreground/state-active",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-content-color-down",
+          "note": "no direct mapping; accent-content-color-down maps to the more specific dsi:concept/color/intent-accent/property-foreground/state-active",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "accent-content-color-down",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "foreground-disabled": {
+      "$description": "Disabled foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-foreground/state-disabled",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-disabled-content-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "disabled-content-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7765,
+          0.7765,
+          0.7765
+        ],
+        "hex": "#c6c6c6"
+      }
+    },
+    "foreground-hover": {
+      "$description": "Hovered foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-foreground/state-hover",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-content-color-hover",
+          "note": "no direct mapping; accent-content-color-hover maps to the more specific dsi:concept/color/intent-accent/property-foreground/state-hover",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "accent-content-color-hover",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "foreground-selected": {
+      "$description": "Selected foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-foreground/state-selected",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-accent-content-color-selected",
+          "note": "no direct mapping; accent-content-color-selected maps to the more specific dsi:concept/color/intent-accent/property-foreground/state-selected",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "accent-content-color-selected",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "foreground-subtle": {
+      "$description": "Subtle foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-foreground/emphasis-subtle",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-subdued-content-color-default",
+          "note": "no direct mapping; neutral-subdued-content-color-default maps to the more specific dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-subdued-content-color-default",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3137,
+          0.3137,
+          0.3137
+        ],
+        "hex": "#505050"
+      }
+    },
+    "heading-text": {
+      "$description": "Heading text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-heading/property-text",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-title-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "title-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "icon": {
+      "$description": "Icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-icon",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-icon-color-notice",
+          "note": "no direct mapping; icon-color-notice maps to the more specific dsi:concept/color/intent-warning/property-icon",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "icon-color-notice",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8314,
+          0.3569,
+          0
+        ],
+        "hex": "#d45b00"
+      }
+    },
+    "info": {
+      "$description": "Info color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-informative-color-100",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "informative-color-100",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9608,
+          0.9765,
+          1
+        ],
+        "hex": "#f5f9ff"
+      }
+    },
+    "info-background": {
+      "$description": "Info background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-informative-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "informative-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2314,
+          0.3882,
+          0.9843
+        ],
+        "hex": "#3b63fb"
+      }
+    },
+    "info-background-active": {
+      "$description": "Pressed info background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-background/state-active",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-informative-background-color-down",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "informative-background-color-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "info-background-focus": {
+      "$description": "Focused info background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-background/state-focus",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-informative-background-color-key-focus",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "informative-background-color-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "info-background-hover": {
+      "$description": "Hovered info background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-background/state-hover",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-informative-background-color-hover",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "informative-background-color-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1529,
+          0.302,
+          0.9176
+        ],
+        "hex": "#274dea"
+      }
+    },
+    "info-background-subtle": {
+      "$description": "Subtle info background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-informative-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "informative-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.898,
+          0.9412,
+          0.9961
+        ],
+        "hex": "#e5f0fe"
+      }
+    },
+    "info-icon": {
+      "$description": "Info icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-info/property-icon",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-icon-color-informative",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "icon-color-informative",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2941,
+          0.4588,
+          1
+        ],
+        "hex": "#4b75ff"
+      }
+    },
+    "neutral-background": {
+      "$description": "Neutral background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-background",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-background-color-default",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1608,
+          0.1608,
+          0.1608
+        ],
+        "hex": "#292929"
+      }
+    },
+    "neutral-background-active": {
+      "$description": "Pressed neutral background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-background/state-active",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-background-color-down",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-background-color-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-background-active+selected": {
+      "$description": "Pressed selected neutral background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-background/state-active+selected",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-background-color-selected-down",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-background-color-selected-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-background-focus": {
+      "$description": "Focused neutral background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-background/state-focus",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-background-color-key-focus",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-background-color-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-background-focus+selected": {
+      "$description": "Focused selected neutral background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-background/state-focus+selected",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-background-color-selected-key-focus",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-background-color-selected-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-background-hover": {
+      "$description": "Hovered neutral background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-background/state-hover",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-background-color-hover",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-background-color-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-background-hover+selected": {
+      "$description": "Hovered selected neutral background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-background/state-hover+selected",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-background-color-selected-hover",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-background-color-selected-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-background-selected": {
+      "$description": "Selected neutral background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-background/state-selected",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-background-color-selected-default",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-background-color-selected-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1608,
+          0.1608,
+          0.1608
+        ],
+        "hex": "#292929"
+      }
+    },
+    "neutral-background-subtle": {
+      "$description": "Subtle neutral background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "neutral-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9137,
+          0.9137,
+          0.9137
+        ],
+        "hex": "#e9e9e9"
+      }
+    },
+    "neutral-foreground": {
+      "$description": "Neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-content-color-default",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-content-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1608,
+          0.1608,
+          0.1608
+        ],
+        "hex": "#292929"
+      }
+    },
+    "neutral-foreground-active": {
+      "$description": "Pressed neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/state-active",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-content-color-down",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-content-color-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-foreground-focus": {
+      "$description": "Focused neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/state-focus",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-content-color-key-focus",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "neutral-content-color-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-foreground-focus+hover": {
+      "$description": "Focused hovered neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/state-focus+hover",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-content-color-focus-hover",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-content-color-focus-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-foreground-focus+selected": {
+      "$description": "Focused selected neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/state-focus+selected",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-content-color-selected-key-focus",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "neutral-content-color-selected-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-foreground-hover": {
+      "$description": "Hovered neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/state-hover",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-content-color-hover",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-content-color-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-foreground-hover+selected": {
+      "$description": "Hovered selected neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/state-hover+selected",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-content-color-selected-hover",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-content-color-selected-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "neutral-foreground-selected": {
+      "$description": "Selected neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/state-selected",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-content-color-selected-default",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "neutral-content-color-selected-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1608,
+          0.1608,
+          0.1608
+        ],
+        "hex": "#292929"
+      }
+    },
+    "neutral-foreground-subtle": {
+      "$description": "Subtle neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-subdued-content-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "neutral-subdued-content-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3137,
+          0.3137,
+          0.3137
+        ],
+        "hex": "#505050"
+      }
+    },
+    "neutral-foreground-subtle-active": {
+      "$description": "Pressed subtle neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle/state-active",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-subdued-content-color-down",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "neutral-subdued-content-color-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1608,
+          0.1608,
+          0.1608
+        ],
+        "hex": "#292929"
+      }
+    },
+    "neutral-foreground-subtle-focus": {
+      "$description": "Focused subtle neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle/state-focus",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-subdued-content-color-key-focus",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "neutral-subdued-content-color-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1608,
+          0.1608,
+          0.1608
+        ],
+        "hex": "#292929"
+      }
+    },
+    "neutral-foreground-subtle-hover": {
+      "$description": "Hovered subtle neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle/state-hover",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-subdued-content-color-hover",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "neutral-subdued-content-color-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1608,
+          0.1608,
+          0.1608
+        ],
+        "hex": "#292929"
+      }
+    },
+    "neutral-foreground-subtle-selected": {
+      "$description": "Selected subtle neutral foreground",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle/state-selected",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-neutral-subdued-content-color-selected",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "neutral-subdued-content-color-selected",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1608,
+          0.1608,
+          0.1608
+        ],
+        "hex": "#292929"
+      }
+    },
+    "neutral-icon": {
+      "$description": "Neutral icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-neutral/property-icon",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-icon-color-neutral",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "icon-color-neutral",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.5608,
+          0.5608,
+          0.5608
+        ],
+        "hex": "#8f8f8f"
+      }
+    },
+    "on-fill-text": {
+      "$description": "On-fill text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-on-fill/property-text",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-static-black-text-color",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "static-black-text-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ],
+        "hex": "#000000"
+      }
+    },
+    "overlay-background": {
+      "$description": "Overlay background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-overlay/property-background",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-background-elevated-color",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "background-elevated-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "hex": "#ffffff"
+      }
+    },
+    "overlay-shadow": {
+      "$description": "Overlay shadow color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-overlay/property-shadow",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-drop-shadow-elevated-key-color",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "drop-shadow-elevated-key-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "alpha": 0.12,
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ],
+        "hex": "#000000"
+      }
+    },
+    "page-background": {
+      "$description": "Page background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-page/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-background-base-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "background-base-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "hex": "#ffffff"
+      }
+    },
+    "scrim": {
+      "$description": "Scrim color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-scrim",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-overlay-color",
+          "note": "no direct mapping; overlay-color maps to the more specific dsi:concept/color/usage-scrim/property-background",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "overlay-color",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ],
+        "hex": "#000000"
+      }
+    },
+    "scrim-background": {
+      "$description": "Scrim background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-scrim/property-background",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-overlay-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "overlay-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ],
+        "hex": "#000000"
+      }
+    },
+    "shadow": {
+      "$description": "Shadow color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-shadow",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-drop-shadow-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "drop-shadow-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "alpha": 0.12,
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ],
+        "hex": "#000000"
+      }
+    },
+    "shadow-dragged": {
+      "$description": "Dragged shadow color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-shadow/state-dragged",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-drop-shadow-dragged-color",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "drop-shadow-dragged-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "alpha": 0.2,
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ],
+        "hex": "#000000"
+      }
+    },
+    "success": {
+      "$description": "Success color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-positive-color-100",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "positive-color-100",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9294,
+          0.9882,
+          0.9451
+        ],
+        "hex": "#edfcf1"
+      }
+    },
+    "success-background": {
+      "$description": "Success background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-positive-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "positive-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0196,
+          0.5137,
+          0.3059
+        ],
+        "hex": "#05834e"
+      }
+    },
+    "success-background-active": {
+      "$description": "Pressed success background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-background/state-active",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-positive-background-color-down",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "positive-background-color-down",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0118,
+          0.4314,
+          0.2706
+        ],
+        "hex": "#036e45"
+      }
+    },
+    "success-background-focus": {
+      "$description": "Focused success background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-background/state-focus",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-positive-background-color-key-focus",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "positive-background-color-key-focus",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0118,
+          0.4314,
+          0.2706
+        ],
+        "hex": "#036e45"
+      }
+    },
+    "success-background-hover": {
+      "$description": "Hovered success background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-background/state-hover",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-positive-background-color-hover",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "positive-background-color-hover",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0118,
+          0.4314,
+          0.2706
+        ],
+        "hex": "#036e45"
+      }
+    },
+    "success-background-subtle": {
+      "$description": "Subtle success background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-positive-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "positive-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8431,
+          0.9686,
+          0.8824
+        ],
+        "hex": "#d7f7e1"
+      }
+    },
+    "success-icon": {
+      "$description": "Success icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-success/property-icon",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-icon-color-positive",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "icon-color-positive",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0275,
+          0.5765,
+          0.3333
+        ],
+        "hex": "#079355"
+      }
+    },
+    "surface-background": {
+      "$description": "Surface background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-surface/property-background",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-background-layer-1-color",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "background-layer-1-color",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9725,
+          0.9725,
+          0.9725
+        ],
+        "hex": "#f8f8f8"
+      }
+    },
+    "text": {
+      "$description": "Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/property-text",
+          "match": "close",
+          "mode": "light",
+          "nativeName": "--spectrum-title-color",
+          "note": "no direct mapping; title-color maps to the more specific dsi:concept/color/usage-heading/property-text",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "title-color",
+          "version": "15.6.0",
+          "via": "more-specific"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0745,
+          0.0745,
+          0.0745
+        ],
+        "hex": "#131313"
+      }
+    },
+    "warning": {
+      "$description": "Warning color",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning",
+          "match": "broad",
+          "mode": "light",
+          "nativeName": "--spectrum-notice-color-100",
+          "note": "only a broad match",
+          "product": "spectrum",
+          "status": "nearest",
+          "theme": "light",
+          "token": "notice-color-100",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9647,
+          0.9059
+        ],
+        "hex": "#fff6e7"
+      }
+    },
+    "warning-background": {
+      "$description": "Warning background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-background",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-notice-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "notice-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9882,
+          0.4902,
+          0
+        ],
+        "hex": "#fc7d00"
+      }
+    },
+    "warning-background-subtle": {
+      "$description": "Subtle warning background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-notice-subtle-background-color-default",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "notice-subtle-background-color-default",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9255,
+          0.8118
+        ],
+        "hex": "#ffeccf"
+      }
+    },
+    "warning-icon": {
+      "$description": "Warning icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/property-icon",
+          "match": "exact",
+          "mode": "light",
+          "nativeName": "--spectrum-icon-color-notice",
+          "product": "spectrum",
+          "status": "match",
+          "theme": "light",
+          "token": "icon-color-notice",
+          "version": "15.6.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8314,
+          0.3569,
+          0
+        ],
+        "hex": "#d45b00"
+      }
+    }
+  }
+}

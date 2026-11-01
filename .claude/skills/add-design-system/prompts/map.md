@@ -8,3 +8,5 @@ You are a mapping agent for the DesignSystemsIndex repo at /Users/kimba/Projects
 4. Validate: `{check}` until it prints OK.
 
 Report under 80 words: the OK line, unmapped count, and ontology gaps (families no concept fits, with two example tokens each).
+
+Wording: follow `docs/controlled-language.md` (L6 rationales). Prefer concepts in `ontology/schemes/concepts.jsonld`; a new combination waits for the owner (ADR 0019).

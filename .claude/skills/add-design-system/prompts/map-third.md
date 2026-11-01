@@ -8,3 +8,5 @@ You are an independent third mapping agent for the DesignSystemsIndex repo at /U
 4. Validate: `{check}` until it prints OK.
 
 Report under 60 words: the OK line and unmapped count.
+
+Wording: follow `docs/controlled-language.md` (L6 rationales). Prefer concepts in `ontology/schemes/concepts.jsonld`; a new combination waits for the owner (ADR 0019).

@@ -9,7 +9,7 @@ import { loadNative, type NativeSet } from '@dsi/resolve';
 import { preparePacket, readMappings, type Scope } from './packet.ts';
 import { auditTerms, prepareAudit, readVerdicts } from './audit.ts';
 import { rankEmphasis } from './rank.ts';
-import { parseConcept } from '@dsi/schema';
+import { conceptName, gateUnregistered, isRegistered, parseConcept, readLexicon, registerConcepts } from '@dsi/schema';
 import { resolve as resolveToken, showValue } from '@dsi/resolve';
 import { applyDecisions, applyDisputes, applyTermDecisions, collectDisputes, collectQueue, collectTermQueue, disputeKey, enrichQueue, renderPage, type Decision, type DisputeDecision, type TermDecision } from './review.ts';
 
@@ -24,6 +24,7 @@ const USAGE = `usage:
   dsi-map review <scope> <run> <out.html> [vocab run[,run]] [--words-only] [--third <run>]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
   dsi-map tiebreak <scope> <run> <product> <first run>   two of three: approve where a third model agrees with one of the first two
   dsi-map settle <scope> <run> <product> <first run>     settle rules: three agree (cautious match), emphasis-only splits (rank or broad), two of three at 0.5
+  dsi-map reconcile <scope> [--dry]               fold single-system concepts into shared ones where one facet separates them (ADR 0019)
   dsi-map rank-emphasis <scope> <run> <product>   settle emphasis by contrast rank where both agents agree on the rest (ADR 0018)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
 
@@ -78,7 +79,7 @@ if (cmd === 'prepare') {
       const set = loadNative(root, product, version);
       for (const t of tokens) { const c = classify(terms, t, String(set.tokens.get(t)?.prov.file ?? ''), scope.domain); if (c.concept && c.explained === 1 && !c.conflicts.length) votes.set(t, c.concept); }
     }
-    const r = merge(root, product, version, impl, a, b, scope.id, undefined, votes);
+    const r = merge(root, product, version, impl, a, b, scope.id, undefined, votes, ontology);
     console.log(`${product}: ${r.approved} approved, ${r.approvedWithClassifier} approved with the classifier's vote, ${r.approvedUnmapped} agreed unmapped, ${r.queued} queued for review -> ${r.file}`);
   }
   console.log(`approval rule: same concept and match from two models, both confidence >= ${APPROVE_AT}; or >= ${APPROVE_WITH_CLASSIFIER_AT} when the classifier (approved terms, whole name explained) gives the same concept and the match is exact or close`);
@@ -89,6 +90,10 @@ if (cmd === 'prepare') {
   try {
     const pf = readProposals(path.join(runDir, `${product}.${role}.proposals.json`), ontology, new Set(packet.tokens.map((t: { token: string }) => t.token)));
     console.log(`OK: ${pf.proposals.length} proposals, all packet tokens answered, all concepts valid`);
+    // L6 (docs/controlled-language.md): warn, never refuse.
+    const lint = (r: string) => { const out: string[] = []; const n = r.trim().split(/\s+/).length; if (n > 40) out.push(`${n} words (max 40)`); if (!/\bEvidence:/.test(r)) out.push('no "Evidence:" sentence'); const h = r.match(/\b(probably|seems?|maybe|perhaps|likely|might)\b/i); if (h) out.push(`hedging word "${h[0]}"`); return out; };
+    const bad = (pf.proposals as any[]).map((p) => [p.token, lint(p.rationale ?? '')] as const).filter(([, w]) => w.length);
+    if (bad.length) { console.log(`WARN: ${bad.length} rationale(s) break L6`); for (const [t, w] of bad.slice(0, 10)) console.log(`  ${t}: ${w.join('; ')}`); }
   } catch (e) { console.error(`FAIL: ${(e as Error).message}`); process.exit(1); }
 } else if (cmd === 'review') {
   const [out, vocabRun] = [process.argv[5], process.argv[6]];
@@ -107,7 +112,8 @@ if (cmd === 'prepare') {
   };
   const hexIn = (p: string, t: string, mode: string) => { const s = setOf(p); const r = resolveToken(s, s.themes.includes(mode) ? mode : s.themes[0] ?? '', t); return r.value ? showValue(r.type, r.value) : undefined; };
   const near = (p: string, t: string) => { const s = setOf(p); return [...s.tokens.keys()].filter((k) => k === t || k.startsWith(t + '.') || k.startsWith(t + '-')); };
-  const items = wordsOnly ? [] : enrichQueue(root, scope, collectQueue(root, scope, runDir), third, hexIn, near);
+  const lex = readLexicon(root);
+  const items = wordsOnly ? [] : enrichQueue(root, scope, collectQueue(root, scope, runDir), third, hexIn, near, (c) => { const p = parseConcept(ontology, c); return { name: typeof p === 'string' ? undefined : conceptName(lex, p), registered: isRegistered(ontology, c) }; });
   // Several vocabulary runs: one card per word, examples from the first run that counted it.
   const termItems = [...(vocabRun && !vocabRun.startsWith('--') ? vocabRun.split(',').flatMap((r) => collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', r))) : [])
     .reduce((m, t) => { const prev = m.get(t.key); if (!prev || (!prev.examples.length && t.examples.length)) m.set(t.key, t); return m; }, new Map<string, any>()).values()];
@@ -131,6 +137,10 @@ if (cmd === 'prepare') {
     const disputedTerms = new Map(open.filter((x) => x.kind === 'term').map((x) => [x.key, x.current.concept]));
     console.log('disputes', JSON.stringify(applyDisputes(root, scope, disputeDecisions, reviewer, suggestions, disputedTerms)));
   }
+  // ADR 0019: what the owner approved is registered (generated name and definition; edit concepts.jsonld to refine).
+  const fresh: string[] = [];
+  for (const [product, { version }] of Object.entries(scope.products)) { const m = readMappings(root, product, version) as any; for (const x of m?.mappings ?? []) if (x.status === 'approved' && !isRegistered(ontology, x.concept)) fresh.push(x.concept); }
+  if (fresh.length) console.log('registered', registerConcepts(root, ontology, fresh).length, 'new concept(s)');
 } else if (cmd === 'tiebreak') {
   // Two of three (ADR 0005 amended): a third agent on another model answers the still-contested tokens blind; when its
   // concept and match equal one of the first two answers (each confidence >= APPROVE_AT), that answer is approved.
@@ -169,6 +179,7 @@ if (cmd === 'prepare') {
     n++;
   }
   file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
+  { const held = gateUnregistered(ontology, file); if (held.length) console.log(`${held.length} answer(s) use new concepts and wait for owner approval (ADR 0019)`); }
   fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n');
   console.log(`${product}: ${n} approved and ${unmappedN} agreed unmapped by two of three (third: ${c.model})`);
 } else if (cmd === 'settle') {
@@ -255,8 +266,49 @@ if (cmd === 'prepare') {
     }
   }
   file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
+  { const held = gateUnregistered(ontology, file); if (held.length) console.log(`${held.length} answer(s) use new concepts and wait for owner approval (ADR 0019)`); }
   fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n');
   console.log(`${product}: ${JSON.stringify(counts)}; ${left.length} left for review`);
+} else if (cmd === 'reconcile') {
+  // ADR 0019: a concept only one system uses folds into a shared one (used by 2+ systems) as broad when dropping
+  // exactly one facet reaches it, the system maps nothing else there, and no other token of the system folds there
+  // too (a ladder). Owner decisions (human review) are never changed. Pass --dry to only report.
+  const dry = process.argv.includes('--dry');
+  const files = new Map<string, { mf: string; file: any }>();
+  for (const [product, { version }] of Object.entries(scope.products)) {
+    const mf = path.join(root, 'mappings', product, `${version}.mappings.json`);
+    if (fs.existsSync(mf)) files.set(product, { mf, file: JSON.parse(fs.readFileSync(mf, 'utf8')) });
+  }
+  const usedBy = new Map<string, Set<string>>();
+  for (const [product, { file }] of files) for (const m of file.mappings) if (m.status === 'approved') (usedBy.get(m.concept) ?? usedBy.set(m.concept, new Set()).get(m.concept)!).add(product);
+  const at = new Date().toISOString();
+  const counts: Record<string, number> = { folded: 0, unique: 0, ambiguous: 0, ladder: 0, owner: 0, narrowOrRelated: 0 };
+  for (const [product, { mf, file }] of files) {
+    const mine = new Set(file.mappings.filter((m: any) => m.status === 'approved').map((m: any) => m.concept));
+    const plans = new Map<string, any[]>();
+    for (const m of file.mappings.filter((m: any) => m.status === 'approved' && usedBy.get(m.concept)!.size === 1)) {
+      if (m.provenance?.method === 'human-review' || m.review?.by === 'kimgranlund') { counts.owner++; continue; }
+      if (m.match === 'narrow' || m.match === 'related') { counts.narrowOrRelated++; continue; }
+      const segs = m.concept.split('/');
+      const segs2: string[] = segs; const cands = [...new Set<string>(segs2.slice(3).map((_, i) => [...segs2.slice(0, 3 + i), ...segs2.slice(4 + i)].join('/')))]
+        .filter((b) => b.split('/').length > 3 && (usedBy.get(b)?.size ?? 0) >= 2 && !mine.has(b) && typeof parseConcept(ontology, b) !== 'string');
+      if (!cands.length) { counts.unique++; continue; }
+      if (cands.length > 1) { counts.ambiguous++; continue; }
+      (plans.get(cands[0]) ?? plans.set(cands[0], []).get(cands[0])!).push(m);
+    }
+    for (const [b, ms] of plans) {
+      if (ms.length > 1) { counts.ladder += ms.length; continue; }
+      const m = ms[0];
+      counts.folded++;
+      if (dry) { console.log(`  ${product} ${m.token}: ${m.concept.replace('dsi:concept/', '')} -> ${b.replace('dsi:concept/', '')} broad`); continue; }
+      const id = 'm-' + crypto.createHash('sha1').update([m.token, b, 'broad'].join('|')).digest('hex').slice(0, 12);
+      m.status = 'superseded'; m.supersededBy = id; m.review = { by: 'reconcile-rule', at, note: `Folded into the shared concept ${b} (ADR 0019).` };
+      file.mappings = file.mappings.filter((x: any) => x.id !== id);
+      file.mappings.push({ id, token: m.token, concept: b, match: 'broad', confidence: m.confidence ?? 1, status: 'approved', rationale: `${m.rationale ?? ''} Reconciled: ${m.concept} was used by ${product} only; the token is one specific kind of the shared ${b}.`.trim(), provenance: { agent: 'dsi-mapper', at, method: 'reconcile-v1' }, review: { by: 'reconcile-rule', at, note: 'Dropping one facet reaches a concept other systems share; nothing else of this system maps there (ADR 0019).' } });
+    }
+    if (!dry) { file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id)); fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n'); }
+  }
+  console.log(`reconcile${dry ? ' (dry run)' : ''}: ${JSON.stringify(counts)}`);
 } else if (cmd === 'rank-emphasis') {
   // ADR 0018: settle emphasis by contrast rank where both agents agree on everything else.
   const product = process.argv[5];
@@ -284,6 +336,7 @@ if (cmd === 'prepare') {
     added++;
   }
   file.mappings.sort((a: any, b: any) => a.token.localeCompare(b.token) || a.id.localeCompare(b.id));
+  { const held = gateUnregistered(ontology, file); if (held.length) console.log(`${held.length} answer(s) use new concepts and wait for owner approval (ADR 0019)`); }
   fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n');
   console.log(`${product}: ${added} settled by contrast rank; ${r.skipped.length} families or tokens skipped`);
   for (const s of r.skipped.slice(0, 15)) console.log('  ' + s);

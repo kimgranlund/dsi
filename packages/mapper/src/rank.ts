@@ -56,7 +56,7 @@ export function rankEmphasis(root: string, product: string, version: string, a: 
         const step = rest && stepOf.get(rest.token);
         if (!step) { skipped.push(`${m.token}: no ranked numbered sibling`); continue; }
         const st = stateOf(m.concept!);
-        out.push({ token: m.token, concept: [...fam.split('/'), `emphasis-${STEPS[step]}`, ...(st ? [st] : [])].join('/'), match: 'close', note: `numbered ladder ranked by contrast in ${modes.join(' and ')} (${orders[0]!.join(' < ')})` });
+        out.push({ token: m.token, concept: [...fam.split('/'), ...(STEPS[step] === 'default' ? [] : [`emphasis-${STEPS[step]}`]), ...(st ? [st] : [])].join('/'), match: 'close', note: `numbered ladder ranked by contrast in ${modes.join(' and ')} (${orders[0]!.join(' < ')})` });
       }
       continue;
     }
@@ -87,7 +87,7 @@ export function rankEmphasis(root: string, product: string, version: string, a: 
       if (!step) { skipped.push(`${m.token}: no resting sibling with a rank`); continue; }
       const parts = fam.split('/');
       const st = stateOf(m.concept!);
-      const concept = [...parts, `emphasis-${STEPS[step]}`, ...(st ? [st] : [])].join('/');
+      const concept = [...parts, ...(STEPS[step] === 'default' ? [] : [`emphasis-${STEPS[step]}`]), ...(st ? [st] : [])].join('/'); // ADR 0019: default is the bare concept
       out.push({ token: m.token, concept, match: agree ? 'exact' : 'close', note: agree ? `native word order equals contrast order in ${modes.join(' and ')}` : `native words contradict contrast order in ${modes.join(' and ')}; step by rank (${byContrast.map((t) => wordOf(t)).join(' < ')})` });
     }
   }

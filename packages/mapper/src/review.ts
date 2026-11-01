@@ -256,7 +256,7 @@ export function applyDisputes(root: string, scope: Scope, decisions: DisputeDeci
 }
 
 /** One answer on a card: identical concept+match answers from several models merge into one option with all voters. */
-export interface ReviewOption { concept?: string; match?: string; voters: { model: string; confidence?: number; rationale: string }[]; recordId?: string; shape: string }
+export interface ReviewOption { concept?: string; match?: string; name?: string; registered?: boolean; usedBy?: string[]; voters: { model: string; confidence?: number; rationale: string }[]; recordId?: string; shape: string }
 export interface ReviewExtras {
   options: ReviewOption[];
   preselect?: number;
@@ -275,8 +275,11 @@ export const shapeOf = (concept: string | undefined, match: string | undefined) 
  * Add what a reviewer needs to decide fast: merged options with all three votes, the family of sibling tokens and
  * how its approved members were mapped (the precedent), a preselected option, and colors to draw the token in use.
  */
-export function enrichQueue(root: string, scope: Scope, items: QueueItem[], third: (product: string) => Map<string, any>, value: (product: string, token: string, mode: string) => string | undefined, near: (product: string, token: string) => string[]): (QueueItem & ReviewExtras)[] {
+export function enrichQueue(root: string, scope: Scope, items: QueueItem[], third: (product: string) => Map<string, any>, value: (product: string, token: string, mode: string) => string | undefined, near: (product: string, token: string) => string[], describe: (concept: string) => { name?: string; registered: boolean } = () => ({ registered: true })): (QueueItem & ReviewExtras)[] {
   const out: (QueueItem & ReviewExtras)[] = [];
+  // Which systems use each concept in an approved mapping (ADR 0019: reuse first).
+  const usage = new Map<string, Set<string>>();
+  for (const [product, { version }] of Object.entries(scope.products)) for (const x of ((readMappings(root, product, version) as any)?.mappings ?? [])) if (x.status === 'approved') (usage.get(x.concept) ?? usage.set(x.concept, new Set()).get(x.concept)!).add(product);
   for (const [product, { version }] of Object.entries(scope.products)) {
     const mine = items.filter((i) => i.product === product);
     if (!mine.length) continue;
@@ -297,7 +300,8 @@ export function enrichQueue(root: string, scope: Scope, items: QueueItem[], thir
       for (const x of item.candidates) add(x.kind === 'mapping' ? x.concept : undefined, x.kind === 'mapping' ? x.match : undefined, { model: x.model, confidence: x.confidence, rationale: x.rationale }, x.kind === 'mapping' ? x.id : x.id);
       const cp = c.get(item.token);
       if (cp) add(cp.concept ?? undefined, cp.concept ? cp.match : undefined, { model: cp.model ?? 'third opinion', confidence: cp.confidence, rationale: cp.rationale ?? '' });
-      options.sort((a, b) => b.voters.length - a.voters.length);
+      for (const o of options) if (o.concept) { const d = describe(o.concept); o.name = d.name; o.registered = d.registered; o.usedBy = [...(usage.get(o.concept) ?? [])].sort(); }
+      options.sort((a, b) => b.voters.length - a.voters.length || Number(!!b.registered) - Number(!!a.registered) || (b.usedBy?.length ?? 0) - (a.usedBy?.length ?? 0));
       // Family: the word position whose variation has the most siblings (later positions win ties).
       const w = words(item.token);
       let best: { i: number; sibs: string[] } | undefined;
@@ -319,6 +323,7 @@ export function enrichQueue(root: string, scope: Scope, items: QueueItem[], thir
       const p = family?.precedent ? options.findIndex((o) => o.shape === family!.precedent!.shape) : -1;
       if (p >= 0) { preselect = p; preselectWhy = `matches ${family!.precedent!.count} of ${family!.precedent!.of} approved siblings`; }
       else if (options[0]?.voters.length >= 2) { preselect = 0; preselectWhy = `${options[0].voters.length} of ${options.reduce((n, o) => n + o.voters.length, 0)} models`; }
+      else { const shared = options.filter((o) => o.registered && (o.usedBy?.length ?? 0) >= 2); if (shared.length === 1) { preselect = options.indexOf(shared[0]); preselectWhy = `the only shared concept (${shared[0].usedBy!.join(', ')})`; } }
       // Context
       const ref = options[preselect ?? 0]?.concept ?? '';
       const property = /property-(text|icon|foreground|link)/.test(ref) ? 'fg' : /property-(border|divider|outline|focus-ring|stroke)/.test(ref) ? 'border' : /property-(background|fill|surface)/.test(ref) ? 'bg' : 'other';

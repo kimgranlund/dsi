@@ -150,6 +150,9 @@ kbd { font: 600 0.7rem var(--font-mono); padding: 1px 6px; border: 1px solid var
 .q h3 { font: 600 1rem/1.3 var(--font-body); margin: 0; word-break: break-word; }
 .q p { margin: 2px 0 0; font-size: 0.85rem; color: var(--muted); }
 .say { font-size: 0.95rem; font-weight: 500; }
+.reg { font-size: 0.7rem; font-weight: 600; padding: 0 7px; border-radius: 999px; }
+.reg.shared { background: var(--ok-soft); color: var(--ok); }
+.reg.new { background: var(--warn-soft); color: var(--warn); }
 .total { font: 600 0.85rem var(--font-body); font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
 </style>
@@ -389,7 +392,7 @@ const short = (c, m) => !c ? 'no concept fits' : atoms(c).map(atomLabel).join(' 
 // Plain words: a concept as a name ("Accent icon"), a match as a sentence about the token.
 const nameOf = (c) => { const a = atoms(c); const order = ['intent', 'usage', 'hue', 'component', 'part', 'property', 'emphasis', 'state']; return a.sort((x, y) => order.indexOf(x.split(':')[0]) - order.indexOf(y.split(':')[0])).map((x) => atomLabel(x).toLowerCase()).join(' ').replace(/^./, (ch) => ch.toUpperCase()); };
 const SENTENCE = { exact: (n) => 'It means exactly “' + n + '”.', close: (n) => 'It means “' + n + '”, with a small nuance.', broad: (n) => 'It is one specific kind of “' + n + '”.', narrow: (n) => 'It covers “' + n + '” and more.', related: (n) => 'It is only associated with “' + n + '”.' };
-const sentence = (o) => !o.concept ? 'No shared concept fits it.' : SENTENCE[o.match](nameOf(o.concept));
+const sentence = (o) => !o.concept ? 'No shared concept fits it.' : SENTENCE[o.match](o.name || nameOf(o.concept));
 function question(item, shared, mapped) {
   const diffs = [];
   const facetsDiffer = new Set(mapped.flatMap((o) => atoms(o.concept).filter((a) => !shared.includes(a)).map((a) => a.split(':')[0])));
@@ -477,6 +480,7 @@ function card(item) {
         el('div', { class: 'line' },
           el('span', { class: 'tally', text: o.voters.length + ' of ' + total }),
           el('span', { class: 'voters', text: o.voters.map((v) => v.model.replace(/^claude-/, '') + (v.confidence != null ? ' ' + v.confidence.toFixed(2) : '')).join(' · ') }),
+          o.concept ? (o.registered ? el('span', { class: 'reg shared', text: (o.usedBy && o.usedBy.length ? 'Shared · ' + o.usedBy.join(', ') : 'Registered') }) : el('span', { class: 'reg new', text: 'New concept · needs your approval', title: 'Not in the concept registry yet. Accepting it registers it (ADR 0019).' })) : null,
           sugg ? el('span', { class: 'sugg', text: 'Suggested: ' + item.preselectWhy }) : null),
         el('details', {}, el('summary', { text: o.voters[0].rationale }), o.voters.map((v) => el('p', {}, el('b', { text: v.model.replace(/^claude-/, '') + ': ' }), v.rationale)))),
       !d ? el('button', { class: sugg ? 'primary' : '', text: 'Accept', disabled: !canWrite, onclick: () => decideOpt(item, i) }) : el('span')));

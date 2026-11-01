@@ -27,11 +27,14 @@ Agreement is not truth, so approved mappings (whoever approved them) are audited
 
 ## Approval rule
 
-- **Approved** when both agents give the same concept **and** match type, both with confidence >= 0.85, and the answer was never rejected. `review.by` is `agreement`.
+- **Approved** when both agents give the same concept **and** match type, both with confidence >= 0.7 (ADR 0005 amended), and the answer was never rejected. `review.by` is `agreement`.
 - **Approved with the classifier's vote** at confidence >= 0.6 when, in addition, the match is exact or close and `@dsi/classify` reaches the same concept from approved terms alone, explaining the whole token name. `review.by` is `agreement+classifier`. Re-running `merge` on an earlier run re-applies the rule to its queued tokens.
 - **Agreed unmapped** when both say no concept fits: recorded in `unmapped` as approved, so it feeds the ontology backlog and is not asked again.
 - **Everything else is Proposed** (each agent's answer kept) and goes to the human queue. A human approves or rejects by editing the record's `status` and adding `review`.
 - Merge never touches Approved or Rejected records, refuses two proposal files from the same model, and never re-approves a rejected answer.
+- **Third opinion and settle rules** (ADR 0005 amended): `tiebreak` approves where a third model agrees with one of the first two; `settle` then approves three-way concept agreement (most cautious match), emphasis-only splits (contrast rank, else broad without emphasis) and two of three at 0.5.
+- **Registry gate** (ADR 0019): no rule approves a concept missing from `ontology/schemes/concepts.jsonld`; such answers return to Proposed as "New concept". `apply-review` registers concepts the owner approves. The review page labels each option Shared (with the systems using it) or New.
+- **Wording**: `check` warns about rationales that break L6 in `docs/controlled-language.md`. `reconcile --dry` reports single-system concepts one facet away from a shared one.
 - The public site shows Approved mappings only.
 
 ## Scopes

@@ -9,7 +9,7 @@ import { mergeTermProposals, packetPath, readTermProposals, vocabulary } from '.
 import { buildStructure, type ShippedStructure } from './structure.ts';
 import { mapScales } from './scales.ts';
 import crypto from 'node:crypto';
-import { parseConcept } from '@dsi/schema';
+import { gateUnregistered, parseConcept } from '@dsi/schema';
 
 const USAGE = `usage (from the repo root):
   dsi-classify derive <product>   learn candidate terms from approved mappings into mappings/<product>/terms.json
@@ -136,6 +136,7 @@ if (cmd === 'derive') {
   const replacement = new Map(file.mappings.filter((x: any) => x.status === 'approved').map((x: any) => [x.token, x.id]));
   for (const x of file.mappings) if (x.status === 'superseded' && derived(x) && !x.supersededBy && replacement.has(x.token)) x.supersededBy = replacement.get(x.token);
   file.mappings.sort((a: any, b: any) => a.token.localeCompare(b.token) || a.id.localeCompare(b.id));
+  { const held = gateUnregistered(o, file); if (held.length) console.log(`${held.length} answer(s) use new concepts and wait for owner approval (ADR 0019)`); }
   fs.writeFileSync(mapFile, JSON.stringify(file, null, 2) + '\n');
   const why: Record<string, number> = {};
   for (const l of r.leftovers) { const k = l.why.split(':')[0]; why[k] = (why[k] ?? 0) + 1; }

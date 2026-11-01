@@ -55,6 +55,7 @@ facet    = "intent" | "usage" | "hue" | "syntax" | "component" | "part"
 - Only `usage` and `state` take several values, joined with `+` and sorted alphabetically.
 - Every value must be in its facet's scheme and not deprecated.
 - `hue` requires usage `categorical`. `part` requires a `component` or usage `code-surface`.
+- `emphasis-default` is never bound: the concept without emphasis is the default step. `property-opacity` belongs to the `opacity` domain (ADR 0019).
 
 Example: `dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-hover`.
 
@@ -76,11 +77,11 @@ head     = property | domain-noun ;
 
 Rules:
 
-1. **Head noun.** The property's name form (background, text, icon, border, padding). With no property, the domain noun: color, spacing, size, shape, type style, shadow, motion, layout value, opacity.
+1. **Head noun.** The property's name form (background, text, icon, border, padding). In the color domain, a property that is not itself colored paint takes "color" after it ("Overlay shadow color"), so it stays apart from the elevation concept ("Overlay shadow"). With no property, the domain noun: color, spacing, size, shape, type style, shadow, motion, layout value, opacity.
 2. **Name forms.** Each word uses its name form:
    - States are participles: hovered, pressed (`state/active`), focused, disabled, selected, dragged, visited.
    - Compound modifiers are hyphenated: on-fill, code-surface, data-visualization, state-layer.
-   - `emphasis/default` is omitted, because it adds nothing to a name.
+   - `emphasis/default` never appears, because it is never bound (section 3).
 3. **Case.** Sentence case: the first word capitalized and the rest lowercase. No articles, no plurals, no punctuation except hyphens.
 4. **Syntax.** A syntax value reads as `code <label>`, as in "Code keyword color".
 5. **Uniqueness.** No two registered concepts share a name. A registered concept may override the generated name with its own prefLabel, but the override must still follow these rules.
@@ -108,10 +109,10 @@ Definitions follow the genus-differentia form: what kind of thing it is, then wh
 **Registered concept definitions** are generated from this frame:
 
 ```
-The <head> <usage phrase>[, signaling <intent>][, in <hue>][, at <emphasis> emphasis][, when <state>].
+The <head>[ for <usage> use][ of the <component>[ <part>]][ for <syntax> code][, signaling <intent>][, in <hue>][, <style> style][, <brightness>][, at <emphasis> emphasis][, when <state>].
 ```
 
-For example: "The background of page content, signaling danger, at subtle emphasis, when hovered." A reviewer may replace it with a hand-written definition, which then follows the facet rules above.
+For example: "The background for page use, signaling danger, when hovered." A reviewer may replace it with a hand-written definition, which then follows the facet rules above.
 
 ## 7. L5 Match statement
 
@@ -157,19 +158,22 @@ Differences are listed in this order, in these words: what it signals (intent), 
 
 - **Reuse first.** A mapping must use a registered concept when one fits. The review page marks each option as "Shared", with the systems that use it, or as "New".
 - **New concepts are gated.** A grammatical but unregistered concept cannot be approved by a rule (merge, tiebreak, settle, rank, scale roles). It waits in review, labeled "New concept", until the owner approves it. Approval registers it.
-- **Seeding and reconciling.** The registry is seeded from approved mappings once the reconcile pass has run. That pass checks each concept only one system uses. When dropping exactly one facet reaches a concept other systems share, nothing else in that system maps there, and no other token of the system would fold to the same place, the mapping folds into the shared concept as `broad`. Every other case stays as it is or goes to review.
+- **Seeding.** The registry was seeded with the 943 concepts in approved mappings (`packages/schema/src/register.ts --approved`). Owner approvals in `apply-review` register new concepts with generated names and definitions; edit `concepts.jsonld` to refine one.
+- **Reconcile.** `dsi-map reconcile --dry` reports concepts only one system uses that sit one facet away from a shared concept. The first run (2026-11-01) found 13 such cases, and most folds would have lost meaning (on-fill text becoming plain text, strong tiles losing emphasis). The owner chose to fold nothing: such concepts are precise positions only one system has, not drift. The run that found real drift was the name check: 19 pairs differing only by `emphasis-default` and 5 duplicated across domains, all resolved by the rules in section 3.
 
 ## 11. Enforcement
 
 | Rule | Where | Status |
 |---|---|---|
-| L1 grammar, lexicon, order, co-occurrence | `packages/schema/src/concepts.ts`, every proposal and `pnpm check` | enforced |
+| L1 grammar, lexicon, order, co-occurrence, no `emphasis-default`, opacity domain | `parseConcept`, every proposal and `pnpm check` | enforced |
 | L2 names | `canonicalNameOf` | enforced |
-| L3 names, uniqueness | schema name template and test | ADR 0019, to build |
-| L4 facet definitions: present, at most 25 words, no system names | schema validator | ADR 0019, to build |
-| L5 and L7 frames | review page and site templates | partly built (review page) |
-| L6 rationale shape | mapper `check` warns; does not refuse | ADR 0019, to build |
-| Registry membership for approved mappings | schema validator and mapper gate | ADR 0019, to build |
+| L3 names | `conceptName`; tests in `packages/schema/test/language.test.ts` | enforced |
+| L3 uniqueness | ontology loader (duplicate prefLabel within a scheme) | enforced |
+| Registry membership of approved mappings | validator; registry gate in merge, tiebreak, settle, rank and map-scales | enforced |
+| L4 generated definitions | `conceptDefinition` | enforced |
+| L4 facet definitions | none yet. 99 of 243 lexicon words have no definition, 7 run over 25 words, and 14 name a system | open |
+| L5 and L7 frames | review page templates | built; the site does not show match statements yet |
+| L6 rationale shape | `dsi-map check` warns; prompts teach it | warns |
 
 ## 12. Classification and prior art
 

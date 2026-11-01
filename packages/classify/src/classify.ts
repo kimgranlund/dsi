@@ -42,7 +42,9 @@ export function scopeOf(t: TermsFile, path: string, file: string): string {
 
 /** Build the concept IRI for a set of facet values (fixed order, multi-values sorted). */
 export function conceptOf(domain: string, facets: Partial<Record<Facet, string>>): string | undefined {
-  const segs = FACETS.filter((f) => facets[f]).map((f) => `${f}-${facets[f]!.split('+').sort().join('+')}`);
+  // ADR 0019: the bare concept is the default emphasis, and opacity lives in the opacity domain.
+  if (facets.property === 'opacity') domain = 'opacity';
+  const segs = FACETS.filter((f) => facets[f] && !(f === 'emphasis' && facets[f] === 'default')).map((f) => `${f}-${facets[f]!.split('+').sort().join('+')}`);
   return segs.length ? `dsi:concept/${domain}/${segs.join('/')}` : undefined;
 }
 

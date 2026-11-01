@@ -24,9 +24,9 @@
       }
     },
     {
-      "id": "m-bcf300092536",
+      "id": "m-a3db7b41d2b4",
       "token": "accent-background-color-default",
-      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-default",
+      "concept": "dsi:concept/color/intent-accent/property-background",
       "match": "exact",
       "confidence": 1,
       "status": "approved",
@@ -39,7 +39,7 @@
       "review": {
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -122,25 +122,6 @@
       }
     },
     {
-      "id": "m-c7836d058b26",
-      "token": "accent-background-color-hover",
-      "concept": "dsi:concept/color/intent-accent/property-background/emphasis-default/state-hover",
-      "match": "exact",
-      "confidence": 1,
-      "status": "approved",
-      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "at": "2026-11-01T15:02:04.159Z",
-        "method": "emphasis-rank-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
       "id": "m-d31296c64b53",
       "token": "accent-background-color-hover",
       "concept": "dsi:concept/color/intent-accent/property-background/emphasis-strong/state-hover",
@@ -178,6 +159,25 @@
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-accent/property-background/emphasis-default/state-hover."
+      }
+    },
+    {
+      "id": "m-eb867746a0ed",
+      "token": "accent-background-color-hover",
+      "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:02:04.159Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:02:04.159Z",
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -831,9 +831,9 @@
       }
     },
     {
-      "id": "m-2091e4a8f581",
+      "id": "m-15f09dadae94",
       "token": "background-opacity-default",
-      "concept": "dsi:concept/color/usage-state-layer/property-opacity",
+      "concept": "dsi:concept/opacity/usage-state-layer/property-opacity",
       "match": "broad",
       "confidence": 0.5,
       "status": "proposed",
@@ -881,9 +881,9 @@
       }
     },
     {
-      "id": "m-7a1f77c86abb",
+      "id": "m-941273d59cba",
       "token": "background-opacity-down",
-      "concept": "dsi:concept/color/usage-state-layer/property-opacity/state-active",
+      "concept": "dsi:concept/opacity/usage-state-layer/property-opacity/state-active",
       "match": "exact",
       "confidence": 0.55,
       "status": "approved",
@@ -896,13 +896,13 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:51.773Z",
-        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/opacity/property-opacity/state-active broad."
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/opacity/property-opacity/state-active broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
-      "id": "m-222d2999206f",
+      "id": "m-31bccafebb79",
       "token": "background-opacity-hover",
-      "concept": "dsi:concept/color/usage-state-layer/property-opacity/state-hover",
+      "concept": "dsi:concept/opacity/usage-state-layer/property-opacity/state-hover",
       "match": "exact",
       "confidence": 0.55,
       "status": "approved",
@@ -915,7 +915,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:51.773Z",
-        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/opacity/property-opacity/state-hover broad."
+        "note": "Two of three agents agree (each >= 0.5); the third answered dsi:concept/opacity/property-opacity/state-hover broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -939,21 +939,6 @@
       }
     },
     {
-      "id": "m-b061c82b962a",
-      "token": "background-opacity-key-focus",
-      "concept": "dsi:concept/color/usage-state-layer/property-opacity/state-focus",
-      "match": "exact",
-      "confidence": 0.6,
-      "status": "proposed",
-      "rationale": "State-layer opacity on keyboard focus.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
       "id": "m-b79440fdbbe4",
       "token": "background-opacity-key-focus",
       "concept": "dsi:concept/opacity/property-opacity/state-focus",
@@ -965,6 +950,21 @@
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-11-01T15:01:54Z",
+        "method": "color-v1"
+      }
+    },
+    {
+      "id": "m-dc8d22bf4975",
+      "token": "background-opacity-key-focus",
+      "concept": "dsi:concept/opacity/usage-state-layer/property-opacity/state-focus",
+      "match": "exact",
+      "confidence": 0.6,
+      "status": "proposed",
+      "rationale": "State-layer opacity on keyboard focus.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:41.264Z",
         "method": "color-v1"
       }
     },
@@ -1578,9 +1578,9 @@
       }
     },
     {
-      "id": "m-b7ed2e0b83bd",
+      "id": "m-39ca0b2887f8",
       "token": "blue-background-color-default",
-      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-default",
+      "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background",
       "match": "exact",
       "confidence": 1,
       "status": "approved",
@@ -1593,7 +1593,7 @@
       "review": {
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -5054,9 +5054,9 @@
       }
     },
     {
-      "id": "m-9ff013aaf31e",
+      "id": "m-7e987f3e2090",
       "token": "green-background-color-default",
-      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-default",
+      "concept": "dsi:concept/color/usage-categorical/hue-green/property-background",
       "match": "exact",
       "confidence": 1,
       "status": "approved",
@@ -5069,7 +5069,7 @@
       "review": {
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -5529,9 +5529,9 @@
       }
     },
     {
-      "id": "m-fcd1fbd2942d",
+      "id": "m-92c7b95326f9",
       "token": "indigo-background-color-default",
-      "concept": "dsi:concept/color/usage-categorical/hue-indigo/property-background/emphasis-default",
+      "concept": "dsi:concept/color/usage-categorical/hue-indigo/property-background",
       "match": "exact",
       "confidence": 1,
       "status": "approved",
@@ -5544,7 +5544,7 @@
       "review": {
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -5637,9 +5637,9 @@
       }
     },
     {
-      "id": "m-a2fc0840d676",
+      "id": "m-7b3748abc45c",
       "token": "informative-background-color-default",
-      "concept": "dsi:concept/color/intent-info/property-background/emphasis-default",
+      "concept": "dsi:concept/color/intent-info/property-background",
       "match": "exact",
       "confidence": 1,
       "status": "approved",
@@ -5652,7 +5652,7 @@
       "review": {
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -5735,25 +5735,6 @@
       }
     },
     {
-      "id": "m-5d29e124481b",
-      "token": "informative-background-color-hover",
-      "concept": "dsi:concept/color/intent-info/property-background/emphasis-default/state-hover",
-      "match": "exact",
-      "confidence": 1,
-      "status": "approved",
-      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "at": "2026-11-01T15:02:04.159Z",
-        "method": "emphasis-rank-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
       "id": "m-5e2ee69cfaae",
       "token": "informative-background-color-hover",
       "concept": "dsi:concept/color/intent-info/property-background/emphasis-strong/state-hover",
@@ -5771,6 +5752,25 @@
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-info/property-background/emphasis-default/state-hover."
+      }
+    },
+    {
+      "id": "m-cfc395f0aaf2",
+      "token": "informative-background-color-hover",
+      "concept": "dsi:concept/color/intent-info/property-background/state-hover",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:02:04.159Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:02:04.159Z",
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -8411,6 +8411,26 @@
       }
     },
     {
+      "id": "m-6f80ec546608",
+      "token": "neutral-subdued-background-color-default",
+      "concept": "dsi:concept/color/intent-neutral/property-background",
+      "match": "close",
+      "confidence": 0.7,
+      "status": "rejected",
+      "rationale": "Spectrum neutral: deliberately no status or brand. Subdued fill (gray-700 light, #6d6d6d dark) ranks between plain (strong) and -subtle- (subtle) in both modes: default by contrast rank, native word subdued differs; resting state.",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:54Z",
+        "method": "color-v1"
+      },
+      "review": {
+        "by": "settle-rule",
+        "at": "2026-11-01T15:52:51.773Z",
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-neutral/property-background broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-9140ae001f3e",
       "token": "neutral-subdued-background-color-default",
       "concept": "dsi:concept/color/intent-neutral/property-background",
@@ -8427,26 +8447,6 @@
         "by": "settle-rule",
         "at": "2026-11-01T15:52:51.773Z",
         "note": "Emphasis left unbound: the agents split and the contrast rank does not compute."
-      }
-    },
-    {
-      "id": "m-9d4d1c06b705",
-      "token": "neutral-subdued-background-color-default",
-      "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-default",
-      "match": "close",
-      "confidence": 0.7,
-      "status": "rejected",
-      "rationale": "Spectrum neutral: deliberately no status or brand. Subdued fill (gray-700 light, #6d6d6d dark) ranks between plain (strong) and -subtle- (subtle) in both modes: default by contrast rank, native word subdued differs; resting state.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "settle-rule",
-        "at": "2026-11-01T15:52:51.773Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-neutral/property-background broad."
       }
     },
     {
@@ -8469,9 +8469,9 @@
       }
     },
     {
-      "id": "m-3eee14731c2f",
+      "id": "m-9bffc374be86",
       "token": "neutral-subdued-background-color-down",
-      "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-default/state-active",
+      "concept": "dsi:concept/color/intent-neutral/property-background/state-active",
       "match": "close",
       "confidence": 0.7,
       "status": "rejected",
@@ -8485,13 +8485,13 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:51.773Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-neutral/property-background/state-active broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-neutral/property-background/state-active broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
-      "id": "m-13d931462b37",
+      "id": "m-1ba392120ef6",
       "token": "neutral-subdued-background-color-hover",
-      "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-default/state-hover",
+      "concept": "dsi:concept/color/intent-neutral/property-background/state-hover",
       "match": "close",
       "confidence": 0.7,
       "status": "rejected",
@@ -8505,7 +8505,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:51.773Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-neutral/property-background/state-hover broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-neutral/property-background/state-hover broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -8528,9 +8528,9 @@
       }
     },
     {
-      "id": "m-72193b65f5b0",
+      "id": "m-3b9ffcb91ad4",
       "token": "neutral-subdued-background-color-key-focus",
-      "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-default/state-focus",
+      "concept": "dsi:concept/color/intent-neutral/property-background/state-focus",
       "match": "close",
       "confidence": 0.7,
       "status": "rejected",
@@ -8544,7 +8544,7 @@
       "review": {
         "by": "settle-rule",
         "at": "2026-11-01T15:52:51.773Z",
-        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-neutral/property-background/state-focus broad."
+        "note": "Settled (settle-broad-v1): dsi:concept/color/intent-neutral/property-background/state-focus broad. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -8812,6 +8812,25 @@
       }
     },
     {
+      "id": "m-1e37fa6d1286",
+      "token": "notice-background-color-default",
+      "concept": "dsi:concept/color/intent-warning/property-background",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:02:04.159Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:02:04.159Z",
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-7afc7ffd75b4",
       "token": "notice-background-color-default",
       "concept": "dsi:concept/color/intent-warning/property-background/emphasis-strong",
@@ -8849,25 +8868,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/intent-warning/property-background/emphasis-default."
-      }
-    },
-    {
-      "id": "m-fdbef5f5e144",
-      "token": "notice-background-color-default",
-      "concept": "dsi:concept/color/intent-warning/property-background/emphasis-default",
-      "match": "exact",
-      "confidence": 1,
-      "status": "approved",
-      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "at": "2026-11-01T15:02:04.159Z",
-        "method": "emphasis-rank-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
       }
     },
     {
@@ -9259,21 +9259,6 @@
       }
     },
     {
-      "id": "m-232cbdfb3369",
-      "token": "opacity-0",
-      "concept": "dsi:concept/color/property-opacity",
-      "match": "broad",
-      "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Opacity scale step 0; a primitive value, not a color role.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
       "id": "m-73258ba07204",
       "token": "opacity-100",
       "concept": "dsi:concept/opacity/property-opacity",
@@ -9289,24 +9274,9 @@
       }
     },
     {
-      "id": "m-ffd13b268c9b",
-      "token": "opacity-100",
-      "concept": "dsi:concept/color/property-opacity",
-      "match": "broad",
-      "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Opacity scale step 100 (0.04).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-0e2856d343ba",
+      "id": "m-b4123e39ebb0",
       "token": "opacity-1000",
-      "concept": "dsi:concept/color/property-opacity",
+      "concept": "dsi:concept/opacity/property-opacity",
       "match": "broad",
       "confidence": 0.4,
       "status": "proposed",
@@ -9315,21 +9285,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-b4123e39ebb0",
-      "token": "opacity-1000",
-      "concept": "dsi:concept/opacity/property-opacity",
-      "match": "broad",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Step 1000 of the opacity scale; one point of the opacity role, step stays native (ADR 0013).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
       }
     },
@@ -9349,21 +9304,6 @@
       }
     },
     {
-      "id": "m-fb62c7ae1ac4",
-      "token": "opacity-125",
-      "concept": "dsi:concept/color/property-opacity",
-      "match": "broad",
-      "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Opacity scale step 125 (0.06).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
       "id": "m-40d5d6ffb119",
       "token": "opacity-150",
       "concept": "dsi:concept/opacity/property-opacity",
@@ -9379,24 +9319,9 @@
       }
     },
     {
-      "id": "m-84349d12e589",
-      "token": "opacity-150",
-      "concept": "dsi:concept/color/property-opacity",
-      "match": "broad",
-      "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Opacity scale step 150 (0.08).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-37109d5772f4",
+      "id": "m-d53a07460c95",
       "token": "opacity-200",
-      "concept": "dsi:concept/color/property-opacity",
+      "concept": "dsi:concept/opacity/property-opacity",
       "match": "broad",
       "confidence": 0.4,
       "status": "proposed",
@@ -9409,24 +9334,9 @@
       }
     },
     {
-      "id": "m-d53a07460c95",
-      "token": "opacity-200",
-      "concept": "dsi:concept/opacity/property-opacity",
-      "match": "broad",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Step 200 of the opacity scale; one point of the opacity role, step stays native (ADR 0013).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-cb2de3afdab2",
+      "id": "m-e70bbd84c0e7",
       "token": "opacity-300",
-      "concept": "dsi:concept/color/property-opacity",
+      "concept": "dsi:concept/opacity/property-opacity",
       "match": "broad",
       "confidence": 0.4,
       "status": "proposed",
@@ -9435,21 +9345,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-e70bbd84c0e7",
-      "token": "opacity-300",
-      "concept": "dsi:concept/opacity/property-opacity",
-      "match": "broad",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Step 300 of the opacity scale; one point of the opacity role, step stays native (ADR 0013).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
       }
     },
@@ -9469,21 +9364,6 @@
       }
     },
     {
-      "id": "m-56cf7d9a5644",
-      "token": "opacity-350",
-      "concept": "dsi:concept/color/property-opacity",
-      "match": "broad",
-      "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Opacity scale step 350 (0.2).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
       "id": "m-0eab36bf3efd",
       "token": "opacity-400",
       "concept": "dsi:concept/opacity/property-opacity",
@@ -9499,24 +9379,9 @@
       }
     },
     {
-      "id": "m-d2a3dce70a2c",
-      "token": "opacity-400",
-      "concept": "dsi:concept/color/property-opacity",
-      "match": "broad",
-      "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Opacity scale step 400 (0.24).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-c82e1ce1c5c8",
+      "id": "m-ebb64cccfc4d",
       "token": "opacity-50",
-      "concept": "dsi:concept/color/property-opacity",
+      "concept": "dsi:concept/opacity/property-opacity",
       "match": "broad",
       "confidence": 0.4,
       "status": "proposed",
@@ -9525,21 +9390,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-ebb64cccfc4d",
-      "token": "opacity-50",
-      "concept": "dsi:concept/opacity/property-opacity",
-      "match": "broad",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Step 50 of the opacity scale; one point of the opacity role, step stays native (ADR 0013).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
       }
     },
@@ -9559,24 +9409,9 @@
       }
     },
     {
-      "id": "m-b4a85e00df1d",
-      "token": "opacity-500",
-      "concept": "dsi:concept/color/property-opacity",
-      "match": "broad",
-      "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Opacity scale step 500 (0.32).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-64bcca078c99",
+      "id": "m-89cae6d435ab",
       "token": "opacity-600",
-      "concept": "dsi:concept/color/property-opacity",
+      "concept": "dsi:concept/opacity/property-opacity",
       "match": "broad",
       "confidence": 0.4,
       "status": "proposed",
@@ -9585,21 +9420,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-89cae6d435ab",
-      "token": "opacity-600",
-      "concept": "dsi:concept/opacity/property-opacity",
-      "match": "broad",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Step 600 of the opacity scale; one point of the opacity role, step stays native (ADR 0013).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
       }
     },
@@ -9619,21 +9439,6 @@
       }
     },
     {
-      "id": "m-efdad8d10a72",
-      "token": "opacity-700",
-      "concept": "dsi:concept/color/property-opacity",
-      "match": "broad",
-      "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Opacity scale step 700 (0.48).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
       "id": "m-1e3d0d62e70c",
       "token": "opacity-75",
       "concept": "dsi:concept/opacity/property-opacity",
@@ -9649,24 +9454,9 @@
       }
     },
     {
-      "id": "m-2834754e3a06",
-      "token": "opacity-75",
-      "concept": "dsi:concept/color/property-opacity",
-      "match": "broad",
-      "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Opacity scale step 75 (0.03).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-0158870343b8",
+      "id": "m-fb625890a469",
       "token": "opacity-750",
-      "concept": "dsi:concept/color/property-opacity",
+      "concept": "dsi:concept/opacity/property-opacity",
       "match": "broad",
       "confidence": 0.4,
       "status": "proposed",
@@ -9675,21 +9465,6 @@
         "agent": "dsi-mapper",
         "model": "claude-sonnet-5-5",
         "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-fb625890a469",
-      "token": "opacity-750",
-      "concept": "dsi:concept/opacity/property-opacity",
-      "match": "broad",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Step 750 of the opacity scale; one point of the opacity role, step stays native (ADR 0013).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
         "method": "color-v1"
       }
     },
@@ -9709,21 +9484,6 @@
       }
     },
     {
-      "id": "m-7f54b2a9d5d9",
-      "token": "opacity-800",
-      "concept": "dsi:concept/color/property-opacity",
-      "match": "broad",
-      "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Opacity scale step 800 (0.64).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
       "id": "m-26b2a47854cb",
       "token": "opacity-900",
       "concept": "dsi:concept/opacity/property-opacity",
@@ -9739,24 +9499,9 @@
       }
     },
     {
-      "id": "m-9308a51442a2",
-      "token": "opacity-900",
-      "concept": "dsi:concept/color/property-opacity",
-      "match": "broad",
-      "confidence": 0.4,
-      "status": "proposed",
-      "rationale": "Opacity scale step 900 (0.8).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-sonnet-5-5",
-        "at": "2026-11-01T15:00:41.264Z",
-        "method": "color-v1"
-      }
-    },
-    {
-      "id": "m-168d21d1b576",
+      "id": "m-5655872ba966",
       "token": "opacity-950",
-      "concept": "dsi:concept/color/property-opacity",
+      "concept": "dsi:concept/opacity/property-opacity",
       "match": "broad",
       "confidence": 0.4,
       "status": "proposed",
@@ -9769,44 +9514,9 @@
       }
     },
     {
-      "id": "m-5655872ba966",
-      "token": "opacity-950",
-      "concept": "dsi:concept/opacity/property-opacity",
-      "match": "broad",
-      "confidence": 0.8,
-      "status": "proposed",
-      "rationale": "Step 950 of the opacity scale; one point of the opacity role, step stays native (ADR 0013).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
-      }
-    },
-    {
       "id": "m-127f8c18a482",
       "token": "opacity-disabled",
       "concept": "dsi:concept/opacity/property-opacity/state-disabled",
-      "match": "exact",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Opacity applied to disabled elements (0.3).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:31:47.561Z",
-        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
-      }
-    },
-    {
-      "id": "m-8bf86786e654",
-      "token": "opacity-disabled",
-      "concept": "dsi:concept/color/property-opacity/state-disabled",
       "match": "exact",
       "confidence": 0.8,
       "status": "approved",
@@ -9819,7 +9529,26 @@
       "review": {
         "by": "two-of-three",
         "at": "2026-11-01T15:31:47.561Z",
-        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
+      "id": "m-326928c55ed5",
+      "token": "orange-background-color-default",
+      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:02:04.159Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:02:04.159Z",
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -9840,25 +9569,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-default."
-      }
-    },
-    {
-      "id": "m-aeddc289f6b3",
-      "token": "orange-background-color-default",
-      "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-default",
-      "match": "exact",
-      "confidence": 1,
-      "status": "approved",
-      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "at": "2026-11-01T15:02:04.159Z",
-        "method": "emphasis-rank-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
       }
     },
     {
@@ -9970,9 +9680,9 @@
       }
     },
     {
-      "id": "m-809a067bf0cb",
+      "id": "m-cd6077fa70e6",
       "token": "overlay-opacity",
-      "concept": "dsi:concept/color/usage-scrim/property-opacity",
+      "concept": "dsi:concept/opacity/usage-scrim/property-opacity",
       "match": "exact",
       "confidence": 0.7,
       "status": "approved",
@@ -9985,27 +9695,7 @@
       "review": {
         "by": "two-of-three",
         "at": "2026-11-01T15:31:47.561Z",
-        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer"
-      }
-    },
-    {
-      "id": "m-cd6077fa70e6",
-      "token": "overlay-opacity",
-      "concept": "dsi:concept/opacity/usage-scrim/property-opacity",
-      "match": "exact",
-      "confidence": 0.8,
-      "status": "rejected",
-      "rationale": "Opacity of the modal dimming overlay (0.4 light, 0.6 dark), paired with overlay-color.",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "model": "claude-opus-5-5",
-        "at": "2026-11-01T15:01:54Z",
-        "method": "color-v1"
-      },
-      "review": {
-        "by": "two-of-three",
-        "at": "2026-11-01T15:31:47.561Z",
-        "note": "Third opinion (claude-fable-5-1) agreed with another answer."
+        "note": "claude-fable-5-1 (blind, web research) agreed with an earlier agent's answer Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -10087,9 +9777,9 @@
       }
     },
     {
-      "id": "m-f37f2b4dc089",
+      "id": "m-fa696d1ada1f",
       "token": "pink-background-color-default",
-      "concept": "dsi:concept/color/usage-categorical/hue-pink/property-background/emphasis-default",
+      "concept": "dsi:concept/color/usage-categorical/hue-pink/property-background",
       "match": "exact",
       "confidence": 1,
       "status": "approved",
@@ -10102,7 +9792,7 @@
       "review": {
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -10195,9 +9885,9 @@
       }
     },
     {
-      "id": "m-d1d1c4db1eb6",
+      "id": "m-980e29726335",
       "token": "positive-background-color-default",
-      "concept": "dsi:concept/color/intent-success/property-background/emphasis-default",
+      "concept": "dsi:concept/color/intent-success/property-background",
       "match": "exact",
       "confidence": 1,
       "status": "approved",
@@ -10210,7 +9900,7 @@
       "review": {
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -10293,9 +9983,9 @@
       }
     },
     {
-      "id": "m-641cb136bbd1",
+      "id": "m-8e44ad94299e",
       "token": "positive-background-color-hover",
-      "concept": "dsi:concept/color/intent-success/property-background/emphasis-default/state-hover",
+      "concept": "dsi:concept/color/intent-success/property-background/state-hover",
       "match": "exact",
       "confidence": 1,
       "status": "approved",
@@ -10308,7 +9998,7 @@
       "review": {
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -10765,9 +10455,9 @@
       }
     },
     {
-      "id": "m-be2b0ef6ad08",
+      "id": "m-be15ba7d2639",
       "token": "purple-background-color-default",
-      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-default",
+      "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background",
       "match": "exact",
       "confidence": 1,
       "status": "approved",
@@ -10780,7 +10470,7 @@
       "review": {
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -10873,25 +10563,6 @@
       }
     },
     {
-      "id": "m-3cc5d11e877d",
-      "token": "red-background-color-default",
-      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-default",
-      "match": "exact",
-      "confidence": 1,
-      "status": "approved",
-      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "at": "2026-11-01T15:02:04.159Z",
-        "method": "emphasis-rank-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
-      }
-    },
-    {
       "id": "m-a66dbce1895b",
       "token": "red-background-color-default",
       "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-strong",
@@ -10909,6 +10580,25 @@
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-default."
+      }
+    },
+    {
+      "id": "m-bad05ccfa377",
+      "token": "red-background-color-default",
+      "concept": "dsi:concept/color/usage-categorical/hue-red/property-background",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:02:04.159Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:02:04.159Z",
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -10999,9 +10689,9 @@
       }
     },
     {
-      "id": "m-aa8cfe9c1197",
+      "id": "m-90d674545684",
       "token": "seafoam-background-color-default",
-      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-default",
+      "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background",
       "match": "exact",
       "confidence": 1,
       "status": "approved",
@@ -11014,7 +10704,7 @@
       "review": {
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
       }
     },
     {
@@ -12165,6 +11855,25 @@
       }
     },
     {
+      "id": "m-1695148f7d28",
+      "token": "yellow-background-color-default",
+      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
+      "provenance": {
+        "agent": "dsi-mapper",
+        "at": "2026-11-01T15:02:04.159Z",
+        "method": "emphasis-rank-v1"
+      },
+      "review": {
+        "by": "rank-rule",
+        "at": "2026-11-01T15:02:04.159Z",
+        "note": "Deterministic: contrast against the page in every mode. Migrated by ADR 0019 (default emphasis is the bare concept; opacity domain)."
+      }
+    },
+    {
       "id": "m-56da43ad0e2f",
       "token": "yellow-background-color-default",
       "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-strong",
@@ -12182,25 +11891,6 @@
         "by": "rank-rule",
         "at": "2026-11-01T15:02:04.159Z",
         "note": "Emphasis settled by contrast rank (ADR 0018): dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-default."
-      }
-    },
-    {
-      "id": "m-6c8fb42ab174",
-      "token": "yellow-background-color-default",
-      "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-default",
-      "match": "exact",
-      "confidence": 1,
-      "status": "approved",
-      "rationale": "Both agents agree on every facet but emphasis; native word order equals contrast order in light and dark (ADR 0018).",
-      "provenance": {
-        "agent": "dsi-mapper",
-        "at": "2026-11-01T15:02:04.159Z",
-        "method": "emphasis-rank-v1"
-      },
-      "review": {
-        "by": "rank-rule",
-        "at": "2026-11-01T15:02:04.159Z",
-        "note": "Deterministic: contrast against the page in every mode."
       }
     },
     {

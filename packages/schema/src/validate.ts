@@ -6,7 +6,7 @@ import type { Ajv2020 } from 'ajv/dist/2020.js';
 import type { FormatsPlugin } from 'ajv-formats';
 import { DSI, expand, inScheme, loadOntology, toQuads, type Issue, type Ontology } from './ontology.ts';
 import { validateNative, valueIssue } from './native.ts';
-import { canonicalNameOf, parseConcept } from './concepts.ts';
+import { canonicalNameOf, isRegistered, parseConcept } from './concepts.ts';
 
 // ajv and ajv-formats are CommonJS with a `default` export; load them through require for correct interop.
 const require = createRequire(import.meta.url);
@@ -111,6 +111,8 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
     const data = read(f);
     if (data === undefined || !shape('mapping-file.schema.json', f, data)) continue;
     issues.push(...checkMappingSemantics(ontology, data as MappingFile, rel(f), catalog.has.bind(catalog)));
+    // ADR 0019: an approved mapping uses a registered concept (ontology/schemes/concepts.jsonld).
+    for (const m of (data as MappingFile).mappings ?? []) if (m.status === 'approved' && m.concept.startsWith('dsi:concept/') && !isRegistered(ontology, m.concept)) issues.push({ file: rel(f), message: `${m.token}: approved concept ${m.concept} is not in the concept registry (register it on owner approval)` });
   }
 
   // Audit files: auditor verdicts on approved mappings (agent-authored, kept beside the mappings they judge).

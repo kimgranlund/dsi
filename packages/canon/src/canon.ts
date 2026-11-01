@@ -39,7 +39,8 @@ export function buildCanon(o: Ontology, labels: Map<string, string>, products: P
     const n = canonicalName(o, c);
     if (!n) return [];
     const p = parseConcept(o, c) as Exclude<ReturnType<typeof parseConcept>, string>;
-    const label = Object.entries(p.facets).map(([f, v]) => String(v).split('+').map((x) => labels.get(`dsi:${f}/${x}`) ?? x).join(' + ')).join(' · ');
+    // ADR 0019: the registry's name (L3) when registered; otherwise the facet labels.
+    const label = labels.get(c) ?? Object.entries(p.facets).map(([f, v]) => String(v).split('+').map((x) => labels.get(`dsi:${f}/${x}`) ?? x).join(' + ')).join(' · ');
     return [{ concept: c, ...n, label }];
   });
   const seen = new Map<string, string>();
