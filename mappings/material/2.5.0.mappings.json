@@ -473,14 +473,19 @@
       "token": "md.sys.color.primary",
       "concept": "dsi:concept/color/intent-accent",
       "match": "exact",
-      "confidence": 0.85,
-      "status": "proposed",
+      "confidence": 0.8,
+      "status": "approved",
       "rationale": "The primary brand/accent color for key components and emphasis, across fills, text and icons; matches the accent intent.",
       "provenance": {
         "agent": "dsi-mapper",
         "model": "claude-opus-5-5",
         "at": "2026-10-31T23:50:42.421154Z",
         "method": "color-v1"
+      },
+      "review": {
+        "by": "agreement+classifier",
+        "at": "2026-11-01T00:42:30.444Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently; the classifier reached the same concept from approved terms"
       }
     },
     {

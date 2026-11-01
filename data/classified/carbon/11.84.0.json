@@ -9,7 +9,7 @@
    "foundation": 60,
    "component": 78
   },
-  "colorTokensFullyExplained": 24
+  "colorTokensFullyExplained": 75
  },
  "tokens": [
   {
@@ -120,12 +120,11 @@
    ],
    "unknown": [
     "aura",
-    "start",
-    "sm"
+    "start"
    ],
    "conflicts": [],
    "concept": "dsi:concept/color/intent-ai",
-   "explained": 0.25,
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
@@ -171,71 +170,73 @@
    "scope": "semantic",
    "facets": {
     "intent": "ai",
-    "property": "border"
+    "property": "border",
+    "emphasis": "strong"
    },
    "matchedTerms": [
     "ai",
-    "border"
-   ],
-   "unknown": [
+    "border",
     "strong"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai/property-border",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/intent-ai/property-border/emphasis-strong",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "ai-drop-shadow",
    "scope": "semantic",
    "facets": {
-    "intent": "ai"
+    "intent": "ai",
+    "property": "shadow"
    },
    "matchedTerms": [
-    "ai"
-   ],
-   "unknown": [
-    "drop",
+    "ai",
     "shadow"
    ],
+   "unknown": [
+    "drop"
+   ],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai",
-   "explained": 0.3333333333333333,
+   "concept": "dsi:concept/color/intent-ai/property-shadow",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
    "token": "ai-inner-shadow",
    "scope": "semantic",
    "facets": {
-    "intent": "ai"
+    "intent": "ai",
+    "property": "shadow"
    },
    "matchedTerms": [
-    "ai"
-   ],
-   "unknown": [
-    "inner",
+    "ai",
     "shadow"
    ],
+   "unknown": [
+    "inner"
+   ],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai",
-   "explained": 0.3333333333333333,
+   "concept": "dsi:concept/color/intent-ai/property-shadow",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
    "token": "ai-overlay",
    "scope": "semantic",
    "facets": {
-    "intent": "ai"
+    "intent": "ai",
+    "usage": "scrim"
    },
    "matchedTerms": [
-    "ai"
-   ],
-   "unknown": [
+    "ai",
     "overlay"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/intent-ai/usage-scrim",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -243,37 +244,38 @@
    "scope": "semantic",
    "facets": {
     "intent": "ai",
+    "usage": "overlay",
     "property": "background"
    },
    "matchedTerms": [
     "ai",
+    "popover",
     "background"
    ],
-   "unknown": [
-    "popover"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai/property-background",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-background",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "ai-popover-caret-bottom",
    "scope": "semantic",
    "facets": {
-    "intent": "ai"
+    "intent": "ai",
+    "usage": "overlay"
    },
    "matchedTerms": [
-    "ai"
+    "ai",
+    "popover"
    ],
    "unknown": [
-    "popover",
     "caret",
     "bottom"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai",
-   "explained": 0.25,
+   "concept": "dsi:concept/color/intent-ai/usage-overlay",
+   "explained": 0.5,
    "domain": "color"
   },
   {
@@ -281,20 +283,21 @@
    "scope": "semantic",
    "facets": {
     "intent": "ai",
+    "usage": "overlay",
     "property": "background"
    },
    "matchedTerms": [
     "ai",
+    "popover",
     "background"
    ],
    "unknown": [
-    "popover",
     "caret",
     "bottom"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai/property-background",
-   "explained": 0.4,
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-background",
+   "explained": 0.6,
    "domain": "color"
   },
   {
@@ -302,78 +305,84 @@
    "scope": "semantic",
    "facets": {
     "intent": "ai",
+    "usage": "overlay",
     "property": "background"
    },
    "matchedTerms": [
     "ai",
+    "popover",
     "background"
    ],
    "unknown": [
-    "popover",
     "caret",
     "bottom",
     "actions"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai/property-background",
-   "explained": 0.3333333333333333,
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-background",
+   "explained": 0.5,
    "domain": "color"
   },
   {
    "token": "ai-popover-caret-center",
    "scope": "semantic",
    "facets": {
-    "intent": "ai"
+    "intent": "ai",
+    "usage": "overlay"
    },
    "matchedTerms": [
-    "ai"
+    "ai",
+    "popover"
    ],
    "unknown": [
-    "popover",
     "caret",
     "center"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai",
-   "explained": 0.25,
+   "concept": "dsi:concept/color/intent-ai/usage-overlay",
+   "explained": 0.5,
    "domain": "color"
   },
   {
    "token": "ai-popover-shadow-outer-01",
    "scope": "semantic",
    "facets": {
-    "intent": "ai"
+    "intent": "ai",
+    "usage": "overlay",
+    "property": "shadow"
    },
    "matchedTerms": [
-    "ai"
+    "ai",
+    "popover",
+    "shadow"
    ],
    "unknown": [
-    "popover",
-    "shadow",
     "outer"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai",
-   "explained": 0.25,
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-shadow",
+   "explained": 0.75,
    "domain": "color"
   },
   {
    "token": "ai-popover-shadow-outer-02",
    "scope": "semantic",
    "facets": {
-    "intent": "ai"
+    "intent": "ai",
+    "usage": "overlay",
+    "property": "shadow"
    },
    "matchedTerms": [
-    "ai"
+    "ai",
+    "popover",
+    "shadow"
    ],
    "unknown": [
-    "popover",
-    "shadow",
     "outer"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/intent-ai",
-   "explained": 0.25,
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-shadow",
+   "explained": 0.75,
    "domain": "color"
   },
   {
@@ -435,34 +444,34 @@
    "token": "background-active",
    "scope": "semantic",
    "facets": {
-    "property": "background"
+    "property": "background",
+    "state": "active"
    },
    "matchedTerms": [
-    "background"
-   ],
-   "unknown": [
+    "background",
     "active"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/property-background/state-active",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "background-brand",
    "scope": "semantic",
    "facets": {
-    "property": "background"
+    "property": "background",
+    "intent": "accent"
    },
    "matchedTerms": [
-    "background"
-   ],
-   "unknown": [
+    "background",
     "brand"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/intent-accent/property-background",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -853,17 +862,17 @@
    "token": "border-interactive",
    "scope": "semantic",
    "facets": {
-    "property": "border"
+    "property": "border",
+    "intent": "accent"
    },
    "matchedTerms": [
-    "border"
-   ],
-   "unknown": [
+    "border",
     "interactive"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-border",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/intent-accent/property-border",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -1007,119 +1016,119 @@
    "token": "border-strong-01",
    "scope": "semantic",
    "facets": {
-    "property": "border"
+    "property": "border",
+    "emphasis": "strong"
    },
    "matchedTerms": [
-    "border"
-   ],
-   "unknown": [
+    "border",
     "strong"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-border",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/property-border/emphasis-strong",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "border-strong-02",
    "scope": "semantic",
    "facets": {
-    "property": "border"
+    "property": "border",
+    "emphasis": "strong"
    },
    "matchedTerms": [
-    "border"
-   ],
-   "unknown": [
+    "border",
     "strong"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-border",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/property-border/emphasis-strong",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "border-strong-03",
    "scope": "semantic",
    "facets": {
-    "property": "border"
+    "property": "border",
+    "emphasis": "strong"
    },
    "matchedTerms": [
-    "border"
-   ],
-   "unknown": [
+    "border",
     "strong"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-border",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/property-border/emphasis-strong",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "border-subtle-00",
    "scope": "semantic",
    "facets": {
-    "property": "border"
+    "property": "border",
+    "emphasis": "subtle"
    },
    "matchedTerms": [
-    "border"
-   ],
-   "unknown": [
+    "border",
     "subtle"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-border",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/property-border/emphasis-subtle",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "border-subtle-01",
    "scope": "semantic",
    "facets": {
-    "property": "border"
+    "property": "border",
+    "emphasis": "subtle"
    },
    "matchedTerms": [
-    "border"
-   ],
-   "unknown": [
+    "border",
     "subtle"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-border",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/property-border/emphasis-subtle",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "border-subtle-02",
    "scope": "semantic",
    "facets": {
-    "property": "border"
+    "property": "border",
+    "emphasis": "subtle"
    },
    "matchedTerms": [
-    "border"
-   ],
-   "unknown": [
+    "border",
     "subtle"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-border",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/property-border/emphasis-subtle",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "border-subtle-03",
    "scope": "semantic",
    "facets": {
-    "property": "border"
+    "property": "border",
+    "emphasis": "subtle"
    },
    "matchedTerms": [
-    "border"
-   ],
-   "unknown": [
+    "border",
     "subtle"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-border",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/property-border/emphasis-subtle",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -1127,19 +1136,19 @@
    "scope": "semantic",
    "facets": {
     "property": "border",
+    "emphasis": "subtle",
     "state": "selected"
    },
    "matchedTerms": [
     "border",
+    "subtle",
     "selected"
    ],
-   "unknown": [
-    "subtle"
-   ],
+   "unknown": [],
    "conflicts": [
     "property: border vs background (selected)"
    ],
-   "explained": 0.6666666666666666,
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -1147,19 +1156,19 @@
    "scope": "semantic",
    "facets": {
     "property": "border",
+    "emphasis": "subtle",
     "state": "selected"
    },
    "matchedTerms": [
     "border",
+    "subtle",
     "selected"
    ],
-   "unknown": [
-    "subtle"
-   ],
+   "unknown": [],
    "conflicts": [
     "property: border vs background (selected)"
    ],
-   "explained": 0.6666666666666666,
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -1167,19 +1176,19 @@
    "scope": "semantic",
    "facets": {
     "property": "border",
+    "emphasis": "subtle",
     "state": "selected"
    },
    "matchedTerms": [
     "border",
+    "subtle",
     "selected"
    ],
-   "unknown": [
-    "subtle"
-   ],
+   "unknown": [],
    "conflicts": [
     "property: border vs background (selected)"
    ],
-   "explained": 0.6666666666666666,
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -1236,15 +1245,19 @@
   {
    "token": "button-danger-active",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "button",
-    "danger",
+   "facets": {
+    "state": "active"
+   },
+   "matchedTerms": [
     "active"
    ],
+   "unknown": [
+    "button",
+    "danger"
+   ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/state-active",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
@@ -1268,15 +1281,19 @@
   {
    "token": "button-danger-primary",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "button",
-    "danger",
+   "facets": {
+    "emphasis": "default"
+   },
+   "matchedTerms": [
     "primary"
    ],
+   "unknown": [
+    "button",
+    "danger"
+   ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/emphasis-default",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
@@ -1317,46 +1334,56 @@
   {
    "token": "button-primary",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "button",
+   "facets": {
+    "emphasis": "default"
+   },
+   "matchedTerms": [
     "primary"
    ],
+   "unknown": [
+    "button"
+   ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/emphasis-default",
+   "explained": 0.5,
    "domain": "color"
   },
   {
    "token": "button-primary-active",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "button",
+   "facets": {
+    "emphasis": "default",
+    "state": "active"
+   },
+   "matchedTerms": [
     "primary",
     "active"
    ],
+   "unknown": [
+    "button"
+   ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/emphasis-default/state-active",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
    "token": "button-primary-hover",
    "scope": "component",
    "facets": {
+    "emphasis": "default",
     "state": "hover"
    },
    "matchedTerms": [
+    "primary",
     "hover"
    ],
    "unknown": [
-    "button",
-    "primary"
+    "button"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/state-hover",
-   "explained": 0.3333333333333333,
+   "concept": "dsi:concept/color/emphasis-default/state-hover",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
@@ -1380,18 +1407,19 @@
    "token": "button-secondary-active",
    "scope": "component",
    "facets": {
-    "emphasis": "subtle"
+    "emphasis": "subtle",
+    "state": "active"
    },
    "matchedTerms": [
-    "secondary"
-   ],
-   "unknown": [
-    "button",
+    "secondary",
     "active"
    ],
+   "unknown": [
+    "button"
+   ],
    "conflicts": [],
-   "concept": "dsi:concept/color/emphasis-subtle",
-   "explained": 0.3333333333333333,
+   "concept": "dsi:concept/color/emphasis-subtle/state-active",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
@@ -1442,15 +1470,19 @@
   {
    "token": "button-tertiary-active",
    "scope": "component",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "button",
-    "tertiary",
+   "facets": {
+    "state": "active"
+   },
+   "matchedTerms": [
     "active"
    ],
+   "unknown": [
+    "button",
+    "tertiary"
+   ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/state-active",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
@@ -1613,15 +1645,19 @@
   {
    "token": "chat-button-active",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "chat",
-    "button",
+   "facets": {
+    "state": "active"
+   },
+   "matchedTerms": [
     "active"
    ],
+   "unknown": [
+    "chat",
+    "button"
+   ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/state-active",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
@@ -2620,88 +2656,103 @@
   {
    "token": "field-01",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "field"
+   },
+   "matchedTerms": [
     "field"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-field/property-background",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "field-02",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "field"
+   },
+   "matchedTerms": [
     "field"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-field/property-background",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "field-03",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "field"
+   },
+   "matchedTerms": [
     "field"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-field/property-background",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "field-hover-01",
    "scope": "semantic",
    "facets": {
+    "property": "background",
+    "usage": "field",
     "state": "hover"
    },
    "matchedTerms": [
+    "field",
     "hover"
    ],
-   "unknown": [
-    "field"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/state-hover",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-field/property-background/state-hover",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "field-hover-02",
    "scope": "semantic",
    "facets": {
+    "property": "background",
+    "usage": "field",
     "state": "hover"
    },
    "matchedTerms": [
+    "field",
     "hover"
    ],
-   "unknown": [
-    "field"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/state-hover",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-field/property-background/state-hover",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "field-hover-03",
    "scope": "semantic",
    "facets": {
+    "property": "background",
+    "usage": "field",
     "state": "hover"
    },
    "matchedTerms": [
+    "field",
     "hover"
    ],
-   "unknown": [
-    "field"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/state-hover",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-field/property-background/state-hover",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3312,13 +3363,16 @@
   {
    "token": "highlight",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "intent": "highlight"
+   },
+   "matchedTerms": [
     "highlight"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/intent-highlight",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3342,17 +3396,17 @@
    "token": "icon-interactive",
    "scope": "semantic",
    "facets": {
-    "property": "icon"
+    "property": "icon",
+    "intent": "accent"
    },
    "matchedTerms": [
-    "icon"
-   ],
-   "unknown": [
+    "icon",
     "interactive"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-icon",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/intent-accent/property-icon",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3381,8 +3435,7 @@
    },
    "matchedTerms": [
     "icon",
-    "on",
-    "color"
+    "on"
    ],
    "unknown": [],
    "conflicts": [],
@@ -3401,7 +3454,6 @@
    "matchedTerms": [
     "icon",
     "on",
-    "color",
     "disabled"
    ],
    "unknown": [],
@@ -3414,17 +3466,17 @@
    "token": "icon-primary",
    "scope": "semantic",
    "facets": {
-    "property": "icon"
+    "property": "icon",
+    "emphasis": "default"
    },
    "matchedTerms": [
-    "icon"
-   ],
-   "unknown": [
+    "icon",
     "primary"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-icon",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/property-icon/emphasis-default",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3481,325 +3533,397 @@
   {
    "token": "interactive",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "intent": "accent"
+   },
+   "matchedTerms": [
     "interactive"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/intent-accent",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-01",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "surface"
+   },
+   "matchedTerms": [
     "layer"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-02",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "surface"
+   },
+   "matchedTerms": [
     "layer"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-03",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "surface"
+   },
+   "matchedTerms": [
     "layer"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-accent-01",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "property": "background",
+    "usage": "surface"
+   },
+   "matchedTerms": [
+    "layer"
+   ],
    "unknown": [
-    "layer",
     "accent"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "explained": 0.5,
    "domain": "color"
   },
   {
    "token": "layer-accent-02",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "property": "background",
+    "usage": "surface"
+   },
+   "matchedTerms": [
+    "layer"
+   ],
    "unknown": [
-    "layer",
     "accent"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "explained": 0.5,
    "domain": "color"
   },
   {
    "token": "layer-accent-03",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "property": "background",
+    "usage": "surface"
+   },
+   "matchedTerms": [
+    "layer"
+   ],
    "unknown": [
-    "layer",
     "accent"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "explained": 0.5,
    "domain": "color"
   },
   {
    "token": "layer-accent-active-01",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "surface",
+    "state": "active"
+   },
+   "matchedTerms": [
     "layer",
-    "accent",
     "active"
    ],
+   "unknown": [
+    "accent"
+   ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-active",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
    "token": "layer-accent-active-02",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "surface",
+    "state": "active"
+   },
+   "matchedTerms": [
     "layer",
-    "accent",
     "active"
    ],
+   "unknown": [
+    "accent"
+   ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-active",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
    "token": "layer-accent-active-03",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "surface",
+    "state": "active"
+   },
+   "matchedTerms": [
     "layer",
-    "accent",
     "active"
    ],
+   "unknown": [
+    "accent"
+   ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-active",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
    "token": "layer-accent-hover-01",
    "scope": "semantic",
    "facets": {
+    "property": "background",
+    "usage": "surface",
     "state": "hover"
    },
    "matchedTerms": [
+    "layer",
     "hover"
    ],
    "unknown": [
-    "layer",
     "accent"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/state-hover",
-   "explained": 0.3333333333333333,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
    "token": "layer-accent-hover-02",
    "scope": "semantic",
    "facets": {
+    "property": "background",
+    "usage": "surface",
     "state": "hover"
    },
    "matchedTerms": [
+    "layer",
     "hover"
    ],
    "unknown": [
-    "layer",
     "accent"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/state-hover",
-   "explained": 0.3333333333333333,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
    "token": "layer-accent-hover-03",
    "scope": "semantic",
    "facets": {
+    "property": "background",
+    "usage": "surface",
     "state": "hover"
    },
    "matchedTerms": [
+    "layer",
     "hover"
    ],
    "unknown": [
-    "layer",
     "accent"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/state-hover",
-   "explained": 0.3333333333333333,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
+   "explained": 0.6666666666666666,
    "domain": "color"
   },
   {
    "token": "layer-active-01",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "surface",
+    "state": "active"
+   },
+   "matchedTerms": [
     "layer",
     "active"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-active",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-active-02",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "surface",
+    "state": "active"
+   },
+   "matchedTerms": [
     "layer",
     "active"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-active",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-active-03",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "background",
+    "usage": "surface",
+    "state": "active"
+   },
+   "matchedTerms": [
     "layer",
     "active"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-active",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-background-01",
    "scope": "semantic",
    "facets": {
-    "property": "background"
+    "property": "background",
+    "usage": "surface"
    },
    "matchedTerms": [
+    "layer",
     "background"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-background-02",
    "scope": "semantic",
    "facets": {
-    "property": "background"
+    "property": "background",
+    "usage": "surface"
    },
    "matchedTerms": [
+    "layer",
     "background"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-background-03",
    "scope": "semantic",
    "facets": {
-    "property": "background"
+    "property": "background",
+    "usage": "surface"
    },
    "matchedTerms": [
+    "layer",
     "background"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-hover-01",
    "scope": "semantic",
    "facets": {
+    "property": "background",
+    "usage": "surface",
     "state": "hover"
    },
    "matchedTerms": [
+    "layer",
     "hover"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/state-hover",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-hover-02",
    "scope": "semantic",
    "facets": {
+    "property": "background",
+    "usage": "surface",
     "state": "hover"
    },
    "matchedTerms": [
+    "layer",
     "hover"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/state-hover",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
+   "explained": 1,
    "domain": "color"
   },
   {
    "token": "layer-hover-03",
    "scope": "semantic",
    "facets": {
+    "property": "background",
+    "usage": "surface",
     "state": "hover"
    },
    "matchedTerms": [
+    "layer",
     "hover"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/state-hover",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3807,17 +3931,17 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
+    "usage": "surface",
     "state": "selected"
    },
    "matchedTerms": [
+    "layer",
     "selected"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background/state-selected",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3825,17 +3949,17 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
+    "usage": "surface",
     "state": "selected"
    },
    "matchedTerms": [
+    "layer",
     "selected"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background/state-selected",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3843,17 +3967,17 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
+    "usage": "surface",
     "state": "selected"
    },
    "matchedTerms": [
+    "layer",
     "selected"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background/state-selected",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3861,18 +3985,18 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
+    "usage": "surface",
     "state": "disabled+selected"
    },
    "matchedTerms": [
+    "layer",
     "selected",
     "disabled"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background/state-disabled+selected",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-disabled+selected",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3880,18 +4004,18 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
+    "usage": "surface",
     "state": "hover+selected"
    },
    "matchedTerms": [
+    "layer",
     "selected",
     "hover"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background/state-hover+selected",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover+selected",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3899,18 +4023,18 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
+    "usage": "surface",
     "state": "hover+selected"
    },
    "matchedTerms": [
+    "layer",
     "selected",
     "hover"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background/state-hover+selected",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover+selected",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3918,18 +4042,18 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
+    "usage": "surface",
     "state": "hover+selected"
    },
    "matchedTerms": [
+    "layer",
     "selected",
     "hover"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-background/state-hover+selected",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover+selected",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -3937,19 +4061,18 @@
    "scope": "semantic",
    "facets": {
     "property": "background",
-    "state": "selected",
-    "usage": "inverse"
+    "usage": "inverse+surface",
+    "state": "selected"
    },
    "matchedTerms": [
+    "layer",
     "selected",
     "inverse"
    ],
-   "unknown": [
-    "layer"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-inverse/property-background/state-selected",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/usage-inverse+surface/property-background/state-selected",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -4058,18 +4181,18 @@
    "scope": "semantic",
    "facets": {
     "property": "text",
-    "usage": "inverse+link"
+    "usage": "inverse+link",
+    "state": "active"
    },
    "matchedTerms": [
     "link",
-    "inverse"
-   ],
-   "unknown": [
+    "inverse",
     "active"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-inverse+link/property-text",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/usage-inverse+link/property-text/state-active",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -4096,18 +4219,18 @@
    "scope": "semantic",
    "facets": {
     "property": "text",
-    "usage": "inverse+link"
+    "usage": "inverse+link",
+    "state": "visited"
    },
    "matchedTerms": [
     "link",
-    "inverse"
-   ],
-   "unknown": [
+    "inverse",
     "visited"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-inverse+link/property-text",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/usage-inverse+link/property-text/state-visited",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -4115,17 +4238,17 @@
    "scope": "semantic",
    "facets": {
     "property": "text",
-    "usage": "link"
+    "usage": "link",
+    "emphasis": "default"
    },
    "matchedTerms": [
-    "link"
-   ],
-   "unknown": [
+    "link",
     "primary"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-link/property-text",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-link/property-text/emphasis-default",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -4134,18 +4257,18 @@
    "facets": {
     "property": "text",
     "usage": "link",
+    "emphasis": "default",
     "state": "hover"
    },
    "matchedTerms": [
     "link",
+    "primary",
     "hover"
    ],
-   "unknown": [
-    "primary"
-   ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-link/property-text/state-hover",
-   "explained": 0.6666666666666666,
+   "concept": "dsi:concept/color/usage-link/property-text/emphasis-default/state-hover",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -4171,17 +4294,17 @@
    "scope": "semantic",
    "facets": {
     "property": "text",
-    "usage": "link"
+    "usage": "link",
+    "state": "visited"
    },
    "matchedTerms": [
-    "link"
-   ],
-   "unknown": [
+    "link",
     "visited"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-link/property-text",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/usage-link/property-text/state-visited",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -4475,20 +4598,21 @@
    "token": "notification-action-tertiary-inverse-active",
    "scope": "component",
    "facets": {
-    "usage": "inverse"
+    "usage": "inverse",
+    "state": "active"
    },
    "matchedTerms": [
-    "inverse"
+    "inverse",
+    "active"
    ],
    "unknown": [
     "notification",
     "action",
-    "tertiary",
-    "active"
+    "tertiary"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-inverse",
-   "explained": 0.2,
+   "concept": "dsi:concept/color/usage-inverse/state-active",
+   "explained": 0.4,
    "domain": "color"
   },
   {
@@ -4545,7 +4669,6 @@
     "inverse",
     "text",
     "on",
-    "color",
     "disabled"
    ],
    "unknown": [
@@ -4554,10 +4677,9 @@
     "tertiary"
    ],
    "conflicts": [
-    "property: text vs icon (on)",
-    "property: text vs icon (color)"
+    "property: text vs icon (on)"
    ],
-   "explained": 0.625,
+   "explained": 0.5714285714285714,
    "domain": "color"
   },
   {
@@ -4889,13 +5011,16 @@
   {
    "token": "overlay",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "usage": "scrim"
+   },
+   "matchedTerms": [
     "overlay"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/usage-scrim",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -5401,13 +5526,16 @@
   {
    "token": "shadow",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
+   "facets": {
+    "property": "shadow"
+   },
+   "matchedTerms": [
     "shadow"
    ],
+   "unknown": [],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/property-shadow",
+   "explained": 1,
    "domain": "color"
   },
   {
@@ -5456,8 +5584,7 @@
    "matchedTerms": [],
    "unknown": [
     "size",
-    "size",
-    "sm"
+    "size"
    ],
    "conflicts": [],
    "explained": 0
@@ -5819,43 +5946,55 @@
   {
    "token": "support-caution-major",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "intent": "caution"
+   },
+   "matchedTerms": [
+    "caution"
+   ],
    "unknown": [
     "support",
-    "caution",
     "major"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/intent-caution",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
    "token": "support-caution-minor",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "intent": "caution"
+   },
+   "matchedTerms": [
+    "caution"
+   ],
    "unknown": [
     "support",
-    "caution",
     "minor"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/intent-caution",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
    "token": "support-caution-undefined",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
+   "facets": {
+    "intent": "caution"
+   },
+   "matchedTerms": [
+    "caution"
+   ],
    "unknown": [
     "support",
-    "caution",
     "undefined"
    ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/intent-caution",
+   "explained": 0.3333333333333333,
    "domain": "color"
   },
   {
@@ -6242,19 +6381,13 @@
   {
    "token": "syntax-color",
    "scope": "semantic",
-   "facets": {
-    "property": "icon",
-    "usage": "on-fill"
-   },
-   "matchedTerms": [
-    "color"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "syntax"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-icon",
-   "explained": 0.5,
+   "explained": 0,
    "domain": "color"
   },
   {
@@ -7091,14 +7224,18 @@
   {
    "token": "syntax-strong",
    "scope": "semantic",
-   "facets": {},
-   "matchedTerms": [],
-   "unknown": [
-    "syntax",
+   "facets": {
+    "emphasis": "strong"
+   },
+   "matchedTerms": [
     "strong"
    ],
+   "unknown": [
+    "syntax"
+   ],
    "conflicts": [],
-   "explained": 0,
+   "concept": "dsi:concept/color/emphasis-strong",
+   "explained": 0.5,
    "domain": "color"
   },
   {
@@ -7603,193 +7740,133 @@
   {
    "token": "tag-color-blue",
    "scope": "component",
-   "facets": {
-    "property": "icon",
-    "usage": "on-fill"
-   },
-   "matchedTerms": [
-    "color"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "tag",
     "blue"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-icon",
-   "explained": 0.3333333333333333,
+   "explained": 0,
    "domain": "color"
   },
   {
    "token": "tag-color-cool-gray",
    "scope": "component",
-   "facets": {
-    "property": "icon",
-    "usage": "on-fill"
-   },
-   "matchedTerms": [
-    "color"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "tag",
     "cool",
     "gray"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-icon",
-   "explained": 0.25,
+   "explained": 0,
    "domain": "color"
   },
   {
    "token": "tag-color-cyan",
    "scope": "component",
-   "facets": {
-    "property": "icon",
-    "usage": "on-fill"
-   },
-   "matchedTerms": [
-    "color"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "tag",
     "cyan"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-icon",
-   "explained": 0.3333333333333333,
+   "explained": 0,
    "domain": "color"
   },
   {
    "token": "tag-color-gray",
    "scope": "component",
-   "facets": {
-    "property": "icon",
-    "usage": "on-fill"
-   },
-   "matchedTerms": [
-    "color"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "tag",
     "gray"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-icon",
-   "explained": 0.3333333333333333,
+   "explained": 0,
    "domain": "color"
   },
   {
    "token": "tag-color-green",
    "scope": "component",
-   "facets": {
-    "property": "icon",
-    "usage": "on-fill"
-   },
-   "matchedTerms": [
-    "color"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "tag",
     "green"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-icon",
-   "explained": 0.3333333333333333,
+   "explained": 0,
    "domain": "color"
   },
   {
    "token": "tag-color-magenta",
    "scope": "component",
-   "facets": {
-    "property": "icon",
-    "usage": "on-fill"
-   },
-   "matchedTerms": [
-    "color"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "tag",
     "magenta"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-icon",
-   "explained": 0.3333333333333333,
+   "explained": 0,
    "domain": "color"
   },
   {
    "token": "tag-color-purple",
    "scope": "component",
-   "facets": {
-    "property": "icon",
-    "usage": "on-fill"
-   },
-   "matchedTerms": [
-    "color"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "tag",
     "purple"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-icon",
-   "explained": 0.3333333333333333,
+   "explained": 0,
    "domain": "color"
   },
   {
    "token": "tag-color-red",
    "scope": "component",
-   "facets": {
-    "property": "icon",
-    "usage": "on-fill"
-   },
-   "matchedTerms": [
-    "color"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "tag",
     "red"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-icon",
-   "explained": 0.3333333333333333,
+   "explained": 0,
    "domain": "color"
   },
   {
    "token": "tag-color-teal",
    "scope": "component",
-   "facets": {
-    "property": "icon",
-    "usage": "on-fill"
-   },
-   "matchedTerms": [
-    "color"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "tag",
     "teal"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-icon",
-   "explained": 0.3333333333333333,
+   "explained": 0,
    "domain": "color"
   },
   {
    "token": "tag-color-warm-gray",
    "scope": "component",
-   "facets": {
-    "property": "icon",
-    "usage": "on-fill"
-   },
-   "matchedTerms": [
-    "color"
-   ],
+   "facets": {},
+   "matchedTerms": [],
    "unknown": [
     "tag",
     "warm",
     "gray"
    ],
    "conflicts": [],
-   "concept": "dsi:concept/color/usage-on-fill/property-icon",
-   "explained": 0.25,
+   "explained": 0,
    "domain": "color"
   },
   {
@@ -8301,13 +8378,11 @@
    },
    "matchedTerms": [
     "text",
-    "on",
-    "color"
+    "on"
    ],
    "unknown": [],
    "conflicts": [
-    "property: text vs icon (on)",
-    "property: text vs icon (color)"
+    "property: text vs icon (on)"
    ],
    "explained": 1,
    "domain": "color"
@@ -8323,13 +8398,11 @@
    "matchedTerms": [
     "text",
     "on",
-    "color",
     "disabled"
    ],
    "unknown": [],
    "conflicts": [
-    "property: text vs icon (on)",
-    "property: text vs icon (color)"
+    "property: text vs icon (on)"
    ],
    "explained": 1,
    "domain": "color"
@@ -8355,17 +8428,17 @@
    "token": "text-primary",
    "scope": "semantic",
    "facets": {
-    "property": "text"
+    "property": "text",
+    "emphasis": "default"
    },
    "matchedTerms": [
-    "text"
-   ],
-   "unknown": [
+    "text",
     "primary"
    ],
+   "unknown": [],
    "conflicts": [],
-   "concept": "dsi:concept/color/property-text",
-   "explained": 0.5,
+   "concept": "dsi:concept/color/property-text/emphasis-default",
+   "explained": 1,
    "domain": "color"
   },
   {

@@ -26,48 +26,90 @@
       "term": "active",
       "concept": "dsi:state/active",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 19,
-        "agree": 19,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Polaris active means pressed.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "backdrop",
+      "concept": "dsi:usage/scrim",
+      "match": "exact",
+      "status": "approved",
+      "note": "Modal backdrop dimming layer.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "bg",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "Abbreviation of background; every bg token colors a fill.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "border",
       "concept": "dsi:property/border",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 16,
-        "agree": 15,
-        "precision": 0.938
-      },
+      "status": "approved",
+      "note": "Border color tokens.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "brand",
       "concept": "dsi:intent/accent",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 4,
-        "agree": 4,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Polaris brand is the primary accent.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -106,48 +148,54 @@
       "term": "caution",
       "concept": "dsi:intent/caution",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 9,
-        "agree": 9,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Polaris caution intent.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "critical",
       "concept": "dsi:intent/danger",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 10,
-        "agree": 10,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Polaris's name for the danger status.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "disabled",
       "concept": "dsi:state/disabled",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 5,
-        "agree": 5,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Disabled state.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -164,6 +212,37 @@
         "agent": "dsi-classify",
         "at": "2026-11-01T00:18:57.295Z",
         "method": "derive-from-approved-mappings"
+      }
+    },
+    {
+      "term": "emphasis",
+      "concept": "dsi:intent/highlight",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Polaris emphasis is the blue highlight/selection intent, not a status. (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.9",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "fill",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "Polaris bg-fill: the filled background of controls; always part of a background token.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -263,67 +342,106 @@
       }
     },
     {
+      "term": "focus",
+      "concept": "dsi:state/focus",
+      "match": "exact",
+      "status": "proposed",
+      "note": "border-focus: the color used when focused. (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      }
+    },
+    {
       "term": "hover",
       "concept": "dsi:state/hover",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 20,
-        "agree": 20,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Hover state.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "icon",
       "concept": "dsi:property/icon",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 14,
-        "agree": 14,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Icon color tokens.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "info",
       "concept": "dsi:intent/info",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 9,
-        "agree": 9,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Informational status.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "input",
+      "concept": "dsi:usage/field",
+      "match": "exact",
+      "status": "approved",
+      "note": "Form input colors.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "inverse",
       "concept": "dsi:usage/inverse",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 7,
-        "agree": 7,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Opposite-lightness surfaces and content.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -346,48 +464,98 @@
       "term": "link",
       "concept": "dsi:usage/link",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 4,
-        "agree": 4,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Text link colors.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "magic",
       "concept": "dsi:intent/ai",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 5,
-        "agree": 5,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Polaris magic marks AI features.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "nav",
+      "concept": "dsi:usage/navigation",
+      "match": "exact",
+      "status": "approved",
+      "note": "Application navigation chrome.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "on",
       "concept": "dsi:usage/on-fill",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 10,
-        "agree": 10,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Always in on-bg-fill: content on a filled background.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "on-bg-fill",
+      "concept": "dsi:property/text",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Overrides bg/fill: every Polaris on-bg-fill token is a text color, not the fill. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "on-bg-fill",
+      "concept": "dsi:usage/on-fill",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Content placed on a filled background. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
       }
     },
     {
@@ -410,32 +578,36 @@
       "term": "selected",
       "concept": "dsi:state/selected",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 2,
-        "agree": 2,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Selected state.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "success",
       "concept": "dsi:intent/success",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 9,
-        "agree": 9,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Success status.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -456,18 +628,51 @@
     },
     {
       "term": "surface",
-      "concept": "dsi:usage/surface",
+      "concept": "dsi:property/background",
       "match": "exact",
       "status": "proposed",
-      "evidence": {
-        "support": 5,
-        "agree": 5,
-        "precision": 1
-      },
+      "note": "Surface always appears as bg-surface, a background. (confidence 0.85); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "surface",
+      "concept": "dsi:usage/surface",
+      "match": "exact",
+      "status": "approved",
+      "note": "Polaris bg-surface: container surfaces such as cards.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "text",
+      "concept": "dsi:property/text",
+      "match": "exact",
+      "status": "approved",
+      "note": "Polaris text tokens color text only; icons have their own icon tokens.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
@@ -490,16 +695,18 @@
       "term": "warning",
       "concept": "dsi:intent/warning",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 9,
-        "agree": 9,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Warning status.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.295Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:35Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.804Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     }
   ]

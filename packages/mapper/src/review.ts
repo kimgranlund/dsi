@@ -88,8 +88,82 @@ export function applyDecisions(root: string, scope: Scope, decisions: Decision[]
 }
 
 /** Render the review page from the template, embedding the queue and allowed facet values. */
-export function renderPage(root: string, items: QueueItem[], ontology: unknown, generatedAt: string): string {
+export function renderPage(root: string, items: QueueItem[], ontology: unknown, generatedAt: string, termItems: TermQueueItem[] = []): string {
   const tpl = fs.readFileSync(path.join(root, 'packages/mapper/review/review.html'), 'utf8');
-  const data = JSON.stringify({ generatedAt, items, ontology }).replaceAll('</', '<\\/');
+  const data = JSON.stringify({ generatedAt, items, termItems, ontology }).replaceAll('</', '<\\/');
   return tpl.replace('/*__DATA__*/null', data);
+}
+
+/** One naming word awaiting a decision: every proposed term for it, with how often it appears in names. */
+export interface TermQueueItem {
+  key: string;
+  product: string;
+  term: string;
+  count?: number;
+  examples: string[];
+  approved: { concept: string; match: string }[];
+  candidates: { id: string; concept: string; match: string; by: string; note?: string; evidence?: { support: number; agree: number; precision: number } }[];
+}
+
+export const termDecisionKey = (product: string, term: string) => `${product}__${term}`;
+const termCandidateId = (t: any) => 't-' + crypto.createHash('sha1').update([t.term, t.concept, t.match, t.provenance.model ?? t.provenance.method].join('|')).digest('hex').slice(0, 12);
+
+/** Words with Proposed terms (agent drafts or evidence candidates). Counts and examples come from the vocabulary run. */
+export function collectTermQueue(root: string, products: string[], vocabRunDir: string): TermQueueItem[] {
+  const out: TermQueueItem[] = [];
+  for (const product of products) {
+    const f = path.join(root, 'mappings', product, 'terms.json');
+    if (!fs.existsSync(f)) continue;
+    const terms = JSON.parse(fs.readFileSync(f, 'utf8')).terms as any[];
+    const pk = path.join(vocabRunDir, `${product}.a.packet.json`);
+    const vocab = new Map<string, any>(fs.existsSync(pk) ? JSON.parse(fs.readFileSync(pk, 'utf8')).vocabulary.map((v: any) => [v.term, v]) : []);
+    const words = [...new Set(terms.filter((t) => t.status === 'proposed').map((t) => t.term))].sort();
+    for (const term of words) {
+      const v = vocab.get(term);
+      out.push({
+        key: termDecisionKey(product, term), product, term, count: v?.count, examples: v?.examples ?? [],
+        approved: terms.filter((t) => t.term === term && t.status === 'approved').map(({ concept, match }) => ({ concept, match })),
+        candidates: terms.filter((t) => t.term === term && t.status === 'proposed').map((t) => ({ id: termCandidateId(t), concept: t.concept, match: t.match, by: t.provenance.model ?? 'evidence from approved mappings', note: t.note, evidence: t.evidence })),
+      });
+    }
+  }
+  return out;
+}
+
+export interface TermDecision { key: string; product: string; term: string; action: 'accept' | 'custom' | 'ignore' | 'reject'; candidateId?: string; concept?: string; match?: string; ignore?: 'noise' | 'no-concept' | 'component'; note?: string; at: string }
+
+/**
+ * accept: the chosen term becomes Approved, other proposals for the word Rejected. custom: a new Approved term.
+ * ignore noise: the word joins `noise`; other ignores just reject the proposals. reject: all proposals Rejected.
+ */
+export function applyTermDecisions(root: string, decisions: TermDecision[], reviewer: string): Record<string, number> {
+  const counts: Record<string, number> = { accept: 0, custom: 0, ignore: 0, reject: 0, skipped: 0 };
+  for (const product of [...new Set(decisions.map((d) => d.product))]) {
+    const f = path.join(root, 'mappings', product, 'terms.json');
+    if (!fs.existsSync(f)) continue;
+    const file = JSON.parse(fs.readFileSync(f, 'utf8'));
+    for (const d of decisions.filter((x) => x.product === product)) {
+      const review = { by: reviewer, at: d.at, ...(d.note ? { note: d.note } : {}) };
+      const open = file.terms.filter((t: any) => t.term === d.term && t.status === 'proposed');
+      if (!open.length) { counts.skipped++; continue; }
+      const reject = (xs: any[]) => xs.forEach((x) => Object.assign(x, { status: 'rejected', review }));
+      if (d.action === 'accept') {
+        const chosen = open.find((t: any) => termCandidateId(t) === d.candidateId);
+        if (!chosen) { counts.skipped++; continue; }
+        Object.assign(chosen, { status: 'approved', review });
+        reject(open.filter((t: any) => t !== chosen));
+      } else if (d.action === 'custom') {
+        if (!d.concept || !d.match) { counts.skipped++; continue; }
+        reject(open);
+        file.terms.push({ term: d.term, concept: d.concept, match: d.match, status: 'approved', note: d.note || 'Chosen in human review.', provenance: { agent: reviewer, at: d.at, method: 'human-review' }, review });
+      } else if (d.action === 'ignore') {
+        reject(open);
+        if (d.ignore === 'noise') file.noise = [...new Set([...(file.noise ?? []), d.term])].sort();
+      } else reject(open);
+      counts[d.action]++;
+    }
+    file.terms.sort((a: any, b: any) => a.term.localeCompare(b.term) || a.concept.localeCompare(b.concept) || a.status.localeCompare(b.status));
+    fs.writeFileSync(f, JSON.stringify(file, null, 2) + '\n');
+  }
+  return counts;
 }

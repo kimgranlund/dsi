@@ -6,14 +6,14 @@ import { merge, readProposals, APPROVE_AT, APPROVE_WITH_CLASSIFIER_AT, type Clas
 import { classify, type TermsFile } from '@dsi/classify';
 import { loadNative } from '@dsi/resolve';
 import { preparePacket, readMappings, type Scope } from './packet.ts';
-import { applyDecisions, collectQueue, renderPage, type Decision } from './review.ts';
+import { applyDecisions, applyTermDecisions, collectQueue, collectTermQueue, renderPage, type Decision, type TermDecision } from './review.ts';
 
 const USAGE = `usage:
   dsi-map prepare <scope> <run>   write <product>.{a,b}.packet.json for every product in the scope
   dsi-map merge <scope> <run>     merge <product>.{a,b}.proposals.json into mappings/ by two-agent agreement
   dsi-map check <scope> <run> <product> <role>   validate one proposals file against its packet
   dsi-map queue <scope>           list tokens whose mappings still need a human decision
-  dsi-map review <scope> <run> <out.html>              render the review page for the queue (token details from <run>)
+  dsi-map review <scope> <run> <out.html> [vocab run]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
 
 const [cmd, scopeId, run] = process.argv.slice(2);
@@ -60,19 +60,22 @@ if (cmd === 'prepare') {
     console.log(`OK: ${pf.proposals.length} proposals, all packet tokens answered, all concepts valid`);
   } catch (e) { console.error(`FAIL: ${(e as Error).message}`); process.exit(1); }
 } else if (cmd === 'review') {
-  const out = process.argv[5];
+  const [out, vocabRun] = [process.argv[5], process.argv[6]];
   if (!run || !out) { console.error(USAGE); process.exit(2); }
   const items = collectQueue(root, scope, runDir);
+  const termItems = vocabRun ? collectTermQueue(root, Object.keys(scope.products), path.join(root, '.cache/classify', vocabRun)) : [];
   const packet = JSON.parse(fs.readFileSync(path.join(runDir, `${Object.keys(scope.products)[0]}.a.packet.json`), 'utf8'));
   fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true });
-  fs.writeFileSync(out, renderPage(root, items, packet.ontology, new Date().toISOString()));
-  console.log(`${items.length} queued tokens -> ${out}`);
+  fs.writeFileSync(out, renderPage(root, items, packet.ontology, new Date().toISOString(), termItems));
+  console.log(`${items.length} queued tokens, ${termItems.length} queued words -> ${out}`);
 } else if (cmd === 'apply-review') {
   const [file, reviewer] = [process.argv[4], process.argv[5]];
   if (!file || !reviewer) { console.error(USAGE); process.exit(2); }
   const raw = JSON.parse(fs.readFileSync(file, 'utf8'));
-  const decisions = (Array.isArray(raw) ? raw : raw.documents ?? raw.docs ?? []).map((d: any) => (d.data ?? d) as Decision);
-  console.log(JSON.stringify(applyDecisions(root, scope, decisions, reviewer)));
+  const all = (Array.isArray(raw) ? raw : raw.documents ?? raw.docs ?? []).map((d: any) => d.data ?? d);
+  // Token decisions and term decisions may come in one export; term decisions carry a `term` field.
+  console.log('tokens', JSON.stringify(applyDecisions(root, scope, all.filter((d: any) => !('term' in d)) as Decision[], reviewer)));
+  console.log('terms ', JSON.stringify(applyTermDecisions(root, all.filter((d: any) => 'term' in d) as TermDecision[], reviewer)));
 } else if (cmd === 'queue') {
   for (const [product, { version }] of Object.entries(scope.products)) {
     const m = readMappings(root, product, version) as any;

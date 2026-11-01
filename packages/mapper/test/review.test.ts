@@ -43,3 +43,35 @@ test('decisions become approved and rejected records that pass the repo validato
   const issues = await validateRepo({ root, ontologyDir: path.join(REPO, 'ontology') });
   assert.deepEqual(issues.filter((i) => i.file.startsWith('mappings')), []);
 });
+
+import { applyTermDecisions, collectTermQueue } from '../src/review.ts';
+
+test('term decisions approve, reject and add noise, and the result validates', async () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'dsi-terms-'));
+  fs.cpSync(path.join(REPO, 'catalog'), path.join(root, 'catalog'), { recursive: true });
+  fs.mkdirSync(path.join(root, 'mappings/polaris'), { recursive: true });
+  const prov = (model: string) => ({ agent: 'dsi-classify', model, at: '2026-11-01T00:00:00Z', method: 'terms-v1' });
+  fs.writeFileSync(path.join(root, 'mappings/polaris/terms.json'), JSON.stringify({ product: 'polaris', noise: ['color'], terms: [
+    { term: 'bg', concept: 'dsi:property/background', match: 'exact', status: 'proposed', provenance: prov('opus') },
+    { term: 'bg', concept: 'dsi:usage/surface', match: 'exact', status: 'proposed', provenance: prov('sonnet') },
+    { term: 'tertiary', concept: 'dsi:emphasis/subtlest', match: 'close', status: 'proposed', provenance: prov('opus') },
+    { term: 'video', concept: 'dsi:usage/surface', match: 'related', status: 'proposed', provenance: prov('opus') },
+  ] }));
+  const q = collectTermQueue(root, ['polaris'], path.join(root, 'none'));
+  assert.deepEqual(q.map((x) => [x.term, x.candidates.length]), [['bg', 2], ['tertiary', 1], ['video', 1]]);
+  const bgId = q[0].candidates.find((c) => c.concept === 'dsi:property/background')!.id;
+  const at = '2026-11-01T10:00:00Z';
+  const counts = applyTermDecisions(root, [
+    { key: 'k', product: 'polaris', term: 'bg', action: 'accept', candidateId: bgId, at },
+    { key: 'k', product: 'polaris', term: 'tertiary', action: 'custom', concept: 'dsi:emphasis/subtle', match: 'broad', at },
+    { key: 'k', product: 'polaris', term: 'video', action: 'ignore', ignore: 'noise', at },
+  ], 'kimgranlund');
+  assert.deepEqual(counts, { accept: 1, custom: 1, ignore: 1, reject: 0, skipped: 0 });
+  const f = JSON.parse(fs.readFileSync(path.join(root, 'mappings/polaris/terms.json'), 'utf8'));
+  const st = (t: string) => f.terms.filter((x: any) => x.term === t).map((x: any) => `${x.concept}:${x.status}`).sort();
+  assert.deepEqual(st('bg'), ['dsi:property/background:approved', 'dsi:usage/surface:rejected']);
+  assert.deepEqual(st('tertiary'), ['dsi:emphasis/subtle:approved', 'dsi:emphasis/subtlest:rejected']);
+  assert.ok(f.noise.includes('video'));
+  const issues = await validateRepo({ root, ontologyDir: path.join(REPO, 'ontology') });
+  assert.deepEqual(issues.filter((i) => i.file.includes('terms')), []);
+});

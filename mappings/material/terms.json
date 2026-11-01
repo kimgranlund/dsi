@@ -1,11 +1,11 @@
 {
   "product": "material",
   "noise": [
-    "md",
-    "sys",
-    "ref",
+    "color",
     "comp",
-    "color"
+    "md",
+    "ref",
+    "sys"
   ],
   "scopes": [
     {
@@ -32,178 +32,640 @@
   "terms": [
     {
       "term": "background",
-      "concept": "dsi:usage/page",
+      "concept": "dsi:property/background",
       "match": "exact",
       "status": "proposed",
-      "evidence": {
-        "support": 2,
-        "agree": 2,
-        "precision": 1
-      },
+      "note": "The background role is a fill. (confidence 0.9; the other agent disagreed)",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.097Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "background",
+      "concept": "dsi:usage/page",
+      "match": "exact",
+      "status": "approved",
+      "note": "Material background is the app background behind surfaces.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "container",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "proposed",
+      "note": "X-container roles are fills; on-X-container is overridden by on-X. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "container",
+      "concept": "dsi:property/background",
+      "match": "close",
+      "status": "proposed",
+      "note": "Container is a fill role behind content. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T00:40:31.302709+00:00",
+        "method": "terms-v1"
       }
     },
     {
       "term": "error",
       "concept": "dsi:intent/danger",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 3,
-        "agree": 3,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Material's error role is the danger status.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.097Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "error-container",
       "concept": "dsi:emphasis/subtle",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 2,
-        "agree": 2,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "The error container is the lower-emphasis tonal fill of error.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.097Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "high",
+      "concept": "dsi:emphasis/strong",
+      "match": "exact",
+      "status": "proposed",
+      "note": "surface-container-high is the second-strongest step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "high",
+      "concept": "dsi:emphasis/strong",
+      "match": "close",
+      "status": "proposed",
+      "note": "Higher step of surface-container family. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T00:40:31.302709+00:00",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "highest",
+      "concept": "dsi:emphasis/strongest",
+      "match": "exact",
+      "status": "approved",
+      "note": "surface-container-highest is the strongest step of a five-step family.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "inverse",
       "concept": "dsi:usage/inverse",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 2,
-        "agree": 2,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Inverse roles are for contrasting surfaces like snackbars.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.097Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "low",
+      "concept": "dsi:emphasis/subtle",
+      "match": "exact",
+      "status": "proposed",
+      "note": "surface-container-low is the second-weakest step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "low",
+      "concept": "dsi:emphasis/subtle",
+      "match": "close",
+      "status": "proposed",
+      "note": "Lower step of surface-container family. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T00:40:31.302709+00:00",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "lowest",
+      "concept": "dsi:emphasis/subtlest",
+      "match": "exact",
+      "status": "approved",
+      "note": "surface-container-lowest is the weakest step of a five-step family.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "on",
       "concept": "dsi:property/foreground",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 7,
-        "agree": 7,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Material on-X roles color text and icons placed on X.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.097Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "on-background",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Overrides background on property: content on the app background. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "on-error",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Overrides container/fill: the token colors the content. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
       }
     },
     {
       "term": "on-error",
       "concept": "dsi:usage/on-fill",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 2,
-        "agree": 2,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Content on the error fill or container.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.097Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "on-primary",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Overrides container/fill: the token colors the content. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
       }
     },
     {
       "term": "on-primary",
       "concept": "dsi:usage/on-fill",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 2,
-        "agree": 2,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Content on the primary fill or container.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.097Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "on-secondary",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Overrides container/fill: the token colors the content. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "on-secondary",
+      "concept": "dsi:usage/on-fill",
+      "match": "exact",
+      "status": "approved",
+      "note": "Content on the secondary fill or container.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "on-surface",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Overrides surface on property: text and icons on surfaces. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "on-tertiary",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Overrides container/fill: the token colors the content. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "on-tertiary",
+      "concept": "dsi:usage/on-fill",
+      "match": "exact",
+      "status": "approved",
+      "note": "Content on the tertiary fill or container.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "outline",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "Outline roles color borders and dividers.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "primary",
       "concept": "dsi:intent/accent",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 3,
-        "agree": 3,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Primary is Material's main brand accent.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.097Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "primary-container",
       "concept": "dsi:emphasis/subtle",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 2,
-        "agree": 2,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "The primary container is the lower-emphasis tonal fill of primary.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.097Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "scrim",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "proposed",
+      "note": "A scrim is a fill. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "scrim",
+      "concept": "dsi:usage/scrim",
+      "match": "exact",
+      "status": "approved",
+      "note": "The scrim role dims content behind modals.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "secondary",
+      "concept": "dsi:intent/accent",
+      "match": "close",
+      "status": "proposed",
+      "note": "Secondary is a less prominent brand accent. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "secondary",
+      "concept": "dsi:intent/accent",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Lower-emphasis brand accent. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T00:40:31.302709+00:00",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "secondary-container",
+      "concept": "dsi:emphasis/subtle",
+      "match": "exact",
+      "status": "approved",
+      "note": "The secondary container is the lower-emphasis tonal fill of secondary.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "shadow",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
+      "status": "approved",
+      "note": "The shadow role colors elevation shadows.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "surface",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "proposed",
+      "note": "A bare surface role is a fill. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "surface",
+      "concept": "dsi:usage/surface",
+      "match": "exact",
+      "status": "approved",
+      "note": "Material surface roles are container backgrounds.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "surface-container",
       "concept": "dsi:property/background",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 4,
-        "agree": 4,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Surface containers are fills.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.097Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
       }
     },
     {
       "term": "surface-container",
       "concept": "dsi:usage/surface",
       "match": "exact",
-      "status": "proposed",
-      "evidence": {
-        "support": 4,
-        "agree": 4,
-        "precision": 1
-      },
+      "status": "approved",
+      "note": "Surface container family.",
       "provenance": {
         "agent": "dsi-classify",
-        "at": "2026-11-01T00:18:57.097Z",
-        "method": "derive-from-approved-mappings"
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "tertiary",
+      "concept": "dsi:intent/accent",
+      "match": "close",
+      "status": "proposed",
+      "note": "Tertiary is a contrasting brand accent. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "tertiary",
+      "concept": "dsi:intent/accent",
+      "match": "broad",
+      "status": "proposed",
+      "note": "Contrasting brand accent. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T00:40:31.302709+00:00",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "tertiary-container",
+      "concept": "dsi:emphasis/subtle",
+      "match": "exact",
+      "status": "approved",
+      "note": "The tertiary container is the lower-emphasis tonal fill of tertiary.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T00:41:58.553Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "variant",
+      "concept": "dsi:emphasis/subtle",
+      "match": "close",
+      "status": "proposed",
+      "note": "Variant roles (outline-variant, on-surface-variant) are lower-emphasis versions. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T00:41:08Z",
+        "method": "terms-v1"
       }
     }
   ]

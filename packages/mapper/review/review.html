@@ -104,6 +104,12 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 .custom label { display: grid; gap: 2px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
 .custom select, .custom input { font: inherit; font-size: 0.85rem; text-transform: none; letter-spacing: 0; padding: 5px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); width: 100%; }
 .custom code { font: 0.75rem var(--font-mono); word-break: break-all; color: var(--muted); }
+.tabs { display: flex; gap: 4px; }
+.tabs a { font: 600 0.82rem var(--font-body); color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 6px; border: 1px solid transparent; }
+.tabs a[aria-current="page"] { color: var(--ink); border-color: var(--line); background: var(--bg); }
+.tabs a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.examples { display: grid; gap: 2px; font: 0.72rem/1.35 var(--font-mono); color: var(--muted); word-break: break-word; }
+.ev { font: 0.72rem var(--font-mono); color: var(--muted); }
 .empty { text-align: center; color: var(--muted); padding: 40px 0; }
 @media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
 </style>
@@ -114,6 +120,10 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
       <h1>Mapping review</h1>
       <span class="sub" id="generated"></span>
     </div>
+    <nav class="tabs" aria-label="Review queues">
+      <a href="#tokens" id="tab-tokens">Tokens</a>
+      <a href="#terms" id="tab-terms">Naming terms</a>
+    </nav>
     <div class="progress" id="progress"></div>
     <div class="filters">
       <select id="f-product" aria-label="Product"><option value="">All systems</option></select>
@@ -122,7 +132,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
         <option value="decided">Decided</option>
         <option value="all">All</option>
       </select>
-      <input id="f-search" type="search" placeholder="Filter by token name" aria-label="Filter by token name">
+      <input id="f-search" type="search" placeholder="Filter by name" aria-label="Filter by name">
     </div>
     <div class="notice" id="notice" hidden></div>
   </div>
@@ -139,6 +149,9 @@ const MATCHES = ['exact', 'close', 'broad', 'narrow', 'related'];
 const MATCH_HINT = { exact: 'same meaning', close: 'same, with a nuance', broad: 'token is a narrower case', narrow: 'token covers more', related: 'associated only' };
 
 let decisions = new Map();
+let termDecisions = new Map();
+const TERMS = DATA.termItems || [];
+const view = () => (location.hash === '#terms' ? 'terms' : 'tokens');
 let db = null;
 let canWrite = false;
 const openCustom = new Set();
@@ -179,15 +192,72 @@ function swatch(theme, t) {
     el('span', {}, el('b', { text: theme }), ' ', t.value));
 }
 
-function decide(item, body) {
+function clean(o) { return Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined)); }
+function decide(item, body, collection = 'decisions') {
   if (!db || !canWrite) return;
-  const doc = { key: item.key, product: item.product, token: item.token, at: new Date().toISOString(), ...body };
-  db.collection('decisions').doc(item.key).set(doc).catch((e) => showNotice('Could not save the decision: ' + (e && e.message || 'unknown error') + '. Try again.'));
+  const who = collection === 'decisions' ? { token: item.token } : { term: item.term };
+  const doc = clean({ key: item.key, product: item.product, ...who, at: new Date().toISOString(), ...body });
+  db.collection(collection).doc(item.key).set(doc).catch((e) => showNotice('Could not save the decision: ' + (e && e.message || 'unknown error') + '. Try again.'));
 }
 
-function undo(item) {
+function undo(item, collection = 'decisions') {
   if (!db || !canWrite) return;
-  db.collection('decisions').doc(item.key).delete().catch((e) => showNotice('Could not undo: ' + (e && e.message || 'unknown error') + '.'));
+  db.collection(collection).doc(item.key).delete().catch((e) => showNotice('Could not undo: ' + (e && e.message || 'unknown error') + '.'));
+}
+
+function conceptChip(concept) {
+  const m = /^dsi:([a-z]+)\/([a-z0-9-]+)$/.exec(concept);
+  if (!m) return el('span', { class: 'facet', text: concept });
+  return el('span', { class: 'facet' }, el('small', { text: m[1] }), LABEL[m[1] + ':' + m[2]] || m[2]);
+}
+
+function termBuilder(item) {
+  const id = (f) => 'tc-' + item.key.replace(/[^a-z0-9]/gi, '-') + '-' + f;
+  const opts = FACET_ORDER.flatMap((f) => (ONT.facets[f] || []).map((v) => el('option', { value: 'dsi:' + f + '/' + v.value, text: f + ': ' + v.label })));
+  const concept = el('select', { id: id('concept') }, opts);
+  const match = el('select', { id: id('match') }, MATCHES.map((m) => el('option', { value: m, text: m + ' (' + MATCH_HINT[m] + ')' })));
+  const note = el('input', { id: id('note'), type: 'text', placeholder: 'Why (optional)' });
+  return el('div', { class: 'custom' },
+    el('div', { class: 'custom-grid' }, el('label', { for: id('concept') }, 'means', concept), el('label', { for: id('match') }, 'match', match)),
+    el('label', { for: id('note') }, 'note', note),
+    el('div', { class: 'actions' },
+      el('button', { class: 'primary', text: 'Save term', disabled: !canWrite, onclick: () => { decide(item, { action: 'custom', concept: concept.value, match: match.value, note: note.value.trim() || undefined }, 'term-decisions'); openCustom.delete(item.key); } }),
+      el('button', { text: 'Cancel', onclick: () => { openCustom.delete(item.key); render(); } })));
+}
+
+function termCard(item) {
+  const d = termDecisions.get(item.key);
+  const left = el('div', { class: 'tok' },
+    el('span', { class: 'product', text: item.product }),
+    el('div', { class: 'tok-name', text: item.term }),
+    item.count ? el('div', { class: 'tok-meta', text: 'in ' + item.count + ' token name' + (item.count === 1 ? '' : 's') }) : null,
+    item.examples.length ? el('div', { class: 'examples' }, item.examples.map((x) => el('span', { text: x }))) : null,
+    item.approved.length ? el('div', { class: 'facets' }, el('span', { class: 'tok-meta', text: 'Already approved:' }), item.approved.map((a) => conceptChip(a.concept))) : null);
+  const right = el('div', { class: 'answers' });
+  if (d) {
+    const label = d.action === 'accept' ? 'Accepted' : d.action === 'custom' ? 'Custom term saved' : d.action === 'ignore' ? (d.ignore === 'noise' ? 'Marked as noise' : 'No concept fits') : 'Rejected all';
+    right.append(el('div', { class: 'decision' + (d.action === 'reject' ? ' reject' : '') }, el('span', { text: label }),
+      d.action === 'custom' ? el('span', {}, conceptChip(d.concept), ' ', el('span', { class: 'pill ' + d.match, text: d.match })) : null,
+      el('button', { text: 'Undo', disabled: !canWrite, onclick: () => undo(item, 'term-decisions') })));
+  }
+  for (const c of item.candidates) {
+    const chosen = d && d.action === 'accept' && d.candidateId === c.id;
+    right.append(el('div', { class: 'cand' + (chosen ? ' chosen' : '') },
+      el('div', { class: 'cand-head' }, el('span', { class: 'model', text: c.by }), el('span', { class: 'pill ' + c.match, text: c.match }),
+        c.evidence ? el('span', { class: 'ev', text: c.evidence.agree + ' of ' + c.evidence.support + ' approved tokens agree' }) : null),
+      el('div', { class: 'facets' }, conceptChip(c.concept)),
+      c.note ? el('p', { class: 'why', text: c.note }) : null,
+      !d ? el('div', { class: 'actions' }, el('button', { class: 'primary', text: 'Accept this', disabled: !canWrite, onclick: () => decide(item, { action: 'accept', candidateId: c.id }, 'term-decisions') })) : null));
+  }
+  if (!d) {
+    if (openCustom.has(item.key)) right.append(termBuilder(item));
+    right.append(el('div', { class: 'actions' },
+      el('button', { text: 'Write my own', disabled: !canWrite, onclick: () => { openCustom.add(item.key); render(); } }),
+      el('button', { text: 'Noise word', disabled: !canWrite, onclick: () => decide(item, { action: 'ignore', ignore: 'noise' }, 'term-decisions') }),
+      el('button', { text: 'No concept fits', disabled: !canWrite, onclick: () => decide(item, { action: 'ignore', ignore: 'no-concept' }, 'term-decisions') }),
+      el('button', { text: 'Reject all', disabled: !canWrite, onclick: () => decide(item, { action: 'reject' }, 'term-decisions') })));
+  }
+  return el('article', { class: 'card' + (d ? ' decided' : '') }, left, right);
 }
 
 function customBuilder(item) {
@@ -257,25 +327,30 @@ function card(item) {
 }
 
 function render() {
+  const v = view();
+  $('#tab-tokens').setAttribute('aria-current', v === 'tokens' ? 'page' : 'false');
+  $('#tab-terms').setAttribute('aria-current', v === 'terms' ? 'page' : 'false');
+  const items = v === 'terms' ? TERMS : DATA.items, done = v === 'terms' ? termDecisions : decisions, name = (i) => (v === 'terms' ? i.term : i.token);
   const product = $('#f-product').value, status = $('#f-status').value, q = $('#f-search').value.trim().toLowerCase();
   const list = $('#list');
-  const shown = DATA.items.filter((i) => (!product || i.product === product) && (status === 'all' || (status === 'open') !== decisions.has(i.key)) && (!q || i.token.toLowerCase().includes(q)));
-  list.replaceChildren(...(shown.length ? shown.map(card) : [el('p', { class: 'empty', text: status === 'open' ? 'Nothing left to decide here.' : 'No tokens match these filters.' })]));
+  const shown = items.filter((i) => (!product || i.product === product) && (status === 'all' || (status === 'open') !== done.has(i.key)) && (!q || name(i).toLowerCase().includes(q)));
+  list.replaceChildren(...(shown.length ? shown.map(v === 'terms' ? termCard : card) : [el('p', { class: 'empty', text: status === 'open' ? 'Nothing left to decide here.' : 'Nothing matches these filters.' })]));
   const prog = $('#progress');
-  const products = [...new Set(DATA.items.map((i) => i.product))];
+  const products = [...new Set(items.map((i) => i.product))];
   prog.replaceChildren(...products.map((p) => {
-    const all = DATA.items.filter((i) => i.product === p), done = all.filter((i) => decisions.has(i.key)).length;
-    const fill = el('i'); fill.style.width = (all.length ? (100 * done) / all.length : 0) + '%';
-    return el('div', { class: 'prog' }, el('div', { class: 'prog-label' }, el('b', { text: p }), el('span', { text: done + ' / ' + all.length })), el('div', { class: 'bar' }, fill));
+    const all = items.filter((i) => i.product === p), doneN = all.filter((i) => done.has(i.key)).length;
+    const fill = el('i'); fill.style.width = (all.length ? (100 * doneN) / all.length : 0) + '%';
+    return el('div', { class: 'prog' }, el('div', { class: 'prog-label' }, el('b', { text: p }), el('span', { text: doneN + ' / ' + all.length })), el('div', { class: 'bar' }, fill));
   }));
 }
 
 function showNotice(text) { const n = $('#notice'); n.textContent = text; n.hidden = !text; }
 
-for (const p of [...new Set(DATA.items.map((i) => i.product))]) $('#f-product').append(el('option', { value: p, text: p }));
+window.addEventListener('hashchange', render);
+for (const p of [...new Set([...DATA.items, ...TERMS].map((i) => i.product))]) $('#f-product').append(el('option', { value: p, text: p }));
 for (const s of ['#f-product', '#f-status']) $(s).addEventListener('change', render);
 $('#f-search').addEventListener('input', render);
-$('#generated').textContent = DATA.items.length + ' tokens from the color-v1 queue · ' + new Date(DATA.generatedAt).toLocaleString();
+$('#generated').textContent = DATA.items.length + ' tokens and ' + TERMS.length + ' naming terms to review · ' + new Date(DATA.generatedAt).toLocaleString();
 render();
 
 (async () => {
@@ -285,12 +360,14 @@ render();
     const user = window.claude ? await window.claude.use('user') : null;
     canWrite = !!db && (user ? user.can('data.write') !== false : true);
     if (!db) { clearTimeout(timer); showNotice('Decisions cannot be saved in this view. Open the page on claude.ai to review.'); render(); return; }
+    const lost = (e) => { clearTimeout(timer); showNotice('Lost the connection to saved decisions (' + (e && e.code || 'error') + '). Reload the page to reconnect.'); };
     db.collection('decisions').onSnapshot((snap) => {
       clearTimeout(timer);
       showNotice(canWrite ? '' : 'You can read decisions here but not change them.');
       decisions = new Map(snap.docs.map((d) => [d.id, d.data()]));
       render();
-    }, (e) => { clearTimeout(timer); showNotice('Lost the connection to saved decisions (' + (e && e.code || 'error') + '). Reload the page to reconnect.'); });
+    }, lost);
+    db.collection('term-decisions').onSnapshot((snap) => { termDecisions = new Map(snap.docs.map((d) => [d.id, d.data()])); render(); }, lost);
     render();
   } catch (e) {
     clearTimeout(timer);

@@ -14,8 +14,8 @@ From the repo root:
 2. Two Claude Code agents on **different models** each map one packet blind, following `prompts/<scope>.md`, and write `<product>.<role>.proposals.json`. Each checks its own file with `node packages/mapper/src/cli.ts check <scope> <run> <product> <role>`.
 3. `node packages/mapper/src/cli.ts merge <scope> <run>` merges into `mappings/<product>/<version>.mappings.json`.
 4. `node packages/mapper/src/cli.ts queue <scope>` lists what still needs a human decision.
-5. `node packages/mapper/src/cli.ts review <scope> <run> <out.html>` renders the review page (template in `review/review.html`): each queued token with its colors per theme and both agents' answers. Publish it as a private artifact with the `db` and `user` capabilities; decisions are stored in its `decisions` collection.
-6. Export the `decisions` collection (ArtifactData `list`) to JSON and run `node packages/mapper/src/cli.ts apply-review <scope> <decisions.json> <reviewer>`: accept makes the chosen answer Approved and the rest Rejected; custom adds an Approved mapping by the reviewer; no-concept-fits adds an Approved unmapped record; reject-both rejects every answer so the token is asked again.
+5. `node packages/mapper/src/cli.ts review <scope> <run> <out.html> [vocab run]` renders the review page, with a Naming terms tab when a vocabulary run (`.cache/classify/<run>`) is given (template in `review/review.html`): each queued token with its colors per theme and both agents' answers. Publish it as a private artifact with the `db` and `user` capabilities; decisions are stored in its `decisions` collection.
+6. Export the `decisions` and `term-decisions` collections (ArtifactData `list`) to JSON and run `node packages/mapper/src/cli.ts apply-review <scope> <decisions.json> <reviewer>`: accept makes the chosen answer Approved and the rest Rejected; custom adds an Approved mapping by the reviewer; no-concept-fits adds an Approved unmapped record; reject-both rejects every answer so the token is asked again.
 
 ## Approval rule
 
