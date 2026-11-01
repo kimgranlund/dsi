@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadOntology } from '@dsi/schema';
@@ -21,6 +22,7 @@ const USAGE = `usage:
   dsi-map audit-check <scope> <run> <product>    validate an auditor's verdicts
   dsi-map audit-merge <scope> <run>              write mappings/<product>/<version>.audit.json and list disputes
   dsi-map review <scope> <run> <out.html> [vocab run[,run]] [--words-only]  render the review page for the token queue (details from <run>) and term queue (from .cache/classify/<vocab run>)
+  dsi-map tiebreak <scope> <run> <product> <first run>   two of three: approve where a third model agrees with one of the first two
   dsi-map rank-emphasis <scope> <run> <product>   settle emphasis by contrast rank where both agents agree on the rest (ADR 0018)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
 
@@ -114,6 +116,45 @@ if (cmd === 'prepare') {
     const disputedTerms = new Map(open.filter((x) => x.kind === 'term').map((x) => [x.key, x.current.concept]));
     console.log('disputes', JSON.stringify(applyDisputes(root, scope, disputeDecisions, reviewer, suggestions, disputedTerms)));
   }
+} else if (cmd === 'tiebreak') {
+  // Two of three (ADR 0005 amended): a third agent on another model answers the still-contested tokens blind; when its
+  // concept and match equal one of the first two answers (each confidence >= APPROVE_AT), that answer is approved.
+  const [product, firstRun] = [process.argv[5], process.argv[6]];
+  if (!run || !product || !firstRun) { console.error(USAGE); process.exit(2); }
+  const { version } = scope.products[product];
+  const packet = JSON.parse(fs.readFileSync(path.join(runDir, `${product}.c.packet.json`), 'utf8'));
+  const tokens = new Set<string>(packet.tokens.map((t: { token: string }) => t.token));
+  const c = readProposals(path.join(runDir, `${product}.c.proposals.json`), ontology, tokens);
+  const firstDir = path.join(root, '.cache/mapper', firstRun);
+  const all = (r: string) => new Map<string, any>(JSON.parse(fs.readFileSync(path.join(firstDir, `${product}.${r}.proposals.json`), 'utf8')).proposals.map((p: any) => [p.token, p]));
+  const [a, b] = [all('a'), all('b')];
+  const models = new Set([JSON.parse(fs.readFileSync(path.join(firstDir, `${product}.a.proposals.json`), 'utf8')).model, JSON.parse(fs.readFileSync(path.join(firstDir, `${product}.b.proposals.json`), 'utf8')).model]);
+  if (models.has(c.model)) { console.error(`third opinion must come from a third model, got ${c.model}`); process.exit(1); }
+  const mf = path.join(root, 'mappings', product, `${version}.mappings.json`);
+  const file = JSON.parse(fs.readFileSync(mf, 'utf8'));
+  const approved = new Set(file.mappings.filter((m: any) => m.status === 'approved').map((m: any) => m.token));
+  const at = new Date().toISOString();
+  let n = 0, unmappedN = 0;
+  const same = (x: any, y: any) => x && y && (x.concept ? x.concept === y.concept && x.match === y.match : !y.concept && x.unmapped && y.unmapped);
+  for (const p of c.proposals as any[]) {
+    if (approved.has(p.token)) continue;
+    const pick = [a.get(p.token), b.get(p.token)].find((x) => same(x, p) && (x.confidence ?? 1) >= APPROVE_AT && (p.confidence ?? 1) >= APPROVE_AT);
+    if (!pick) continue;
+    if (!p.concept) {
+      file.unmapped = (file.unmapped ?? []).filter((u: any) => u.token !== p.token);
+      file.unmapped.push({ token: p.token, status: 'approved', rationale: p.rationale ?? 'No concept fits (two of three agents).', provenance: { agent: 'dsi-mapper', at, method: 'two-of-three-v1' }, review: { by: 'two-of-three', at, note: `${c.model} agreed with an earlier agent` } });
+      unmappedN++; continue;
+    }
+    const id = 'm-' + crypto.createHash('sha1').update([p.token, p.concept, p.match].join('|')).digest('hex').slice(0, 12);
+    for (const m of file.mappings) if (m.token === p.token && m.status === 'proposed' && m.id !== id) { m.status = 'rejected'; m.review = { by: 'two-of-three', at, note: `Third opinion (${c.model}) agreed with another answer.` }; }
+    const existing = file.mappings.find((m: any) => m.id === id);
+    const record = { id, token: p.token, concept: p.concept, match: p.match, confidence: Math.min(pick.confidence ?? 1, p.confidence ?? 1), status: 'approved', rationale: p.rationale ?? pick.rationale, provenance: { agent: 'dsi-mapper', at, method: 'two-of-three-v1' }, review: { by: 'two-of-three', at, note: `${c.model} (blind, web research) agreed with an earlier agent's answer` } };
+    if (existing) Object.assign(existing, record); else file.mappings.push(record);
+    n++;
+  }
+  file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
+  fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n');
+  console.log(`${product}: ${n} approved and ${unmappedN} agreed unmapped by two of three (third: ${c.model})`);
 } else if (cmd === 'rank-emphasis') {
   // ADR 0018: settle emphasis by contrast rank where both agents agree on everything else.
   const product = process.argv[5];

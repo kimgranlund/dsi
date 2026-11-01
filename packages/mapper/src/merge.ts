@@ -4,7 +4,7 @@ import path from 'node:path';
 import { createAjv, parseConcept, type Ontology } from '@dsi/schema';
 import { mappingPath, readMappings, type MappingFileShape } from './packet.ts';
 
-export const APPROVE_AT = 0.85;
+export const APPROVE_AT = 0.7; // ADR 0005 amended 2026-11-01 (was 0.85)
 /** With the classifier as a third vote (approved terms only, name fully explained, same concept), the bar drops to this. */
 export const APPROVE_WITH_CLASSIFIER_AT = 0.6;
 
@@ -12,7 +12,7 @@ export const APPROVE_WITH_CLASSIFIER_AT = 0.6;
 export type ClassifierVotes = Map<string, string>;
 
 type Proposal = { token: string; concept: string; match: string; confidence: number; rationale: string } | { token: string; unmapped: true; rationale: string };
-export interface ProposalFile { packet: string; role: 'a' | 'b'; model: string; at: string; proposals: Proposal[] }
+export interface ProposalFile { packet: string; role: 'a' | 'b' | 'c'; model: string; at: string; proposals: Proposal[] }
 
 const idOf = (...parts: string[]) => 'm-' + crypto.createHash('sha1').update(parts.join('|')).digest('hex').slice(0, 12);
 const isMap = (p: Proposal): p is Extract<Proposal, { concept: string }> => 'concept' in p;

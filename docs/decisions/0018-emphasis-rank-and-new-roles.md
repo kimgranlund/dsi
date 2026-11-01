@@ -18,3 +18,6 @@ Adding Atlassian, Primer, Spectrum and Fluent exposed gaps. Evidence (shipped va
 
 ## Consequences
 Mapping prompts carry the contrast-rank and inverse rules. Atlassian's queued tokens are re-mapped; Primer, Spectrum and Fluent are mapped under these rules.
+
+## Amendment, 2026-11-01: computed rank and numbered ladders
+The contrast-rank rule is computed (`dsi-map rank-emphasis`, method `emphasis-rank-v1`) for tokens on which both agents agree on every facet except emphasis. Numbered ladders without emphasis words (Fluent Background1..6) are ranked by contrast and spread over the seven steps (2: subtle, strong; 3: subtle, default, strong; 4: subtler, subtle, strong, stronger; 5: subtler..stronger; 6: all but default; 7: all), always close. A family whose contrast order differs between modes is left to review.

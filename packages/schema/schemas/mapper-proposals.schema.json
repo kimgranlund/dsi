@@ -8,7 +8,7 @@
   "additionalProperties": false,
   "properties": {
     "packet": { "type": "string", "description": "The packet id this answers." },
-    "role": { "enum": ["a", "b"] },
+    "role": { "enum": ["a", "b", "c"] },
     "model": { "type": "string", "minLength": 1, "description": "Model ID of the agent that wrote this file." },
     "at": { "type": "string", "format": "date-time" },
     "proposals": {

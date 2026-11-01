@@ -1,6 +1,11 @@
 {
   "product": "spectrum",
-  "noise": [],
+  "noise": [
+    "ambient",
+    "color",
+    "drop",
+    "key"
+  ],
   "scopes": [
     {
       "file": "src/color-palette.json",
@@ -32,5 +37,1178 @@
     }
   ],
   "steps": [],
-  "terms": []
+  "terms": [
+    {
+      "term": "accent",
+      "concept": "dsi:intent/accent",
+      "match": "exact",
+      "status": "approved",
+      "note": "Spectrum accent (primary action) color.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "Background color tokens.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "base",
+      "concept": "dsi:usage/page",
+      "match": "exact",
+      "status": "proposed",
+      "note": "background-base is the app's base background. (confidence 0.82; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "base",
+      "concept": "dsi:usage/page",
+      "match": "close",
+      "status": "proposed",
+      "note": "background-base-color is the app base background. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.286646Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "blue",
+      "concept": "dsi:hue/blue",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "blue",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "border",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "Border color.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "brown",
+      "concept": "dsi:hue/brown",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "brown",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "celery",
+      "concept": "dsi:hue/green",
+      "match": "close",
+      "status": "proposed",
+      "note": "Yellow-green; nearest hue green (lime also plausible). (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.286646Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "celery",
+      "concept": "dsi:hue/lime",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (celery -> lime). (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "celery",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "chartreuse",
+      "concept": "dsi:hue/lime",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (chartreuse -> lime). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "chartreuse",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "cinnamon",
+      "concept": "dsi:hue/brown",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (cinnamon -> brown). (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "cinnamon",
+      "concept": "dsi:hue/orange",
+      "match": "close",
+      "status": "proposed",
+      "note": "Red-orange brown; nearest hue orange. (confidence 0.5; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.286646Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "cinnamon",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "content",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Spectrum content color colors text and icons. (confidence 0.9); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "cyan",
+      "concept": "dsi:hue/cyan",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "cyan",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "default",
+      "concept": "dsi:emphasis/default",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Baseline state/step. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.286646Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "disabled",
+      "concept": "dsi:state/disabled",
+      "match": "exact",
+      "status": "approved",
+      "note": "Disabled state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "down",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Spectrum's pressed state. (confidence 0.92; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "down",
+      "concept": "dsi:state/active",
+      "match": "close",
+      "status": "proposed",
+      "note": "Pressed state. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.286646Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "dragged",
+      "concept": "dsi:state/dragged",
+      "match": "exact",
+      "status": "approved",
+      "note": "Dragged state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "drop-shadow",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
+      "status": "approved",
+      "note": "Drop shadow color.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "elevated",
+      "concept": "dsi:usage/overlay",
+      "match": "close",
+      "status": "proposed",
+      "note": "Elevated background/shadow for raised floating containers. (confidence 0.55; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "emphasized",
+      "concept": "dsi:emphasis/strong",
+      "match": "close",
+      "status": "proposed",
+      "note": "Emphasized drop shadow is the stronger shadow variant. (confidence 0.55; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "focus",
+      "concept": "dsi:state/focus",
+      "match": "exact",
+      "status": "approved",
+      "note": "Focus state suffix.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "focus-indicator",
+      "concept": "dsi:property/focus-ring",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Focus indicator is the focus ring color. (confidence 0.9; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "fuchsia",
+      "concept": "dsi:hue/magenta",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (fuchsia -> magenta). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "fuchsia",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gray",
+      "concept": "dsi:hue/gray",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "gray",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "green",
+      "concept": "dsi:hue/green",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "green",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "highlight",
+      "concept": "dsi:intent/highlight",
+      "match": "close",
+      "status": "proposed",
+      "note": "Highlight color of a selected stack item. (confidence 0.5; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.286646Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "Hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "icon",
+      "concept": "dsi:property/icon",
+      "match": "exact",
+      "status": "approved",
+      "note": "Icon color.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "indigo",
+      "concept": "dsi:hue/indigo",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "indigo",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "informative",
+      "concept": "dsi:intent/info",
+      "match": "exact",
+      "status": "approved",
+      "note": "Spectrum's informative semantic.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "key-focus",
+      "concept": "dsi:state/focus",
+      "match": "exact",
+      "status": "approved",
+      "note": "Keyboard focus state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "layer",
+      "concept": "dsi:usage/surface",
+      "match": "exact",
+      "status": "proposed",
+      "note": "background-layer-1/2 are surface layers on the base. (confidence 0.88; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "layer",
+      "concept": "dsi:usage/surface",
+      "match": "close",
+      "status": "proposed",
+      "note": "background-layer-N are stacked surfaces. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.286646Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "magenta",
+      "concept": "dsi:hue/magenta",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "magenta",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "negative",
+      "concept": "dsi:intent/danger",
+      "match": "exact",
+      "status": "approved",
+      "note": "Spectrum's name for the error/danger semantic.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "neutral",
+      "concept": "dsi:intent/neutral",
+      "match": "exact",
+      "status": "approved",
+      "note": "Neutral semantic family.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "notice",
+      "concept": "dsi:intent/warning",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Spectrum's warning semantic. (confidence 0.92; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "notice",
+      "concept": "dsi:intent/warning",
+      "match": "close",
+      "status": "proposed",
+      "note": "Orange attention status; Spectrum has no separate warning word. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.286646Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "orange",
+      "concept": "dsi:hue/orange",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "orange",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "overlay",
+      "concept": "dsi:usage/scrim",
+      "match": "close",
+      "status": "proposed",
+      "note": "overlay-color dims content behind modals (used with overlay opacity). (confidence 0.65); both agents gave this, claude-sonnet-5-5 at confidence 0.7",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "pasteboard",
+      "concept": "dsi:usage/page",
+      "match": "close",
+      "status": "proposed",
+      "note": "Pasteboard: outermost canvas area behind documents in Adobe apps. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.55",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "pink",
+      "concept": "dsi:hue/pink",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "pink",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "positive",
+      "concept": "dsi:intent/success",
+      "match": "exact",
+      "status": "approved",
+      "note": "Spectrum's success semantic.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "purple",
+      "concept": "dsi:hue/purple",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "purple",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "red",
+      "concept": "dsi:hue/red",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "red",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "seafoam",
+      "concept": "dsi:hue/teal",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (seafoam -> teal). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "seafoam",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "Selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "shadow",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
+      "status": "approved",
+      "note": "Shadow color.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "silver",
+      "concept": "dsi:hue/gray",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (silver -> gray). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "silver",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "subdued",
+      "concept": "dsi:emphasis/subtle",
+      "match": "close",
+      "status": "proposed",
+      "note": "Lower-contrast variant of a family (negative-subdued-background, neutral-subdued-content). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.7",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "subtle",
+      "concept": "dsi:emphasis/subtle",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Lighter background variant of the family (two-step). (confidence 0.88); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "text",
+      "concept": "dsi:property/text",
+      "match": "exact",
+      "status": "approved",
+      "note": "Text color.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "title",
+      "concept": "dsi:property/text",
+      "match": "exact",
+      "status": "proposed",
+      "note": "title-color colors title text. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "title",
+      "concept": "dsi:usage/title",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Title text color. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "title",
+      "concept": "dsi:usage/title",
+      "match": "close",
+      "status": "proposed",
+      "note": "title-color is text for titles. (confidence 0.65; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.286646Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "turquoise",
+      "concept": "dsi:hue/teal",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (turquoise -> teal). (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "turquoise",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "visual",
+      "concept": "dsi:property/icon",
+      "match": "close",
+      "status": "proposed",
+      "note": "Visual color: non-text graphics such as icons and status dots; icon is the nearest property. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "yellow",
+      "concept": "dsi:hue/yellow",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.341Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "yellow",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Hue-named categorical set (<hue>-background, -subtle-background, -visual). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:00:52.355Z",
+        "method": "terms-v1"
+      }
+    }
+  ]
 }

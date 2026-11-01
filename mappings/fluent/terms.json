@@ -1,6 +1,20 @@
 {
   "product": "fluent",
-  "noise": [],
+  "noise": [
+    "alpha",
+    "alpha2",
+    "ambient",
+    "color",
+    "compound",
+    "dark",
+    "darker",
+    "interactive",
+    "key",
+    "light",
+    "lighter",
+    "on",
+    "status"
+  ],
   "scopes": [
     {
       "file": "lib/global/colors.js",
@@ -20,5 +34,3275 @@
     }
   ],
   "steps": [],
-  "terms": []
+  "terms": [
+    {
+      "term": "accessible",
+      "concept": "dsi:emphasis/strong",
+      "match": "close",
+      "status": "proposed",
+      "note": "Accessible stroke: higher-contrast stroke meeting 3:1. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "active",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Active (pressed) state in BorderActive. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "active",
+      "concept": "dsi:state/selected",
+      "match": "close",
+      "status": "proposed",
+      "note": "Palette BorderActive: ring for an active/selected persona (avatar), not a pressed state. (confidence 0.5; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "anchor",
+      "concept": "dsi:hue/gray",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (anchor -> gray). (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "background",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background1",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 1 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background1hover",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 1 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background1hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background1pressed",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 1 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background1pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background1selected",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 1 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background1selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background2",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 2 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background2hover",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 2 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background2hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background2pressed",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 2 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background2pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background2selected",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 2 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background2selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background3",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 3 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background3hover",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 3 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background3hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background3pressed",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 3 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background3pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background3selected",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 3 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background3selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background3static",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 3 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background4",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 4 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background4hover",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 4 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background4hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background4pressed",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 4 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background4pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background4selected",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 4 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background4selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background4static",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 4 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background5",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 5 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background5hover",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 5 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background5hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background5pressed",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 5 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background5pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background5selected",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 5 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background5selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background6",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 6 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background7",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 7 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background7hover",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 7 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background7hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background7pressed",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 7 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background7pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background7selected",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 7 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background7selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "background8",
+      "concept": "dsi:property/background",
+      "match": "exact",
+      "status": "approved",
+      "note": "background slot 8 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "beige",
+      "concept": "dsi:hue/brown",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (beige -> brown). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.55",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "berry",
+      "concept": "dsi:hue/magenta",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (berry -> magenta). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.6",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "blue",
+      "concept": "dsi:hue/blue",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "border",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "border1",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "border slot 1 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "border2",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "border slot 2 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "brand",
+      "concept": "dsi:intent/accent",
+      "match": "close",
+      "status": "proposed",
+      "note": "ADR 0008: brand -> accent (close). (confidence 0.88; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand",
+      "concept": "dsi:intent/accent",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Fluent's brand color is its accent. (confidence 0.95; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2",
+      "concept": "dsi:intent/accent",
+      "match": "close",
+      "status": "proposed",
+      "note": "Only in OnBrand2: stroke on a brand fill. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2",
+      "concept": "dsi:intent/accent",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Brand variant 2 of StrokeOnBrand2. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2",
+      "concept": "dsi:usage/on-fill",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Only occurs as OnBrand2*: content on the brand fill. (confidence 0.82; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2hover",
+      "concept": "dsi:intent/accent",
+      "match": "close",
+      "status": "proposed",
+      "note": "Only in OnBrand2: stroke on a brand fill. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2hover",
+      "concept": "dsi:intent/accent",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Brand. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "brand2hover",
+      "concept": "dsi:usage/on-fill",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Only occurs as OnBrand2*: content on the brand fill. (confidence 0.82; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2pressed",
+      "concept": "dsi:intent/accent",
+      "match": "close",
+      "status": "proposed",
+      "note": "Only in OnBrand2: stroke on a brand fill. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2pressed",
+      "concept": "dsi:intent/accent",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Brand. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "brand2pressed",
+      "concept": "dsi:usage/on-fill",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Only occurs as OnBrand2*: content on the brand fill. (confidence 0.82; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2selected",
+      "concept": "dsi:intent/accent",
+      "match": "close",
+      "status": "proposed",
+      "note": "Only in OnBrand2: stroke on a brand fill. (confidence 0.8; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2selected",
+      "concept": "dsi:intent/accent",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Brand. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brand2selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "brand2selected",
+      "concept": "dsi:usage/on-fill",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Only occurs as OnBrand2*: content on the brand fill. (confidence 0.82; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brass",
+      "concept": "dsi:hue/yellow",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (brass -> yellow). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.5",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "brown",
+      "concept": "dsi:hue/brown",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "card",
+      "concept": "dsi:usage/surface",
+      "match": "close",
+      "status": "proposed",
+      "note": "Card surface. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "cornflower",
+      "concept": "dsi:hue/blue",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (cornflower -> blue). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "cranberry",
+      "concept": "dsi:hue/red",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (cranberry -> red). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "danger",
+      "concept": "dsi:intent/danger",
+      "match": "exact",
+      "status": "approved",
+      "note": "Danger status.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "disabled",
+      "concept": "dsi:state/disabled",
+      "match": "exact",
+      "status": "approved",
+      "note": "Disabled state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "disabled2",
+      "concept": "dsi:state/disabled",
+      "match": "exact",
+      "status": "approved",
+      "note": "Disabled state, variant 2.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "focus1",
+      "concept": "dsi:property/focus-ring",
+      "match": "exact",
+      "status": "approved",
+      "note": "colorStrokeFocus1/2: inner/outer focus ring strokes.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "focus1",
+      "concept": "dsi:state/focus",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Focus. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "focus2",
+      "concept": "dsi:property/focus-ring",
+      "match": "exact",
+      "status": "approved",
+      "note": "colorStrokeFocus1/2: inner/outer focus ring strokes.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "focus2",
+      "concept": "dsi:state/focus",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Focus. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "foreground",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground1",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 1 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground1hover",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 1 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground1hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground1pressed",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 1 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground1pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground1selected",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 1 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground1selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground1static",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 1 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground2",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 2 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground2brand",
+      "concept": "dsi:intent/accent",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Brand. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "foreground2brand",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 2 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground2hover",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 2 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground2hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground2link",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 2 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground2link",
+      "concept": "dsi:usage/link",
+      "match": "exact",
+      "status": "approved",
+      "note": "Link foreground.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground2pressed",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 2 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground2pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground2selected",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 2 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground2selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground3",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 3 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground3brand",
+      "concept": "dsi:intent/accent",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Brand. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "foreground3brand",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 3 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground3hover",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 3 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground3hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground3pressed",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 3 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground3pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground3selected",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 3 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground3selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground4",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 4 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground5",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 5 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground5hover",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 5 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground5hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground5pressed",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 5 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground5pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground5selected",
+      "concept": "dsi:property/foreground",
+      "match": "exact",
+      "status": "approved",
+      "note": "foreground slot 5 (numbered slots are not an emphasis ladder, ADR 0018).",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "foreground5selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "forest",
+      "concept": "dsi:hue/green",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (forest -> green). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "gold",
+      "concept": "dsi:hue/yellow",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (gold -> yellow). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "grape",
+      "concept": "dsi:hue/purple",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (grape -> purple). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "green",
+      "concept": "dsi:hue/green",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "Hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "inverted",
+      "concept": "dsi:usage/inverse",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Fluent inverted surfaces flip lightness relative to the theme (ADR 0018). (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "inverted",
+      "concept": "dsi:usage/inverse",
+      "match": "close",
+      "status": "proposed",
+      "note": "Fluent Inverted flips against the theme (e.g. tooltips); not always on-fill. (confidence 0.6; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "inverted2",
+      "concept": "dsi:usage/inverse",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Inverted variant 2. (confidence 0.82; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "inverted2",
+      "concept": "dsi:usage/inverse",
+      "match": "close",
+      "status": "proposed",
+      "note": "Second inverted foreground. (confidence 0.55; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "lavender",
+      "concept": "dsi:hue/purple",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (lavender -> purple). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.75",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "lilac",
+      "concept": "dsi:hue/purple",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (lilac -> purple). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.75",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "link",
+      "concept": "dsi:usage/link",
+      "match": "exact",
+      "status": "approved",
+      "note": "Link foreground.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "magenta",
+      "concept": "dsi:hue/magenta",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "marigold",
+      "concept": "dsi:hue/orange",
+      "match": "close",
+      "status": "proposed",
+      "note": "Yellow-orange. (confidence 0.55; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "marigold",
+      "concept": "dsi:hue/yellow",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (marigold -> yellow). (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "mink",
+      "concept": "dsi:hue/gray",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (mink -> gray). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.55",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "navy",
+      "concept": "dsi:hue/blue",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (navy -> blue). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "neutral",
+      "concept": "dsi:intent/neutral",
+      "match": "exact",
+      "status": "approved",
+      "note": "Neutral family.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "on-brand",
+      "concept": "dsi:usage/on-fill",
+      "match": "exact",
+      "status": "approved",
+      "note": "Content/stroke on a brand fill.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "orange",
+      "concept": "dsi:hue/orange",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "overlay",
+      "concept": "dsi:usage/scrim",
+      "match": "close",
+      "status": "proposed",
+      "note": "colorBackgroundOverlay dims content behind dialogs. (confidence 0.6); both agents gave this, claude-sonnet-5-5 at confidence 0.65",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "palette",
+      "concept": "dsi:usage/categorical",
+      "match": "exact",
+      "status": "proposed",
+      "note": "colorPalette<Hue>* are the shared/persona color sets where the hue is the meaning. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "palette",
+      "concept": "dsi:usage/categorical",
+      "match": "close",
+      "status": "proposed",
+      "note": "colorPalette* are named-hue sets for badges, avatars and charts. (confidence 0.75; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "peach",
+      "concept": "dsi:hue/orange",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (peach -> orange). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "pink",
+      "concept": "dsi:hue/pink",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "platinum",
+      "concept": "dsi:hue/gray",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (platinum -> gray). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "plum",
+      "concept": "dsi:hue/purple",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (plum -> purple). (confidence 0.9); both agents gave this, claude-sonnet-5-5 at confidence 0.8",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "Pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "pumpkin",
+      "concept": "dsi:hue/orange",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (pumpkin -> orange). (confidence 0.7); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "purple",
+      "concept": "dsi:hue/purple",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "red",
+      "concept": "dsi:hue/red",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "royal",
+      "concept": "dsi:hue/blue",
+      "match": "close",
+      "status": "proposed",
+      "note": "RoyalBlue -> blue. (confidence 0.8); both agents gave this, claude-sonnet-5-5 at confidence 0.85",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "royal-blue",
+      "concept": "dsi:hue/blue",
+      "match": "close",
+      "status": "approved",
+      "note": "Royal blue -> blue.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "seafoam",
+      "concept": "dsi:hue/green",
+      "match": "close",
+      "status": "proposed",
+      "note": "Green-teal. (confidence 0.65; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "seafoam",
+      "concept": "dsi:hue/teal",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (seafoam -> teal). (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "Selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "shadow",
+      "concept": "dsi:property/shadow",
+      "match": "exact",
+      "status": "approved",
+      "note": "Shadow color.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "steel",
+      "concept": "dsi:hue/gray",
+      "match": "close",
+      "status": "proposed",
+      "note": "Blue-gray. (confidence 0.5; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "steel",
+      "concept": "dsi:hue/teal",
+      "match": "close",
+      "status": "proposed",
+      "note": "Nearest canonical hue (steel -> teal). (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "stencil1",
+      "concept": "dsi:property/background",
+      "match": "close",
+      "status": "proposed",
+      "note": "Stencil colors fill skeleton shapes. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "stencil1",
+      "concept": "dsi:usage/skeleton",
+      "match": "exact",
+      "status": "approved",
+      "note": "Fluent stencil = skeleton loading shapes.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stencil1alpha",
+      "concept": "dsi:property/background",
+      "match": "close",
+      "status": "proposed",
+      "note": "Stencil colors fill skeleton shapes. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "stencil1alpha",
+      "concept": "dsi:usage/skeleton",
+      "match": "exact",
+      "status": "approved",
+      "note": "Fluent stencil = skeleton loading shapes.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stencil2",
+      "concept": "dsi:property/background",
+      "match": "close",
+      "status": "proposed",
+      "note": "Stencil colors fill skeleton shapes. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "stencil2",
+      "concept": "dsi:usage/skeleton",
+      "match": "exact",
+      "status": "approved",
+      "note": "Fluent stencil = skeleton loading shapes.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stencil2alpha",
+      "concept": "dsi:property/background",
+      "match": "close",
+      "status": "proposed",
+      "note": "Stencil colors fill skeleton shapes. (confidence 0.7; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "stencil2alpha",
+      "concept": "dsi:usage/skeleton",
+      "match": "exact",
+      "status": "approved",
+      "note": "Fluent stencil = skeleton loading shapes.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke; Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke1",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 1 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke1hover",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 1 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke1hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke1pressed",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 1 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke1pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke1selected",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 1 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke1selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke2",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 2 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke2contrast",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 2 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke2hover",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 2 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke2hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke2pressed",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 2 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke2pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke3",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 3 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke4",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 4 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke4hover",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 4 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke4hover",
+      "concept": "dsi:state/hover",
+      "match": "exact",
+      "status": "approved",
+      "note": "hover state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke4pressed",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 4 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke4pressed",
+      "concept": "dsi:state/active",
+      "match": "exact",
+      "status": "approved",
+      "note": "pressed state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke4selected",
+      "concept": "dsi:property/border",
+      "match": "exact",
+      "status": "approved",
+      "note": "stroke slot 4 (numbered slots are not an emphasis ladder, ADR 0018); Fluent stroke is a border.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "stroke4selected",
+      "concept": "dsi:state/selected",
+      "match": "exact",
+      "status": "approved",
+      "note": "selected state.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "subtle",
+      "concept": "dsi:emphasis/subtle",
+      "match": "exact",
+      "status": "proposed",
+      "note": "Subtle (low-emphasis, near-transparent) variant. (confidence 0.85; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "subtle",
+      "concept": "dsi:emphasis/subtlest",
+      "match": "close",
+      "status": "proposed",
+      "note": "colorSubtle* is a transparent resting fill, the lowest contrast against the page. (confidence 0.5; the other agent disagreed)",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-sonnet-5-5",
+        "at": "2026-11-01T15:00:34.287230Z",
+        "method": "terms-v1"
+      }
+    },
+    {
+      "term": "success",
+      "concept": "dsi:intent/success",
+      "match": "exact",
+      "status": "approved",
+      "note": "Success status.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "teal",
+      "concept": "dsi:hue/teal",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "warning",
+      "concept": "dsi:intent/warning",
+      "match": "exact",
+      "status": "approved",
+      "note": "Warning status.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "term": "yellow",
+      "concept": "dsi:hue/yellow",
+      "match": "exact",
+      "status": "approved",
+      "note": "Canonical hue name.",
+      "provenance": {
+        "agent": "dsi-classify",
+        "model": "claude-opus-5-5",
+        "at": "2026-11-01T15:01:17.810Z",
+        "method": "terms-v1"
+      },
+      "review": {
+        "by": "agreement",
+        "at": "2026-11-01T15:01:26.531Z",
+        "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    }
+  ]
 }

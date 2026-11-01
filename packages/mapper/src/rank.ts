@@ -36,6 +36,30 @@ export function rankEmphasis(root: string, product: string, version: string, a: 
   const out: { token: string; concept: string; match: 'exact' | 'close'; note: string }[] = [];
   const skipped: string[] = [];
   for (const [fam, members] of families) {
+    // Numbered ladders (Fluent Background1..6) carry no emphasis word: rank them by contrast and spread the members
+    // over the seven steps (ADR 0018 amended), always close.
+    const numbered = members.filter((m) => !stateOf(m.concept!) && /\d+$/.test(m.token.replace(/(Hover|Pressed|Selected|Disabled)$/, '')));
+    if (!members.some((m) => !stateOf(m.concept!) && wordOf(m.token)) && numbered.length >= 2 && numbered.length <= 7) {
+      const SPREAD: Record<number, number[]> = { 2: [3, 5], 3: [3, 4, 5], 4: [2, 3, 5, 6], 5: [2, 3, 4, 5, 6], 6: [1, 2, 3, 5, 6, 7], 7: [1, 2, 3, 4, 5, 6, 7] };
+      const modes = Object.keys(set.modes).filter((m) => m === 'light' || m === 'dark');
+      const orders = modes.map((mode) => {
+        const th = themeFor(set, mode)!;
+        const page = (pageToken(mode) && hexOf(set, th, pageToken(mode)!)) ?? (mode === 'dark' ? '#000000' : '#ffffff');
+        const vals = numbered.map((m) => ({ t: m.token, c: (() => { const h = hexOf(set, th, m.token); return h ? contrast(h, page) : NaN; })() }));
+        return vals.some((v) => Number.isNaN(v.c)) || new Set(vals.map((v) => v.c.toFixed(3))).size !== vals.length ? undefined : vals.sort((p, q) => p.c - q.c).map((v) => v.t);
+      });
+      if (orders.some((o) => !o) || new Set(orders.map((o) => o!.join())).size !== 1) { skipped.push(`${fam}: numbered ladder without one contrast order in every mode`); continue; }
+      const stepOf = new Map(orders[0]!.map((t, i) => [t, SPREAD[numbered.length][i]]));
+      const base = (t: string) => t.replace(/(Hover|Pressed|Selected|Disabled)$/, '');
+      for (const m of members) {
+        const rest = stateOf(m.concept!) ? numbered.find((r) => r.token === base(m.token)) : m;
+        const step = rest && stepOf.get(rest.token);
+        if (!step) { skipped.push(`${m.token}: no ranked numbered sibling`); continue; }
+        const st = stateOf(m.concept!);
+        out.push({ token: m.token, concept: [...fam.split('/'), `emphasis-${STEPS[step]}`, ...(st ? [st] : [])].join('/'), match: 'close', note: `numbered ladder ranked by contrast in ${modes.join(' and ')} (${orders[0]!.join(' < ')})` });
+      }
+      continue;
+    }
     const resting = members.filter((m) => !stateOf(m.concept!) && wordOf(m.token));
     const byWord = new Map<string, P>();
     for (const m of resting) byWord.set(String(WORDS[wordOf(m.token)!]) + '|' + m.token, m);

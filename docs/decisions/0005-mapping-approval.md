@@ -11,3 +11,10 @@ Status: accepted, 2026-11-01
 
 ## Consequences
 color-v1 settled 508 tokens: 163 by agreement in three rounds, 2 with the classifier, 185 by human review. Human decisions are the evaluation set for future prompts and models (`dsi-map eval`).
+
+## Amendment, 2026-11-01 (owner decision, adding four systems)
+With about 1,100 color tokens queued after Atlassian, Primer, Spectrum and Fluent, mostly agreement below the bar:
+- **Bar lowered**: two agents on different models agreeing on concept and match approve at confidence >= **0.7** (was 0.85). The classifier-vote bar stays 0.6.
+- **Two of three**: tokens still contested get a third, blind agent on a third model family with web research; when its concept and match equal one of the first two answers (each >= 0.7), that answer is approved (`review.by: two-of-three`, method `two-of-three-v1`). The other answers are rejected with a note.
+- Computed answers (`rank-rule`, `terms+classifier` for scales) remain deterministic and cite their ADRs.
+- Every approval stays subject to the evidence audit; contradictions reopen for human review.
