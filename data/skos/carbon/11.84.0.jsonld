@@ -2462,9 +2462,9 @@
    "prefLabel": "layer-01",
    "notation": "--cds-layer-01",
    "definition": "Primary layer background",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle"
+     "id": "dsi:concept/color/usage-surface/property-background"
     }
    ]
   },
@@ -2488,9 +2488,9 @@
    "prefLabel": "layer-03",
    "notation": "--cds-layer-03",
    "definition": "Tertiary layer background",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-strong"
+     "id": "dsi:concept/color/usage-surface/property-background"
     }
    ]
   },
@@ -2618,9 +2618,9 @@
    "prefLabel": "layer-active-01",
    "notation": "--cds-layer-active-01",
    "definition": "Active state for layer 01",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active"
+     "id": "dsi:concept/color/usage-surface/property-background/state-active"
     }
    ]
   },
@@ -2644,9 +2644,9 @@
    "prefLabel": "layer-active-03",
    "notation": "--cds-layer-active-03",
    "definition": "Active state for layer 03",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-active"
+     "id": "dsi:concept/color/usage-surface/property-background/state-active"
     }
    ]
   },
@@ -2670,9 +2670,9 @@
    "prefLabel": "layer-background-02",
    "notation": "--cds-layer-background-02",
    "definition": "Background behind layer 02",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle"
+     "id": "dsi:concept/color/usage-surface/property-background"
     }
    ]
   },
@@ -2696,9 +2696,9 @@
    "prefLabel": "layer-hover-01",
    "notation": "--cds-layer-hover-01",
    "definition": "Hover state for layer 01",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover"
+     "id": "dsi:concept/color/usage-surface/property-background/state-hover"
     }
    ]
   },
@@ -2722,9 +2722,9 @@
    "prefLabel": "layer-hover-03",
    "notation": "--cds-layer-hover-03",
    "definition": "Hover state for layer 03",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover"
+     "id": "dsi:concept/color/usage-surface/property-background/state-hover"
     }
    ]
   },
@@ -2735,9 +2735,9 @@
    "prefLabel": "layer-selected-01",
    "notation": "--cds-layer-selected-01",
    "definition": "Selected state for layer 01",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-selected"
+     "id": "dsi:concept/color/usage-surface/property-background/state-selected"
     }
    ]
   },
@@ -2761,9 +2761,9 @@
    "prefLabel": "layer-selected-03",
    "notation": "--cds-layer-selected-03",
    "definition": "Selected state for layer 03",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-selected"
+     "id": "dsi:concept/color/usage-surface/property-background/state-selected"
     }
    ]
   },
@@ -2787,9 +2787,9 @@
    "prefLabel": "layer-selected-hover-01",
    "notation": "--cds-layer-selected-hover-01",
    "definition": "Hover state for selected layer 01",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover+selected"
+     "id": "dsi:concept/color/usage-surface/property-background/state-hover+selected"
     }
    ]
   },
@@ -2813,9 +2813,9 @@
    "prefLabel": "layer-selected-hover-03",
    "notation": "--cds-layer-selected-hover-03",
    "definition": "Hover state for selected layer 03",
-   "skos:closeMatch": [
+   "skos:broadMatch": [
     {
-     "id": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover+selected"
+     "id": "dsi:concept/color/usage-surface/property-background/state-hover+selected"
     }
    ]
   },
@@ -12581,189 +12581,6 @@
     }
    ],
    "prefLabel": "Color: Surface · Background · Strong · Hover"
-  },
-  {
-   "id": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover+selected",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasUsage": [
-    {
-     "id": "dsi:usage/surface"
-    }
-   ],
-   "dsi:hasProperty": [
-    {
-     "id": "dsi:property/background"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/strong"
-    }
-   ],
-   "dsi:hasState": [
-    {
-     "id": "dsi:state/hover"
-    },
-    {
-     "id": "dsi:state/selected"
-    }
-   ],
-   "prefLabel": "Color: Surface · Background · Strong · Hover + Selected"
-  },
-  {
-   "id": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-selected",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasUsage": [
-    {
-     "id": "dsi:usage/surface"
-    }
-   ],
-   "dsi:hasProperty": [
-    {
-     "id": "dsi:property/background"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/strong"
-    }
-   ],
-   "dsi:hasState": [
-    {
-     "id": "dsi:state/selected"
-    }
-   ],
-   "prefLabel": "Color: Surface · Background · Strong · Selected"
-  },
-  {
-   "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasUsage": [
-    {
-     "id": "dsi:usage/surface"
-    }
-   ],
-   "dsi:hasProperty": [
-    {
-     "id": "dsi:property/background"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/subtle"
-    }
-   ],
-   "prefLabel": "Color: Surface · Background · Subtle"
-  },
-  {
-   "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-active",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasUsage": [
-    {
-     "id": "dsi:usage/surface"
-    }
-   ],
-   "dsi:hasProperty": [
-    {
-     "id": "dsi:property/background"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/subtle"
-    }
-   ],
-   "dsi:hasState": [
-    {
-     "id": "dsi:state/active"
-    }
-   ],
-   "prefLabel": "Color: Surface · Background · Subtle · Active"
-  },
-  {
-   "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasUsage": [
-    {
-     "id": "dsi:usage/surface"
-    }
-   ],
-   "dsi:hasProperty": [
-    {
-     "id": "dsi:property/background"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/subtle"
-    }
-   ],
-   "dsi:hasState": [
-    {
-     "id": "dsi:state/hover"
-    }
-   ],
-   "prefLabel": "Color: Surface · Background · Subtle · Hover"
-  },
-  {
-   "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-hover+selected",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasUsage": [
-    {
-     "id": "dsi:usage/surface"
-    }
-   ],
-   "dsi:hasProperty": [
-    {
-     "id": "dsi:property/background"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/subtle"
-    }
-   ],
-   "dsi:hasState": [
-    {
-     "id": "dsi:state/hover"
-    },
-    {
-     "id": "dsi:state/selected"
-    }
-   ],
-   "prefLabel": "Color: Surface · Background · Subtle · Hover + Selected"
-  },
-  {
-   "id": "dsi:concept/color/usage-surface/property-background/emphasis-subtle/state-selected",
-   "type": "Concept",
-   "inScheme": "dsi:scheme/canonical/color",
-   "dsi:hasUsage": [
-    {
-     "id": "dsi:usage/surface"
-    }
-   ],
-   "dsi:hasProperty": [
-    {
-     "id": "dsi:property/background"
-    }
-   ],
-   "dsi:hasEmphasis": [
-    {
-     "id": "dsi:emphasis/subtle"
-    }
-   ],
-   "dsi:hasState": [
-    {
-     "id": "dsi:state/selected"
-    }
-   ],
-   "prefLabel": "Color: Surface · Background · Subtle · Selected"
   },
   {
    "id": "dsi:concept/color/usage-surface/property-background/state-active",

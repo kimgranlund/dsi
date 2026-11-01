@@ -35,12 +35,12 @@
           "concept": "dsi:concept/color/intent-accent/property-background",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorBrandBackground",
+          "nativeName": "--colorBrandBackground2",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorBrandBackground",
+          "token": "colorBrandBackground2",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -49,11 +49,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.0667,
-          0.3686,
-          0.6392
+          0.0314,
+          0.1373,
+          0.2196
         ],
-        "hex": "#115ea3"
+        "hex": "#082338"
       }
     },
     "accent-background-active": {
@@ -63,12 +63,40 @@
           "concept": "dsi:concept/color/intent-accent/property-background/state-active",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorBrandBackgroundPressed",
+          "nativeName": "--colorBrandBackground2Pressed",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorBrandBackgroundPressed",
+          "token": "colorBrandBackground2Pressed",
+          "version": "1.0.0-alpha.24",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0235,
+          0.0902,
+          0.1412
+        ],
+        "hex": "#061724"
+      }
+    },
+    "accent-background-hover": {
+      "$description": "Hovered accent background",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
+          "match": "broad",
+          "mode": "dark",
+          "nativeName": "--colorBrandBackground2Hover",
+          "note": "only a broad match",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-dark",
+          "token": "colorBrandBackground2Hover",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -82,34 +110,6 @@
           0.3686
         ],
         "hex": "#0c3b5e"
-      }
-    },
-    "accent-background-hover": {
-      "$description": "Hovered accent background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
-          "match": "broad",
-          "mode": "dark",
-          "nativeName": "--colorBrandBackgroundHover",
-          "note": "only a broad match",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorBrandBackgroundHover",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0588,
-          0.4235,
-          0.7412
-        ],
-        "hex": "#0f6cbd"
       }
     },
     "accent-background-selected": {
@@ -140,87 +140,6 @@
         "hex": "#0f548c"
       }
     },
-    "accent-background-subtle": {
-      "$description": "Subtle accent background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorBrandBackground2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorBrandBackground2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0314,
-          0.1373,
-          0.2196
-        ],
-        "hex": "#082338"
-      }
-    },
-    "accent-background-subtle-active": {
-      "$description": "Pressed subtle accent background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle/state-active",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorBrandBackground2Pressed",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorBrandBackground2Pressed",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0235,
-          0.0902,
-          0.1412
-        ],
-        "hex": "#061724"
-      }
-    },
-    "accent-background-subtle-hover": {
-      "$description": "Hovered subtle accent background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle/state-hover",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorBrandBackground2Hover",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorBrandBackground2Hover",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0471,
-          0.2314,
-          0.3686
-        ],
-        "hex": "#0c3b5e"
-      }
-    },
     "accent-border": {
       "$description": "Accent border",
       "$extensions": {
@@ -228,12 +147,12 @@
           "concept": "dsi:concept/color/intent-accent/property-border",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorCompoundBrandStroke",
+          "nativeName": "--colorBrandStroke1",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorCompoundBrandStroke",
+          "token": "colorBrandStroke1",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -256,12 +175,12 @@
           "concept": "dsi:concept/color/intent-accent/property-border/state-active",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorCompoundBrandStrokePressed",
+          "nativeName": "--colorBrandStroke2Pressed",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorCompoundBrandStrokePressed",
+          "token": "colorBrandStroke2Pressed",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -270,11 +189,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.1569,
-          0.5255,
-          0.8706
+          0.0392,
+          0.1804,
+          0.2902
         ],
-        "hex": "#2886de"
+        "hex": "#0a2e4a"
       }
     },
     "accent-border-hover": {
@@ -284,12 +203,12 @@
           "concept": "dsi:concept/color/intent-accent/property-border/state-hover",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorCompoundBrandStrokeHover",
+          "nativeName": "--colorBrandStroke2Hover",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorCompoundBrandStrokeHover",
+          "token": "colorBrandStroke2Hover",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -298,11 +217,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.3843,
-          0.6706,
-          0.9608
+          0.0549,
+          0.2784,
+          0.4588
         ],
-        "hex": "#62abf5"
+        "hex": "#0e4775"
       }
     },
     "accent-border-selected": {
@@ -332,33 +251,6 @@
         "hex": "#479ef5"
       }
     },
-    "accent-border-strong": {
-      "$description": "Strong accent border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-accent/property-border/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorBrandStroke1",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorBrandStroke1",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.2784,
-          0.6196,
-          0.9608
-        ],
-        "hex": "#479ef5"
-      }
-    },
     "accent-border-subtle": {
       "$description": "Subtle accent border",
       "$extensions": {
@@ -366,65 +258,11 @@
           "concept": "dsi:concept/color/intent-accent/property-border/emphasis-subtle",
           "match": "close",
           "mode": "dark",
-          "nativeName": "--colorBrandStroke2",
+          "nativeName": "--colorBrandStroke2Contrast",
           "product": "fluent",
           "status": "match",
           "theme": "web-dark",
-          "token": "colorBrandStroke2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0549,
-          0.2784,
-          0.4588
-        ],
-        "hex": "#0e4775"
-      }
-    },
-    "accent-border-subtle-active": {
-      "$description": "Pressed subtle accent border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-accent/property-border/emphasis-subtle/state-active",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorBrandStroke2Pressed",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorBrandStroke2Pressed",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0392,
-          0.1804,
-          0.2902
-        ],
-        "hex": "#0a2e4a"
-      }
-    },
-    "accent-border-subtle-hover": {
-      "$description": "Hovered subtle accent border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-accent/property-border/emphasis-subtle/state-hover",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorBrandStroke2Hover",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorBrandStroke2Hover",
+          "token": "colorBrandStroke2Contrast",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -546,87 +384,6 @@
           0.9608
         ],
         "hex": "#479ef5"
-      }
-    },
-    "accent-foreground-strong": {
-      "$description": "Strong accent foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-accent/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorBrandForeground2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorBrandForeground2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.3843,
-          0.6706,
-          0.9608
-        ],
-        "hex": "#62abf5"
-      }
-    },
-    "accent-foreground-strong-active": {
-      "$description": "Pressed strong accent foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-accent/property-foreground/emphasis-strong/state-active",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorBrandForeground2Pressed",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorBrandForeground2Pressed",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9216,
-          0.9529,
-          0.9882
-        ],
-        "hex": "#ebf3fc"
-      }
-    },
-    "accent-foreground-strong-hover": {
-      "$description": "Hovered strong accent foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-accent/property-foreground/emphasis-strong/state-hover",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorBrandForeground2Hover",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorBrandForeground2Hover",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.5882,
-          0.7765,
-          0.9804
-        ],
-        "hex": "#96c6fa"
       }
     },
     "accent-icon": {
@@ -1231,62 +988,6 @@
         "hex": "#383838"
       }
     },
-    "background-strong": {
-      "$description": "Strong background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/property-background/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorNeutralStencil1",
-          "note": "no direct mapping; colorNeutralStencil1 maps to the more specific dsi:concept/color/usage-skeleton/property-background/emphasis-strong",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorNeutralStencil1",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.3412,
-          0.3412,
-          0.3412
-        ],
-        "hex": "#575757"
-      }
-    },
-    "background-strong-selected": {
-      "$description": "Selected strong background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/property-background/emphasis-strong/state-selected",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorNeutralBackground4Selected",
-          "note": "no direct mapping; colorNeutralBackground4Selected maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-strong/state-selected",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorNeutralBackground4Selected",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.102,
-          0.102,
-          0.102
-        ],
-        "hex": "#1a1a1a"
-      }
-    },
     "background-subtle": {
       "$description": "Subtle background",
       "$extensions": {
@@ -1294,81 +995,26 @@
           "concept": "dsi:concept/color/property-background/emphasis-subtle",
           "match": "close",
           "mode": "dark",
-          "nativeName": "--colorBrandBackground2",
-          "note": "no direct mapping; colorBrandBackground2 maps to the more specific dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+          "nativeName": "--colorNeutralStencil2Alpha",
+          "note": "no direct mapping; colorNeutralStencil2Alpha maps to the more specific dsi:concept/color/usage-skeleton/property-background/emphasis-subtle",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorBrandBackground2",
+          "token": "colorNeutralStencil2Alpha",
           "version": "1.0.0-alpha.24",
           "via": "more-specific"
         }
       },
       "$type": "color",
       "$value": {
+        "alpha": 0.05,
         "colorSpace": "srgb",
         "components": [
-          0.0314,
-          0.1373,
-          0.2196
+          1,
+          1,
+          1
         ],
-        "hex": "#082338"
-      }
-    },
-    "background-subtle-active": {
-      "$description": "Pressed subtle background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/property-background/emphasis-subtle/state-active",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorBrandBackground2Pressed",
-          "note": "no direct mapping; colorBrandBackground2Pressed maps to the more specific dsi:concept/color/intent-accent/property-background/emphasis-subtle/state-active",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorBrandBackground2Pressed",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0235,
-          0.0902,
-          0.1412
-        ],
-        "hex": "#061724"
-      }
-    },
-    "background-subtle-hover": {
-      "$description": "Hovered subtle background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/property-background/emphasis-subtle/state-hover",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorBrandBackground2Hover",
-          "note": "no direct mapping; colorBrandBackground2Hover maps to the more specific dsi:concept/color/intent-accent/property-background/emphasis-subtle/state-hover",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorBrandBackground2Hover",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0471,
-          0.2314,
-          0.3686
-        ],
-        "hex": "#0c3b5e"
+        "hex": "#ffffff"
       }
     },
     "border": {
@@ -1378,12 +1024,12 @@
           "concept": "dsi:concept/color/property-border",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorNeutralStroke1",
+          "nativeName": "--colorNeutralStroke2",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorNeutralStroke1",
+          "token": "colorNeutralStroke2",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -1392,11 +1038,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.4,
-          0.4,
-          0.4
+          0.3216,
+          0.3216,
+          0.3216
         ],
-        "hex": "#666666"
+        "hex": "#525252"
       }
     },
     "border-active": {
@@ -1598,24 +1244,25 @@
           "concept": "dsi:concept/color/property-border/emphasis-subtle",
           "match": "close",
           "mode": "dark",
-          "nativeName": "--colorNeutralStroke2",
+          "nativeName": "--colorBrandStroke2Contrast",
+          "note": "no direct mapping; colorBrandStroke2Contrast maps to the more specific dsi:concept/color/intent-accent/property-border/emphasis-subtle",
           "product": "fluent",
-          "status": "match",
+          "status": "nearest",
           "theme": "web-dark",
-          "token": "colorNeutralStroke2",
+          "token": "colorBrandStroke2Contrast",
           "version": "1.0.0-alpha.24",
-          "via": "direct"
+          "via": "more-specific"
         }
       },
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.3216,
-          0.3216,
-          0.3216
+          0.0549,
+          0.2784,
+          0.4588
         ],
-        "hex": "#525252"
+        "hex": "#0e4775"
       }
     },
     "categorical+inverse-green-foreground": {
@@ -1699,62 +1346,6 @@
         "hex": "#817400"
       }
     },
-    "categorical-background": {
-      "$description": "Categorical background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/property-background",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteGreenBackground3",
-          "note": "no direct mapping; colorPaletteGreenBackground3 maps to the more specific dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-strong",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteGreenBackground3",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0627,
-          0.4863,
-          0.0627
-        ],
-        "hex": "#107c10"
-      }
-    },
-    "categorical-blue": {
-      "$description": "Blue categorical color",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-blue",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteRoyalBlueForeground2",
-          "note": "no direct mapping; colorPaletteRoyalBlueForeground2 maps to the more specific dsi:concept/color/usage-categorical/hue-blue/property-foreground/emphasis-strong",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteRoyalBlueForeground2",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.6039,
-          0.749,
-          0.8627
-        ],
-        "hex": "#9abfdc"
-      }
-    },
     "categorical-blue-background": {
       "$description": "Blue categorical background",
       "$extensions": {
@@ -1816,41 +1407,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-categorical/hue-blue/property-foreground",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteRoyalBlueForeground2",
-          "note": "no direct mapping; colorPaletteRoyalBlueForeground2 maps to the more specific dsi:concept/color/usage-categorical/hue-blue/property-foreground/emphasis-strong",
+          "nativeName": "--colorPaletteNavyForeground2",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteRoyalBlueForeground2",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.6039,
-          0.749,
-          0.8627
-        ],
-        "hex": "#9abfdc"
-      }
-    },
-    "categorical-blue-foreground-strong": {
-      "$description": "Strong blue categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-blue/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteRoyalBlueForeground2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteRoyalBlueForeground2",
+          "token": "colorPaletteNavyForeground2",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -1859,11 +1423,39 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.6039,
-          0.749,
-          0.8627
+          0.6392,
+          0.698,
+          0.9098
         ],
-        "hex": "#9abfdc"
+        "hex": "#a3b2e8"
+      }
+    },
+    "categorical-blue-icon": {
+      "$description": "Blue categorical icon",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/usage-categorical/hue-blue/property-icon",
+          "match": "broad",
+          "mode": "dark",
+          "nativeName": "--colorPaletteNavyForeground2",
+          "note": "no direct mapping; colorPaletteNavyForeground2 maps to dsi:concept/color/usage-categorical/hue-blue/property-foreground, which covers text and icons",
+          "product": "fluent",
+          "status": "nearest",
+          "theme": "web-dark",
+          "token": "colorPaletteNavyForeground2",
+          "version": "1.0.0-alpha.24",
+          "via": "broader-property"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6392,
+          0.698,
+          0.9098
+        ],
+        "hex": "#a3b2e8"
       }
     },
     "categorical-brown-background": {
@@ -1922,72 +1514,17 @@
         "hex": "#bb8f6f"
       }
     },
-    "categorical-cyan": {
-      "$description": "Cyan categorical color",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-cyan",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteLightTealBackground2",
-          "note": "no direct mapping; colorPaletteLightTealBackground2 maps to the more specific dsi:concept/color/usage-categorical/hue-cyan/property-background/emphasis-subtle",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteLightTealBackground2",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0,
-          0.4,
-          0.4275
-        ],
-        "hex": "#00666d"
-      }
-    },
     "categorical-cyan-background": {
       "$description": "Cyan categorical background",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-background",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorPaletteLightTealBackground2",
-          "note": "no direct mapping; colorPaletteLightTealBackground2 maps to the more specific dsi:concept/color/usage-categorical/hue-cyan/property-background/emphasis-subtle",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteLightTealBackground2",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0,
-          0.4,
-          0.4275
-        ],
-        "hex": "#00666d"
-      }
-    },
-    "categorical-cyan-background-subtle": {
-      "$description": "Subtle cyan categorical background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-background/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteLightTealBackground2",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteLightTealBackground2",
           "version": "1.0.0-alpha.24",
@@ -2010,39 +1547,12 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-foreground",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorPaletteLightTealForeground2",
-          "note": "no direct mapping; colorPaletteLightTealForeground2 maps to the more specific dsi:concept/color/usage-categorical/hue-cyan/property-foreground/emphasis-strong",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteLightTealForeground2",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.651,
-          0.9137,
-          0.9294
-        ],
-        "hex": "#a6e9ed"
-      }
-    },
-    "categorical-cyan-foreground-strong": {
-      "$description": "Strong cyan categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteLightTealForeground2",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteLightTealForeground2",
           "version": "1.0.0-alpha.24",
@@ -2058,34 +1568,6 @@
           0.9294
         ],
         "hex": "#a6e9ed"
-      }
-    },
-    "categorical-gray": {
-      "$description": "Gray categorical color",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-gray",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteMinkForeground2",
-          "note": "no direct mapping; colorPaletteMinkForeground2 maps to the more specific dsi:concept/color/usage-categorical/hue-gray/property-foreground/emphasis-strong",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteMinkForeground2",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8078,
-          0.8,
-          0.7961
-        ],
-        "hex": "#cecccb"
       }
     },
     "categorical-gray-background": {
@@ -2149,41 +1631,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-categorical/hue-gray/property-foreground",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteMinkForeground2",
-          "note": "no direct mapping; colorPaletteMinkForeground2 maps to the more specific dsi:concept/color/usage-categorical/hue-gray/property-foreground/emphasis-strong",
+          "nativeName": "--colorPaletteAnchorForeground2",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteMinkForeground2",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8078,
-          0.8,
-          0.7961
-        ],
-        "hex": "#cecccb"
-      }
-    },
-    "categorical-gray-foreground-strong": {
-      "$description": "Strong gray categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-gray/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteMinkForeground2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteMinkForeground2",
+          "token": "colorPaletteAnchorForeground2",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -2192,11 +1647,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.8078,
-          0.8,
-          0.7961
+          0.7373,
+          0.7647,
+          0.7804
         ],
-        "hex": "#cecccb"
+        "hex": "#bcc3c7"
       }
     },
     "categorical-green": {
@@ -2206,12 +1661,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-green",
           "match": "close",
           "mode": "dark",
-          "nativeName": "--colorPaletteDarkGreenForeground2",
-          "note": "no direct mapping; colorPaletteDarkGreenForeground2 maps to the more specific dsi:concept/color/usage-categorical/hue-green/property-foreground/emphasis-strong",
+          "nativeName": "--colorPaletteGreenForegroundInverted",
+          "note": "no direct mapping; colorPaletteGreenForegroundInverted maps to the more specific dsi:concept/color/usage-categorical+inverse/hue-green/property-foreground",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteDarkGreenForeground2",
+          "token": "colorPaletteGreenForegroundInverted",
           "version": "1.0.0-alpha.24",
           "via": "more-specific"
         }
@@ -2220,11 +1675,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.6039,
-          0.8235,
-          0.6039
+          0.0627,
+          0.4863,
+          0.0627
         ],
-        "hex": "#9ad29a"
+        "hex": "#107c10"
       }
     },
     "categorical-green-background": {
@@ -2234,37 +1689,10 @@
           "concept": "dsi:concept/color/usage-categorical/hue-green/property-background",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteGreenBackground1",
+          "nativeName": "--colorPaletteGreenBackground3",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteGreenBackground1",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0196,
-          0.1451,
-          0.0196
-        ],
-        "hex": "#052505"
-      }
-    },
-    "categorical-green-background-strong": {
-      "$description": "Strong green categorical background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteGreenBackground3",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteGreenBackground3",
           "version": "1.0.0-alpha.24",
@@ -2289,64 +1717,10 @@
           "concept": "dsi:concept/color/usage-categorical/hue-green/property-border",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteDarkGreenBorderActive",
+          "nativeName": "--colorPaletteGreenBorder1",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteDarkGreenBorderActive",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.302,
-          0.651,
-          0.302
-        ],
-        "hex": "#4da64d"
-      }
-    },
-    "categorical-green-border-strong": {
-      "$description": "Strong green categorical border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-green/property-border/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteGreenBorder2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteGreenBorder2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.6235,
-          0.8471,
-          0.6235
-        ],
-        "hex": "#9fd89f"
-      }
-    },
-    "categorical-green-border-subtle": {
-      "$description": "Subtle green categorical border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-green/property-border/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteGreenBorder1",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteGreenBorder1",
           "version": "1.0.0-alpha.24",
@@ -2371,37 +1745,10 @@
           "concept": "dsi:concept/color/usage-categorical/hue-green/property-foreground",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteGreenForeground1",
+          "nativeName": "--colorPaletteDarkGreenForeground2",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteGreenForeground1",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.3294,
-          0.6902,
-          0.3294
-        ],
-        "hex": "#54b054"
-      }
-    },
-    "categorical-green-foreground-strong": {
-      "$description": "Strong green categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-green/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteDarkGreenForeground2",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteDarkGreenForeground2",
           "version": "1.0.0-alpha.24",
@@ -2419,33 +1766,6 @@
         "hex": "#9ad29a"
       }
     },
-    "categorical-green-foreground-subtle": {
-      "$description": "Subtle green categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-green/property-foreground/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteGreenForeground3",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteGreenForeground3",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.6235,
-          0.8471,
-          0.6235
-        ],
-        "hex": "#9fd89f"
-      }
-    },
     "categorical-green-icon": {
       "$description": "Green categorical icon",
       "$extensions": {
@@ -2453,12 +1773,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-green/property-icon",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteGreenForeground1",
-          "note": "no direct mapping; colorPaletteGreenForeground1 maps to dsi:concept/color/usage-categorical/hue-green/property-foreground, which covers text and icons",
+          "nativeName": "--colorPaletteDarkGreenForeground2",
+          "note": "no direct mapping; colorPaletteDarkGreenForeground2 maps to dsi:concept/color/usage-categorical/hue-green/property-foreground, which covers text and icons",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteGreenForeground1",
+          "token": "colorPaletteDarkGreenForeground2",
           "version": "1.0.0-alpha.24",
           "via": "broader-property"
         }
@@ -2467,11 +1787,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.3294,
-          0.6902,
-          0.3294
+          0.6039,
+          0.8235,
+          0.6039
         ],
-        "hex": "#54b054"
+        "hex": "#9ad29a"
       }
     },
     "categorical-magenta-background": {
@@ -2481,37 +1801,10 @@
           "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteMagentaBackground2",
+          "nativeName": "--colorPaletteBerryBackground3",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteMagentaBackground2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.4196,
-          0,
-          0.2627
-        ],
-        "hex": "#6b0043"
-      }
-    },
-    "categorical-magenta-background-strong": {
-      "$description": "Strong magenta categorical background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteBerryBackground3",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteBerryBackground3",
           "version": "1.0.0-alpha.24",
@@ -2536,64 +1829,10 @@
           "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-border",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteMagentaBorderActive",
+          "nativeName": "--colorPaletteBerryBorder1",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteMagentaBorderActive",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.851,
-          0.3412,
-          0.6588
-        ],
-        "hex": "#d957a8"
-      }
-    },
-    "categorical-magenta-border-strong": {
-      "$description": "Strong magenta categorical border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-border/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteBerryBorder2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteBerryBorder2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8196,
-          0.3804,
-          0.7686
-        ],
-        "hex": "#d161c4"
-      }
-    },
-    "categorical-magenta-border-subtle": {
-      "$description": "Subtle magenta categorical border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-border/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteBerryBorder1",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteBerryBorder1",
           "version": "1.0.0-alpha.24",
@@ -2618,37 +1857,10 @@
           "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-foreground",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteBerryForeground1",
+          "nativeName": "--colorPaletteBerryForeground2",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteBerryForeground1",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8549,
-          0.4941,
-          0.8157
-        ],
-        "hex": "#da7ed0"
-      }
-    },
-    "categorical-magenta-foreground-strong": {
-      "$description": "Strong magenta categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteBerryForeground2",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteBerryForeground2",
           "version": "1.0.0-alpha.24",
@@ -2666,33 +1878,6 @@
         "hex": "#edbbe7"
       }
     },
-    "categorical-magenta-foreground-subtle": {
-      "$description": "Subtle magenta categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-foreground/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteBerryForeground3",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteBerryForeground3",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8196,
-          0.3804,
-          0.7686
-        ],
-        "hex": "#d161c4"
-      }
-    },
     "categorical-magenta-icon": {
       "$description": "Magenta categorical icon",
       "$extensions": {
@@ -2700,12 +1885,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-icon",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteBerryForeground1",
-          "note": "no direct mapping; colorPaletteBerryForeground1 maps to dsi:concept/color/usage-categorical/hue-magenta/property-foreground, which covers text and icons",
+          "nativeName": "--colorPaletteBerryForeground2",
+          "note": "no direct mapping; colorPaletteBerryForeground2 maps to dsi:concept/color/usage-categorical/hue-magenta/property-foreground, which covers text and icons",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteBerryForeground1",
+          "token": "colorPaletteBerryForeground2",
           "version": "1.0.0-alpha.24",
           "via": "broader-property"
         }
@@ -2714,39 +1899,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.8549,
-          0.4941,
-          0.8157
+          0.9294,
+          0.7333,
+          0.9059
         ],
-        "hex": "#da7ed0"
-      }
-    },
-    "categorical-orange": {
-      "$description": "Orange categorical color",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-orange",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteDarkOrangeBorder1",
-          "note": "no direct mapping; colorPaletteDarkOrangeBorder1 maps to the more specific dsi:concept/color/usage-categorical/hue-orange/property-border/emphasis-subtle",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteDarkOrangeBorder1",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8549,
-          0.2314,
-          0.0039
-        ],
-        "hex": "#da3b01"
+        "hex": "#edbbe7"
       }
     },
     "categorical-orange-background": {
@@ -2756,37 +1913,10 @@
           "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPalettePeachBackground2",
+          "nativeName": "--colorPaletteDarkOrangeBackground3",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPalettePeachBackground2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.5608,
-          0.3059,
-          0
-        ],
-        "hex": "#8f4e00"
-      }
-    },
-    "categorical-orange-background-strong": {
-      "$description": "Strong orange categorical background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteDarkOrangeBackground3",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteDarkOrangeBackground3",
           "version": "1.0.0-alpha.24",
@@ -2811,64 +1941,10 @@
           "concept": "dsi:concept/color/usage-categorical/hue-orange/property-border",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteDarkOrangeBorderActive",
+          "nativeName": "--colorPaletteDarkOrangeBorder1",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteDarkOrangeBorderActive",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9137,
-          0.5137,
-          0.3686
-        ],
-        "hex": "#e9835e"
-      }
-    },
-    "categorical-orange-border-strong": {
-      "$description": "Strong orange categorical border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-orange/property-border/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteDarkOrangeBorder2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteDarkOrangeBorder2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9137,
-          0.5137,
-          0.3686
-        ],
-        "hex": "#e9835e"
-      }
-    },
-    "categorical-orange-border-subtle": {
-      "$description": "Subtle orange categorical border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-orange/property-border/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteDarkOrangeBorder1",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteDarkOrangeBorder1",
           "version": "1.0.0-alpha.24",
@@ -2893,37 +1969,10 @@
           "concept": "dsi:concept/color/usage-categorical/hue-orange/property-foreground",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteDarkOrangeForeground1",
+          "nativeName": "--colorPaletteDarkOrangeForeground2",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteDarkOrangeForeground1",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9137,
-          0.5137,
-          0.3686
-        ],
-        "hex": "#e9835e"
-      }
-    },
-    "categorical-orange-foreground-strong": {
-      "$description": "Strong orange categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-orange/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteDarkOrangeForeground2",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteDarkOrangeForeground2",
           "version": "1.0.0-alpha.24",
@@ -2941,33 +1990,6 @@
         "hex": "#f4bfab"
       }
     },
-    "categorical-orange-foreground-subtle": {
-      "$description": "Subtle orange categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-orange/property-foreground/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteDarkOrangeForeground3",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteDarkOrangeForeground3",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9137,
-          0.5137,
-          0.3686
-        ],
-        "hex": "#e9835e"
-      }
-    },
     "categorical-orange-icon": {
       "$description": "Orange categorical icon",
       "$extensions": {
@@ -2975,12 +1997,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-orange/property-icon",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteDarkOrangeForeground1",
-          "note": "no direct mapping; colorPaletteDarkOrangeForeground1 maps to dsi:concept/color/usage-categorical/hue-orange/property-foreground, which covers text and icons",
+          "nativeName": "--colorPaletteDarkOrangeForeground2",
+          "note": "no direct mapping; colorPaletteDarkOrangeForeground2 maps to dsi:concept/color/usage-categorical/hue-orange/property-foreground, which covers text and icons",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteDarkOrangeForeground1",
+          "token": "colorPaletteDarkOrangeForeground2",
           "version": "1.0.0-alpha.24",
           "via": "broader-property"
         }
@@ -2989,11 +2011,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.9137,
-          0.5137,
-          0.3686
+          0.9569,
+          0.749,
+          0.6706
         ],
-        "hex": "#e9835e"
+        "hex": "#f4bfab"
       }
     },
     "categorical-pink-background": {
@@ -3050,34 +2072,6 @@
           0.7843
         ],
         "hex": "#ef85c8"
-      }
-    },
-    "categorical-purple": {
-      "$description": "Purple categorical color",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-purple",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteGrapeForeground2",
-          "note": "no direct mapping; colorPaletteGrapeForeground2 maps to the more specific dsi:concept/color/usage-categorical/hue-purple/property-foreground/emphasis-strong",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteGrapeForeground2",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.851,
-          0.6549,
-          0.8784
-        ],
-        "hex": "#d9a7e0"
       }
     },
     "categorical-purple-background": {
@@ -3141,16 +2135,16 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-categorical/hue-purple/property-foreground",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorPaletteGrapeForeground2",
-          "note": "no direct mapping; colorPaletteGrapeForeground2 maps to the more specific dsi:concept/color/usage-categorical/hue-purple/property-foreground/emphasis-strong",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
           "token": "colorPaletteGrapeForeground2",
           "version": "1.0.0-alpha.24",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
@@ -3164,20 +2158,21 @@
         "hex": "#d9a7e0"
       }
     },
-    "categorical-purple-foreground-strong": {
-      "$description": "Strong purple categorical foreground",
+    "categorical-purple-icon": {
+      "$description": "Purple categorical icon",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-purple/property-foreground/emphasis-strong",
-          "match": "close",
+          "concept": "dsi:concept/color/usage-categorical/hue-purple/property-icon",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorPaletteGrapeForeground2",
+          "note": "no direct mapping; colorPaletteGrapeForeground2 maps to dsi:concept/color/usage-categorical/hue-purple/property-foreground, which covers text and icons",
           "product": "fluent",
-          "status": "match",
+          "status": "nearest",
           "theme": "web-dark",
           "token": "colorPaletteGrapeForeground2",
           "version": "1.0.0-alpha.24",
-          "via": "direct"
+          "via": "broader-property"
         }
       },
       "$type": "color",
@@ -3198,12 +2193,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-red",
           "match": "close",
           "mode": "dark",
-          "nativeName": "--colorPaletteRedBorder1",
-          "note": "no direct mapping; colorPaletteRedBorder1 maps to the more specific dsi:concept/color/usage-categorical/hue-red/property-border/emphasis-subtle",
+          "nativeName": "--colorPaletteRedForegroundInverted",
+          "note": "no direct mapping; colorPaletteRedForegroundInverted maps to the more specific dsi:concept/color/usage-categorical+inverse/hue-red/property-foreground",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteRedBorder1",
+          "token": "colorPaletteRedForegroundInverted",
           "version": "1.0.0-alpha.24",
           "via": "more-specific"
         }
@@ -3226,37 +2221,10 @@
           "concept": "dsi:concept/color/usage-categorical/hue-red/property-background",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteRedBackground1",
+          "nativeName": "--colorPaletteRedBackground3",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteRedBackground1",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.2471,
-          0.0627,
-          0.0667
-        ],
-        "hex": "#3f1011"
-      }
-    },
-    "categorical-red-background-strong": {
-      "$description": "Strong red categorical background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteRedBackground3",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteRedBackground3",
           "version": "1.0.0-alpha.24",
@@ -3281,64 +2249,10 @@
           "concept": "dsi:concept/color/usage-categorical/hue-red/property-border",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteCranberryBorderActive",
+          "nativeName": "--colorPaletteRedBorder1",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorPaletteCranberryBorderActive",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8627,
-          0.3843,
-          0.4275
-        ],
-        "hex": "#dc626d"
-      }
-    },
-    "categorical-red-border-strong": {
-      "$description": "Strong red categorical border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-red/property-border/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteRedBorder2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteRedBorder2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8902,
-          0.4902,
-          0.502
-        ],
-        "hex": "#e37d80"
-      }
-    },
-    "categorical-red-border-subtle": {
-      "$description": "Subtle red categorical border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-red/property-border/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteRedBorder1",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorPaletteRedBorder1",
           "version": "1.0.0-alpha.24",
@@ -3363,12 +2277,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-red/property-foreground",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteRedForeground1",
+          "nativeName": "--colorPaletteCranberryForeground2",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteRedForeground1",
+          "token": "colorPaletteCranberryForeground2",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -3377,65 +2291,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.8902,
-          0.4902,
-          0.502
+          0.9333,
+          0.6745,
+          0.698
         ],
-        "hex": "#e37d80"
-      }
-    },
-    "categorical-red-foreground-strong": {
-      "$description": "Strong red categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-red/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteDarkRedForeground2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteDarkRedForeground2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8392,
-          0.6118,
-          0.6471
-        ],
-        "hex": "#d69ca5"
-      }
-    },
-    "categorical-red-foreground-subtle": {
-      "$description": "Subtle red categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-red/property-foreground/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteRedForeground3",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteRedForeground3",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8902,
-          0.4902,
-          0.502
-        ],
-        "hex": "#e37d80"
+        "hex": "#eeacb2"
       }
     },
     "categorical-red-icon": {
@@ -3445,12 +2305,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-red/property-icon",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteRedForeground1",
-          "note": "no direct mapping; colorPaletteRedForeground1 maps to dsi:concept/color/usage-categorical/hue-red/property-foreground, which covers text and icons",
+          "nativeName": "--colorPaletteCranberryForeground2",
+          "note": "no direct mapping; colorPaletteCranberryForeground2 maps to dsi:concept/color/usage-categorical/hue-red/property-foreground, which covers text and icons",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteRedForeground1",
+          "token": "colorPaletteCranberryForeground2",
           "version": "1.0.0-alpha.24",
           "via": "broader-property"
         }
@@ -3459,11 +2319,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.8902,
-          0.4902,
-          0.502
+          0.9333,
+          0.6745,
+          0.698
         ],
-        "hex": "#e37d80"
+        "hex": "#eeacb2"
       }
     },
     "categorical-teal-background": {
@@ -3529,12 +2389,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-yellow",
           "match": "close",
           "mode": "dark",
-          "nativeName": "--colorPaletteMarigoldForeground1",
-          "note": "no direct mapping; colorPaletteMarigoldForeground1 maps to the more specific dsi:concept/color/usage-categorical/hue-yellow/property-foreground/emphasis-subtle",
+          "nativeName": "--colorPaletteYellowForegroundInverted",
+          "note": "no direct mapping; colorPaletteYellowForegroundInverted maps to the more specific dsi:concept/color/usage-categorical+inverse/hue-yellow/property-foreground",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteMarigoldForeground1",
+          "token": "colorPaletteYellowForegroundInverted",
           "version": "1.0.0-alpha.24",
           "via": "more-specific"
         }
@@ -3543,11 +2403,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.949,
-          0.7765,
-          0.3804
+          0.5059,
+          0.4549,
+          0
         ],
-        "hex": "#f2c661"
+        "hex": "#817400"
       }
     },
     "categorical-yellow-background": {
@@ -3557,12 +2417,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteYellowBackground1",
+          "nativeName": "--colorPaletteMarigoldBackground3",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteYellowBackground1",
+          "token": "colorPaletteMarigoldBackground3",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -3571,38 +2431,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.298,
-          0.2667,
+          0.9176,
+          0.6392,
           0
         ],
-        "hex": "#4c4400"
-      }
-    },
-    "categorical-yellow-background-strong": {
-      "$description": "Strong yellow categorical background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteYellowBackground3",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteYellowBackground3",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9922,
-          0.8902,
-          0
-        ],
-        "hex": "#fde300"
+        "hex": "#eaa300"
       }
     },
     "categorical-yellow-border": {
@@ -3612,12 +2445,12 @@
           "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-border",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteGoldBorderActive",
+          "nativeName": "--colorPaletteMarigoldBorder1",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteGoldBorderActive",
+          "token": "colorPaletteMarigoldBorder1",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -3626,65 +2459,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.8549,
-          0.7569,
-          0.3412
-        ],
-        "hex": "#dac157"
-      }
-    },
-    "categorical-yellow-border-strong": {
-      "$description": "Strong yellow categorical border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-border/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteYellowBorder2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteYellowBorder2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9922,
           0.9176,
-          0.2392
-        ],
-        "hex": "#fdea3d"
-      }
-    },
-    "categorical-yellow-border-subtle": {
-      "$description": "Subtle yellow categorical border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-border/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteYellowBorder1",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteYellowBorder1",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9922,
-          0.8902,
+          0.6392,
           0
         ],
-        "hex": "#fde300"
+        "hex": "#eaa300"
       }
     },
     "categorical-yellow-foreground": {
@@ -3692,41 +2471,14 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-foreground",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteMarigoldForeground1",
-          "note": "no direct mapping; colorPaletteMarigoldForeground1 maps to the more specific dsi:concept/color/usage-categorical/hue-yellow/property-foreground/emphasis-subtle",
+          "nativeName": "--colorPaletteGoldForeground2",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteMarigoldForeground1",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.949,
-          0.7765,
-          0.3804
-        ],
-        "hex": "#f2c661"
-      }
-    },
-    "categorical-yellow-foreground-strong": {
-      "$description": "Strong yellow categorical foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorPaletteYellowForeground1",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorPaletteYellowForeground1",
+          "token": "colorPaletteGoldForeground2",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
@@ -3735,38 +2487,39 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.9961,
-          0.9333,
-          0.4
+          0.9255,
+          0.8745,
+          0.6471
         ],
-        "hex": "#feee66"
+        "hex": "#ecdfa5"
       }
     },
-    "categorical-yellow-foreground-subtle": {
-      "$description": "Subtle yellow categorical foreground",
+    "categorical-yellow-icon": {
+      "$description": "Yellow categorical icon",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-foreground/emphasis-subtle",
-          "match": "close",
+          "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-icon",
+          "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorPaletteMarigoldForeground1",
+          "nativeName": "--colorPaletteGoldForeground2",
+          "note": "no direct mapping; colorPaletteGoldForeground2 maps to dsi:concept/color/usage-categorical/hue-yellow/property-foreground, which covers text and icons",
           "product": "fluent",
-          "status": "match",
+          "status": "nearest",
           "theme": "web-dark",
-          "token": "colorPaletteMarigoldForeground1",
+          "token": "colorPaletteGoldForeground2",
           "version": "1.0.0-alpha.24",
-          "via": "direct"
+          "via": "broader-property"
         }
       },
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.949,
-          0.7765,
-          0.3804
+          0.9255,
+          0.8745,
+          0.6471
         ],
-        "hex": "#f2c661"
+        "hex": "#ecdfa5"
       }
     },
     "danger": {
@@ -3802,16 +2555,16 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-background",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorStatusDangerBackground1",
-          "note": "no direct mapping; colorStatusDangerBackground1 maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-subtlest",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
           "token": "colorStatusDangerBackground1",
           "version": "1.0.0-alpha.24",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
@@ -3830,16 +2583,16 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-background/state-active",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorStatusDangerBackground3Pressed",
-          "note": "no direct mapping; colorStatusDangerBackground3Pressed maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-strong/state-active",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
           "token": "colorStatusDangerBackground3Pressed",
           "version": "1.0.0-alpha.24",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
@@ -3858,96 +2611,15 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-danger/property-background/state-hover",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorStatusDangerBackground3Hover",
-          "note": "no direct mapping; colorStatusDangerBackground3Hover maps to the more specific dsi:concept/color/intent-danger/property-background/emphasis-strong/state-hover",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
           "token": "colorStatusDangerBackground3Hover",
           "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.6941,
-          0.0549,
-          0.1098
-        ],
-        "hex": "#b10e1c"
-      }
-    },
-    "danger-background-strong": {
-      "$description": "Strong danger background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusDangerBackground3",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusDangerBackground3",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.7725,
-          0.0588,
-          0.1216
-        ],
-        "hex": "#c50f1f"
-      }
-    },
-    "danger-background-strong-active": {
-      "$description": "Pressed strong danger background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-strong/state-active",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusDangerBackground3Pressed",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusDangerBackground3Pressed",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.5882,
-          0.0431,
-          0.0941
-        ],
-        "hex": "#960b18"
-      }
-    },
-    "danger-background-strong-hover": {
-      "$description": "Hovered strong danger background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-strong/state-hover",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusDangerBackground3Hover",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusDangerBackground3Hover",
-          "version": "1.0.0-alpha.24",
           "via": "direct"
         }
       },
@@ -3960,60 +2632,6 @@
           0.1098
         ],
         "hex": "#b10e1c"
-      }
-    },
-    "danger-background-subtle": {
-      "$description": "Subtle danger background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusDangerBackground2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusDangerBackground2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.4314,
-          0.0314,
-          0.0667
-        ],
-        "hex": "#6e0811"
-      }
-    },
-    "danger-background-subtlest": {
-      "$description": "Subtlest danger background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtlest",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusDangerBackground1",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusDangerBackground1",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.2314,
-          0.0196,
-          0.0353
-        ],
-        "hex": "#3b0509"
       }
     },
     "danger-border": {
@@ -4023,64 +2641,10 @@
           "concept": "dsi:concept/color/intent-danger/property-border",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorStatusDangerBorderActive",
+          "nativeName": "--colorStatusDangerBorder1",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorStatusDangerBorderActive",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8627,
-          0.3843,
-          0.4275
-        ],
-        "hex": "#dc626d"
-      }
-    },
-    "danger-border-strong": {
-      "$description": "Strong danger border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-border/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusDangerBorder2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusDangerBorder2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8627,
-          0.3843,
-          0.4275
-        ],
-        "hex": "#dc626d"
-      }
-    },
-    "danger-border-subtle": {
-      "$description": "Subtle danger border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-border/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusDangerBorder1",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorStatusDangerBorder1",
           "version": "1.0.0-alpha.24",
@@ -4123,60 +2687,6 @@
           0.4275
         ],
         "hex": "#dc626d"
-      }
-    },
-    "danger-foreground-strong": {
-      "$description": "Strong danger foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusDangerForeground2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusDangerForeground2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9333,
-          0.6745,
-          0.698
-        ],
-        "hex": "#eeacb2"
-      }
-    },
-    "danger-foreground-subtle": {
-      "$description": "Subtle danger foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-foreground/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusDangerForeground3",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusDangerForeground3",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9333,
-          0.6745,
-          0.698
-        ],
-        "hex": "#eeacb2"
       }
     },
     "danger-icon": {
@@ -4290,99 +2800,17 @@
         "hex": "#dc626d"
       }
     },
-    "danger-text-subtle": {
-      "$description": "Subtle danger text",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-text/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusDangerForeground3",
-          "note": "no direct mapping; colorStatusDangerForeground3 maps to dsi:concept/color/intent-danger/property-foreground/emphasis-subtle, which covers text and icons",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorStatusDangerForeground3",
-          "version": "1.0.0-alpha.24",
-          "via": "broader-property"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9333,
-          0.6745,
-          0.698
-        ],
-        "hex": "#eeacb2"
-      }
-    },
     "focus-ring": {
       "$description": "Focus ring",
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/property-focus-ring",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorStrokeFocus1",
-          "note": "no direct mapping; colorStrokeFocus1 maps to the more specific dsi:concept/color/property-focus-ring/emphasis-subtle",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorStrokeFocus1",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0,
-          0,
-          0
-        ],
-        "hex": "#000000"
-      }
-    },
-    "focus-ring-strong": {
-      "$description": "Strong focus ring",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/property-focus-ring/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStrokeFocus2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStrokeFocus2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          1,
-          1
-        ],
-        "hex": "#ffffff"
-      }
-    },
-    "focus-ring-subtle": {
-      "$description": "Subtle focus ring",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/property-focus-ring/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStrokeFocus1",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorStrokeFocus1",
           "version": "1.0.0-alpha.24",
@@ -4536,34 +2964,6 @@
           1
         ],
         "hex": "#ffffff"
-      }
-    },
-    "foreground-subtle": {
-      "$description": "Subtle foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/property-foreground/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusDangerForeground3",
-          "note": "no direct mapping; colorStatusDangerForeground3 maps to the more specific dsi:concept/color/intent-danger/property-foreground/emphasis-subtle",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorStatusDangerForeground3",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9333,
-          0.6745,
-          0.698
-        ],
-        "hex": "#eeacb2"
       }
     },
     "icon": {
@@ -5377,38 +3777,10 @@
           "concept": "dsi:concept/color/usage-skeleton/property-background",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorNeutralStencil1Alpha",
+          "nativeName": "--colorNeutralStencil1",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorNeutralStencil1Alpha",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "alpha": 0.1,
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          1,
-          1
-        ],
-        "hex": "#ffffff"
-      }
-    },
-    "skeleton-background-strong": {
-      "$description": "Strong skeleton background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-skeleton/property-background/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorNeutralStencil1",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorNeutralStencil1",
           "version": "1.0.0-alpha.24",
@@ -5433,24 +3805,25 @@
           "concept": "dsi:concept/color/usage-skeleton/property-background/emphasis-subtle",
           "match": "close",
           "mode": "dark",
-          "nativeName": "--colorNeutralStencil2",
+          "nativeName": "--colorNeutralStencil2Alpha",
           "product": "fluent",
           "status": "match",
           "theme": "web-dark",
-          "token": "colorNeutralStencil2",
+          "token": "colorNeutralStencil2Alpha",
           "version": "1.0.0-alpha.24",
           "via": "direct"
         }
       },
       "$type": "color",
       "$value": {
+        "alpha": 0.05,
         "colorSpace": "srgb",
         "components": [
-          0.2,
-          0.2,
-          0.2
+          1,
+          1,
+          1
         ],
-        "hex": "#333333"
+        "hex": "#ffffff"
       }
     },
     "success": {
@@ -5486,93 +3859,12 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-success/property-background",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorStatusSuccessBackground1",
-          "note": "no direct mapping; colorStatusSuccessBackground1 maps to the more specific dsi:concept/color/intent-success/property-background/emphasis-subtlest",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorStatusSuccessBackground1",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0196,
-          0.1451,
-          0.0196
-        ],
-        "hex": "#052505"
-      }
-    },
-    "success-background-strong": {
-      "$description": "Strong success background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/property-background/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusSuccessBackground3",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusSuccessBackground3",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0627,
-          0.4863,
-          0.0627
-        ],
-        "hex": "#107c10"
-      }
-    },
-    "success-background-subtle": {
-      "$description": "Subtle success background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusSuccessBackground2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusSuccessBackground2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.0353,
-          0.2706,
-          0.0353
-        ],
-        "hex": "#094509"
-      }
-    },
-    "success-background-subtlest": {
-      "$description": "Subtlest success background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtlest",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusSuccessBackground1",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorStatusSuccessBackground1",
           "version": "1.0.0-alpha.24",
@@ -5597,64 +3889,10 @@
           "concept": "dsi:concept/color/intent-success/property-border",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorStatusSuccessBorderActive",
+          "nativeName": "--colorStatusSuccessBorder1",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorStatusSuccessBorderActive",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.3294,
-          0.6902,
-          0.3294
-        ],
-        "hex": "#54b054"
-      }
-    },
-    "success-border-strong": {
-      "$description": "Strong success border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/property-border/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusSuccessBorder2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusSuccessBorder2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.6235,
-          0.8471,
-          0.6235
-        ],
-        "hex": "#9fd89f"
-      }
-    },
-    "success-border-subtle": {
-      "$description": "Subtle success border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/property-border/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusSuccessBorder1",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorStatusSuccessBorder1",
           "version": "1.0.0-alpha.24",
@@ -5697,60 +3935,6 @@
           0.3294
         ],
         "hex": "#54b054"
-      }
-    },
-    "success-foreground-strong": {
-      "$description": "Strong success foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusSuccessForeground2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusSuccessForeground2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.6235,
-          0.8471,
-          0.6235
-        ],
-        "hex": "#9fd89f"
-      }
-    },
-    "success-foreground-subtle": {
-      "$description": "Subtle success foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/property-foreground/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusSuccessForeground3",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusSuccessForeground3",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.6235,
-          0.8471,
-          0.6235
-        ],
-        "hex": "#9fd89f"
       }
     },
     "success-icon": {
@@ -5864,34 +4048,6 @@
         "hex": "#54b054"
       }
     },
-    "success-text-subtle": {
-      "$description": "Subtle success text",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-success/property-text/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusSuccessForeground3",
-          "note": "no direct mapping; colorStatusSuccessForeground3 maps to dsi:concept/color/intent-success/property-foreground/emphasis-subtle, which covers text and icons",
-          "product": "fluent",
-          "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorStatusSuccessForeground3",
-          "version": "1.0.0-alpha.24",
-          "via": "broader-property"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.6235,
-          0.8471,
-          0.6235
-        ],
-        "hex": "#9fd89f"
-      }
-    },
     "surface-background": {
       "$description": "Surface background",
       "$extensions": {
@@ -5925,16 +4081,16 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/state-active",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorNeutralBackground4Pressed",
-          "note": "no direct mapping; colorNeutralBackground4Pressed maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-strong/state-active",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
           "token": "colorNeutralBackground4Pressed",
           "version": "1.0.0-alpha.24",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
@@ -5953,16 +4109,16 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorNeutralBackground4Hover",
-          "note": "no direct mapping; colorNeutralBackground4Hover maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
           "theme": "web-dark",
           "token": "colorNeutralBackground4Hover",
           "version": "1.0.0-alpha.24",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
@@ -5981,93 +4137,12 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorNeutralBackground4Selected",
-          "note": "no direct mapping; colorNeutralBackground4Selected maps to the more specific dsi:concept/color/usage-surface/property-background/emphasis-strong/state-selected",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorNeutralBackground4Selected",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.102,
-          0.102,
-          0.102
-        ],
-        "hex": "#1a1a1a"
-      }
-    },
-    "surface-background-strong-active": {
-      "$description": "Pressed strong surface background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-active",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorNeutralBackground4Pressed",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorNeutralBackground4Pressed",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0,
-          0,
-          0
-        ],
-        "hex": "#000000"
-      }
-    },
-    "surface-background-strong-hover": {
-      "$description": "Hovered strong surface background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorNeutralBackground4Hover",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorNeutralBackground4Hover",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.1216,
-          0.1216,
-          0.1216
-        ],
-        "hex": "#1f1f1f"
-      }
-    },
-    "surface-background-strong-selected": {
-      "$description": "Selected strong surface background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-selected",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorNeutralBackground4Selected",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorNeutralBackground4Selected",
           "version": "1.0.0-alpha.24",
@@ -6202,93 +4277,12 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning/property-background",
-          "match": "close",
+          "match": "broad",
           "mode": "dark",
           "nativeName": "--colorStatusWarningBackground1",
-          "note": "no direct mapping; colorStatusWarningBackground1 maps to the more specific dsi:concept/color/intent-warning/property-background/emphasis-subtlest",
+          "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorStatusWarningBackground1",
-          "version": "1.0.0-alpha.24",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.2902,
-          0.1176,
-          0.0157
-        ],
-        "hex": "#4a1e04"
-      }
-    },
-    "warning-background-strong": {
-      "$description": "Strong warning background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-background/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusWarningBackground3",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusWarningBackground3",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9686,
-          0.3882,
-          0.0471
-        ],
-        "hex": "#f7630c"
-      }
-    },
-    "warning-background-subtle": {
-      "$description": "Subtle warning background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusWarningBackground2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusWarningBackground2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.5412,
-          0.2157,
-          0.0275
-        ],
-        "hex": "#8a3707"
-      }
-    },
-    "warning-background-subtlest": {
-      "$description": "Subtlest warning background",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtlest",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusWarningBackground1",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorStatusWarningBackground1",
           "version": "1.0.0-alpha.24",
@@ -6313,64 +4307,10 @@
           "concept": "dsi:concept/color/intent-warning/property-border",
           "match": "broad",
           "mode": "dark",
-          "nativeName": "--colorStatusWarningBorderActive",
+          "nativeName": "--colorStatusWarningBorder1",
           "note": "only a broad match",
           "product": "fluent",
           "status": "nearest",
-          "theme": "web-dark",
-          "token": "colorStatusWarningBorderActive",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9804,
-          0.6275,
-          0.4196
-        ],
-        "hex": "#faa06b"
-      }
-    },
-    "warning-border-strong": {
-      "$description": "Strong warning border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-border/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusWarningBorder2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusWarningBorder2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9765,
-          0.5333,
-          0.2706
-        ],
-        "hex": "#f98845"
-      }
-    },
-    "warning-border-subtle": {
-      "$description": "Subtle warning border",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-border/emphasis-subtle",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusWarningBorder1",
-          "product": "fluent",
-          "status": "match",
           "theme": "web-dark",
           "token": "colorStatusWarningBorder1",
           "version": "1.0.0-alpha.24",
@@ -6413,33 +4353,6 @@
           0.4196
         ],
         "hex": "#faa06b"
-      }
-    },
-    "warning-foreground-strong": {
-      "$description": "Strong warning foreground",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-warning/property-foreground/emphasis-strong",
-          "match": "close",
-          "mode": "dark",
-          "nativeName": "--colorStatusWarningForeground2",
-          "product": "fluent",
-          "status": "match",
-          "theme": "web-dark",
-          "token": "colorStatusWarningForeground2",
-          "version": "1.0.0-alpha.24",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9922,
-          0.8118,
-          0.7059
-        ],
-        "hex": "#fdcfb4"
       }
     },
     "warning-icon": {

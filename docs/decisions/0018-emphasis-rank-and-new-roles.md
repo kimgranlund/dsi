@@ -28,3 +28,7 @@ The contrast-rank rule is computed (`dsi-map rank-emphasis`, method `emphasis-ra
 
 ## Amendment, 2026-11-01: anchor at subtlest
 When a family's words contradict its contrast order, light-side members (word at or below default) take subtlest, subtler, subtle, default in contrast order and bold-side members keep their word's step: Atlassian status `default` -> subtlest, `subtler` -> subtler, `subtle` -> subtle, `bold` -> strong (owner decision; the Haiku audit and the gap research agreed).
+
+## Superseded in part, 2026-11-01
+
+The numbered-ladder ranking (Fluent Background1..6 spread over the seven steps) is replaced by ADR 0025: numbered steps stay native and bind no emphasis.
