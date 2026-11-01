@@ -1,0 +1,5741 @@
+{
+ "@context": "../../../ontology/context.jsonld",
+ "@graph": [
+  {
+   "id": "dsi:scheme/native/carbon/11.84.0",
+   "type": "ConceptScheme",
+   "prefLabel": "Carbon Design System 11.84.0 tokens",
+   "definition": "Design tokens as shipped by Carbon Design System 11.84.0, under their native names."
+  },
+  {
+   "id": "dsi:scheme/vocab/carbon",
+   "type": "ConceptScheme",
+   "prefLabel": "Carbon Design System naming vocabulary",
+   "definition": "Words Carbon Design System builds its token names from, mapped to DesignSystemsIndex facet values."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-aura-end",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-aura-end",
+   "notation": "--cds-ai-aura-end",
+   "definition": "End color for AI aura gradient effect. Creates a fade-to-transparent effect at the edge of AI-enhanced elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-aura-hover-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-aura-hover-background",
+   "notation": "--cds-ai-aura-hover-background",
+   "definition": "Background color for AI aura on hover. Use when user hovers over AI-enhanced interactive elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-aura-hover-end",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-aura-hover-end",
+   "notation": "--cds-ai-aura-hover-end",
+   "definition": "End color for AI aura gradient on hover. Creates hover state fade effect for AI elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-aura-hover-start",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-aura-hover-start",
+   "notation": "--cds-ai-aura-hover-start",
+   "definition": "Start color for AI aura gradient on hover. Provides the vibrant blue beginning of the hover gradient."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-aura-start",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-aura-start",
+   "notation": "--cds-ai-aura-start",
+   "definition": "Start color for AI aura gradient effect. Provides the vibrant blue beginning of the gradient for AI-enhanced elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-aura-start-sm",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-aura-start-sm",
+   "notation": "--cds-ai-aura-start-sm",
+   "definition": "Start color for small AI aura gradient. Use for compact AI indicators or smaller UI elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-border-end",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-border-end",
+   "notation": "--cds-ai-border-end",
+   "definition": "End color for AI border gradient. Creates the lighter edge of gradient borders on AI elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-border-start",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-border-start",
+   "notation": "--cds-ai-border-start",
+   "definition": "Start color for AI border gradient. Creates the darker edge of gradient borders on AI elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-border-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-border-strong",
+   "notation": "--cds-ai-border-strong",
+   "definition": "Strong border color for AI elements. Use for high-emphasis AI borders that need clear definition.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/intent-ai/property-border/emphasis-strong"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-drop-shadow",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-drop-shadow",
+   "notation": "--cds-ai-drop-shadow",
+   "definition": "Drop shadow color for AI elements. Provides depth and elevation for AI-enhanced components."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-inner-shadow",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-inner-shadow",
+   "notation": "--cds-ai-inner-shadow",
+   "definition": "Inner shadow color for AI elements. Creates inset depth effect for AI-enhanced surfaces."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-overlay",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-overlay",
+   "notation": "--cds-ai-overlay",
+   "definition": "Overlay color for AI modal backgrounds. Use to dim content behind AI dialogs or popovers."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-popover-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-popover-background",
+   "notation": "--cds-ai-popover-background",
+   "definition": "Background color for AI popovers and tooltips. Provides the base surface for AI-generated content displays."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-popover-caret-bottom",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-popover-caret-bottom",
+   "notation": "--cds-ai-popover-caret-bottom",
+   "definition": "Bottom caret color for AI popovers. Creates the gradient pointer at the bottom of AI tooltips."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-popover-caret-bottom-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-popover-caret-bottom-background",
+   "notation": "--cds-ai-popover-caret-bottom-background",
+   "definition": "Background color for bottom caret of AI popovers. Provides the base color for the popover pointer."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-popover-caret-bottom-background-actions",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-popover-caret-bottom-background-actions",
+   "notation": "--cds-ai-popover-caret-bottom-background-actions",
+   "definition": "Background color for action area in AI popover bottom caret. Use for interactive sections within AI tooltips."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-popover-caret-center",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-popover-caret-center",
+   "notation": "--cds-ai-popover-caret-center",
+   "definition": "Center color for AI popover caret gradient. Creates the vibrant middle of the gradient pointer."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-popover-shadow-outer-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-popover-shadow-outer-01",
+   "notation": "--cds-ai-popover-shadow-outer-01",
+   "definition": "Primary outer shadow for AI popovers. Provides the first layer of depth for elevated AI elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-popover-shadow-outer-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-popover-shadow-outer-02",
+   "notation": "--cds-ai-popover-shadow-outer-02",
+   "definition": "Secondary outer shadow for AI popovers. Adds additional depth layer for AI element elevation."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-skeleton-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-skeleton-background",
+   "notation": "--cds-ai-skeleton-background",
+   "definition": "Background color for AI skeleton loaders. Use while AI-generated content is loading.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/intent-ai/usage-skeleton/property-background"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/ai-skeleton-element-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "ai-skeleton-element-background",
+   "notation": "--cds-ai-skeleton-element-background",
+   "definition": "Element background color for AI skeleton loaders. Provides the animated shimmer effect for loading AI content."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "background",
+   "notation": "--cds-background",
+   "definition": "Default page background color. Use as the base surface for the entire application or page.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-page/property-background"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/background-active",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "background-active",
+   "notation": "--cds-background-active",
+   "definition": "Background color for active/pressed state. Use when user clicks or presses interactive elements.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-background/state-active"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/background-brand",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "background-brand",
+   "notation": "--cds-background-brand",
+   "definition": "Brand color for backgrounds. Use for branded sections, headers, or promotional areas."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/background-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "background-hover",
+   "notation": "--cds-background-hover",
+   "definition": "Background color for hover state. Use when user hovers over interactive elements to provide visual feedback.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-background/state-hover"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/background-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "background-inverse",
+   "notation": "--cds-background-inverse",
+   "definition": "Inverse background color for dark UI elements. Use for tooltips, inverse buttons, or dark-themed sections.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-inverse/property-background"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/background-inverse-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "background-inverse-hover",
+   "notation": "--cds-background-inverse-hover",
+   "definition": "Hover state for inverse backgrounds. Use when user hovers over dark UI elements.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-inverse/property-background/state-hover"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/background-selected",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "background-selected",
+   "notation": "--cds-background-selected",
+   "definition": "Background color for selected state. Use to highlight currently selected items or active states.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-background/state-selected"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/background-selected-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "background-selected-hover",
+   "notation": "--cds-background-selected-hover",
+   "definition": "Hover state for selected backgrounds. Use when user hovers over already-selected items.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-background/state-hover+selected"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/black",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "black",
+   "notation": "black",
+   "definition": "black"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blackHover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blackHover",
+   "notation": "blackHover",
+   "definition": "black hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.10",
+   "notation": "blue.10",
+   "definition": "blue 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.100",
+   "notation": "blue.100",
+   "definition": "blue 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.100Hover",
+   "notation": "blue.100Hover",
+   "definition": "blue 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.10Hover",
+   "notation": "blue.10Hover",
+   "definition": "blue 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.20",
+   "notation": "blue.20",
+   "definition": "blue 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.20Hover",
+   "notation": "blue.20Hover",
+   "definition": "blue 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.30",
+   "notation": "blue.30",
+   "definition": "blue 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.30Hover",
+   "notation": "blue.30Hover",
+   "definition": "blue 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.40",
+   "notation": "blue.40",
+   "definition": "blue 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.40Hover",
+   "notation": "blue.40Hover",
+   "definition": "blue 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.50",
+   "notation": "blue.50",
+   "definition": "blue 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.50Hover",
+   "notation": "blue.50Hover",
+   "definition": "blue 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.60",
+   "notation": "blue.60",
+   "definition": "blue 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.60Hover",
+   "notation": "blue.60Hover",
+   "definition": "blue 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.70",
+   "notation": "blue.70",
+   "definition": "blue 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.70Hover",
+   "notation": "blue.70Hover",
+   "definition": "blue 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.80",
+   "notation": "blue.80",
+   "definition": "blue 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.80Hover",
+   "notation": "blue.80Hover",
+   "definition": "blue 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.90",
+   "notation": "blue.90",
+   "definition": "blue 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/blue.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "blue.90Hover",
+   "notation": "blue.90Hover",
+   "definition": "blue 90 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-disabled",
+   "notation": "--cds-border-disabled",
+   "definition": "Border color for disabled elements. Use when borders need to indicate unavailable or inactive state.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-border/state-disabled"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-interactive",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-interactive",
+   "notation": "--cds-border-interactive",
+   "definition": "Border color for interactive elements. Use for focused inputs, active selections, or clickable borders."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-inverse",
+   "notation": "--cds-border-inverse",
+   "definition": "Border color for inverse/dark UI elements. Use for borders on dark backgrounds or inverse components.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-inverse/property-border"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-radius.border-radius-00",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-radius.border-radius-00",
+   "notation": "border-radius.border-radius-00",
+   "definition": "Border radius token — 0. No rounding; use for sharp-cornered elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-radius.border-radius-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-radius.border-radius-02",
+   "notation": "border-radius.border-radius-02",
+   "definition": "Border radius token — 2px. Subtle rounding for small components like tags and badges."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-radius.border-radius-04",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-radius.border-radius-04",
+   "notation": "border-radius.border-radius-04",
+   "definition": "Border radius token — 4px. Default rounding for inputs, cards, and general components."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-radius.border-radius-08",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-radius.border-radius-08",
+   "notation": "border-radius.border-radius-08",
+   "definition": "Border radius token — 8px. Moderate rounding for panels, modals, and containers."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-radius.border-radius-16",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-radius.border-radius-16",
+   "notation": "border-radius.border-radius-16",
+   "definition": "Border radius token — 16px. Strong rounding for large cards or featured containers."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-radius.border-radius-24",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-radius.border-radius-24",
+   "notation": "border-radius.border-radius-24",
+   "definition": "Border radius token — 24px. Very rounded corners for pill-adjacent components."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-radius.border-radius-max",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-radius.border-radius-max",
+   "notation": "border-radius.border-radius-max",
+   "definition": "Border radius token — pill/fully rounded. Use for pill buttons, chips, and circular elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-strong-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-strong-01",
+   "notation": "--cds-border-strong-01",
+   "definition": "Strong border color for layer 01. Use for high-contrast borders that need clear definition on first layer."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-strong-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-strong-02",
+   "notation": "--cds-border-strong-02",
+   "definition": "Strong border color for layer 02. Use for high-contrast borders on second layer surfaces."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-strong-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-strong-03",
+   "notation": "--cds-border-strong-03",
+   "definition": "Strong border color for layer 03. Use for high-contrast borders on third layer surfaces."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-subtle-00",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-subtle-00",
+   "notation": "--cds-border-subtle-00",
+   "definition": "Subtle border color for base layer. Use for low-contrast borders on page background."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-subtle-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-subtle-01",
+   "notation": "--cds-border-subtle-01",
+   "definition": "Subtle border color for layer 01. Use for low-contrast borders on first layer surfaces."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-subtle-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-subtle-02",
+   "notation": "--cds-border-subtle-02",
+   "definition": "Subtle border color for layer 02. Use for low-contrast borders on second layer surfaces."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-subtle-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-subtle-03",
+   "notation": "--cds-border-subtle-03",
+   "definition": "Subtle border color for layer 03. Use for low-contrast borders on third layer surfaces."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-subtle-selected-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-subtle-selected-01",
+   "notation": "--cds-border-subtle-selected-01",
+   "definition": "Subtle border for selected items on layer 01. Use for low-contrast borders on selected elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-subtle-selected-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-subtle-selected-02",
+   "notation": "--cds-border-subtle-selected-02",
+   "definition": "Subtle border for selected items on layer 02. Use for low-contrast borders on selected elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-subtle-selected-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-subtle-selected-03",
+   "notation": "--cds-border-subtle-selected-03",
+   "definition": "Subtle border for selected items on layer 03. Use for low-contrast borders on selected elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-tile-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-tile-01",
+   "notation": "--cds-border-tile-01",
+   "definition": "Border color for tiles on layer 01. Use for card or tile borders on first layer."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-tile-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-tile-02",
+   "notation": "--cds-border-tile-02",
+   "definition": "Border color for tiles on layer 02. Use for card or tile borders on second layer."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/border-tile-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "border-tile-03",
+   "notation": "--cds-border-tile-03",
+   "definition": "Border color for tiles on layer 03. Use for card or tile borders on third layer."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-danger-active",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-danger-active",
+   "notation": "--cds-button-danger-active",
+   "definition": "Background color for danger buttons in active/pressed state. Use when user clicks or presses a destructive action button."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-danger-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-danger-hover",
+   "notation": "--cds-button-danger-hover",
+   "definition": "Background color for danger buttons on hover. Use when user hovers over a destructive action button to provide visual feedback."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-danger-primary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-danger-primary",
+   "notation": "--cds-button-danger-primary",
+   "definition": "Background color for primary danger buttons in default state. Use for destructive actions like delete, remove, or cancel that require high emphasis."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-danger-secondary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-danger-secondary",
+   "notation": "--cds-button-danger-secondary",
+   "definition": "Border and text color for secondary danger buttons. Use for destructive actions that need less emphasis than primary danger buttons."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-disabled",
+   "notation": "--cds-button-disabled",
+   "definition": "Background color for disabled buttons across all variants. Use when a button action is temporarily unavailable or not applicable in the current context."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-primary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-primary",
+   "notation": "--cds-button-primary",
+   "definition": "Background color for primary buttons in default state. Use for the main call-to-action on a page or in a workflow step."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-primary-active",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-primary-active",
+   "notation": "--cds-button-primary-active",
+   "definition": "Background color for primary buttons in active/pressed state. Use when user clicks or presses the primary action button."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-primary-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-primary-hover",
+   "notation": "--cds-button-primary-hover",
+   "definition": "Background color for primary buttons on hover. Use when user hovers over the primary action button to provide visual feedback."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-secondary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-secondary",
+   "notation": "--cds-button-secondary",
+   "definition": "Background color for secondary buttons in default state. Use for secondary actions that support the primary action or provide alternative paths."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-secondary-active",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-secondary-active",
+   "notation": "--cds-button-secondary-active",
+   "definition": "Background color for secondary buttons in active/pressed state. Use when user clicks or presses a secondary action button."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-secondary-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-secondary-hover",
+   "notation": "--cds-button-secondary-hover",
+   "definition": "Background color for secondary buttons on hover. Use when user hovers over a secondary action button to provide visual feedback."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-separator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-separator",
+   "notation": "--cds-button-separator",
+   "definition": "Border color for button separators in button groups or split buttons. Use to visually divide adjacent buttons while maintaining their connection."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-tertiary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-tertiary",
+   "notation": "--cds-button-tertiary",
+   "definition": "Text and icon color for tertiary buttons in default state. Use for low-emphasis actions or when multiple actions need equal visual weight."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-tertiary-active",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-tertiary-active",
+   "notation": "--cds-button-tertiary-active",
+   "definition": "Text and icon color for tertiary buttons in active/pressed state. Use when user clicks or presses a tertiary action button."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/button-tertiary-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "button-tertiary-hover",
+   "notation": "--cds-button-tertiary-hover",
+   "definition": "Background color for tertiary buttons on hover. Use when user hovers over a tertiary action button to provide subtle visual feedback."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-avatar-agent",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-avatar-agent",
+   "notation": "--cds-chat-avatar-agent",
+   "definition": "Avatar background color for human agents in chat. Use to distinguish agent messages from bot or user."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-avatar-bot",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-avatar-bot",
+   "notation": "--cds-chat-avatar-bot",
+   "definition": "Avatar background color for AI bots in chat. Use to identify automated or AI-generated responses."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-avatar-user",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-avatar-user",
+   "notation": "--cds-chat-avatar-user",
+   "definition": "Avatar background color for users in chat. Use to identify messages from the current user."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-bubble-agent",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-bubble-agent",
+   "notation": "--cds-chat-bubble-agent",
+   "definition": "Background color for agent message bubbles. Use for messages from human agents in chat interfaces."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-bubble-agent-text",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-bubble-agent-text",
+   "notation": "--cds-chat-bubble-agent-text",
+   "definition": "Text color for agent message bubbles. Ensures readable contrast in agent messages."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-bubble-border",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-bubble-border",
+   "notation": "--cds-chat-bubble-border",
+   "definition": "Border color for chat message bubbles. Provides visual definition for all message types."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-bubble-user",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-bubble-user",
+   "notation": "--cds-chat-bubble-user",
+   "definition": "Background color for user message bubbles. Use for messages from the current user in chat interfaces."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-bubble-user-text",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-bubble-user-text",
+   "notation": "--cds-chat-bubble-user-text",
+   "definition": "Text color for user message bubbles. Ensures readable contrast in user messages."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-button",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-button",
+   "notation": "--cds-chat-button",
+   "definition": "Icon color for chat action buttons. Use for interactive elements within chat interface."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-button-active",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-button-active",
+   "notation": "--cds-chat-button-active",
+   "definition": "Background color for chat buttons in active/pressed state. Use when user clicks chat actions."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-button-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-button-hover",
+   "notation": "--cds-chat-button-hover",
+   "definition": "Background color for chat buttons on hover. Use to provide feedback when hovering over chat actions."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-button-selected",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-button-selected",
+   "notation": "--cds-chat-button-selected",
+   "definition": "Background color for selected chat buttons. Use to highlight currently active chat action."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-button-text-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-button-text-hover",
+   "notation": "--cds-chat-button-text-hover",
+   "definition": "Text color for chat buttons on hover. Provides visual feedback for interactive chat elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-button-text-selected",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-button-text-selected",
+   "notation": "--cds-chat-button-text-selected",
+   "definition": "Text color for selected chat buttons. Indicates the currently active chat action."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-header-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-header-background",
+   "notation": "--cds-chat-header-background",
+   "definition": "Background color for chat header. Use for the top section of chat interfaces."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-header-text",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-header-text",
+   "notation": "--cds-chat-header-text",
+   "definition": "Text color for chat header. Ensures readable titles and labels in chat header."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-prompt-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-prompt-background",
+   "notation": "--cds-chat-prompt-background",
+   "definition": "Background color for chat input prompt area. Use for the message composition field."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-prompt-border-end",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-prompt-border-end",
+   "notation": "--cds-chat-prompt-border-end",
+   "definition": "End color for chat prompt border gradient. Creates fade effect at edge of input area."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-prompt-border-start",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-prompt-border-start",
+   "notation": "--cds-chat-prompt-border-start",
+   "definition": "Start color for chat prompt border gradient. Defines the beginning of input border gradient."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-prompt-text",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-prompt-text",
+   "notation": "--cds-chat-prompt-text",
+   "definition": "Text color for chat input prompt. Ensures readable text in message composition area."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/chat-shell-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "chat-shell-background",
+   "notation": "--cds-chat-shell-background",
+   "definition": "Background color for chat container shell. Use as the base surface for entire chat interface."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/container.container-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "container.container-01",
+   "notation": "container.container-01",
+   "definition": "Container height token — 24px. Minimum interactive target height for compact UI elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/container.container-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "container.container-02",
+   "notation": "container.container-02",
+   "definition": "Container height token — 32px. Small interactive element height."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/container.container-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "container.container-03",
+   "notation": "container.container-03",
+   "definition": "Container height token — 40px. Default interactive element height."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/container.container-04",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "container.container-04",
+   "notation": "container.container-04",
+   "definition": "Container height token — 48px. Large interactive element height."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/container.container-05",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "container.container-05",
+   "notation": "container.container-05",
+   "definition": "Container height token — 64px. Extra-large interactive element height."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/content-switcher-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "content-switcher-background",
+   "notation": "--cds-content-switcher-background",
+   "definition": "Background color for the content switcher container. Provides the base surface for unselected switcher options."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/content-switcher-background-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "content-switcher-background-hover",
+   "notation": "--cds-content-switcher-background-hover",
+   "definition": "Background color for content switcher options on hover. Use to provide visual feedback when hovering over unselected options."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/content-switcher-selected",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "content-switcher-selected",
+   "notation": "--cds-content-switcher-selected",
+   "definition": "Background color for the selected content switcher option. Use to highlight the currently active view or tab."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.10",
+   "notation": "coolGray.10",
+   "definition": "cool gray 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.100",
+   "notation": "coolGray.100",
+   "definition": "cool gray 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.100Hover",
+   "notation": "coolGray.100Hover",
+   "definition": "cool gray 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.10Hover",
+   "notation": "coolGray.10Hover",
+   "definition": "cool gray 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.20",
+   "notation": "coolGray.20",
+   "definition": "cool gray 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.20Hover",
+   "notation": "coolGray.20Hover",
+   "definition": "cool gray 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.30",
+   "notation": "coolGray.30",
+   "definition": "cool gray 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.30Hover",
+   "notation": "coolGray.30Hover",
+   "definition": "cool gray 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.40",
+   "notation": "coolGray.40",
+   "definition": "cool gray 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.40Hover",
+   "notation": "coolGray.40Hover",
+   "definition": "cool gray 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.50",
+   "notation": "coolGray.50",
+   "definition": "cool gray 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.50Hover",
+   "notation": "coolGray.50Hover",
+   "definition": "cool gray 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.60",
+   "notation": "coolGray.60",
+   "definition": "cool gray 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.60Hover",
+   "notation": "coolGray.60Hover",
+   "definition": "cool gray 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.70",
+   "notation": "coolGray.70",
+   "definition": "cool gray 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.70Hover",
+   "notation": "coolGray.70Hover",
+   "definition": "cool gray 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.80",
+   "notation": "coolGray.80",
+   "definition": "cool gray 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.80Hover",
+   "notation": "coolGray.80Hover",
+   "definition": "cool gray 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.90",
+   "notation": "coolGray.90",
+   "definition": "cool gray 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/coolGray.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "coolGray.90Hover",
+   "notation": "coolGray.90Hover",
+   "definition": "cool gray 90 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.10",
+   "notation": "cyan.10",
+   "definition": "cyan 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.100",
+   "notation": "cyan.100",
+   "definition": "cyan 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.100Hover",
+   "notation": "cyan.100Hover",
+   "definition": "cyan 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.10Hover",
+   "notation": "cyan.10Hover",
+   "definition": "cyan 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.20",
+   "notation": "cyan.20",
+   "definition": "cyan 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.20Hover",
+   "notation": "cyan.20Hover",
+   "definition": "cyan 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.30",
+   "notation": "cyan.30",
+   "definition": "cyan 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.30Hover",
+   "notation": "cyan.30Hover",
+   "definition": "cyan 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.40",
+   "notation": "cyan.40",
+   "definition": "cyan 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.40Hover",
+   "notation": "cyan.40Hover",
+   "definition": "cyan 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.50",
+   "notation": "cyan.50",
+   "definition": "cyan 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.50Hover",
+   "notation": "cyan.50Hover",
+   "definition": "cyan 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.60",
+   "notation": "cyan.60",
+   "definition": "cyan 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.60Hover",
+   "notation": "cyan.60Hover",
+   "definition": "cyan 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.70",
+   "notation": "cyan.70",
+   "definition": "cyan 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.70Hover",
+   "notation": "cyan.70Hover",
+   "definition": "cyan 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.80",
+   "notation": "cyan.80",
+   "definition": "cyan 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.80Hover",
+   "notation": "cyan.80Hover",
+   "definition": "cyan 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.90",
+   "notation": "cyan.90",
+   "definition": "cyan 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/cyan.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "cyan.90Hover",
+   "notation": "cyan.90Hover",
+   "definition": "cyan 90 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/duration.fast.01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "duration.fast.01",
+   "notation": "duration.fast.01",
+   "definition": "Micro-interactions such as button and toggle. Instant response to user action."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/duration.fast.02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "duration.fast.02",
+   "notation": "duration.fast.02",
+   "definition": "Micro-interactions such as fade in. Subtle entrance or exit of small UI elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/duration.moderate.01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "duration.moderate.01",
+   "notation": "duration.moderate.01",
+   "definition": "Micro-interactions, small expansion, short distance movements. Default transition speed."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/duration.moderate.02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "duration.moderate.02",
+   "notation": "duration.moderate.02",
+   "definition": "Expansion, system communication, toast. Slightly longer interactions with more visual weight."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/duration.slow.01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "duration.slow.01",
+   "notation": "duration.slow.01",
+   "definition": "Large expansion, important system notifications. Deliberate, prominent transitions."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/duration.slow.02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "duration.slow.02",
+   "notation": "duration.slow.02",
+   "definition": "Background dimming, large hero transitions. Slow, immersive motion for maximum emphasis."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/easing.entrance.expressive",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "easing.entrance.expressive",
+   "notation": "easing.entrance.expressive",
+   "definition": "Entrance easing for expressive motion. Used for prominent element entrances."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/easing.entrance.productive",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "easing.entrance.productive",
+   "notation": "easing.entrance.productive",
+   "definition": "Entrance easing for productive motion. Used when elements enter the screen."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/easing.exit.expressive",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "easing.exit.expressive",
+   "notation": "easing.exit.expressive",
+   "definition": "Exit easing for expressive motion. Used for prominent element exits."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/easing.exit.productive",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "easing.exit.productive",
+   "notation": "easing.exit.productive",
+   "definition": "Exit easing for productive motion. Used when elements leave the screen."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/easing.standard.expressive",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "easing.standard.expressive",
+   "notation": "easing.standard.expressive",
+   "definition": "Standard easing for expressive motion. Used for elements with more prominent, fluid movement."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/easing.standard.productive",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "easing.standard.productive",
+   "notation": "easing.standard.productive",
+   "definition": "Standard easing for productive motion. Used for UI elements that move within the viewport."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/field-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "field-01",
+   "notation": "--cds-field-01",
+   "definition": "Background color for form fields on layer 01. Use for input fields, text areas, and selects on first layer.",
+   "skos:broadMatch": [
+    {
+     "id": "dsi:concept/color/usage-field/property-background"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/field-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "field-02",
+   "notation": "--cds-field-02",
+   "definition": "Background color for form fields on layer 02. Use for input fields on second layer surfaces.",
+   "skos:broadMatch": [
+    {
+     "id": "dsi:concept/color/usage-field/property-background"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/field-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "field-03",
+   "notation": "--cds-field-03",
+   "definition": "Background color for form fields on layer 03. Use for input fields on third layer surfaces.",
+   "skos:broadMatch": [
+    {
+     "id": "dsi:concept/color/usage-field/property-background"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/field-hover-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "field-hover-01",
+   "notation": "--cds-field-hover-01",
+   "definition": "Hover background for fields on layer 01. Use when user hovers over input fields on first layer."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/field-hover-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "field-hover-02",
+   "notation": "--cds-field-hover-02",
+   "definition": "Hover background for fields on layer 02. Use when user hovers over input fields on second layer."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/field-hover-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "field-hover-03",
+   "notation": "--cds-field-hover-03",
+   "definition": "Hover background for fields on layer 03. Use when user hovers over input fields on third layer."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/fluid-spacing.fluid-spacing-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "fluid-spacing.fluid-spacing-01",
+   "notation": "fluid-spacing.fluid-spacing-01",
+   "definition": "Fluid spacing token — 0. Use when no fluid spacing is required."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/fluid-spacing.fluid-spacing-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "fluid-spacing.fluid-spacing-02",
+   "notation": "fluid-spacing.fluid-spacing-02",
+   "definition": "Fluid spacing token — 2vw. Use for viewport-proportional small spacing in fluid layouts."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/fluid-spacing.fluid-spacing-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "fluid-spacing.fluid-spacing-03",
+   "notation": "fluid-spacing.fluid-spacing-03",
+   "definition": "Fluid spacing token — 5vw. Use for medium fluid spacing that scales with the viewport."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/fluid-spacing.fluid-spacing-04",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "fluid-spacing.fluid-spacing-04",
+   "notation": "fluid-spacing.fluid-spacing-04",
+   "definition": "Fluid spacing token — 10vw. Use for large fluid spacing in full-bleed or hero sections."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/focus",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "focus",
+   "notation": "--cds-focus",
+   "definition": "Focus indicator color. Use for focus rings and outlines on interactive elements for keyboard navigation.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-focus-ring"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/focus-inset",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "focus-inset",
+   "notation": "--cds-focus-inset",
+   "definition": "Inset focus indicator color. Use for inner focus rings on elements with colored backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/focus-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "focus-inverse",
+   "notation": "--cds-focus-inverse",
+   "definition": "Focus indicator for inverse/dark elements. Use for focus rings on dark backgrounds.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-inverse/property-focus-ring"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.10",
+   "notation": "gray.10",
+   "definition": "gray 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.100",
+   "notation": "gray.100",
+   "definition": "gray 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.100Hover",
+   "notation": "gray.100Hover",
+   "definition": "gray 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.10Hover",
+   "notation": "gray.10Hover",
+   "definition": "gray 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.20",
+   "notation": "gray.20",
+   "definition": "gray 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.20Hover",
+   "notation": "gray.20Hover",
+   "definition": "gray 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.30",
+   "notation": "gray.30",
+   "definition": "gray 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.30Hover",
+   "notation": "gray.30Hover",
+   "definition": "gray 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.40",
+   "notation": "gray.40",
+   "definition": "gray 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.40Hover",
+   "notation": "gray.40Hover",
+   "definition": "gray 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.50",
+   "notation": "gray.50",
+   "definition": "gray 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.50Hover",
+   "notation": "gray.50Hover",
+   "definition": "gray 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.60",
+   "notation": "gray.60",
+   "definition": "gray 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.60Hover",
+   "notation": "gray.60Hover",
+   "definition": "gray 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.70",
+   "notation": "gray.70",
+   "definition": "gray 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.70Hover",
+   "notation": "gray.70Hover",
+   "definition": "gray 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.80",
+   "notation": "gray.80",
+   "definition": "gray 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.80Hover",
+   "notation": "gray.80Hover",
+   "definition": "gray 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.90",
+   "notation": "gray.90",
+   "definition": "gray 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/gray.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "gray.90Hover",
+   "notation": "gray.90Hover",
+   "definition": "gray 90 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.10",
+   "notation": "green.10",
+   "definition": "green 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.100",
+   "notation": "green.100",
+   "definition": "green 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.100Hover",
+   "notation": "green.100Hover",
+   "definition": "green 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.10Hover",
+   "notation": "green.10Hover",
+   "definition": "green 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.20",
+   "notation": "green.20",
+   "definition": "green 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.20Hover",
+   "notation": "green.20Hover",
+   "definition": "green 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.30",
+   "notation": "green.30",
+   "definition": "green 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.30Hover",
+   "notation": "green.30Hover",
+   "definition": "green 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.40",
+   "notation": "green.40",
+   "definition": "green 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.40Hover",
+   "notation": "green.40Hover",
+   "definition": "green 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.50",
+   "notation": "green.50",
+   "definition": "green 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.50Hover",
+   "notation": "green.50Hover",
+   "definition": "green 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.60",
+   "notation": "green.60",
+   "definition": "green 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.60Hover",
+   "notation": "green.60Hover",
+   "definition": "green 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.70",
+   "notation": "green.70",
+   "definition": "green 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.70Hover",
+   "notation": "green.70Hover",
+   "definition": "green 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.80",
+   "notation": "green.80",
+   "definition": "green 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.80Hover",
+   "notation": "green.80Hover",
+   "definition": "green 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.90",
+   "notation": "green.90",
+   "definition": "green 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/green.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "green.90Hover",
+   "notation": "green.90Hover",
+   "definition": "green 90 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/highlight",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "highlight",
+   "notation": "--cds-highlight",
+   "definition": "Highlight color for selected text or emphasized content. Use for text selection or search result highlighting."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/icon-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "icon-disabled",
+   "notation": "--cds-icon-disabled",
+   "definition": "Icon color for disabled state. Use when icons need to indicate unavailable or inactive functionality.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-icon/state-disabled"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/icon-interactive",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "icon-interactive",
+   "notation": "--cds-icon-interactive",
+   "definition": "Icon color for interactive elements. Use for clickable icons, buttons, and actionable items."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/icon-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "icon-inverse",
+   "notation": "--cds-icon-inverse",
+   "definition": "Icon color for inverse/dark backgrounds. Use for icons on dark surfaces or inverse components.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-inverse/property-icon"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/icon-on-color",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "icon-on-color",
+   "notation": "--cds-icon-on-color",
+   "definition": "Icon color for colored backgrounds. Use for icons on brand colors, buttons, or colored surfaces.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-on-fill/property-icon"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/icon-on-color-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "icon-on-color-disabled",
+   "notation": "--cds-icon-on-color-disabled",
+   "definition": "Disabled icon color on colored backgrounds. Use when icons on colored surfaces are inactive.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-on-fill/property-icon/state-disabled"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/icon-primary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "icon-primary",
+   "notation": "--cds-icon-primary",
+   "definition": "Primary icon color. Use for main icons with highest visual priority and emphasis.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-icon"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/icon-secondary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "icon-secondary",
+   "notation": "--cds-icon-secondary",
+   "definition": "Secondary icon color. Use for supporting icons with less emphasis than primary.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-icon/emphasis-subtle"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/icon-size.icon-size-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "icon-size.icon-size-01",
+   "notation": "icon-size.icon-size-01",
+   "definition": "Icon size token — 16px. Standard icon size for inline and UI icons."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/icon-size.icon-size-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "icon-size.icon-size-02",
+   "notation": "icon-size.icon-size-02",
+   "definition": "Icon size token — 20px. Use for slightly larger icons that need more visual weight."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/interactive",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "interactive",
+   "notation": "--cds-interactive",
+   "definition": "Interactive element color. Use for clickable elements, links, and actionable items."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-01",
+   "notation": "--cds-layer-01",
+   "definition": "Primary layer background"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-02",
+   "notation": "--cds-layer-02",
+   "definition": "Secondary layer background"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-03",
+   "notation": "--cds-layer-03",
+   "definition": "Tertiary layer background"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-accent-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-accent-01",
+   "notation": "--cds-layer-accent-01",
+   "definition": "Primary accent layer"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-accent-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-accent-02",
+   "notation": "--cds-layer-accent-02",
+   "definition": "Secondary accent layer"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-accent-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-accent-03",
+   "notation": "--cds-layer-accent-03",
+   "definition": "Tertiary accent layer"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-accent-active-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-accent-active-01",
+   "notation": "--cds-layer-accent-active-01",
+   "definition": "Active state for accent layer 01"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-accent-active-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-accent-active-02",
+   "notation": "--cds-layer-accent-active-02",
+   "definition": "Active state for accent layer 02"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-accent-active-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-accent-active-03",
+   "notation": "--cds-layer-accent-active-03",
+   "definition": "Active state for accent layer 03"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-accent-hover-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-accent-hover-01",
+   "notation": "--cds-layer-accent-hover-01",
+   "definition": "Hover state for accent layer 01"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-accent-hover-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-accent-hover-02",
+   "notation": "--cds-layer-accent-hover-02",
+   "definition": "Hover state for accent layer 02"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-accent-hover-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-accent-hover-03",
+   "notation": "--cds-layer-accent-hover-03",
+   "definition": "Hover state for accent layer 03"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-active-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-active-01",
+   "notation": "--cds-layer-active-01",
+   "definition": "Active state for layer 01"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-active-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-active-02",
+   "notation": "--cds-layer-active-02",
+   "definition": "Active state for layer 02"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-active-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-active-03",
+   "notation": "--cds-layer-active-03",
+   "definition": "Active state for layer 03"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-background-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-background-01",
+   "notation": "--cds-layer-background-01",
+   "definition": "Background behind layer 01"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-background-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-background-02",
+   "notation": "--cds-layer-background-02",
+   "definition": "Background behind layer 02"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-background-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-background-03",
+   "notation": "--cds-layer-background-03",
+   "definition": "Background behind layer 03"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-hover-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-hover-01",
+   "notation": "--cds-layer-hover-01",
+   "definition": "Hover state for layer 01"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-hover-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-hover-02",
+   "notation": "--cds-layer-hover-02",
+   "definition": "Hover state for layer 02"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-hover-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-hover-03",
+   "notation": "--cds-layer-hover-03",
+   "definition": "Hover state for layer 03"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-selected-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-selected-01",
+   "notation": "--cds-layer-selected-01",
+   "definition": "Selected state for layer 01"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-selected-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-selected-02",
+   "notation": "--cds-layer-selected-02",
+   "definition": "Selected state for layer 02"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-selected-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-selected-03",
+   "notation": "--cds-layer-selected-03",
+   "definition": "Selected state for layer 03"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-selected-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-selected-disabled",
+   "notation": "--cds-layer-selected-disabled",
+   "definition": "Disabled. Token for disabled in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-selected-hover-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-selected-hover-01",
+   "notation": "--cds-layer-selected-hover-01",
+   "definition": "Hover state for selected layer 01"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-selected-hover-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-selected-hover-02",
+   "notation": "--cds-layer-selected-hover-02",
+   "definition": "Hover state for selected layer 02"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-selected-hover-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-selected-hover-03",
+   "notation": "--cds-layer-selected-hover-03",
+   "definition": "Hover state for selected layer 03"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layer-selected-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layer-selected-inverse",
+   "notation": "--cds-layer-selected-inverse",
+   "definition": "Inverse. Token for inverse in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layout.layout-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layout.layout-01",
+   "notation": "layout.layout-01",
+   "definition": "Deprecated layout token — 16px. Replaced by spacing scale. Do not use in new work."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layout.layout-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layout.layout-02",
+   "notation": "layout.layout-02",
+   "definition": "Deprecated layout token — 24px. Replaced by spacing scale. Do not use in new work."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layout.layout-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layout.layout-03",
+   "notation": "layout.layout-03",
+   "definition": "Deprecated layout token — 32px. Replaced by spacing scale. Do not use in new work."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layout.layout-04",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layout.layout-04",
+   "notation": "layout.layout-04",
+   "definition": "Deprecated layout token — 48px. Replaced by spacing scale. Do not use in new work."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layout.layout-05",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layout.layout-05",
+   "notation": "layout.layout-05",
+   "definition": "Deprecated layout token — 64px. Replaced by spacing scale. Do not use in new work."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layout.layout-06",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layout.layout-06",
+   "notation": "layout.layout-06",
+   "definition": "Deprecated layout token — 96px. Replaced by spacing scale. Do not use in new work."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/layout.layout-07",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "layout.layout-07",
+   "notation": "layout.layout-07",
+   "definition": "Deprecated layout token — 160px. Replaced by spacing scale. Do not use in new work."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/link-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "link-inverse",
+   "notation": "--cds-link-inverse",
+   "definition": "Link color for dark backgrounds. Use for links on inverse or dark surfaces."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/link-inverse-active",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "link-inverse-active",
+   "notation": "--cds-link-inverse-active",
+   "definition": "Active state for inverse links. Use when user clicks links on dark backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/link-inverse-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "link-inverse-hover",
+   "notation": "--cds-link-inverse-hover",
+   "definition": "Hover state for inverse links. Use when hovering over links on dark backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/link-inverse-visited",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "link-inverse-visited",
+   "notation": "--cds-link-inverse-visited",
+   "definition": "Visited link color for dark backgrounds. Use for previously clicked links on inverse surfaces."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/link-primary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "link-primary",
+   "notation": "--cds-link-primary",
+   "definition": "Primary link color. Use for standard hyperlinks and navigation links.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-link/property-text"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/link-primary-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "link-primary-hover",
+   "notation": "--cds-link-primary-hover",
+   "definition": "Hover color for primary links. Use when user hovers over standard links.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-link/property-text/state-hover"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/link-secondary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "link-secondary",
+   "notation": "--cds-link-secondary",
+   "definition": "Secondary link color. Use for less prominent links or alternative link styles."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/link-visited",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "link-visited",
+   "notation": "--cds-link-visited",
+   "definition": "Color for visited links. Use to indicate previously clicked links."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.10",
+   "notation": "magenta.10",
+   "definition": "magenta 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.100",
+   "notation": "magenta.100",
+   "definition": "magenta 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.100Hover",
+   "notation": "magenta.100Hover",
+   "definition": "magenta 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.10Hover",
+   "notation": "magenta.10Hover",
+   "definition": "magenta 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.20",
+   "notation": "magenta.20",
+   "definition": "magenta 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.20Hover",
+   "notation": "magenta.20Hover",
+   "definition": "magenta 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.30",
+   "notation": "magenta.30",
+   "definition": "magenta 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.30Hover",
+   "notation": "magenta.30Hover",
+   "definition": "magenta 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.40",
+   "notation": "magenta.40",
+   "definition": "magenta 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.40Hover",
+   "notation": "magenta.40Hover",
+   "definition": "magenta 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.50",
+   "notation": "magenta.50",
+   "definition": "magenta 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.50Hover",
+   "notation": "magenta.50Hover",
+   "definition": "magenta 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.60",
+   "notation": "magenta.60",
+   "definition": "magenta 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.60Hover",
+   "notation": "magenta.60Hover",
+   "definition": "magenta 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.70",
+   "notation": "magenta.70",
+   "definition": "magenta 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.70Hover",
+   "notation": "magenta.70Hover",
+   "definition": "magenta 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.80",
+   "notation": "magenta.80",
+   "definition": "magenta 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.80Hover",
+   "notation": "magenta.80Hover",
+   "definition": "magenta 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.90",
+   "notation": "magenta.90",
+   "definition": "magenta 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/magenta.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "magenta.90Hover",
+   "notation": "magenta.90Hover",
+   "definition": "magenta 90 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/notification-action-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "notification-action-hover",
+   "notation": "--cds-notification-action-hover",
+   "definition": "Background color for notification action buttons on hover. Use for interactive elements within light-themed notifications."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/notification-action-tertiary-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "notification-action-tertiary-inverse",
+   "notation": "--cds-notification-action-tertiary-inverse",
+   "definition": "Background color for tertiary action buttons in inverse (dark) notifications. Use for low-emphasis actions in dark notification variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/notification-action-tertiary-inverse-active",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "notification-action-tertiary-inverse-active",
+   "notation": "--cds-notification-action-tertiary-inverse-active",
+   "definition": "Background color for tertiary action buttons in active/pressed state within inverse notifications. Use when user clicks action in dark notifications."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/notification-action-tertiary-inverse-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "notification-action-tertiary-inverse-hover",
+   "notation": "--cds-notification-action-tertiary-inverse-hover",
+   "definition": "Background color for tertiary action buttons on hover within inverse notifications. Use to provide feedback in dark notification variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/notification-action-tertiary-inverse-text",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "notification-action-tertiary-inverse-text",
+   "notation": "--cds-notification-action-tertiary-inverse-text",
+   "definition": "Text color for tertiary action buttons in inverse notifications. Ensures readable contrast for action text in dark notification variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/notification-action-tertiary-inverse-text-on-color-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "notification-action-tertiary-inverse-text-on-color-disabled",
+   "notation": "--cds-notification-action-tertiary-inverse-text-on-color-disabled",
+   "definition": "Text color for disabled tertiary action buttons in inverse notifications. Use when actions are temporarily unavailable in dark notifications."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/notification-background-error",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "notification-background-error",
+   "notation": "--cds-notification-background-error",
+   "definition": "Background color for error notifications. Use to alert users of critical issues, failures, or actions that require immediate attention."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/notification-background-info",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "notification-background-info",
+   "notation": "--cds-notification-background-info",
+   "definition": "Background color for informational notifications. Use to provide helpful context, tips, or non-critical updates to users."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/notification-background-success",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "notification-background-success",
+   "notation": "--cds-notification-background-success",
+   "definition": "Background color for success notifications. Use to confirm successful actions, completed processes, or positive outcomes."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/notification-background-warning",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "notification-background-warning",
+   "notation": "--cds-notification-background-warning",
+   "definition": "Background color for warning notifications. Use to alert users of potential issues, cautions, or actions that need attention but aren't critical."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.10",
+   "notation": "orange.10",
+   "definition": "orange 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.100",
+   "notation": "orange.100",
+   "definition": "orange 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.100Hover",
+   "notation": "orange.100Hover",
+   "definition": "orange 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.10Hover",
+   "notation": "orange.10Hover",
+   "definition": "orange 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.20",
+   "notation": "orange.20",
+   "definition": "orange 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.20Hover",
+   "notation": "orange.20Hover",
+   "definition": "orange 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.30",
+   "notation": "orange.30",
+   "definition": "orange 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.30Hover",
+   "notation": "orange.30Hover",
+   "definition": "orange 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.40",
+   "notation": "orange.40",
+   "definition": "orange 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.40Hover",
+   "notation": "orange.40Hover",
+   "definition": "orange 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.50",
+   "notation": "orange.50",
+   "definition": "orange 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.50Hover",
+   "notation": "orange.50Hover",
+   "definition": "orange 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.60",
+   "notation": "orange.60",
+   "definition": "orange 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.60Hover",
+   "notation": "orange.60Hover",
+   "definition": "orange 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.70",
+   "notation": "orange.70",
+   "definition": "orange 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.70Hover",
+   "notation": "orange.70Hover",
+   "definition": "orange 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.80",
+   "notation": "orange.80",
+   "definition": "orange 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.80Hover",
+   "notation": "orange.80Hover",
+   "definition": "orange 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.90",
+   "notation": "orange.90",
+   "definition": "orange 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/orange.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "orange.90Hover",
+   "notation": "orange.90Hover",
+   "definition": "orange 90 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/overlay",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "overlay",
+   "notation": "--cds-overlay",
+   "definition": "Overlay color for modal backgrounds. Use to dim content behind dialogs and modals.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-scrim/property-background"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.10",
+   "notation": "purple.10",
+   "definition": "purple 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.100",
+   "notation": "purple.100",
+   "definition": "purple 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.100Hover",
+   "notation": "purple.100Hover",
+   "definition": "purple 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.10Hover",
+   "notation": "purple.10Hover",
+   "definition": "purple 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.20",
+   "notation": "purple.20",
+   "definition": "purple 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.20Hover",
+   "notation": "purple.20Hover",
+   "definition": "purple 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.30",
+   "notation": "purple.30",
+   "definition": "purple 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.30Hover",
+   "notation": "purple.30Hover",
+   "definition": "purple 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.40",
+   "notation": "purple.40",
+   "definition": "purple 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.40Hover",
+   "notation": "purple.40Hover",
+   "definition": "purple 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.50",
+   "notation": "purple.50",
+   "definition": "purple 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.50Hover",
+   "notation": "purple.50Hover",
+   "definition": "purple 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.60",
+   "notation": "purple.60",
+   "definition": "purple 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.60Hover",
+   "notation": "purple.60Hover",
+   "definition": "purple 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.70",
+   "notation": "purple.70",
+   "definition": "purple 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.70Hover",
+   "notation": "purple.70Hover",
+   "definition": "purple 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.80",
+   "notation": "purple.80",
+   "definition": "purple 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.80Hover",
+   "notation": "purple.80Hover",
+   "definition": "purple 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.90",
+   "notation": "purple.90",
+   "definition": "purple 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/purple.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "purple.90Hover",
+   "notation": "purple.90Hover",
+   "definition": "purple 90 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.10",
+   "notation": "red.10",
+   "definition": "red 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.100",
+   "notation": "red.100",
+   "definition": "red 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.100Hover",
+   "notation": "red.100Hover",
+   "definition": "red 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.10Hover",
+   "notation": "red.10Hover",
+   "definition": "red 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.20",
+   "notation": "red.20",
+   "definition": "red 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.20Hover",
+   "notation": "red.20Hover",
+   "definition": "red 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.30",
+   "notation": "red.30",
+   "definition": "red 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.30Hover",
+   "notation": "red.30Hover",
+   "definition": "red 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.40",
+   "notation": "red.40",
+   "definition": "red 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.40Hover",
+   "notation": "red.40Hover",
+   "definition": "red 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.50",
+   "notation": "red.50",
+   "definition": "red 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.50Hover",
+   "notation": "red.50Hover",
+   "definition": "red 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.60",
+   "notation": "red.60",
+   "definition": "red 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.60Hover",
+   "notation": "red.60Hover",
+   "definition": "red 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.70",
+   "notation": "red.70",
+   "definition": "red 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.70Hover",
+   "notation": "red.70Hover",
+   "definition": "red 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.80",
+   "notation": "red.80",
+   "definition": "red 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.80Hover",
+   "notation": "red.80Hover",
+   "definition": "red 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.90",
+   "notation": "red.90",
+   "definition": "red 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/red.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "red.90Hover",
+   "notation": "red.90Hover",
+   "definition": "red 90 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/shadow",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "shadow",
+   "notation": "--cds-shadow",
+   "definition": "Shadow color for elevation. Provides depth and layering for elevated components.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-shadow"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/size.size-2xl",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "size.size-2xl",
+   "notation": "size.size-2xl",
+   "definition": "Component size token — 2XLarge, 80px."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/size.size-lg",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "size.size-lg",
+   "notation": "size.size-lg",
+   "definition": "Component size token — Large, 48px."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/size.size-md",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "size.size-md",
+   "notation": "size.size-md",
+   "definition": "Component size token — Medium, 40px. Default component size."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/size.size-sm",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "size.size-sm",
+   "notation": "size.size-sm",
+   "definition": "Component size token — Small, 32px."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/size.size-xl",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "size.size-xl",
+   "notation": "size.size-xl",
+   "definition": "Component size token — XLarge, 64px."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/size.size-xs",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "size.size-xs",
+   "notation": "size.size-xs",
+   "definition": "Component size token — XSmall, 24px. Use for the smallest component variant."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/skeleton-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "skeleton-background",
+   "notation": "--cds-skeleton-background",
+   "definition": "Background color for skeleton loaders. Use as base for loading placeholders.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-skeleton/property-background"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/skeleton-element",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "skeleton-element",
+   "notation": "--cds-skeleton-element",
+   "definition": "Element color for skeleton loaders. Provides the animated shimmer effect for loading states."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-01",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-01",
+   "notation": "spacing.spacing-01",
+   "definition": "Spacing token — 2px. Use for the smallest internal padding or gaps between tightly-packed elements."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-02",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-02",
+   "notation": "spacing.spacing-02",
+   "definition": "Spacing token — 4px. Use for compact padding within dense components."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-03",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-03",
+   "notation": "spacing.spacing-03",
+   "definition": "Spacing token — 8px. Default small spacing unit for inset padding and icon gaps."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-04",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-04",
+   "notation": "spacing.spacing-04",
+   "definition": "Spacing token — 12px. Use for comfortable inset padding in small components."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-05",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-05",
+   "notation": "spacing.spacing-05",
+   "definition": "Spacing token — 16px. Standard spacing unit; use for typical component padding and gutters."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-06",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-06",
+   "notation": "spacing.spacing-06",
+   "definition": "Spacing token — 24px. Use for section padding and medium gaps between components."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-07",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-07",
+   "notation": "spacing.spacing-07",
+   "definition": "Spacing token — 32px. Use for group separation and larger layout gaps."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-08",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-08",
+   "notation": "spacing.spacing-08",
+   "definition": "Spacing token — 40px. Use for generous padding between distinct sections."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-09",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-09",
+   "notation": "spacing.spacing-09",
+   "definition": "Spacing token — 48px. Use for large vertical rhythm and section separation."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-10",
+   "notation": "spacing.spacing-10",
+   "definition": "Spacing token — 64px. Use for major page section gaps."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-11",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-11",
+   "notation": "spacing.spacing-11",
+   "definition": "Spacing token — 80px. Use for hero and large feature-area spacing."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-12",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-12",
+   "notation": "spacing.spacing-12",
+   "definition": "Spacing token — 96px. Use for very large layout separations."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/spacing.spacing-13",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "spacing.spacing-13",
+   "notation": "spacing.spacing-13",
+   "definition": "Spacing token — 160px. Use for the largest page-level spacing needs."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/status-accessibility-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "status-accessibility-background",
+   "notation": "--cds-status-accessibility-background",
+   "definition": "Background color for accessibility status indicators. Use to highlight accessibility-related features or compliance status."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/status-blue",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "status-blue",
+   "notation": "--cds-status-blue",
+   "definition": "Color for blue status indicators. Use for informational states, in-progress items, or neutral status without specific semantic meaning."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/status-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "status-gray",
+   "notation": "--cds-status-gray",
+   "definition": "Color for gray status indicators. Use for inactive, disabled, or neutral states that don't require color semantics."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/status-green",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "status-green",
+   "notation": "--cds-status-green",
+   "definition": "Color for green status indicators. Use for success states, completed items, active/running status, or positive conditions."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/status-orange",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "status-orange",
+   "notation": "--cds-status-orange",
+   "definition": "Color for orange status indicators. Use for warning states, items needing attention, or moderate priority issues."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/status-orange-outline",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "status-orange-outline",
+   "notation": "--cds-status-orange-outline",
+   "definition": "Outline/border color for orange status indicators in light themes. Provides visual definition for outlined warning status variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/status-purple",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "status-purple",
+   "notation": "--cds-status-purple",
+   "definition": "Color for purple status indicators. Use for special states, premium features, or custom priority levels."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/status-red",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "status-red",
+   "notation": "--cds-status-red",
+   "definition": "Color for red status indicators. Use for error states, failed items, critical issues, or stopped/inactive status."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/status-yellow",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "status-yellow",
+   "notation": "--cds-status-yellow",
+   "definition": "Color for yellow status indicators. Use for caution states, pending items, or situations requiring user awareness."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/status-yellow-outline",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "status-yellow-outline",
+   "notation": "--cds-status-yellow-outline",
+   "definition": "Outline/border color for yellow status indicators in light themes. Provides visual definition for outlined caution status variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/support-caution-major",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "support-caution-major",
+   "notation": "--cds-support-caution-major",
+   "definition": "Major caution color. Use for high-severity warnings or significant issues."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/support-caution-minor",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "support-caution-minor",
+   "notation": "--cds-support-caution-minor",
+   "definition": "Minor caution color. Use for low-severity warnings or minor issues."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/support-caution-undefined",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "support-caution-undefined",
+   "notation": "--cds-support-caution-undefined",
+   "definition": "Undefined caution color. Use for unknown or indeterminate caution states."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/support-error",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "support-error",
+   "notation": "--cds-support-error",
+   "definition": "Error color for critical states. Use for error messages, failed validations, and critical alerts.",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-danger"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/support-error-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "support-error-inverse",
+   "notation": "--cds-support-error-inverse",
+   "definition": "Error color for dark backgrounds. Use for error indicators on inverse surfaces.",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-danger/usage-inverse"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/support-info",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "support-info",
+   "notation": "--cds-support-info",
+   "definition": "Info color for informational states. Use for helpful tips, neutral information, and guidance.",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-info"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/support-info-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "support-info-inverse",
+   "notation": "--cds-support-info-inverse",
+   "definition": "Info color for dark backgrounds. Use for info indicators on inverse surfaces.",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-info/usage-inverse"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/support-success",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "support-success",
+   "notation": "--cds-support-success",
+   "definition": "Success color for positive states. Use for success messages, completed actions, and confirmations.",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-success"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/support-success-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "support-success-inverse",
+   "notation": "--cds-support-success-inverse",
+   "definition": "Success color for dark backgrounds. Use for success indicators on inverse surfaces.",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-success/usage-inverse"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/support-warning",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "support-warning",
+   "notation": "--cds-support-warning",
+   "definition": "Warning color for caution states. Use for warnings, potential issues, and items needing attention.",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-warning"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/support-warning-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "support-warning-inverse",
+   "notation": "--cds-support-warning-inverse",
+   "definition": "Warning color for dark backgrounds. Use for warning indicators on inverse surfaces.",
+   "skos:closeMatch": [
+    {
+     "id": "dsi:concept/color/intent-warning/usage-inverse"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/surface.contextual",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "surface.contextual",
+   "notation": "surface.contextual",
+   "definition": "Icon → tooltip/popover — fade and scale reveal."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/surface.disclosure",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "surface.disclosure",
+   "notation": "surface.disclosure",
+   "definition": "Accordion, table-row expand — reveal in place."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/surface.expand",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "surface.expand",
+   "notation": "surface.expand",
+   "definition": "Card/tile → side-panel/tearsheet — shared-element morph."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/surface.invoke",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "surface.invoke",
+   "notation": "surface.invoke",
+   "definition": "Button → modal/menu/popover — shared-element morph from the trigger."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-angle-bracket",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-angle-bracket",
+   "notation": "--cds-syntax-angle-bracket",
+   "definition": "Bracket. Token for bracket in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-annotation",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-annotation",
+   "notation": "--cds-syntax-annotation",
+   "definition": "Annotation. Token for annotation in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-arithmetic-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-arithmetic-operator",
+   "notation": "--cds-syntax-arithmetic-operator",
+   "definition": "Operator. Token for operator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-atom",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-atom",
+   "notation": "--cds-syntax-atom",
+   "definition": "Atom. Token for atom in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-attribute",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-attribute",
+   "notation": "--cds-syntax-attribute",
+   "definition": "Attribute. Token for attribute in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-attribute-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-attribute-name",
+   "notation": "--cds-syntax-attribute-name",
+   "definition": "Name. Token for name in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-attribute-value",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-attribute-value",
+   "notation": "--cds-syntax-attribute-value",
+   "definition": "Value. Token for value in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-bitwise-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-bitwise-operator",
+   "notation": "--cds-syntax-bitwise-operator",
+   "definition": "Operator. Token for operator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-block-comment",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-block-comment",
+   "notation": "--cds-syntax-block-comment",
+   "definition": "Comment. Token for comment in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-bool",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-bool",
+   "notation": "--cds-syntax-bool",
+   "definition": "Bool. Token for bool in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-brace",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-brace",
+   "notation": "--cds-syntax-brace",
+   "definition": "Brace. Token for brace in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-bracket",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-bracket",
+   "notation": "--cds-syntax-bracket",
+   "definition": "Bracket. Token for bracket in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-character",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-character",
+   "notation": "--cds-syntax-character",
+   "definition": "Character. Token for character in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-class-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-class-name",
+   "notation": "--cds-syntax-class-name",
+   "definition": "Name. Token for name in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-color",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-color",
+   "notation": "--cds-syntax-color",
+   "definition": "Color. Token for color in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-comment",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-comment",
+   "notation": "--cds-syntax-comment",
+   "definition": "Comment. Token for comment in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-compare-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-compare-operator",
+   "notation": "--cds-syntax-compare-operator",
+   "definition": "Operator. Token for operator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-constant",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-constant",
+   "notation": "--cds-syntax-constant",
+   "definition": "Constant. Token for constant in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-content",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-content",
+   "notation": "--cds-syntax-content",
+   "definition": "Content. Token for content in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-content-separator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-content-separator",
+   "notation": "--cds-syntax-content-separator",
+   "definition": "Separator. Token for separator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-control-keyword",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-control-keyword",
+   "notation": "--cds-syntax-control-keyword",
+   "definition": "Keyword. Token for keyword in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-control-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-control-operator",
+   "notation": "--cds-syntax-control-operator",
+   "definition": "Operator. Token for operator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-definition",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-definition",
+   "notation": "--cds-syntax-definition",
+   "definition": "Definition. Token for definition in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-definition-keyword",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-definition-keyword",
+   "notation": "--cds-syntax-definition-keyword",
+   "definition": "Keyword. Token for keyword in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-definition-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-definition-operator",
+   "notation": "--cds-syntax-definition-operator",
+   "definition": "Operator. Token for operator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-deleted",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-deleted",
+   "notation": "--cds-syntax-deleted",
+   "definition": "Deleted. Token for deleted in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-deref-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-deref-operator",
+   "notation": "--cds-syntax-deref-operator",
+   "definition": "Operator. Token for operator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-doc-comment",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-doc-comment",
+   "notation": "--cds-syntax-doc-comment",
+   "definition": "Comment. Token for comment in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-doc-string",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-doc-string",
+   "notation": "--cds-syntax-doc-string",
+   "definition": "String. Token for string in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-document-meta",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-document-meta",
+   "notation": "--cds-syntax-document-meta",
+   "definition": "Meta. Token for meta in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-emphasis",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-emphasis",
+   "notation": "--cds-syntax-emphasis",
+   "definition": "Emphasis. Token for emphasis in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-escape",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-escape",
+   "notation": "--cds-syntax-escape",
+   "definition": "Escape. Token for escape in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-float",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-float",
+   "notation": "--cds-syntax-float",
+   "definition": "Float. Token for float in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-function",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-function",
+   "notation": "--cds-syntax-function",
+   "definition": "Function. Token for function in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-heading",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-heading",
+   "notation": "--cds-syntax-heading",
+   "definition": "Heading. Token for heading in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-heading-1",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-heading-1",
+   "notation": "--cds-syntax-heading-1",
+   "definition": "1. Token for 1 in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-heading-2",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-heading-2",
+   "notation": "--cds-syntax-heading-2",
+   "definition": "2. Token for 2 in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-heading-3",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-heading-3",
+   "notation": "--cds-syntax-heading-3",
+   "definition": "3. Token for 3 in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-heading-4",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-heading-4",
+   "notation": "--cds-syntax-heading-4",
+   "definition": "4. Token for 4 in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-heading-5",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-heading-5",
+   "notation": "--cds-syntax-heading-5",
+   "definition": "5. Token for 5 in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-heading-6",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-heading-6",
+   "notation": "--cds-syntax-heading-6",
+   "definition": "6. Token for 6 in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-inserted",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-inserted",
+   "notation": "--cds-syntax-inserted",
+   "definition": "Inserted. Token for inserted in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-integer",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-integer",
+   "notation": "--cds-syntax-integer",
+   "definition": "Integer. Token for integer in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-invalid",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-invalid",
+   "notation": "--cds-syntax-invalid",
+   "definition": "Invalid. Token for invalid in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-keyword",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-keyword",
+   "notation": "--cds-syntax-keyword",
+   "definition": "Keyword. Token for keyword in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-label-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-label-name",
+   "notation": "--cds-syntax-label-name",
+   "definition": "Name. Token for name in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-line-comment",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-line-comment",
+   "notation": "--cds-syntax-line-comment",
+   "definition": "Comment. Token for comment in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-link",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-link",
+   "notation": "--cds-syntax-link",
+   "definition": "Link. Token for link in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-list",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-list",
+   "notation": "--cds-syntax-list",
+   "definition": "List. Token for list in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-literal",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-literal",
+   "notation": "--cds-syntax-literal",
+   "definition": "Literal. Token for literal in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-local",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-local",
+   "notation": "--cds-syntax-local",
+   "definition": "Local. Token for local in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-logic-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-logic-operator",
+   "notation": "--cds-syntax-logic-operator",
+   "definition": "Operator. Token for operator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-macro-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-macro-name",
+   "notation": "--cds-syntax-macro-name",
+   "definition": "Name. Token for name in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-meta",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-meta",
+   "notation": "--cds-syntax-meta",
+   "definition": "Meta. Token for meta in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-modifier",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-modifier",
+   "notation": "--cds-syntax-modifier",
+   "definition": "Modifier. Token for modifier in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-module-keyword",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-module-keyword",
+   "notation": "--cds-syntax-module-keyword",
+   "definition": "Keyword. Token for keyword in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-monospace",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-monospace",
+   "notation": "--cds-syntax-monospace",
+   "definition": "Monospace. Token for monospace in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-name",
+   "notation": "--cds-syntax-name",
+   "definition": "Name. Token for name in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-namespace",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-namespace",
+   "notation": "--cds-syntax-namespace",
+   "definition": "Namespace. Token for namespace in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-null",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-null",
+   "notation": "--cds-syntax-null",
+   "definition": "Null. Token for null in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-number",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-number",
+   "notation": "--cds-syntax-number",
+   "definition": "Number. Token for number in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-operator",
+   "notation": "--cds-syntax-operator",
+   "definition": "Operator. Token for operator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-operator-keyword",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-operator-keyword",
+   "notation": "--cds-syntax-operator-keyword",
+   "definition": "Keyword. Token for keyword in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-paren",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-paren",
+   "notation": "--cds-syntax-paren",
+   "definition": "Paren. Token for paren in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-processing-instruction",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-processing-instruction",
+   "notation": "--cds-syntax-processing-instruction",
+   "definition": "Instruction. Token for instruction in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-property-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-property-name",
+   "notation": "--cds-syntax-property-name",
+   "definition": "Name. Token for name in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-punctuation",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-punctuation",
+   "notation": "--cds-syntax-punctuation",
+   "definition": "Punctuation. Token for punctuation in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-quote",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-quote",
+   "notation": "--cds-syntax-quote",
+   "definition": "Quote. Token for quote in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-regexp",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-regexp",
+   "notation": "--cds-syntax-regexp",
+   "definition": "Regexp. Token for regexp in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-self",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-self",
+   "notation": "--cds-syntax-self",
+   "definition": "Self. Token for self in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-separator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-separator",
+   "notation": "--cds-syntax-separator",
+   "definition": "Separator. Token for separator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-special",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-special",
+   "notation": "--cds-syntax-special",
+   "definition": "Special. Token for special in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-special-string",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-special-string",
+   "notation": "--cds-syntax-special-string",
+   "definition": "String. Token for string in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-square-bracket",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-square-bracket",
+   "notation": "--cds-syntax-square-bracket",
+   "definition": "Bracket. Token for bracket in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-standard",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-standard",
+   "notation": "--cds-syntax-standard",
+   "definition": "Standard. Token for standard in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-strikethrough",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-strikethrough",
+   "notation": "--cds-syntax-strikethrough",
+   "definition": "Strikethrough. Token for strikethrough in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-string",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-string",
+   "notation": "--cds-syntax-string",
+   "definition": "String. Token for string in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-strong",
+   "notation": "--cds-syntax-strong",
+   "definition": "Strong. Token for strong in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-tag",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-tag",
+   "notation": "--cds-syntax-tag",
+   "definition": "Tag. Token for tag in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-tag-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-tag-name",
+   "notation": "--cds-syntax-tag-name",
+   "definition": "Name. Token for name in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-type",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-type",
+   "notation": "--cds-syntax-type",
+   "definition": "Type. Token for type in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-type-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-type-name",
+   "notation": "--cds-syntax-type-name",
+   "definition": "Name. Token for name in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-type-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-type-operator",
+   "notation": "--cds-syntax-type-operator",
+   "definition": "Operator. Token for operator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-unit",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-unit",
+   "notation": "--cds-syntax-unit",
+   "definition": "Unit. Token for unit in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-update-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-update-operator",
+   "notation": "--cds-syntax-update-operator",
+   "definition": "Operator. Token for operator in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-url",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-url",
+   "notation": "--cds-syntax-url",
+   "definition": "Url. Token for url in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-variable",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-variable",
+   "notation": "--cds-syntax-variable",
+   "definition": "Variable. Token for variable in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/syntax-variable-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "syntax-variable-name",
+   "notation": "--cds-syntax-variable-name",
+   "definition": "Name. Token for name in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-background-blue",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-background-blue",
+   "notation": "--cds-tag-background-blue",
+   "definition": "Background color for blue tags. Use for informational tags or to categorize content with blue semantic meaning."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-background-cool-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-background-cool-gray",
+   "notation": "--cds-tag-background-cool-gray",
+   "definition": "Background color for cool gray tags. Use for neutral categorization or when color semantics are not needed."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-background-cyan",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-background-cyan",
+   "notation": "--cds-tag-background-cyan",
+   "definition": "Background color for cyan tags. Use for tags related to data, analytics, or technical information."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-background-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-background-gray",
+   "notation": "--cds-tag-background-gray",
+   "definition": "Background color for gray tags. Use for default or neutral tags without specific semantic meaning."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-background-green",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-background-green",
+   "notation": "--cds-tag-background-green",
+   "definition": "Background color for green tags. Use for success states, positive indicators, or approved/active status."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-background-magenta",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-background-magenta",
+   "notation": "--cds-tag-background-magenta",
+   "definition": "Background color for magenta tags. Use for creative, design-related, or special category tags."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-background-purple",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-background-purple",
+   "notation": "--cds-tag-background-purple",
+   "definition": "Background color for purple tags. Use for premium features, special status, or priority indicators."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-background-red",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-background-red",
+   "notation": "--cds-tag-background-red",
+   "definition": "Background color for red tags. Use for error states, critical issues, or urgent/high-priority items."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-background-teal",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-background-teal",
+   "notation": "--cds-tag-background-teal",
+   "definition": "Background color for teal tags. Use for tags related to support, help, or secondary informational content."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-background-warm-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-background-warm-gray",
+   "notation": "--cds-tag-background-warm-gray",
+   "definition": "Background color for warm gray tags. Use for neutral categorization with a warmer tone than cool gray."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-border-blue",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-border-blue",
+   "notation": "--cds-tag-border-blue",
+   "definition": "Border color for blue tags. Provides visual definition and contrast for blue tag variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-border-cool-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-border-cool-gray",
+   "notation": "--cds-tag-border-cool-gray",
+   "definition": "Border color for cool gray tags. Provides visual definition and contrast for cool gray tag variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-border-cyan",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-border-cyan",
+   "notation": "--cds-tag-border-cyan",
+   "definition": "Border color for cyan tags. Provides visual definition and contrast for cyan tag variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-border-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-border-gray",
+   "notation": "--cds-tag-border-gray",
+   "definition": "Border color for gray tags. Provides visual definition and contrast for gray tag variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-border-green",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-border-green",
+   "notation": "--cds-tag-border-green",
+   "definition": "Border color for green tags. Provides visual definition and contrast for green tag variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-border-magenta",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-border-magenta",
+   "notation": "--cds-tag-border-magenta",
+   "definition": "Border color for magenta tags. Provides visual definition and contrast for magenta tag variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-border-purple",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-border-purple",
+   "notation": "--cds-tag-border-purple",
+   "definition": "Border color for purple tags. Provides visual definition and contrast for purple tag variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-border-red",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-border-red",
+   "notation": "--cds-tag-border-red",
+   "definition": "Border color for red tags. Provides visual definition and contrast for red tag variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-border-teal",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-border-teal",
+   "notation": "--cds-tag-border-teal",
+   "definition": "Border color for teal tags. Provides visual definition and contrast for teal tag variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-border-warm-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-border-warm-gray",
+   "notation": "--cds-tag-border-warm-gray",
+   "definition": "Border color for warm gray tags. Provides visual definition and contrast for warm gray tag variants."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-color-blue",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-color-blue",
+   "notation": "--cds-tag-color-blue",
+   "definition": "Text color for blue tags. Ensures readable contrast against blue tag backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-color-cool-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-color-cool-gray",
+   "notation": "--cds-tag-color-cool-gray",
+   "definition": "Text color for cool gray tags. Ensures readable contrast against cool gray tag backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-color-cyan",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-color-cyan",
+   "notation": "--cds-tag-color-cyan",
+   "definition": "Text color for cyan tags. Ensures readable contrast against cyan tag backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-color-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-color-gray",
+   "notation": "--cds-tag-color-gray",
+   "definition": "Text color for gray tags. Ensures readable contrast against gray tag backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-color-green",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-color-green",
+   "notation": "--cds-tag-color-green",
+   "definition": "Text color for green tags. Ensures readable contrast against green tag backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-color-magenta",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-color-magenta",
+   "notation": "--cds-tag-color-magenta",
+   "definition": "Text color for magenta tags. Ensures readable contrast against magenta tag backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-color-purple",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-color-purple",
+   "notation": "--cds-tag-color-purple",
+   "definition": "Text color for purple tags. Ensures readable contrast against purple tag backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-color-red",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-color-red",
+   "notation": "--cds-tag-color-red",
+   "definition": "Text color for red tags. Ensures readable contrast against red tag backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-color-teal",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-color-teal",
+   "notation": "--cds-tag-color-teal",
+   "definition": "Text color for teal tags. Ensures readable contrast against teal tag backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-color-warm-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-color-warm-gray",
+   "notation": "--cds-tag-color-warm-gray",
+   "definition": "Text color for warm gray tags. Ensures readable contrast against warm gray tag backgrounds."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-hover-blue",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-hover-blue",
+   "notation": "--cds-tag-hover-blue",
+   "definition": "Background color for blue tags on hover. Use when blue tags are interactive or dismissible."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-hover-cool-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-hover-cool-gray",
+   "notation": "--cds-tag-hover-cool-gray",
+   "definition": "Background color for cool gray tags on hover. Use when cool gray tags are interactive or dismissible."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-hover-cyan",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-hover-cyan",
+   "notation": "--cds-tag-hover-cyan",
+   "definition": "Background color for cyan tags on hover. Use when cyan tags are interactive or dismissible."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-hover-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-hover-gray",
+   "notation": "--cds-tag-hover-gray",
+   "definition": "Background color for gray tags on hover. Use when gray tags are interactive or dismissible."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-hover-green",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-hover-green",
+   "notation": "--cds-tag-hover-green",
+   "definition": "Background color for green tags on hover. Use when green tags are interactive or dismissible."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-hover-magenta",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-hover-magenta",
+   "notation": "--cds-tag-hover-magenta",
+   "definition": "Background color for magenta tags on hover. Use when magenta tags are interactive or dismissible."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-hover-purple",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-hover-purple",
+   "notation": "--cds-tag-hover-purple",
+   "definition": "Background color for purple tags on hover. Use when purple tags are interactive or dismissible."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-hover-red",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-hover-red",
+   "notation": "--cds-tag-hover-red",
+   "definition": "Background color for red tags on hover. Use when red tags are interactive or dismissible."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-hover-teal",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-hover-teal",
+   "notation": "--cds-tag-hover-teal",
+   "definition": "Background color for teal tags on hover. Use when teal tags are interactive or dismissible."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/tag-hover-warm-gray",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "tag-hover-warm-gray",
+   "notation": "--cds-tag-hover-warm-gray",
+   "definition": "Background color for warm gray tags on hover. Use when warm gray tags are interactive or dismissible."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.10",
+   "notation": "teal.10",
+   "definition": "teal 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.100",
+   "notation": "teal.100",
+   "definition": "teal 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.100Hover",
+   "notation": "teal.100Hover",
+   "definition": "teal 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.10Hover",
+   "notation": "teal.10Hover",
+   "definition": "teal 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.20",
+   "notation": "teal.20",
+   "definition": "teal 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.20Hover",
+   "notation": "teal.20Hover",
+   "definition": "teal 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.30",
+   "notation": "teal.30",
+   "definition": "teal 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.30Hover",
+   "notation": "teal.30Hover",
+   "definition": "teal 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.40",
+   "notation": "teal.40",
+   "definition": "teal 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.40Hover",
+   "notation": "teal.40Hover",
+   "definition": "teal 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.50",
+   "notation": "teal.50",
+   "definition": "teal 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.50Hover",
+   "notation": "teal.50Hover",
+   "definition": "teal 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.60",
+   "notation": "teal.60",
+   "definition": "teal 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.60Hover",
+   "notation": "teal.60Hover",
+   "definition": "teal 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.70",
+   "notation": "teal.70",
+   "definition": "teal 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.70Hover",
+   "notation": "teal.70Hover",
+   "definition": "teal 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.80",
+   "notation": "teal.80",
+   "definition": "teal 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.80Hover",
+   "notation": "teal.80Hover",
+   "definition": "teal 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.90",
+   "notation": "teal.90",
+   "definition": "teal 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/teal.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "teal.90Hover",
+   "notation": "teal.90Hover",
+   "definition": "teal 90 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/text-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "text-disabled",
+   "notation": "--cds-text-disabled",
+   "definition": "Disabled. Token for disabled in the design system.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-text/state-disabled"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/text-error",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "text-error",
+   "notation": "--cds-text-error",
+   "definition": "Error. Token for error in the design system.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/intent-danger/property-text"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/text-helper",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "text-helper",
+   "notation": "--cds-text-helper",
+   "definition": "Helper. Token for helper in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/text-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "text-inverse",
+   "notation": "--cds-text-inverse",
+   "definition": "Inverse. Token for inverse in the design system.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/usage-inverse/property-text"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/text-on-color",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "text-on-color",
+   "notation": "--cds-text-on-color",
+   "definition": "Color. Token for color in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/text-on-color-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "text-on-color-disabled",
+   "notation": "--cds-text-on-color-disabled",
+   "definition": "Disabled. Token for disabled in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/text-placeholder",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "text-placeholder",
+   "notation": "--cds-text-placeholder",
+   "definition": "Placeholder. Token for placeholder in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/text-primary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "text-primary",
+   "notation": "--cds-text-primary",
+   "definition": "Primary. Token for primary in the design system.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-text"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/text-secondary",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "text-secondary",
+   "notation": "--cds-text-secondary",
+   "definition": "Secondary. Token for secondary in the design system.",
+   "skos:exactMatch": [
+    {
+     "id": "dsi:concept/color/property-text/emphasis-subtle"
+    }
+   ]
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/toggle-off",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "toggle-off",
+   "notation": "--cds-toggle-off",
+   "definition": "Off. Token for off in the design system."
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.10",
+   "notation": "warmGray.10",
+   "definition": "warm gray 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.100",
+   "notation": "warmGray.100",
+   "definition": "warm gray 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.100Hover",
+   "notation": "warmGray.100Hover",
+   "definition": "warm gray 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.10Hover",
+   "notation": "warmGray.10Hover",
+   "definition": "warm gray 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.20",
+   "notation": "warmGray.20",
+   "definition": "warm gray 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.20Hover",
+   "notation": "warmGray.20Hover",
+   "definition": "warm gray 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.30",
+   "notation": "warmGray.30",
+   "definition": "warm gray 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.30Hover",
+   "notation": "warmGray.30Hover",
+   "definition": "warm gray 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.40",
+   "notation": "warmGray.40",
+   "definition": "warm gray 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.40Hover",
+   "notation": "warmGray.40Hover",
+   "definition": "warm gray 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.50",
+   "notation": "warmGray.50",
+   "definition": "warm gray 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.50Hover",
+   "notation": "warmGray.50Hover",
+   "definition": "warm gray 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.60",
+   "notation": "warmGray.60",
+   "definition": "warm gray 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.60Hover",
+   "notation": "warmGray.60Hover",
+   "definition": "warm gray 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.70",
+   "notation": "warmGray.70",
+   "definition": "warm gray 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.70Hover",
+   "notation": "warmGray.70Hover",
+   "definition": "warm gray 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.80",
+   "notation": "warmGray.80",
+   "definition": "warm gray 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.80Hover",
+   "notation": "warmGray.80Hover",
+   "definition": "warm gray 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.90",
+   "notation": "warmGray.90",
+   "definition": "warm gray 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/warmGray.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "warmGray.90Hover",
+   "notation": "warmGray.90Hover",
+   "definition": "warm gray 90 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/white",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "white",
+   "notation": "white",
+   "definition": "white"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/whiteHover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "whiteHover",
+   "notation": "whiteHover",
+   "definition": "white hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.10",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.10",
+   "notation": "yellow.10",
+   "definition": "yellow 10"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.100",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.100",
+   "notation": "yellow.100",
+   "definition": "yellow 100"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.100Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.100Hover",
+   "notation": "yellow.100Hover",
+   "definition": "yellow 100 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.10Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.10Hover",
+   "notation": "yellow.10Hover",
+   "definition": "yellow 10 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.20",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.20",
+   "notation": "yellow.20",
+   "definition": "yellow 20"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.20Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.20Hover",
+   "notation": "yellow.20Hover",
+   "definition": "yellow 20 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.30",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.30",
+   "notation": "yellow.30",
+   "definition": "yellow 30"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.30Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.30Hover",
+   "notation": "yellow.30Hover",
+   "definition": "yellow 30 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.40",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.40",
+   "notation": "yellow.40",
+   "definition": "yellow 40"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.40Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.40Hover",
+   "notation": "yellow.40Hover",
+   "definition": "yellow 40 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.50",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.50",
+   "notation": "yellow.50",
+   "definition": "yellow 50"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.50Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.50Hover",
+   "notation": "yellow.50Hover",
+   "definition": "yellow 50 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.60",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.60",
+   "notation": "yellow.60",
+   "definition": "yellow 60"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.60Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.60Hover",
+   "notation": "yellow.60Hover",
+   "definition": "yellow 60 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.70",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.70",
+   "notation": "yellow.70",
+   "definition": "yellow 70"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.70Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.70Hover",
+   "notation": "yellow.70Hover",
+   "definition": "yellow 70 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.80",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.80",
+   "notation": "yellow.80",
+   "definition": "yellow 80"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.80Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.80Hover",
+   "notation": "yellow.80Hover",
+   "definition": "yellow 80 hover"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.90",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.90",
+   "notation": "yellow.90",
+   "definition": "yellow 90"
+  },
+  {
+   "id": "dsi:native/carbon/11.84.0/yellow.90Hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/native/carbon/11.84.0",
+   "prefLabel": "yellow.90Hover",
+   "notation": "yellow.90Hover",
+   "definition": "yellow 90 hover"
+  },
+  {
+   "id": "dsi:concept/color/intent-ai/property-border/emphasis-strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/ai"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/border"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/strong"
+    }
+   ],
+   "prefLabel": "Color: AI · Border · Strong"
+  },
+  {
+   "id": "dsi:concept/color/intent-ai/usage-skeleton/property-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/ai"
+    }
+   ],
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/skeleton"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "prefLabel": "Color: AI · Skeleton · Background"
+  },
+  {
+   "id": "dsi:concept/color/intent-danger",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/danger"
+    }
+   ],
+   "prefLabel": "Color: Danger"
+  },
+  {
+   "id": "dsi:concept/color/intent-danger/property-text",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/danger"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/text"
+    }
+   ],
+   "prefLabel": "Color: Danger · Text"
+  },
+  {
+   "id": "dsi:concept/color/intent-danger/usage-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/danger"
+    }
+   ],
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/inverse"
+    }
+   ],
+   "prefLabel": "Color: Danger · Inverse"
+  },
+  {
+   "id": "dsi:concept/color/intent-info",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/info"
+    }
+   ],
+   "prefLabel": "Color: Info"
+  },
+  {
+   "id": "dsi:concept/color/intent-info/usage-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/info"
+    }
+   ],
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/inverse"
+    }
+   ],
+   "prefLabel": "Color: Info · Inverse"
+  },
+  {
+   "id": "dsi:concept/color/intent-success",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/success"
+    }
+   ],
+   "prefLabel": "Color: Success"
+  },
+  {
+   "id": "dsi:concept/color/intent-success/usage-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/success"
+    }
+   ],
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/inverse"
+    }
+   ],
+   "prefLabel": "Color: Success · Inverse"
+  },
+  {
+   "id": "dsi:concept/color/intent-warning",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/warning"
+    }
+   ],
+   "prefLabel": "Color: Warning"
+  },
+  {
+   "id": "dsi:concept/color/intent-warning/usage-inverse",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasIntent": [
+    {
+     "id": "dsi:intent/warning"
+    }
+   ],
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/inverse"
+    }
+   ],
+   "prefLabel": "Color: Warning · Inverse"
+  },
+  {
+   "id": "dsi:concept/color/property-background/state-active",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "dsi:hasState": [
+    {
+     "id": "dsi:state/active"
+    }
+   ],
+   "prefLabel": "Color: Background · Active"
+  },
+  {
+   "id": "dsi:concept/color/property-background/state-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "dsi:hasState": [
+    {
+     "id": "dsi:state/hover"
+    }
+   ],
+   "prefLabel": "Color: Background · Hover"
+  },
+  {
+   "id": "dsi:concept/color/property-background/state-hover+selected",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "dsi:hasState": [
+    {
+     "id": "dsi:state/hover"
+    },
+    {
+     "id": "dsi:state/selected"
+    }
+   ],
+   "prefLabel": "Color: Background · Hover + Selected"
+  },
+  {
+   "id": "dsi:concept/color/property-background/state-selected",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "dsi:hasState": [
+    {
+     "id": "dsi:state/selected"
+    }
+   ],
+   "prefLabel": "Color: Background · Selected"
+  },
+  {
+   "id": "dsi:concept/color/property-border/state-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/border"
+    }
+   ],
+   "dsi:hasState": [
+    {
+     "id": "dsi:state/disabled"
+    }
+   ],
+   "prefLabel": "Color: Border · Disabled"
+  },
+  {
+   "id": "dsi:concept/color/property-focus-ring",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/focus-ring"
+    }
+   ],
+   "prefLabel": "Color: Focus ring"
+  },
+  {
+   "id": "dsi:concept/color/property-icon",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/icon"
+    }
+   ],
+   "prefLabel": "Color: Icon"
+  },
+  {
+   "id": "dsi:concept/color/property-icon/emphasis-subtle",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/icon"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/subtle"
+    }
+   ],
+   "prefLabel": "Color: Icon · Subtle"
+  },
+  {
+   "id": "dsi:concept/color/property-icon/state-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/icon"
+    }
+   ],
+   "dsi:hasState": [
+    {
+     "id": "dsi:state/disabled"
+    }
+   ],
+   "prefLabel": "Color: Icon · Disabled"
+  },
+  {
+   "id": "dsi:concept/color/property-shadow",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/shadow"
+    }
+   ],
+   "prefLabel": "Color: Shadow"
+  },
+  {
+   "id": "dsi:concept/color/property-text",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/text"
+    }
+   ],
+   "prefLabel": "Color: Text"
+  },
+  {
+   "id": "dsi:concept/color/property-text/emphasis-subtle",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/text"
+    }
+   ],
+   "dsi:hasEmphasis": [
+    {
+     "id": "dsi:emphasis/subtle"
+    }
+   ],
+   "prefLabel": "Color: Text · Subtle"
+  },
+  {
+   "id": "dsi:concept/color/property-text/state-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/text"
+    }
+   ],
+   "dsi:hasState": [
+    {
+     "id": "dsi:state/disabled"
+    }
+   ],
+   "prefLabel": "Color: Text · Disabled"
+  },
+  {
+   "id": "dsi:concept/color/usage-field/property-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/field"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "prefLabel": "Color: Field · Background"
+  },
+  {
+   "id": "dsi:concept/color/usage-inverse/property-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/inverse"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "prefLabel": "Color: Inverse · Background"
+  },
+  {
+   "id": "dsi:concept/color/usage-inverse/property-background/state-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/inverse"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "dsi:hasState": [
+    {
+     "id": "dsi:state/hover"
+    }
+   ],
+   "prefLabel": "Color: Inverse · Background · Hover"
+  },
+  {
+   "id": "dsi:concept/color/usage-inverse/property-border",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/inverse"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/border"
+    }
+   ],
+   "prefLabel": "Color: Inverse · Border"
+  },
+  {
+   "id": "dsi:concept/color/usage-inverse/property-focus-ring",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/inverse"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/focus-ring"
+    }
+   ],
+   "prefLabel": "Color: Inverse · Focus ring"
+  },
+  {
+   "id": "dsi:concept/color/usage-inverse/property-icon",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/inverse"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/icon"
+    }
+   ],
+   "prefLabel": "Color: Inverse · Icon"
+  },
+  {
+   "id": "dsi:concept/color/usage-inverse/property-text",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/inverse"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/text"
+    }
+   ],
+   "prefLabel": "Color: Inverse · Text"
+  },
+  {
+   "id": "dsi:concept/color/usage-link/property-text",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/link"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/text"
+    }
+   ],
+   "prefLabel": "Color: Link · Text"
+  },
+  {
+   "id": "dsi:concept/color/usage-link/property-text/state-hover",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/link"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/text"
+    }
+   ],
+   "dsi:hasState": [
+    {
+     "id": "dsi:state/hover"
+    }
+   ],
+   "prefLabel": "Color: Link · Text · Hover"
+  },
+  {
+   "id": "dsi:concept/color/usage-on-fill/property-icon",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/on-fill"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/icon"
+    }
+   ],
+   "prefLabel": "Color: On fill · Icon"
+  },
+  {
+   "id": "dsi:concept/color/usage-on-fill/property-icon/state-disabled",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/on-fill"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/icon"
+    }
+   ],
+   "dsi:hasState": [
+    {
+     "id": "dsi:state/disabled"
+    }
+   ],
+   "prefLabel": "Color: On fill · Icon · Disabled"
+  },
+  {
+   "id": "dsi:concept/color/usage-page/property-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/page"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "prefLabel": "Color: Page · Background"
+  },
+  {
+   "id": "dsi:concept/color/usage-scrim/property-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/scrim"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "prefLabel": "Color: Scrim · Background"
+  },
+  {
+   "id": "dsi:concept/color/usage-skeleton/property-background",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/canonical/color",
+   "dsi:hasUsage": [
+    {
+     "id": "dsi:usage/skeleton"
+    }
+   ],
+   "dsi:hasProperty": [
+    {
+     "id": "dsi:property/background"
+    }
+   ],
+   "prefLabel": "Color: Skeleton · Background"
+  }
+ ]
+}

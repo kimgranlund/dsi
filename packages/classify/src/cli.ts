@@ -2,15 +2,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadOntology } from '@dsi/schema';
-import { loadNative } from '@dsi/resolve';
+import { loadNative, resolve, themeFor } from '@dsi/resolve';
 import { classify, type TermsFile } from './classify.ts';
 import { deriveTerms, mergeTerms, type ApprovedMapping } from './derive.ts';
+import { mergeTermProposals, packetPath, readTermProposals, vocabulary } from './vocab.ts';
 
 const USAGE = `usage (from the repo root):
   dsi-classify derive <product>   learn candidate terms from approved mappings into mappings/<product>/terms.json
   dsi-classify eval <product>     leave-one-out accuracy of the classifier on approved color mappings
-  dsi-classify run <product>      classify every native token -> data/classified/<product>/<version>.json`;
-const [cmd, product] = process.argv.slice(2);
+  dsi-classify run <product>      classify every native token -> data/classified/<product>/<version>.json
+  dsi-classify vocab-prepare <product> <run>   write term packets .cache/classify/<run>/<product>.{a,b}.packet.json
+  dsi-classify vocab-check <product> <run> <role>   validate one agent's term proposals
+  dsi-classify vocab-merge <product> <run>     merge both agents' term proposals into mappings/<product>/terms.json`;
+const [cmd, product, run, role] = process.argv.slice(2);
 if (!cmd || !product) { console.error(USAGE); process.exit(2); }
 const root = process.cwd();
 const version = JSON.parse(fs.readFileSync(path.join(root, 'sources', product, 'source.json'), 'utf8')).package.version as string;
@@ -22,7 +26,9 @@ const approved: ApprovedMapping[] = fs.existsSync(mapFile) ? JSON.parse(fs.readF
 const exactish = approved.filter((m) => m.match === 'exact' || m.match === 'close');
 const set = loadNative(root, product, version);
 const fileOf = (p: string) => String(set.tokens.get(p)?.prov.file ?? '');
-const domainOf = (p: string) => (set.tokens.get(p)?.type === 'color' || /color/.test(fileOf(p)) ? 'color' : undefined);
+// Domain from the DTCG type at the end of the alias chain: alias tokens often carry no $type of their own.
+const anyTheme = themeFor(set) ?? '';
+const domainOf = (p: string) => ((set.tokens.get(p)?.type ?? resolve(set, anyTheme, p).type) === 'color' ? 'color' : undefined);
 const hints = new Set(['approved', 'proposed']);
 
 if (cmd === 'derive') {
@@ -59,4 +65,28 @@ if (cmd === 'derive') {
   const full = out.filter((c) => c.domain === 'color' && c.concept && c.explained === 1).length;
   fs.writeFileSync(path.join(dir, `${version}.json`), JSON.stringify({ product, version, terms: 'mappings/' + product + '/terms.json', summary: { scopes: summary, colorTokensFullyExplained: full }, tokens: out }, null, 1) + '\n');
   console.log(`${product}: scopes ${JSON.stringify(summary)}; ${full} color tokens fully explained by terms -> data/classified/${product}/${version}.json`);
+} else if (cmd === 'vocab-prepare' || cmd === 'vocab-check' || cmd === 'vocab-merge') {
+  if (!run) { console.error(USAGE); process.exit(2); }
+  const runDir = path.join(root, '.cache/classify', run);
+  // Vocabulary of the semantic color tokens (the color-v1 mapping scope).
+  const paths = [...set.tokens.keys()].filter((p) => classify(terms, p, fileOf(p), 'color').scope === 'semantic' && domainOf(p) === 'color');
+  const vocab = vocabulary(paths, terms.noise ?? []);
+  const single = new Set(vocab.filter((v) => !v.term.includes('-')).map((v) => v.term));
+  if (cmd === 'vocab-prepare') {
+    const facets = JSON.parse(fs.readFileSync(path.join(root, 'ontology/schemes/facets.jsonld'), 'utf8'))['@graph'] as any[];
+    const ontology = Object.fromEntries(['intent', 'usage', 'property', 'emphasis', 'state'].map((f) => [f, facets.filter((c) => c.inScheme === `dsi:scheme/${f}` && !c.deprecated).map((c) => ({ concept: c.id, label: c.prefLabel, definition: c.definition }))]));
+    const derived = terms.terms.filter((t) => t.status === 'proposed' && t.evidence).map(({ term, concept, evidence }) => ({ term, concept, evidence }));
+    fs.mkdirSync(runDir, { recursive: true });
+    for (const r of ['a', 'b']) fs.writeFileSync(packetPath(runDir, product, r), JSON.stringify({ id: `terms-v1/${product}`, role: r, product, instructions: 'packages/classify/prompts/terms-v1.md', output: path.join(runDir, `${product}.${r}.proposals.json`), ontology, noise: terms.noise ?? [], vocabulary: vocab, derived }, null, 1) + '\n');
+    console.log(`${product}: ${single.size} words (${vocab.length} entries with recurring sequences) from ${paths.length} semantic color tokens -> ${path.relative(root, packetPath(runDir, product, '{a,b}'))}`);
+  } else if (cmd === 'vocab-check') {
+    try { const pf = readTermProposals(path.join(runDir, `${product}.${role}.proposals.json`), o, single); console.log(`OK: ${pf.terms.length} entries, all ${single.size} words answered, all concepts valid`); }
+    catch (e) { console.error(`FAIL: ${(e as Error).message}`); process.exit(1); }
+  } else {
+    const a = readTermProposals(path.join(runDir, `${product}.a.proposals.json`), o, single);
+    const b = readTermProposals(path.join(runDir, `${product}.b.proposals.json`), o, single);
+    const { file, counts } = mergeTermProposals(terms, a, b);
+    fs.writeFileSync(termsPath, JSON.stringify(file, null, 2) + '\n');
+    console.log(`${product}: ${counts.approved} terms approved by agreement, ${counts.noise} noise words agreed, ${counts.proposed} words queued for review -> ${path.relative(root, termsPath)}`);
+  }
 } else { console.error(USAGE); process.exit(2); }

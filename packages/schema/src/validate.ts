@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
 import type { Ajv2020 } from 'ajv/dist/2020.js';
 import type { FormatsPlugin } from 'ajv-formats';
-import { expand, inScheme, loadOntology, type Issue, type Ontology } from './ontology.ts';
+import { DSI, expand, inScheme, loadOntology, toQuads, type Issue, type Ontology } from './ontology.ts';
 import { validateNative } from './native.ts';
 import { parseConcept } from './concepts.ts';
 
@@ -103,25 +103,41 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
   for (const f of walk(path.join(root, 'mappings'), 'terms.json')) {
     const data = read(f);
     if (data === undefined || !shape('terms-file.schema.json', f, data)) continue;
-    const t = data as { product: string; terms: { term: string; facet: string; value: string; status: string }[] };
+    const t = data as { product: string; terms: { term: string; concept: string; status: string }[] };
     const at = rel(f);
     if (path.basename(path.dirname(f)) !== t.product) issues.push({ file: at, message: `folder must equal product "${t.product}"` });
     if (!catalog.has(t.product)) issues.push({ file: at, message: `unknown product "${t.product}"` });
     const live = new Map<string, string>();
     t.terms.forEach((x, i) => {
-      if (!inScheme(ontology, `dsi:${x.facet}/${x.value}`, `dsi:scheme/${x.facet}`)) issues.push({ file: at, message: `terms[${i}] ${x.term}: ${x.facet} "${x.value}" is not in dsi:scheme/${x.facet}` });
-      else if (ontology.deprecated.has(expand(`dsi:${x.facet}/${x.value}`))) issues.push({ file: at, message: `terms[${i}] ${x.term}: ${x.facet} "${x.value}" is deprecated` });
+      const facet = facetOfConcept(ontology, x.concept);
+      if (!facet) issues.push({ file: at, message: `terms[${i}] ${x.term}: ${x.concept} is not a value of a facet scheme (${TERM_FACETS.join(', ')})` });
+      else if (ontology.deprecated.has(expand(x.concept))) issues.push({ file: at, message: `terms[${i}] ${x.term}: ${x.concept} is deprecated` });
       if (!inScheme(ontology, `dsi:review/${x.status}`, 'dsi:scheme/review-status')) issues.push({ file: at, message: `terms[${i}] ${x.term}: status "${x.status}" is not in dsi:scheme/review-status` });
       if (x.status === 'approved') {
-        const k = `${x.term}|${x.facet}`;
-        if (live.has(k)) issues.push({ file: at, message: `terms[${i}] ${x.term}: two approved ${x.facet} values (${live.get(k)}, ${x.value})` });
-        live.set(k, x.value);
+        const k = `${x.term}|${facetOfConcept(ontology, x.concept)}`;
+        if (live.has(k)) issues.push({ file: at, message: `terms[${i}] ${x.term}: two approved values on one facet (${live.get(k)}, ${x.concept})` });
+        live.set(k, x.concept);
       }
     });
   }
 
   // Native tokens
   validateNative(root, ajv, issues);
+
+  // SKOS exports: valid JSON-LD; every dsi: IRI they reference is defined by the ontology or by the file itself,
+  // and every mapping object is a valid concept.
+  for (const f of walk(path.join(root, 'data/skos'), '.jsonld')) {
+    let quads;
+    try { quads = await toQuads(f, root); } catch (e) { issues.push({ file: rel(f), message: `invalid JSON-LD: ${(e as Error).message}` }); continue; }
+    const local = new Set(quads.map((q) => q.subject.value));
+    const SKOS_MATCH = /#(exact|close|broad|narrow|related)Match$/;
+    for (const q of quads) {
+      if (q.object.termType !== 'NamedNode' || !q.object.value.startsWith(DSI)) continue;
+      const v = q.object.value;
+      if (!local.has(v) && !ontology.defined.has(v)) issues.push({ file: rel(f), message: `${q.subject.value.replace(DSI, 'dsi:')} references undefined ${v.replace(DSI, 'dsi:')}` });
+      if (SKOS_MATCH.test(q.predicate.value)) { const ci = conceptIssue(ontology, v.replace(DSI, 'dsi:')); if (ci) issues.push({ file: rel(f), message: `${q.subject.value.replace(DSI, 'dsi:')}: mapping target ${v.replace(DSI, 'dsi:')} ${ci}` }); }
+    }
+  }
   return issues;
 }
 
@@ -133,6 +149,12 @@ type MappingFile = {
   noEquivalent?: (Judgment & { concept: string })[];
   unmapped?: (Judgment & { token: string })[];
 };
+
+export const TERM_FACETS = ['intent', 'usage', 'property', 'emphasis', 'state'] as const;
+/** The facet whose value scheme holds this concept (dsi:intent/danger -> intent), if any. */
+export function facetOfConcept(o: Ontology, concept: string): (typeof TERM_FACETS)[number] | undefined {
+  return TERM_FACETS.find((f) => concept.startsWith(`dsi:${f}/`) && inScheme(o, concept, `dsi:scheme/${f}`));
+}
 
 /** A concept reference is valid if the ontology defines it or it is a well-formed compositional concept. */
 function conceptIssue(o: Ontology, ref: string): string | undefined {

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dsi.nonoun.io/schema/term-proposals.schema.json",
+  "title": "Term proposals",
+  "description": "What one agent returns for one vocabulary packet: .cache/classify/<run>/<product>.<role>.proposals.json, merged by `dsi-classify vocab-merge`.",
+  "type": "object",
+  "required": [
+    "packet",
+    "role",
+    "model",
+    "at",
+    "terms"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "packet": {
+      "type": "string"
+    },
+    "role": {
+      "enum": [
+        "a",
+        "b"
+      ]
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "terms": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": [
+              "term",
+              "concept",
+              "match",
+              "confidence",
+              "rationale"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "term": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              },
+              "match": {
+                "enum": [
+                  "exact",
+                  "close",
+                  "broad",
+                  "narrow",
+                  "related"
+                ]
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 1
+              },
+              "concept": {
+                "$ref": "common.schema.json#/$defs/conceptRef",
+                "description": "Facet value concept, e.g. dsi:intent/danger or dsi:property/background."
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "term",
+              "ignore",
+              "rationale"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "term": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              },
+              "ignore": {
+                "enum": [
+                  "noise",
+                  "component",
+                  "no-concept"
+                ],
+                "description": "noise: carries no meaning; component: names a component or part (reserved facets); no-concept: meaningful but no facet value fits yet."
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

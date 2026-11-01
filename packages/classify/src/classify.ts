@@ -5,7 +5,14 @@ export const FACETS: Facet[] = CONCEPT_FACETS.filter((f): f is Facet => f !== 'c
 const MULTI = new Set<Facet>(['usage', 'state']);
 const MAX_GRAM = 4;
 
-export interface Term { term: string; facet: Facet; value: string; match: string; status: string; evidence?: { support: number; agree: number; precision: number } }
+/** A native naming word mapped (SKOS) to a facet-value concept, e.g. { term: "critical", concept: "dsi:intent/danger", match: "exact" }. */
+export interface Term { term: string; concept: string; match: string; status: string; evidence?: { support: number; agree: number; precision: number }; provenance: { agent: string; model?: string; at: string; method?: string }; review?: { by: string; at: string; note?: string }; note?: string }
+
+/** Facet and value of a facet-value concept IRI (dsi:intent/danger -> intent, danger). */
+export function facetValue(concept: string): { facet: Facet; value: string } | undefined {
+  const m = concept.match(/^dsi:([a-z]+)\/([a-z0-9-]+)$/);
+  return m && (FACETS as string[]).includes(m[1]) ? { facet: m[1] as Facet, value: m[2] } : undefined;
+}
 export interface TermsFile { product: string; noise?: string[]; scopes?: { pathPrefix?: string; file?: string; scope: string }[]; terms: Term[] }
 
 /** Split a token path into lowercase words: on '.', '-', '_' and camelCase boundaries. */
@@ -45,9 +52,13 @@ export function conceptOf(domain: string, facets: Partial<Record<Facet, string>>
  */
 export function classify(t: TermsFile, token: string, file: string, domain: string, statuses = new Set(['approved'])): Classification {
   const noise = new Set(t.noise ?? []);
-  const terms = new Map<string, Term>();
-  for (const x of t.terms) if (statuses.has(x.status)) terms.set(`${x.term}|${x.facet}`, x);
-  const byTerm = new Map<string, Term[]>();
+  type Bound = { term: string; facet: Facet; value: string };
+  const terms = new Map<string, Bound>();
+  for (const x of t.terms) {
+    const fv = statuses.has(x.status) ? facetValue(x.concept) : undefined;
+    if (fv && x.match !== 'related') terms.set(`${x.term}|${fv.facet}`, { term: x.term, ...fv });
+  }
+  const byTerm = new Map<string, Bound[]>();
   for (const x of terms.values()) (byTerm.get(x.term) ?? byTerm.set(x.term, []).get(x.term)!).push(x);
 
   // Every term found anywhere in the name contributes, not a greedy segmentation (which lets a two-word term

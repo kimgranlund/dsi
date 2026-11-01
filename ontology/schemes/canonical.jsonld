@@ -1,0 +1,59 @@
+{
+  "@context": "../context.jsonld",
+  "@graph": [
+    {
+      "id": "dsi:scheme/canonical",
+      "type": "ConceptScheme",
+      "prefLabel": "Canonical concepts",
+      "definition": "All compositional canonical concepts (dsi:concept/<domain>/<facet>-<value>/...). Members are not listed here: a concept exists when its IRI is well formed and its facet values exist (see ontology/README.md). Exports in data/skos/ materialize the ones in use."
+    },
+    {
+      "id": "dsi:scheme/canonical/color",
+      "type": "ConceptScheme",
+      "prefLabel": "Canonical color concepts",
+      "definition": "Compositional canonical concepts of the color domain: dsi:concept/color/..."
+    },
+    {
+      "id": "dsi:scheme/canonical/space",
+      "type": "ConceptScheme",
+      "prefLabel": "Canonical space concepts",
+      "definition": "Compositional canonical concepts of the space domain: dsi:concept/space/..."
+    },
+    {
+      "id": "dsi:scheme/canonical/size",
+      "type": "ConceptScheme",
+      "prefLabel": "Canonical size concepts",
+      "definition": "Compositional canonical concepts of the size domain: dsi:concept/size/..."
+    },
+    {
+      "id": "dsi:scheme/canonical/shape",
+      "type": "ConceptScheme",
+      "prefLabel": "Canonical shape concepts",
+      "definition": "Compositional canonical concepts of the shape domain: dsi:concept/shape/..."
+    },
+    {
+      "id": "dsi:scheme/canonical/typography",
+      "type": "ConceptScheme",
+      "prefLabel": "Canonical typography concepts",
+      "definition": "Compositional canonical concepts of the typography domain: dsi:concept/typography/..."
+    },
+    {
+      "id": "dsi:scheme/canonical/elevation",
+      "type": "ConceptScheme",
+      "prefLabel": "Canonical elevation concepts",
+      "definition": "Compositional canonical concepts of the elevation domain: dsi:concept/elevation/..."
+    },
+    {
+      "id": "dsi:scheme/canonical/motion",
+      "type": "ConceptScheme",
+      "prefLabel": "Canonical motion concepts",
+      "definition": "Compositional canonical concepts of the motion domain: dsi:concept/motion/..."
+    },
+    {
+      "id": "dsi:scheme/canonical/opacity",
+      "type": "ConceptScheme",
+      "prefLabel": "Canonical opacity concepts",
+      "definition": "Compositional canonical concepts of the opacity domain: dsi:concept/opacity/..."
+    }
+  ]
+}

@@ -2,25 +2,54 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://dsi.nonoun.io/schema/terms-file.schema.json",
   "title": "Term mappings",
-  "description": "How one product's naming vocabulary maps to facet values: mappings/<product>/terms.json. Used by @dsi/classify to decompose token names. Terms are judgments like token mappings: proposed, approved, rejected.",
+  "description": "One product's naming vocabulary as SKOS mappings: mappings/<product>/terms.json. Each term is a concept in the product's vocabulary scheme (dsi:vocab/<product>/<term>) mapped to a facet-value concept with a match type. Used by @dsi/classify; exported to RDF by `dsi-skos`.",
   "type": "object",
-  "required": ["product", "terms"],
+  "required": [
+    "product",
+    "terms"
+  ],
   "additionalProperties": false,
   "properties": {
-    "$schema": { "type": "string" },
-    "product": { "$ref": "common.schema.json#/$defs/slug" },
-    "noise": { "type": "array", "uniqueItems": true, "items": { "type": "string" }, "description": "Words that carry no meaning in this product's names (md, sys, color)." },
+    "$schema": {
+      "type": "string"
+    },
+    "product": {
+      "$ref": "common.schema.json#/$defs/slug"
+    },
+    "noise": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      },
+      "description": "Words that carry no meaning in this product's names (md, sys, color)."
+    },
     "scopes": {
       "type": "array",
       "description": "First matching rule sets a token's scope.",
       "items": {
         "type": "object",
-        "required": ["scope"],
+        "required": [
+          "scope"
+        ],
         "additionalProperties": false,
         "properties": {
-          "pathPrefix": { "type": "string" },
-          "file": { "type": "string", "description": "Suffix of the token's source file." },
-          "scope": { "enum": ["palette", "foundation", "semantic", "component", "other"] }
+          "pathPrefix": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string",
+            "description": "Suffix of the token's source file."
+          },
+          "scope": {
+            "enum": [
+              "palette",
+              "foundation",
+              "semantic",
+              "component",
+              "other"
+            ]
+          }
         }
       }
     },
@@ -28,26 +57,99 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["term", "facet", "value", "match", "status", "provenance"],
+        "required": [
+          "term",
+          "concept",
+          "match",
+          "status",
+          "provenance"
+        ],
         "additionalProperties": false,
         "properties": {
-          "term": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "One or more name words joined by '-', matched longest first." },
-          "facet": { "enum": ["intent", "usage", "property", "emphasis", "state"] },
-          "value": { "$ref": "common.schema.json#/$defs/slug" },
-          "match": { "enum": ["exact", "close", "broad", "narrow", "related"] },
-          "status": { "$ref": "common.schema.json#/$defs/slug" },
+          "term": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "One or more name words joined by '-', matched longest first."
+          },
+          "match": {
+            "enum": [
+              "exact",
+              "close",
+              "broad",
+              "narrow",
+              "related"
+            ],
+            "description": "SKOS mapping property from the native term to the concept (exact -> skos:exactMatch, ...)."
+          },
+          "status": {
+            "$ref": "common.schema.json#/$defs/slug"
+          },
           "evidence": {
             "type": "object",
             "additionalProperties": false,
-            "properties": { "support": { "type": "integer", "minimum": 0 }, "agree": { "type": "integer", "minimum": 0 }, "precision": { "type": "number", "minimum": 0, "maximum": 1 } },
+            "properties": {
+              "support": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "agree": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "precision": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            },
             "description": "From approved token mappings: tokens containing the term, how many of them bind this value, and the ratio."
           },
-          "provenance": { "$ref": "common.schema.json#/$defs/provenance" },
-          "review": { "type": "object", "required": ["by", "at"], "additionalProperties": false, "properties": { "by": { "type": "string" }, "at": { "type": "string", "format": "date-time" }, "note": { "type": "string" } } },
-          "note": { "type": "string" }
+          "provenance": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          },
+          "review": {
+            "type": "object",
+            "required": [
+              "by",
+              "at"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "by": {
+                "type": "string"
+              },
+              "at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          },
+          "note": {
+            "type": "string"
+          },
+          "concept": {
+            "$ref": "common.schema.json#/$defs/conceptRef",
+            "description": "A facet value concept, e.g. dsi:intent/danger. The term is the subject of a SKOS mapping to it; the facet is the concept's scheme."
+          }
         },
-        "if": { "properties": { "status": { "enum": ["approved", "rejected"] } } },
-        "then": { "required": ["review"] }
+        "if": {
+          "properties": {
+            "status": {
+              "enum": [
+                "approved",
+                "rejected"
+              ]
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "review"
+          ]
+        }
       }
     }
   }

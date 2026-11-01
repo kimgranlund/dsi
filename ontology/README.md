@@ -17,6 +17,7 @@ Authored. Changes here change meaning for every consumer; see Rules.
 | `schemes/tiers.jsonld` | Source, Scale, Semantic, System, Component, and the tier derivation rule |
 | `schemes/facets.jsonld` | Facet dimensions and starter value schemes (domain, emphasis, intent, property, state, mode) |
 | `schemes/mapping.jsonld` | Match types with fixed direction, review statuses |
+| `schemes/canonical.jsonld` | Concept schemes for canonical concepts, one per domain |
 | `concepts/` | (optional) Labels and definitions for notable compositional concepts |
 
 ## Canonical concepts
@@ -33,6 +34,17 @@ dsi:concept/color/intent-danger/property-background/emphasis-strong/state-hover
 - Component and part segments are reserved until their vocabularies exist.
 - Mode is never a segment: it is context, not identity.
 - The validator (`@dsi/schema`) checks grammar, order and every value. A compositional IRI does not need an entry in `concepts/`; add one only to give it a curated label or definition.
+
+## SKOS everywhere
+
+Every judgment in the repo is a SKOS mapping with the native side as subject:
+
+| Native side | IRI | Mapped to | Authored in |
+|---|---|---|---|
+| Token | `dsi:native/<product>/<version>/<path>` in `dsi:scheme/native/<product>/<version>` | a canonical concept | `mappings/<product>/<version>.mappings.json` |
+| Naming term | `dsi:vocab/<product>/<term>` in `dsi:scheme/vocab/<product>` | a facet value (`dsi:intent/danger`) | `mappings/<product>/terms.json` |
+
+The JSON files are the authored copies. `node packages/resolve/src/skos-cli.ts` generates the RDF form, `data/skos/<product>/<version>.jsonld`, with approved records only: native tokens and terms as `skos:Concept`s, match types as `skos:exactMatch` / `closeMatch` / `broadMatch` / `narrowMatch` / `relatedMatch`, and every canonical concept in use materialized with its facet bindings. `corepack pnpm check` validates the export: valid JSON-LD, every `dsi:` reference defined, every mapping target a valid concept.
 
 ## Inputs and outputs
 

@@ -12,7 +12,7 @@ Code. Its term files are judgments (proposed / approved / rejected, like token m
 
 - `noise`: words with no meaning in names (`md`, `sys`, `color`).
 - `scopes`: first matching rule (path prefix or source file) sets a token's scope: palette, foundation, semantic, component.
-- `terms`: native words (one or more, joined by `-`) mapped to a facet value with a match type, e.g. Polaris `critical` -> intent `danger`. Longer terms override shorter ones on the same facet, so exceptions are expressible: `on-bg-fill` -> property `foreground` beats `bg` -> `background`.
+- `terms`: native words (one or more, joined by `-`) as SKOS mappings to facet-value concepts, e.g. Polaris `critical` -> `dsi:intent/danger`, `exact`. Exported to RDF with the token mappings. Longer terms override shorter ones on the same facet, so exceptions are expressible: `on-bg-fill` -> property `foreground` beats `bg` -> `background`.
 
 ## Run
 
@@ -21,6 +21,10 @@ From the repo root:
 - `node packages/classify/src/cli.ts derive <product>`: learn candidate terms from approved token mappings (support >= 2, precision >= 0.9), as Proposed with their evidence. Never changes approved or rejected terms.
 - `node packages/classify/src/cli.ts eval <product>`: leave-one-out accuracy on approved exact/close mappings (each token classified with terms learned without it).
 - `node packages/classify/src/cli.ts run <product>`: classify every token (scope, facets, candidate concept, unexplained words).
+
+## Drafting vocabularies
+
+`vocab-prepare <product> <run>` writes a packet per agent with every word in the product's semantic color token names; two agents on different models answer every word blind (`prompts/terms-v1.md`), each checking its file with `vocab-check`; `vocab-merge` approves agreements (same term, concept and match, both confidence >= 0.85), adds agreed noise words, and queues the rest.
 
 ## How it decides
 

@@ -26,6 +26,18 @@ export const expand = (ref: string): string => (ref.startsWith('dsi:') ? DSI + r
 export const inScheme = (o: Ontology, ref: string, scheme: string): boolean =>
   o.schemes.get(expand(ref))?.has(expand(scheme)) ?? false;
 
+type Quad = { subject: { value: string }; predicate: { value: string }; object: { value: string; termType: string } };
+
+/** Expand a JSON-LD file to RDF quads, loading contexts only from inside `allowedRoot`. */
+export async function toQuads(file: string, allowedRoot: string): Promise<Quad[]> {
+  const documentLoader = async (url: string) => {
+    const p = url.startsWith('file://') ? url.slice(7) : url;
+    if (!p.startsWith(allowedRoot)) throw new Error(`refusing to load remote or out-of-tree context ${url}`);
+    return { contextUrl: undefined, documentUrl: url, document: JSON.parse(fs.readFileSync(p, 'utf8')) };
+  };
+  return (await jsonld.toRDF(JSON.parse(fs.readFileSync(file, 'utf8')), { base: 'file://' + file, documentLoader, safe: true } as never)) as unknown as Quad[];
+}
+
 export async function loadOntology(dir: string): Promise<Ontology> {
   const files = [path.join(dir, 'vocab.jsonld'), ...fs.readdirSync(path.join(dir, 'schemes')).filter((f) => f.endsWith('.jsonld')).map((f) => path.join(dir, 'schemes', f)), ...listConceptFiles(dir)];
   const documentLoader = async (url: string) => {

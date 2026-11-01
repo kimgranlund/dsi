@@ -30,6 +30,10 @@ From the repo root:
 - `node packages/resolve/src/cli.ts token carbon support-error dark`
 - `node packages/resolve/src/cli.ts concept dsi:concept/color/intent-danger/property-text dark`
 
+## SKOS export
+
+`node packages/resolve/src/skos-cli.ts [product ...]` writes `data/skos/<product>/<version>.jsonld`: the approved token and term mappings as SKOS (see `ontology/README.md`, SKOS everywhere).
+
 ## Checks
 
 `corepack pnpm --filter @dsi/resolve check`.

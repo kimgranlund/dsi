@@ -2,8 +2,12 @@
   "name": "@dsi/classify",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
-  "bin": { "dsi-classify": "./src/cli.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "bin": {
+    "dsi-classify": "./src/cli.ts"
+  },
   "scripts": {
     "check": "tsc -p . && node --test \"test/**/*.test.ts\""
   },

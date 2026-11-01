@@ -1,5 +1,5 @@
 import { parseConcept, type Ontology } from '@dsi/schema';
-import { words, FACETS, type Facet, type Term, type TermsFile } from './classify.ts';
+import { words, facetValue, FACETS, type Facet, type Term, type TermsFile } from './classify.ts';
 
 export interface ApprovedMapping { token: string; concept: string; match: string }
 
@@ -51,16 +51,17 @@ export function deriveTerms(o: Ontology, product: string, mappings: ApprovedMapp
       for (let i = 0; i < parts.length; i++) for (let n = 1; n < parts.length && i + n <= parts.length; n++) sub.add(parts.slice(i, i + n).join('-'));
       if ([...sub].some((s) => best.get(`${s}|${b.facet}`)?.value === b.value)) continue;
     }
-    out.push({ term: g, facet: b.facet, value: b.value, match: 'exact', status: 'proposed', evidence: { support: b.support, agree: b.agree, precision: Math.round((b.agree / b.support) * 1000) / 1000 }, provenance: { agent: 'dsi-classify', at, method: 'derive-from-approved-mappings' } } as Term);
+    out.push({ term: g, concept: `dsi:${b.facet}/${b.value}`, match: 'exact', status: 'proposed', evidence: { support: b.support, agree: b.agree, precision: Math.round((b.agree / b.support) * 1000) / 1000 }, provenance: { agent: 'dsi-classify', at, method: 'derive-from-approved-mappings' } } as Term);
   }
   return out;
 }
 
 /** Merge newly derived terms into a terms file: never touch approved or rejected terms; refresh proposed ones. */
 export function mergeTerms(file: TermsFile, derived: Term[]): TermsFile {
-  const keep = file.terms.filter((t) => t.status !== 'proposed');
-  const settled = new Set(keep.map((t) => `${t.term}|${t.facet}|${t.value}`));
-  const settledKey = new Set(keep.filter((t) => t.status === 'approved').map((t) => `${t.term}|${t.facet}`));
-  const fresh = derived.filter((t) => !settled.has(`${t.term}|${t.facet}|${t.value}`) && !settledKey.has(`${t.term}|${t.facet}`));
-  return { ...file, terms: [...keep, ...fresh].sort((a, b) => a.term.localeCompare(b.term) || a.facet.localeCompare(b.facet)) };
+  const fk = (t: Term) => `${t.term}|${facetValue(t.concept)?.facet}`;
+  const keep = file.terms.filter((t) => t.status !== 'proposed' || t.provenance.method !== 'derive-from-approved-mappings');
+  const settled = new Set(keep.filter((t) => t.status !== 'proposed').map((t) => `${t.term}|${t.concept}`));
+  const settledKey = new Set(keep.filter((t) => t.status === 'approved').map(fk));
+  const fresh = derived.filter((t) => !settled.has(`${t.term}|${t.concept}`) && !settledKey.has(fk(t)));
+  return { ...file, terms: [...keep, ...fresh].sort((a, b) => a.term.localeCompare(b.term) || a.concept.localeCompare(b.concept)) };
 }
