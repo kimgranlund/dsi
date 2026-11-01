@@ -20,7 +20,7 @@ test('agreement approves; disagreement, low confidence and match mismatch are qu
   const a = pf('a', 'opus', [
     { token: 'agree', concept: D, match: 'close', confidence: 0.9, rationale: 'r' },
     { token: 'differ', concept: D, match: 'close', confidence: 0.9, rationale: 'r' },
-    { token: 'low', concept: D, match: 'close', confidence: 0.8, rationale: 'r' },
+    { token: 'low', concept: D, match: 'close', confidence: 0.65, rationale: 'r' }, // under the 0.7 bar (ADR 0005 amended)
     { token: 'match', concept: D, match: 'close', confidence: 0.9, rationale: 'r' },
     { token: 'none', unmapped: true, rationale: 'syntax' },
   ]);
@@ -81,10 +81,10 @@ test('proposal files are checked against the packet and the concept grammar', ()
 test('the classifier as third vote lowers the bar for exact/close agreement only', () => {
   const root = tmp();
   const a = pf('a', 'opus', [
-    { token: 't1', concept: D, match: 'close', confidence: 0.7, rationale: 'r' },
-    { token: 't2', concept: D, match: 'broad', confidence: 0.7, rationale: 'r' },
+    { token: 't1', concept: D, match: 'close', confidence: 0.65, rationale: 'r' },
+    { token: 't2', concept: D, match: 'broad', confidence: 0.65, rationale: 'r' },
     { token: 't3', concept: D, match: 'close', confidence: 0.5, rationale: 'r' },
-    { token: 't4', concept: D, match: 'close', confidence: 0.7, rationale: 'r' },
+    { token: 't4', concept: D, match: 'close', confidence: 0.65, rationale: 'r' },
   ]);
   const b = pf('b', 'sonnet', a.proposals.map((p: any) => ({ ...p })));
   const votes = new Map([['t1', D], ['t2', D], ['t3', D], ['t4', BG]]);
