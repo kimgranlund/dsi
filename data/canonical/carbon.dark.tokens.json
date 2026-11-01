@@ -686,34 +686,6 @@
         ]
       }
     },
-    "border-strong": {
-      "$description": "Border · Strong",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/property-border/emphasis-strong",
-          "match": "exact",
-          "mode": "dark",
-          "nativeName": "--cds-ai-border-strong",
-          "note": "no direct mapping; ai-border-strong maps to the more specific dsi:concept/color/intent-ai/property-border/emphasis-strong",
-          "product": "carbon",
-          "status": "nearest",
-          "theme": "g100",
-          "token": "ai-border-strong",
-          "version": "11.84.0",
-          "via": "more-specific"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.470588,
-          0.662745,
-          1
-        ],
-        "hex": "#78a9ff"
-      }
-    },
     "border-subtle": {
       "$description": "Border · Subtle",
       "$extensions": {
@@ -742,18 +714,909 @@
         "hex": "#393939"
       }
     },
-    "caution": {
-      "$description": "Caution",
+    "code-angle-bracket-text": {
+      "$description": "Angle bracket · Text",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-caution",
+          "concept": "dsi:concept/color/syntax-angle-bracket/property-text",
           "match": "exact",
           "mode": "dark",
-          "nativeName": "--cds-support-caution-minor",
+          "nativeName": "--cds-syntax-angle-bracket",
           "product": "carbon",
           "status": "match",
           "theme": "g100",
-          "token": "support-caution-minor",
+          "token": "syntax-angle-bracket",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.552941,
+          0.552941,
+          0.552941
+        ],
+        "hex": "#8d8d8d"
+      }
+    },
+    "code-annotation-text": {
+      "$description": "Annotation · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-annotation/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-annotation",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-annotation",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.031373,
+          0.741176,
+          0.729412
+        ],
+        "hex": "#08bdba"
+      }
+    },
+    "code-arithmetic-operator-text": {
+      "$description": "Arithmetic operator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-arithmetic-operator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-arithmetic-operator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-arithmetic-operator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-atom-text": {
+      "$description": "Atom · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-atom/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-atom",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-atom",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-attribute-name-text": {
+      "$description": "Attribute name · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-attribute-name/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-attribute-name",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-attribute-name",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-attribute-text": {
+      "$description": "Attribute · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-attribute/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-attribute",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-attribute",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-attribute-value-text": {
+      "$description": "Attribute value · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-attribute-value/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-attribute-value",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-attribute-value",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-bitwise-operator-text": {
+      "$description": "Bitwise operator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-bitwise-operator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-bitwise-operator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-bitwise-operator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-block-comment-text": {
+      "$description": "Block comment · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-block-comment/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-block-comment",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-block-comment",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
+      }
+    },
+    "code-bool-text": {
+      "$description": "Bool · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-bool/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-bool",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-bool",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-brace-text": {
+      "$description": "Brace · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-brace/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-brace",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-brace",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-bracket-text": {
+      "$description": "Bracket · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-bracket/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-bracket",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-bracket",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-character-text": {
+      "$description": "Character · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-character/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-character",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-character",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-class-name-text": {
+      "$description": "Class name · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-class-name/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-class-name",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-class-name",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.239216,
+          0.858824,
+          0.85098
+        ],
+        "hex": "#3ddbd9"
+      }
+    },
+    "code-color-text": {
+      "$description": "Color · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-color/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-color",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-color",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-comment-text": {
+      "$description": "Comment · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-comment/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-comment",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-comment",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
+      }
+    },
+    "code-compare-operator-text": {
+      "$description": "Compare operator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-compare-operator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-compare-operator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-compare-operator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-constant-text": {
+      "$description": "Constant · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-constant/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-constant",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-constant",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
+    "code-content-separator-text": {
+      "$description": "Content separator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-content-separator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-content-separator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-content-separator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-content-text": {
+      "$description": "Content · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-content/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-content",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-content",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-control-keyword-text": {
+      "$description": "Control keyword · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-control-keyword/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-control-keyword",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-control-keyword",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.745098,
+          0.584314,
+          1
+        ],
+        "hex": "#be95ff"
+      }
+    },
+    "code-control-operator-text": {
+      "$description": "Control operator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-control-operator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-control-operator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-control-operator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.745098,
+          0.584314,
+          1
+        ],
+        "hex": "#be95ff"
+      }
+    },
+    "code-definition-keyword-text": {
+      "$description": "Definition keyword · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-definition-keyword/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-definition-keyword",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-definition-keyword",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-definition-operator-text": {
+      "$description": "Definition operator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-definition-operator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-definition-operator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-definition-operator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-definition-text": {
+      "$description": "Definition · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-definition/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-definition",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-definition",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-deleted-text": {
+      "$description": "Deleted · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-deleted/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-deleted",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-deleted",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.635294,
+          0.098039,
+          0.121569
+        ],
+        "hex": "#a2191f"
+      }
+    },
+    "code-deref-operator-text": {
+      "$description": "Deref operator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-deref-operator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-deref-operator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-deref-operator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-doc-comment-text": {
+      "$description": "Doc comment · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-doc-comment/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-doc-comment",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-doc-comment",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
+      }
+    },
+    "code-doc-string-text": {
+      "$description": "Doc string · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-doc-string/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-doc-string",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-doc-string",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-document-meta-text": {
+      "$description": "Document meta · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-document-meta/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-document-meta",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-document-meta",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
+      }
+    },
+    "code-emphasis-text": {
+      "$description": "Emphasis · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-emphasis/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-emphasis",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-emphasis",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-escape-text": {
+      "$description": "Escape · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-escape/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-escape",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-escape",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-float-text": {
+      "$description": "Float · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-float/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-float",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-float",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.435294,
+          0.862745,
+          0.54902
+        ],
+        "hex": "#6fdc8c"
+      }
+    },
+    "code-function-text": {
+      "$description": "Function · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-function/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-function",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-function",
           "version": "11.84.0",
           "via": "direct"
         }
@@ -767,6 +1630,1464 @@
           0.105882
         ],
         "hex": "#f1c21b"
+      }
+    },
+    "code-heading-1-text": {
+      "$description": "Heading 1 · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-heading-1/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-heading-1",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-heading-1",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-heading-2-text": {
+      "$description": "Heading 2 · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-heading-2/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-heading-2",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-heading-2",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-heading-3-text": {
+      "$description": "Heading 3 · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-heading-3/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-heading-3",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-heading-3",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-heading-4-text": {
+      "$description": "Heading 4 · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-heading-4/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-heading-4",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-heading-4",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-heading-5-text": {
+      "$description": "Heading 5 · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-heading-5/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-heading-5",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-heading-5",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-heading-6-text": {
+      "$description": "Heading 6 · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-heading-6/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-heading-6",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-heading-6",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-heading-text": {
+      "$description": "Heading · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-heading/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-heading",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-heading",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-inserted-text": {
+      "$description": "Inserted · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-inserted/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-inserted",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-inserted",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.098039,
+          0.501961,
+          0.219608
+        ],
+        "hex": "#198038"
+      }
+    },
+    "code-integer-text": {
+      "$description": "Integer · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-integer/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-integer",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-integer",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.435294,
+          0.862745,
+          0.54902
+        ],
+        "hex": "#6fdc8c"
+      }
+    },
+    "code-invalid-text": {
+      "$description": "Invalid · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-invalid/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-invalid",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-invalid",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.980392,
+          0.301961,
+          0.337255
+        ],
+        "hex": "#fa4d56"
+      }
+    },
+    "code-keyword-text": {
+      "$description": "Keyword · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-keyword/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-keyword",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-keyword",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
+    "code-label-name-text": {
+      "$description": "Label name · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-label-name/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-label-name",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-label-name",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.65098,
+          0.784314,
+          1
+        ],
+        "hex": "#a6c8ff"
+      }
+    },
+    "code-line-comment-text": {
+      "$description": "Line comment · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-line-comment/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-line-comment",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-line-comment",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
+      }
+    },
+    "code-link-text": {
+      "$description": "Link · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-link/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-link",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-link",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
+    "code-list-text": {
+      "$description": "List · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-list/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-list",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-list",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-literal-text": {
+      "$description": "Literal · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-literal/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-literal",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-literal",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-local-text": {
+      "$description": "Local · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-local/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-local",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-local",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.65098,
+          0.784314,
+          1
+        ],
+        "hex": "#a6c8ff"
+      }
+    },
+    "code-logic-operator-text": {
+      "$description": "Logic operator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-logic-operator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-logic-operator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-logic-operator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-macro-name-text": {
+      "$description": "Macro name · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-macro-name/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-macro-name",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-macro-name",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-meta-text": {
+      "$description": "Meta · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-meta/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-meta",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-meta",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
+      }
+    },
+    "code-modifier-text": {
+      "$description": "Modifier · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-modifier/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-modifier",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-modifier",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
+    "code-module-keyword-text": {
+      "$description": "Module keyword · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-module-keyword/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-module-keyword",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-module-keyword",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.745098,
+          0.584314,
+          1
+        ],
+        "hex": "#be95ff"
+      }
+    },
+    "code-monospace-text": {
+      "$description": "Monospace · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-monospace/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-monospace",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-monospace",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-name-text": {
+      "$description": "Name · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-name/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-name",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-name",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.65098,
+          0.784314,
+          1
+        ],
+        "hex": "#a6c8ff"
+      }
+    },
+    "code-namespace-text": {
+      "$description": "Namespace · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-namespace/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-namespace",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-namespace",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.239216,
+          0.858824,
+          0.85098
+        ],
+        "hex": "#3ddbd9"
+      }
+    },
+    "code-null-text": {
+      "$description": "Null · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-null/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-null",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-null",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-number-text": {
+      "$description": "Number · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-number/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-number",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-number",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.435294,
+          0.862745,
+          0.54902
+        ],
+        "hex": "#6fdc8c"
+      }
+    },
+    "code-operator-keyword-text": {
+      "$description": "Operator keyword · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-operator-keyword/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-operator-keyword",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-operator-keyword",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
+    "code-operator-text": {
+      "$description": "Operator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-operator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-operator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-operator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-paren-text": {
+      "$description": "Paren · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-paren/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-paren",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-paren",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-processing-instruction-text": {
+      "$description": "Processing instruction · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-processing-instruction/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-processing-instruction",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-processing-instruction",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-property-name-text": {
+      "$description": "Property name · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-property-name/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-property-name",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-property-name",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.694118,
+          1
+        ],
+        "hex": "#33b1ff"
+      }
+    },
+    "code-punctuation-text": {
+      "$description": "Punctuation · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-punctuation/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-punctuation",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-punctuation",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-quote-text": {
+      "$description": "Quote · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-quote/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-quote",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-quote",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.258824,
+          0.745098,
+          0.396078
+        ],
+        "hex": "#42be65"
+      }
+    },
+    "code-regexp-text": {
+      "$description": "Regexp · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-regexp/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-regexp",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-regexp",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.745098,
+          0.584314,
+          1
+        ],
+        "hex": "#be95ff"
+      }
+    },
+    "code-self-text": {
+      "$description": "Self · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-self/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-self",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-self",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.239216,
+          0.858824,
+          0.85098
+        ],
+        "hex": "#3ddbd9"
+      }
+    },
+    "code-separator-text": {
+      "$description": "Separator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-separator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-separator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-separator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-special-string-text": {
+      "$description": "Special string · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-special-string/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-special-string",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-special-string",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.745098,
+          0.584314,
+          1
+        ],
+        "hex": "#be95ff"
+      }
+    },
+    "code-special-text": {
+      "$description": "Special · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-special/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-special",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-special",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
+    "code-square-bracket-text": {
+      "$description": "Square bracket · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-square-bracket/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-square-bracket",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-square-bracket",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-standard-text": {
+      "$description": "Standard · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-standard/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-standard",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-standard",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.270588,
+          0.537255,
+          1
+        ],
+        "hex": "#4589ff"
+      }
+    },
+    "code-strikethrough-text": {
+      "$description": "Strikethrough · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-strikethrough/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-strikethrough",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-strikethrough",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-string-text": {
+      "$description": "String · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-string/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-string",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-string",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-strong-text": {
+      "$description": "Strong · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-strong/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-strong",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-strong",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.956863,
+          0.956863,
+          0.956863
+        ],
+        "hex": "#f4f4f4"
+      }
+    },
+    "code-tag-name-text": {
+      "$description": "Tag name · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-tag-name/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-tag-name",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-tag-name",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.239216,
+          0.858824,
+          0.85098
+        ],
+        "hex": "#3ddbd9"
+      }
+    },
+    "code-tag-text": {
+      "$description": "Tag · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-tag/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-tag",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-tag",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.239216,
+          0.858824,
+          0.85098
+        ],
+        "hex": "#3ddbd9"
+      }
+    },
+    "code-type-name-text": {
+      "$description": "Type name · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-type-name/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-type-name",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-type-name",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.239216,
+          0.858824,
+          0.85098
+        ],
+        "hex": "#3ddbd9"
+      }
+    },
+    "code-type-operator-text": {
+      "$description": "Type operator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-type-operator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-type-operator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-type-operator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.239216,
+          0.858824,
+          0.85098
+        ],
+        "hex": "#3ddbd9"
+      }
+    },
+    "code-type-text": {
+      "$description": "Type · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-type/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-type",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-type",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.239216,
+          0.858824,
+          0.85098
+        ],
+        "hex": "#3ddbd9"
+      }
+    },
+    "code-unit-text": {
+      "$description": "Unit · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-unit/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-unit",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-unit",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.435294,
+          0.862745,
+          0.54902
+        ],
+        "hex": "#6fdc8c"
+      }
+    },
+    "code-update-operator-text": {
+      "$description": "Update operator · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-update-operator/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-update-operator",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-update-operator",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-url-text": {
+      "$description": "Url · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-url/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-url",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-url",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878431,
+          0.878431,
+          0.878431
+        ],
+        "hex": "#e0e0e0"
+      }
+    },
+    "code-variable-name-text": {
+      "$description": "Variable name · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-variable-name/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-variable-name",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-variable-name",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.65098,
+          0.784314,
+          1
+        ],
+        "hex": "#a6c8ff"
+      }
+    },
+    "code-variable-text": {
+      "$description": "Variable · Text",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/syntax-variable/property-text",
+          "match": "exact",
+          "mode": "dark",
+          "nativeName": "--cds-syntax-variable",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "syntax-variable",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.65098,
+          0.784314,
+          1
+        ],
+        "hex": "#a6c8ff"
       }
     },
     "danger": {
@@ -2624,13 +4945,13 @@
       "$extensions": {
         "io.nonoun.dsi": {
           "concept": "dsi:concept/color/intent-warning",
-          "match": "close",
+          "match": "exact",
           "mode": "dark",
-          "nativeName": "--cds-support-warning",
+          "nativeName": "--cds-support-caution-minor",
           "product": "carbon",
           "status": "match",
           "theme": "g100",
-          "token": "support-warning",
+          "token": "support-caution-minor",
           "version": "11.84.0",
           "via": "direct"
         }
@@ -2671,6 +4992,33 @@
           0.105882
         ],
         "hex": "#f1c21b"
+      }
+    },
+    "warning-strong": {
+      "$description": "Warning · Strong",
+      "$extensions": {
+        "io.nonoun.dsi": {
+          "concept": "dsi:concept/color/intent-warning/emphasis-strong",
+          "match": "close",
+          "mode": "dark",
+          "nativeName": "--cds-support-caution-major",
+          "product": "carbon",
+          "status": "match",
+          "theme": "g100",
+          "token": "support-caution-major",
+          "version": "11.84.0",
+          "via": "direct"
+        }
+      },
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.513725,
+          0.168627
+        ],
+        "hex": "#ff832b"
       }
     }
   }

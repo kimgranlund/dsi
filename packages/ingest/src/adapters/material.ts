@@ -3,6 +3,7 @@ import path from 'node:path';
 import * as sass from 'sass';
 import type { Adapter, OutputSet } from '../adapter.ts';
 import { EXT, inferLiteral, isAlias, type Token } from '../dtcg.ts';
+import { materialDocGroups } from '../structure.ts';
 
 /**
  * @material/web ships tokens as Sass modules (tokens/_md-{ref,sys,comp}-*.scss). Each exposes values() (or
@@ -141,5 +142,14 @@ export const material: Adapter = (pkgs, source) => {
       counts.tokens++;
     }
   }
-  return { sets: [...sets.values()], report: { notes, counts } };
+  // Shipped groups and descriptions from the documented token file, when the source lists it.
+  const doc = source.entries.find((e) => e.format === 'sass-doc-groups') as (typeof source.entries)[number] & { groupOrder?: string[]; groupOrderSource?: string } | undefined;
+  let structure;
+  if (doc) {
+    const r = materialDocGroups(path.join(pkgs[source.package.name].dir, doc.path), doc.path, doc.groupOrder, doc.groupOrderSource);
+    structure = r.structure;
+    for (const s of sets.values()) for (const [p, t] of s.tokens) { const d = r.descriptions.get(p); if (d) (t as Token & { $description?: string }).$description = d; }
+    counts.described = r.descriptions.size;
+  }
+  return { sets: [...sets.values()], structure, report: { notes, counts } };
 };

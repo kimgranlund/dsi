@@ -810,7 +810,7 @@
       "concept": "dsi:concept/color/usage-surface/property-background",
       "match": "broad",
       "confidence": 0.7,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "One specific surface variant (brightest in dark theme, equal to surface in light); the concept does not distinguish dim/bright.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -821,6 +821,26 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T00:55:25.880Z"
+      },
+      "supersededBy": "m-d6fd8589be86"
+    },
+    {
+      "id": "m-d6fd8589be86",
+      "token": "md.sys.color.surface-bright",
+      "concept": "dsi:concept/color/usage-surface/property-background/brightness-bright",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "M3 color roles: surface dim/bright keep their relative brightness across light and dark themes (m3.material.io/styles/color/roles).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
       }
     },
     {
@@ -923,12 +943,31 @@
       }
     },
     {
+      "id": "m-2186d512fa6e",
+      "token": "md.sys.color.surface-dim",
+      "concept": "dsi:concept/color/usage-surface/property-background/brightness-dim",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "M3 color roles: surface dim/bright keep their relative brightness across light and dark themes (m3.material.io/styles/color/roles).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
       "id": "m-d75da7202dab",
       "token": "md.sys.color.surface-dim",
       "concept": "dsi:concept/color/usage-surface/property-background",
       "match": "broad",
       "confidence": 0.7,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "One specific surface variant (dimmest in light theme, equal to surface in dark); the concept does not distinguish dim/bright.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -939,7 +978,8 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T00:55:28.988Z"
-      }
+      },
+      "supersededBy": "m-2186d512fa6e"
     },
     {
       "id": "m-eb401777db1d",

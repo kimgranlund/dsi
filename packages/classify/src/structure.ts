@@ -1,7 +1,7 @@
 import { words, facetValue, type Facet, type TermsFile } from './classify.ts';
 
 export interface ShippedGroup { label: string; properties?: string[]; tokens: string[]; groups: ShippedGroup[] }
-export interface ShippedStructure { kind: 'shipped-groups' | 'shipped-order'; file: string; groups: ShippedGroup[] }
+export interface ShippedStructure { kind: 'shipped-groups' | 'shipped-order'; file: string; ordered?: boolean; groups: ShippedGroup[] }
 
 export interface Group {
   id: string;
@@ -69,6 +69,8 @@ export function buildStructure(tokens: string[], terms: TermsFile, facetsOf: Fac
   let i = 0;
   const walk = (gs: ShippedGroup[]) => gs.forEach((g) => { g.tokens.forEach((t) => !shippedIndex.has(t) && shippedIndex.set(t, i++)); walk(g.groups); });
   if (shipped) walk(shipped.groups);
+  // Shipped groups whose files list tokens alphabetically give groups, not order.
+  const shippedOrdered = shipped?.ordered !== false;
 
   // A list whose emphasis runs both below and above the base reads as a ramp; otherwise the base comes first.
   let ramp = false;
@@ -116,9 +118,9 @@ export function buildStructure(tokens: string[], terms: TermsFile, facetsOf: Fac
       const members = g.tokens.filter((t) => inSet.has(t) && !assigned.has(t));
       members.forEach((t) => assigned.add(t));
       if (members.length) {
-        const ordered = order(members, true);
+        const ordered = order(members, shippedOrdered);
         const { main, subs } = subgroupsOf(ordered, 1);
-        groups.push({ id: `g-${groups.length}`, label: parent ? `${parent}: ${g.label}` : g.label, source: 'shipped-group', order: 'shipped', properties: g.properties, tokens: main, subgroups: subs.map((s) => ({ ...s, tokens: order(s.tokens, true) })) });
+        groups.push({ id: `g-${groups.length}`, label: parent ? `${parent}: ${g.label}` : g.label, source: 'shipped-group', order: shippedOrdered ? 'shipped' : 'progression', properties: g.properties, tokens: main, subgroups: subs.map((s) => ({ ...s, tokens: order(s.tokens, shippedOrdered) })) });
       }
       flat(g.groups, g.label);
     });

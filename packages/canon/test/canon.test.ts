@@ -19,6 +19,10 @@ const DBG = 'dsi:concept/color/intent-danger/property-background';
 test('canonical names come from facet values in order', () => {
   assert.deepEqual(canonicalName(o, 'dsi:concept/color/intent-danger/usage-on-fill/property-foreground'), { group: 'color', name: 'danger-on-fill-foreground' });
   assert.deepEqual(canonicalName(o, 'dsi:concept/color/usage-inverse+link/property-text/state-hover'), { group: 'color', name: 'inverse+link-text-hover' });
+  // Syntax values are prefixed so Lezer's link/strong/emphasis cannot collide with usage-link or emphasis-strong.
+  assert.deepEqual(canonicalName(o, 'dsi:concept/color/syntax-link/property-text'), { group: 'color', name: 'code-link-text' });
+  assert.notDeepEqual(canonicalName(o, 'dsi:concept/color/syntax-link/property-text'), canonicalName(o, 'dsi:concept/color/usage-link/property-text'));
+  assert.deepEqual(canonicalName(o, 'dsi:concept/color/usage-surface/property-background/brightness-dim'), { group: 'color', name: 'surface-background-dim' });
 });
 
 test('each product answers per mode; nearest is flagged; unknown is omitted, never invented', () => {

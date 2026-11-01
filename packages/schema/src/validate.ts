@@ -6,7 +6,7 @@ import type { Ajv2020 } from 'ajv/dist/2020.js';
 import type { FormatsPlugin } from 'ajv-formats';
 import { DSI, expand, inScheme, loadOntology, toQuads, type Issue, type Ontology } from './ontology.ts';
 import { validateNative, valueIssue } from './native.ts';
-import { parseConcept } from './concepts.ts';
+import { canonicalNameOf, parseConcept } from './concepts.ts';
 
 // ajv and ajv-formats are CommonJS with a `default` export; load them through require for correct interop.
 const require = createRequire(import.meta.url);
@@ -153,7 +153,7 @@ export async function validateRepo({ root, ontologyDir = path.join(root, 'ontolo
         const ci = conceptIssue(ontology, x.concept);
         if (ci) { issues.push({ file: rel(fp), message: `${at}: concept ${x.concept} ${ci}` }); continue; }
         const pc = parseConcept(ontology, x.concept);
-        if (typeof pc !== 'string' && (pc.domain !== group || Object.values(pc.facets).map(String).join('-') !== name)) issues.push({ file: rel(fp), message: `${at}: name does not match concept ${x.concept}` });
+        if (typeof pc !== 'string' && (pc.domain !== group || canonicalNameOf(pc) !== name)) issues.push({ file: rel(fp), message: `${at}: name does not match concept ${x.concept}` });
       }
       if (n !== entry.tokens) issues.push({ file: rel(fp), message: `manifest says ${entry.tokens} tokens, file has ${n}` });
     }
@@ -185,7 +185,7 @@ type MappingFile = {
   unmapped?: (Judgment & { token: string })[];
 };
 
-export const TERM_FACETS = ['intent', 'usage', 'property', 'emphasis', 'state'] as const;
+export const TERM_FACETS = ['intent', 'usage', 'syntax', 'property', 'emphasis', 'brightness', 'state'] as const;
 /** The facet whose value scheme holds this concept (dsi:intent/danger -> intent), if any. */
 export function facetOfConcept(o: Ontology, concept: string): (typeof TERM_FACETS)[number] | undefined {
   return TERM_FACETS.find((f) => concept.startsWith(`dsi:${f}/`) && inScheme(o, concept, `dsi:scheme/${f}`));
@@ -199,7 +199,7 @@ function conceptIssue(o: Ontology, ref: string): string | undefined {
   return typeof p === 'string' ? p : undefined;
 }
 
-const FACET_SCHEMES: Record<string, string> = { domain: 'domain', emphasis: 'emphasis', intent: 'intent', property: 'property', state: 'state', usage: 'usage' };
+const FACET_SCHEMES: Record<string, string> = { domain: 'domain', emphasis: 'emphasis', intent: 'intent', property: 'property', state: 'state', usage: 'usage', syntax: 'syntax', brightness: 'brightness' };
 
 function checkMappingSemantics(o: Ontology, m: MappingFile, at: string, productExists: (id: string) => boolean): Issue[] {
   const out: Issue[] = [];

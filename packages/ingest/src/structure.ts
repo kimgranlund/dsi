@@ -6,7 +6,14 @@ import ts from 'typescript';
  * as structure.json. `kind` says what the evidence is: designer-declared groups, or only the authored source order.
  */
 export interface ShippedGroup { label: string; properties?: string[]; tokens: string[]; groups: ShippedGroup[] }
-export interface ShippedStructure { kind: 'shipped-groups' | 'shipped-order'; file: string; groups: ShippedGroup[] }
+export interface ShippedStructure {
+  kind: 'shipped-groups' | 'shipped-order';
+  file: string;
+  /** False when the shipped file lists tokens in no meaningful order (alphabetical): groups count, order does not. */
+  ordered?: boolean;
+  groupOrderSource?: string;
+  groups: ShippedGroup[];
+}
 
 const str = (e: ts.Expression | undefined) => (e && (ts.isStringLiteral(e) || ts.isNoSubstitutionTemplateLiteral(e)) ? e.text : undefined);
 
@@ -44,4 +51,32 @@ export function carbonTokenGroups(file: string, rel: string): ShippedStructure {
   if (!root) return { kind: 'shipped-groups', file: rel, groups: order.map((id) => build(id, new Set([id]))) };
   const all = build(root, new Set([root]));
   return { kind: 'shipped-groups', file: rel, groups: [...all.groups, ...(all.tokens.length ? [{ label: 'Misc', tokens: all.tokens, groups: [] }] : [])] };
+}
+
+/**
+ * material-web tokens/versions/latest/sass/_md-sys-color.scss documents every token as
+ *   /// md.sys.color.<key> (<Group> / <Subgroup>)
+ *   ///
+ *   /// <description>
+ * Returns the groups (nested on " / ") and each token's description. The file is alphabetical, so token order inside
+ * groups is not evidence; group order comes from the docs (groupOrder).
+ */
+export function materialDocGroups(file: string, rel: string, groupOrder: string[] = [], groupOrderSource?: string): { structure: ShippedStructure; descriptions: Map<string, string> } {
+  const lines = fs.readFileSync(file, 'utf8').split('\n');
+  const descriptions = new Map<string, string>();
+  const top = new Map<string, ShippedGroup>();
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(/^\/\/\/ (md\.sys\.color\.[a-z0-9-]+) \((.+)\)\s*$/);
+    if (!m) continue;
+    const desc: string[] = [];
+    for (let j = i + 1; j < lines.length && lines[j].startsWith('///'); j++) { const t = lines[j].replace(/^\/\/\/ ?/, '').trim(); if (t) desc.push(t); }
+    if (desc.length) descriptions.set(m[1], desc.join(' ').replace(/^Note: /, ''));
+    const [g, sub] = m[2].split(' / ').map((x) => x.trim());
+    const group = top.get(g) ?? top.set(g, { label: g, tokens: [], groups: [] }).get(g)!;
+    if (sub) { let sg = group.groups.find((x) => x.label === sub); if (!sg) group.groups.push((sg = { label: sub, tokens: [], groups: [] })); sg.tokens.push(m[1]); }
+    else group.tokens.push(m[1]);
+  }
+  const rank = (l: string) => { const i = groupOrder.indexOf(l); return i < 0 ? 99 : i; };
+  const groups = [...top.values()].sort((a, b) => rank(a.label) - rank(b.label) || a.label.localeCompare(b.label));
+  return { structure: { kind: 'shipped-groups', file: rel, ordered: false, ...(groupOrderSource ? { groupOrderSource } : {}), groups }, descriptions };
 }

@@ -651,12 +651,12 @@
         "hex": "#e4deff"
       }
     },
-    "ai-border-strong": {
-      "$description": "AI · Border · Strong",
+    "ai-border-subtle": {
+      "$description": "AI · Border · Subtle",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-ai/property-border/emphasis-strong",
-          "match": "close",
+          "concept": "dsi:concept/color/intent-ai/property-border/emphasis-subtle",
+          "match": "exact",
           "mode": "increased-contrast",
           "nativeName": "--p-color-border-magic-secondary",
           "product": "polaris",
@@ -678,12 +678,12 @@
         "hex": "#9474ff"
       }
     },
-    "ai-border-strong-hover": {
-      "$description": "AI · Border · Strong · Hover",
+    "ai-border-subtle-hover": {
+      "$description": "AI · Border · Subtle · Hover",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-ai/property-border/emphasis-strong/state-hover",
-          "match": "close",
+          "concept": "dsi:concept/color/intent-ai/property-border/emphasis-subtle/state-hover",
+          "match": "exact",
           "mode": "increased-contrast",
           "nativeName": "--p-color-border-magic-secondary-hover",
           "product": "polaris",
@@ -1228,33 +1228,6 @@
         "hex": "#cccccc"
       }
     },
-    "border-strong": {
-      "$description": "Border · Strong",
-      "$extensions": {
-        "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/property-border/emphasis-strong",
-          "match": "close",
-          "mode": "increased-contrast",
-          "nativeName": "--p-color-border-tertiary",
-          "product": "polaris",
-          "status": "match",
-          "theme": "light-high-contrast-experimental",
-          "token": "color-border-tertiary",
-          "version": "9.4.2",
-          "via": "direct"
-        }
-      },
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8,
-          0.8,
-          0.8
-        ],
-        "hex": "#cccccc"
-      }
-    },
     "border-subtle": {
       "$description": "Border · Subtle",
       "$extensions": {
@@ -1282,32 +1255,32 @@
         "hex": "#8a8a8a"
       }
     },
-    "caution": {
-      "$description": "Caution",
+    "categorical-background": {
+      "$description": "Categorical · Background",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-caution",
-          "match": "exact",
+          "concept": "dsi:concept/color/usage-categorical/property-background",
+          "match": "broad",
           "mode": "increased-contrast",
-          "nativeName": "--p-color-bg-fill-caution",
-          "note": "no direct mapping; color-bg-fill-caution maps to the more specific dsi:concept/color/intent-caution/property-background",
+          "nativeName": "--p-color-avatar-bg-fill",
+          "note": "only a broad match",
           "product": "polaris",
           "status": "nearest",
           "theme": "light-high-contrast-experimental",
-          "token": "color-bg-fill-caution",
+          "token": "color-avatar-bg-fill",
           "version": "9.4.2",
-          "via": "more-specific"
+          "via": "direct"
         }
       },
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          1,
-          0.902,
-          0
+          0.7098,
+          0.7098,
+          0.7098
         ],
-        "hex": "#ffe600"
+        "hex": "#b5b5b5"
       }
     },
     "caution-background": {
@@ -1878,12 +1851,12 @@
         "hex": "#fec1c7"
       }
     },
-    "danger-border-strong": {
-      "$description": "Danger · Border · Strong",
+    "danger-border-subtle": {
+      "$description": "Danger · Border · Subtle",
       "$extensions": {
         "io.nonoun.dsi": {
-          "concept": "dsi:concept/color/intent-danger/property-border/emphasis-strong",
-          "match": "close",
+          "concept": "dsi:concept/color/intent-danger/property-border/emphasis-subtle",
+          "match": "exact",
           "mode": "increased-contrast",
           "nativeName": "--p-color-border-critical-secondary",
           "product": "polaris",

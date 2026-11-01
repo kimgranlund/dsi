@@ -59,6 +59,17 @@
       "definition": "What the token communicates, independent of hue: status, brand emphasis or action consequence."
     },
     {
+      "id": "dsi:facet/syntax", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Syntax", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/syntax", "bindingProperty": "dsi:hasSyntax",
+      "definition": "The code or document syntax role a token colors (keyword, string, comment...). Values are the @lezer/highlight tags (ontology/schemes/syntax.jsonld)."
+    },
+    {
+      "id": "dsi:facet/brightness", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
+      "prefLabel": "Brightness", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/brightness", "bindingProperty": "dsi:hasBrightness",
+      "definition": "Lightness relative to its family that holds in every theme (dimmest stays dimmest in light and dark), independent of emphasis.",
+      "example": "Material surface-dim, surface-bright (m3.material.io/styles/color/roles: keep their relative brightness across both light and dark theme)"
+    },
+    {
       "id": "dsi:facet/property", "type": "Concept", "inScheme": "dsi:scheme/facets", "topConceptOf": "dsi:scheme/facets",
       "prefLabel": "Property", "facetKind": "dsi:facet-kind/identity", "valueScheme": "dsi:scheme/property", "bindingProperty": "dsi:hasProperty",
       "definition": "Which visual property the token is meant to paint or size (background, text, border, ...).",
@@ -102,6 +113,10 @@
     { "id": "dsi:domain/elevation", "type": "Concept", "inScheme": "dsi:scheme/domain", "topConceptOf": "dsi:scheme/domain", "prefLabel": "Elevation", "definition": "Shadows and depth layering." },
     { "id": "dsi:domain/motion", "type": "Concept", "inScheme": "dsi:scheme/domain", "topConceptOf": "dsi:scheme/domain", "prefLabel": "Motion", "definition": "Durations and easing." },
     { "id": "dsi:domain/opacity", "type": "Concept", "inScheme": "dsi:scheme/domain", "topConceptOf": "dsi:scheme/domain", "prefLabel": "Opacity" },
+
+    { "id": "dsi:scheme/brightness", "type": "ConceptScheme", "prefLabel": "Brightness values" },
+    { "id": "dsi:brightness/dim", "type": "Concept", "inScheme": "dsi:scheme/brightness", "topConceptOf": "dsi:scheme/brightness", "prefLabel": "Dim", "definition": "The dimmest member of its family in every theme." },
+    { "id": "dsi:brightness/bright", "type": "Concept", "inScheme": "dsi:scheme/brightness", "topConceptOf": "dsi:scheme/brightness", "prefLabel": "Bright", "definition": "The brightest member of its family in every theme." },
 
     { "id": "dsi:scheme/emphasis", "type": "ConceptScheme", "prefLabel": "Emphasis values", "editorialNote": "Five steps since color-v1 round 1 (Material surface-container lowest..highest, Carbon layer-01..03). Families with three or fewer steps use subtle, default, strong." },
     { "id": "dsi:emphasis/subtlest", "type": "Concept", "inScheme": "dsi:scheme/emphasis", "topConceptOf": "dsi:scheme/emphasis", "prefLabel": "Subtlest", "notation": "1", "definition": "The weakest step of a family with more than three steps, e.g. Material surface-container-lowest." },
@@ -152,6 +167,7 @@
     { "id": "dsi:usage/inverse", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Inverse", "definition": "Contrasting surfaces with the opposite lightness of the current theme (e.g. dark tooltip in light mode).", "example": "Material inverse-surface, Carbon background-inverse, Polaris color-bg-inverse" },
     { "id": "dsi:usage/field", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Field", "definition": "Form inputs: text fields, selects, text areas.", "example": "Carbon field-01, Polaris color-input-bg-surface" },
     { "id": "dsi:usage/link", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Link", "definition": "Inline navigational text links.", "example": "Carbon link-primary, Polaris color-text-link" },
+    { "id": "dsi:usage/categorical", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Categorical", "definition": "A set of distinct colors assigned to identities or series (avatars by name hash, chart series), where each slot is a different color, not a level.", "example": "Polaris color-avatar-one..seven (assigned by hashing the user's name)" },
     { "id": "dsi:usage/navigation", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Navigation", "definition": "Application navigation chrome: side nav, top bar.", "example": "Polaris color-nav-bg" },
     { "id": "dsi:usage/skeleton", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Skeleton", "definition": "Loading placeholders.", "example": "Carbon skeleton-background" },
     { "id": "dsi:usage/code", "type": "Concept", "inScheme": "dsi:scheme/usage", "topConceptOf": "dsi:scheme/usage", "prefLabel": "Code", "definition": "Code display and syntax highlighting.", "deprecated": true, "editorialNote": "Deprecated 2026-10-31 after color-v1 round 1: too coarse for syntax-highlighting roles, which stay unmapped until a syntax-role vocabulary exists." },

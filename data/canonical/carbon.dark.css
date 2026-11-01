@@ -13,7 +13,6 @@
   --dsi-color-ai-overlay-shadow: var(--cds-ai-popover-shadow-outer-01, #000000); /* nearest: broad */
   --dsi-color-ai-scrim-background: var(--cds-ai-overlay, #000000);
   --dsi-color-ai-skeleton-background: var(--cds-ai-skeleton-background, #78a9ff);
-  --dsi-color-caution: var(--cds-support-caution-minor, #f1c21b);
   --dsi-color-danger: var(--cds-support-error, #fa4d56);
   --dsi-color-danger-text: var(--cds-text-error, #ff8389);
   --dsi-color-danger-inverse: var(--cds-support-error-inverse, #da1e28);
@@ -21,7 +20,8 @@
   --dsi-color-info-inverse: var(--cds-support-info-inverse, #0043ce);
   --dsi-color-success: var(--cds-support-success, #42be65);
   --dsi-color-success-inverse: var(--cds-support-success-inverse, #24a148);
-  --dsi-color-warning: var(--cds-support-warning, #f1c21b);
+  --dsi-color-warning: var(--cds-support-caution-minor, #f1c21b);
+  --dsi-color-warning-strong: var(--cds-support-caution-major, #ff832b);
   --dsi-color-warning-inverse: var(--cds-support-warning-inverse, #f1c21b);
   --dsi-color-background: var(--cds-background, #161616); /* nearest: exact */
   --dsi-color-background-subtle: var(--cds-layer-01, #262626); /* nearest: close */
@@ -34,7 +34,6 @@
   --dsi-color-background-hover_selected: var(--cds-background-selected-hover, #8d8d8d);
   --dsi-color-background-selected: var(--cds-background-selected, #8d8d8d);
   --dsi-color-border: var(--cds-border-inverse, #f4f4f4); /* nearest: exact */
-  --dsi-color-border-strong: var(--cds-ai-border-strong, #78a9ff); /* nearest: exact */
   --dsi-color-border-subtle: var(--cds-border-subtle-00, #393939); /* nearest: broad */
   --dsi-color-border-disabled: var(--cds-border-disabled, #8d8d8d);
   --dsi-color-focus-ring: var(--cds-focus, #ffffff);
@@ -45,6 +44,94 @@
   --dsi-color-text: var(--cds-text-primary, #f4f4f4);
   --dsi-color-text-subtle: var(--cds-text-secondary, #c6c6c6);
   --dsi-color-text-disabled: var(--cds-text-disabled, #f4f4f4);
+  --dsi-color-code-angle-bracket-text: var(--cds-syntax-angle-bracket, #8d8d8d);
+  --dsi-color-code-annotation-text: var(--cds-syntax-annotation, #08bdba);
+  --dsi-color-code-arithmetic-operator-text: var(--cds-syntax-arithmetic-operator, #e0e0e0);
+  --dsi-color-code-atom-text: var(--cds-syntax-atom, #f4f4f4);
+  --dsi-color-code-attribute-name-text: var(--cds-syntax-attribute-name, #33b1ff);
+  --dsi-color-code-attribute-value-text: var(--cds-syntax-attribute-value, #f4f4f4);
+  --dsi-color-code-attribute-text: var(--cds-syntax-attribute, #33b1ff);
+  --dsi-color-code-bitwise-operator-text: var(--cds-syntax-bitwise-operator, #e0e0e0);
+  --dsi-color-code-block-comment-text: var(--cds-syntax-block-comment, #42be65);
+  --dsi-color-code-bool-text: var(--cds-syntax-bool, #f4f4f4);
+  --dsi-color-code-brace-text: var(--cds-syntax-brace, #e0e0e0);
+  --dsi-color-code-bracket-text: var(--cds-syntax-bracket, #e0e0e0);
+  --dsi-color-code-character-text: var(--cds-syntax-character, #f4f4f4);
+  --dsi-color-code-class-name-text: var(--cds-syntax-class-name, #3ddbd9);
+  --dsi-color-code-color-text: var(--cds-syntax-color, #f4f4f4);
+  --dsi-color-code-comment-text: var(--cds-syntax-comment, #42be65);
+  --dsi-color-code-compare-operator-text: var(--cds-syntax-compare-operator, #e0e0e0);
+  --dsi-color-code-constant-text: var(--cds-syntax-constant, #4589ff);
+  --dsi-color-code-content-separator-text: var(--cds-syntax-content-separator, #e0e0e0);
+  --dsi-color-code-content-text: var(--cds-syntax-content, #f4f4f4);
+  --dsi-color-code-control-keyword-text: var(--cds-syntax-control-keyword, #be95ff);
+  --dsi-color-code-control-operator-text: var(--cds-syntax-control-operator, #be95ff);
+  --dsi-color-code-definition-keyword-text: var(--cds-syntax-definition-keyword, #33b1ff);
+  --dsi-color-code-definition-operator-text: var(--cds-syntax-definition-operator, #33b1ff);
+  --dsi-color-code-definition-text: var(--cds-syntax-definition, #33b1ff);
+  --dsi-color-code-deleted-text: var(--cds-syntax-deleted, #a2191f);
+  --dsi-color-code-deref-operator-text: var(--cds-syntax-deref-operator, #e0e0e0);
+  --dsi-color-code-doc-comment-text: var(--cds-syntax-doc-comment, #42be65);
+  --dsi-color-code-doc-string-text: var(--cds-syntax-doc-string, #f4f4f4);
+  --dsi-color-code-document-meta-text: var(--cds-syntax-document-meta, #42be65);
+  --dsi-color-code-emphasis-text: var(--cds-syntax-emphasis, #f4f4f4);
+  --dsi-color-code-escape-text: var(--cds-syntax-escape, #e0e0e0);
+  --dsi-color-code-float-text: var(--cds-syntax-float, #6fdc8c);
+  --dsi-color-code-function-text: var(--cds-syntax-function, #f1c21b);
+  --dsi-color-code-heading-1-text: var(--cds-syntax-heading-1, #33b1ff);
+  --dsi-color-code-heading-2-text: var(--cds-syntax-heading-2, #33b1ff);
+  --dsi-color-code-heading-3-text: var(--cds-syntax-heading-3, #33b1ff);
+  --dsi-color-code-heading-4-text: var(--cds-syntax-heading-4, #33b1ff);
+  --dsi-color-code-heading-5-text: var(--cds-syntax-heading-5, #33b1ff);
+  --dsi-color-code-heading-6-text: var(--cds-syntax-heading-6, #33b1ff);
+  --dsi-color-code-heading-text: var(--cds-syntax-heading, #33b1ff);
+  --dsi-color-code-inserted-text: var(--cds-syntax-inserted, #198038);
+  --dsi-color-code-integer-text: var(--cds-syntax-integer, #6fdc8c);
+  --dsi-color-code-invalid-text: var(--cds-syntax-invalid, #fa4d56);
+  --dsi-color-code-keyword-text: var(--cds-syntax-keyword, #4589ff);
+  --dsi-color-code-label-name-text: var(--cds-syntax-label-name, #a6c8ff);
+  --dsi-color-code-line-comment-text: var(--cds-syntax-line-comment, #42be65);
+  --dsi-color-code-link-text: var(--cds-syntax-link, #4589ff);
+  --dsi-color-code-list-text: var(--cds-syntax-list, #f4f4f4);
+  --dsi-color-code-literal-text: var(--cds-syntax-literal, #f4f4f4);
+  --dsi-color-code-local-text: var(--cds-syntax-local, #a6c8ff);
+  --dsi-color-code-logic-operator-text: var(--cds-syntax-logic-operator, #e0e0e0);
+  --dsi-color-code-macro-name-text: var(--cds-syntax-macro-name, #f4f4f4);
+  --dsi-color-code-meta-text: var(--cds-syntax-meta, #42be65);
+  --dsi-color-code-modifier-text: var(--cds-syntax-modifier, #4589ff);
+  --dsi-color-code-module-keyword-text: var(--cds-syntax-module-keyword, #be95ff);
+  --dsi-color-code-monospace-text: var(--cds-syntax-monospace, #f4f4f4);
+  --dsi-color-code-name-text: var(--cds-syntax-name, #a6c8ff);
+  --dsi-color-code-namespace-text: var(--cds-syntax-namespace, #3ddbd9);
+  --dsi-color-code-null-text: var(--cds-syntax-null, #f4f4f4);
+  --dsi-color-code-number-text: var(--cds-syntax-number, #6fdc8c);
+  --dsi-color-code-operator-keyword-text: var(--cds-syntax-operator-keyword, #4589ff);
+  --dsi-color-code-operator-text: var(--cds-syntax-operator, #e0e0e0);
+  --dsi-color-code-paren-text: var(--cds-syntax-paren, #e0e0e0);
+  --dsi-color-code-processing-instruction-text: var(--cds-syntax-processing-instruction, #f4f4f4);
+  --dsi-color-code-property-name-text: var(--cds-syntax-property-name, #33b1ff);
+  --dsi-color-code-punctuation-text: var(--cds-syntax-punctuation, #e0e0e0);
+  --dsi-color-code-quote-text: var(--cds-syntax-quote, #42be65);
+  --dsi-color-code-regexp-text: var(--cds-syntax-regexp, #be95ff);
+  --dsi-color-code-self-text: var(--cds-syntax-self, #3ddbd9);
+  --dsi-color-code-separator-text: var(--cds-syntax-separator, #e0e0e0);
+  --dsi-color-code-special-string-text: var(--cds-syntax-special-string, #be95ff);
+  --dsi-color-code-special-text: var(--cds-syntax-special, #4589ff);
+  --dsi-color-code-square-bracket-text: var(--cds-syntax-square-bracket, #e0e0e0);
+  --dsi-color-code-standard-text: var(--cds-syntax-standard, #4589ff);
+  --dsi-color-code-strikethrough-text: var(--cds-syntax-strikethrough, #f4f4f4);
+  --dsi-color-code-string-text: var(--cds-syntax-string, #f4f4f4);
+  --dsi-color-code-strong-text: var(--cds-syntax-strong, #f4f4f4);
+  --dsi-color-code-tag-name-text: var(--cds-syntax-tag-name, #3ddbd9);
+  --dsi-color-code-tag-text: var(--cds-syntax-tag, #3ddbd9);
+  --dsi-color-code-type-name-text: var(--cds-syntax-type-name, #3ddbd9);
+  --dsi-color-code-type-operator-text: var(--cds-syntax-type-operator, #3ddbd9);
+  --dsi-color-code-type-text: var(--cds-syntax-type, #3ddbd9);
+  --dsi-color-code-unit-text: var(--cds-syntax-unit, #6fdc8c);
+  --dsi-color-code-update-operator-text: var(--cds-syntax-update-operator, #e0e0e0);
+  --dsi-color-code-url-text: var(--cds-syntax-url, #e0e0e0);
+  --dsi-color-code-variable-name-text: var(--cds-syntax-variable-name, #a6c8ff);
+  --dsi-color-code-variable-text: var(--cds-syntax-variable, #a6c8ff);
   --dsi-color-field-background: var(--cds-field-01, #262626); /* nearest: broad */
   --dsi-color-field-background-hover: var(--cds-field-hover-01, #333333); /* nearest: broad */
   --dsi-color-field-text-subtle: var(--cds-text-placeholder, #f4f4f4);

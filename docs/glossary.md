@@ -38,7 +38,9 @@ Layers in a stack. Classify products, not organizations.
 | Mapping | A typed SKOS link between a native token and a concept |
 | Match type | `match/exact`, `close`, `broad`, `narrow`, `related` (SKOS mapping properties; subject is always the native token) |
 | Intent | Hue-independent meaning, e.g. `intent/danger` (status) vs `intent/destructive` (action), linked as related; `intent/ai` marks AI content; `intent/caution` is narrower than warning; `intent/highlight` marks editor focus and selection |
-| Usage | Where a token applies across components: `usage/page`, `surface`, `overlay`, `scrim`, `inverse`, `on-fill`, `field`, `link`, `navigation`, `skeleton` (`code` deprecated) |
+| Usage | Where a token applies across components: `usage/page`, `surface`, `overlay`, `scrim`, `inverse`, `on-fill`, `field`, `link`, `navigation`, `skeleton`, `categorical` (`code` deprecated) |
+| Syntax | `syntax/*`: code and document syntax roles, the @lezer/highlight tags (keyword, string, comment...) with Lezer's hierarchy |
+| Brightness | `brightness/dim`, `brightness/bright`: lightness that holds in every theme (Material surface-dim/bright) |
 | Foreground | `property/foreground`: one token coloring both text and icons; `property/text` and `property/icon` are for one only |
 | Emphasis | `subtlest`, `subtle`, `default`, `strong`, `strongest`: relative strength within a family |
 | Alias graph | References between tokens inside one product (vertical) |

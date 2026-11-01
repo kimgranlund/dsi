@@ -1,4 +1,4 @@
-import { parseConcept, type Ontology } from '@dsi/schema';
+import { canonicalNameOf, parseConcept, type Ontology } from '@dsi/schema';
 import { resolveConcept, showValue, type ConceptAnswer, type MappingSet, type NativeSet } from '@dsi/resolve';
 
 export const EXT = 'io.nonoun.dsi';
@@ -11,7 +11,7 @@ export const EXT = 'io.nonoun.dsi';
 export function canonicalName(o: Ontology, concept: string): { group: string; name: string } | undefined {
   const p = parseConcept(o, concept);
   if (typeof p === 'string') return undefined;
-  return { group: p.domain, name: Object.values(p.facets).map(String).join('-') };
+  return { group: p.domain, name: canonicalNameOf(p) };
 }
 
 export interface ProductInput { set: NativeSet; maps: MappingSet; name: string }

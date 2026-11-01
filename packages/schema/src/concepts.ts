@@ -1,7 +1,7 @@
 import { expand, inScheme, type Ontology } from './ontology.ts';
 
 /** Fixed facet order of compositional concept IRIs. component and part are reserved until their vocabularies exist. */
-export const CONCEPT_FACETS = ['intent', 'usage', 'component', 'part', 'property', 'emphasis', 'state'] as const;
+export const CONCEPT_FACETS = ['intent', 'usage', 'syntax', 'component', 'part', 'property', 'emphasis', 'brightness', 'state'] as const;
 const RESERVED = new Set(['component', 'part']);
 /** Facets that may combine values with '+', sorted alphabetically so one combination has one IRI. */
 export const MULTI_VALUED = new Set(['usage', 'state']);
@@ -41,4 +41,12 @@ export function parseConcept(o: Ontology, ref: string): ParsedConcept | string {
     facets[facet] = value;
   }
   return { domain, facets };
+}
+
+/**
+ * Canonical token name of a parsed concept: facet values in facet order joined by '-'. Syntax values are prefixed
+ * "code-" because Lezer tag names (link, strong, emphasis) would otherwise collide with other facets' values.
+ */
+export function canonicalNameOf(p: ParsedConcept): string {
+  return Object.entries(p.facets).map(([f, v]) => (f === 'syntax' ? `code-${v}` : String(v))).join('-');
 }

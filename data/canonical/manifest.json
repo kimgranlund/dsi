@@ -175,10 +175,16 @@
    "name": "ai-border-strong"
   },
   {
-   "concept": "dsi:concept/color/intent-ai/property-border/emphasis-strong/state-hover",
+   "concept": "dsi:concept/color/intent-ai/property-border/emphasis-subtle",
    "group": "color",
-   "label": "AI · Border · Strong · Hover",
-   "name": "ai-border-strong-hover"
+   "label": "AI · Border · Subtle",
+   "name": "ai-border-subtle"
+  },
+  {
+   "concept": "dsi:concept/color/intent-ai/property-border/emphasis-subtle/state-hover",
+   "group": "color",
+   "label": "AI · Border · Subtle · Hover",
+   "name": "ai-border-subtle-hover"
   },
   {
    "concept": "dsi:concept/color/intent-ai/property-icon",
@@ -251,12 +257,6 @@
    "group": "color",
    "label": "AI · Surface · Background · Hover",
    "name": "ai-surface-background-hover"
-  },
-  {
-   "concept": "dsi:concept/color/intent-caution",
-   "group": "color",
-   "label": "Caution",
-   "name": "caution"
   },
   {
    "concept": "dsi:concept/color/intent-caution/property-background",
@@ -385,10 +385,10 @@
    "name": "danger-border"
   },
   {
-   "concept": "dsi:concept/color/intent-danger/property-border/emphasis-strong",
+   "concept": "dsi:concept/color/intent-danger/property-border/emphasis-subtle",
    "group": "color",
-   "label": "Danger · Border · Strong",
-   "name": "danger-border-strong"
+   "label": "Danger · Border · Subtle",
+   "name": "danger-border-subtle"
   },
   {
    "concept": "dsi:concept/color/intent-danger/property-icon",
@@ -745,6 +745,12 @@
    "name": "warning"
   },
   {
+   "concept": "dsi:concept/color/intent-warning/emphasis-strong",
+   "group": "color",
+   "label": "Warning · Strong",
+   "name": "warning-strong"
+  },
+  {
    "concept": "dsi:concept/color/intent-warning/property-background",
    "group": "color",
    "label": "Warning · Background",
@@ -901,12 +907,6 @@
    "name": "border"
   },
   {
-   "concept": "dsi:concept/color/property-border/emphasis-strong",
-   "group": "color",
-   "label": "Border · Strong",
-   "name": "border-strong"
-  },
-  {
    "concept": "dsi:concept/color/property-border/emphasis-subtle",
    "group": "color",
    "label": "Border · Subtle",
@@ -1001,6 +1001,540 @@
    "group": "color",
    "label": "Text · Disabled",
    "name": "text-disabled"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-angle-bracket/property-text",
+   "group": "color",
+   "label": "Angle bracket · Text",
+   "name": "code-angle-bracket-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-annotation/property-text",
+   "group": "color",
+   "label": "Annotation · Text",
+   "name": "code-annotation-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-arithmetic-operator/property-text",
+   "group": "color",
+   "label": "Arithmetic operator · Text",
+   "name": "code-arithmetic-operator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-atom/property-text",
+   "group": "color",
+   "label": "Atom · Text",
+   "name": "code-atom-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-attribute-name/property-text",
+   "group": "color",
+   "label": "Attribute name · Text",
+   "name": "code-attribute-name-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-attribute-value/property-text",
+   "group": "color",
+   "label": "Attribute value · Text",
+   "name": "code-attribute-value-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-attribute/property-text",
+   "group": "color",
+   "label": "Attribute · Text",
+   "name": "code-attribute-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-bitwise-operator/property-text",
+   "group": "color",
+   "label": "Bitwise operator · Text",
+   "name": "code-bitwise-operator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-block-comment/property-text",
+   "group": "color",
+   "label": "Block comment · Text",
+   "name": "code-block-comment-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-bool/property-text",
+   "group": "color",
+   "label": "Bool · Text",
+   "name": "code-bool-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-brace/property-text",
+   "group": "color",
+   "label": "Brace · Text",
+   "name": "code-brace-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-bracket/property-text",
+   "group": "color",
+   "label": "Bracket · Text",
+   "name": "code-bracket-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-character/property-text",
+   "group": "color",
+   "label": "Character · Text",
+   "name": "code-character-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-class-name/property-text",
+   "group": "color",
+   "label": "Class name · Text",
+   "name": "code-class-name-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-color/property-text",
+   "group": "color",
+   "label": "Color · Text",
+   "name": "code-color-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-comment/property-text",
+   "group": "color",
+   "label": "Comment · Text",
+   "name": "code-comment-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-compare-operator/property-text",
+   "group": "color",
+   "label": "Compare operator · Text",
+   "name": "code-compare-operator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-constant/property-text",
+   "group": "color",
+   "label": "Constant · Text",
+   "name": "code-constant-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-content-separator/property-text",
+   "group": "color",
+   "label": "Content separator · Text",
+   "name": "code-content-separator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-content/property-text",
+   "group": "color",
+   "label": "Content · Text",
+   "name": "code-content-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-control-keyword/property-text",
+   "group": "color",
+   "label": "Control keyword · Text",
+   "name": "code-control-keyword-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-control-operator/property-text",
+   "group": "color",
+   "label": "Control operator · Text",
+   "name": "code-control-operator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-definition-keyword/property-text",
+   "group": "color",
+   "label": "Definition keyword · Text",
+   "name": "code-definition-keyword-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-definition-operator/property-text",
+   "group": "color",
+   "label": "Definition operator · Text",
+   "name": "code-definition-operator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-definition/property-text",
+   "group": "color",
+   "label": "Definition · Text",
+   "name": "code-definition-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-deleted/property-text",
+   "group": "color",
+   "label": "Deleted · Text",
+   "name": "code-deleted-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-deref-operator/property-text",
+   "group": "color",
+   "label": "Deref operator · Text",
+   "name": "code-deref-operator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-doc-comment/property-text",
+   "group": "color",
+   "label": "Doc comment · Text",
+   "name": "code-doc-comment-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-doc-string/property-text",
+   "group": "color",
+   "label": "Doc string · Text",
+   "name": "code-doc-string-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-document-meta/property-text",
+   "group": "color",
+   "label": "Document meta · Text",
+   "name": "code-document-meta-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-emphasis/property-text",
+   "group": "color",
+   "label": "Emphasis · Text",
+   "name": "code-emphasis-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-escape/property-text",
+   "group": "color",
+   "label": "Escape · Text",
+   "name": "code-escape-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-float/property-text",
+   "group": "color",
+   "label": "Float · Text",
+   "name": "code-float-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-function/property-text",
+   "group": "color",
+   "label": "Function · Text",
+   "name": "code-function-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-heading-1/property-text",
+   "group": "color",
+   "label": "Heading 1 · Text",
+   "name": "code-heading-1-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-heading-2/property-text",
+   "group": "color",
+   "label": "Heading 2 · Text",
+   "name": "code-heading-2-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-heading-3/property-text",
+   "group": "color",
+   "label": "Heading 3 · Text",
+   "name": "code-heading-3-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-heading-4/property-text",
+   "group": "color",
+   "label": "Heading 4 · Text",
+   "name": "code-heading-4-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-heading-5/property-text",
+   "group": "color",
+   "label": "Heading 5 · Text",
+   "name": "code-heading-5-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-heading-6/property-text",
+   "group": "color",
+   "label": "Heading 6 · Text",
+   "name": "code-heading-6-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-heading/property-text",
+   "group": "color",
+   "label": "Heading · Text",
+   "name": "code-heading-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-inserted/property-text",
+   "group": "color",
+   "label": "Inserted · Text",
+   "name": "code-inserted-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-integer/property-text",
+   "group": "color",
+   "label": "Integer · Text",
+   "name": "code-integer-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-invalid/property-text",
+   "group": "color",
+   "label": "Invalid · Text",
+   "name": "code-invalid-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-keyword/property-text",
+   "group": "color",
+   "label": "Keyword · Text",
+   "name": "code-keyword-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-label-name/property-text",
+   "group": "color",
+   "label": "Label name · Text",
+   "name": "code-label-name-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-line-comment/property-text",
+   "group": "color",
+   "label": "Line comment · Text",
+   "name": "code-line-comment-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-link/property-text",
+   "group": "color",
+   "label": "Link · Text",
+   "name": "code-link-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-list/property-text",
+   "group": "color",
+   "label": "List · Text",
+   "name": "code-list-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-literal/property-text",
+   "group": "color",
+   "label": "Literal · Text",
+   "name": "code-literal-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-local/property-text",
+   "group": "color",
+   "label": "Local · Text",
+   "name": "code-local-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-logic-operator/property-text",
+   "group": "color",
+   "label": "Logic operator · Text",
+   "name": "code-logic-operator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-macro-name/property-text",
+   "group": "color",
+   "label": "Macro name · Text",
+   "name": "code-macro-name-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-meta/property-text",
+   "group": "color",
+   "label": "Meta · Text",
+   "name": "code-meta-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-modifier/property-text",
+   "group": "color",
+   "label": "Modifier · Text",
+   "name": "code-modifier-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-module-keyword/property-text",
+   "group": "color",
+   "label": "Module keyword · Text",
+   "name": "code-module-keyword-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-monospace/property-text",
+   "group": "color",
+   "label": "Monospace · Text",
+   "name": "code-monospace-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-name/property-text",
+   "group": "color",
+   "label": "Name · Text",
+   "name": "code-name-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-namespace/property-text",
+   "group": "color",
+   "label": "Namespace · Text",
+   "name": "code-namespace-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-null/property-text",
+   "group": "color",
+   "label": "Null · Text",
+   "name": "code-null-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-number/property-text",
+   "group": "color",
+   "label": "Number · Text",
+   "name": "code-number-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-operator-keyword/property-text",
+   "group": "color",
+   "label": "Operator keyword · Text",
+   "name": "code-operator-keyword-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-operator/property-text",
+   "group": "color",
+   "label": "Operator · Text",
+   "name": "code-operator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-paren/property-text",
+   "group": "color",
+   "label": "Paren · Text",
+   "name": "code-paren-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-processing-instruction/property-text",
+   "group": "color",
+   "label": "Processing instruction · Text",
+   "name": "code-processing-instruction-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-property-name/property-text",
+   "group": "color",
+   "label": "Property name · Text",
+   "name": "code-property-name-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-punctuation/property-text",
+   "group": "color",
+   "label": "Punctuation · Text",
+   "name": "code-punctuation-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-quote/property-text",
+   "group": "color",
+   "label": "Quote · Text",
+   "name": "code-quote-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-regexp/property-text",
+   "group": "color",
+   "label": "Regexp · Text",
+   "name": "code-regexp-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-self/property-text",
+   "group": "color",
+   "label": "Self · Text",
+   "name": "code-self-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-separator/property-text",
+   "group": "color",
+   "label": "Separator · Text",
+   "name": "code-separator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-special-string/property-text",
+   "group": "color",
+   "label": "Special string · Text",
+   "name": "code-special-string-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-special/property-text",
+   "group": "color",
+   "label": "Special · Text",
+   "name": "code-special-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-square-bracket/property-text",
+   "group": "color",
+   "label": "Square bracket · Text",
+   "name": "code-square-bracket-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-standard/property-text",
+   "group": "color",
+   "label": "Standard · Text",
+   "name": "code-standard-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-strikethrough/property-text",
+   "group": "color",
+   "label": "Strikethrough · Text",
+   "name": "code-strikethrough-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-string/property-text",
+   "group": "color",
+   "label": "String · Text",
+   "name": "code-string-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-strong/property-text",
+   "group": "color",
+   "label": "Strong · Text",
+   "name": "code-strong-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-tag-name/property-text",
+   "group": "color",
+   "label": "Tag name · Text",
+   "name": "code-tag-name-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-tag/property-text",
+   "group": "color",
+   "label": "Tag · Text",
+   "name": "code-tag-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-type-name/property-text",
+   "group": "color",
+   "label": "Type name · Text",
+   "name": "code-type-name-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-type-operator/property-text",
+   "group": "color",
+   "label": "Type operator · Text",
+   "name": "code-type-operator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-type/property-text",
+   "group": "color",
+   "label": "Type · Text",
+   "name": "code-type-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-unit/property-text",
+   "group": "color",
+   "label": "Unit · Text",
+   "name": "code-unit-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-update-operator/property-text",
+   "group": "color",
+   "label": "Update operator · Text",
+   "name": "code-update-operator-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-url/property-text",
+   "group": "color",
+   "label": "Url · Text",
+   "name": "code-url-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-variable-name/property-text",
+   "group": "color",
+   "label": "Variable name · Text",
+   "name": "code-variable-name-text"
+  },
+  {
+   "concept": "dsi:concept/color/syntax-variable/property-text",
+   "group": "color",
+   "label": "Variable · Text",
+   "name": "code-variable-text"
+  },
+  {
+   "concept": "dsi:concept/color/usage-categorical/property-background",
+   "group": "color",
+   "label": "Categorical · Background",
+   "name": "categorical-background"
   },
   {
    "concept": "dsi:concept/color/usage-field/property-background",
@@ -1259,6 +1793,18 @@
    "group": "color",
    "label": "Surface · Background",
    "name": "surface-background"
+  },
+  {
+   "concept": "dsi:concept/color/usage-surface/property-background/brightness-bright",
+   "group": "color",
+   "label": "Surface · Background · Bright",
+   "name": "surface-background-bright"
+  },
+  {
+   "concept": "dsi:concept/color/usage-surface/property-background/brightness-dim",
+   "group": "color",
+   "label": "Surface · Background · Dim",
+   "name": "surface-background-dim"
   },
   {
    "concept": "dsi:concept/color/usage-surface/property-background/emphasis-default",
@@ -2655,29 +3201,17 @@
    },
    "polaris": {
     "dark": {
-     "match": "close",
-     "status": "match",
-     "token": "color-border-magic-secondary",
-     "value": "#9474ff",
-     "via": "direct"
+     "status": "unknown"
     },
     "increased-contrast": {
-     "match": "close",
-     "status": "match",
-     "token": "color-border-magic-secondary",
-     "value": "#9474ff",
-     "via": "direct"
+     "status": "unknown"
     },
     "light": {
-     "match": "close",
-     "status": "match",
-     "token": "color-border-magic-secondary",
-     "value": "#9474ff",
-     "via": "direct"
+     "status": "unknown"
     }
    }
   },
-  "dsi:concept/color/intent-ai/property-border/emphasis-strong/state-hover": {
+  "dsi:concept/color/intent-ai/property-border/emphasis-subtle": {
    "carbon": {
     "dark": {
      "status": "unknown"
@@ -2696,21 +3230,62 @@
    },
    "polaris": {
     "dark": {
-     "match": "close",
+     "match": "exact",
+     "status": "match",
+     "token": "color-border-magic-secondary",
+     "value": "#9474ff",
+     "via": "direct"
+    },
+    "increased-contrast": {
+     "match": "exact",
+     "status": "match",
+     "token": "color-border-magic-secondary",
+     "value": "#9474ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "color-border-magic-secondary",
+     "value": "#9474ff",
+     "via": "direct"
+    }
+   }
+  },
+  "dsi:concept/color/intent-ai/property-border/emphasis-subtle/state-hover": {
+   "carbon": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "match": "exact",
      "status": "match",
      "token": "color-border-magic-secondary-hover",
      "value": "#8051ff",
      "via": "direct"
     },
     "increased-contrast": {
-     "match": "close",
+     "match": "exact",
      "status": "match",
      "token": "color-border-magic-secondary-hover",
      "value": "#8051ff",
      "via": "direct"
     },
     "light": {
-     "match": "close",
+     "match": "exact",
      "status": "match",
      "token": "color-border-magic-secondary-hover",
      "value": "#8051ff",
@@ -3187,55 +3762,6 @@
      "token": "color-bg-surface-magic-hover",
      "value": "#f3f1ff",
      "via": "direct"
-    }
-   }
-  },
-  "dsi:concept/color/intent-caution": {
-   "carbon": {
-    "dark": {
-     "match": "exact",
-     "status": "match",
-     "token": "support-caution-minor",
-     "value": "#f1c21b",
-     "via": "direct"
-    },
-    "light": {
-     "match": "exact",
-     "status": "match",
-     "token": "support-caution-minor",
-     "value": "#f1c21b",
-     "via": "direct"
-    }
-   },
-   "material": {
-    "dark": {
-     "status": "unknown"
-    },
-    "light": {
-     "status": "unknown"
-    }
-   },
-   "polaris": {
-    "dark": {
-     "match": "exact",
-     "status": "nearest",
-     "token": "color-bg-fill-caution",
-     "value": "#ffe600",
-     "via": "more-specific"
-    },
-    "increased-contrast": {
-     "match": "exact",
-     "status": "nearest",
-     "token": "color-bg-fill-caution",
-     "value": "#ffe600",
-     "via": "more-specific"
-    },
-    "light": {
-     "match": "exact",
-     "status": "nearest",
-     "token": "color-bg-fill-caution",
-     "value": "#ffe600",
-     "via": "more-specific"
     }
    }
   },
@@ -4132,7 +4658,7 @@
     }
    }
   },
-  "dsi:concept/color/intent-danger/property-border/emphasis-strong": {
+  "dsi:concept/color/intent-danger/property-border/emphasis-subtle": {
    "carbon": {
     "dark": {
      "status": "unknown"
@@ -4151,21 +4677,21 @@
    },
    "polaris": {
     "dark": {
-     "match": "close",
+     "match": "exact",
      "status": "match",
      "token": "color-border-critical-secondary",
      "value": "#8e0b21",
      "via": "direct"
     },
     "increased-contrast": {
-     "match": "close",
+     "match": "exact",
      "status": "match",
      "token": "color-border-critical-secondary",
      "value": "#8e0b21",
      "via": "direct"
     },
     "light": {
-     "match": "close",
+     "match": "exact",
      "status": "match",
      "token": "color-border-critical-secondary",
      "value": "#8e0b21",
@@ -6570,16 +7096,16 @@
   "dsi:concept/color/intent-warning": {
    "carbon": {
     "dark": {
-     "match": "close",
+     "match": "exact",
      "status": "match",
-     "token": "support-warning",
+     "token": "support-caution-minor",
      "value": "#f1c21b",
      "via": "direct"
     },
     "light": {
-     "match": "close",
+     "match": "exact",
      "status": "match",
-     "token": "support-warning",
+     "token": "support-caution-minor",
      "value": "#f1c21b",
      "via": "direct"
     }
@@ -6613,6 +7139,43 @@
      "token": "color-bg-fill-warning",
      "value": "#ffb800",
      "via": "more-specific"
+    }
+   }
+  },
+  "dsi:concept/color/intent-warning/emphasis-strong": {
+   "carbon": {
+    "dark": {
+     "match": "close",
+     "status": "match",
+     "token": "support-caution-major",
+     "value": "#ff832b",
+     "via": "direct"
+    },
+    "light": {
+     "match": "close",
+     "status": "match",
+     "token": "support-caution-major",
+     "value": "#ff832b",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
     }
    }
   },
@@ -7778,55 +8341,6 @@
     }
    }
   },
-  "dsi:concept/color/property-border/emphasis-strong": {
-   "carbon": {
-    "dark": {
-     "match": "exact",
-     "status": "nearest",
-     "token": "ai-border-strong",
-     "value": "#78a9ff",
-     "via": "more-specific"
-    },
-    "light": {
-     "match": "exact",
-     "status": "nearest",
-     "token": "ai-border-strong",
-     "value": "#4589ff",
-     "via": "more-specific"
-    }
-   },
-   "material": {
-    "dark": {
-     "status": "unknown"
-    },
-    "light": {
-     "status": "unknown"
-    }
-   },
-   "polaris": {
-    "dark": {
-     "match": "close",
-     "status": "match",
-     "token": "color-border-tertiary",
-     "value": "#cccccc",
-     "via": "direct"
-    },
-    "increased-contrast": {
-     "match": "close",
-     "status": "match",
-     "token": "color-border-tertiary",
-     "value": "#cccccc",
-     "via": "direct"
-    },
-    "light": {
-     "match": "close",
-     "status": "match",
-     "token": "color-border-tertiary",
-     "value": "#cccccc",
-     "via": "direct"
-    }
-   }
-  },
   "dsi:concept/color/property-border/emphasis-subtle": {
    "carbon": {
     "dark": {
@@ -8558,6 +9072,3303 @@
      "match": "exact",
      "status": "match",
      "token": "color-text-disabled",
+     "value": "#b5b5b5",
+     "via": "direct"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-angle-bracket/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-angle-bracket",
+     "value": "#8d8d8d",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-angle-bracket",
+     "value": "#697077",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-annotation/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-annotation",
+     "value": "#08bdba",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-annotation",
+     "value": "#007d79",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-arithmetic-operator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-arithmetic-operator",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-arithmetic-operator",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-atom/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-atom",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-atom",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-attribute-name/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-attribute-name",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-attribute-name",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-attribute-value/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-attribute-value",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-attribute-value",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-attribute/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-attribute",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-attribute",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-bitwise-operator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-bitwise-operator",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-bitwise-operator",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-block-comment/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-block-comment",
+     "value": "#42be65",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-block-comment",
+     "value": "#198038",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-bool/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-bool",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-bool",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-brace/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-brace",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-brace",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-bracket/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-bracket",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-bracket",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-character/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-character",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-character",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-class-name/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-class-name",
+     "value": "#3ddbd9",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-class-name",
+     "value": "#007d79",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-color/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-color",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-color",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-comment/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-comment",
+     "value": "#42be65",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-comment",
+     "value": "#198038",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-compare-operator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-compare-operator",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-compare-operator",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-constant/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-constant",
+     "value": "#4589ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-constant",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-content-separator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-content-separator",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-content-separator",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-content/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-content",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-content",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-control-keyword/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-control-keyword",
+     "value": "#be95ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-control-keyword",
+     "value": "#6929c4",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-control-operator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-control-operator",
+     "value": "#be95ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-control-operator",
+     "value": "#6929c4",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-definition-keyword/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-definition-keyword",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-definition-keyword",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-definition-operator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-definition-operator",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-definition-operator",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-definition/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-definition",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-definition",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-deleted/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-deleted",
+     "value": "#a2191f",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-deleted",
+     "value": "#ffd7d9",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-deref-operator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-deref-operator",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-deref-operator",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-doc-comment/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-doc-comment",
+     "value": "#42be65",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-doc-comment",
+     "value": "#198038",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-doc-string/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-doc-string",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-doc-string",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-document-meta/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-document-meta",
+     "value": "#42be65",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-document-meta",
+     "value": "#198038",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-emphasis/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-emphasis",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-emphasis",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-escape/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-escape",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-escape",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-float/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-float",
+     "value": "#6fdc8c",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-float",
+     "value": "#198038",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-function/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-function",
+     "value": "#f1c21b",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-function",
+     "value": "#8e6a00",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-heading-1/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-1",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-1",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-heading-2/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-2",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-2",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-heading-3/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-3",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-3",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-heading-4/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-4",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-4",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-heading-5/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-5",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-5",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-heading-6/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-6",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading-6",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-heading/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-heading",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-inserted/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-inserted",
+     "value": "#198038",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-inserted",
+     "value": "#a7f0ba",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-integer/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-integer",
+     "value": "#6fdc8c",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-integer",
+     "value": "#198038",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-invalid/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-invalid",
+     "value": "#fa4d56",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-invalid",
+     "value": "#da1e28",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-keyword/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-keyword",
+     "value": "#4589ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-keyword",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-label-name/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-label-name",
+     "value": "#a6c8ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-label-name",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-line-comment/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-line-comment",
+     "value": "#42be65",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-line-comment",
+     "value": "#198038",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-link/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-link",
+     "value": "#4589ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-link",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-list/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-list",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-list",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-literal/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-literal",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-literal",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-local/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-local",
+     "value": "#a6c8ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-local",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-logic-operator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-logic-operator",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-logic-operator",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-macro-name/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-macro-name",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-macro-name",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-meta/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-meta",
+     "value": "#42be65",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-meta",
+     "value": "#198038",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-modifier/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-modifier",
+     "value": "#4589ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-modifier",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-module-keyword/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-module-keyword",
+     "value": "#be95ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-module-keyword",
+     "value": "#6929c4",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-monospace/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-monospace",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-monospace",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-name/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-name",
+     "value": "#a6c8ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-name",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-namespace/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-namespace",
+     "value": "#3ddbd9",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-namespace",
+     "value": "#007d79",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-null/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-null",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-null",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-number/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-number",
+     "value": "#6fdc8c",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-number",
+     "value": "#198038",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-operator-keyword/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-operator-keyword",
+     "value": "#4589ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-operator-keyword",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-operator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-operator",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-operator",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-paren/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-paren",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-paren",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-processing-instruction/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-processing-instruction",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-processing-instruction",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-property-name/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-property-name",
+     "value": "#33b1ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-property-name",
+     "value": "#00539a",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-punctuation/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-punctuation",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-punctuation",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-quote/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-quote",
+     "value": "#42be65",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-quote",
+     "value": "#198038",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-regexp/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-regexp",
+     "value": "#be95ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-regexp",
+     "value": "#6929c4",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-self/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-self",
+     "value": "#3ddbd9",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-self",
+     "value": "#007d79",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-separator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-separator",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-separator",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-special-string/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-special-string",
+     "value": "#be95ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-special-string",
+     "value": "#8a3ffc",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-special/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-special",
+     "value": "#4589ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-special",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-square-bracket/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-square-bracket",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-square-bracket",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-standard/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-standard",
+     "value": "#4589ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-standard",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-strikethrough/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-strikethrough",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-strikethrough",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-string/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-string",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-string",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-strong/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-strong",
+     "value": "#f4f4f4",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-strong",
+     "value": "#161616",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-tag-name/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-tag-name",
+     "value": "#3ddbd9",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-tag-name",
+     "value": "#007d79",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-tag/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-tag",
+     "value": "#3ddbd9",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-tag",
+     "value": "#007d79",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-type-name/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-type-name",
+     "value": "#3ddbd9",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-type-name",
+     "value": "#007d79",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-type-operator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-type-operator",
+     "value": "#3ddbd9",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-type-operator",
+     "value": "#007d79",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-type/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-type",
+     "value": "#3ddbd9",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-type",
+     "value": "#007d79",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-unit/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-unit",
+     "value": "#6fdc8c",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-unit",
+     "value": "#198038",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-update-operator/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-update-operator",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-update-operator",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-url/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-url",
+     "value": "#e0e0e0",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-url",
+     "value": "#343a3f",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-variable-name/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-variable-name",
+     "value": "#a6c8ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-variable-name",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/syntax-variable/property-text": {
+   "carbon": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-variable",
+     "value": "#a6c8ff",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "syntax-variable",
+     "value": "#0f62fe",
+     "via": "direct"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/usage-categorical/property-background": {
+   "carbon": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "material": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "match": "broad",
+     "status": "nearest",
+     "token": "color-avatar-bg-fill",
+     "value": "#b5b5b5",
+     "via": "direct"
+    },
+    "increased-contrast": {
+     "match": "broad",
+     "status": "nearest",
+     "token": "color-avatar-bg-fill",
+     "value": "#b5b5b5",
+     "via": "direct"
+    },
+    "light": {
+     "match": "broad",
+     "status": "nearest",
+     "token": "color-avatar-bg-fill",
      "value": "#b5b5b5",
      "via": "direct"
     }
@@ -10450,6 +14261,80 @@
     }
    }
   },
+  "dsi:concept/color/usage-surface/property-background/brightness-bright": {
+   "carbon": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "material": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "md.sys.color.surface-bright",
+     "value": "#3b383e",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "md.sys.color.surface-bright",
+     "value": "#fef7ff",
+     "via": "direct"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
+  "dsi:concept/color/usage-surface/property-background/brightness-dim": {
+   "carbon": {
+    "dark": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   },
+   "material": {
+    "dark": {
+     "match": "exact",
+     "status": "match",
+     "token": "md.sys.color.surface-dim",
+     "value": "#141218",
+     "via": "direct"
+    },
+    "light": {
+     "match": "exact",
+     "status": "match",
+     "token": "md.sys.color.surface-dim",
+     "value": "#ded8e1",
+     "via": "direct"
+    }
+   },
+   "polaris": {
+    "dark": {
+     "status": "unknown"
+    },
+    "increased-contrast": {
+     "status": "unknown"
+    },
+    "light": {
+     "status": "unknown"
+    }
+   }
+  },
   "dsi:concept/color/usage-surface/property-background/emphasis-default": {
    "carbon": {
     "dark": {
@@ -11569,7 +15454,7 @@
    "mode": "dark",
    "product": "carbon",
    "theme": "g100",
-   "tokens": 98
+   "tokens": 185
   },
   {
    "css": "carbon.light.css",
@@ -11577,7 +15462,7 @@
    "mode": "light",
    "product": "carbon",
    "theme": "white",
-   "tokens": 98
+   "tokens": 185
   },
   {
    "css": "material.dark.css",
@@ -11585,7 +15470,7 @@
    "mode": "dark",
    "product": "material",
    "theme": "dark",
-   "tokens": 28
+   "tokens": 30
   },
   {
    "css": "material.light.css",
@@ -11593,7 +15478,7 @@
    "mode": "light",
    "product": "material",
    "theme": "light",
-   "tokens": 28
+   "tokens": 30
   },
   {
    "css": "polaris.dark.css",
@@ -11601,7 +15486,7 @@
    "mode": "dark",
    "product": "polaris",
    "theme": "dark-experimental",
-   "tokens": 188
+   "tokens": 187
   },
   {
    "css": "polaris.increased-contrast.css",
@@ -11609,7 +15494,7 @@
    "mode": "increased-contrast",
    "product": "polaris",
    "theme": "light-high-contrast-experimental",
-   "tokens": 188
+   "tokens": 187
   },
   {
    "css": "polaris.light.css",
@@ -11617,7 +15502,7 @@
    "mode": "light",
    "product": "polaris",
    "theme": "light",
-   "tokens": 188
+   "tokens": 187
   }
  ],
  "sources": [
@@ -11636,10 +15521,10 @@
  ],
  "summary": {
   "cells": {
-   "match": 693,
-   "nearest": 123,
-   "unknown": 843
+   "match": 870,
+   "nearest": 121,
+   "unknown": 1305
   },
-  "concepts": 237
+  "concepts": 328
  }
 }

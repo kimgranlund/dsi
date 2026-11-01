@@ -2735,7 +2735,7 @@
       "concept": "dsi:concept/color/intent-caution",
       "match": "broad",
       "confidence": 0.55,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Higher-severity caution; Carbon's orange sits between caution and warning.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2746,6 +2746,26 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:03:43.009Z"
+      },
+      "supersededBy": "m-92365172da5a"
+    },
+    {
+      "id": "m-92365172da5a",
+      "token": "support-caution-major",
+      "concept": "dsi:concept/color/intent-warning/emphasis-strong",
+      "match": "close",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon status indicators: orange = serious warning, between warning and danger (carbondesignsystem.com/patterns/status-indicator-pattern).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
       }
     },
     {
@@ -2787,12 +2807,31 @@
       }
     },
     {
+      "id": "m-f99a8c9394aa",
+      "token": "support-caution-minor",
+      "concept": "dsi:concept/color/intent-warning",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon status indicators: yellow = regular warning; same value as support-warning in white (carbondesignsystem.com/patterns/status-indicator-pattern).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
       "id": "m-fd7f1abebf9f",
       "token": "support-caution-minor",
       "concept": "dsi:concept/color/intent-caution",
       "match": "exact",
       "confidence": 0.85,
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Low-severity caution; the ontology example for caution.",
       "provenance": {
         "agent": "dsi-mapper",
@@ -2803,7 +2842,8 @@
       "review": {
         "by": "kimgranlund",
         "at": "2026-11-01T01:03:48.510Z"
-      }
+      },
+      "supersededBy": "m-f99a8c9394aa"
     },
     {
       "id": "m-1159fdc2f963",
@@ -2963,6 +3003,1678 @@
         "by": "agreement",
         "at": "2026-10-31T23:52:35.397Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently"
+      }
+    },
+    {
+      "id": "m-b2cf1ab0f745",
+      "token": "syntax-angle-bracket",
+      "concept": "dsi:concept/color/syntax-angle-bracket/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-d37af5c25f8a",
+      "token": "syntax-annotation",
+      "concept": "dsi:concept/color/syntax-annotation/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-a7aab7b14b10",
+      "token": "syntax-arithmetic-operator",
+      "concept": "dsi:concept/color/syntax-arithmetic-operator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-1a8bcfadd35a",
+      "token": "syntax-atom",
+      "concept": "dsi:concept/color/syntax-atom/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-df98afd7e151",
+      "token": "syntax-attribute",
+      "concept": "dsi:concept/color/syntax-attribute/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-92117fd0aae4",
+      "token": "syntax-attribute-name",
+      "concept": "dsi:concept/color/syntax-attribute-name/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-864b10b2035f",
+      "token": "syntax-attribute-value",
+      "concept": "dsi:concept/color/syntax-attribute-value/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-6d376a65a65d",
+      "token": "syntax-bitwise-operator",
+      "concept": "dsi:concept/color/syntax-bitwise-operator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-8398b9ba3163",
+      "token": "syntax-block-comment",
+      "concept": "dsi:concept/color/syntax-block-comment/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-7a754592072b",
+      "token": "syntax-bool",
+      "concept": "dsi:concept/color/syntax-bool/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-9f272d7deb11",
+      "token": "syntax-brace",
+      "concept": "dsi:concept/color/syntax-brace/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-71e54d7b892c",
+      "token": "syntax-bracket",
+      "concept": "dsi:concept/color/syntax-bracket/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-0c0106591679",
+      "token": "syntax-character",
+      "concept": "dsi:concept/color/syntax-character/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-0d4f2dee3c95",
+      "token": "syntax-class-name",
+      "concept": "dsi:concept/color/syntax-class-name/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-2ed1addfb6d1",
+      "token": "syntax-color",
+      "concept": "dsi:concept/color/syntax-color/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-0b443bc7e99d",
+      "token": "syntax-comment",
+      "concept": "dsi:concept/color/syntax-comment/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-bcd4b6b0985c",
+      "token": "syntax-compare-operator",
+      "concept": "dsi:concept/color/syntax-compare-operator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-1561cf442bb7",
+      "token": "syntax-constant",
+      "concept": "dsi:concept/color/syntax-constant/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-145c32105686",
+      "token": "syntax-content",
+      "concept": "dsi:concept/color/syntax-content/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-1fadf0006569",
+      "token": "syntax-content-separator",
+      "concept": "dsi:concept/color/syntax-content-separator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-2d91634bbabd",
+      "token": "syntax-control-keyword",
+      "concept": "dsi:concept/color/syntax-control-keyword/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-6ca038baef7a",
+      "token": "syntax-control-operator",
+      "concept": "dsi:concept/color/syntax-control-operator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-cf0d27803631",
+      "token": "syntax-definition",
+      "concept": "dsi:concept/color/syntax-definition/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-8b45c7229b78",
+      "token": "syntax-definition-keyword",
+      "concept": "dsi:concept/color/syntax-definition-keyword/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-563c7bcab294",
+      "token": "syntax-definition-operator",
+      "concept": "dsi:concept/color/syntax-definition-operator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-9d8cd4fb76fd",
+      "token": "syntax-deleted",
+      "concept": "dsi:concept/color/syntax-deleted/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-a7c598f3fc8e",
+      "token": "syntax-deref-operator",
+      "concept": "dsi:concept/color/syntax-deref-operator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-5d70bae92002",
+      "token": "syntax-doc-comment",
+      "concept": "dsi:concept/color/syntax-doc-comment/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-f8665296fe0e",
+      "token": "syntax-doc-string",
+      "concept": "dsi:concept/color/syntax-doc-string/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-5ec3f0477e0b",
+      "token": "syntax-document-meta",
+      "concept": "dsi:concept/color/syntax-document-meta/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-a626829c0ca2",
+      "token": "syntax-emphasis",
+      "concept": "dsi:concept/color/syntax-emphasis/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-d06ae439bd8a",
+      "token": "syntax-escape",
+      "concept": "dsi:concept/color/syntax-escape/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-be2d3e01cd32",
+      "token": "syntax-float",
+      "concept": "dsi:concept/color/syntax-float/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-7153d43573bf",
+      "token": "syntax-function",
+      "concept": "dsi:concept/color/syntax-function/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-249a1bf04768",
+      "token": "syntax-heading",
+      "concept": "dsi:concept/color/syntax-heading/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-48de0054daaf",
+      "token": "syntax-heading-1",
+      "concept": "dsi:concept/color/syntax-heading-1/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-97daf2f655b7",
+      "token": "syntax-heading-2",
+      "concept": "dsi:concept/color/syntax-heading-2/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-375e481c9885",
+      "token": "syntax-heading-3",
+      "concept": "dsi:concept/color/syntax-heading-3/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-ae95a6684a63",
+      "token": "syntax-heading-4",
+      "concept": "dsi:concept/color/syntax-heading-4/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-e3d706a2ec2d",
+      "token": "syntax-heading-5",
+      "concept": "dsi:concept/color/syntax-heading-5/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-1e88bb99246a",
+      "token": "syntax-heading-6",
+      "concept": "dsi:concept/color/syntax-heading-6/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-a543933624b8",
+      "token": "syntax-inserted",
+      "concept": "dsi:concept/color/syntax-inserted/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-91bc403ae7a2",
+      "token": "syntax-integer",
+      "concept": "dsi:concept/color/syntax-integer/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-231e5195d4bf",
+      "token": "syntax-invalid",
+      "concept": "dsi:concept/color/syntax-invalid/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-19486e5cf320",
+      "token": "syntax-keyword",
+      "concept": "dsi:concept/color/syntax-keyword/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-dbeb22490fde",
+      "token": "syntax-label-name",
+      "concept": "dsi:concept/color/syntax-label-name/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-dc34ef328a0e",
+      "token": "syntax-line-comment",
+      "concept": "dsi:concept/color/syntax-line-comment/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-c28855cbed17",
+      "token": "syntax-link",
+      "concept": "dsi:concept/color/syntax-link/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-16028d4e4144",
+      "token": "syntax-list",
+      "concept": "dsi:concept/color/syntax-list/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-1ef0b2fee88a",
+      "token": "syntax-literal",
+      "concept": "dsi:concept/color/syntax-literal/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-5ff0704a061c",
+      "token": "syntax-local",
+      "concept": "dsi:concept/color/syntax-local/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-12073d60f40b",
+      "token": "syntax-logic-operator",
+      "concept": "dsi:concept/color/syntax-logic-operator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-f80c2524c17b",
+      "token": "syntax-macro-name",
+      "concept": "dsi:concept/color/syntax-macro-name/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-52dcaf36e213",
+      "token": "syntax-meta",
+      "concept": "dsi:concept/color/syntax-meta/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-27b6ab4ce4f0",
+      "token": "syntax-modifier",
+      "concept": "dsi:concept/color/syntax-modifier/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-aa40e9a794d6",
+      "token": "syntax-module-keyword",
+      "concept": "dsi:concept/color/syntax-module-keyword/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-396f3b00e32e",
+      "token": "syntax-monospace",
+      "concept": "dsi:concept/color/syntax-monospace/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-6fee2763c369",
+      "token": "syntax-name",
+      "concept": "dsi:concept/color/syntax-name/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-04b296c9bf1b",
+      "token": "syntax-namespace",
+      "concept": "dsi:concept/color/syntax-namespace/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-dc09a963f77f",
+      "token": "syntax-null",
+      "concept": "dsi:concept/color/syntax-null/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-10eeabc7a099",
+      "token": "syntax-number",
+      "concept": "dsi:concept/color/syntax-number/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-3c3ef4514e65",
+      "token": "syntax-operator",
+      "concept": "dsi:concept/color/syntax-operator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-8bb3e316e090",
+      "token": "syntax-operator-keyword",
+      "concept": "dsi:concept/color/syntax-operator-keyword/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-872f839505a5",
+      "token": "syntax-paren",
+      "concept": "dsi:concept/color/syntax-paren/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-fa4fea8dede8",
+      "token": "syntax-processing-instruction",
+      "concept": "dsi:concept/color/syntax-processing-instruction/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-994b6c29f2d3",
+      "token": "syntax-property-name",
+      "concept": "dsi:concept/color/syntax-property-name/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-ff886966e4ee",
+      "token": "syntax-punctuation",
+      "concept": "dsi:concept/color/syntax-punctuation/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-0dc0cbfc3e9a",
+      "token": "syntax-quote",
+      "concept": "dsi:concept/color/syntax-quote/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-e8ef53adc4cf",
+      "token": "syntax-regexp",
+      "concept": "dsi:concept/color/syntax-regexp/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-62d6f68962ae",
+      "token": "syntax-self",
+      "concept": "dsi:concept/color/syntax-self/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-0d38ecd06bbb",
+      "token": "syntax-separator",
+      "concept": "dsi:concept/color/syntax-separator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-a0ee002221f9",
+      "token": "syntax-special",
+      "concept": "dsi:concept/color/syntax-special/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-fee30968796c",
+      "token": "syntax-special-string",
+      "concept": "dsi:concept/color/syntax-special-string/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-030f23e15e64",
+      "token": "syntax-square-bracket",
+      "concept": "dsi:concept/color/syntax-square-bracket/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-10b6e354e0e4",
+      "token": "syntax-standard",
+      "concept": "dsi:concept/color/syntax-standard/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-479e8127b03d",
+      "token": "syntax-strikethrough",
+      "concept": "dsi:concept/color/syntax-strikethrough/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-71e1afb3d918",
+      "token": "syntax-string",
+      "concept": "dsi:concept/color/syntax-string/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-07765606572b",
+      "token": "syntax-strong",
+      "concept": "dsi:concept/color/syntax-strong/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-94e80673038c",
+      "token": "syntax-tag",
+      "concept": "dsi:concept/color/syntax-tag/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-d7541909d46e",
+      "token": "syntax-tag-name",
+      "concept": "dsi:concept/color/syntax-tag-name/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-6e2d618a5de2",
+      "token": "syntax-type",
+      "concept": "dsi:concept/color/syntax-type/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-292e295cb9fc",
+      "token": "syntax-type-name",
+      "concept": "dsi:concept/color/syntax-type-name/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-934bfdaa8c07",
+      "token": "syntax-type-operator",
+      "concept": "dsi:concept/color/syntax-type-operator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-29350edbb130",
+      "token": "syntax-unit",
+      "concept": "dsi:concept/color/syntax-unit/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-514267655606",
+      "token": "syntax-update-operator",
+      "concept": "dsi:concept/color/syntax-update-operator/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-6da8c80c90b9",
+      "token": "syntax-url",
+      "concept": "dsi:concept/color/syntax-url/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-280e6cc62178",
+      "token": "syntax-variable",
+      "concept": "dsi:concept/color/syntax-variable/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
+      }
+    },
+    {
+      "id": "m-d1eaf35650a3",
+      "token": "syntax-variable-name",
+      "concept": "dsi:concept/color/syntax-variable-name/property-text",
+      "match": "exact",
+      "confidence": 1,
+      "status": "approved",
+      "rationale": "Carbon syntax-* tokens are the @lezer/highlight tags in kebab case (carbon PRs #21047, #21230, #22037; https://lezer.codemirror.net/docs/ref/#highlight.tags); syntax group paints text (src/tokens/v11TokenGroup.ts).",
+      "provenance": {
+        "agent": "dsi-research",
+        "at": "2026-11-01T04:30:00Z",
+        "method": "research-v1"
+      },
+      "review": {
+        "by": "kimgranlund",
+        "at": "2026-11-01T04:30:00Z",
+        "note": "Approved in the research round (ADR 0012)."
       }
     },
     {
@@ -3589,7 +5301,7 @@
     },
     {
       "token": "syntax-angle-bracket",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3601,11 +5313,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-b2cf1ab0f745"
     },
     {
       "token": "syntax-annotation",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3617,11 +5330,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-d37af5c25f8a"
     },
     {
       "token": "syntax-arithmetic-operator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3633,11 +5347,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-a7aab7b14b10"
     },
     {
       "token": "syntax-atom",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3649,11 +5364,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-1a8bcfadd35a"
     },
     {
       "token": "syntax-attribute",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3665,11 +5381,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-df98afd7e151"
     },
     {
       "token": "syntax-attribute-name",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3681,11 +5398,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-92117fd0aae4"
     },
     {
       "token": "syntax-attribute-value",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3697,11 +5415,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-864b10b2035f"
     },
     {
       "token": "syntax-bitwise-operator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3713,11 +5432,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-6d376a65a65d"
     },
     {
       "token": "syntax-block-comment",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3729,11 +5449,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-8398b9ba3163"
     },
     {
       "token": "syntax-bool",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3745,11 +5466,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-7a754592072b"
     },
     {
       "token": "syntax-brace",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3761,11 +5483,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-9f272d7deb11"
     },
     {
       "token": "syntax-bracket",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3777,11 +5500,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-71e54d7b892c"
     },
     {
       "token": "syntax-character",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3793,11 +5517,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-0c0106591679"
     },
     {
       "token": "syntax-class-name",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3809,11 +5534,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-0d4f2dee3c95"
     },
     {
       "token": "syntax-color",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3825,11 +5551,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-2ed1addfb6d1"
     },
     {
       "token": "syntax-comment",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3841,11 +5568,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-0b443bc7e99d"
     },
     {
       "token": "syntax-compare-operator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3857,11 +5585,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-bcd4b6b0985c"
     },
     {
       "token": "syntax-constant",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3873,11 +5602,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-1561cf442bb7"
     },
     {
       "token": "syntax-content",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3889,11 +5619,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-145c32105686"
     },
     {
       "token": "syntax-content-separator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3905,11 +5636,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-1fadf0006569"
     },
     {
       "token": "syntax-control-keyword",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3921,11 +5653,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-2d91634bbabd"
     },
     {
       "token": "syntax-control-operator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3937,11 +5670,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-6ca038baef7a"
     },
     {
       "token": "syntax-definition",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3953,11 +5687,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-cf0d27803631"
     },
     {
       "token": "syntax-definition-keyword",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3969,11 +5704,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-8b45c7229b78"
     },
     {
       "token": "syntax-definition-operator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -3985,11 +5721,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-563c7bcab294"
     },
     {
       "token": "syntax-deleted",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4001,11 +5738,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-9d8cd4fb76fd"
     },
     {
       "token": "syntax-deref-operator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4017,11 +5755,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-a7c598f3fc8e"
     },
     {
       "token": "syntax-doc-comment",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4033,11 +5772,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-5d70bae92002"
     },
     {
       "token": "syntax-doc-string",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4049,11 +5789,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-f8665296fe0e"
     },
     {
       "token": "syntax-document-meta",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4065,11 +5806,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-5ec3f0477e0b"
     },
     {
       "token": "syntax-emphasis",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4081,11 +5823,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-a626829c0ca2"
     },
     {
       "token": "syntax-escape",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4097,11 +5840,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-d06ae439bd8a"
     },
     {
       "token": "syntax-float",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4113,11 +5857,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-be2d3e01cd32"
     },
     {
       "token": "syntax-function",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4129,11 +5874,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-7153d43573bf"
     },
     {
       "token": "syntax-heading",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4145,11 +5891,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-249a1bf04768"
     },
     {
       "token": "syntax-heading-1",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4161,11 +5908,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-48de0054daaf"
     },
     {
       "token": "syntax-heading-2",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4177,11 +5925,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-97daf2f655b7"
     },
     {
       "token": "syntax-heading-3",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4193,11 +5942,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-375e481c9885"
     },
     {
       "token": "syntax-heading-4",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4209,11 +5959,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-ae95a6684a63"
     },
     {
       "token": "syntax-heading-5",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4225,11 +5976,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-e3d706a2ec2d"
     },
     {
       "token": "syntax-heading-6",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4241,11 +5993,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-1e88bb99246a"
     },
     {
       "token": "syntax-inserted",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4257,11 +6010,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-a543933624b8"
     },
     {
       "token": "syntax-integer",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4273,11 +6027,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-91bc403ae7a2"
     },
     {
       "token": "syntax-invalid",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4289,11 +6044,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-231e5195d4bf"
     },
     {
       "token": "syntax-keyword",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4305,11 +6061,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-19486e5cf320"
     },
     {
       "token": "syntax-label-name",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4321,11 +6078,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-dbeb22490fde"
     },
     {
       "token": "syntax-line-comment",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4337,11 +6095,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-dc34ef328a0e"
     },
     {
       "token": "syntax-link",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4353,11 +6112,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-c28855cbed17"
     },
     {
       "token": "syntax-list",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4369,11 +6129,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-16028d4e4144"
     },
     {
       "token": "syntax-literal",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4385,11 +6146,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-1ef0b2fee88a"
     },
     {
       "token": "syntax-local",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4401,11 +6163,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-5ff0704a061c"
     },
     {
       "token": "syntax-logic-operator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4417,11 +6180,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-12073d60f40b"
     },
     {
       "token": "syntax-macro-name",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4433,11 +6197,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-f80c2524c17b"
     },
     {
       "token": "syntax-meta",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4449,11 +6214,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-52dcaf36e213"
     },
     {
       "token": "syntax-modifier",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4465,11 +6231,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-27b6ab4ce4f0"
     },
     {
       "token": "syntax-module-keyword",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4481,11 +6248,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-aa40e9a794d6"
     },
     {
       "token": "syntax-monospace",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4497,11 +6265,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-396f3b00e32e"
     },
     {
       "token": "syntax-name",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4513,11 +6282,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-6fee2763c369"
     },
     {
       "token": "syntax-namespace",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4529,11 +6299,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-04b296c9bf1b"
     },
     {
       "token": "syntax-null",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4545,11 +6316,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-dc09a963f77f"
     },
     {
       "token": "syntax-number",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4561,11 +6333,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-10eeabc7a099"
     },
     {
       "token": "syntax-operator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4577,11 +6350,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-3c3ef4514e65"
     },
     {
       "token": "syntax-operator-keyword",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4593,11 +6367,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-8bb3e316e090"
     },
     {
       "token": "syntax-paren",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4609,11 +6384,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-872f839505a5"
     },
     {
       "token": "syntax-processing-instruction",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4625,11 +6401,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-fa4fea8dede8"
     },
     {
       "token": "syntax-property-name",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4641,11 +6418,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-994b6c29f2d3"
     },
     {
       "token": "syntax-punctuation",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4657,11 +6435,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-ff886966e4ee"
     },
     {
       "token": "syntax-quote",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4673,11 +6452,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-0dc0cbfc3e9a"
     },
     {
       "token": "syntax-regexp",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4689,11 +6469,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-e8ef53adc4cf"
     },
     {
       "token": "syntax-self",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4705,11 +6486,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-62d6f68962ae"
     },
     {
       "token": "syntax-separator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4721,11 +6503,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-0d38ecd06bbb"
     },
     {
       "token": "syntax-special",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4737,11 +6520,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-a0ee002221f9"
     },
     {
       "token": "syntax-special-string",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4753,11 +6537,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-fee30968796c"
     },
     {
       "token": "syntax-square-bracket",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4769,11 +6554,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-030f23e15e64"
     },
     {
       "token": "syntax-standard",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4785,11 +6571,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-10b6e354e0e4"
     },
     {
       "token": "syntax-strikethrough",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4801,11 +6588,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-479e8127b03d"
     },
     {
       "token": "syntax-string",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4817,11 +6605,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-71e1afb3d918"
     },
     {
       "token": "syntax-strong",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4833,11 +6622,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-07765606572b"
     },
     {
       "token": "syntax-tag",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4849,11 +6639,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-94e80673038c"
     },
     {
       "token": "syntax-tag-name",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4865,11 +6656,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-d7541909d46e"
     },
     {
       "token": "syntax-type",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4881,11 +6673,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-6e2d618a5de2"
     },
     {
       "token": "syntax-type-name",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4897,11 +6690,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-292e295cb9fc"
     },
     {
       "token": "syntax-type-operator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4913,11 +6707,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-934bfdaa8c07"
     },
     {
       "token": "syntax-unit",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4929,11 +6724,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-29350edbb130"
     },
     {
       "token": "syntax-update-operator",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4945,11 +6741,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-514267655606"
     },
     {
       "token": "syntax-url",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4961,11 +6758,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-6da8c80c90b9"
     },
     {
       "token": "syntax-variable",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4977,11 +6775,12 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-280e6cc62178"
     },
     {
       "token": "syntax-variable-name",
-      "status": "approved",
+      "status": "superseded",
       "rationale": "Syntax highlighting role; no syntax-role concepts yet (missing: color/syntax-* vocabulary).",
       "provenance": {
         "agent": "dsi-mapper",
@@ -4993,7 +6792,8 @@
         "by": "agreement",
         "at": "2026-10-31T23:47:52.576Z",
         "note": "claude-opus-5-5 and claude-sonnet-5-5 agreed independently: no concept fits. Other rationale: Syntax highlighting roles have no concepts yet (missing: syntax-role vocabulary)."
-      }
+      },
+      "supersededBy": "m-d1eaf35650a3"
     },
     {
       "token": "toggle-off",

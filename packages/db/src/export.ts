@@ -16,8 +16,9 @@ export function exportSite(root: string, dbFile: string, outDir: string): Record
   const write = (name: string, data: unknown) => { const s = JSON.stringify(data); fs.writeFileSync(path.join(outDir, name), s); return s.length; };
   const sizes: Record<string, number> = {};
 
-  const facets = JSON.parse(fs.readFileSync(path.join(root, 'ontology/schemes/facets.jsonld'), 'utf8'))['@graph'] as Row[];
-  const facetValues = Object.fromEntries(['intent', 'usage', 'property', 'emphasis', 'state'].map((f) => [f, facets.filter((c) => c.inScheme === `dsi:scheme/${f}` && !c.deprecated).map((c) => ({ value: String(c.id).split('/').pop(), label: c.prefLabel, definition: c.definition ?? null }))]));
+  const schemeDir = path.join(root, 'ontology/schemes');
+  const facets = fs.readdirSync(schemeDir).filter((f) => f.endsWith('.jsonld')).flatMap((f) => JSON.parse(fs.readFileSync(path.join(schemeDir, f), 'utf8'))['@graph'] as Row[]);
+  const facetValues = Object.fromEntries(['intent', 'usage', 'syntax', 'property', 'emphasis', 'brightness', 'state'].map((f) => [f, facets.filter((c) => c.inScheme === `dsi:scheme/${f}` && !c.deprecated).map((c) => ({ value: String(c.id).split('/').pop(), label: c.prefLabel, definition: c.definition ?? null }))]));
   const modes = all('SELECT product, mode, theme FROM modes ORDER BY product, mode');
   const products = all("SELECT * FROM products WHERE version IS NOT NULL ORDER BY name").map((p): Row => ({
     ...p,

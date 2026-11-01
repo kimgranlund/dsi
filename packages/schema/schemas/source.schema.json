@@ -69,7 +69,8 @@
               "js-module",
               "css",
               "scss",
-              "ts-token-groups"
+              "ts-token-groups",
+              "sass-doc-groups"
             ]
           },
           "theme": {
@@ -84,6 +85,18 @@
             "type": "string",
             "pattern": "\\{path\\}",
             "description": "How the product names these tokens in its public API, with {path} for the token's path, e.g. --cds-{path}. Omit when the DTCG path is the shipped name."
+          },
+          "groupOrder": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Group order when the shipped groups come in no meaningful order (e.g. alphabetical files), taken from the product's docs."
+          },
+          "groupOrderSource": {
+            "type": "string",
+            "format": "uri",
+            "description": "Where groupOrder comes from."
           }
         }
       }

@@ -11,7 +11,8 @@ export const termIri = (product: string, term: string) => `dsi:vocab/${product}/
 
 /** prefLabels of facet values, read from the ontology source (for readable compositional concept labels). */
 export function facetLabels(root: string): Map<string, string> {
-  const g = JSON.parse(fs.readFileSync(path.join(root, 'ontology/schemes/facets.jsonld'), 'utf8'))['@graph'] as { id: string; prefLabel?: string }[];
+  const dir = path.join(root, 'ontology/schemes');
+  const g = fs.readdirSync(dir).filter((f) => f.endsWith('.jsonld')).flatMap((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'))['@graph'] as { id: string; prefLabel?: string }[]);
   return new Map(g.filter((c) => c.prefLabel).map((c) => [c.id, c.prefLabel!]));
 }
 

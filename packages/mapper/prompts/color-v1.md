@@ -35,10 +35,10 @@ Exactly one entry per token in the packet, in any order.
 
 ## Choosing the concept
 
-A concept is `dsi:concept/color/<facet>-<value>/...` with facets in this order: **intent, usage, property, emphasis, state**. Use only values listed in the packet's ontology. Bind a facet only when the token's name, description or usage clearly fixes it; an unbound facet means "not specific to that dimension", never "default".
+A concept is `dsi:concept/color/<facet>-<value>/...` with facets in this order: **intent, usage, syntax, property, emphasis, brightness, state**. Use only values listed in the packet's ontology. Bind a facet only when the token's name, description or usage clearly fixes it; an unbound facet means "not specific to that dimension", never "default".
 
 - **Intent** is what the color communicates (danger, warning, caution, success, info, accent, neutral, highlight, destructive, ai). Caution is a milder warning (Polaris caution, Carbon support-caution-minor); highlight marks editor focus regions and text selection (Polaris emphasis, Carbon highlight). Bind intent from meaning, not hue: a red palette step is not Danger.
-- **Usage** is where it applies across components (page, surface, overlay, scrim, inverse, on-fill, field, link, navigation, skeleton). `on-fill` is content placed on a strong filled background of an intent or accent (Material `on-error`, Polaris `*-on-bg-fill`, Carbon `*-on-color`).
+- **Usage** is where it applies across components (page, surface, overlay, scrim, inverse, on-fill, field, link, navigation, skeleton, categorical). `on-fill` is content placed on a strong filled background of an intent or accent (Material `on-error`, Polaris `*-on-bg-fill`, Carbon `*-on-color`).
 - **Property** is what it paints: background, foreground, text, icon, border, focus-ring, shadow. Use `foreground` when one token colors both text and icons (Material `on-*`, most "content" tokens); `text` or `icon` only when the token is limited to one.
 - **Emphasis** is relative strength: subtlest, subtle, default, strong, strongest. Use subtle/strong for "secondary", "subdued", "container" (subtle background) or "strong", "emphasis", "bold" variants; use subtlest and strongest only for the ends of families with more than three steps (Material `surface-container-lowest` .. `-highest`; Carbon `layer-01` .. `layer-03` map to subtle, default, strong). Leave emphasis unbound for the base token of a family.
 - **State**: hover, active (pressed), focus, disabled, selected, visited.
@@ -85,7 +85,11 @@ Your probability that a careful designer familiar with this system would accept 
 - **Secondary and tertiary accents** (Material `secondary`, `tertiary` and their containers): map to the accent concept with `broad`; there is one accent intent.
 - **Theme-invariant "fixed" tokens** (Material `*-fixed`, `*-fixed-dim`, `on-*-fixed`): the counterpart is the **container** role, frozen at its light-theme value (`primary-fixed` = `primary-container` in light; `on-primary-fixed` = `on-primary-container`). Give the container's concept and match (`primary-fixed` -> accent background, subtle emphasis), and say "fixed across themes" in the rationale. Check the values: they show the counterpart. Invariance itself is not a concept (ADR 0010).
 - **Content on intent containers** (Material `on-error-container`, `on-primary-container`): `usage-on-fill` with `emphasis-subtle`, property `foreground`.
-- **Syntax highlighting** (Carbon `syntax-*`): always `unmapped`; there is no syntax-role vocabulary yet.
+- **Syntax highlighting** (Carbon `syntax-*`): `dsi:concept/color/syntax-<lezer-tag>/property-text`, exact; values are the @lezer/highlight tags (ADR 0012).
+- **Categorical palettes** (Polaris avatar colors): `usage-categorical` (+ `on-fill` for their text), broad: each token is one slot.
+- **Brightness** (Material surface-dim/bright): the `brightness` facet, not emphasis.
+- **Warning severity** (Carbon support-caution-minor/major): Warning, and Warning with strong emphasis; Polaris caution (milder than warning) is Caution.
+- **Prominence words** (secondary, tertiary): lower prominence as the product defines it, even when the color is darker (ADR 0012).
 
 ## Unmapped
 

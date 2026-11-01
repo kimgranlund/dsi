@@ -1,0 +1,738 @@
+{
+ "@context": "../context.jsonld",
+ "@graph": [
+  {
+   "id": "dsi:scheme/syntax",
+   "type": "ConceptScheme",
+   "prefLabel": "Syntax roles",
+   "definition": "Roles of code and document syntax for highlighting, adopted from the @lezer/highlight tag set (CodeMirror) with its own parent hierarchy.",
+   "editorialNote": "Generated from @lezer/highlight 1.2.1 (dist/index.js tags table, parsed not executed). Carbon's syntax-* tokens are these tags in kebab case (carbon-design-system/carbon PRs #21047, #21230, #22037). Values carry the Lezer tag name as notation.",
+   "rdfs:seeAlso": {
+    "id": "https://lezer.codemirror.net/docs/ref/#highlight.tags"
+   }
+  },
+  {
+   "id": "dsi:syntax/comment",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Comment",
+   "notation": "comment",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/line-comment",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Line comment",
+   "notation": "lineComment",
+   "broader": "dsi:syntax/comment"
+  },
+  {
+   "id": "dsi:syntax/block-comment",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Block comment",
+   "notation": "blockComment",
+   "broader": "dsi:syntax/comment"
+  },
+  {
+   "id": "dsi:syntax/doc-comment",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Doc comment",
+   "notation": "docComment",
+   "broader": "dsi:syntax/comment"
+  },
+  {
+   "id": "dsi:syntax/name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Name",
+   "notation": "name",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/variable-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Variable name",
+   "notation": "variableName",
+   "broader": "dsi:syntax/name"
+  },
+  {
+   "id": "dsi:syntax/type-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Type name",
+   "notation": "typeName",
+   "broader": "dsi:syntax/name"
+  },
+  {
+   "id": "dsi:syntax/tag-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Tag name",
+   "notation": "tagName",
+   "broader": "dsi:syntax/type-name"
+  },
+  {
+   "id": "dsi:syntax/property-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Property name",
+   "notation": "propertyName",
+   "broader": "dsi:syntax/name"
+  },
+  {
+   "id": "dsi:syntax/attribute-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Attribute name",
+   "notation": "attributeName",
+   "broader": "dsi:syntax/property-name"
+  },
+  {
+   "id": "dsi:syntax/class-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Class name",
+   "notation": "className",
+   "broader": "dsi:syntax/name"
+  },
+  {
+   "id": "dsi:syntax/label-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Label name",
+   "notation": "labelName",
+   "broader": "dsi:syntax/name"
+  },
+  {
+   "id": "dsi:syntax/namespace",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Namespace",
+   "notation": "namespace",
+   "broader": "dsi:syntax/name"
+  },
+  {
+   "id": "dsi:syntax/macro-name",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Macro name",
+   "notation": "macroName",
+   "broader": "dsi:syntax/name"
+  },
+  {
+   "id": "dsi:syntax/literal",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Literal",
+   "notation": "literal",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/string",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "String",
+   "notation": "string",
+   "broader": "dsi:syntax/literal"
+  },
+  {
+   "id": "dsi:syntax/doc-string",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Doc string",
+   "notation": "docString",
+   "broader": "dsi:syntax/string"
+  },
+  {
+   "id": "dsi:syntax/character",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Character",
+   "notation": "character",
+   "broader": "dsi:syntax/string"
+  },
+  {
+   "id": "dsi:syntax/attribute-value",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Attribute value",
+   "notation": "attributeValue",
+   "broader": "dsi:syntax/string"
+  },
+  {
+   "id": "dsi:syntax/number",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Number",
+   "notation": "number",
+   "broader": "dsi:syntax/literal"
+  },
+  {
+   "id": "dsi:syntax/integer",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Integer",
+   "notation": "integer",
+   "broader": "dsi:syntax/number"
+  },
+  {
+   "id": "dsi:syntax/float",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Float",
+   "notation": "float",
+   "broader": "dsi:syntax/number"
+  },
+  {
+   "id": "dsi:syntax/bool",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Bool",
+   "notation": "bool",
+   "broader": "dsi:syntax/literal"
+  },
+  {
+   "id": "dsi:syntax/regexp",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Regexp",
+   "notation": "regexp",
+   "broader": "dsi:syntax/literal"
+  },
+  {
+   "id": "dsi:syntax/escape",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Escape",
+   "notation": "escape",
+   "broader": "dsi:syntax/literal"
+  },
+  {
+   "id": "dsi:syntax/color",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Color",
+   "notation": "color",
+   "broader": "dsi:syntax/literal"
+  },
+  {
+   "id": "dsi:syntax/url",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Url",
+   "notation": "url",
+   "broader": "dsi:syntax/literal"
+  },
+  {
+   "id": "dsi:syntax/keyword",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Keyword",
+   "notation": "keyword",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/self",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Self",
+   "notation": "self",
+   "broader": "dsi:syntax/keyword"
+  },
+  {
+   "id": "dsi:syntax/null",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Null",
+   "notation": "null",
+   "broader": "dsi:syntax/keyword"
+  },
+  {
+   "id": "dsi:syntax/atom",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Atom",
+   "notation": "atom",
+   "broader": "dsi:syntax/keyword"
+  },
+  {
+   "id": "dsi:syntax/unit",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Unit",
+   "notation": "unit",
+   "broader": "dsi:syntax/keyword"
+  },
+  {
+   "id": "dsi:syntax/modifier",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Modifier",
+   "notation": "modifier",
+   "broader": "dsi:syntax/keyword"
+  },
+  {
+   "id": "dsi:syntax/operator-keyword",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Operator keyword",
+   "notation": "operatorKeyword",
+   "broader": "dsi:syntax/keyword"
+  },
+  {
+   "id": "dsi:syntax/control-keyword",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Control keyword",
+   "notation": "controlKeyword",
+   "broader": "dsi:syntax/keyword"
+  },
+  {
+   "id": "dsi:syntax/definition-keyword",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Definition keyword",
+   "notation": "definitionKeyword",
+   "broader": "dsi:syntax/keyword"
+  },
+  {
+   "id": "dsi:syntax/module-keyword",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Module keyword",
+   "notation": "moduleKeyword",
+   "broader": "dsi:syntax/keyword"
+  },
+  {
+   "id": "dsi:syntax/operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Operator",
+   "notation": "operator",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/deref-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Deref operator",
+   "notation": "derefOperator",
+   "broader": "dsi:syntax/operator"
+  },
+  {
+   "id": "dsi:syntax/arithmetic-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Arithmetic operator",
+   "notation": "arithmeticOperator",
+   "broader": "dsi:syntax/operator"
+  },
+  {
+   "id": "dsi:syntax/logic-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Logic operator",
+   "notation": "logicOperator",
+   "broader": "dsi:syntax/operator"
+  },
+  {
+   "id": "dsi:syntax/bitwise-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Bitwise operator",
+   "notation": "bitwiseOperator",
+   "broader": "dsi:syntax/operator"
+  },
+  {
+   "id": "dsi:syntax/compare-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Compare operator",
+   "notation": "compareOperator",
+   "broader": "dsi:syntax/operator"
+  },
+  {
+   "id": "dsi:syntax/update-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Update operator",
+   "notation": "updateOperator",
+   "broader": "dsi:syntax/operator"
+  },
+  {
+   "id": "dsi:syntax/definition-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Definition operator",
+   "notation": "definitionOperator",
+   "broader": "dsi:syntax/operator"
+  },
+  {
+   "id": "dsi:syntax/type-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Type operator",
+   "notation": "typeOperator",
+   "broader": "dsi:syntax/operator"
+  },
+  {
+   "id": "dsi:syntax/control-operator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Control operator",
+   "notation": "controlOperator",
+   "broader": "dsi:syntax/operator"
+  },
+  {
+   "id": "dsi:syntax/punctuation",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Punctuation",
+   "notation": "punctuation",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/separator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Separator",
+   "notation": "separator",
+   "broader": "dsi:syntax/punctuation"
+  },
+  {
+   "id": "dsi:syntax/bracket",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Bracket",
+   "notation": "bracket",
+   "broader": "dsi:syntax/punctuation"
+  },
+  {
+   "id": "dsi:syntax/angle-bracket",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Angle bracket",
+   "notation": "angleBracket",
+   "broader": "dsi:syntax/bracket"
+  },
+  {
+   "id": "dsi:syntax/square-bracket",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Square bracket",
+   "notation": "squareBracket",
+   "broader": "dsi:syntax/bracket"
+  },
+  {
+   "id": "dsi:syntax/paren",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Paren",
+   "notation": "paren",
+   "broader": "dsi:syntax/bracket"
+  },
+  {
+   "id": "dsi:syntax/brace",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Brace",
+   "notation": "brace",
+   "broader": "dsi:syntax/bracket"
+  },
+  {
+   "id": "dsi:syntax/content",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Content",
+   "notation": "content",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/heading",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Heading",
+   "notation": "heading",
+   "broader": "dsi:syntax/content"
+  },
+  {
+   "id": "dsi:syntax/heading-1",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Heading 1",
+   "notation": "heading1",
+   "broader": "dsi:syntax/heading"
+  },
+  {
+   "id": "dsi:syntax/heading-2",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Heading 2",
+   "notation": "heading2",
+   "broader": "dsi:syntax/heading"
+  },
+  {
+   "id": "dsi:syntax/heading-3",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Heading 3",
+   "notation": "heading3",
+   "broader": "dsi:syntax/heading"
+  },
+  {
+   "id": "dsi:syntax/heading-4",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Heading 4",
+   "notation": "heading4",
+   "broader": "dsi:syntax/heading"
+  },
+  {
+   "id": "dsi:syntax/heading-5",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Heading 5",
+   "notation": "heading5",
+   "broader": "dsi:syntax/heading"
+  },
+  {
+   "id": "dsi:syntax/heading-6",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Heading 6",
+   "notation": "heading6",
+   "broader": "dsi:syntax/heading"
+  },
+  {
+   "id": "dsi:syntax/content-separator",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Content separator",
+   "notation": "contentSeparator",
+   "broader": "dsi:syntax/content"
+  },
+  {
+   "id": "dsi:syntax/list",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "List",
+   "notation": "list",
+   "broader": "dsi:syntax/content"
+  },
+  {
+   "id": "dsi:syntax/quote",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Quote",
+   "notation": "quote",
+   "broader": "dsi:syntax/content"
+  },
+  {
+   "id": "dsi:syntax/emphasis",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Emphasis",
+   "notation": "emphasis",
+   "broader": "dsi:syntax/content"
+  },
+  {
+   "id": "dsi:syntax/strong",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Strong",
+   "notation": "strong",
+   "broader": "dsi:syntax/content"
+  },
+  {
+   "id": "dsi:syntax/link",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Link",
+   "notation": "link",
+   "broader": "dsi:syntax/content"
+  },
+  {
+   "id": "dsi:syntax/monospace",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Monospace",
+   "notation": "monospace",
+   "broader": "dsi:syntax/content"
+  },
+  {
+   "id": "dsi:syntax/strikethrough",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Strikethrough",
+   "notation": "strikethrough",
+   "broader": "dsi:syntax/content"
+  },
+  {
+   "id": "dsi:syntax/inserted",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Inserted",
+   "notation": "inserted",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/deleted",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Deleted",
+   "notation": "deleted",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/changed",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Changed",
+   "notation": "changed",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/invalid",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Invalid",
+   "notation": "invalid",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/meta",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Meta",
+   "notation": "meta",
+   "topConceptOf": "dsi:scheme/syntax"
+  },
+  {
+   "id": "dsi:syntax/document-meta",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Document meta",
+   "notation": "documentMeta",
+   "broader": "dsi:syntax/meta"
+  },
+  {
+   "id": "dsi:syntax/annotation",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Annotation",
+   "notation": "annotation",
+   "broader": "dsi:syntax/meta"
+  },
+  {
+   "id": "dsi:syntax/processing-instruction",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Processing instruction",
+   "notation": "processingInstruction",
+   "broader": "dsi:syntax/meta"
+  },
+  {
+   "id": "dsi:syntax/definition",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "topConceptOf": "dsi:scheme/syntax",
+   "prefLabel": "Definition",
+   "notation": "definition",
+   "definition": "Lezer modifier: marks a definition variant of another role (for example definition of a variable name)."
+  },
+  {
+   "id": "dsi:syntax/constant",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "topConceptOf": "dsi:scheme/syntax",
+   "prefLabel": "Constant",
+   "notation": "constant",
+   "definition": "Lezer modifier: marks a constant variant of another role (for example constant of a variable name)."
+  },
+  {
+   "id": "dsi:syntax/function",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "topConceptOf": "dsi:scheme/syntax",
+   "prefLabel": "Function",
+   "notation": "function",
+   "definition": "Lezer modifier: marks a function variant of another role (for example function of a variable name)."
+  },
+  {
+   "id": "dsi:syntax/standard",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "topConceptOf": "dsi:scheme/syntax",
+   "prefLabel": "Standard",
+   "notation": "standard",
+   "definition": "Lezer modifier: marks a standard variant of another role (for example standard of a variable name)."
+  },
+  {
+   "id": "dsi:syntax/local",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "topConceptOf": "dsi:scheme/syntax",
+   "prefLabel": "Local",
+   "notation": "local",
+   "definition": "Lezer modifier: marks a local variant of another role (for example local of a variable name)."
+  },
+  {
+   "id": "dsi:syntax/special",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "topConceptOf": "dsi:scheme/syntax",
+   "prefLabel": "Special",
+   "notation": "special",
+   "definition": "Lezer modifier: marks a special variant of another role (for example special of a variable name)."
+  },
+  {
+   "id": "dsi:syntax/variable",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Variable",
+   "broader": "dsi:syntax/name",
+   "definition": "Carbon head for variable roles; groups variableName and its modified forms.",
+   "editorialNote": "Not a Lezer tag: needed for Carbon syntax tokens."
+  },
+  {
+   "id": "dsi:syntax/attribute",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Attribute",
+   "broader": "dsi:syntax/name",
+   "definition": "Carbon head for attribute roles (attributeName, attributeValue).",
+   "editorialNote": "Not a Lezer tag: needed for Carbon syntax tokens."
+  },
+  {
+   "id": "dsi:syntax/tag",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Tag",
+   "broader": "dsi:syntax/name",
+   "definition": "Carbon head for markup tag roles (tagName and brackets).",
+   "editorialNote": "Not a Lezer tag: needed for Carbon syntax tokens."
+  },
+  {
+   "id": "dsi:syntax/type",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Type",
+   "broader": "dsi:syntax/name",
+   "definition": "Carbon head for type roles (typeName, typeOperator).",
+   "editorialNote": "Not a Lezer tag: needed for Carbon syntax tokens."
+  },
+  {
+   "id": "dsi:syntax/special-string",
+   "type": "Concept",
+   "inScheme": "dsi:scheme/syntax",
+   "prefLabel": "Special string",
+   "broader": "dsi:syntax/string",
+   "definition": "Lezer special(string): strings with special meaning, such as regular-expression-like or template strings.",
+   "editorialNote": "Not a Lezer tag: needed for Carbon syntax tokens."
+  }
+ ]
+}
