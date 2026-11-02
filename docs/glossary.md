@@ -59,5 +59,6 @@ Layers in a stack. Classify products, not organizations.
 | Alias graph | References between tokens inside one product (vertical) |
 | Mapping graph | Links from native tokens to concepts, across products (horizontal) |
 | Canonical token set | The concept layer emitted as DTCG; each product resolves it as a theme |
+| Discriminating test | One sentence on a facet word (`dsi:discriminatingTest`, ADR 0028) saying how to tell it from its nearest sibling by shipped facts. The boundary tests B1 to B8 are its code form. |
 | Evidence record | One deterministic test's finding about an approved mapping: `{test, field, observed, expected, agrees}` in `data/evidence/` (ADR 0027). A disagreeing record is a review candidate. |
 | Competency question | A question the index must answer (`ontology/competency-questions.json`, ADR 0026). Every facet value is needed by at least one; a value no question needs is a deletion candidate. |

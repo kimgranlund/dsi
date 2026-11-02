@@ -16,7 +16,7 @@ export async function ontologyView(main: HTMLElement, facet?: string, value?: st
   setTitle(`${v.label} (${facet})`);
   const using = cs.filter((c) => c.facets[facet]?.split('+').includes(v.value));
   main.replaceChildren(
-    el('section', {}, el('span', { class: 'eyebrow' }, link('/ontology', 'Ontology'), ` · ${facet}`), el('h1', { text: v.label }), v.definition ? el('p', { class: 'lede', text: v.definition }) : null, el('p', { class: 'chain' }, el('code', { text: `https://dsi.nonoun.io/ontology/${facet}/${v.value}` }))),
+    el('section', {}, el('span', { class: 'eyebrow' }, link('/ontology', 'Ontology'), ` · ${facet}`), el('h1', { text: v.label }), v.definition ? el('p', { class: 'lede', text: v.definition }) : null, v.test ? el('p', {}, el('b', { text: 'How to tell it apart: ' }), v.test) : null, el('p', { class: 'chain' }, el('code', { text: `https://dsi.nonoun.io/ontology/${facet}/${v.value}` }))),
     el('section', {}, el('div', { class: 'section-head' }, el('h2', { text: 'Concepts with this value' }), el('span', { class: 'none-note', text: String(using.length) })), using.length ? el('div', { class: 'list' }, using.map((c) => conceptRow(c, m.products.map((p) => p.id)))) : el('p', { class: 'none-note', text: 'No mapped concept uses this value yet.' })),
   );
 }

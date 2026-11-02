@@ -18,7 +18,7 @@ export function exportSite(root: string, dbFile: string, outDir: string): Record
 
   const schemeDir = path.join(root, 'ontology/schemes');
   const facets = fs.readdirSync(schemeDir).filter((f) => f.endsWith('.jsonld')).flatMap((f) => JSON.parse(fs.readFileSync(path.join(schemeDir, f), 'utf8'))['@graph'] as Row[]);
-  const facetValues = Object.fromEntries(['intent', 'usage', 'hue', 'syntax', 'component', 'part', 'property', 'style', 'emphasis', 'brightness', 'state'].map((f) => [f, facets.filter((c) => c.inScheme === `dsi:scheme/${f}` && !c.deprecated).map((c) => ({ value: String(c.id).split('/').pop(), label: c.prefLabel, definition: c.definition ?? null, ...(c.broader ? { broader: String(c.broader).split('/').pop() } : {}) }))]));
+  const facetValues = Object.fromEntries(['intent', 'usage', 'hue', 'syntax', 'component', 'part', 'property', 'style', 'emphasis', 'brightness', 'state'].map((f) => [f, facets.filter((c) => c.inScheme === `dsi:scheme/${f}` && !c.deprecated).map((c) => ({ value: String(c.id).split('/').pop(), label: c.prefLabel, definition: c.definition ?? null, ...(c.discriminatingTest ? { test: c.discriminatingTest } : {}), ...(c.broader ? { broader: String(c.broader).split('/').pop() } : {}) }))]));
   const modes = all('SELECT product, mode, theme FROM modes ORDER BY product, mode');
   const products = all("SELECT * FROM products WHERE version IS NOT NULL ORDER BY name").map((p): Row => ({
     ...p,

@@ -68,6 +68,7 @@
 
     { "id": "dsi:nameForm", "type": "Property", "label": "name form", "comment": "The form of a word inside concept names when it differs from the lowercased prefLabel (docs/controlled-language.md, L3). Permits no inference; wording only." },
     { "id": "dsi:phrase", "type": "Property", "label": "phrase", "comment": "The phrase a word takes inside generated concept definitions (docs/controlled-language.md, L4), e.g. usage/categorical 'in a categorical set', property/text 'text'. Permits no inference; wording only." },
+    { "id": "dsi:discriminatingTest", "type": "Property", "label": "discriminating test", "comment": "How to tell this word from its nearest siblings, as a test on shipped facts (names, descriptions, values per mode, usage). Boundary tests B1 to B8 (ADR 0021) are the code form of these sentences. Permits no inference; guidance for mappers, reviewers and Jev (ADR 0028)." },
     { "id": "dsi:rank", "type": "Property", "label": "rank", "comment": "Order of a tier in the progression, 1 = Source." },
     { "id": "dsi:definingFacet", "type": "Property", "label": "defining facet", "comment": "A facet whose binding places a token in this tier. All defining facets must be bound." },
     { "id": "dsi:facetKind", "type": "Property", "label": "facet kind", "comment": "Identity or context." },

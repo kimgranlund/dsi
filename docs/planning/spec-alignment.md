@@ -13,7 +13,7 @@ Closely aligned on structure: definition layers above evidence layers, SKOS cros
 | L0 Competency questions | 18 questions in `ontology/competency-questions.json` (ADR 0026); the validator refuses a facet value no question needs | Done (values; composed concepts trace through their facets) |
 | L1 Metamodel | Tokens, modes/themes, aliases; component tier through token applications (ADR 0015). No Guideline, Pattern or Platform entities | Partial (token-scoped by design) |
 | L2 Concept registry | `ontology/schemes/concepts.jsonld`: facet-composed IRI as identity, prefLabel, generated L4 definition, broader/related, proposed (registry gate) and deprecated status, owner approval | Strong |
-| L2 `discriminatingTest` | Boundary tests B1–B8 exist as code and ADR 0021, not stored per concept | Partial |
+| L2 `discriminatingTest` | `dsi:discriminatingTest` on 19 facet words (ADR 0028): B1–B8 in words, plus icon, size, border/focus ring, danger/warning; shown on ontology pages | Partial (19 words; composed concepts inherit through facets) |
 | L2 `externalAnchors` | DTCG types; Lezer highlight tags for syntax. No WAI-ARIA anchors (components are shallow) | Partial |
 | L2 altLabels | On facet words (from the corpus comparison), not on composed concepts | Partial |
 | L5 Adapters | Syntactic only; never assign concepts; never execute package code | Strong |
@@ -41,7 +41,7 @@ Closely aligned on structure: definition layers above evidence layers, SKOS cros
 
 1. **Competency questions (L0).** A `CQ-*` registry; every facet value and concept family links to at least one. Gives a deletion test and settles granularity disputes.
 2. ~~**Structured mapping evidence (L3).**~~ Done, ADR 0027. Emit usage-graph agreement, contrast rank and boundary-test results as `{field, observed, expected, agrees}` records; stamp each mapping with the registry and resolver versions.
-3. **Per-concept discriminating tests (L2).** Store the boundary-test wording on concepts with siblings.
+3. ~~**Per-concept discriminating tests (L2).**~~ Started, ADR 0028. Store the boundary-test wording on concepts with siblings.
 4. **Golden-set regression gate (§8).** Re-run rules and the classifier against approved mappings on every change; block on a drop beyond tolerance.
 
 Larger, separate: content-addressed snapshots with spans (L6), guidance extraction with span grounding (GuidanceIR), component signatures (ARIA role, keyboard, focus, parts).
