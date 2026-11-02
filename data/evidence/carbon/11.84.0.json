@@ -1,0 +1,4787 @@
+{
+ "product": "carbon",
+ "version": "11.84.0",
+ "registry": "ontology@610433fac79d",
+ "resolver": "resolve@f65082c09daf",
+ "generatedBy": "dsi-map evidence",
+ "summary": {
+  "B1:emphasis": {
+   "agrees": 18,
+   "disagrees": 7
+  },
+  "B3:usage": {
+   "agrees": 26,
+   "disagrees": 2
+  },
+  "B6:property": {
+   "agrees": 9,
+   "disagrees": 0
+  },
+  "hue:intent": {
+   "agrees": 19,
+   "disagrees": 0
+  },
+  "terms:emphasis": {
+   "agrees": 4,
+   "disagrees": 1
+  },
+  "terms:intent": {
+   "agrees": 20,
+   "disagrees": 1
+  },
+  "terms:property": {
+   "agrees": 53,
+   "disagrees": 0
+  },
+  "terms:state": {
+   "agrees": 22,
+   "disagrees": 0
+  },
+  "terms:usage": {
+   "agrees": 33,
+   "disagrees": 4
+  },
+  "usage:property": {
+   "agrees": 75,
+   "disagrees": 5
+  },
+  "usage:state": {
+   "agrees": 77,
+   "disagrees": 15
+  },
+  "usage:usage": {
+   "agrees": 7,
+   "disagrees": 24
+  }
+ },
+ "mappings": [
+  {
+   "mapping": "m-25653bd7c1e1",
+   "token": "ai-aura-end",
+   "concept": "dsi:concept/color/intent-ai/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (96% of 27 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.96
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (93% of 27 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.93
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "(unbound)",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-cb4b2a1c6b0f",
+   "token": "ai-aura-hover-background",
+   "concept": "dsi:concept/color/intent-ai/property-background/state-hover",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 4 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (75% of 4 uses)",
+     "expected": "hover",
+     "agrees": false,
+     "weight": 0.75
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "ai (terms: ai, hover, background)",
+     "expected": "ai",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: ai, hover, background)",
+     "expected": "hover",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: ai, hover, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4354bfd253b2",
+   "token": "ai-aura-hover-end",
+   "concept": "dsi:concept/color/intent-ai/property-background/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 4 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (75% of 4 uses)",
+     "expected": "hover",
+     "agrees": false,
+     "weight": 0.75
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "(unbound)",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-e1ec08bc13fd",
+   "token": "ai-aura-hover-start",
+   "concept": "dsi:concept/color/intent-ai/property-background/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 4 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (75% of 4 uses)",
+     "expected": "hover",
+     "agrees": false,
+     "weight": 0.75
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 218° (white)",
+     "expected": "ai (200–330°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-15196dc3bd28",
+   "token": "ai-aura-start",
+   "concept": "dsi:concept/color/intent-ai/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 12 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (92% of 12 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.92
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "(unbound)",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-5d5855c93f70",
+   "token": "ai-aura-start-sm",
+   "concept": "dsi:concept/color/intent-ai/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (93% of 15 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.93
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (93% of 15 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.93
+    }
+   ]
+  },
+  {
+   "mapping": "m-c0cc12d99c2d",
+   "token": "ai-border-end",
+   "concept": "dsi:concept/color/intent-ai/property-border",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 14 uses)",
+     "expected": "border",
+     "agrees": false,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (93% of 14 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.93
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 218° (white)",
+     "expected": "ai (200–330°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-c9e65f95d26a",
+   "token": "ai-border-start",
+   "concept": "dsi:concept/color/intent-ai/property-border",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (93% of 15 uses)",
+     "expected": "border",
+     "agrees": false,
+     "weight": 0.93
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (93% of 15 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.93
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 217° (white)",
+     "expected": "ai (200–330°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-2df334242f5f",
+   "token": "ai-border-strong",
+   "concept": "dsi:concept/color/intent-ai/property-border/emphasis-strong",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (79% of 14 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 0.79
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (86% of 14 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.86
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "strong",
+     "agrees": false
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 218° (white)",
+     "expected": "ai (200–330°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "ai (terms: ai, border, strong)",
+     "expected": "ai",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: ai, border, strong)",
+     "expected": "border",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "strong (terms: ai, border, strong)",
+     "expected": "strong",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b5ebac7d403d",
+   "token": "ai-drop-shadow",
+   "concept": "dsi:concept/color/intent-ai/property-shadow",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "shadow (100% of 11 uses)",
+     "expected": "shadow",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 11 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-589bc8b0fba8",
+   "token": "ai-inner-shadow",
+   "concept": "dsi:concept/color/intent-ai/property-shadow",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "shadow (100% of 13 uses)",
+     "expected": "shadow",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 13 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-42c55771a315",
+   "token": "ai-overlay",
+   "concept": "dsi:concept/color/intent-ai/usage-scrim/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 3 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 3 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "scrim",
+     "agrees": false
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 224° (white)",
+     "expected": "ai (200–330°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "ai (terms: ai)",
+     "expected": "ai",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ab4127d5cd1b",
+   "token": "ai-popover-background",
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 10 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (90% of 10 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.9
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "overlay",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "ai (terms: ai, popover, background)",
+     "expected": "ai",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "overlay (terms: ai, popover, background)",
+     "expected": "overlay",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: ai, popover, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1c09eda410d9",
+   "token": "ai-popover-caret-bottom",
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 1 uses)",
+     "expected": "background",
+     "agrees": false,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 218° (white)",
+     "expected": "ai (200–330°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-58b33f69c37f",
+   "token": "ai-popover-caret-bottom-background",
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "overlay",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-65ae487bb075",
+   "token": "ai-popover-caret-bottom-background-actions",
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "overlay",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-966060a462a8",
+   "token": "ai-popover-caret-center",
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 1 uses)",
+     "expected": "background",
+     "agrees": false,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 218° (white)",
+     "expected": "ai (200–330°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-c10aa2521188",
+   "token": "ai-popover-shadow-outer-01",
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-shadow",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "shadow (100% of 1 uses)",
+     "expected": "shadow",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-e94bd52992a4",
+   "token": "ai-popover-shadow-outer-02",
+   "concept": "dsi:concept/color/intent-ai/usage-overlay/property-shadow",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "shadow (100% of 1 uses)",
+     "expected": "shadow",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-c760638463bf",
+   "token": "ai-skeleton-background",
+   "concept": "dsi:concept/color/intent-ai/usage-skeleton/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 217° (white)",
+     "expected": "ai (200–330°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "ai (terms: ai, skeleton, background)",
+     "expected": "ai",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: ai, skeleton, background)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "skeleton (terms: ai, skeleton, background)",
+     "expected": "skeleton",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-63894d4fce8e",
+   "token": "ai-skeleton-element-background",
+   "concept": "dsi:concept/color/intent-ai/usage-skeleton/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 218° (white)",
+     "expected": "ai (200–330°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-82288567034e",
+   "token": "background",
+   "concept": "dsi:concept/color/usage-page/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-d1ff13e51889",
+   "token": "background-active",
+   "concept": "dsi:concept/color/property-background/state-active",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 4 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (100% of 4 uses)",
+     "expected": "active",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: background, active)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "active (terms: background, active)",
+     "expected": "active",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-217f51b4a65d",
+   "token": "background-brand",
+   "concept": "dsi:concept/color/intent-accent/property-background",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: background, brand)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: background, brand)",
+     "expected": "accent",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-8f67b795609c",
+   "token": "background-hover",
+   "concept": "dsi:concept/color/property-background/state-hover",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 15 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (100% of 15 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: background, hover)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: background, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4cf287d593a0",
+   "token": "background-inverse",
+   "concept": "dsi:concept/color/usage-inverse/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (79% of 24 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.79
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (88% of 24 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.88
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: background, inverse)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse (terms: background, inverse)",
+     "expected": "inverse",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-f3b33a7f5ab0",
+   "token": "background-inverse-hover",
+   "concept": "dsi:concept/color/usage-inverse/property-background/state-hover",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 8 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: background, inverse, hover)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse (terms: background, inverse, hover)",
+     "expected": "inverse",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: background, inverse, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-dde5e3cd1f40",
+   "token": "background-selected",
+   "concept": "dsi:concept/color/property-background/state-selected",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 6 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: background, selected)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "selected (terms: background, selected)",
+     "expected": "selected",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-389aeee41483",
+   "token": "background-selected-hover",
+   "concept": "dsi:concept/color/property-background/state-hover+selected",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: background, selected, hover)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover+selected (terms: background, selected, hover)",
+     "expected": "hover+selected",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a6b4c3e04522",
+   "token": "border-disabled",
+   "concept": "dsi:concept/color/property-border/state-disabled",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: border, disabled)",
+     "expected": "border",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: border, disabled)",
+     "expected": "disabled",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-297e860dcf95",
+   "token": "border-interactive",
+   "concept": "dsi:concept/color/intent-accent/property-border",
+   "match": "close",
+   "records": [
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: border, interactive)",
+     "expected": "border",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: border, interactive)",
+     "expected": "accent",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-36b82aa718af",
+   "token": "border-inverse",
+   "concept": "dsi:concept/color/usage-inverse/property-border",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: border, inverse)",
+     "expected": "border",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse (terms: border, inverse)",
+     "expected": "inverse",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ee39f2a0884a",
+   "token": "border-strong-01",
+   "concept": "dsi:concept/color/usage-surface/property-border/emphasis-strong",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (75% of 36 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.75
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "strong",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3b5fc9f1c417",
+   "token": "border-strong-02",
+   "concept": "dsi:concept/color/usage-surface/property-border/emphasis-strong",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (75% of 36 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.75
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "strong",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-47280a707c6d",
+   "token": "border-strong-03",
+   "concept": "dsi:concept/color/usage-surface/property-border/emphasis-strong",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (75% of 36 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.75
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "strong",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-9d8eeb8abefc",
+   "token": "border-subtle-00",
+   "concept": "dsi:concept/color/property-border/emphasis-subtle",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (73% of 111 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 0.73
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (80% of 111 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.8
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-b3a6df7c3fbe",
+   "token": "border-subtle-01",
+   "concept": "dsi:concept/color/usage-surface/property-border/emphasis-subtle",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (76% of 150 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 0.76
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (83% of 150 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.83
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-c8098101f9b1",
+   "token": "border-subtle-02",
+   "concept": "dsi:concept/color/usage-surface/property-border/emphasis-subtle",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (75% of 121 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 0.75
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (79% of 121 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.79
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-6d9861d6cb8d",
+   "token": "border-subtle-03",
+   "concept": "dsi:concept/color/usage-surface/property-border/emphasis-subtle",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 7 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-63cf09dcebb7",
+   "token": "border-subtle-selected-01",
+   "concept": "dsi:concept/color/usage-surface/property-border/emphasis-subtle/state-selected",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 2 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "selected",
+     "agrees": false,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-cda94bb1f0d0",
+   "token": "border-subtle-selected-02",
+   "concept": "dsi:concept/color/usage-surface/property-border/emphasis-subtle/state-selected",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 1 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "selected",
+     "agrees": false,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4ca2c72f3b9a",
+   "token": "border-subtle-selected-03",
+   "concept": "dsi:concept/color/usage-surface/property-border/emphasis-subtle/state-selected",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 1 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "selected",
+     "agrees": false,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-5b63e2e91ff4",
+   "token": "border-tile-01",
+   "concept": "dsi:concept/color/usage-surface/property-border",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 1 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-30585bc5b786",
+   "token": "border-tile-02",
+   "concept": "dsi:concept/color/usage-surface/property-border",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-fccbfcdf4b3c",
+   "token": "border-tile-03",
+   "concept": "dsi:concept/color/usage-surface/property-border",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-10c6c6e7f0d7",
+   "token": "field-01",
+   "concept": "dsi:concept/color/usage-field/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (93% of 42 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.93
+    }
+   ]
+  },
+  {
+   "mapping": "m-30ee9b66cb1b",
+   "token": "field-02",
+   "concept": "dsi:concept/color/usage-field/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (94% of 54 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.94
+    }
+   ]
+  },
+  {
+   "mapping": "m-f419a2435622",
+   "token": "field-03",
+   "concept": "dsi:concept/color/usage-field/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (91% of 35 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.91
+    }
+   ]
+  },
+  {
+   "mapping": "m-4ca37d0d907c",
+   "token": "field-hover-01",
+   "concept": "dsi:concept/color/usage-field/property-background/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 22 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (82% of 22 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 0.82
+    }
+   ]
+  },
+  {
+   "mapping": "m-fe11858682f8",
+   "token": "field-hover-02",
+   "concept": "dsi:concept/color/usage-field/property-background/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 22 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (82% of 22 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 0.82
+    }
+   ]
+  },
+  {
+   "mapping": "m-16ced78afd7a",
+   "token": "field-hover-03",
+   "concept": "dsi:concept/color/usage-field/property-background/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 22 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (82% of 22 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 0.82
+    }
+   ]
+  },
+  {
+   "mapping": "m-56bc113b07e2",
+   "token": "focus",
+   "concept": "dsi:concept/color/property-focus-ring",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "focus-ring|border (79% of 190 uses)",
+     "expected": "focus-ring",
+     "agrees": true,
+     "weight": 0.79
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "focus (80% of 190 uses)",
+     "expected": "resting",
+     "agrees": false,
+     "weight": 0.8
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "focus-ring (terms: focus)",
+     "expected": "focus-ring",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-2cce52fbb5eb",
+   "token": "focus-inset",
+   "concept": "dsi:concept/color/property-focus-ring",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (71% of 7 uses)",
+     "expected": "resting",
+     "agrees": false,
+     "weight": 0.71
+    }
+   ]
+  },
+  {
+   "mapping": "m-64fccea2e482",
+   "token": "focus-inverse",
+   "concept": "dsi:concept/color/usage-inverse/property-focus-ring",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "focus (96% of 27 uses)",
+     "expected": "resting",
+     "agrees": false,
+     "weight": 0.96
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "focus-ring (terms: focus, inverse)",
+     "expected": "focus-ring",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse (terms: focus, inverse)",
+     "expected": "inverse",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-97f9f49da796",
+   "token": "highlight",
+   "concept": "dsi:concept/color/intent-highlight/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "highlight (terms: highlight)",
+     "expected": "highlight",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-d4989c68a1b3",
+   "token": "icon-disabled",
+   "concept": "dsi:concept/color/property-icon/state-disabled",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "icon (81% of 52 uses)",
+     "expected": "icon",
+     "agrees": true,
+     "weight": 0.81
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: icon, disabled)",
+     "expected": "icon",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: icon, disabled)",
+     "expected": "disabled",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7900e222cb04",
+   "token": "icon-interactive",
+   "concept": "dsi:concept/color/intent-accent/property-icon",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: icon, interactive)",
+     "expected": "icon",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: icon, interactive)",
+     "expected": "accent",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3e93b0647c29",
+   "token": "icon-inverse",
+   "concept": "dsi:concept/color/usage-inverse/property-icon",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 16 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: icon, inverse)",
+     "expected": "icon",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse (terms: icon, inverse)",
+     "expected": "inverse",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7377892e2a93",
+   "token": "icon-on-color",
+   "concept": "dsi:concept/color/usage-on-fill/property-icon",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "on-fill (terms: on-color, icon, on, color)",
+     "expected": "on-fill",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: on-color, icon, on, color)",
+     "expected": "icon",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-e50fba3b903a",
+   "token": "icon-on-color-disabled",
+   "concept": "dsi:concept/color/usage-on-fill/property-icon/state-disabled",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (75% of 4 uses)",
+     "expected": "disabled",
+     "agrees": false,
+     "weight": 0.75
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "on-fill (terms: on-color, icon, on, color, disabled)",
+     "expected": "on-fill",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: on-color, icon, on, color, disabled)",
+     "expected": "icon",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: on-color, icon, on, color, disabled)",
+     "expected": "disabled",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4d0077408070",
+   "token": "icon-primary",
+   "concept": "dsi:concept/color/property-icon",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "icon (82% of 85 uses)",
+     "expected": "icon",
+     "agrees": true,
+     "weight": 0.82
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: icon)",
+     "expected": "icon",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1825e6fded72",
+   "token": "icon-secondary",
+   "concept": "dsi:concept/color/property-icon/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "icon (88% of 17 uses)",
+     "expected": "icon",
+     "agrees": true,
+     "weight": 0.88
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (76% of 17 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.76
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: icon, secondary)",
+     "expected": "icon",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: icon, secondary)",
+     "expected": "subtle",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-5919e8b95673",
+   "token": "interactive",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "close",
+   "records": [
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: interactive)",
+     "expected": "accent",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-d4ef03cb6556",
+   "token": "layer-02",
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (90% of 118 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.9
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (80% of 118 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.8
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "surface",
+     "agrees": false
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "same value as the page in every mode",
+     "expected": "surface",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: layer)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "surface (terms: layer)",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-43154cb39284",
+   "token": "layer-accent-01",
+   "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (95% of 19 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.95
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 3 in every mode",
+     "expected": "strong",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-0d08385c614e",
+   "token": "layer-accent-02",
+   "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 16 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 3 in every mode",
+     "expected": "strong",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-6f963594982c",
+   "token": "layer-accent-03",
+   "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 16 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 3 in every mode",
+     "expected": "strong",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-85bee61b6651",
+   "token": "layer-accent-active-01",
+   "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (100% of 1 uses)",
+     "expected": "active",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 3 in every mode",
+     "expected": "strong",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-60030e86e1af",
+   "token": "layer-accent-active-02",
+   "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (100% of 1 uses)",
+     "expected": "active",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 3 in every mode",
+     "expected": "strong",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ffa3e7eab17b",
+   "token": "layer-accent-active-03",
+   "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (100% of 1 uses)",
+     "expected": "active",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 3 in every mode",
+     "expected": "strong",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-c030ac30853d",
+   "token": "layer-accent-hover-01",
+   "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (100% of 2 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 3 in every mode",
+     "expected": "strong",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3015c4230021",
+   "token": "layer-accent-hover-02",
+   "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (100% of 2 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 3 in every mode",
+     "expected": "strong",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a03b616386a9",
+   "token": "layer-accent-hover-03",
+   "concept": "dsi:concept/color/usage-surface/property-background/emphasis-strong/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (100% of 2 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 3 in every mode",
+     "expected": "strong",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-397ec990f63b",
+   "token": "layer-active-02",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-active",
+   "match": "close",
+   "records": [
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: layer, active)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "surface (terms: layer, active)",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "active (terms: layer, active)",
+     "expected": "active",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7b3868880f9e",
+   "token": "layer-background-01",
+   "concept": "dsi:concept/color/usage-page/property-background",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 4 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 4 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: layer, background)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "surface (terms: layer, background)",
+     "expected": "page",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-92a3b0711ec9",
+   "token": "layer-background-03",
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 4 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 4 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "same value as the page in every mode",
+     "expected": "surface",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: layer, background)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "surface (terms: layer, background)",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-280d9fb566af",
+   "token": "layer-hover-02",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (78% of 79 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.78
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (85% of 79 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 0.85
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: layer, hover)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "surface (terms: layer, hover)",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: layer, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4f7da529861f",
+   "token": "layer-selected-02",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (81% of 26 uses)",
+     "expected": "selected",
+     "agrees": false,
+     "weight": 0.81
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "surface",
+     "agrees": false
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: layer, selected)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "surface (terms: layer, selected)",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "selected (terms: layer, selected)",
+     "expected": "selected",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-f8c4b107ec4c",
+   "token": "layer-selected-disabled",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-disabled+selected",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "shadow (100% of 1 uses)",
+     "expected": "background",
+     "agrees": false,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "disabled+selected",
+     "agrees": false,
+     "weight": 1
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: layer, selected, disabled)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "surface (terms: layer, selected, disabled)",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled+selected (terms: layer, selected, disabled)",
+     "expected": "disabled+selected",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-dbee1acc78ac",
+   "token": "layer-selected-hover-02",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover+selected",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (83% of 24 uses)",
+     "expected": "hover+selected",
+     "agrees": true,
+     "weight": 0.83
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "surface",
+     "agrees": false
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: layer, selected, hover)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "surface (terms: layer, selected, hover)",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover+selected (terms: layer, selected, hover)",
+     "expected": "hover+selected",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-6c328efe364e",
+   "token": "layer-selected-inverse",
+   "concept": "dsi:concept/color/usage-inverse+surface/property-background/state-selected",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (88% of 8 uses)",
+     "expected": "selected",
+     "agrees": false,
+     "weight": 0.88
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: layer, selected, inverse)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse+surface (terms: layer, selected, inverse)",
+     "expected": "inverse+surface",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "selected (terms: layer, selected, inverse)",
+     "expected": "selected",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-77b3b54cc7af",
+   "token": "link-inverse",
+   "concept": "dsi:concept/color/usage-inverse+link/property-text",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (86% of 14 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 0.86
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: link, inverse)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse+link (terms: link, inverse)",
+     "expected": "inverse+link",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4d0ba5a14375",
+   "token": "link-inverse-active",
+   "concept": "dsi:concept/color/usage-inverse+link/property-text/state-active",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: link, inverse, active)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse+link (terms: link, inverse, active)",
+     "expected": "inverse+link",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "active (terms: link, inverse, active)",
+     "expected": "active",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-f0c765c64285",
+   "token": "link-inverse-hover",
+   "concept": "dsi:concept/color/usage-inverse+link/property-text/state-hover",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 4 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (100% of 4 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: link, inverse, hover)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse+link (terms: link, inverse, hover)",
+     "expected": "inverse+link",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: link, inverse, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-9c8a553180d6",
+   "token": "link-inverse-visited",
+   "concept": "dsi:concept/color/usage-inverse+link/property-text/state-visited",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 1 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "visited (100% of 1 uses)",
+     "expected": "visited",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: link, inverse, visited)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse+link (terms: link, inverse, visited)",
+     "expected": "inverse+link",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "visited (terms: link, inverse, visited)",
+     "expected": "visited",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-47ece74389b4",
+   "token": "link-primary",
+   "concept": "dsi:concept/color/usage-link/property-text",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (81% of 16 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 0.81
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: link)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "link (terms: link)",
+     "expected": "link",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3f7c80a5a924",
+   "token": "link-primary-hover",
+   "concept": "dsi:concept/color/usage-link/property-text/state-hover",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (82% of 11 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 0.82
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "link",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: link, hover)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "link (terms: link, hover)",
+     "expected": "link",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: link, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1da37fc9f2e8",
+   "token": "link-secondary",
+   "concept": "dsi:concept/color/usage-link/property-text/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 2 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: link, secondary)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "link (terms: link, secondary)",
+     "expected": "link",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: link, secondary)",
+     "expected": "subtle",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-c41c340b5a63",
+   "token": "link-visited",
+   "concept": "dsi:concept/color/usage-link/property-text/state-visited",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 1 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "visited (100% of 1 uses)",
+     "expected": "visited",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: link, visited)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "link (terms: link, visited)",
+     "expected": "link",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "visited (terms: link, visited)",
+     "expected": "visited",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ad44175d8ede",
+   "token": "overlay",
+   "concept": "dsi:concept/color/usage-scrim/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (75% of 8 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.75
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 8 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "scrim",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-928980fd4474",
+   "token": "shadow",
+   "concept": "dsi:concept/color/property-shadow",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "shadow (100% of 10 uses)",
+     "expected": "shadow",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (90% of 10 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.9
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "shadow (terms: shadow)",
+     "expected": "shadow",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-98370bac59c2",
+   "token": "skeleton-background",
+   "concept": "dsi:concept/color/usage-skeleton/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (98% of 44 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.98
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (95% of 44 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.95
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: skeleton, background)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "skeleton (terms: skeleton, background)",
+     "expected": "skeleton",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-efed4c2bb777",
+   "token": "skeleton-element",
+   "concept": "dsi:concept/color/usage-skeleton/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (84% of 43 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.84
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 43 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-1159fdc2f963",
+   "token": "support-error",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (83% of 52 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.83
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 357° (white)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: error)",
+     "expected": "danger",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-89a14755019c",
+   "token": "support-error-inverse",
+   "concept": "dsi:concept/color/intent-danger/usage-inverse",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 6 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 357° (white)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: error, inverse)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse (terms: error, inverse)",
+     "expected": "inverse",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-99842028c7e0",
+   "token": "support-info",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 11 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 220° (white)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "info (terms: info)",
+     "expected": "info",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-5f5d50c218e3",
+   "token": "support-info-inverse",
+   "concept": "dsi:concept/color/intent-info/usage-inverse",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 6 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 218° (white)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "info (terms: info, inverse)",
+     "expected": "info",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse (terms: info, inverse)",
+     "expected": "inverse",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-e60820f82b9f",
+   "token": "support-success",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 13 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 137° (white)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "success (terms: success)",
+     "expected": "success",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4d7366556233",
+   "token": "support-success-inverse",
+   "concept": "dsi:concept/color/intent-success/usage-inverse",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 6 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 137° (white)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "success (terms: success, inverse)",
+     "expected": "success",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse (terms: success, inverse)",
+     "expected": "inverse",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-e9812994ecd8",
+   "token": "support-warning",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 21 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 47° (white)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "warning (terms: warning)",
+     "expected": "warning",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b494c9d07c56",
+   "token": "support-warning-inverse",
+   "concept": "dsi:concept/color/intent-warning/usage-inverse",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 6 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 47° (white)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "warning (terms: warning, inverse)",
+     "expected": "warning",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse (terms: warning, inverse)",
+     "expected": "inverse",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b2cf1ab0f745",
+   "token": "syntax-angle-bracket",
+   "concept": "dsi:concept/color/syntax-angle-bracket/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-d37af5c25f8a",
+   "token": "syntax-annotation",
+   "concept": "dsi:concept/color/syntax-annotation/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-a7aab7b14b10",
+   "token": "syntax-arithmetic-operator",
+   "concept": "dsi:concept/color/syntax-arithmetic-operator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-1a8bcfadd35a",
+   "token": "syntax-atom",
+   "concept": "dsi:concept/color/syntax-atom/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-df98afd7e151",
+   "token": "syntax-attribute",
+   "concept": "dsi:concept/color/syntax-attribute/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-92117fd0aae4",
+   "token": "syntax-attribute-name",
+   "concept": "dsi:concept/color/syntax-attribute-name/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-864b10b2035f",
+   "token": "syntax-attribute-value",
+   "concept": "dsi:concept/color/syntax-attribute-value/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-6d376a65a65d",
+   "token": "syntax-bitwise-operator",
+   "concept": "dsi:concept/color/syntax-bitwise-operator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-8398b9ba3163",
+   "token": "syntax-block-comment",
+   "concept": "dsi:concept/color/syntax-block-comment/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-7a754592072b",
+   "token": "syntax-bool",
+   "concept": "dsi:concept/color/syntax-bool/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-9f272d7deb11",
+   "token": "syntax-brace",
+   "concept": "dsi:concept/color/syntax-brace/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-71e54d7b892c",
+   "token": "syntax-bracket",
+   "concept": "dsi:concept/color/syntax-bracket/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-0c0106591679",
+   "token": "syntax-character",
+   "concept": "dsi:concept/color/syntax-character/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-0d4f2dee3c95",
+   "token": "syntax-class-name",
+   "concept": "dsi:concept/color/syntax-class-name/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-2ed1addfb6d1",
+   "token": "syntax-color",
+   "concept": "dsi:concept/color/syntax-color/property-text",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "on-fill (terms: color)",
+     "expected": "(unbound)",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-0b443bc7e99d",
+   "token": "syntax-comment",
+   "concept": "dsi:concept/color/syntax-comment/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-bcd4b6b0985c",
+   "token": "syntax-compare-operator",
+   "concept": "dsi:concept/color/syntax-compare-operator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-1561cf442bb7",
+   "token": "syntax-constant",
+   "concept": "dsi:concept/color/syntax-constant/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-145c32105686",
+   "token": "syntax-content",
+   "concept": "dsi:concept/color/syntax-content/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-1fadf0006569",
+   "token": "syntax-content-separator",
+   "concept": "dsi:concept/color/syntax-content-separator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-2d91634bbabd",
+   "token": "syntax-control-keyword",
+   "concept": "dsi:concept/color/syntax-control-keyword/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-6ca038baef7a",
+   "token": "syntax-control-operator",
+   "concept": "dsi:concept/color/syntax-control-operator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-cf0d27803631",
+   "token": "syntax-definition",
+   "concept": "dsi:concept/color/syntax-definition/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-8b45c7229b78",
+   "token": "syntax-definition-keyword",
+   "concept": "dsi:concept/color/syntax-definition-keyword/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-563c7bcab294",
+   "token": "syntax-definition-operator",
+   "concept": "dsi:concept/color/syntax-definition-operator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-9d8cd4fb76fd",
+   "token": "syntax-deleted",
+   "concept": "dsi:concept/color/syntax-deleted/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-a7c598f3fc8e",
+   "token": "syntax-deref-operator",
+   "concept": "dsi:concept/color/syntax-deref-operator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-5d70bae92002",
+   "token": "syntax-doc-comment",
+   "concept": "dsi:concept/color/syntax-doc-comment/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-f8665296fe0e",
+   "token": "syntax-doc-string",
+   "concept": "dsi:concept/color/syntax-doc-string/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-5ec3f0477e0b",
+   "token": "syntax-document-meta",
+   "concept": "dsi:concept/color/syntax-document-meta/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-a626829c0ca2",
+   "token": "syntax-emphasis",
+   "concept": "dsi:concept/color/syntax-emphasis/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-d06ae439bd8a",
+   "token": "syntax-escape",
+   "concept": "dsi:concept/color/syntax-escape/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-be2d3e01cd32",
+   "token": "syntax-float",
+   "concept": "dsi:concept/color/syntax-float/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-7153d43573bf",
+   "token": "syntax-function",
+   "concept": "dsi:concept/color/syntax-function/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-249a1bf04768",
+   "token": "syntax-heading",
+   "concept": "dsi:concept/color/syntax-heading/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-48de0054daaf",
+   "token": "syntax-heading-1",
+   "concept": "dsi:concept/color/syntax-heading-1/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-97daf2f655b7",
+   "token": "syntax-heading-2",
+   "concept": "dsi:concept/color/syntax-heading-2/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-375e481c9885",
+   "token": "syntax-heading-3",
+   "concept": "dsi:concept/color/syntax-heading-3/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-ae95a6684a63",
+   "token": "syntax-heading-4",
+   "concept": "dsi:concept/color/syntax-heading-4/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-e3d706a2ec2d",
+   "token": "syntax-heading-5",
+   "concept": "dsi:concept/color/syntax-heading-5/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-1e88bb99246a",
+   "token": "syntax-heading-6",
+   "concept": "dsi:concept/color/syntax-heading-6/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-a543933624b8",
+   "token": "syntax-inserted",
+   "concept": "dsi:concept/color/syntax-inserted/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-91bc403ae7a2",
+   "token": "syntax-integer",
+   "concept": "dsi:concept/color/syntax-integer/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-231e5195d4bf",
+   "token": "syntax-invalid",
+   "concept": "dsi:concept/color/syntax-invalid/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-19486e5cf320",
+   "token": "syntax-keyword",
+   "concept": "dsi:concept/color/syntax-keyword/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-dbeb22490fde",
+   "token": "syntax-label-name",
+   "concept": "dsi:concept/color/syntax-label-name/property-text",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "label (terms: label)",
+     "expected": "(unbound)",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-dc34ef328a0e",
+   "token": "syntax-line-comment",
+   "concept": "dsi:concept/color/syntax-line-comment/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-c28855cbed17",
+   "token": "syntax-link",
+   "concept": "dsi:concept/color/syntax-link/property-text",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: link)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "link (terms: link)",
+     "expected": "(unbound)",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-16028d4e4144",
+   "token": "syntax-list",
+   "concept": "dsi:concept/color/syntax-list/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-1ef0b2fee88a",
+   "token": "syntax-literal",
+   "concept": "dsi:concept/color/syntax-literal/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-5ff0704a061c",
+   "token": "syntax-local",
+   "concept": "dsi:concept/color/syntax-local/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-12073d60f40b",
+   "token": "syntax-logic-operator",
+   "concept": "dsi:concept/color/syntax-logic-operator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-f80c2524c17b",
+   "token": "syntax-macro-name",
+   "concept": "dsi:concept/color/syntax-macro-name/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-52dcaf36e213",
+   "token": "syntax-meta",
+   "concept": "dsi:concept/color/syntax-meta/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-27b6ab4ce4f0",
+   "token": "syntax-modifier",
+   "concept": "dsi:concept/color/syntax-modifier/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-aa40e9a794d6",
+   "token": "syntax-module-keyword",
+   "concept": "dsi:concept/color/syntax-module-keyword/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-396f3b00e32e",
+   "token": "syntax-monospace",
+   "concept": "dsi:concept/color/syntax-monospace/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-6fee2763c369",
+   "token": "syntax-name",
+   "concept": "dsi:concept/color/syntax-name/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-04b296c9bf1b",
+   "token": "syntax-namespace",
+   "concept": "dsi:concept/color/syntax-namespace/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-dc09a963f77f",
+   "token": "syntax-null",
+   "concept": "dsi:concept/color/syntax-null/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-10eeabc7a099",
+   "token": "syntax-number",
+   "concept": "dsi:concept/color/syntax-number/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-3c3ef4514e65",
+   "token": "syntax-operator",
+   "concept": "dsi:concept/color/syntax-operator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-8bb3e316e090",
+   "token": "syntax-operator-keyword",
+   "concept": "dsi:concept/color/syntax-operator-keyword/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-872f839505a5",
+   "token": "syntax-paren",
+   "concept": "dsi:concept/color/syntax-paren/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-fa4fea8dede8",
+   "token": "syntax-processing-instruction",
+   "concept": "dsi:concept/color/syntax-processing-instruction/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-994b6c29f2d3",
+   "token": "syntax-property-name",
+   "concept": "dsi:concept/color/syntax-property-name/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-ff886966e4ee",
+   "token": "syntax-punctuation",
+   "concept": "dsi:concept/color/syntax-punctuation/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-0dc0cbfc3e9a",
+   "token": "syntax-quote",
+   "concept": "dsi:concept/color/syntax-quote/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-e8ef53adc4cf",
+   "token": "syntax-regexp",
+   "concept": "dsi:concept/color/syntax-regexp/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-62d6f68962ae",
+   "token": "syntax-self",
+   "concept": "dsi:concept/color/syntax-self/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-0d38ecd06bbb",
+   "token": "syntax-separator",
+   "concept": "dsi:concept/color/syntax-separator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-a0ee002221f9",
+   "token": "syntax-special",
+   "concept": "dsi:concept/color/syntax-special/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-fee30968796c",
+   "token": "syntax-special-string",
+   "concept": "dsi:concept/color/syntax-special-string/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-030f23e15e64",
+   "token": "syntax-square-bracket",
+   "concept": "dsi:concept/color/syntax-square-bracket/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-10b6e354e0e4",
+   "token": "syntax-standard",
+   "concept": "dsi:concept/color/syntax-standard/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-479e8127b03d",
+   "token": "syntax-strikethrough",
+   "concept": "dsi:concept/color/syntax-strikethrough/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-71e1afb3d918",
+   "token": "syntax-string",
+   "concept": "dsi:concept/color/syntax-string/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-07765606572b",
+   "token": "syntax-strong",
+   "concept": "dsi:concept/color/syntax-strong/property-text",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "strong (terms: strong)",
+     "expected": "(unbound)",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-94e80673038c",
+   "token": "syntax-tag",
+   "concept": "dsi:concept/color/syntax-tag/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-d7541909d46e",
+   "token": "syntax-tag-name",
+   "concept": "dsi:concept/color/syntax-tag-name/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-6e2d618a5de2",
+   "token": "syntax-type",
+   "concept": "dsi:concept/color/syntax-type/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-292e295cb9fc",
+   "token": "syntax-type-name",
+   "concept": "dsi:concept/color/syntax-type-name/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-934bfdaa8c07",
+   "token": "syntax-type-operator",
+   "concept": "dsi:concept/color/syntax-type-operator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-29350edbb130",
+   "token": "syntax-unit",
+   "concept": "dsi:concept/color/syntax-unit/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-514267655606",
+   "token": "syntax-update-operator",
+   "concept": "dsi:concept/color/syntax-update-operator/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-6da8c80c90b9",
+   "token": "syntax-url",
+   "concept": "dsi:concept/color/syntax-url/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-280e6cc62178",
+   "token": "syntax-variable",
+   "concept": "dsi:concept/color/syntax-variable/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-d1eaf35650a3",
+   "token": "syntax-variable-name",
+   "concept": "dsi:concept/color/syntax-variable-name/property-text",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-e659b784507b",
+   "token": "text-disabled",
+   "concept": "dsi:concept/color/property-text/state-disabled",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (91% of 93 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 0.91
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "the system ships a separate icon family",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: text, disabled)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: text, disabled)",
+     "expected": "disabled",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-71e7e9cbabdb",
+   "token": "text-error",
+   "concept": "dsi:concept/color/intent-danger/property-text",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 14 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 14 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "the system ships a separate icon family",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 357° (white)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: text, error)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: text, error)",
+     "expected": "danger",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-0bc77fda0b2f",
+   "token": "text-helper",
+   "concept": "dsi:concept/color/property-text/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 3 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 3 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "the system ships a separate icon family",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: text)",
+     "expected": "text",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-23ab18ae4df5",
+   "token": "text-inverse",
+   "concept": "dsi:concept/color/usage-inverse/property-text",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 25 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (72% of 25 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.72
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "the system ships a separate icon family",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: text, inverse)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "inverse (terms: text, inverse)",
+     "expected": "inverse",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7f5678fc1051",
+   "token": "text-on-color",
+   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (95% of 22 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 0.95
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "the system ships a separate icon family",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "on-fill (terms: on-color, text, on, color)",
+     "expected": "on-fill",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: on-color, text, on, color)",
+     "expected": "text",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-844bd3a5efcf",
+   "token": "text-on-color-disabled",
+   "concept": "dsi:concept/color/usage-on-fill/property-text/state-disabled",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 2 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "the system ships a separate icon family",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "on-fill (terms: on-color, text, on, color, disabled)",
+     "expected": "on-fill",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: on-color, text, on, color, disabled)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: on-color, text, on, color, disabled)",
+     "expected": "disabled",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7595a6c8cf05",
+   "token": "text-placeholder",
+   "concept": "dsi:concept/color/usage-field/property-text/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 10 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 10 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "the system ships a separate icon family",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: text)",
+     "expected": "text",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-c94089a3260b",
+   "token": "text-primary",
+   "concept": "dsi:concept/color/property-text",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (97% of 156 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 0.97
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "the system ships a separate icon family",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: text)",
+     "expected": "text",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3e0f98476d0c",
+   "token": "text-secondary",
+   "concept": "dsi:concept/color/property-text/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (95% of 58 uses)",
+     "expected": "text",
+     "agrees": true,
+     "weight": 0.95
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (91% of 58 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.91
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "the system ships a separate icon family",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "text (terms: text, secondary)",
+     "expected": "text",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: text, secondary)",
+     "expected": "subtle",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-fbd7bcbdaee6",
+   "token": "support-caution-major",
+   "concept": "dsi:concept/color/intent-severe",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "caution (terms: caution)",
+     "expected": "severe",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-aa20a311331d",
+   "token": "layer-01",
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (92% of 140 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.92
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (82% of 140 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.82
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "surface",
+     "agrees": false
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-f90adc95662e",
+   "token": "layer-03",
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (90% of 111 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.9
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (80% of 111 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.8
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "surface",
+     "agrees": false
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a2a4dbdf6ed6",
+   "token": "layer-active-01",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-5c004e9b356b",
+   "token": "layer-active-03",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-cbe0164c2eda",
+   "token": "layer-background-02",
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 4 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 4 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-fde7c8e8b9e7",
+   "token": "layer-hover-01",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (79% of 81 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.79
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (84% of 81 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 0.84
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a78c84532c52",
+   "token": "layer-hover-03",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (78% of 77 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.78
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (84% of 77 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 0.84
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1ca3b839aa39",
+   "token": "layer-selected-01",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (81% of 26 uses)",
+     "expected": "selected",
+     "agrees": false,
+     "weight": 0.81
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "surface",
+     "agrees": false
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-857e67d208ea",
+   "token": "layer-selected-03",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-selected",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (79% of 24 uses)",
+     "expected": "selected",
+     "agrees": false,
+     "weight": 0.79
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "surface",
+     "agrees": false
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b2571ae946ed",
+   "token": "layer-selected-hover-01",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover+selected",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (83% of 24 uses)",
+     "expected": "hover+selected",
+     "agrees": true,
+     "weight": 0.83
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-058527bc968a",
+   "token": "layer-selected-hover-03",
+   "concept": "dsi:concept/color/usage-surface/property-background/state-hover+selected",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (82% of 22 uses)",
+     "expected": "hover+selected",
+     "agrees": true,
+     "weight": 0.82
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-fd7f1abebf9f",
+   "token": "support-caution-minor",
+   "concept": "dsi:concept/color/intent-caution",
+   "match": "exact",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 47° (white)",
+     "expected": "caution (30–70°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "caution (terms: caution)",
+     "expected": "caution",
+     "agrees": true
+    }
+   ]
+  }
+ ]
+}

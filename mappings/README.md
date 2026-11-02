@@ -10,7 +10,7 @@ Agent-authored, human-reviewable. Written by `@dsi/mapper merge`; never regenera
 
 | Field | Holds |
 |---|---|
-| `mappings[]` | token -> concept with a SKOS match type, confidence, rationale, provenance, status |
+| `mappings[]` | token -> concept with a SKOS match type, confidence, rationale, provenance, status. Records written since ADR 0027 carry `provenance.registry` and `provenance.resolver` (content hashes); write through `writeMappingFile` (`@dsi/schema`), never `fs.writeFileSync` |
 | `unmapped[]` | tokens no canonical concept fits yet (ontology backlog) |
 | `<version>.audit.json` | an auditor's evidence verdicts on approved mappings, plus deterministic check findings |
 | `terms.json` (per product) | native naming words -> facet values, used by `@dsi/classify` |

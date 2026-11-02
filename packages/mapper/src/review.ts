@@ -3,6 +3,7 @@ import { lintRationale } from './language-sweep.ts';
 import fs from 'node:fs';
 import path from 'node:path';
 import { readMappings, mappingPath, type Scope } from './packet.ts';
+import { writeMappingFile } from '@dsi/schema';
 
 /** One token awaiting a human decision, with what both agents said and how it looks per theme. */
 export interface QueueItem {
@@ -94,7 +95,7 @@ export function applyDecisions(root: string, scope: Scope, decisions: Decision[]
     if (m.unmapped) m.unmapped = m.unmapped.filter((x: any) => x.status !== 'rejected');
     if (changed) {
       m.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
-      fs.writeFileSync(mappingPath(root, product, version), JSON.stringify(m, null, 2) + '\n');
+      writeMappingFile(root, mappingPath(root, product, version), m);
     }
   }
   return counts;
@@ -261,7 +262,7 @@ export function applyDisputes(root: string, scope: Scope, decisions: DisputeDeci
       counts[d.action]++;
     }
     m.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
-    fs.writeFileSync(mp, JSON.stringify(m, null, 2) + '\n');
+    writeMappingFile(root, mp, m);
     if (fs.existsSync(ap)) fs.writeFileSync(ap, JSON.stringify(audit, null, 2) + '\n');
     if (fs.existsSync(tp)) fs.writeFileSync(tp, JSON.stringify(terms, null, 2) + '\n');
   }

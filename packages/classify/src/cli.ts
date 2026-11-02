@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadOntology } from '@dsi/schema';
+import { loadOntology, writeMappingFile } from '@dsi/schema';
 import { loadNative, resolve, themeFor } from '@dsi/resolve';
 import { classify, type TermsFile } from './classify.ts';
 import { deriveTerms, mergeTerms, type ApprovedMapping } from './derive.ts';
@@ -137,7 +137,7 @@ if (cmd === 'derive') {
   for (const x of file.mappings) if (x.status === 'superseded' && derived(x) && !x.supersededBy && replacement.has(x.token)) x.supersededBy = replacement.get(x.token);
   file.mappings.sort((a: any, b: any) => a.token.localeCompare(b.token) || a.id.localeCompare(b.id));
   { const held = gateUnregistered(o, file); if (held.length) console.log(`${held.length} answer(s) use new concepts and wait for owner approval (ADR 0019)`); }
-  fs.writeFileSync(mapFile, JSON.stringify(file, null, 2) + '\n');
+  writeMappingFile(root, mapFile, file);
   const why: Record<string, number> = {};
   for (const l of r.leftovers) { const k = l.why.split(':')[0]; why[k] = (why[k] ?? 0) + 1; }
   console.log(`${product}: ${scoped.length} foundation tokens; ${added} mapped, ${superseded} superseded (${r.mapped.length - added} already settled); ${r.leftovers.length} leftovers ${JSON.stringify(why)}`);

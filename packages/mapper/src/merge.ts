@@ -1,7 +1,7 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { createAjv, gateUnregistered, normalizeConcept, parseConcept, type Ontology } from '@dsi/schema';
+import { createAjv, gateUnregistered, writeMappingFile, normalizeConcept, parseConcept, type Ontology } from '@dsi/schema';
 import { mappingPath, readMappings, type MappingFileShape } from './packet.ts';
 
 export const APPROVE_AT = 0.7; // ADR 0005 amended 2026-11-01 (was 0.85)
@@ -98,7 +98,6 @@ export function merge(root: string, product: string, version: string, implementa
   if (!file.unmapped.length) delete (file as any).unmapped;
   if (registry) gateUnregistered(registry, file, now); // ADR 0019: new concepts wait for the owner
   const out = mappingPath(root, product, version);
-  fs.mkdirSync(path.dirname(out), { recursive: true });
-  fs.writeFileSync(out, JSON.stringify(file, null, 2) + '\n');
+  writeMappingFile(root, out, file);
   return res;
 }

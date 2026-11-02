@@ -20,7 +20,7 @@ Closely aligned on structure: definition layers above evidence layers, SKOS cros
 | L4 IR | DTCG with nativeName, modes, alias chains, consumers (`usedBy`, usage graph `data/usage/`). No GuidanceIR, no ComponentIR (ARIA, keyboard, parts) | Tokens strong; rest missing |
 | L6 Snapshots | Pinned package versions, cached packs (`.cache/npm`), provenance to token path. No content-addressed snapshot IDs or byte spans | Partial |
 | L3 Mapping record | SKOS match types, `noMatch` (approved unmapped), confidence, review status, superseded history | Strong |
-| L3 Evidence | Prose rationales (L6) and audit evidence (kind, source, says). Not structured `{field, observed, expected, weight, agrees}`; no registry or resolver version on mappings | Partial |
+| L3 Evidence | `data/evidence/` (ADR 0027): `{test, field, observed, expected, agrees, weight}` per approved color mapping from usage, B1, B3, B4, B6, hue and terms; new records stamped with registry and resolver content hashes | Done (color; hashes, not SemVer) |
 | L3 "Signature first, names last" | The reverse: agents and the classifier lean on names and descriptions; values (contrast rank, boundary tests) and the usage graph are the behavioral evidence | Largest gap |
 | L3 One-to-many | Narrow mappings allowed, ranked after exact/close (ADR 0006 amendment); one approved mapping per token in practice | Partial |
 | L3 Determinism | Rules deterministic and approved decisions frozen; agent passes are not | Partial |
@@ -40,7 +40,7 @@ Closely aligned on structure: definition layers above evidence layers, SKOS cros
 ## Candidate work, in order of value
 
 1. **Competency questions (L0).** A `CQ-*` registry; every facet value and concept family links to at least one. Gives a deletion test and settles granularity disputes.
-2. **Structured mapping evidence (L3).** Emit usage-graph agreement, contrast rank and boundary-test results as `{field, observed, expected, agrees}` records; stamp each mapping with the registry and resolver versions.
+2. ~~**Structured mapping evidence (L3).**~~ Done, ADR 0027. Emit usage-graph agreement, contrast rank and boundary-test results as `{field, observed, expected, agrees}` records; stamp each mapping with the registry and resolver versions.
 3. **Per-concept discriminating tests (L2).** Store the boundary-test wording on concepts with siblings.
 4. **Golden-set regression gate (§8).** Re-run rules and the classifier against approved mappings on every change; block on a drop beyond tolerance.
 

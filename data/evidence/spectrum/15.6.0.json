@@ -1,0 +1,5764 @@
+{
+ "product": "spectrum",
+ "version": "15.6.0",
+ "registry": "ontology@610433fac79d",
+ "resolver": "resolve@f65082c09daf",
+ "generatedBy": "dsi-map evidence",
+ "summary": {
+  "B1:emphasis": {
+   "agrees": 6,
+   "disagrees": 9
+  },
+  "B3:usage": {
+   "agrees": 2,
+   "disagrees": 0
+  },
+  "B6:property": {
+   "agrees": 28,
+   "disagrees": 0
+  },
+  "hue:intent": {
+   "agrees": 89,
+   "disagrees": 0
+  },
+  "terms:emphasis": {
+   "agrees": 34,
+   "disagrees": 0
+  },
+  "terms:hue": {
+   "agrees": 45,
+   "disagrees": 0
+  },
+  "terms:intent": {
+   "agrees": 47,
+   "disagrees": 0
+  },
+  "terms:property": {
+   "agrees": 81,
+   "disagrees": 0
+  },
+  "terms:state": {
+   "agrees": 28,
+   "disagrees": 3
+  },
+  "terms:usage": {
+   "agrees": 0,
+   "disagrees": 1
+  },
+  "usage:property": {
+   "agrees": 60,
+   "disagrees": 2
+  },
+  "usage:state": {
+   "agrees": 68,
+   "disagrees": 7
+  },
+  "usage:usage": {
+   "agrees": 1,
+   "disagrees": 4
+  }
+ },
+ "mappings": [
+  {
+   "mapping": "m-a3db7b41d2b4",
+   "token": "accent-background-color-default",
+   "concept": "dsi:concept/color/intent-accent/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (80% of 5 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.8
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 5 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: accent, background)",
+     "expected": "accent",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: accent, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-51caef445dbe",
+   "token": "accent-background-color-down",
+   "concept": "dsi:concept/color/intent-accent/property-background/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (83% of 6 uses)",
+     "expected": "active",
+     "agrees": true,
+     "weight": 0.83
+    }
+   ]
+  },
+  {
+   "mapping": "m-eb867746a0ed",
+   "token": "accent-background-color-hover",
+   "concept": "dsi:concept/color/intent-accent/property-background/state-hover",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (83% of 6 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 0.83
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: accent, background, hover)",
+     "expected": "accent",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: accent, background, hover)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: accent, background, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ab56ab852c7f",
+   "token": "accent-background-color-key-focus",
+   "concept": "dsi:concept/color/intent-accent/property-background/state-focus",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (71% of 7 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.71
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "focus (86% of 7 uses)",
+     "expected": "focus",
+     "agrees": true,
+     "weight": 0.86
+    }
+   ]
+  },
+  {
+   "mapping": "m-354e9584637d",
+   "token": "accent-color-100",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-ef9d5868a2eb",
+   "token": "accent-color-1000",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-88269c5b6a8a",
+   "token": "accent-color-1100",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-638cae5de741",
+   "token": "accent-color-1200",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-ccf41c099bcc",
+   "token": "accent-color-1300",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-e22a5972bb36",
+   "token": "accent-color-1400",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-e038e93ede6f",
+   "token": "accent-color-1500",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-b70be4511e98",
+   "token": "accent-color-1600",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-57aba2e30b42",
+   "token": "accent-color-200",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-15fb25ae7230",
+   "token": "accent-color-300",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": false,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-5e276129be4a",
+   "token": "accent-color-400",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-f45ddc60fd55",
+   "token": "accent-color-500",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-63e5df57318f",
+   "token": "accent-color-600",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-95bf626ab4ef",
+   "token": "accent-color-700",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-fd5544d09f7b",
+   "token": "accent-color-800",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "selected (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": false,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-b7ff006c7713",
+   "token": "accent-color-900",
+   "concept": "dsi:concept/color/intent-accent",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-8a7e4983848c",
+   "token": "accent-content-color-default",
+   "concept": "dsi:concept/color/intent-accent/property-foreground",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (80% of 5 uses)",
+     "expected": "foreground",
+     "agrees": true,
+     "weight": 0.8
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: accent, content)",
+     "expected": "accent",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: accent, content)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-639562b27368",
+   "token": "accent-content-color-down",
+   "concept": "dsi:concept/color/intent-accent/property-foreground/state-active",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 3 uses)",
+     "expected": "foreground",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: accent, content)",
+     "expected": "accent",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: accent, content)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3101c2fee648",
+   "token": "accent-content-color-hover",
+   "concept": "dsi:concept/color/intent-accent/property-foreground/state-hover",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 4 uses)",
+     "expected": "foreground",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (75% of 4 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 0.75
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: accent, content, hover)",
+     "expected": "accent",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: accent, content, hover)",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: accent, content, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a9cc01219b85",
+   "token": "accent-content-color-key-focus",
+   "concept": "dsi:concept/color/intent-accent/property-foreground/state-focus",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 4 uses)",
+     "expected": "foreground",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "focus (75% of 4 uses)",
+     "expected": "focus",
+     "agrees": true,
+     "weight": 0.75
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus (terms: key-focus, accent, content, focus)",
+     "expected": "focus",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: key-focus, accent, content, focus)",
+     "expected": "accent",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: key-focus, accent, content, focus)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-22c6db5d4b99",
+   "token": "accent-content-color-selected",
+   "concept": "dsi:concept/color/intent-accent/property-foreground/state-selected",
+   "match": "exact",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: accent, content, selected)",
+     "expected": "accent",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: accent, content, selected)",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "selected (terms: accent, content, selected)",
+     "expected": "selected",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-fcd0024f035c",
+   "token": "accent-subtle-background-color-default",
+   "concept": "dsi:concept/color/intent-accent/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: accent, subtle, background)",
+     "expected": "accent",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: accent, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: accent, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a711ffc96e72",
+   "token": "accent-visual-color",
+   "concept": "dsi:concept/color/intent-accent/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (79% of 14 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.79
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "accent (terms: accent)",
+     "expected": "accent",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a618bfdaff3a",
+   "token": "background-base-color",
+   "concept": "dsi:concept/color/usage-page/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 4 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 4 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "page",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7bdb7d978071",
+   "token": "background-elevated-color",
+   "concept": "dsi:concept/color/usage-overlay/property-background",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-22c82effbf01",
+   "token": "background-layer-1-color",
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints surface containers",
+     "expected": "surface",
+     "agrees": true
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-11956be773c9",
+   "token": "background-layer-2-color",
+   "concept": "dsi:concept/color/usage-surface/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 6 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "surface",
+     "agrees": false
+    },
+    {
+     "test": "B3",
+     "field": "usage",
+     "observed": "differs from the page in some mode",
+     "expected": "surface",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1b59ba1d0de6",
+   "token": "background-pasteboard-color",
+   "concept": "dsi:concept/color/usage-page/property-background",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-39ca0b2887f8",
+   "token": "blue-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "blue (terms: blue, background)",
+     "expected": "blue",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: blue, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b0db3d1cd83a",
+   "token": "blue-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-blue/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "blue (terms: blue, subtle, background)",
+     "expected": "blue",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: blue, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: blue, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ff6400b157d6",
+   "token": "blue-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-blue/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "blue (terms: blue)",
+     "expected": "blue",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-58d34e0554a7",
+   "token": "brown-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-brown/property-background",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-beb6541fa5f0",
+   "token": "brown-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-brown/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "brown (terms: brown, subtle, background)",
+     "expected": "brown",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: brown, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: brown, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-347c5d4a0c10",
+   "token": "brown-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-brown/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "brown (terms: brown)",
+     "expected": "brown",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-484c69406e8e",
+   "token": "celery-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-cf64fd020a51",
+   "token": "celery-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "lime (terms: celery, subtle, background)",
+     "expected": "lime",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: celery, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: celery, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1cdcc20b31ba",
+   "token": "celery-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-lime/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "lime (terms: celery)",
+     "expected": "lime",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-fe1e85026694",
+   "token": "chartreuse-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-c30b5a72210c",
+   "token": "chartreuse-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-lime/property-background/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "lime (terms: chartreuse, subtle, background)",
+     "expected": "lime",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: chartreuse, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: chartreuse, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-fed3545c80ce",
+   "token": "chartreuse-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-lime/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "lime (terms: chartreuse)",
+     "expected": "lime",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-81145a0a0bf6",
+   "token": "cinnamon-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-brown/property-background",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-7bbeed65698e",
+   "token": "cinnamon-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-brown/property-background/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "brown (terms: cinnamon, subtle, background)",
+     "expected": "brown",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: cinnamon, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: cinnamon, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-d184e0ed02f2",
+   "token": "cinnamon-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-brown/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "brown (terms: cinnamon)",
+     "expected": "brown",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-d2e0fae684ba",
+   "token": "cyan-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-d01da92ad8fc",
+   "token": "cyan-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "cyan (terms: cyan, subtle, background)",
+     "expected": "cyan",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: cyan, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: cyan, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-f5f54a52bab2",
+   "token": "cyan-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "cyan (terms: cyan)",
+     "expected": "cyan",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-32140e9c43e3",
+   "token": "disabled-background-color",
+   "concept": "dsi:concept/color/property-background/state-disabled",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 15 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: disabled, background)",
+     "expected": "disabled",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: disabled, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-8c220b329c45",
+   "token": "disabled-border-color",
+   "concept": "dsi:concept/color/property-border/state-disabled",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 14 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: disabled, border)",
+     "expected": "disabled",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: disabled, border)",
+     "expected": "border",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-944f78116bdd",
+   "token": "disabled-content-color",
+   "concept": "dsi:concept/color/property-foreground/state-disabled",
+   "match": "exact",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: disabled, content)",
+     "expected": "disabled",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: disabled, content)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-c57860b80929",
+   "token": "disabled-static-black-background-color",
+   "concept": "dsi:concept/color/property-background/state-disabled",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 3 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: disabled, background)",
+     "expected": "disabled",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: disabled, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-14817d4e0cbd",
+   "token": "disabled-static-black-border-color",
+   "concept": "dsi:concept/color/property-border/state-disabled",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 2 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "disabled (100% of 2 uses)",
+     "expected": "disabled",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: disabled, border)",
+     "expected": "disabled",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: disabled, border)",
+     "expected": "border",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3c3d15b5498c",
+   "token": "disabled-static-black-content-color",
+   "concept": "dsi:concept/color/property-foreground/state-disabled",
+   "match": "close",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: disabled, content)",
+     "expected": "disabled",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: disabled, content)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-6c8f7c4f5990",
+   "token": "disabled-static-white-background-color",
+   "concept": "dsi:concept/color/property-background/state-disabled",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 3 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: disabled, background)",
+     "expected": "disabled",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: disabled, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-dfbf3f48e2e5",
+   "token": "disabled-static-white-border-color",
+   "concept": "dsi:concept/color/property-border/state-disabled",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 2 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "disabled (100% of 2 uses)",
+     "expected": "disabled",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: disabled, border)",
+     "expected": "disabled",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: disabled, border)",
+     "expected": "border",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-db0a2828b7a4",
+   "token": "disabled-static-white-content-color",
+   "concept": "dsi:concept/color/property-foreground/state-disabled",
+   "match": "close",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "disabled (terms: disabled, content)",
+     "expected": "disabled",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: disabled, content)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-54599f2458ba",
+   "token": "drop-shadow-ambient-color",
+   "concept": "dsi:concept/color/property-shadow",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-b844ffcfa755",
+   "token": "drop-shadow-color",
+   "concept": "dsi:concept/color/property-shadow",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "shadow (100% of 4 uses)",
+     "expected": "shadow",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 4 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "shadow (terms: drop-shadow, shadow)",
+     "expected": "shadow",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-2fa137ca27bc",
+   "token": "drop-shadow-color-100",
+   "concept": "dsi:concept/color/property-shadow",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-ad4aa42f1c60",
+   "token": "drop-shadow-color-200",
+   "concept": "dsi:concept/color/property-shadow",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-671d9affb850",
+   "token": "drop-shadow-color-300",
+   "concept": "dsi:concept/color/property-shadow",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-f91a30bfe204",
+   "token": "drop-shadow-dragged",
+   "concept": "dsi:concept/color/property-shadow/state-dragged",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-43e97daac965",
+   "token": "drop-shadow-dragged-color",
+   "concept": "dsi:concept/color/property-shadow/state-dragged",
+   "match": "close",
+   "records": [
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "shadow (terms: drop-shadow, shadow, dragged)",
+     "expected": "shadow",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "dragged (terms: drop-shadow, shadow, dragged)",
+     "expected": "dragged",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b94558e4082d",
+   "token": "drop-shadow-dragged-key-color",
+   "concept": "dsi:concept/color/property-shadow/state-dragged",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-ec892dcd1144",
+   "token": "drop-shadow-elevated-key-color",
+   "concept": "dsi:concept/color/usage-overlay/property-shadow",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-342c20496f3e",
+   "token": "drop-shadow-emphasized",
+   "concept": "dsi:concept/color/property-shadow",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-86b7eaf8c53a",
+   "token": "drop-shadow-emphasized-default-color",
+   "concept": "dsi:concept/color/property-shadow",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-125dd076c3d9",
+   "token": "drop-shadow-emphasized-key-color",
+   "concept": "dsi:concept/color/property-shadow",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-25c17c821f47",
+   "token": "drop-shadow-transition-color",
+   "concept": "dsi:concept/color/property-shadow",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-134b32fb40cf",
+   "token": "focus-indicator-color",
+   "concept": "dsi:concept/color/property-focus-ring",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "focus (70% of 50 uses)",
+     "expected": "resting",
+     "agrees": false,
+     "weight": 0.7
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus (terms: focus)",
+     "expected": "(unbound)",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-886d3f5284f5",
+   "token": "fuchsia-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-e4a6b632c0f8",
+   "token": "fuchsia-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "magenta (terms: fuchsia, subtle, background)",
+     "expected": "magenta",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: fuchsia, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: fuchsia, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-31a4afa24543",
+   "token": "fuchsia-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "magenta (terms: fuchsia)",
+     "expected": "magenta",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a0ff4017541d",
+   "token": "gray-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-93172beeb75c",
+   "token": "gray-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "gray (terms: gray, subtle, background)",
+     "expected": "gray",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: gray, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: gray, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-cd632bcd3dcd",
+   "token": "gray-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-gray/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "gray (terms: gray)",
+     "expected": "gray",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7e987f3e2090",
+   "token": "green-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-green/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "green (terms: green, background)",
+     "expected": "green",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: green, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-e2edd046eadb",
+   "token": "green-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-green/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "green (terms: green, subtle, background)",
+     "expected": "green",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: green, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: green, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-fcd729b94257",
+   "token": "green-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-green/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "green (terms: green)",
+     "expected": "green",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-fca7f3371d97",
+   "token": "icon-color-informative",
+   "concept": "dsi:concept/color/intent-info/property-icon",
+   "match": "exact",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 226° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: icon, informative)",
+     "expected": "icon",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "info (terms: icon, informative)",
+     "expected": "info",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3b7d3724707e",
+   "token": "icon-color-negative",
+   "concept": "dsi:concept/color/intent-danger/property-icon",
+   "match": "exact",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: icon, negative)",
+     "expected": "icon",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: icon, negative)",
+     "expected": "danger",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-15e6aa73792a",
+   "token": "icon-color-neutral",
+   "concept": "dsi:concept/color/intent-neutral/property-icon",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: icon, neutral)",
+     "expected": "icon",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "neutral (terms: icon, neutral)",
+     "expected": "neutral",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-f8608766b62a",
+   "token": "icon-color-notice",
+   "concept": "dsi:concept/color/intent-warning/property-icon",
+   "match": "exact",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 26° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: icon, notice)",
+     "expected": "icon",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "warning (terms: icon, notice)",
+     "expected": "warning",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4becd554cbc7",
+   "token": "icon-color-positive",
+   "concept": "dsi:concept/color/intent-success/property-icon",
+   "match": "exact",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 153° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "icon (terms: icon, positive)",
+     "expected": "icon",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "success (terms: icon, positive)",
+     "expected": "success",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-92c7b95326f9",
+   "token": "indigo-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-indigo/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "indigo (terms: indigo, background)",
+     "expected": "indigo",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: indigo, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4274aa267813",
+   "token": "indigo-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-indigo/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "indigo (terms: indigo, subtle, background)",
+     "expected": "indigo",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: indigo, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: indigo, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-e2453bde859a",
+   "token": "indigo-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-indigo/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "indigo (terms: indigo)",
+     "expected": "indigo",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7b3748abc45c",
+   "token": "informative-background-color-default",
+   "concept": "dsi:concept/color/intent-info/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (73% of 11 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.73
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (82% of 11 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.82
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 228° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "info (terms: informative, background)",
+     "expected": "info",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: informative, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-8b962a932ed4",
+   "token": "informative-background-color-down",
+   "concept": "dsi:concept/color/intent-info/property-background/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 228° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-cfc395f0aaf2",
+   "token": "informative-background-color-hover",
+   "concept": "dsi:concept/color/intent-info/property-background/state-hover",
+   "match": "exact",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 228° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "info (terms: informative, background, hover)",
+     "expected": "info",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: informative, background, hover)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: informative, background, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b59c1c8aa295",
+   "token": "informative-background-color-key-focus",
+   "concept": "dsi:concept/color/intent-info/property-background/state-focus",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 228° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-434db7f56e47",
+   "token": "informative-color-100",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-9fde44dfde31",
+   "token": "informative-color-1000",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 228° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7347c67113ce",
+   "token": "informative-color-1100",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 229° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-6cbbed1e478e",
+   "token": "informative-color-1200",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 229° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-2779ce7582e1",
+   "token": "informative-color-1300",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 228° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-afc57da31c1d",
+   "token": "informative-color-1400",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 228° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-184ca071e7b0",
+   "token": "informative-color-1500",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 229° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ee112879cd3a",
+   "token": "informative-color-1600",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-0ff791541ec1",
+   "token": "informative-color-200",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-be03fffd5801",
+   "token": "informative-color-300",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 213° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4fedffe8368d",
+   "token": "informative-color-400",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 214° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1930bd129402",
+   "token": "informative-color-500",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 217° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b2b937ddbc93",
+   "token": "informative-color-600",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 221° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-9c905aed8850",
+   "token": "informative-color-700",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 224° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ef61f47b3f5c",
+   "token": "informative-color-800",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 226° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ed2d793c91a8",
+   "token": "informative-color-900",
+   "concept": "dsi:concept/color/intent-info",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 228° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-402ba7a886b4",
+   "token": "informative-subtle-background-color-default",
+   "concept": "dsi:concept/color/intent-info/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "info (terms: informative, subtle, background)",
+     "expected": "info",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: informative, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: informative, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-43c2cd8a126a",
+   "token": "informative-visual-color",
+   "concept": "dsi:concept/color/intent-info/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 5 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 226° (light)",
+     "expected": "info (180–265°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "info (terms: informative)",
+     "expected": "info",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-99394878a21e",
+   "token": "magenta-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-5ccb64aa7765",
+   "token": "magenta-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "magenta (terms: magenta, subtle, background)",
+     "expected": "magenta",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: magenta, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: magenta, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7351b93fdb2c",
+   "token": "magenta-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-magenta/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "magenta (terms: magenta)",
+     "expected": "magenta",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ef598d846f97",
+   "token": "negative-background-color-default",
+   "concept": "dsi:concept/color/intent-danger/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-49cd47d55539",
+   "token": "negative-background-color-down",
+   "concept": "dsi:concept/color/intent-danger/property-background/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-92e2079a0314",
+   "token": "negative-background-color-hover",
+   "concept": "dsi:concept/color/intent-danger/property-background/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (100% of 5 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-f6797f4bb5bc",
+   "token": "negative-background-color-key-focus",
+   "concept": "dsi:concept/color/intent-danger/property-background/state-focus",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-000d0c00bb29",
+   "token": "negative-border-color-default",
+   "concept": "dsi:concept/color/intent-danger/property-border",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 7 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (71% of 7 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.71
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: negative, border)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: negative, border)",
+     "expected": "border",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-f1ec7ffe4d6b",
+   "token": "negative-border-color-down",
+   "concept": "dsi:concept/color/intent-danger/property-border/state-active",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 2 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (100% of 2 uses)",
+     "expected": "active",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: negative, border)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: negative, border)",
+     "expected": "border",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-c1c59be7e9dd",
+   "token": "negative-border-color-focus",
+   "concept": "dsi:concept/color/intent-danger/property-border/state-focus",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (71% of 7 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 0.71
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: negative, border, focus)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: negative, border, focus)",
+     "expected": "border",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus (terms: negative, border, focus)",
+     "expected": "focus",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-55a7afbf833a",
+   "token": "negative-border-color-focus-hover",
+   "concept": "dsi:concept/color/intent-danger/property-border/state-focus+hover",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 7 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: negative, border, focus, hover)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: negative, border, focus, hover)",
+     "expected": "border",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus+hover (terms: negative, border, focus, hover)",
+     "expected": "focus+hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-75fcb87b1814",
+   "token": "negative-border-color-hover",
+   "concept": "dsi:concept/color/intent-danger/property-border/state-hover",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "border (100% of 9 uses)",
+     "expected": "border",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: negative, border, hover)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: negative, border, hover)",
+     "expected": "border",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: negative, border, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ce1b0bea3319",
+   "token": "negative-border-color-key-focus",
+   "concept": "dsi:concept/color/intent-danger/property-border/state-focus",
+   "match": "close",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus (terms: key-focus, negative, border, focus)",
+     "expected": "focus",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: key-focus, negative, border, focus)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "border (terms: key-focus, negative, border, focus)",
+     "expected": "border",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-c9baee6738cb",
+   "token": "negative-color-100",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-508c91a9dfcf",
+   "token": "negative-color-1000",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-81bb35281ded",
+   "token": "negative-color-1100",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (80% of 5 uses)",
+     "expected": "resting",
+     "agrees": false,
+     "weight": 0.8
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-109840f6e643",
+   "token": "negative-color-1200",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 7° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-d59b2dd40ef5",
+   "token": "negative-color-1300",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 7° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-93e0affecae8",
+   "token": "negative-color-1400",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 8° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-5c0f6ba15475",
+   "token": "negative-color-1500",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 8° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b14fd30bdb4d",
+   "token": "negative-color-1600",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-b87df3bbd0bf",
+   "token": "negative-color-200",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-656fabafe0b8",
+   "token": "negative-color-300",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": false,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 7° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-93d8ed2770ae",
+   "token": "negative-color-400",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a26eebdeca3b",
+   "token": "negative-color-500",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 7° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-d03dc3a678f6",
+   "token": "negative-color-600",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 7° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-bee704579b53",
+   "token": "negative-color-700",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-5a36debc3733",
+   "token": "negative-color-800",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-c87acaff7c3b",
+   "token": "negative-color-900",
+   "concept": "dsi:concept/color/intent-danger",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (71% of 14 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.71
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3f27ec50e711",
+   "token": "negative-content-color-default",
+   "concept": "dsi:concept/color/intent-danger/property-foreground",
+   "match": "narrow",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 2 uses)",
+     "expected": "foreground",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a73c02cc707a",
+   "token": "negative-content-color-down",
+   "concept": "dsi:concept/color/intent-danger/property-foreground/state-active",
+   "match": "narrow",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 3 uses)",
+     "expected": "foreground",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (100% of 3 uses)",
+     "expected": "active",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-99aef3728fdd",
+   "token": "negative-content-color-hover",
+   "concept": "dsi:concept/color/intent-danger/property-foreground/state-hover",
+   "match": "narrow",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 3 uses)",
+     "expected": "foreground",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (100% of 3 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-c3d39ac9d7ef",
+   "token": "negative-content-color-key-focus",
+   "concept": "dsi:concept/color/intent-danger/property-foreground/state-focus",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (100% of 4 uses)",
+     "expected": "foreground",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "focus (100% of 4 uses)",
+     "expected": "focus",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus (terms: key-focus, negative, content, focus)",
+     "expected": "focus",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: key-focus, negative, content, focus)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: key-focus, negative, content, focus)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b2f1ca870b2e",
+   "token": "negative-subdued-background-color-default",
+   "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: negative, subdued, background)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: negative, subdued, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: negative, subdued, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-56f3ceec637c",
+   "token": "negative-subdued-background-color-down",
+   "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-active",
+   "match": "close",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 7° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: negative, subdued, background)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: negative, subdued, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: negative, subdued, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-d23bc237a87f",
+   "token": "negative-subdued-background-color-hover",
+   "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-hover",
+   "match": "close",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 7° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: negative, subdued, background, hover)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: negative, subdued, background, hover)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: negative, subdued, background, hover)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: negative, subdued, background, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1c7a286b2b29",
+   "token": "negative-subdued-background-color-key-focus",
+   "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle/state-focus",
+   "match": "close",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 7° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus (terms: key-focus, negative, subdued, background, focus)",
+     "expected": "focus",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: key-focus, negative, subdued, background, focus)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: key-focus, negative, subdued, background, focus)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: key-focus, negative, subdued, background, focus)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-e5d1f2de7c8e",
+   "token": "negative-subtle-background-color-default",
+   "concept": "dsi:concept/color/intent-danger/property-background/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: negative, subtle, background)",
+     "expected": "danger",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: negative, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: negative, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-9aa7f0f98b9d",
+   "token": "negative-visual-color",
+   "concept": "dsi:concept/color/intent-danger/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (90% of 10 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.9
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 6° (light)",
+     "expected": "danger (330–360°, 0–25°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "danger (terms: negative)",
+     "expected": "danger",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3346f4bfb0f8",
+   "token": "neutral-background-color-default",
+   "concept": "dsi:concept/color/intent-neutral/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-8212f6050e3a",
+   "token": "neutral-background-color-down",
+   "concept": "dsi:concept/color/intent-neutral/property-background/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (100% of 2 uses)",
+     "expected": "active",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-e30654dab3a2",
+   "token": "neutral-background-color-hover",
+   "concept": "dsi:concept/color/intent-neutral/property-background/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (100% of 2 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-c3944f50354b",
+   "token": "neutral-background-color-key-focus",
+   "concept": "dsi:concept/color/intent-neutral/property-background/state-focus",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "focus (100% of 2 uses)",
+     "expected": "focus",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-1514c6d41734",
+   "token": "neutral-background-color-selected-default",
+   "concept": "dsi:concept/color/intent-neutral/property-background/state-selected",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-9799b32341fe",
+   "token": "neutral-background-color-selected-down",
+   "concept": "dsi:concept/color/intent-neutral/property-background/state-active+selected",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-9eba34d3cf7a",
+   "token": "neutral-background-color-selected-hover",
+   "concept": "dsi:concept/color/intent-neutral/property-background/state-hover+selected",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-4349d062fa75",
+   "token": "neutral-background-color-selected-key-focus",
+   "concept": "dsi:concept/color/intent-neutral/property-background/state-focus+selected",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-3212c6dee485",
+   "token": "neutral-content-color-default",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "text (73% of 59 uses)",
+     "expected": "foreground",
+     "agrees": true,
+     "weight": 0.73
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (80% of 59 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.8
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4d42509f32f9",
+   "token": "neutral-content-color-down",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-e8979620652f",
+   "token": "neutral-content-color-focus",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/state-focus",
+   "match": "broad",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-0493ae899e73",
+   "token": "neutral-content-color-focus-hover",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/state-focus+hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (71% of 7 uses)",
+     "expected": "focus+hover",
+     "agrees": true,
+     "weight": 0.71
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-5b574ee254b7",
+   "token": "neutral-content-color-hover",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-57e7c9f1b781",
+   "token": "neutral-content-color-key-focus",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/state-focus",
+   "match": "close",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus (terms: key-focus, neutral, content, focus)",
+     "expected": "focus",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "neutral (terms: key-focus, neutral, content, focus)",
+     "expected": "neutral",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: key-focus, neutral, content, focus)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-5037929a3230",
+   "token": "neutral-content-color-selected-default",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/state-selected",
+   "match": "broad",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3fc7509a3ed5",
+   "token": "neutral-content-color-selected-hover",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/state-hover+selected",
+   "match": "broad",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-8d9653588d11",
+   "token": "neutral-content-color-selected-key-focus",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/state-focus+selected",
+   "match": "close",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus (terms: key-focus, neutral, content, selected, focus)",
+     "expected": "focus+selected",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "neutral (terms: key-focus, neutral, content, selected, focus)",
+     "expected": "neutral",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: key-focus, neutral, content, selected, focus)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-9140ae001f3e",
+   "token": "neutral-subdued-background-color-default",
+   "concept": "dsi:concept/color/intent-neutral/property-background",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (80% of 10 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 0.8
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (90% of 10 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.9
+    }
+   ]
+  },
+  {
+   "mapping": "m-0b6ac1d7f660",
+   "token": "neutral-subdued-background-color-down",
+   "concept": "dsi:concept/color/intent-neutral/property-background/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "active (100% of 4 uses)",
+     "expected": "active",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-9c3421d00d37",
+   "token": "neutral-subdued-background-color-hover",
+   "concept": "dsi:concept/color/intent-neutral/property-background/state-hover",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "hover (100% of 4 uses)",
+     "expected": "hover",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-a4d61703ff5d",
+   "token": "neutral-subdued-background-color-key-focus",
+   "concept": "dsi:concept/color/intent-neutral/property-background/state-focus",
+   "match": "broad",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "focus (100% of 4 uses)",
+     "expected": "focus",
+     "agrees": true,
+     "weight": 1
+    }
+   ]
+  },
+  {
+   "mapping": "m-f6de6e98e022",
+   "token": "neutral-subdued-content-color-default",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (92% of 25 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.92
+    },
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "neutral (terms: neutral, subdued, content)",
+     "expected": "neutral",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: neutral, subdued, content)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: neutral, subdued, content)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-5b5d80acdce1",
+   "token": "neutral-subdued-content-color-down",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle/state-active",
+   "match": "close",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "neutral (terms: neutral, subdued, content)",
+     "expected": "neutral",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: neutral, subdued, content)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: neutral, subdued, content)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b4ce17bac066",
+   "token": "neutral-subdued-content-color-hover",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle/state-hover",
+   "match": "close",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "neutral (terms: neutral, subdued, content, hover)",
+     "expected": "neutral",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: neutral, subdued, content, hover)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: neutral, subdued, content, hover)",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: neutral, subdued, content, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-37192c2734f5",
+   "token": "neutral-subdued-content-color-key-focus",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle/state-focus",
+   "match": "close",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus (terms: key-focus, neutral, subdued, content, focus)",
+     "expected": "focus",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "neutral (terms: key-focus, neutral, subdued, content, focus)",
+     "expected": "neutral",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: key-focus, neutral, subdued, content, focus)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: key-focus, neutral, subdued, content, focus)",
+     "expected": "foreground",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-f664f5226977",
+   "token": "neutral-subdued-content-color-selected",
+   "concept": "dsi:concept/color/intent-neutral/property-foreground/emphasis-subtle/state-selected",
+   "match": "close",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "no contrast-ordered ladder",
+     "expected": "subtle",
+     "agrees": false
+    },
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "one token colors text and icons",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "neutral (terms: neutral, subdued, content, selected)",
+     "expected": "neutral",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: neutral, subdued, content, selected)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "foreground (terms: neutral, subdued, content, selected)",
+     "expected": "foreground",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "selected (terms: neutral, subdued, content, selected)",
+     "expected": "selected",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-2e967e62fc1d",
+   "token": "neutral-subtle-background-color-default",
+   "concept": "dsi:concept/color/intent-neutral/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "neutral (terms: neutral, subtle, background)",
+     "expected": "neutral",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: neutral, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: neutral, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1ff51eb4ab63",
+   "token": "neutral-visual-color",
+   "concept": "dsi:concept/color/intent-neutral/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 4 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "neutral (terms: neutral)",
+     "expected": "neutral",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1e37fa6d1286",
+   "token": "notice-background-color-default",
+   "concept": "dsi:concept/color/intent-warning/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 30° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "warning (terms: notice, background)",
+     "expected": "warning",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: notice, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-286a2f441328",
+   "token": "notice-color-100",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-0009109dd77b",
+   "token": "notice-color-1000",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 22° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-6395567a4096",
+   "token": "notice-color-1100",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 21° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-cd1d2a3150cf",
+   "token": "notice-color-1200",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 21° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-bbc08609111e",
+   "token": "notice-color-1300",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 20° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-799f3c124382",
+   "token": "notice-color-1400",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 20° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7a04294c29b7",
+   "token": "notice-color-1500",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 21° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-08ab77e69980",
+   "token": "notice-color-1600",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-105f266bd6d5",
+   "token": "notice-color-200",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 36° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-885bbdfba924",
+   "token": "notice-color-300",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 37° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-908be1c019d5",
+   "token": "notice-color-400",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 37° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-749f205119cc",
+   "token": "notice-color-500",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 36° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-e0cd978584f5",
+   "token": "notice-color-600",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 30° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-2e73963d7465",
+   "token": "notice-color-700",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 27° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-93ececdab988",
+   "token": "notice-color-800",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 26° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-af0a3b7e8fdd",
+   "token": "notice-color-900",
+   "concept": "dsi:concept/color/intent-warning",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 24° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a31db10fea0d",
+   "token": "notice-subtle-background-color-default",
+   "concept": "dsi:concept/color/intent-warning/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 36° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "warning (terms: notice, subtle, background)",
+     "expected": "warning",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: notice, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: notice, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-717dcbe5798f",
+   "token": "notice-visual-color",
+   "concept": "dsi:concept/color/intent-warning/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 6 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 26° (light)",
+     "expected": "warning (15–65°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "warning (terms: notice)",
+     "expected": "warning",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-326928c55ed5",
+   "token": "orange-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "orange (terms: orange, background)",
+     "expected": "orange",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: orange, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4ec98a3582f7",
+   "token": "orange-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-orange/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "orange (terms: orange, subtle, background)",
+     "expected": "orange",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: orange, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: orange, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-7cdb68d0edb4",
+   "token": "orange-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-orange/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "orange (terms: orange)",
+     "expected": "orange",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-6715cc648831",
+   "token": "overlay-color",
+   "concept": "dsi:concept/color/usage-scrim/property-background",
+   "match": "close",
+   "records": []
+  },
+  {
+   "mapping": "m-fa696d1ada1f",
+   "token": "pink-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-pink/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "pink (terms: pink, background)",
+     "expected": "pink",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: pink, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-f7440937d2ad",
+   "token": "pink-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-pink/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "pink (terms: pink, subtle, background)",
+     "expected": "pink",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: pink, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: pink, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b2b240f695b2",
+   "token": "pink-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-pink/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "pink (terms: pink)",
+     "expected": "pink",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-980e29726335",
+   "token": "positive-background-color-default",
+   "concept": "dsi:concept/color/intent-success/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (75% of 8 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 0.75
+    },
+    {
+     "test": "usage",
+     "field": "usage",
+     "observed": "paints overlay containers",
+     "expected": "(unbound)",
+     "agrees": false
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 155° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "success (terms: positive, background)",
+     "expected": "success",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: positive, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1df7fbb9fda0",
+   "token": "positive-background-color-down",
+   "concept": "dsi:concept/color/intent-success/property-background/state-active",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 157° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-8e44ad94299e",
+   "token": "positive-background-color-hover",
+   "concept": "dsi:concept/color/intent-success/property-background/state-hover",
+   "match": "exact",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 157° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "success (terms: positive, background, hover)",
+     "expected": "success",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: positive, background, hover)",
+     "expected": "background",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "hover (terms: positive, background, hover)",
+     "expected": "hover",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a3a74b317993",
+   "token": "positive-background-color-key-focus",
+   "concept": "dsi:concept/color/intent-success/property-background/state-focus",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 157° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-3f2a3a6997cf",
+   "token": "positive-color-100",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-afdffc525cd9",
+   "token": "positive-color-1000",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 157° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-31b23313f36c",
+   "token": "positive-color-1100",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 158° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b751d39835e9",
+   "token": "positive-color-1200",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 161° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-762c5d4d61a2",
+   "token": "positive-color-1300",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 163° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a654be0311fe",
+   "token": "positive-color-1400",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 164° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-64885c4bac49",
+   "token": "positive-color-1500",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-f1e51393fda9",
+   "token": "positive-color-1600",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-734cb956d65c",
+   "token": "positive-color-200",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 139° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-d5b563038ee3",
+   "token": "positive-color-300",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 142° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-9d31184d6fd1",
+   "token": "positive-color-400",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 148° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-dbb28ec654cb",
+   "token": "positive-color-500",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 150° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a58b09b15a41",
+   "token": "positive-color-600",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 151° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a9a8a190c260",
+   "token": "positive-color-700",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 152° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-59448ca7c700",
+   "token": "positive-color-800",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 153° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-39f2eaae16e5",
+   "token": "positive-color-900",
+   "concept": "dsi:concept/color/intent-success",
+   "match": "broad",
+   "records": [
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 155° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-1ac2f2ca550f",
+   "token": "positive-subtle-background-color-default",
+   "concept": "dsi:concept/color/intent-success/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "B1",
+     "field": "emphasis",
+     "observed": "contrast-ordered ladder of 2 in every mode",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 139° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "success (terms: positive, subtle, background)",
+     "expected": "success",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: positive, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: positive, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-83d894659019",
+   "token": "positive-visual-color",
+   "concept": "dsi:concept/color/intent-success/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 8 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "hue",
+     "field": "intent",
+     "observed": "hue 153° (light)",
+     "expected": "success (75–175°)",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "intent",
+     "observed": "success (terms: positive)",
+     "expected": "success",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-be15ba7d2639",
+   "token": "purple-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "purple (terms: purple, background)",
+     "expected": "purple",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: purple, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-ed5d323b6142",
+   "token": "purple-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-purple/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "purple (terms: purple, subtle, background)",
+     "expected": "purple",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: purple, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: purple, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-2da399e7733b",
+   "token": "purple-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-purple/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "purple (terms: purple)",
+     "expected": "purple",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-bad05ccfa377",
+   "token": "red-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-red/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "red (terms: red, background)",
+     "expected": "red",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: red, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-8398e66c3e2a",
+   "token": "red-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-red/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "red (terms: red, subtle, background)",
+     "expected": "red",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: red, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: red, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4a762656a6a4",
+   "token": "red-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-red/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "red (terms: red)",
+     "expected": "red",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-90d674545684",
+   "token": "seafoam-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "teal (terms: seafoam, background)",
+     "expected": "teal",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: seafoam, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-e69e3f44359b",
+   "token": "seafoam-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-teal/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "teal (terms: seafoam, subtle, background)",
+     "expected": "teal",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: seafoam, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: seafoam, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-84038bc43870",
+   "token": "seafoam-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-teal/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "teal (terms: seafoam)",
+     "expected": "teal",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-a44d438c4fe6",
+   "token": "silver-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-0338a69ef810",
+   "token": "silver-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-gray/property-background/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "gray (terms: silver, subtle, background)",
+     "expected": "gray",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: silver, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: silver, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-48d7da338ce2",
+   "token": "silver-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-gray/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "gray (terms: silver)",
+     "expected": "gray",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-97198bc18442",
+   "token": "stack-item-selected-background-color-highlight",
+   "concept": "dsi:concept/color/intent-accent/property-background/state-selected",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-3090a186982a",
+   "token": "static-black-focus-indicator-color",
+   "concept": "dsi:concept/color/property-focus-ring",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "shadow (100% of 4 uses)",
+     "expected": "focus-ring",
+     "agrees": false,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "focus (75% of 4 uses)",
+     "expected": "resting",
+     "agrees": false,
+     "weight": 0.75
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus (terms: focus)",
+     "expected": "(unbound)",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-a04a29b1b84a",
+   "token": "static-black-text-color",
+   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "match": "broad",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "the system ships a separate icon family",
+     "expected": "text",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4b8a413ddbad",
+   "token": "static-white-focus-indicator-color",
+   "concept": "dsi:concept/color/property-focus-ring",
+   "match": "close",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "shadow (100% of 4 uses)",
+     "expected": "focus-ring",
+     "agrees": false,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "focus (75% of 4 uses)",
+     "expected": "resting",
+     "agrees": false,
+     "weight": 0.75
+    },
+    {
+     "test": "terms",
+     "field": "state",
+     "observed": "focus (terms: focus)",
+     "expected": "(unbound)",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-f1148989d587",
+   "token": "static-white-text-color",
+   "concept": "dsi:concept/color/usage-on-fill/property-text",
+   "match": "broad",
+   "records": [
+    {
+     "test": "B6",
+     "field": "property",
+     "observed": "the system ships a separate icon family",
+     "expected": "text",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-4ed924b17120",
+   "token": "title-color",
+   "concept": "dsi:concept/color/usage-heading/property-text",
+   "match": "close",
+   "records": [
+    {
+     "test": "terms",
+     "field": "usage",
+     "observed": "title (terms: title)",
+     "expected": "heading",
+     "agrees": false
+    }
+   ]
+  },
+  {
+   "mapping": "m-dcbfbad1734f",
+   "token": "turquoise-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-background",
+   "match": "broad",
+   "records": []
+  },
+  {
+   "mapping": "m-7b1a3abaecaa",
+   "token": "turquoise-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-background/emphasis-subtle",
+   "match": "close",
+   "records": [
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-8f432351c888",
+   "token": "turquoise-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-cyan/property-graphic",
+   "match": "exact",
+   "records": []
+  },
+  {
+   "mapping": "m-1695148f7d28",
+   "token": "yellow-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 1 uses)",
+     "expected": "background",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 1 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "yellow (terms: yellow, background)",
+     "expected": "yellow",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: yellow, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-b217caff331d",
+   "token": "yellow-subtle-background-color-default",
+   "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-background/emphasis-subtle",
+   "match": "exact",
+   "records": [
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "yellow (terms: yellow, subtle, background)",
+     "expected": "yellow",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "emphasis",
+     "observed": "subtle (terms: yellow, subtle, background)",
+     "expected": "subtle",
+     "agrees": true
+    },
+    {
+     "test": "terms",
+     "field": "property",
+     "observed": "background (terms: yellow, subtle, background)",
+     "expected": "background",
+     "agrees": true
+    }
+   ]
+  },
+  {
+   "mapping": "m-6f1b9c3d85d1",
+   "token": "yellow-visual-color",
+   "concept": "dsi:concept/color/usage-categorical/hue-yellow/property-graphic",
+   "match": "exact",
+   "records": [
+    {
+     "test": "usage",
+     "field": "property",
+     "observed": "background (100% of 2 uses)",
+     "expected": "graphic",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "usage",
+     "field": "state",
+     "observed": "resting (100% of 2 uses)",
+     "expected": "resting",
+     "agrees": true,
+     "weight": 1
+    },
+    {
+     "test": "terms",
+     "field": "hue",
+     "observed": "yellow (terms: yellow)",
+     "expected": "yellow",
+     "agrees": true
+    }
+   ]
+  }
+ ]
+}

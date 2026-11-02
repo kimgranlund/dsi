@@ -2,7 +2,7 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadOntology } from '@dsi/schema';
+import { loadOntology, writeMappingFile } from '@dsi/schema';
 import { merge, readProposals, APPROVE_AT, APPROVE_WITH_CLASSIFIER_AT, type ClassifierVotes } from './merge.ts';
 import { classify, type TermsFile } from '@dsi/classify';
 import { loadNative, type NativeSet } from '@dsi/resolve';
@@ -28,6 +28,7 @@ const USAGE = `usage:
   dsi-map boundary-rules <scope> [--dry] [--jev]  apply the deciding tests B1, B3, B4, B6 to the queue (ADR 0021); --jev judges B4 where code cannot
   dsi-map triage-conflicts <scope>                Jev judges approved boundary conflicts (B4, B6): test or approval likely right
   dsi-map usage-check <scope> [product...]         measure the token-usage graph against approved mappings
+  dsi-map evidence <scope> [product...]           structured evidence per approved mapping -> data/evidence/ (ADR 0027)
   dsi-map boundaries <scope> [--top N] [--jev <run>]  rank the vocabulary boundaries answers disagree on
   dsi-map rank-emphasis <scope> <run> <product>   settle emphasis by contrast rank where both agents agree on the rest (ADR 0018)
   dsi-map apply-review <scope> <decisions.json> <reviewer>  apply decisions exported from the review page`;
@@ -117,7 +118,7 @@ if (cmd === 'prepare') {
     const want = new Set(tokens);
     let n = 0;
     for (const u of m.unmapped ?? []) if (want.has(u.token) && u.status === 'approved') { u.status = 'rejected'; u.review = { by: 'owner-decision', at, note: `Re-opened: the ontology gained the concepts this token lacked (ADR ${adr}). Earlier review: ${u.review?.by ?? '?'}.` }; n++; }
-    fs.writeFileSync(mf, JSON.stringify(m, null, 2) + '\n');
+    writeMappingFile(root, mf, m);
     console.log(`${product}: ${n} of ${tokens.length} re-opened`);
   }
 } else if (cmd === 'language-sweep') {
@@ -272,7 +273,7 @@ if (cmd === 'prepare') {
   }
   file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
   { const held = gateUnregistered(ontology, file); if (held.length) console.log(`${held.length} answer(s) use new concepts and wait for owner approval (ADR 0019)`); }
-  fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n');
+  writeMappingFile(root, mf, file);
   console.log(`${product}: ${n} approved and ${unmappedN} agreed unmapped by two of three (third: ${c.model})`);
 } else if (cmd === 'settle') {
   // ADR 0005 amended (settle rules), for tokens still contested after tiebreak:
@@ -359,7 +360,7 @@ if (cmd === 'prepare') {
   }
   file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id));
   { const held = gateUnregistered(ontology, file); if (held.length) console.log(`${held.length} answer(s) use new concepts and wait for owner approval (ADR 0019)`); }
-  fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n');
+  writeMappingFile(root, mf, file);
   console.log(`${product}: ${JSON.stringify(counts)}; ${left.length} left for review`);
 } else if (cmd === 'reconcile') {
   // ADR 0019: a concept only one system uses folds into a shared one (used by 2+ systems) as broad when dropping
@@ -398,7 +399,7 @@ if (cmd === 'prepare') {
       file.mappings = file.mappings.filter((x: any) => x.id !== id);
       file.mappings.push({ id, token: m.token, concept: b, match: 'broad', confidence: m.confidence ?? 1, status: 'approved', rationale: `${m.rationale ?? ''} Reconciled: ${m.concept} was used by ${product} only; the token is one specific kind of the shared ${b}.`.trim(), provenance: { agent: 'dsi-mapper', at, method: 'reconcile-v1' }, review: { by: 'reconcile-rule', at, note: 'Dropping one facet reaches a concept other systems share; nothing else of this system maps there (ADR 0019).' } });
     }
-    if (!dry) { file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id)); fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n'); }
+    if (!dry) { file.mappings.sort((x: any, y: any) => x.token.localeCompare(y.token) || x.id.localeCompare(y.id)); writeMappingFile(root, mf, file); }
   }
   console.log(`reconcile${dry ? ' (dry run)' : ''}: ${JSON.stringify(counts)}`);
 } else if (cmd === 'boundary-rules') {
@@ -461,7 +462,7 @@ if (cmd === 'prepare') {
       const b5 = file.mappings.filter((m: any) => m.status === 'approved' && m.provenance?.method === 'boundary-rule-v1' && /property-graphic/.test(m.concept) && !isRegistered(ontology, m.concept)).map((m: any) => m.concept);
       if (b5.length) { registerConcepts(root, ontology, b5); ontology = await loadOntology(path.join(root, 'ontology')); console.log(`  registered ${new Set(b5).size} graphic concept(s) (ADR 0022)`); }
     }
-    if (!dry && settled) { const held = gateUnregistered(ontology, file); if (held.length) console.log(`  ${held.length} held: new concepts`); file.mappings.sort((a: any, b: any) => a.token.localeCompare(b.token) || a.id.localeCompare(b.id)); fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n'); }
+    if (!dry && settled) { const held = gateUnregistered(ontology, file); if (held.length) console.log(`  ${held.length} held: new concepts`); file.mappings.sort((a: any, b: any) => a.token.localeCompare(b.token) || a.id.localeCompare(b.id)); writeMappingFile(root, mf, file); }
   }
   fs.writeFileSync(path.join(root, '.cache/boundary-conflicts.txt'), conflicts.join('\n') + '\n');
   console.log(`boundary-rules${dry ? ' (dry run)' : ''}: ${JSON.stringify(totals)}; approved conflicts -> .cache/boundary-conflicts.txt`);
@@ -502,6 +503,28 @@ if (cmd === 'prepare') {
     console.log(`${product}: approved color mappings ${approved.length}, with usage ${covered} (${Math.round((100 * covered) / approved.length)}%); agreement property ${pct(tally.property)}, state ${pct(tally.state)}, container ${pct(tally.container)}; open tokens with usage ${openCovered} of ${open.size}`);
     fs.writeFileSync(path.join(root, `.cache/usage-disagreements.${product}.txt`), disagree.join('\n') + '\n');
   }
+} else if (cmd === 'evidence') {
+  // Structured mapping evidence (ADR 0027): data/evidence/<product>/<version>.json, one entry per approved color
+  // mapping with {test, field, observed, expected, agrees, weight} records, stamped with registry and resolver versions.
+  const { buildEvidence } = await import('./evidence.ts');
+  const { stampVersions } = await import('@dsi/schema');
+  const v = stampVersions(root);
+  for (const product of process.argv.slice(4).length ? process.argv.slice(4) : Object.keys(scope.products)) {
+    const { version } = scope.products[product];
+    const file = readMappings(root, product, version) as any;
+    if (!file) { console.log(`${product}: no mappings`); continue; }
+    const tp = path.join(root, 'mappings', product, 'terms.json');
+    const terms = fs.existsSync(tp) ? (JSON.parse(fs.readFileSync(tp, 'utf8')) as TermsFile) : undefined;
+    const entries = buildEvidence(root, ontology, product, version, file.mappings, terms);
+    const summary: Record<string, { agrees: number; disagrees: number }> = {};
+    for (const e of entries) for (const r of e.records) { const k = `${r.test}:${r.field}`; summary[k] ??= { agrees: 0, disagrees: 0 }; summary[k][r.agrees ? 'agrees' : 'disagrees']++; }
+    const out = path.join(root, 'data/evidence', product, `${version}.json`);
+    fs.mkdirSync(path.dirname(out), { recursive: true });
+    fs.writeFileSync(out, JSON.stringify({ product, version, ...v, generatedBy: 'dsi-map evidence', summary: Object.fromEntries(Object.entries(summary).sort()), mappings: entries }, null, 1) + '\n');
+    const tested = entries.filter((e) => e.records.length).length;
+    const dis = entries.filter((e) => e.records.some((r) => !r.agrees)).length;
+    console.log(`${product}: ${entries.length} approved color mappings, ${tested} with evidence, ${dis} with a disagreeing record -> ${path.relative(root, out)}`);
+  }
 } else if (cmd === 'boundaries') {
   // Rank the vocabulary boundaries the answers disagree on (docs/planning/boundaries.md; one owner decision per pair).
   const { mineBoundaries } = await import('./boundaries.ts');
@@ -540,7 +563,7 @@ if (cmd === 'prepare') {
   }
   file.mappings.sort((a: any, b: any) => a.token.localeCompare(b.token) || a.id.localeCompare(b.id));
   { const held = gateUnregistered(ontology, file); if (held.length) console.log(`${held.length} answer(s) use new concepts and wait for owner approval (ADR 0019)`); }
-  fs.writeFileSync(mf, JSON.stringify(file, null, 2) + '\n');
+  writeMappingFile(root, mf, file);
   console.log(`${product}: ${added} settled by contrast rank; ${r.skipped.length} families or tokens skipped`);
   for (const s of r.skipped.slice(0, 15)) console.log('  ' + s);
 } else if (cmd === 'audit-prepare') {

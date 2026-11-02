@@ -25,6 +25,10 @@ Agreement is not truth, so approved mappings (whoever approved them) are audited
 2. An auditor agent on a model that mapped none of them (`prompts/audit-v1.md`) judges every approved mapping blind to who approved it: supported, contradicted (with a suggested concept) or insufficient, citing shipped descriptions, usage, values and the product's official docs. `audit-check` validates its file.
 3. `audit-merge` writes `mappings/<product>/<version>.audit.json` and lists the disputes; disputes reopen on the review page for a human decision.
 
+## Evidence
+
+`node packages/mapper/src/cli.ts evidence <scope> [product...]` writes `data/evidence/<product>/<version>.json` (ADR 0027): for each approved color mapping, records `{test, field, observed, expected, agrees, weight}` from the usage graph, B1, B3, B4, B6, hue and naming terms. Rebuild it after mappings or data change, before `site` data. Every mappings-file write goes through `writeMappingFile` (`@dsi/schema`), which stamps added or changed records with `provenance.registry` and `provenance.resolver`.
+
 ## Approval rule
 
 - **Approved** when both agents give the same concept **and** match type, both with confidence >= 0.7 (ADR 0005 amended), and the answer was never rejected. `review.by` is `agreement`.

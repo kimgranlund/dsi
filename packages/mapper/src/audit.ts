@@ -28,11 +28,11 @@ export function contrast(a: [number, number, number, number], b: [number, number
 }
 
 /** Hue ranges (degrees) an intent's colors are expected in; null = not hue-bound. */
-const INTENT_HUES: Record<string, [number, number][] | null> = {
+export const INTENT_HUES: Record<string, [number, number][] | null> = {
   danger: [[330, 360], [0, 25]], destructive: [[330, 360], [0, 25]], success: [[75, 175]], warning: [[15, 65]], caution: [[30, 70]],
   info: [[180, 265]], ai: [[200, 330]], accent: null, neutral: null, highlight: null,
 };
-const inRanges = (h: number, rs: [number, number][]) => rs.some(([a, b]) => h >= a && h <= b);
+export const inRanges = (h: number, rs: [number, number][]) => rs.some(([a, b]) => h >= a && h <= b);
 
 // ---------- usage evidence from the alias graph ----------
 const ROLE_WORDS: [RegExp, string][] = [[/(container|background|bg|fill|surface)(-color)?$/, 'background'], [/(label-text|text|headline|supporting-text)(-color)?$/, 'text'], [/icon(-color)?$/, 'icon'], [/(outline|border|divider)(-color)?$/, 'border'], [/focus(-ring)?(-color)?$/, 'focus-ring'], [/state-layer(-color)?$/, 'state-layer']];

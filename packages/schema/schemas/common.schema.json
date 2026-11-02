@@ -51,6 +51,16 @@
         "method": {
           "type": "string",
           "description": "Pipeline step or prompt version."
+        },
+        "registry": {
+          "type": "string",
+          "pattern": "^ontology@[0-9a-f]{12}$",
+          "description": "Content hash of ontology/schemes when the record was written (ADR 0027). Absent on records written before stamping."
+        },
+        "resolver": {
+          "type": "string",
+          "pattern": "^resolve@[0-9a-f]{12}$",
+          "description": "Content hash of packages/resolve/src when the record was written (ADR 0027)."
         }
       }
     }
