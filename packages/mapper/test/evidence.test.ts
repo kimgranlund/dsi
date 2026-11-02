@@ -61,5 +61,10 @@ test('stamps: only records a write adds or changes get the registry and resolver
   const third = JSON.parse(fs.readFileSync(f, 'utf8'));
   assert.equal(writeMappingFile(tmp, f, third), 0);
   assert.equal(JSON.parse(fs.readFileSync(f, 'utf8')).mappings[1].provenance.registry, v.registry);
+  // An unmapped (noMatch) judgment added by a write is stamped too.
+  const fourth = JSON.parse(fs.readFileSync(f, 'utf8'));
+  fourth.unmapped = [{ token: 'z', status: 'approved', provenance: { agent: 'x', at: '2026-01-01T00:00:00Z' } }];
+  assert.equal(writeMappingFile(tmp, f, fourth), 1);
+  assert.match(JSON.parse(fs.readFileSync(f, 'utf8')).unmapped[0].provenance.registry, /^ontology@/);
   fs.rmSync(tmp, { recursive: true });
 });

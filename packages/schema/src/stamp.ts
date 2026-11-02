@@ -23,13 +23,15 @@ export function stampVersions(root: string): { registry: string; resolver: strin
  * keep what they have (unstamped history stays unstamped). A changed record that already carries a stamp keeps it
  * only when the stamp is current.
  */
-export function writeMappingFile(root: string, file: string, data: { mappings?: any[]; [k: string]: unknown }): number {
+export function writeMappingFile(root: string, file: string, data: { mappings?: any[]; unmapped?: any[]; [k: string]: unknown }): number {
   const before = new Map<string, string>();
-  if (fs.existsSync(file)) for (const m of JSON.parse(fs.readFileSync(file, 'utf8')).mappings ?? []) before.set(m.id + '|' + m.status, JSON.stringify(m));
+  // Both judgment lists: mappings and approved unmapped (noMatch) entries. Unmapped entries are keyed by token.
+  const key = (m: any) => (m.id ?? 'unmapped:' + m.token) + '|' + m.status;
+  if (fs.existsSync(file)) { const old = JSON.parse(fs.readFileSync(file, 'utf8')); for (const m of [...(old.mappings ?? []), ...(old.unmapped ?? [])]) before.set(key(m), JSON.stringify(m)); }
   const v = stampVersions(root);
   let n = 0;
-  for (const m of data.mappings ?? []) {
-    if (!m.provenance || before.get(m.id + '|' + m.status) === JSON.stringify(m)) continue;
+  for (const m of [...(data.mappings ?? []), ...(data.unmapped ?? [])]) {
+    if (!m.provenance || before.get(key(m)) === JSON.stringify(m)) continue;
     if (m.provenance.registry === v.registry && m.provenance.resolver === v.resolver) continue;
     m.provenance.registry = v.registry;
     m.provenance.resolver = v.resolver;
